@@ -1,0 +1,243 @@
+2026-04-02 01:05:02,483 - 4151011 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-02 01:21:55,002 - 4151011 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-02 01:21:55,190 - 4151011 - INFO - Log file ./logs/backup_2026-04-02.log uploaded to s3://q3-2025-aws-security-patching/crane-uat_Patch_Backup/2026-04-02/backup_2026-04-02.log
+2026-04-02 05:05:02,010 - 4160524 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-02 05:05:02,011 - 4160524 - INFO - Script Start Time: 2026-04-02 05:05:02
+2026-04-02 05:05:02,369 - 4160524 - INFO - Instance(s) selected for Patching: {'i-0da492d36be325ed6': '172.31.30.46'}
+2026-04-02 05:05:02,453 - 4160524 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 05:05:02,453 - 4160524 - INFO - Now patching instances at: 2026-04-02 05:05:02
+2026-04-02 05:05:02,539 - 4160524 - INFO - Sending patch command to instance i-0da492d36be325ed6
+2026-04-02 05:05:02,679 - 4160524 - INFO - Command sent successfully to instance i-0da492d36be325ed6. Command ID: b4bdeeed-173e-47d7-9fcc-ab23bddd5722
+2026-04-02 05:07:33,625 - 4160524 - INFO - All patches applied successfully.
+2026-04-02 05:07:33,625 - 4160524 - INFO - Patching end time: 2026-04-02 05:07:33
+2026-04-02 05:07:33,625 - 4160524 - INFO - Patch Elapsed time: 0:02:31.172499
+2026-04-02 05:07:33,691 - 4160524 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 05:07:33,692 - 4160524 - INFO - Confirmed - services are stopped
+2026-04-02 05:07:55,774 - 4160524 - INFO - Discovered TG map: {'i-0da492d36be325ed6': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-Desktop/9c86f84aa02cfcc0', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-RF/14100f48e620dfab']}
+2026-04-02 05:07:56,194 - 4160524 - INFO - Sent app_validation.py to i-0da492d36be325ed6 (command_id: 19efcaa7-d180-45f5-8e13-d1aeb317ba8d)
+2026-04-02 05:08:26,331 - 4160524 - INFO - app_validation.py output for i-0da492d36be325ed6:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 09:07:56.462446
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.30.46
+Hostname | ip-172-31-30-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data2
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.31.30.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.30.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 11
+Batch/Daemon Java Processes | 9
+Non-Standalone Java Processes | cranevmi_dwa, cranevmi_event, cranevmi_lbl, cranevmi_repl, cranevmi_rpt, cranevmi_jqgrid, cranevmi_sch, cranevmi_wld, cranevmi_inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 9
+Java-Name | Java-Path
+cranevmi_dwa | /data/batchapp/softeon/cranevmiuat/downloaddaemon
+cranevmi_event | /data/batchapp/softeon/cranevmiuat/eventdaemon
+cranevmi_lbl | /data/batchapp/softeon/cranevmiuat/labeldaemon
+cranevmi_repl | /data/batchapp/softeon/cranevmiuat/replenishmentdaemon
+cranevmi_rpt | /data/batchapp/softeon/cranevmiuat/reportdaemon
+cranevmi_jqgrid | /data/batchapp/softeon/cranevmiuat/reportjqgridexportdaemon
+cranevmi_sch | /data/batchapp/softeon/cranevmiuat/schedulardaemon
+cranevmi_wld | /data/batchapp/softeon/cranevmiuat/wavelaunchdaemon
+cranevmi_inbq | /data/batchapp/softeon/cranevmiuat/uploaddeamon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+154429 | cranevmirfuat | jboss800eap | cranevmrf_jb800 | 8081 | 172.31.30.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cranevmirfuat/standalone
+154361 | cranevmiuat | jboss800eap | cranevmi_jb800e | 8080 | 172.31.30.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cranevmiuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 09:07:57.033312
+==============================================================================
+
+2026-04-02 05:08:26,331 - 4160524 - ERROR - app_validation.py errors for i-0da492d36be325ed6:
+
+2026-04-02 05:08:26,333 - 4160524 - INFO - Before patching validation saved to: output/validation-2026-04-02/172.31.30.46-BeforePatching-2026-04-02-05-08-26-332.log
+2026-04-02 05:08:26,333 - 4160524 - INFO - Deregistering i-0da492d36be325ed6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-Desktop/9c86f84aa02cfcc0
+2026-04-02 05:08:26,421 - 4160524 - INFO - Deregistering i-0da492d36be325ed6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-RF/14100f48e620dfab
+2026-04-02 05:08:26,467 - 4160524 - INFO - Stopping EC2 instance: i-0da492d36be325ed6 at 2026-04-02 05:08:26
+2026-04-02 05:09:27,578 - 4160524 - INFO - Instance i-0da492d36be325ed6 stopped successfully.
+2026-04-02 05:09:27,707 - 4160524 - INFO - Stopped i-0da492d36be325ed6 in 0:01:01.240634
+2026-04-02 05:09:27,708 - 4160524 - INFO - Starting EC2 instance: i-0da492d36be325ed6
+2026-04-02 05:09:43,810 - 4160524 - INFO - Instance i-0da492d36be325ed6 started successfully.
+2026-04-02 05:09:43,810 - 4160524 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0da492d36be325ed6...
+2026-04-02 05:11:23,842 - 4160524 - INFO - Registering i-0da492d36be325ed6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-Desktop/9c86f84aa02cfcc0
+2026-04-02 05:11:24,016 - 4160524 - INFO - Registering i-0da492d36be325ed6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-VMI-UAT-RF/14100f48e620dfab
+2026-04-02 05:13:24,730 - 4160524 - INFO - Sent app_validation.py to i-0da492d36be325ed6 (command_id: b0cf801d-b84c-445e-ba23-dd154eda7435)
+2026-04-02 05:13:54,827 - 4160524 - INFO - app_validation.py output for i-0da492d36be325ed6:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 09:13:25.061146
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.30.46
+Hostname | ip-172-31-30-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data2
+/dev/nvme1n1p2 | 239.9G | 20.0G | 219.9G | 8% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.31.30.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.30.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 12
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | cranevmi_sch, cranevmi_jqgrid, cranevmi_event, cranevmi_repl, cranevmi_lbl, cranevmi_inbq, cranevmi_wld, cranevmi_dwa, cranevmi_rpt, cranevmi_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+cranevmi_sch | /data/batchapp/softeon/cranevmiuat/schedulardaemon
+cranevmi_jqgrid | /data/batchapp/softeon/cranevmiuat/reportjqgridexportdaemon
+cranevmi_event | /data/batchapp/softeon/cranevmiuat/eventdaemon
+cranevmi_repl | /data/batchapp/softeon/cranevmiuat/replenishmentdaemon
+cranevmi_lbl | /data/batchapp/softeon/cranevmiuat/labeldaemon
+cranevmi_inbq | /data/batchapp/softeon/cranevmiuat/uploaddeamon
+cranevmi_wld | /data/batchapp/softeon/cranevmiuat/wavelaunchdaemon
+cranevmi_dwa | /data/batchapp/softeon/cranevmiuat/downloaddaemon
+cranevmi_rpt | /data/batchapp/softeon/cranevmiuat/reportdaemon
+cranevmi_ftp | /data/batchapp/softeon/cranevmiuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4425 | cranevmirfuat | jboss800eap | cranevmrf_jb800 | 8081 | 172.31.30.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cranevmirfuat/standalone
+4445 | cranevmiuat | jboss800eap | cranevmi_jb800e | 8080 | 172.31.30.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cranevmiuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 09:13:27.218912
+==============================================================================
+
+2026-04-02 05:13:54,827 - 4160524 - ERROR - app_validation.py errors for i-0da492d36be325ed6:
+
+2026-04-02 05:13:54,829 - 4160524 - INFO - After patching validation saved to: output/validation-2026-04-02/172.31.30.46-AfterPatching-2026-04-02-05-13-54-828.log
+2026-04-02 05:13:54,880 - 4160524 - INFO - Validation comparison report generated: output/validation-2026-04-02/172.31.30.46-Validation-details-2026-04-02-05-13-54-828.html
+2026-04-02 05:13:54,963 - 4160524 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-02 05:13:54,963 - 4160524 - INFO - HTML validation report email sent for i-0da492d36be325ed6
+2026-04-02 05:13:55,110 - 4160524 - INFO - Started i-0da492d36be325ed6 in 0:04:27.401868
+2026-04-02 05:13:55,110 - 4160524 - INFO - All instances processed.
+2026-04-02 05:13:55,114 - 4160524 - INFO - Restart Total time: 0:06:21.257721
+2026-04-02 05:13:55,114 - 4160524 - INFO - Auto-confirmed services are restarted
+2026-04-02 05:13:55,114 - 4160524 - INFO - Confirmed - services are started
+2026-04-02 05:13:55,238 - 4160524 - INFO - The following instances have failed the patch: []
+2026-04-02 05:13:55,239 - 4160524 - INFO - No instances have failed the patch.
+2026-04-02 05:13:55,239 - 4160524 - INFO - Total Patch Process time: 0:08:53.227620
+2026-04-02 05:14:55,566 - 4160524 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-02_crane-uat.log to q2-2026-aws-security-patching/crane-uat_Patch/2026-04-02/patching_2026-04-02_crane-uat.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

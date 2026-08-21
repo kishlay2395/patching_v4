@@ -1,0 +1,81 @@
+
+==============================================================================
+Server Availability Check Started | 2026-03-21 05:06:58.916673
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.5
+Hostname | ip-172-29-100-5
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 31.8G | 208.1G | 13% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+964411 | nsiprod | jboss730eap | nsiprd_jb730eap | 8080 | 172.29.100.5:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiprod/standalone
+964635 | nsirfprod | jboss730eap | nsirf_jb730eap | 8081 | 172.29.100.5:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfprod/standalone
+964804 | nsiwsprod | jboss730eap | nsiws_jb730eap | 8082 | 172.29.100.5:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-03-21 05:06:59.267171
+==============================================================================

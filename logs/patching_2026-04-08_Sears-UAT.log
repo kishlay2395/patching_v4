@@ -1,0 +1,591 @@
+2026-04-08 01:05:03,031 - 291193 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-08 01:05:03,031 - 291193 - INFO - Script Start Time: 2026-04-08 01:05:03
+2026-04-08 01:05:03,307 - 291193 - INFO - Instance(s) selected for Patching: {'i-08e2f9a488387780d': '172.30.100.17', 'i-003648fd2b691277c': '172.30.100.124'}
+2026-04-08 01:05:03,391 - 291193 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-08 01:05:03,392 - 291193 - INFO - Now patching instances at: 2026-04-08 01:05:03
+2026-04-08 01:05:03,552 - 291193 - INFO - Sending patch command to instance i-003648fd2b691277c
+2026-04-08 01:05:03,754 - 291193 - INFO - Command sent successfully to instance i-003648fd2b691277c. Command ID: d460501b-aa3d-4443-aacc-76acdab0d201
+2026-04-08 01:05:03,882 - 291193 - INFO - Sending patch command to instance i-08e2f9a488387780d
+2026-04-08 01:05:04,004 - 291193 - INFO - Command sent successfully to instance i-08e2f9a488387780d. Command ID: 5139dca1-af57-4aaa-a86d-b02422097a03
+2026-04-08 01:11:06,203 - 291193 - INFO - All patches applied successfully.
+2026-04-08 01:11:06,204 - 291193 - INFO - Patching end time: 2026-04-08 01:11:06
+2026-04-08 01:11:06,204 - 291193 - INFO - Patch Elapsed time: 0:06:02.811999
+2026-04-08 01:11:06,283 - 291193 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-08 01:11:06,283 - 291193 - INFO - Confirmed - services are stopped
+2026-04-08 01:11:14,545 - 291193 - INFO - Discovered TG map: {'i-08e2f9a488387780d': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8080-ALB/2ed325bd3e91ce60', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8081-ALB/350a0d1a8017c833', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8082-ALB/6e2a5488c0a52c0f', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8083-ALB/718a7681bfe0a538', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8084-ALB/7e0eaeb154a70030', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMDOM/27683399f1156dfd', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMSSO/f838993314845ae4', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSIH/a30462f0f7c67ccb', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSRF/6e9e1f708259edd0', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWS/9952647d77698945']}
+2026-04-08 01:11:15,027 - 291193 - INFO - Sent app_validation.py to i-003648fd2b691277c (command_id: 330908a9-4e1d-4e98-8bbb-f52b50727820)
+2026-04-08 01:11:45,144 - 291193 - INFO - app_validation.py output for i-003648fd2b691277c:
+
+==============================================================================
+Server Availability Check Started | 2026-04-08 01:11:15.266349
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.100.124
+Hostname | ip-172-30-100-124.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 57.4G | 232.5G | 19% | /data
+fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | 0B | 2.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.100.124:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 136
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.100.124 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 73
+Batch/Daemon Java Processes | 73
+Non-Standalone Java Processes | dom_DME, sear_IH_RPT, wms_RPT, dom_DWS, wmsihrg1_CCNT, wms_RMI, wmsihrg1_MIS, wmsihrg1_TCD, dom_EVENT, 8842_lbl, dom_HLD, wmsihrg1_INBQ, 8842_ogd, dom_OMAS, wmsihrg2_CCNT, 8842_1_ogd1, dom_1_INBQ, wmsihrg2_MIS, 8842_repd, dom_PARTS, wmsihrg2_TCD, 8842_sch, dom_PRLS, wmsihrg2_INBQ, dom_DORPT, 8842_upload, wmsihrg3_CCNT, dom_SCFK, 8958_event, dom_SRC, wmsihrg3_MIS, 8958_LBL, dom_INBQ, 8958_ogd, wmsihrg3_TCD, dom_WMSRL, 8958_1_ogd1, dom_GP, 8958_repd, wmsihrg4_CCNT, dom_RPTS, 8958_sch, wmsihrg4_MIS, 8958_INBQ, 8961_event, 8961_lbl, wmsihrg5_CCNT, 8961_ogd, wmsihrg5_MIS, 8961_repd, 8961_sch, 8961_upload, 8964_event, 8964_lbl, 8964_ogd, 8964_1_ogd1, 8964_repd, 8964_sch, 8964_upload, 8976_event, 8976_lbl, 8976_ogd, 8976_1_ogd1, 8976_repd, 8976_sch, 8976_upload, 8998_event, 8998_lbl, 8998_ogd, 8998_1_ogd1, 8998_repd, 8998_sch, 8998_upload
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 73
+Java-Name | Java-Path
+dom_DME | /data/app/java/jdk1.7.0_80/bin/dom_DME
+sear_IH_RPT | /data/app/java/jdk1.7.0_80/bin/sear_IH_RPT
+wms_RPT | /data/app/java/jdk1.7.0_80/bin/wms_RPT
+dom_DWS | /data/app/java/jdk1.7.0_80/bin/dom_DWS
+wmsihrg1_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_CCNT
+wms_RMI | /data/batchapp/softeon/aimsso/wsrmidaemon
+wmsihrg1_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_MIS
+wmsihrg1_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_TCD
+dom_EVENT | /data/app/java/jdk1.7.0_80/bin/dom_EVENT
+8842_lbl | /data/app/java/jdk1.7.0_80/bin/8842_lbl
+dom_HLD | /data/app/java/jdk1.7.0_80/bin/dom_HLD
+wmsihrg1_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_INBQ
+8842_ogd | /data/app/java/jdk1.7.0_80/bin/8842_ogd
+dom_OMAS | /data/app/java/jdk1.7.0_80/bin/dom_OMAS
+wmsihrg2_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_CCNT
+8842_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8842_1_ogd1
+dom_1_INBQ | /data/app/java/jdk1.7.0_80/bin/dom_1_INBQ
+wmsihrg2_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_MIS
+8842_repd | /data/app/java/jdk1.7.0_80/bin/8842_repd
+dom_PARTS | /data/app/java/jdk1.7.0_80/bin/dom_PARTS
+wmsihrg2_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_TCD
+8842_sch | /data/app/java/jdk1.7.0_80/bin/8842_sch
+dom_PRLS | /data/app/java/jdk1.7.0_80/bin/dom_PRLS
+wmsihrg2_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_INBQ
+dom_DORPT | /data/app/java/jdk1.7.0_80/bin/dom_DORPT
+8842_upload | /data/app/java/jdk1.7.0_80/bin/8842_upload
+wmsihrg3_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_CCNT
+dom_SCFK | /data/app/java/jdk1.7.0_80/bin/dom_SCFK
+8958_event | /data/app/java/jdk1.7.0_80/bin/8958_event
+dom_SRC | /data/app/java/jdk1.7.0_80/bin/dom_SRC
+wmsihrg3_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_MIS
+8958_LBL | /data/app/java/jdk1.7.0_80/bin/8958_LBL
+dom_INBQ | /data/app/java/jdk1.7.0_80/bin/dom_INBQ
+8958_ogd | /data/app/java/jdk1.7.0_80/bin/8958_ogd
+wmsihrg3_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_TCD
+dom_WMSRL | /data/app/java/jdk1.7.0_80/bin/dom_WMSRL
+8958_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8958_1_ogd1
+dom_GP | /data/app/java/jdk1.7.0_80/bin/dom_GP
+8958_repd | /data/app/java/jdk1.7.0_80/bin/8958_repd
+wmsihrg4_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_CCNT
+dom_RPTS | /data/app/java/jdk1.7.0_80/bin/dom_RPTS
+8958_sch | /data/app/java/jdk1.7.0_80/bin/8958_sch
+wmsihrg4_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_MIS
+8958_INBQ | /data/app/java/jdk1.7.0_80/bin/8958_INBQ
+8961_event | /data/app/java/jdk1.7.0_80/bin/8961_event
+8961_lbl | /data/app/java/jdk1.7.0_80/bin/8961_lbl
+wmsihrg5_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg5_CCNT
+8961_ogd | /data/app/java/jdk1.7.0_80/bin/8961_ogd
+wmsihrg5_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg5_MIS
+8961_repd | /data/app/java/jdk1.7.0_80/bin/8961_repd
+8961_sch | /data/app/java/jdk1.7.0_80/bin/8961_sch
+8961_upload | /data/app/java/jdk1.7.0_80/bin/8961_upload
+8964_event | /data/app/java/jdk1.7.0_80/bin/8964_event
+8964_lbl | /data/app/java/jdk1.7.0_80/bin/8964_lbl
+8964_ogd | /data/app/java/jdk1.7.0_80/bin/8964_ogd
+8964_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8964_1_ogd1
+8964_repd | /data/app/java/jdk1.7.0_80/bin/8964_repd
+8964_sch | /data/app/java/jdk1.7.0_80/bin/8964_sch
+8964_upload | /data/app/java/jdk1.7.0_80/bin/8964_upload
+8976_event | /data/app/java/jdk1.7.0_80/bin/8976_event
+8976_lbl | /data/app/java/jdk1.7.0_80/bin/8976_lbl
+8976_ogd | /data/app/java/jdk1.7.0_80/bin/8976_ogd
+8976_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8976_1_ogd1
+8976_repd | /data/app/java/jdk1.7.0_80/bin/8976_repd
+8976_sch | /data/app/java/jdk1.7.0_80/bin/8976_sch
+8976_upload | /data/app/java/jdk1.7.0_80/bin/8976_upload
+8998_event | /data/app/java/jdk1.7.0_80/bin/8998_event
+8998_lbl | /data/app/java/jdk1.7.0_80/bin/8998_lbl
+8998_ogd | /data/app/java/jdk1.7.0_80/bin/8998_ogd
+8998_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8998_1_ogd1
+8998_repd | /data/app/java/jdk1.7.0_80/bin/8998_repd
+8998_sch | /data/app/java/jdk1.7.0_80/bin/8998_sch
+8998_upload | /data/app/java/jdk1.7.0_80/bin/8998_upload
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-08 01:11:15.769406
+==============================================================================
+
+2026-04-08 01:11:45,144 - 291193 - ERROR - app_validation.py errors for i-003648fd2b691277c:
+
+2026-04-08 01:11:45,146 - 291193 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.124/172.30.100.124-BeforePatching-2026-04-08-01-11-45-145.log
+2026-04-08 01:11:45,146 - 291193 - INFO - Stopping EC2 instance: i-003648fd2b691277c at 2026-04-08 01:11:45
+2026-04-08 01:14:01,667 - 291193 - INFO - Instance i-003648fd2b691277c stopped successfully.
+2026-04-08 01:14:02,117 - 291193 - INFO - Stopped i-003648fd2b691277c in 0:02:16.970809
+2026-04-08 01:14:02,118 - 291193 - INFO - Starting EC2 instance: i-003648fd2b691277c
+2026-04-08 01:14:18,003 - 291193 - INFO - Instance i-003648fd2b691277c started successfully.
+2026-04-08 01:14:18,004 - 291193 - INFO - Waiting 50 seconds for SSM agent to be ready on i-003648fd2b691277c...
+2026-04-08 01:15:08,300 - 291193 - INFO - Sent app_validation.py to i-003648fd2b691277c (command_id: 15ba17ae-ed4d-4d0f-a369-1bef68a0064b)
+2026-04-08 01:15:38,423 - 291193 - INFO - app_validation.py output for i-003648fd2b691277c:
+
+==============================================================================
+Server Availability Check Started | 2026-04-08 01:15:08.710859
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.100.124
+Hostname | ip-172-30-100-124.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 57.4G | 232.4G | 19% | /data
+fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | 0B | 2.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.100.124 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 76
+Batch/Daemon Java Processes | 76
+Non-Standalone Java Processes | dom_DME, dom_EVENT, dom_HLD, dom_OMAS, dom_1_INBQ, dom_PARTS, dom_PRLS, dom_DORPT, dom_SCFK, dom_SRC, dom_INBQ, dom_WMSRL, dom_GP, dom_RPTS, wms_RPT, wms_RMI, 8842_lbl, 8842_ogd, 8842_1_ogd1, 8842_repd, 8842_sch, 8842_upload, 8958_event, 8958_LBL, 8958_ogd, 8958_1_ogd1, 8958_repd, 8958_sch, 8958_INBQ, 8961_event, 8961_lbl, 8961_ogd, 8961_repd, 8961_sch, 8961_upload, 8964_event, 8964_lbl, 8964_ogd, 8964_1_ogd1, 8964_repd, 8964_sch, 8964_upload, 8976_event, 8976_lbl, 8976_ogd, 8976_1_ogd1, 8976_repd, 8976_sch, 8976_upload, 8998_event, 8998_lbl, 8998_ogd, 8998_1_ogd1, 8998_repd, 8998_sch, 8998_upload, sear_IH_RPT, wmsihrg1_CCNT, wmsihrg1_MIS, wmsihrg1_TCD, wmsihrg1_INBQ, wmsihrg2_CCNT, wmsihrg2_MIS, wmsihrg2_TCD, wmsihrg2_INBQ, wmsihrg3_CCNT, wmsihrg3_MIS, wmsihrg3_TCD, wmsihrg3_INBQ, wmsihrg4_CCNT, wmsihrg4_MIS, wmsihrg4_TCD, wmsihrg4_INBQ, wmsihrg5_CCNT, wmsihrg5_MIS, wmsihrg5_TCD
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 76
+Java-Name | Java-Path
+dom_DME | /data/app/java/jdk1.7.0_80/bin/dom_DME
+dom_EVENT | /data/app/java/jdk1.7.0_80/bin/dom_EVENT
+dom_HLD | /data/app/java/jdk1.7.0_80/bin/dom_HLD
+dom_OMAS | /data/app/java/jdk1.7.0_80/bin/dom_OMAS
+dom_1_INBQ | /data/app/java/jdk1.7.0_80/bin/dom_1_INBQ
+dom_PARTS | /data/app/java/jdk1.7.0_80/bin/dom_PARTS
+dom_PRLS | /data/app/java/jdk1.7.0_80/bin/dom_PRLS
+dom_DORPT | /data/app/java/jdk1.7.0_80/bin/dom_DORPT
+dom_SCFK | /data/app/java/jdk1.7.0_80/bin/dom_SCFK
+dom_SRC | /data/app/java/jdk1.7.0_80/bin/dom_SRC
+dom_INBQ | /data/app/java/jdk1.7.0_80/bin/dom_INBQ
+dom_WMSRL | /data/app/java/jdk1.7.0_80/bin/dom_WMSRL
+dom_GP | /data/app/java/jdk1.7.0_80/bin/dom_GP
+dom_RPTS | /data/app/java/jdk1.7.0_80/bin/dom_RPTS
+wms_RPT | /data/app/java/jdk1.7.0_80/bin/wms_RPT
+wms_RMI | /data/batchapp/softeon/aimsso/wsrmidaemon
+8842_lbl | /data/app/java/jdk1.7.0_80/bin/8842_lbl
+8842_ogd | /data/app/java/jdk1.7.0_80/bin/8842_ogd
+8842_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8842_1_ogd1
+8842_repd | /data/app/java/jdk1.7.0_80/bin/8842_repd
+8842_sch | /data/app/java/jdk1.7.0_80/bin/8842_sch
+8842_upload | /data/app/java/jdk1.7.0_80/bin/8842_upload
+8958_event | /data/app/java/jdk1.7.0_80/bin/8958_event
+8958_LBL | /data/app/java/jdk1.7.0_80/bin/8958_LBL
+8958_ogd | /data/app/java/jdk1.7.0_80/bin/8958_ogd
+8958_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8958_1_ogd1
+8958_repd | /data/app/java/jdk1.7.0_80/bin/8958_repd
+8958_sch | /data/app/java/jdk1.7.0_80/bin/8958_sch
+8958_INBQ | /data/app/java/jdk1.7.0_80/bin/8958_INBQ
+8961_event | /data/app/java/jdk1.7.0_80/bin/8961_event
+8961_lbl | /data/app/java/jdk1.7.0_80/bin/8961_lbl
+8961_ogd | /data/app/java/jdk1.7.0_80/bin/8961_ogd
+8961_repd | /data/app/java/jdk1.7.0_80/bin/8961_repd
+8961_sch | /data/app/java/jdk1.7.0_80/bin/8961_sch
+8961_upload | /data/app/java/jdk1.7.0_80/bin/8961_upload
+8964_event | /data/app/java/jdk1.7.0_80/bin/8964_event
+8964_lbl | /data/app/java/jdk1.7.0_80/bin/8964_lbl
+8964_ogd | /data/app/java/jdk1.7.0_80/bin/8964_ogd
+8964_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8964_1_ogd1
+8964_repd | /data/app/java/jdk1.7.0_80/bin/8964_repd
+8964_sch | /data/app/java/jdk1.7.0_80/bin/8964_sch
+8964_upload | /data/app/java/jdk1.7.0_80/bin/8964_upload
+8976_event | /data/app/java/jdk1.7.0_80/bin/8976_event
+8976_lbl | /data/app/java/jdk1.7.0_80/bin/8976_lbl
+8976_ogd | /data/app/java/jdk1.7.0_80/bin/8976_ogd
+8976_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8976_1_ogd1
+8976_repd | /data/app/java/jdk1.7.0_80/bin/8976_repd
+8976_sch | /data/app/java/jdk1.7.0_80/bin/8976_sch
+8976_upload | /data/app/java/jdk1.7.0_80/bin/8976_upload
+8998_event | /data/app/java/jdk1.7.0_80/bin/8998_event
+8998_lbl | /data/app/java/jdk1.7.0_80/bin/8998_lbl
+8998_ogd | /data/app/java/jdk1.7.0_80/bin/8998_ogd
+8998_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8998_1_ogd1
+8998_repd | /data/app/java/jdk1.7.0_80/bin/8998_repd
+8998_sch | /data/app/java/jdk1.7.0_80/bin/8998_sch
+8998_upload | /data/app/java/jdk1.7.0_80/bin/8998_upload
+sear_IH_RPT | /data/app/java/jdk1.7.0_80/bin/sear_IH_RPT
+wmsihrg1_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_CCNT
+wmsihrg1_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_MIS
+wmsihrg1_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_TCD
+wmsihrg1_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg1_INBQ
+wmsihrg2_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_CCNT
+wmsihrg2_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_MIS
+wmsihrg2_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_TCD
+wmsihrg2_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg2_INBQ
+wmsihrg3_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_CCNT
+wmsihrg3_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_MIS
+wmsihrg3_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_TCD
+wmsihrg3_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg3_INBQ
+wmsihrg4_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_CCNT
+wmsihrg4_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_MIS
+wmsihrg4_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_TCD
+wmsihrg4_INBQ | /data/app/java/jdk1.7.0_80/bin/wmsihrg4_INBQ
+wmsihrg5_CCNT | /data/app/java/jdk1.7.0_80/bin/wmsihrg5_CCNT
+wmsihrg5_MIS | /data/app/java/jdk1.7.0_80/bin/wmsihrg5_MIS
+wmsihrg5_TCD | /data/app/java/jdk1.7.0_80/bin/wmsihrg5_TCD
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-08 01:15:09.484876
+==============================================================================
+
+2026-04-08 01:15:38,423 - 291193 - ERROR - app_validation.py errors for i-003648fd2b691277c:
+
+2026-04-08 01:15:38,425 - 291193 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.124/172.30.100.124-AfterPatching-2026-04-08-01-15-38-425.log
+2026-04-08 01:15:38,478 - 291193 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.124/172.30.100.124-Validation-details-2026-04-08-01-15-38-425.html
+2026-04-08 01:15:38,553 - 291193 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-08 01:15:38,553 - 291193 - INFO - HTML validation report email sent for i-003648fd2b691277c
+2026-04-08 01:15:38,919 - 291193 - INFO - Started i-003648fd2b691277c in 0:01:36.800965
+2026-04-08 01:15:38,919 - 291193 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-08 01:17:39,172 - 291193 - INFO - Sent app_validation.py to i-08e2f9a488387780d (command_id: 24c3295c-66e8-42a9-934c-2ca136a77893)
+2026-04-08 01:18:09,257 - 291193 - INFO - app_validation.py output for i-08e2f9a488387780d:
+
+==============================================================================
+Server Availability Check Started | 2026-04-08 01:17:39.409765
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.100.17
+Hostname | ip-172-30-100-17.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 118.4G | 171.5G | 40% | /data
+fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | 0B | 2.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.100.17:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 134
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.100.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2906 | aimdom | jboss62eap | aimdom_jb62 | 8083 | 172.30.100.17:8083 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimdom/standalone
+3117 | aimsso | jboss62eap | aimsso_jb62 | 8080 | 172.30.100.17:8080 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimsso/standalone
+382452 | aimwms | jboss62eap | aimwms_jb62 | 8081 | 172.30.100.17:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwms/standalone
+3909 | aimwmscb | jboss62eap | aimscb_jb62 | 8085 | 172.30.100.17:8085 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwmscb/standalone
+3510 | aimwmsrf | jboss62eap | aimwmsrf_jb62 | 8082 | 172.30.100.17:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwmsrf/standalone
+3719 | aimws | jboss62eap | aimws_jb62 | 8084 | 172.30.100.17:8084 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-08 01:17:39.963127
+==============================================================================
+
+2026-04-08 01:18:09,257 - 291193 - ERROR - app_validation.py errors for i-08e2f9a488387780d:
+
+2026-04-08 01:18:09,259 - 291193 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.17/172.30.100.17-BeforePatching-2026-04-08-01-18-09-258.log
+2026-04-08 01:18:09,259 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8080-ALB/2ed325bd3e91ce60
+2026-04-08 01:18:09,389 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8081-ALB/350a0d1a8017c833
+2026-04-08 01:18:09,456 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8082-ALB/6e2a5488c0a52c0f
+2026-04-08 01:18:09,515 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8083-ALB/718a7681bfe0a538
+2026-04-08 01:18:09,577 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8084-ALB/7e0eaeb154a70030
+2026-04-08 01:18:09,640 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMDOM/27683399f1156dfd
+2026-04-08 01:18:09,700 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMSSO/f838993314845ae4
+2026-04-08 01:18:09,759 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSIH/a30462f0f7c67ccb
+2026-04-08 01:18:09,818 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSRF/6e9e1f708259edd0
+2026-04-08 01:18:09,876 - 291193 - INFO - Deregistering i-08e2f9a488387780d from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWS/9952647d77698945
+2026-04-08 01:18:09,936 - 291193 - INFO - Stopping EC2 instance: i-08e2f9a488387780d at 2026-04-08 01:18:09
+2026-04-08 01:18:55,885 - 291193 - INFO - Instance i-08e2f9a488387780d stopped successfully.
+2026-04-08 01:18:56,134 - 291193 - INFO - Stopped i-08e2f9a488387780d in 0:00:46.197143
+2026-04-08 01:18:56,134 - 291193 - INFO - Starting EC2 instance: i-08e2f9a488387780d
+2026-04-08 01:19:12,054 - 291193 - INFO - Instance i-08e2f9a488387780d started successfully.
+2026-04-08 01:19:12,055 - 291193 - INFO - Waiting 50 seconds for SSM agent to be ready on i-08e2f9a488387780d...
+2026-04-08 01:20:02,105 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8080-ALB/2ed325bd3e91ce60
+2026-04-08 01:20:02,393 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8081-ALB/350a0d1a8017c833
+2026-04-08 01:20:02,534 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8082-ALB/6e2a5488c0a52c0f
+2026-04-08 01:20:02,678 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8083-ALB/718a7681bfe0a538
+2026-04-08 01:20:02,831 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-8084-ALB/7e0eaeb154a70030
+2026-04-08 01:20:02,979 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMDOM/27683399f1156dfd
+2026-04-08 01:20:03,139 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMSSO/f838993314845ae4
+2026-04-08 01:20:03,303 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSIH/a30462f0f7c67ccb
+2026-04-08 01:20:03,449 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWMSRF/6e9e1f708259edd0
+2026-04-08 01:20:03,587 - 291193 - INFO - Registering i-08e2f9a488387780d to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Sears-UAT-AIMWS/9952647d77698945
+2026-04-08 01:21:34,758 - 291193 - INFO - Sent app_validation.py to i-08e2f9a488387780d (command_id: a46d4bf9-1d48-4997-8835-385d1bca8e9c)
+2026-04-08 01:22:04,904 - 291193 - INFO - app_validation.py output for i-08e2f9a488387780d:
+
+==============================================================================
+Server Availability Check Started | 2026-04-08 01:21:35.105233
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.100.17
+Hostname | ip-172-30-100-17.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 117.3G | 172.5G | 40% | /data
+fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | 0B | 2.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-b68b5cce.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.100.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2906 | aimdom | jboss62eap | aimdom_jb62 | 8083 | 172.30.100.17:8083 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimdom/standalone
+3091 | aimsso | jboss62eap | aimsso_jb62 | 8080 | 172.30.100.17:8080 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimsso/standalone
+3313 | aimwms | jboss62eap | aimwms_jb62 | 8081 | 172.30.100.17:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwms/standalone
+3896 | aimwmscb | jboss62eap | aimscb_jb62 | 8085 | 172.30.100.17:8085 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwmscb/standalone
+3494 | aimwmsrf | jboss62eap | aimwmsrf_jb62 | 8082 | 172.30.100.17:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/aimwmsrf/standalone
+3684 | aimws | jboss62eap | aimws_jb62 | 8084 | 172.30.100.17:8084 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/aimws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-08 01:21:35.968065
+==============================================================================
+
+2026-04-08 01:22:04,904 - 291193 - ERROR - app_validation.py errors for i-08e2f9a488387780d:
+
+2026-04-08 01:22:04,906 - 291193 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.17/172.30.100.17-AfterPatching-2026-04-08-01-22-04-905.log
+2026-04-08 01:22:04,958 - 291193 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-08/Sears-UAT/172.30.100.17/172.30.100.17-Validation-details-2026-04-08-01-22-04-905.html
+2026-04-08 01:22:05,043 - 291193 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-08 01:22:05,043 - 291193 - INFO - HTML validation report email sent for i-08e2f9a488387780d
+2026-04-08 01:22:05,297 - 291193 - INFO - Started i-08e2f9a488387780d in 0:03:09.162490
+2026-04-08 01:22:05,297 - 291193 - INFO - All instances processed.
+2026-04-08 01:22:05,301 - 291193 - INFO - Restart Total time: 0:10:58.817755
+2026-04-08 01:22:05,301 - 291193 - INFO - Auto-confirmed services are restarted
+2026-04-08 01:22:05,302 - 291193 - INFO - Confirmed - services are started
+2026-04-08 01:22:05,413 - 291193 - INFO - The following instances have failed the patch: []
+2026-04-08 01:22:05,413 - 291193 - INFO - No instances have failed the patch.
+2026-04-08 01:22:05,413 - 291193 - INFO - Total Patch Process time: 0:17:02.381348
+2026-04-08 01:23:06,035 - 291193 - INFO - Log file ./logs/patching_2026-04-08_Sears-UAT.log uploaded to s3://q2-2026-aws-security-patching/Sears-UAT_Patch/2026-04-08/patching_2026-04-08_Sears-UAT.log

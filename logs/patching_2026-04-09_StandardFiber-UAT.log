@@ -1,0 +1,253 @@
+2026-04-09 00:05:02,673 - 347493 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-09 00:05:02,673 - 347493 - INFO - Script Start Time: 2026-04-09 00:05:02
+2026-04-09 00:05:02,984 - 347493 - INFO - Instance(s) selected for Patching: {'i-07a824da54b916597': '172.25.32.5'}
+2026-04-09 00:05:03,083 - 347493 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-09 00:05:03,083 - 347493 - INFO - Now patching instances at: 2026-04-09 00:05:03
+2026-04-09 00:05:03,220 - 347493 - INFO - Sending patch command to instance i-07a824da54b916597
+2026-04-09 00:05:03,604 - 347493 - INFO - Command sent successfully to instance i-07a824da54b916597. Command ID: 127d6bd2-8572-4afb-a9fd-2552f05a8c18
+2026-04-09 00:09:05,337 - 347493 - INFO - All patches applied successfully.
+2026-04-09 00:09:05,338 - 347493 - INFO - Patching end time: 2026-04-09 00:09:05
+2026-04-09 00:09:05,338 - 347493 - INFO - Patch Elapsed time: 0:04:02.254566
+2026-04-09 00:09:05,413 - 347493 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-09 00:09:05,413 - 347493 - INFO - Confirmed - services are stopped
+2026-04-09 00:09:10,720 - 347493 - INFO - Discovered TG map: {'i-07a824da54b916597': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-Desktop-V24-2/cccc291d9c5db36a', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-RF-V24-2/fd9ab0b00dee4842', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-WS-V24-2/ccf8664b5066d1f3']}
+2026-04-09 00:09:11,471 - 347493 - INFO - Sent app_validation.py to i-07a824da54b916597 (command_id: 8533d55a-93f2-400e-93b8-d29d6b96eae7)
+2026-04-09 00:09:41,671 - 347493 - INFO - app_validation.py output for i-07a824da54b916597:
+
+==============================================================================
+Server Availability Check Started | 2026-04-09 04:09:11.723562
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.5
+Hostname | ip-172-25-32-5.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 107.0G | 132.9G | 44% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | sfb_apick, sfb_dwa, sfb_event, sfb_ftp, sfb_lbl, sfb_rplpu, sfb_rpt, sfb_jqgrid, sfb_sch, sfb_inbq, sfb_repl, sfb_rccl, sfb_wld, sfb_wsq, sfb_mpcpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+sfb_apick | /data/batchapp/softeon/standardfiberuat/autopicktooldaemon
+sfb_dwa | /data/batchapp/softeon/standardfiberuat/downloaddaemon
+sfb_event | /data/batchapp/softeon/standardfiberuat/eventdaemon
+sfb_ftp | /data/batchapp/softeon/standardfiberuat/ftpdaemon
+sfb_lbl | /data/batchapp/softeon/standardfiberuat/labeldaemon
+sfb_rplpu | /data/batchapp/softeon/standardfiberuat/replenishmentpriorityupdatedaemon
+sfb_rpt | /data/batchapp/softeon/standardfiberuat/reportdaemon
+sfb_jqgrid | /data/batchapp/softeon/standardfiberuat/reportjqgridexportdaemon
+sfb_sch | /data/batchapp/softeon/standardfiberuat/schedulerdaemon
+sfb_inbq | /data/batchapp/softeon/standardfiberuat/uploaddaemon
+sfb_repl | /data/batchapp/softeon/standardfiberuat/replenishmentdaemon
+sfb_rccl | /data/batchapp/softeon/standardfiberuat/replenishmentpickloccanceldaemon
+sfb_wld | /data/batchapp/softeon/standardfiberuat/wavelaunchdaemon
+sfb_wsq | /data/batchapp/softeon/standardfiberuat/wsqdaemon
+sfb_mpcpt | /data/batchapp/softeon/standardfiberuat/picktooldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3684795 | standardfiberrfuat | jboss800eap | stfiberrf_j800 | 8081 | 172.25.32.5:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberrfuat/standalone
+3683652 | standardfiberuat | jboss800eap | stfiberuat_j800 | 8080 | 172.25.32.5:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-09 04:09:12.356455
+==============================================================================
+
+2026-04-09 00:09:41,671 - 347493 - ERROR - app_validation.py errors for i-07a824da54b916597:
+
+2026-04-09 00:09:41,673 - 347493 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-09/StandardFiber-UAT/172.25.32.5/172.25.32.5-BeforePatching-2026-04-09-00-09-41-673.log
+2026-04-09 00:09:41,673 - 347493 - INFO - Deregistering i-07a824da54b916597 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-Desktop-V24-2/cccc291d9c5db36a
+2026-04-09 00:09:41,980 - 347493 - INFO - Deregistering i-07a824da54b916597 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-RF-V24-2/fd9ab0b00dee4842
+2026-04-09 00:09:42,080 - 347493 - INFO - Deregistering i-07a824da54b916597 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-WS-V24-2/ccf8664b5066d1f3
+2026-04-09 00:09:42,185 - 347493 - INFO - Stopping EC2 instance: i-07a824da54b916597 at 2026-04-09 00:09:42
+2026-04-09 00:10:28,493 - 347493 - INFO - Instance i-07a824da54b916597 stopped successfully.
+2026-04-09 00:10:28,627 - 347493 - INFO - Stopped i-07a824da54b916597 in 0:00:46.442716
+2026-04-09 00:10:28,628 - 347493 - INFO - Starting EC2 instance: i-07a824da54b916597
+2026-04-09 00:10:44,680 - 347493 - INFO - Instance i-07a824da54b916597 started successfully.
+2026-04-09 00:10:44,680 - 347493 - INFO - Waiting 50 seconds for SSM agent to be ready on i-07a824da54b916597...
+2026-04-09 00:11:34,696 - 347493 - INFO - Registering i-07a824da54b916597 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-Desktop-V24-2/cccc291d9c5db36a
+2026-04-09 00:11:35,087 - 347493 - INFO - Registering i-07a824da54b916597 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-RF-V24-2/fd9ab0b00dee4842
+2026-04-09 00:11:35,296 - 347493 - INFO - Registering i-07a824da54b916597 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/StandardFiber-UAT-WS-V24-2/ccf8664b5066d1f3
+2026-04-09 00:14:06,898 - 347493 - INFO - Sent app_validation.py to i-07a824da54b916597 (command_id: b21eb349-498c-4df8-9e08-647d60832490)
+2026-04-09 00:14:37,032 - 347493 - INFO - app_validation.py output for i-07a824da54b916597:
+
+==============================================================================
+Server Availability Check Started | 2026-04-09 04:14:07.131336
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.5
+Hostname | ip-172-25-32-5.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 107.0G | 132.9G | 44% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | sfb_apick, sfb_dwa, sfb_event, sfb_ftp, sfb_lbl, sfb_rplpu, sfb_rpt, sfb_jqgrid, sfb_sch, sfb_inbq, sfb_repl, sfb_rccl, sfb_wld, sfb_wsq, sfb_mpcpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+sfb_apick | /data/batchapp/softeon/standardfiberuat/autopicktooldaemon
+sfb_dwa | /data/batchapp/softeon/standardfiberuat/downloaddaemon
+sfb_event | /data/batchapp/softeon/standardfiberuat/eventdaemon
+sfb_ftp | /data/batchapp/softeon/standardfiberuat/ftpdaemon
+sfb_lbl | /data/batchapp/softeon/standardfiberuat/labeldaemon
+sfb_rplpu | /data/batchapp/softeon/standardfiberuat/replenishmentpriorityupdatedaemon
+sfb_rpt | /data/batchapp/softeon/standardfiberuat/reportdaemon
+sfb_jqgrid | /data/batchapp/softeon/standardfiberuat/reportjqgridexportdaemon
+sfb_sch | /data/batchapp/softeon/standardfiberuat/schedulerdaemon
+sfb_inbq | /data/batchapp/softeon/standardfiberuat/uploaddaemon
+sfb_repl | /data/batchapp/softeon/standardfiberuat/replenishmentdaemon
+sfb_rccl | /data/batchapp/softeon/standardfiberuat/replenishmentpickloccanceldaemon
+sfb_wld | /data/batchapp/softeon/standardfiberuat/wavelaunchdaemon
+sfb_wsq | /data/batchapp/softeon/standardfiberuat/wsqdaemon
+sfb_mpcpt | /data/batchapp/softeon/standardfiberuat/picktooldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5216 | standardfiberrfuat | jboss800eap | stfiberrf_j800 | 8081 | 172.25.32.5:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberrfuat/standalone
+5160 | standardfiberuat | jboss800eap | stfiberuat_j800 | 8080 | 172.25.32.5:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-09 04:14:08.465217
+==============================================================================
+
+2026-04-09 00:14:37,032 - 347493 - ERROR - app_validation.py errors for i-07a824da54b916597:
+
+2026-04-09 00:14:37,034 - 347493 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-09/StandardFiber-UAT/172.25.32.5/172.25.32.5-AfterPatching-2026-04-09-00-14-37-033.log
+2026-04-09 00:14:37,086 - 347493 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-09/StandardFiber-UAT/172.25.32.5/172.25.32.5-Validation-details-2026-04-09-00-14-37-033.html
+2026-04-09 00:14:37,151 - 347493 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-09 00:14:37,151 - 347493 - INFO - HTML validation report email sent for i-07a824da54b916597
+2026-04-09 00:14:37,289 - 347493 - INFO - Started i-07a824da54b916597 in 0:04:08.660673
+2026-04-09 00:14:37,289 - 347493 - INFO - All instances processed.
+2026-04-09 00:14:37,293 - 347493 - INFO - Restart Total time: 0:05:31.759923
+2026-04-09 00:14:37,293 - 347493 - INFO - Auto-confirmed services are restarted
+2026-04-09 00:14:37,293 - 347493 - INFO - Confirmed - services are started
+2026-04-09 00:14:37,438 - 347493 - INFO - The following instances have failed the patch: []
+2026-04-09 00:14:37,438 - 347493 - INFO - No instances have failed the patch.
+2026-04-09 00:14:37,438 - 347493 - INFO - Total Patch Process time: 0:09:34.764438
+2026-04-09 00:15:37,877 - 347493 - INFO - Log file ./logs/patching_2026-04-09_StandardFiber-UAT.log uploaded to s3://q2-2026-aws-security-patching/StandardFiber-UAT_Patch/2026-04-09/patching_2026-04-09_StandardFiber-UAT.log

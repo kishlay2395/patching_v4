@@ -1,0 +1,62 @@
+2026-06-21 01:30:04,137 - 3022994 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 01:38:23,967 - 3022994 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 01:38:24,143 - 3022994 - INFO - Log file ./logs/backup_2026-06-21.log uploaded to s3://q3-2025-aws-security-patching/Curology-App_Patch_Backup/2026-06-21/backup_2026-06-21.log
+2026-06-21 05:30:03,550 - 3032328 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-21 05:30:03,550 - 3032328 - INFO - Script Start Time: 2026-06-21 05:30:03
+2026-06-21 05:30:04,127 - 3032328 - INFO - Instance(s) selected for Patching: {'i-0fb15e7eef1cdd453': '172.28.128.6', 'i-03ba1912ab9838323': '172.28.128.37'}
+2026-06-21 05:30:04,226 - 3032328 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 05:30:04,227 - 3032328 - INFO - Now patching instances at: 2026-06-21 05:30:04
+2026-06-21 05:30:04,550 - 3032328 - INFO - Sent app_validation.py to i-0fb15e7eef1cdd453 (command_id: c5f6b508-970f-4e4f-b71b-c9b1e92fd9c7)
+2026-06-21 05:30:34,613 - 3032328 - ERROR - Before validation failed for i-0fb15e7eef1cdd453: An error occurred (AccessDeniedException) when calling the GetCommandInvocation operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: ssm:GetCommandInvocation on resource: arn:aws:ssm:us-east-2:952248200411:* because no identity-based policy allows the ssm:GetCommandInvocation action
+2026-06-21 05:30:34,856 - 3032328 - INFO - Sent app_validation.py to i-03ba1912ab9838323 (command_id: 87581c1b-b436-4315-bee7-e94fb01ebeb9)
+2026-06-21 05:31:04,915 - 3032328 - ERROR - Before validation failed for i-03ba1912ab9838323: An error occurred (AccessDeniedException) when calling the GetCommandInvocation operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: ssm:GetCommandInvocation on resource: arn:aws:ssm:us-east-2:952248200411:* because no identity-based policy allows the ssm:GetCommandInvocation action
+2026-06-21 05:31:05,072 - 3032328 - INFO - Sending patch command to instance i-0fb15e7eef1cdd453
+2026-06-21 05:31:05,230 - 3032328 - INFO - Command sent successfully to instance i-0fb15e7eef1cdd453. Command ID: 3949bfae-dd20-4181-aa61-dd89af6d3752
+2026-06-21 05:31:05,383 - 3032328 - INFO - Sending patch command to instance i-03ba1912ab9838323
+2026-06-21 05:31:05,480 - 3032328 - INFO - Command sent successfully to instance i-03ba1912ab9838323. Command ID: 1dfdc3f6-3e67-44a6-8734-618cc97c0675
+2026-06-21 05:39:37,932 - 3032328 - INFO - All patches applied successfully.
+2026-06-21 05:39:37,933 - 3032328 - INFO - Patching end time: 2026-06-21 05:39:37
+2026-06-21 05:39:37,933 - 3032328 - INFO - Patch Elapsed time: 0:09:33.706216
+2026-06-21 05:39:38,017 - 3032328 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 05:39:38,017 - 3032328 - INFO - Confirmed - services are stopped
+2026-06-21 05:39:38,555 - 3032328 - INFO - Discovered TG map: {'i-03ba1912ab9838323': ['arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c', 'arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b', 'arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0'], 'i-0fb15e7eef1cdd453': ['arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c', 'arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b', 'arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0']}
+2026-06-21 05:39:38,733 - 3032328 - INFO - Deregistering i-0fb15e7eef1cdd453 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c
+2026-06-21 05:39:38,814 - 3032328 - WARNING - Failed to deregister i-0fb15e7eef1cdd453 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:39:38,814 - 3032328 - INFO - Deregistering i-0fb15e7eef1cdd453 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b
+2026-06-21 05:39:38,834 - 3032328 - WARNING - Failed to deregister i-0fb15e7eef1cdd453 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:39:38,834 - 3032328 - INFO - Deregistering i-0fb15e7eef1cdd453 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0
+2026-06-21 05:39:38,852 - 3032328 - WARNING - Failed to deregister i-0fb15e7eef1cdd453 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0 because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:39:38,853 - 3032328 - INFO - Stopping EC2 instance: i-0fb15e7eef1cdd453 at 2026-06-21 05:39:38
+2026-06-21 05:40:55,136 - 3032328 - INFO - Instance i-0fb15e7eef1cdd453 stopped successfully.
+2026-06-21 05:40:55,391 - 3032328 - INFO - Stopped i-0fb15e7eef1cdd453 in 0:01:16.538771
+2026-06-21 05:40:55,392 - 3032328 - INFO - Starting EC2 instance: i-0fb15e7eef1cdd453
+2026-06-21 05:41:11,307 - 3032328 - INFO - Instance i-0fb15e7eef1cdd453 started successfully.
+2026-06-21 05:41:11,307 - 3032328 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0fb15e7eef1cdd453...
+2026-06-21 05:42:51,407 - 3032328 - INFO - Registering i-0fb15e7eef1cdd453 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c
+2026-06-21 05:42:51,608 - 3032328 - INFO - Registering i-0fb15e7eef1cdd453 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b
+2026-06-21 05:42:51,738 - 3032328 - INFO - Registering i-0fb15e7eef1cdd453 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0
+2026-06-21 05:44:52,315 - 3032328 - ERROR - Error starting instance i-0fb15e7eef1cdd453: expected str, bytes or os.PathLike object, not NoneType
+2026-06-21 05:44:52,317 - 3032328 - INFO - Deregistering i-03ba1912ab9838323 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c
+2026-06-21 05:44:52,335 - 3032328 - WARNING - Failed to deregister i-03ba1912ab9838323 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:44:52,335 - 3032328 - INFO - Deregistering i-03ba1912ab9838323 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b
+2026-06-21 05:44:52,354 - 3032328 - WARNING - Failed to deregister i-03ba1912ab9838323 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:44:52,354 - 3032328 - INFO - Deregistering i-03ba1912ab9838323 from TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0
+2026-06-21 05:44:52,372 - 3032328 - WARNING - Failed to deregister i-03ba1912ab9838323 from arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0: An error occurred (AccessDenied) when calling the DeregisterTargets operation: User: arn:aws:iam::952248200411:user/DevOps-Prod-Scripts is not authorized to perform: elasticloadbalancing:DeregisterTargets on resource: arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0 because no identity-based policy allows the elasticloadbalancing:DeregisterTargets action
+2026-06-21 05:44:52,372 - 3032328 - INFO - Stopping EC2 instance: i-03ba1912ab9838323 at 2026-06-21 05:44:52
+2026-06-21 05:46:38,728 - 3032328 - INFO - Instance i-03ba1912ab9838323 stopped successfully.
+2026-06-21 05:46:39,056 - 3032328 - INFO - Stopped i-03ba1912ab9838323 in 0:01:46.684437
+2026-06-21 05:46:39,056 - 3032328 - INFO - Starting EC2 instance: i-03ba1912ab9838323
+2026-06-21 05:46:55,046 - 3032328 - INFO - Instance i-03ba1912ab9838323 started successfully.
+2026-06-21 05:46:55,046 - 3032328 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03ba1912ab9838323...
+2026-06-21 05:48:35,061 - 3032328 - INFO - Registering i-03ba1912ab9838323 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-Desktop/edfed4a51b15041c
+2026-06-21 05:48:35,265 - 3032328 - INFO - Registering i-03ba1912ab9838323 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-RF/63c8e269de66d29b
+2026-06-21 05:48:35,411 - 3032328 - INFO - Registering i-03ba1912ab9838323 to TG arn:aws:elasticloadbalancing:us-east-2:952248200411:targetgroup/Curology-Production-WS/9231884465ec50d0
+2026-06-21 05:50:35,971 - 3032328 - ERROR - Error starting instance i-03ba1912ab9838323: expected str, bytes or os.PathLike object, not NoneType
+2026-06-21 05:50:35,971 - 3032328 - INFO - All instances processed.
+2026-06-21 05:50:35,974 - 3032328 - INFO - Restart Total time: 0:10:57.809332
+2026-06-21 05:50:35,974 - 3032328 - INFO - Auto-confirmed services are restarted
+2026-06-21 05:50:35,974 - 3032328 - INFO - Confirmed - services are started
+2026-06-21 05:50:36,115 - 3032328 - INFO - The following instances have failed the patch: []
+2026-06-21 05:50:36,115 - 3032328 - INFO - No instances have failed the patch.
+2026-06-21 05:50:36,115 - 3032328 - INFO - Total Patch Process time: 0:20:32.564959
+2026-06-21 05:51:36,602 - 3032328 - INFO - Log file ./logs/patching_2026-06-21_Curology-App.log uploaded to s3://q2-2026-aws-security-patching/Curology-App_Patch/2026-06-21/patching_2026-06-21_Curology-App.log

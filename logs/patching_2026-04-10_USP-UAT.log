@@ -1,0 +1,243 @@
+2026-04-10 03:05:02,564 - 409587 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-10 03:05:02,564 - 409587 - INFO - Script Start Time: 2026-04-10 03:05:02
+2026-04-10 03:05:02,901 - 409587 - INFO - Instance(s) selected for Patching: {'i-075f7294d9df0d053': '172.30.130.12'}
+2026-04-10 03:05:02,985 - 409587 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-10 03:05:02,985 - 409587 - INFO - Now patching instances at: 2026-04-10 03:05:02
+2026-04-10 03:05:03,105 - 409587 - INFO - Sending patch command to instance i-075f7294d9df0d053
+2026-04-10 03:05:03,313 - 409587 - INFO - Command sent successfully to instance i-075f7294d9df0d053. Command ID: 6237116d-0bb7-41b1-8e13-e7459f480337
+2026-04-10 03:10:04,925 - 409587 - INFO - All patches applied successfully.
+2026-04-10 03:10:04,926 - 409587 - INFO - Patching end time: 2026-04-10 03:10:04
+2026-04-10 03:10:04,926 - 409587 - INFO - Patch Elapsed time: 0:05:01.940431
+2026-04-10 03:10:05,003 - 409587 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-10 03:10:05,003 - 409587 - INFO - Confirmed - services are stopped
+2026-04-10 03:10:12,993 - 409587 - INFO - Discovered TG map: {'i-075f7294d9df0d053': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d']}
+2026-04-10 03:10:13,459 - 409587 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: d5d9817b-a6fd-474e-9a41-dd1b6196b31d)
+2026-04-10 03:10:43,546 - 409587 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-04-10 07:10:13.790263
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 195.6G | 94.3G | 67% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.130.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3292 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2953 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-10 07:10:14.704192
+==============================================================================
+
+2026-04-10 03:10:43,546 - 409587 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-04-10 03:10:43,548 - 409587 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-10/USP-UAT/172.30.130.12/172.30.130.12-BeforePatching-2026-04-10-03-10-43-547.log
+2026-04-10 03:10:43,548 - 409587 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274
+2026-04-10 03:10:43,674 - 409587 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a
+2026-04-10 03:10:43,730 - 409587 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d
+2026-04-10 03:10:43,791 - 409587 - INFO - Stopping EC2 instance: i-075f7294d9df0d053 at 2026-04-10 03:10:43
+2026-04-10 03:11:59,990 - 409587 - INFO - Instance i-075f7294d9df0d053 stopped successfully.
+2026-04-10 03:12:00,224 - 409587 - INFO - Stopped i-075f7294d9df0d053 in 0:01:16.433427
+2026-04-10 03:12:00,229 - 409587 - INFO - Starting EC2 instance: i-075f7294d9df0d053
+2026-04-10 03:12:16,143 - 409587 - INFO - Instance i-075f7294d9df0d053 started successfully.
+2026-04-10 03:12:16,143 - 409587 - INFO - Waiting 50 seconds for SSM agent to be ready on i-075f7294d9df0d053...
+2026-04-10 03:13:06,187 - 409587 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274
+2026-04-10 03:13:06,457 - 409587 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a
+2026-04-10 03:13:06,603 - 409587 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d
+2026-04-10 03:14:37,284 - 409587 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: 00a88282-7468-4c57-945a-a0466664117e)
+2026-04-10 03:15:07,411 - 409587 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-04-10 07:14:37.549687
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 195.4G | 94.4G | 67% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 12
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3297 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2907 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-10 07:14:38.934512
+==============================================================================
+
+2026-04-10 03:15:07,411 - 409587 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-04-10 03:15:07,413 - 409587 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-10/USP-UAT/172.30.130.12/172.30.130.12-AfterPatching-2026-04-10-03-15-07-413.log
+2026-04-10 03:15:07,465 - 409587 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-10/USP-UAT/172.30.130.12/172.30.130.12-Validation-details-2026-04-10-03-15-07-413.html
+2026-04-10 03:15:07,545 - 409587 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-10 03:15:07,545 - 409587 - INFO - HTML validation report email sent for i-075f7294d9df0d053
+2026-04-10 03:15:07,674 - 409587 - INFO - Started i-075f7294d9df0d053 in 0:03:07.445691
+2026-04-10 03:15:07,675 - 409587 - INFO - All instances processed.
+2026-04-10 03:15:07,679 - 409587 - INFO - Restart Total time: 0:05:02.531149
+2026-04-10 03:15:07,679 - 409587 - INFO - Auto-confirmed services are restarted
+2026-04-10 03:15:07,679 - 409587 - INFO - Confirmed - services are started
+2026-04-10 03:15:07,799 - 409587 - INFO - The following instances have failed the patch: []
+2026-04-10 03:15:07,800 - 409587 - INFO - No instances have failed the patch.
+2026-04-10 03:15:07,800 - 409587 - INFO - Total Patch Process time: 0:10:05.235024
+2026-04-10 03:16:08,294 - 409587 - INFO - Log file ./logs/patching_2026-04-10_USP-UAT.log uploaded to s3://q2-2026-aws-security-patching/USP-UAT_Patch/2026-04-10/patching_2026-04-10_USP-UAT.log

@@ -1,0 +1,438 @@
+2026-06-14 02:00:02,915 - 2648100 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-14 02:00:02,915 - 2648100 - INFO - Script Start Time: 2026-06-14 02:00:02
+2026-06-14 02:00:03,346 - 2648100 - INFO - Instance(s) selected for Patching: {'i-089c259a3173722d1': '172.31.11.50', 'i-0572516943d5167f6': '172.31.11.11'}
+2026-06-14 02:00:03,480 - 2648100 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 02:00:03,482 - 2648100 - INFO - Now patching instances at: 2026-06-14 02:00:03
+2026-06-14 02:00:03,843 - 2648100 - INFO - Sent app_validation.py to i-089c259a3173722d1 (command_id: 007fbf32-eff3-43dc-8f19-267888600ae7)
+2026-06-14 02:00:33,945 - 2648100 - INFO - app_validation.py output for i-089c259a3173722d1:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 01:00:04.375483
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.11.50
+Hostname | ip-172-31-11-50
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p1 | 196.7G | 112.8G | 73.9G | 57% | /data
+172.31.11.11:/data/app/jboss72/cevalenovoprod/logs/report/ | 196.7G | 145.2G | 41.5G | 73% | /data/app/jboss72/cevalenovoprod/logs/report
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/batchapp/cevalenovoprod/lenovo/output     172.31.11.11(rw,sync) 172.31.11.182(rw,sync) | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut     172.31.11.11(rw,sync) 172.31.11.182(rw,sync) | /data/softeon/shared/utilenovoprod		172.31.11.182(rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.11.11:/data/app/jboss72/cevalenovoprod/logs/report/ | /data/app/jboss72/cevalenovoprod/logs/report | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.11.50:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 25
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.11.50 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | drivemonitor, lenmxprod_scheduler, lenmxprod_eventmessengerdaemon, lenmxprod_replenishmentrequestdaemon, lenmxprod_templatedaemonordergroup, lenmxprod_vmirequestreleasedaemon, lenmxprod_labeldaemon, lenmxprod536_downloaddaemon, lenmxprod536_reportdaemon, lenmxprod536_jqgriddaemon, lenmxprod536_x270_ftpdaemon, cevalenovo_wsq, lenmxprod536_uploaddaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+drivemonitor | /data/softeon/batchapp/cevalenovoprod/lenovo536/drivespacemonitor
+lenmxprod_scheduler | /data/app/java/jdk1.7.0_80/bin/lenmxprod_scheduler
+lenmxprod_eventmessengerdaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod_eventmessengerdaemon
+lenmxprod_replenishmentrequestdaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod_replenishmentrequestdaemon
+lenmxprod_templatedaemonordergroup | /data/app/java/jdk1.7.0_80/bin/lenmxprod_templatedaemonordergroup
+lenmxprod_vmirequestreleasedaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod_vmirequestreleasedaemon
+lenmxprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod_labeldaemon
+lenmxprod536_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod536_downloaddaemon
+lenmxprod536_reportdaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod536_reportdaemon
+lenmxprod536_jqgriddaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod536_jqgriddaemon
+lenmxprod536_x270_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod536_x270_ftpdaemon
+cevalenovo_wsq | /data/softeon/batchapp/cevalenovoprod/lenovo536/wsqdaemon
+lenmxprod536_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/lenmxprod536_uploaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 01:00:05.215809
+==============================================================================
+
+2026-06-14 02:00:33,945 - 2648100 - ERROR - app_validation.py errors for i-089c259a3173722d1:
+
+2026-06-14 02:00:33,947 - 2648100 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.50/172.31.11.50-BeforePatching-2026-06-14-02-00-33-946.log
+2026-06-14 02:00:34,131 - 2648100 - INFO - Sent app_validation.py to i-0572516943d5167f6 (command_id: e4952e7d-7a5b-4fd2-a8c2-954ac795f2c5)
+2026-06-14 02:01:04,261 - 2648100 - INFO - app_validation.py output for i-0572516943d5167f6:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 01:00:34.528061
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.11.11
+Hostname | ip-172-31-11-11
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p1 | 196.7G | 145.2G | 41.5G | 73% | /data
+172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo/output | 196.7G | 112.8G | 73.9G | 57% | /data/softeon/batchapp/cevalenovoprod/lenovo/output
+172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | 196.7G | 112.8G | 73.9G | 57% | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/app/jboss72/cevalenovoprod/logs/report	172.31.11.50(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo/output | /data/softeon/batchapp/cevalenovoprod/lenovo/output | nfs4
+NFS_MOUNT | 172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.11.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 17
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.11.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 1
+Non-Standalone Java Processes | drive_monitor
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 1
+Java-Name | Java-Path
+drive_monitor | /data/app/admin-tools/cevalenovoprod/drivespacemonitor
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1865766 | cevalenovoprod | app | cevalenovoprod_jboss | 80 | 172.31.11.11:80 | UP | 200 | Disabled | /data/app/jboss72/cevalenovoprod/standalone
+1865822 | cevalenovorfprod | app | cevalenovorfprod_jboss | 8081 | 172.31.11.11:8081 | UP | 200 | Disabled | /data/app/jboss72/cevalenovorfprod/standalone
+1865880 | lenovosupplier | app | lenovosupplier_jboss | 8080 | 172.31.11.11:8080 | UP | 200 | Disabled | /data/app/jboss72/lenovosupplier/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 01:00:35.010914
+==============================================================================
+
+2026-06-14 02:01:04,261 - 2648100 - ERROR - app_validation.py errors for i-0572516943d5167f6:
+
+2026-06-14 02:01:04,263 - 2648100 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.11/172.31.11.11-BeforePatching-2026-06-14-02-01-04-263.log
+2026-06-14 02:01:04,426 - 2648100 - INFO - Sending patch command to instance i-089c259a3173722d1
+2026-06-14 02:01:04,547 - 2648100 - INFO - Command sent successfully to instance i-089c259a3173722d1. Command ID: 3972839d-fc98-4496-9700-08c89e4d2dbb
+2026-06-14 02:01:04,729 - 2648100 - INFO - Sending patch command to instance i-0572516943d5167f6
+2026-06-14 02:01:04,833 - 2648100 - INFO - Command sent successfully to instance i-0572516943d5167f6. Command ID: 3a4a5793-95cb-40a4-8fea-18a2489d8be4
+2026-06-14 02:10:37,334 - 2648100 - INFO - All patches applied successfully.
+2026-06-14 02:10:37,334 - 2648100 - INFO - Patching end time: 2026-06-14 02:10:37
+2026-06-14 02:10:37,334 - 2648100 - INFO - Patch Elapsed time: 0:10:33.851819
+2026-06-14 02:10:37,429 - 2648100 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 02:10:37,430 - 2648100 - INFO - Confirmed - services are stopped
+2026-06-14 02:10:58,212 - 2648100 - INFO - Discovered TG map: {'i-0572516943d5167f6': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CEVA-Supplier-Prod-Ext/33deaad4f8977d1c']}
+2026-06-14 02:10:58,449 - 2648100 - INFO - Stopping EC2 instance: i-089c259a3173722d1 at 2026-06-14 02:10:58
+2026-06-14 02:11:59,542 - 2648100 - INFO - Instance i-089c259a3173722d1 stopped successfully.
+2026-06-14 02:11:59,798 - 2648100 - INFO - Stopped i-089c259a3173722d1 in 0:01:01.348637
+2026-06-14 02:11:59,799 - 2648100 - INFO - Starting EC2 instance: i-089c259a3173722d1
+2026-06-14 02:12:15,847 - 2648100 - INFO - Instance i-089c259a3173722d1 started successfully.
+2026-06-14 02:12:15,847 - 2648100 - INFO - Waiting 100 seconds for SSM agent to be ready on i-089c259a3173722d1...
+2026-06-14 02:13:56,170 - 2648100 - INFO - Sent app_validation.py to i-089c259a3173722d1 (command_id: 2e8d297c-9665-4f48-a3a7-1b9a1113556f)
+2026-06-14 02:14:26,313 - 2648100 - INFO - app_validation.py output for i-089c259a3173722d1:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 01:13:56.488418
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.11.50
+Hostname | ip-172-31-11-50
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p1 | 196.7G | 111.2G | 75.5G | 56% | /data
+172.31.11.11:/data/app/jboss72/cevalenovoprod/logs/report/ | 196.7G | 145.2G | 41.5G | 73% | /data/app/jboss72/cevalenovoprod/logs/report
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/batchapp/cevalenovoprod/lenovo/output     172.31.11.11(rw,sync) 172.31.11.182(rw,sync) | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut     172.31.11.11(rw,sync) 172.31.11.182(rw,sync) | /data/softeon/shared/utilenovoprod		172.31.11.182(rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.11.11:/data/app/jboss72/cevalenovoprod/logs/report/ | /data/app/jboss72/cevalenovoprod/logs/report | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.11.50 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 01:13:56.775840
+==============================================================================
+
+2026-06-14 02:14:26,314 - 2648100 - ERROR - app_validation.py errors for i-089c259a3173722d1:
+
+2026-06-14 02:14:26,315 - 2648100 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.50/172.31.11.50-AfterPatching-2026-06-14-02-14-26-315.log
+2026-06-14 02:14:26,367 - 2648100 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.50/172.31.11.50-Validation-details-2026-06-14-02-14-26-315.html
+2026-06-14 02:14:26,619 - 2648100 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 02:14:26,619 - 2648100 - INFO - HTML validation report email sent for i-089c259a3173722d1
+2026-06-14 02:14:26,872 - 2648100 - INFO - Started i-089c259a3173722d1 in 0:02:27.073147
+2026-06-14 02:14:26,872 - 2648100 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-06-14 02:16:26,893 - 2648100 - INFO - Deregistering i-0572516943d5167f6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CEVA-Supplier-Prod-Ext/33deaad4f8977d1c
+2026-06-14 02:16:26,969 - 2648100 - INFO - Stopping EC2 instance: i-0572516943d5167f6 at 2026-06-14 02:16:26
+2026-06-14 02:17:28,033 - 2648100 - INFO - Instance i-0572516943d5167f6 stopped successfully.
+2026-06-14 02:17:28,285 - 2648100 - INFO - Stopped i-0572516943d5167f6 in 0:01:01.315928
+2026-06-14 02:17:28,286 - 2648100 - INFO - Starting EC2 instance: i-0572516943d5167f6
+2026-06-14 02:17:44,254 - 2648100 - INFO - Instance i-0572516943d5167f6 started successfully.
+2026-06-14 02:17:44,255 - 2648100 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0572516943d5167f6...
+2026-06-14 02:19:24,355 - 2648100 - INFO - Registering i-0572516943d5167f6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CEVA-Supplier-Prod-Ext/33deaad4f8977d1c
+2026-06-14 02:19:54,901 - 2648100 - INFO - Sent app_validation.py to i-0572516943d5167f6 (command_id: ad2eb1be-4a8e-415e-927c-749a5254b7d3)
+2026-06-14 02:20:25,070 - 2648100 - INFO - app_validation.py output for i-0572516943d5167f6:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 01:19:55.272170
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.11.11
+Hostname | ip-172-31-11-11
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p1 | 196.7G | 144.7G | 41.9G | 73% | /data
+172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | 196.7G | 111.2G | 75.5G | 56% | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut
+172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo/output | 196.7G | 111.2G | 75.5G | 56% | /data/softeon/batchapp/cevalenovoprod/lenovo/output
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/app/jboss72/cevalenovoprod/logs/report	172.31.11.50(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | /data/softeon/batchapp/cevalenovoprod/lenovo536/outbut | nfs4
+NFS_MOUNT | 172.31.11.50:/data/softeon/batchapp/cevalenovoprod/lenovo/output | /data/softeon/batchapp/cevalenovoprod/lenovo/output | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.11.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3081 | cevalenovoprod | app | cevalenovoprod_jboss | 80 | 172.31.11.11:80 | UP | 200 | Disabled | /data/app/jboss72/cevalenovoprod/standalone
+3079 | cevalenovorfprod | app | cevalenovorfprod_jboss | 8081 | 172.31.11.11:8081 | UP | 200 | Disabled | /data/app/jboss72/cevalenovorfprod/standalone
+3080 | lenovosupplier | app | lenovosupplier_jboss | 8080 | 172.31.11.11:8080 | UP | 200 | Disabled | /data/app/jboss72/lenovosupplier/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 01:19:55.766641
+==============================================================================
+
+2026-06-14 02:20:25,071 - 2648100 - ERROR - app_validation.py errors for i-0572516943d5167f6:
+
+2026-06-14 02:20:25,072 - 2648100 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.11/172.31.11.11-AfterPatching-2026-06-14-02-20-25-072.log
+2026-06-14 02:20:25,125 - 2648100 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-14/Ceva-Prod/172.31.11.11/172.31.11.11-Validation-details-2026-06-14-02-20-25-072.html
+2026-06-14 02:20:25,386 - 2648100 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 02:20:25,386 - 2648100 - INFO - HTML validation report email sent for i-0572516943d5167f6
+2026-06-14 02:20:25,646 - 2648100 - INFO - Started i-0572516943d5167f6 in 0:02:57.360352
+2026-06-14 02:20:25,647 - 2648100 - INFO - All instances processed.
+2026-06-14 02:20:25,651 - 2648100 - INFO - Restart Total time: 0:09:48.088164
+2026-06-14 02:20:25,652 - 2648100 - INFO - Auto-confirmed services are restarted
+2026-06-14 02:20:25,652 - 2648100 - INFO - Confirmed - services are started
+2026-06-14 02:20:25,772 - 2648100 - INFO - The following instances have failed the patch: []
+2026-06-14 02:20:25,772 - 2648100 - INFO - No instances have failed the patch.
+2026-06-14 02:20:25,772 - 2648100 - INFO - Total Patch Process time: 0:20:22.856217
+2026-06-14 02:21:26,408 - 2648100 - INFO - Log file ./logs/patching_2026-06-14_Ceva-Prod.log uploaded to s3://q2-2026-aws-security-patching/Ceva-Prod_Patch/2026-06-14/patching_2026-06-14_Ceva-Prod.log

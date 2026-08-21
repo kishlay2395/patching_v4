@@ -1,0 +1,202 @@
+2026-06-28 00:05:03,551 - 3388812 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-28 00:05:03,552 - 3388812 - INFO - Script Start Time: 2026-06-28 00:05:03
+2026-06-28 00:05:03,786 - 3388812 - INFO - Instance(s) selected for Patching: {'i-005de4f42b412ffbf': '172.25.32.27', 'i-0a27717ada94ab4af': '172.25.32.61'}
+2026-06-28 00:05:03,877 - 3388812 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-28 00:05:03,877 - 3388812 - INFO - Now patching instances at: 2026-06-28 00:05:03
+2026-06-28 00:05:04,433 - 3388812 - INFO - Sent app_validation.py to i-0a27717ada94ab4af (command_id: 2d6a7016-1951-41ef-9b1d-bc6fe64f8fb1)
+2026-06-28 00:05:34,589 - 3388812 - INFO - app_validation.py output for i-0a27717ada94ab4af:
+
+==============================================================================
+Server Availability Check Started | 2026-06-28 04:05:04.693433
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.61
+Hostname | ip-172-25-32-61.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 23.0G | 216.9G | 9% | /data
+fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | 0B | 113.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 5
+Symlinks Invalid | 1
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+/todel | /data/data2
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.61:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.61 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+732717 | standardfiberprod | jboss800eap | sfbprod_jb800p | 8080 | 172.25.32.61:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberprod/standalone
+733010 | standardfiberrfprod | jboss800eap | sfbrfprod_jb800 | 8081 | 172.25.32.61:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberrfprod/standalone
+733293 | standardfiberwsprod | jboss800eap | sfbwsprod_jb800 | 8082 | 172.25.32.61:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-28 04:05:05.191686
+==============================================================================
+
+2026-06-28 00:05:34,589 - 3388812 - ERROR - app_validation.py errors for i-0a27717ada94ab4af:
+
+2026-06-28 00:05:34,591 - 3388812 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-28/StandardFiber-prod-app/172.25.32.61/172.25.32.61-BeforePatching-2026-06-28-00-05-34-591.log
+2026-06-28 00:05:35,211 - 3388812 - INFO - Sent app_validation.py to i-005de4f42b412ffbf (command_id: c770c78b-9ca5-477e-ada2-bbd3f2486653)
+2026-06-28 00:06:05,351 - 3388812 - INFO - app_validation.py output for i-005de4f42b412ffbf:
+
+==============================================================================
+Server Availability Check Started | 2026-06-28 04:05:35.482973
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.27
+Hostname | ip-172-25-32-27.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 25.1G | 214.8G | 10% | /data
+fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | 0B | 113.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 5
+Symlinks Invalid | 1
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+/todel | /data/data2
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.27:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.27 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2072986 | standardfiberprod | jboss800eap | sfbprod_jb800p | 8080 | 172.25.32.27:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberprod/standalone
+2073523 | standardfiberrfprod | jboss800eap | sfbrfprod_jb800 | 8081 | 172.25.32.27:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberrfprod/standalone
+2073515 | standardfiberwsprod | jboss800eap | sfbwsprod_jb800 | 8082 | 172.25.32.27:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/standardfiberwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-28 04:05:36.057742
+==============================================================================
+
+2026-06-28 00:06:05,351 - 3388812 - ERROR - app_validation.py errors for i-005de4f42b412ffbf:
+
+2026-06-28 00:06:05,354 - 3388812 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-28/StandardFiber-prod-app/172.25.32.27/172.25.32.27-BeforePatching-2026-06-28-00-06-05-352.log
+2026-06-28 00:06:05,614 - 3388812 - INFO - Sending patch command to instance i-0a27717ada94ab4af
+2026-06-28 00:06:05,971 - 3388812 - INFO - Command sent successfully to instance i-0a27717ada94ab4af. Command ID: 33588bf7-d77a-4c36-8b44-33d8145580af
+2026-06-28 00:06:06,116 - 3388812 - INFO - Sending patch command to instance i-005de4f42b412ffbf
+2026-06-28 00:06:06,265 - 3388812 - INFO - Command sent successfully to instance i-005de4f42b412ffbf. Command ID: dd619253-7155-4d96-b885-8918f21c1dea
+2026-06-28 00:06:07,424 - 3388812 - ERROR - Patch process encountered errors. No interactive prompt available. Exiting script.

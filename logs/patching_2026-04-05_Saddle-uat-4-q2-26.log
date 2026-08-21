@@ -1,0 +1,139 @@
+2026-04-05 01:50:02,832 - 117507 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-05 01:54:19,912 - 117507 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-05 01:54:20,083 - 117507 - INFO - Log file ./logs/backup_2026-04-05.log uploaded to s3://q3-2025-aws-security-patching/Saddle-uat-4-q2-26_Patch_Backup/2026-04-05/backup_2026-04-05.log
+2026-04-05 05:50:02,752 - 126043 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-05 05:50:02,752 - 126043 - INFO - Script Start Time: 2026-04-05 05:50:02
+2026-04-05 05:50:03,003 - 126043 - INFO - Instance(s) selected for Patching: {'i-02efaed2ff32a6688': '10.0.10.213'}
+2026-04-05 05:50:03,084 - 126043 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-05 05:50:03,084 - 126043 - INFO - Now patching instances at: 2026-04-05 05:50:03
+2026-04-05 05:50:03,170 - 126043 - INFO - Sending patch command to instance i-02efaed2ff32a6688
+2026-04-05 05:50:03,325 - 126043 - INFO - Command sent successfully to instance i-02efaed2ff32a6688. Command ID: 3d3893b4-4d23-416d-b1a2-0f28854d09a3
+2026-04-05 05:52:34,242 - 126043 - INFO - All patches applied successfully.
+2026-04-05 05:52:34,242 - 126043 - INFO - Patching end time: 2026-04-05 05:52:34
+2026-04-05 05:52:34,242 - 126043 - INFO - Patch Elapsed time: 0:02:31.158086
+2026-04-05 05:52:34,313 - 126043 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-05 05:52:34,313 - 126043 - INFO - Confirmed - services are stopped
+2026-04-05 05:52:55,329 - 126043 - INFO - Discovered TG map: {'i-02efaed2ff32a6688': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-RF/a015c8d2ceb8bf79', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-WS-Ext/ae1d9e1f486b372a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-Desktop/cecb0e0ffbdb3197', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Config/b5a043644ccbabef', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Portal/c6d1e32177caaec8']}
+2026-04-05 05:52:55,738 - 126043 - INFO - Sent app_validation.py to i-02efaed2ff32a6688 (command_id: 28a7c99d-1d4a-497e-9633-39d47e4be6cc)
+2026-04-05 05:53:25,825 - 126043 - INFO - app_validation.py output for i-02efaed2ff32a6688:
+
+==============================================================================
+Server Availability Check Started | 2026-04-05 09:52:55.991741
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.213
+Hostname | ip-10-0-10-213
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 17.5G | 222.4G | 7% | /data
+/dev/nvme1n1p2 | 239.9G | 17.5G | 222.4G | 7% | /data2
+/dev/nvme1n1p2 | 239.9G | 17.5G | 222.4G | 7% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://10.0.10.213:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.213 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+16438 | scl252rfuat | jboss800eap | scl252rfuat_jb8 | 8081 | 10.0.10.213:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scl252rfuat/standalone
+72862 | scl252swpuat | jboss800eap | sclswpuat_jb800 | 8083 | 10.0.10.213:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scl252swpuat/standalone
+854769 | scl252uat | jboss800eap | scl252uat_jb800 | 8080 | 10.0.10.213:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scl252uat/standalone
+74614 | scl252wsuat | jboss800eap | scl252wsuat_jb8 | 8082 | 10.0.10.213:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scl252wsuat/standalone
+403528 | sclconfiguat | jboss740eap | sclconfig_jb740 | 8084 | 10.0.10.213:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/sclconfiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-05 09:52:56.429169
+==============================================================================
+
+2026-04-05 05:53:25,825 - 126043 - ERROR - app_validation.py errors for i-02efaed2ff32a6688:
+
+2026-04-05 05:53:25,826 - 126043 - INFO - Before patching validation saved to: output/validation-2026-04-05/10.0.10.213-BeforePatching-2026-04-05-05-53-25-826.log
+2026-04-05 05:53:25,827 - 126043 - INFO - Deregistering i-02efaed2ff32a6688 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-RF/a015c8d2ceb8bf79
+2026-04-05 05:53:25,900 - 126043 - INFO - Deregistering i-02efaed2ff32a6688 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-WS-Ext/ae1d9e1f486b372a
+2026-04-05 05:53:25,942 - 126043 - INFO - Deregistering i-02efaed2ff32a6688 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-Desktop/cecb0e0ffbdb3197
+2026-04-05 05:53:25,996 - 126043 - INFO - Deregistering i-02efaed2ff32a6688 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Config/b5a043644ccbabef
+2026-04-05 05:53:26,057 - 126043 - INFO - Deregistering i-02efaed2ff32a6688 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Portal/c6d1e32177caaec8
+2026-04-05 05:53:26,106 - 126043 - INFO - Stopping EC2 instance: i-02efaed2ff32a6688 at 2026-04-05 05:53:26
+2026-04-05 05:54:57,575 - 126043 - INFO - Instance i-02efaed2ff32a6688 stopped successfully.
+2026-04-05 05:54:57,703 - 126043 - INFO - Stopped i-02efaed2ff32a6688 in 0:01:31.597016
+2026-04-05 05:54:57,703 - 126043 - INFO - Starting EC2 instance: i-02efaed2ff32a6688
+2026-04-05 05:55:13,679 - 126043 - INFO - Instance i-02efaed2ff32a6688 started successfully.
+2026-04-05 05:55:13,679 - 126043 - INFO - Waiting 100 seconds for SSM agent to be ready on i-02efaed2ff32a6688...
+2026-04-05 05:56:53,696 - 126043 - INFO - Registering i-02efaed2ff32a6688 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-RF/a015c8d2ceb8bf79
+2026-04-05 05:56:53,879 - 126043 - INFO - Registering i-02efaed2ff32a6688 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-WS-Ext/ae1d9e1f486b372a
+2026-04-05 05:56:54,014 - 126043 - INFO - Registering i-02efaed2ff32a6688 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-252-UAT-Desktop/cecb0e0ffbdb3197
+2026-04-05 05:56:54,156 - 126043 - INFO - Registering i-02efaed2ff32a6688 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Config/b5a043644ccbabef
+2026-04-05 05:56:54,295 - 126043 - INFO - Registering i-02efaed2ff32a6688 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Portal/c6d1e32177caaec8
+2026-04-05 06:03:25,439 - 126043 - WARNING - i-02efaed2ff32a6688 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Config/b5a043644ccbabef after timeout.
+2026-04-05 06:08:26,090 - 126043 - WARNING - i-02efaed2ff32a6688 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Portal/c6d1e32177caaec8 after timeout.
+2026-04-05 06:08:26,161 - 126043 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-05 06:08:26,162 - 126043 - ERROR - Aborting workflow: i-02efaed2ff32a6688 is not healthy after restart.
+2026-04-05 06:08:26,164 - 126043 - INFO - Restart Total time: 0:15:51.718556
+2026-04-05 06:08:26,164 - 126043 - INFO - Auto-confirmed services are restarted
+2026-04-05 06:08:26,164 - 126043 - INFO - Confirmed - services are started
+2026-04-05 06:08:26,297 - 126043 - INFO - The following instances have failed the patch: []
+2026-04-05 06:08:26,297 - 126043 - INFO - No instances have failed the patch.
+2026-04-05 06:08:26,297 - 126043 - INFO - Total Patch Process time: 0:18:23.544706
+2026-04-05 06:09:26,699 - 126043 - INFO - Log file ./logs/patching_2026-04-05_Saddle-uat-4-q2-26.log uploaded to s3://q2-2026-aws-security-patching/Saddle-uat-4-q2-26_Patch/2026-04-05/patching_2026-04-05_Saddle-uat-4-q2-26.log

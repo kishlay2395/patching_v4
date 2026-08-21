@@ -1,0 +1,546 @@
+2026-07-06 02:00:03,593 - 3829563 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-06 02:00:03,594 - 3829563 - INFO - Script Start Time: 2026-07-06 02:00:03
+2026-07-06 02:00:03,955 - 3829563 - INFO - Instance(s) selected for Patching: {'i-0f5e35841da4f058d': '10.225.12.16'}
+2026-07-06 02:00:04,058 - 3829563 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-06 02:00:04,059 - 3829563 - INFO - Now patching instances at: 2026-07-06 02:00:04
+2026-07-06 02:00:09,785 - 3829563 - INFO - i-0f5e35841da4f058d: Cron was active = True
+2026-07-06 02:00:10,247 - 3829563 - INFO - Health monitor crontab disabled on all instances
+2026-07-06 02:00:10,248 - 3829563 - INFO - Disabled cron for: ['i-0f5e35841da4f058d']
+2026-07-06 02:00:10,856 - 3829563 - INFO - Sent app_validation.py to i-0f5e35841da4f058d (command_id: 29c4a8fa-d88b-405e-9a66-f7899bc85f39)
+2026-07-06 02:00:41,038 - 3829563 - INFO - app_validation.py output for i-0f5e35841da4f058d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 23:00:11.099735
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.16
+Hostname | ip-10-225-12-16.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 129.9G | 85.4G | 44.5G | 65% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.225.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.16 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2149 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 3
+Non-Standalone Java Processes | hensely_wmsflextestproductivityprocess, hensely_wmsflextestlabeldaemon, hensely_wmsflextestuploaddaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 3
+Java-Name | Java-Path
+hensely_wmsflextestproductivityprocess | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestproductivityprocess
+hensely_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestlabeldaemon
+hensely_wmsflextestuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestuploaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2586 | portal62 | jboss72 | hensleyportal_jboss | 8082 | 10.225.12.16:8082 | Down | 000 | Disabled | /data/app/jboss72/hensleyportal/portal62/standalone
+301428 | rasflexuat | jboss72 | rasflexuat_jboss | 8080 | 10.225.12.16:8080 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasflexuat/standalone
+2592 | rasportal | jboss72 | rasportal_jboss72 | 8084 | 10.225.12.16:8084 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasportal/standalone
+1073155 | wmsflextest | jboss72 | wmsflextest_jboss | 80 | 10.225.12.16:80 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/wmsflextest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 23:00:18.420795
+==============================================================================
+
+2026-07-06 02:00:41,038 - 3829563 - ERROR - app_validation.py errors for i-0f5e35841da4f058d:
+
+2026-07-06 02:00:41,040 - 3829563 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-BeforePatching-2026-07-06-02-00-41-039.log
+2026-07-06 02:00:41,124 - 3829563 - INFO - Sending patch command to instance i-0f5e35841da4f058d
+2026-07-06 02:00:41,489 - 3829563 - INFO - Command sent successfully to instance i-0f5e35841da4f058d. Command ID: bda68341-fd0a-48ac-881f-4cb89f252d8f
+2026-07-06 02:05:13,595 - 3829563 - INFO - All patches applied successfully.
+2026-07-06 02:05:13,596 - 3829563 - INFO - Patching end time: 2026-07-06 02:05:13
+2026-07-06 02:05:13,596 - 3829563 - INFO - Patch Elapsed time: 0:05:09.537334
+2026-07-06 02:05:13,676 - 3829563 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-06 02:05:13,676 - 3829563 - INFO - Confirmed - services are stopped
+2026-07-06 02:05:15,634 - 3829563 - INFO - Discovered TG map: {'i-0f5e35841da4f058d': ['arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-Mobility-UAT/378cdf8ac9cc2f79', 'arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-UAT-WS/9616d692fdc3638f', 'arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-UAT-WS/6faf33f1f6d8456e', 'arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-WMSFlexTest-ALB/ea27568559905cd7', 'arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/HensleyTest-ALB/9f97aa502a425322']}
+2026-07-06 02:05:15,883 - 3829563 - INFO - Deregistering i-0f5e35841da4f058d from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-Mobility-UAT/378cdf8ac9cc2f79
+2026-07-06 02:05:16,188 - 3829563 - INFO - Deregistering i-0f5e35841da4f058d from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-UAT-WS/9616d692fdc3638f
+2026-07-06 02:05:16,294 - 3829563 - INFO - Deregistering i-0f5e35841da4f058d from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-UAT-WS/6faf33f1f6d8456e
+2026-07-06 02:05:16,397 - 3829563 - INFO - Deregistering i-0f5e35841da4f058d from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-WMSFlexTest-ALB/ea27568559905cd7
+2026-07-06 02:05:16,502 - 3829563 - INFO - Deregistering i-0f5e35841da4f058d from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/HensleyTest-ALB/9f97aa502a425322
+2026-07-06 02:05:16,605 - 3829563 - INFO - Stopping EC2 instance: i-0f5e35841da4f058d at 2026-07-06 02:05:16
+2026-07-06 02:08:04,144 - 3829563 - INFO - Instance i-0f5e35841da4f058d stopped successfully.
+2026-07-06 02:08:04,288 - 3829563 - INFO - Stopped i-0f5e35841da4f058d in 0:02:47.682997
+2026-07-06 02:08:04,288 - 3829563 - INFO - Starting EC2 instance: i-0f5e35841da4f058d
+2026-07-06 02:08:20,414 - 3829563 - INFO - Instance i-0f5e35841da4f058d started successfully.
+2026-07-06 02:08:20,414 - 3829563 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f5e35841da4f058d...
+2026-07-06 02:10:00,483 - 3829563 - INFO - Registering i-0f5e35841da4f058d to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-Mobility-UAT/378cdf8ac9cc2f79
+2026-07-06 02:10:00,874 - 3829563 - INFO - Registering i-0f5e35841da4f058d to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-RAS-UAT-WS/9616d692fdc3638f
+2026-07-06 02:10:01,037 - 3829563 - INFO - Registering i-0f5e35841da4f058d to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-UAT-WS/6faf33f1f6d8456e
+2026-07-06 02:10:01,215 - 3829563 - INFO - Registering i-0f5e35841da4f058d to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/Hensley-WMSFlexTest-ALB/ea27568559905cd7
+2026-07-06 02:10:01,402 - 3829563 - INFO - Registering i-0f5e35841da4f058d to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/HensleyTest-ALB/9f97aa502a425322
+2026-07-06 02:13:03,562 - 3829563 - INFO - Sent app_validation.py to i-0f5e35841da4f058d (command_id: f8f7777c-ea68-4043-ab21-3da9571e87b6)
+2026-07-06 02:13:33,727 - 3829563 - INFO - app_validation.py output for i-0f5e35841da4f058d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 23:13:03.871728
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.16
+Hostname | ip-10-225-12-16.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 129.9G | 85.4G | 44.5G | 65% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.225.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.16 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2468 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 4
+Non-Standalone Java Processes | hensely_wmsflextestlabeldaemon, hensely_wmsflextestschedulerdaemon, hensely_wmsflextestuploaddaemon, hensely_wmsflextestvoicedaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 4
+Java-Name | Java-Path
+hensely_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestlabeldaemon
+hensely_wmsflextestschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestschedulerdaemon
+hensely_wmsflextestuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestuploaddaemon
+hensely_wmsflextestvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestvoicedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2256 | portal62 | jboss72 | hensleyportal_jboss | 8082 | 10.225.12.16:8082 | UP | 200 | Disabled | /data/app/jboss72/hensleyportal/portal62/standalone
+2210 | rasflexuat | jboss72 | rasflexuat_jboss | 8080 | 10.225.12.16:8080 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasflexuat/standalone
+2380 | rasportal | jboss72 | rasportal_jboss72 | 8084 | 10.225.12.16:8084 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasportal/standalone
+2363 | wmsflextest | jboss72 | wmsflextest_jboss | 80 | 10.225.12.16:80 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/wmsflextest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 23:13:08.838731
+==============================================================================
+
+2026-07-06 02:13:33,727 - 3829563 - ERROR - app_validation.py errors for i-0f5e35841da4f058d:
+
+2026-07-06 02:13:33,729 - 3829563 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-AfterPatching-2026-07-06-02-13-33-728.log
+2026-07-06 02:13:33,782 - 3829563 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-Validation-details-2026-07-06-02-13-33-728.html
+2026-07-06 02:13:34,268 - 3829563 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-06 02:13:34,268 - 3829563 - INFO - HTML validation report email sent for i-0f5e35841da4f058d
+2026-07-06 02:13:34,269 - 3829563 - INFO - [Retry-1] Waiting 600s for i-0f5e35841da4f058d...
+2026-07-06 02:13:34,269 - 3829563 - INFO - RED - Background retry thread started for i-0f5e35841da4f058d
+2026-07-06 02:13:34,406 - 3829563 - INFO - Started i-0f5e35841da4f058d in 0:05:30.118057
+2026-07-06 02:13:34,407 - 3829563 - INFO - All instances processed.
+2026-07-06 02:13:34,411 - 3829563 - INFO - Restart Total time: 0:08:20.607465
+2026-07-06 02:13:34,412 - 3829563 - INFO - Auto-confirmed services are restarted
+2026-07-06 02:13:34,412 - 3829563 - INFO - Confirmed - services are started
+2026-07-06 02:13:34,527 - 3829563 - INFO - The following instances have failed the patch: []
+2026-07-06 02:13:34,528 - 3829563 - INFO - No instances have failed the patch.
+2026-07-06 02:13:34,528 - 3829563 - INFO - Total Patch Process time: 0:13:30.933873
+2026-07-06 02:14:34,986 - 3829563 - INFO - Log file ./logs/patching_2026-07-06_q3-Hensley-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-Hensley-uat_Patch/2026-07-06/patching_2026-07-06_q3-Hensley-uat.log
+2026-07-06 02:23:34,898 - 3829563 - INFO - Sent app_validation.py to i-0f5e35841da4f058d (command_id: e4803d81-d00a-44ec-a035-c3458a8af6f0)
+2026-07-06 02:24:05,115 - 3829563 - INFO - app_validation.py output for i-0f5e35841da4f058d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 23:23:35.102726
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.16
+Hostname | ip-10-225-12-16.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 129.9G | 85.4G | 44.5G | 65% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.225.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.16 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2468 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 4
+Non-Standalone Java Processes | hensely_wmsflextestlabeldaemon, hensely_wmsflextestschedulerdaemon, hensely_wmsflextestuploaddaemon, hensely_wmsflextestvoicedaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 4
+Java-Name | Java-Path
+hensely_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestlabeldaemon
+hensely_wmsflextestschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestschedulerdaemon
+hensely_wmsflextestuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestuploaddaemon
+hensely_wmsflextestvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestvoicedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2256 | portal62 | jboss72 | hensleyportal_jboss | 8082 | 10.225.12.16:8082 | UP | 200 | Disabled | /data/app/jboss72/hensleyportal/portal62/standalone
+2210 | rasflexuat | jboss72 | rasflexuat_jboss | 8080 | 10.225.12.16:8080 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasflexuat/standalone
+2380 | rasportal | jboss72 | rasportal_jboss72 | 8084 | 10.225.12.16:8084 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasportal/standalone
+2363 | wmsflextest | jboss72 | wmsflextest_jboss | 80 | 10.225.12.16:80 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/wmsflextest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 23:23:35.975437
+==============================================================================
+
+2026-07-06 02:24:05,115 - 3829563 - ERROR - app_validation.py errors for i-0f5e35841da4f058d:
+
+2026-07-06 02:24:05,116 - 3829563 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-AfterPatching-Retry1-2026-07-06-02-24-05-116.log
+2026-07-06 02:24:05,170 - 3829563 - INFO - [Retry-1] RED detected for Hensley UAT Server-Ex (10.225.12.16), retrying... (Total waited: 600s)
+2026-07-06 02:24:05,170 - 3829563 - INFO - [Retry-2] Waiting 600s for i-0f5e35841da4f058d...
+2026-07-06 02:34:05,745 - 3829563 - INFO - Sent app_validation.py to i-0f5e35841da4f058d (command_id: 4ab34d21-8075-4ce9-b6f6-fae6c3d4167c)
+2026-07-06 02:34:35,914 - 3829563 - INFO - app_validation.py output for i-0f5e35841da4f058d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 23:34:05.960474
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.16
+Hostname | ip-10-225-12-16.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 129.9G | 85.4G | 44.5G | 65% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.225.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.16 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2468 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 4
+Non-Standalone Java Processes | hensely_wmsflextestlabeldaemon, hensely_wmsflextestschedulerdaemon, hensely_wmsflextestuploaddaemon, hensely_wmsflextestvoicedaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 4
+Java-Name | Java-Path
+hensely_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestlabeldaemon
+hensely_wmsflextestschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestschedulerdaemon
+hensely_wmsflextestuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestuploaddaemon
+hensely_wmsflextestvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestvoicedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2256 | portal62 | jboss72 | hensleyportal_jboss | 8082 | 10.225.12.16:8082 | UP | 200 | Disabled | /data/app/jboss72/hensleyportal/portal62/standalone
+2210 | rasflexuat | jboss72 | rasflexuat_jboss | 8080 | 10.225.12.16:8080 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasflexuat/standalone
+2380 | rasportal | jboss72 | rasportal_jboss72 | 8084 | 10.225.12.16:8084 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasportal/standalone
+2363 | wmsflextest | jboss72 | wmsflextest_jboss | 80 | 10.225.12.16:80 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/wmsflextest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 23:34:06.948021
+==============================================================================
+
+2026-07-06 02:34:35,914 - 3829563 - ERROR - app_validation.py errors for i-0f5e35841da4f058d:
+
+2026-07-06 02:34:35,915 - 3829563 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-AfterPatching-Retry2-2026-07-06-02-34-35-915.log
+2026-07-06 02:34:35,969 - 3829563 - INFO - [Retry-2] RED detected for Hensley UAT Server-Ex (10.225.12.16), retrying... (Total waited: 1200s)
+2026-07-06 02:34:35,969 - 3829563 - INFO - [Retry-3] Waiting 600s for i-0f5e35841da4f058d...
+2026-07-06 02:44:36,715 - 3829563 - INFO - Sent app_validation.py to i-0f5e35841da4f058d (command_id: 9fd15a7d-adfd-4686-9fc6-6eddb995fa7f)
+2026-07-06 02:45:06,867 - 3829563 - INFO - app_validation.py output for i-0f5e35841da4f058d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 23:44:36.964334
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.16
+Hostname | ip-10-225-12-16.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 129.9G | 85.4G | 44.5G | 65% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.225.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.16 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2468 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 4
+Non-Standalone Java Processes | hensely_wmsflextestlabeldaemon, hensely_wmsflextestschedulerdaemon, hensely_wmsflextestuploaddaemon, hensely_wmsflextestvoicedaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 4
+Java-Name | Java-Path
+hensely_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestlabeldaemon
+hensely_wmsflextestschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestschedulerdaemon
+hensely_wmsflextestuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestuploaddaemon
+hensely_wmsflextestvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensely_wmsflextestvoicedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2256 | portal62 | jboss72 | hensleyportal_jboss | 8082 | 10.225.12.16:8082 | UP | 200 | Disabled | /data/app/jboss72/hensleyportal/portal62/standalone
+2210 | rasflexuat | jboss72 | rasflexuat_jboss | 8080 | 10.225.12.16:8080 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasflexuat/standalone
+2380 | rasportal | jboss72 | rasportal_jboss72 | 8084 | 10.225.12.16:8084 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/rasportal/standalone
+2363 | wmsflextest | jboss72 | wmsflextest_jboss | 80 | 10.225.12.16:80 | UP | 200 | Disabled | /data/app/jboss72/henselyuat/wmsflextest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 23:44:37.897177
+==============================================================================
+
+2026-07-06 02:45:06,867 - 3829563 - ERROR - app_validation.py errors for i-0f5e35841da4f058d:
+
+2026-07-06 02:45:06,868 - 3829563 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-06/q3-Hensley-uat/10.225.12.16/10.225.12.16-AfterPatching-Retry3-2026-07-06-02-45-06-868.log
+2026-07-06 02:45:07,319 - 3829563 - INFO - Health monitor crontab enabled on all instances
+2026-07-06 02:45:07,321 - 3829563 - WARNING - [Retry] Timeout - auto cron enabled for i-0f5e35841da4f058d

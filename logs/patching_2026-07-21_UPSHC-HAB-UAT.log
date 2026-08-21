@@ -1,0 +1,2759 @@
+2026-07-21 00:25:02,344 - 492577 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-21 00:25:02,345 - 492577 - INFO - Script Start Time: 2026-07-21 00:25:02
+2026-07-21 00:25:02,817 - 492577 - INFO - Tag: UPSHC-HAB-UAT, IPs: ['172.28.25.29', '172.28.25.59'], Environment: uat
+2026-07-21 00:25:02,817 - 492577 - INFO - Instance(s) selected for Patching: {'i-03878907b98ea0469': '172.28.25.29', 'i-0e87970bfe3028a6d': '172.28.25.59'}
+2026-07-21 00:25:02,889 - 492577 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:25:02,889 - 492577 - INFO - Now patching instances at: 2026-07-21 00:25:02
+2026-07-21 00:25:03,077 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: 210a6cb9-66c6-4fcf-b892-c9bc82930903)
+2026-07-21 00:25:33,160 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:25:03.445848
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.7G | 197.2G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3963368 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+3964528 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3202957 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:25:09.976778
+==============================================================================
+
+2026-07-21 00:25:33,160 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 00:25:33,161 - 492577 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-BeforePatching-2026-07-21-00-25-33-161.log
+2026-07-21 00:25:33,342 - 492577 - INFO - Sent app_validation.py to i-03878907b98ea0469 (command_id: 1553c5c6-2d3a-44c5-bbba-edc964b24a8e)
+2026-07-21 00:26:03,472 - 492577 - INFO - app_validation.py output for i-03878907b98ea0469:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:25:33.699969
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.29
+Hostname | ip-172-28-25-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 68.7G | 171.2G | 28% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | upshab_bre, upshab_1ccd, upshab_2ccd, upshab_dwa, upshab_event, upshab_ftp, upshab_harp, upshab_rpt, upshab_jqgrid, upshab_tiad, upshab_wsq, upshab_1wld, upshab_2wld, upshab_habha
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+upshab_bre | /data/batchapp/softeon/upshchabuat/breruleenginedaemon
+upshab_1ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon1
+upshab_2ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon2
+upshab_dwa | /data/batchapp/softeon/upshchabuat/downloaddaemon
+upshab_event | /data/batchapp/softeon/upshchabuat/eventdaemon
+upshab_ftp | /data/batchapp/softeon/upshchabuat/ftpdaemon
+upshab_harp | /data/batchapp/softeon/upshchabuat/hardallocationdaemon
+upshab_rpt | /data/batchapp/softeon/upshchabuat/reportdaemon
+upshab_jqgrid | /data/batchapp/softeon/upshchabuat/reportjqgridexportdaemon
+upshab_tiad | /data/batchapp/softeon/upshchabuat/taskinvallocationdaemon
+upshab_wsq | /data/batchapp/softeon/upshchabuat/wsqdaemon
+upshab_1wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon1
+upshab_2wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon2
+upshab_habha | /data/batchapp/softeon/upshchabuat/habhardallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1434798 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.29:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+1435672 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.29:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+2113490 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.29:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:25:43.784676
+==============================================================================
+
+2026-07-21 00:26:03,472 - 492577 - ERROR - app_validation.py errors for i-03878907b98ea0469:
+
+2026-07-21 00:26:03,474 - 492577 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-BeforePatching-2026-07-21-00-26-03-473.log
+2026-07-21 00:26:08,810 - 492577 - INFO - i-0e87970bfe3028a6d: Cron was active = True
+2026-07-21 00:26:14,034 - 492577 - INFO - i-03878907b98ea0469: Cron was active = True
+2026-07-21 00:26:14,201 - 492577 - INFO - Health monitor crontab disabled on all instances
+2026-07-21 00:26:14,202 - 492577 - INFO - Disabled cron for: ['i-0e87970bfe3028a6d', 'i-03878907b98ea0469']
+2026-07-21 00:26:14,365 - 492577 - INFO - Sending patch command to instance i-0e87970bfe3028a6d
+2026-07-21 00:26:14,469 - 492577 - INFO - Command sent successfully to instance i-0e87970bfe3028a6d. Command ID: 0b2125c5-e7a9-4b90-ab6d-3ece6d0cb141
+2026-07-21 00:26:14,631 - 492577 - INFO - Sending patch command to instance i-03878907b98ea0469
+2026-07-21 00:26:14,727 - 492577 - INFO - Command sent successfully to instance i-03878907b98ea0469. Command ID: 5ee3c481-c855-491a-9c95-af6edf3e1d1c
+2026-07-21 00:35:47,302 - 492577 - INFO - All patches applied successfully.
+2026-07-21 00:35:47,303 - 492577 - INFO - Patching end time: 2026-07-21 00:35:47
+2026-07-21 00:35:47,303 - 492577 - INFO - Patch Elapsed time: 0:10:44.413550
+2026-07-21 00:35:47,376 - 492577 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:35:47,376 - 492577 - INFO - Confirmed - services are stopped
+2026-07-21 00:36:08,032 - 492577 - INFO - Discovered TG map: {'i-0e87970bfe3028a6d': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9'], 'i-03878907b98ea0469': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9']}
+2026-07-21 00:36:08,691 - 492577 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-07-21 00:36:08,773 - 492577 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-07-21 00:36:08,821 - 492577 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-07-21 00:36:08,868 - 492577 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-07-21 00:36:08,928 - 492577 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-07-21 00:36:09,032 - 492577 - INFO - Stopping EC2 instance: i-0e87970bfe3028a6d at 2026-07-21 00:36:09
+2026-07-21 00:37:40,308 - 492577 - INFO - Instance i-0e87970bfe3028a6d stopped successfully.
+2026-07-21 00:37:40,560 - 492577 - INFO - Stopped i-0e87970bfe3028a6d in 0:01:31.527154
+2026-07-21 00:37:40,560 - 492577 - INFO - Starting EC2 instance: i-0e87970bfe3028a6d
+2026-07-21 00:37:56,609 - 492577 - INFO - Instance i-0e87970bfe3028a6d started successfully.
+2026-07-21 00:37:56,610 - 492577 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0e87970bfe3028a6d...
+2026-07-21 00:39:36,710 - 492577 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-07-21 00:39:36,901 - 492577 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-07-21 00:39:37,074 - 492577 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-07-21 00:39:37,214 - 492577 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-07-21 00:39:37,373 - 492577 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-07-21 00:41:37,721 - 492577 - WARNING - i-0e87970bfe3028a6d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05 after timeout.
+2026-07-21 00:41:37,819 - 492577 - WARNING - i-0e87970bfe3028a6d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9 after timeout.
+2026-07-21 00:41:37,819 - 492577 - WARNING - i-0e87970bfe3028a6d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579 after timeout.
+2026-07-21 00:41:37,841 - 492577 - WARNING - i-0e87970bfe3028a6d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8 after timeout.
+2026-07-21 00:41:37,841 - 492577 - WARNING - i-0e87970bfe3028a6d: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 00:41:38,456 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: f1964b15-34d1-48eb-bc57-53210bb54b5d)
+2026-07-21 00:42:08,557 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:41:38.805264
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.7G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:41:41.177780
+==============================================================================
+
+2026-07-21 00:42:08,557 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 00:42:08,559 - 492577 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-2026-07-21-00-42-08-559.log
+2026-07-21 00:42:08,615 - 492577 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-Validation-details-2026-07-21-00-42-08-559.html
+2026-07-21 00:42:08,796 - 492577 - INFO - Daemon count - Pre: 11, Post: 0
+2026-07-21 00:42:08,796 - 492577 - INFO - CUPS: before=running after=not running version=1.7.5
+2026-07-21 00:42:08,796 - 492577 - INFO - Manage_cron: True, daemon_action: True, cups_action: True
+2026-07-21 00:42:08,797 - 492577 - INFO - Background: restarting daemons on i-0e87970bfe3028a6d
+2026-07-21 00:42:08,797 - 492577 - INFO - Background thread started for i-0e87970bfe3028a6d - daemon:True cups:True
+2026-07-21 00:42:09,184 - 492577 - INFO - Started i-0e87970bfe3028a6d in 0:04:28.623667
+2026-07-21 00:42:09,184 - 492577 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-21 00:42:39,143 - 492577 - INFO - Daemon restart output: /data/batchapp/softeon/upshchabuat/startall-upshchabuat-daemon.sh
+
+
+Starting invcomputationbytask
+
+
+Starting labeldaemon
+
+
+Starting mqconsumerdaemon
+
+
+Starting mqproducerdaemon
+
+
+Starting replenishmentdaemon
+
+
+Starting replenishmentpickloccanceldaemon
+
+
+Starting schedulerdaemon
+
+
+Starting uploadallocationdaemon
+
+
+Starting uploaddaemon
+
+
+Starting uploaddaemon1
+
+
+Starting uploaddaemon2
+
+2026-07-21 00:42:39,144 - 492577 - INFO - Waiting 100 sec for daemons to start on i-0e87970bfe3028a6d
+2026-07-21 00:44:09,639 - 492577 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-07-21 00:44:09,685 - 492577 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-07-21 00:44:09,738 - 492577 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-07-21 00:44:09,785 - 492577 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-07-21 00:44:09,836 - 492577 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-07-21 00:44:09,894 - 492577 - INFO - Stopping EC2 instance: i-03878907b98ea0469 at 2026-07-21 00:44:09
+2026-07-21 00:44:19,237 - 492577 - INFO - CUPS was running (v1.7.5) before, not running after - reinstalling on i-0e87970bfe3028a6d
+2026-07-21 00:44:19,399 - 492577 - INFO - CUPS upgrade command sent to i-0e87970bfe3028a6d (command_id: 8131573e-f86a-47f8-807c-67dabfd287a6)
+2026-07-21 00:45:49,690 - 492577 - INFO - CUPS upgrade output: '/etc/cups' -> '/tmp/cups-backup/cups1.7.5/cups'
+'/etc/cups/ssl' -> '/tmp/cups-backup/cups1.7.5/cups/ssl'
+'/etc/cups/cups-files.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/cups-files.conf.N'
+'/etc/cups/cupsd.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf.N'
+'/etc/cups/snmp.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/snmp.conf.N'
+'/etc/cups/cupsd.conf.default' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf.default'
+'/etc/cups/cups-files.conf' -> '/tmp/cups-backup/cups1.7.5/cups/cups-files.conf'
+'/etc/cups/client.conf' -> '/tmp/cups-backup/cups1.7.5/cups/client.conf'
+'/etc/cups/snmp.conf' -> '/tmp/cups-backup/cups1.7.5/cups/snmp.conf'
+'/etc/cups/printers.conf.O' -> '/tmp/cups-backup/cups1.7.5/cups/printers.conf.O'
+'/etc/cups/printers.conf' -> '/tmp/cups-backup/cups1.7.5/cups/printers.conf'
+'/etc/cups/cupsd.conf' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf'
+'/etc/cups/interfaces' -> '/tmp/cups-backup/cups1.7.5/cups/interfaces'
+'/etc/cups/ppd' -> '/tmp/cups-backup/cups1.7.5/cups/ppd'
+Last metadata expiration check: 0:10:07 ago on Tue Jul 21 04:34:15 2026.
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Installing Groups:
+ Development Tools                                                             
+
+Transaction Summary
+================================================================================
+
+Complete!
+cups-1.7.5/
+cups-1.7.5/backend/
+cups-1.7.5/berkeley/
+cups-1.7.5/cgi-bin/
+cups-1.7.5/CHANGES-1.0.txt
+cups-1.7.5/CHANGES-1.1.txt
+cups-1.7.5/CHANGES-1.2.txt
+cups-1.7.5/CHANGES-1.3.txt
+cups-1.7.5/CHANGES-1.4.txt
+cups-1.7.5/CHANGES-1.5.txt
+cups-1.7.5/CHANGES-1.6.txt
+cups-1.7.5/CHANGES-IPPTOOL.txt
+cups-1.7.5/CHANGES.txt
+cups-1.7.5/conf/
+cups-1.7.5/config-scripts/
+cups-1.7.5/config.h.in
+cups-1.7.5/configure
+cups-1.7.5/configure.in
+cups-1.7.5/CREDITS.txt
+cups-1.7.5/cups/
+cups-1.7.5/cups-config.in
+cups-1.7.5/data/
+cups-1.7.5/desktop/
+cups-1.7.5/doc/
+cups-1.7.5/examples/
+cups-1.7.5/filter/
+cups-1.7.5/install-sh
+cups-1.7.5/INSTALL.txt
+cups-1.7.5/IPPTOOL.txt
+cups-1.7.5/LICENSE.txt
+cups-1.7.5/locale/
+cups-1.7.5/Makedefs.in
+cups-1.7.5/Makefile
+cups-1.7.5/man/
+cups-1.7.5/monitor/
+cups-1.7.5/notifier/
+cups-1.7.5/packaging/
+cups-1.7.5/ppdc/
+cups-1.7.5/README.txt
+cups-1.7.5/scheduler/
+cups-1.7.5/systemv/
+cups-1.7.5/templates/
+cups-1.7.5/test/
+cups-1.7.5/vcnet/
+cups-1.7.5/xcode/
+cups-1.7.5/xcode/config.h
+cups-1.7.5/xcode/CUPS.xcodeproj/
+cups-1.7.5/xcode/CUPS.xcodeproj/project.pbxproj
+cups-1.7.5/vcnet/config.h
+cups-1.7.5/vcnet/cups.sln
+cups-1.7.5/vcnet/cupstestppd.vcproj
+cups-1.7.5/vcnet/ippfind.vcproj
+cups-1.7.5/vcnet/ipptool-installer.vdproj
+cups-1.7.5/vcnet/ipptool.vcproj
+cups-1.7.5/vcnet/libcups2-installer.vdproj
+cups-1.7.5/vcnet/libcups2.vcproj
+cups-1.7.5/vcnet/libcupsimage2.vcproj
+cups-1.7.5/vcnet/README.txt
+cups-1.7.5/vcnet/regex/
+cups-1.7.5/vcnet/regex.vcproj
+cups-1.7.5/vcnet/setdebug.bat
+cups-1.7.5/vcnet/testfile.vcproj
+cups-1.7.5/vcnet/testhttp.vcproj
+cups-1.7.5/vcnet/regex/cclass.h
+cups-1.7.5/vcnet/regex/cname.h
+cups-1.7.5/vcnet/regex/COPYRIGHT
+cups-1.7.5/vcnet/regex/debug.c
+cups-1.7.5/vcnet/regex/debug.ih
+cups-1.7.5/vcnet/regex/engine.c
+cups-1.7.5/vcnet/regex/engine.ih
+cups-1.7.5/vcnet/regex/main.c
+cups-1.7.5/vcnet/regex/main.ih
+cups-1.7.5/vcnet/regex/Makefile
+cups-1.7.5/vcnet/regex/mkh
+cups-1.7.5/vcnet/regex/README
+cups-1.7.5/vcnet/regex/regcomp.c
+cups-1.7.5/vcnet/regex/regcomp.ih
+cups-1.7.5/vcnet/regex/regerror.c
+cups-1.7.5/vcnet/regex/regerror.ih
+cups-1.7.5/vcnet/regex/regex.3
+cups-1.7.5/vcnet/regex/regex.7
+cups-1.7.5/vcnet/regex/regex.def
+cups-1.7.5/vcnet/regex/regex.h
+cups-1.7.5/vcnet/regex/regex2.h
+cups-1.7.5/vcnet/regex/regexec.c
+cups-1.7.5/vcnet/regex/regfree.c
+cups-1.7.5/vcnet/regex/split.c
+cups-1.7.5/vcnet/regex/tests
+cups-1.7.5/vcnet/regex/utils.h
+cups-1.7.5/vcnet/regex/WHATSNEW
+cups-1.7.5/test/4.1-requests.test
+cups-1.7.5/test/4.2-cups-printer-ops.test
+cups-1.7.5/test/4.3-job-ops.test
+cups-1.7.5/test/4.4-subscription-ops.test
+cups-1.7.5/test/5.1-lpadmin.sh
+cups-1.7.5/test/5.2-lpc.sh
+cups-1.7.5/test/5.3-lpq.sh
+cups-1.7.5/test/5.4-lpstat.sh
+cups-1.7.5/test/5.5-lp.sh
+cups-1.7.5/test/5.6-lpr.sh
+cups-1.7.5/test/5.7-lprm.sh
+cups-1.7.5/test/5.8-cancel.sh
+cups-1.7.5/test/5.9-lpinfo.sh
+cups-1.7.5/test/cancel-current-job.test
+cups-1.7.5/test/color.jpg
+cups-1.7.5/test/create-job-format.test
+cups-1.7.5/test/create-job-sheets.test
+cups-1.7.5/test/create-job-timeout.test
+cups-1.7.5/test/create-job.test
+cups-1.7.5/test/create-printer-subscription.test
+cups-1.7.5/test/Dependencies
+cups-1.7.5/test/document-a4.pdf
+cups-1.7.5/test/document-a4.ps
+cups-1.7.5/test/document-a4.sla
+cups-1.7.5/test/document-letter.pdf
+cups-1.7.5/test/document-letter.ps
+cups-1.7.5/test/document-letter.sla
+cups-1.7.5/test/get-completed-jobs.test
+cups-1.7.5/test/get-devices.test
+cups-1.7.5/test/get-job-attributes.test
+cups-1.7.5/test/get-job-attributes2.test
+cups-1.7.5/test/get-jobs.test
+cups-1.7.5/test/get-notifications.test
+cups-1.7.5/test/get-ppd-printer.test
+cups-1.7.5/test/get-ppd.test
+cups-1.7.5/test/get-ppds-drv-only.test
+cups-1.7.5/test/get-ppds-language.test
+cups-1.7.5/test/get-ppds-make-and-model.test
+cups-1.7.5/test/get-ppds-make.test
+cups-1.7.5/test/get-ppds-product.test
+cups-1.7.5/test/get-ppds-psversion.test
+cups-1.7.5/test/get-ppds.test
+cups-1.7.5/test/get-printer-attributes-2.0.test
+cups-1.7.5/test/get-printer-attributes.test
+cups-1.7.5/test/get-printers.test
+cups-1.7.5/test/get-subscriptions.test
+cups-1.7.5/test/gray.jpg
+cups-1.7.5/test/ipp-1.1.test
+cups-1.7.5/test/ipp-2.0.test
+cups-1.7.5/test/ipp-2.1.test
+cups-1.7.5/test/ipp-2.2.test
+cups-1.7.5/test/ipp-backend.test
+cups-1.7.5/test/ipp-everywhere.test
+cups-1.7.5/test/ippdiscover.c
+cups-1.7.5/test/ippfind.c
+cups-1.7.5/test/ippserver.c
+cups-1.7.5/test/ipptool.c
+cups-1.7.5/test/make-ippeverywhere-print-tests.sh
+cups-1.7.5/test/Makefile
+cups-1.7.5/test/onepage-a4-300-black-1.pwg.gz
+cups-1.7.5/test/onepage-a4.pdf
+cups-1.7.5/test/onepage-a4.ps
+cups-1.7.5/test/onepage-a4.sla
+cups-1.7.5/test/onepage-letter-300-black-1.pwg.gz
+cups-1.7.5/test/onepage-letter.pdf
+cups-1.7.5/test/onepage-letter.ps
+cups-1.7.5/test/onepage-letter.sla
+cups-1.7.5/test/print-job-and-wait.test
+cups-1.7.5/test/print-job-deflate.test
+cups-1.7.5/test/print-job-gzip.test
+cups-1.7.5/test/print-job-hold.test
+cups-1.7.5/test/print-job-media-col.test
+cups-1.7.5/test/print-job-password.test
+cups-1.7.5/test/print-job.test
+cups-1.7.5/test/print-uri.test
+cups-1.7.5/test/printer.opacity
+cups-1.7.5/test/printer.png
+cups-1.7.5/test/run-stp-tests.sh
+cups-1.7.5/test/set-attrs-hold.test
+cups-1.7.5/test/str-header.html
+cups-1.7.5/test/str-trailer.html
+cups-1.7.5/test/test.convs
+cups-1.7.5/test/testfile.jpg
+cups-1.7.5/test/testfile.pcl
+cups-1.7.5/test/testfile.pdf
+cups-1.7.5/test/testfile.ps
+cups-1.7.5/test/testfile.txt
+cups-1.7.5/test/testhp.ppd
+cups-1.7.5/test/testps.ppd
+cups-1.7.5/test/validate-job.test
+cups-1.7.5/test/waitjobs.sh
+cups-1.7.5/test/xmltotest.c
+cups-1.7.5/templates/add-class.tmpl
+cups-1.7.5/templates/add-printer.tmpl
+cups-1.7.5/templates/add-rss-subscription.tmpl
+cups-1.7.5/templates/admin.tmpl
+cups-1.7.5/templates/ca/
+cups-1.7.5/templates/choose-device.tmpl
+cups-1.7.5/templates/choose-make.tmpl
+cups-1.7.5/templates/choose-model.tmpl
+cups-1.7.5/templates/choose-serial.tmpl
+cups-1.7.5/templates/choose-uri.tmpl
+cups-1.7.5/templates/class-added.tmpl
+cups-1.7.5/templates/class-confirm.tmpl
+cups-1.7.5/templates/class-deleted.tmpl
+cups-1.7.5/templates/class-jobs-header.tmpl
+cups-1.7.5/templates/class-modified.tmpl
+cups-1.7.5/templates/class.tmpl
+cups-1.7.5/templates/classes-header.tmpl
+cups-1.7.5/templates/classes.tmpl
+cups-1.7.5/templates/command.tmpl
+cups-1.7.5/templates/cs/
+cups-1.7.5/templates/de/
+cups-1.7.5/templates/edit-config.tmpl
+cups-1.7.5/templates/error-op.tmpl
+cups-1.7.5/templates/error.tmpl
+cups-1.7.5/templates/es/
+cups-1.7.5/templates/fr/
+cups-1.7.5/templates/header.tmpl.in
+cups-1.7.5/templates/help-header.tmpl
+cups-1.7.5/templates/help-printable.tmpl
+cups-1.7.5/templates/help-trailer.tmpl
+cups-1.7.5/templates/it/
+cups-1.7.5/templates/ja/
+cups-1.7.5/templates/job-cancel.tmpl
+cups-1.7.5/templates/job-hold.tmpl
+cups-1.7.5/templates/job-move.tmpl
+cups-1.7.5/templates/job-moved.tmpl
+cups-1.7.5/templates/job-release.tmpl
+cups-1.7.5/templates/job-restart.tmpl
+cups-1.7.5/templates/jobs-header.tmpl
+cups-1.7.5/templates/jobs.tmpl
+cups-1.7.5/templates/list-available-printers.tmpl
+cups-1.7.5/templates/Makefile
+cups-1.7.5/templates/modify-class.tmpl
+cups-1.7.5/templates/modify-printer.tmpl
+cups-1.7.5/templates/norestart.tmpl
+cups-1.7.5/templates/option-boolean.tmpl
+cups-1.7.5/templates/option-conflict.tmpl
+cups-1.7.5/templates/option-header.tmpl
+cups-1.7.5/templates/option-pickmany.tmpl
+cups-1.7.5/templates/option-pickone.tmpl
+cups-1.7.5/templates/option-trailer.tmpl
+cups-1.7.5/templates/pager.tmpl
+cups-1.7.5/templates/printer-accept.tmpl
+cups-1.7.5/templates/printer-added.tmpl
+cups-1.7.5/templates/printer-configured.tmpl
+cups-1.7.5/templates/printer-confirm.tmpl
+cups-1.7.5/templates/printer-default.tmpl
+cups-1.7.5/templates/printer-deleted.tmpl
+cups-1.7.5/templates/printer-jobs-header.tmpl
+cups-1.7.5/templates/printer-modified.tmpl
+cups-1.7.5/templates/printer-purge.tmpl
+cups-1.7.5/templates/printer-reject.tmpl
+cups-1.7.5/templates/printer-start.tmpl
+cups-1.7.5/templates/printer-stop.tmpl
+cups-1.7.5/templates/printer.tmpl
+cups-1.7.5/templates/printers-header.tmpl
+cups-1.7.5/templates/printers.tmpl
+cups-1.7.5/templates/pt_BR/
+cups-1.7.5/templates/restart.tmpl
+cups-1.7.5/templates/ru/
+cups-1.7.5/templates/samba-export.tmpl
+cups-1.7.5/templates/samba-exported.tmpl
+cups-1.7.5/templates/search.tmpl
+cups-1.7.5/templates/set-printer-options-header.tmpl
+cups-1.7.5/templates/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/subscription-added.tmpl
+cups-1.7.5/templates/subscription-canceled.tmpl
+cups-1.7.5/templates/test-page.tmpl
+cups-1.7.5/templates/trailer.tmpl
+cups-1.7.5/templates/users.tmpl
+cups-1.7.5/templates/ru/add-class.tmpl
+cups-1.7.5/templates/ru/add-printer.tmpl
+cups-1.7.5/templates/ru/add-rss-subscription.tmpl
+cups-1.7.5/templates/ru/admin.tmpl
+cups-1.7.5/templates/ru/choose-device.tmpl
+cups-1.7.5/templates/ru/choose-make.tmpl
+cups-1.7.5/templates/ru/choose-model.tmpl
+cups-1.7.5/templates/ru/choose-serial.tmpl
+cups-1.7.5/templates/ru/choose-uri.tmpl
+cups-1.7.5/templates/ru/class-added.tmpl
+cups-1.7.5/templates/ru/class-confirm.tmpl
+cups-1.7.5/templates/ru/class-deleted.tmpl
+cups-1.7.5/templates/ru/class-jobs-header.tmpl
+cups-1.7.5/templates/ru/class-modified.tmpl
+cups-1.7.5/templates/ru/class.tmpl
+cups-1.7.5/templates/ru/classes-header.tmpl
+cups-1.7.5/templates/ru/classes.tmpl
+cups-1.7.5/templates/ru/command.tmpl
+cups-1.7.5/templates/ru/edit-config.tmpl
+cups-1.7.5/templates/ru/error-op.tmpl
+cups-1.7.5/templates/ru/error.tmpl
+cups-1.7.5/templates/ru/header.tmpl.in
+cups-1.7.5/templates/ru/help-header.tmpl
+cups-1.7.5/templates/ru/help-printable.tmpl
+cups-1.7.5/templates/ru/help-trailer.tmpl
+cups-1.7.5/templates/ru/job-cancel.tmpl
+cups-1.7.5/templates/ru/job-hold.tmpl
+cups-1.7.5/templates/ru/job-move.tmpl
+cups-1.7.5/templates/ru/job-moved.tmpl
+cups-1.7.5/templates/ru/job-release.tmpl
+cups-1.7.5/templates/ru/job-restart.tmpl
+cups-1.7.5/templates/ru/jobs-header.tmpl
+cups-1.7.5/templates/ru/jobs.tmpl
+cups-1.7.5/templates/ru/list-available-printers.tmpl
+cups-1.7.5/templates/ru/Makefile
+cups-1.7.5/templates/ru/modify-class.tmpl
+cups-1.7.5/templates/ru/modify-printer.tmpl
+cups-1.7.5/templates/ru/norestart.tmpl
+cups-1.7.5/templates/ru/option-boolean.tmpl
+cups-1.7.5/templates/ru/option-conflict.tmpl
+cups-1.7.5/templates/ru/option-header.tmpl
+cups-1.7.5/templates/ru/option-pickmany.tmpl
+cups-1.7.5/templates/ru/option-pickone.tmpl
+cups-1.7.5/templates/ru/option-trailer.tmpl
+cups-1.7.5/templates/ru/pager.tmpl
+cups-1.7.5/templates/ru/printer-accept.tmpl
+cups-1.7.5/templates/ru/printer-added.tmpl
+cups-1.7.5/templates/ru/printer-configured.tmpl
+cups-1.7.5/templates/ru/printer-confirm.tmpl
+cups-1.7.5/templates/ru/printer-default.tmpl
+cups-1.7.5/templates/ru/printer-deleted.tmpl
+cups-1.7.5/templates/ru/printer-jobs-header.tmpl
+cups-1.7.5/templates/ru/printer-modified.tmpl
+cups-1.7.5/templates/ru/printer-purge.tmpl
+cups-1.7.5/templates/ru/printer-reject.tmpl
+cups-1.7.5/templates/ru/printer-start.tmpl
+cups-1.7.5/templates/ru/printer-stop.tmpl
+cups-1.7.5/templates/ru/printer.tmpl
+cups-1.7.5/templates/ru/printers-header.tmpl
+cups-1.7.5/templates/ru/printers.tmpl
+cups-1.7.5/templates/ru/restart.tmpl
+cups-1.7.5/templates/ru/samba-export.tmpl
+cups-1.7.5/templates/ru/samba-exported.tmpl
+cups-1.7.5/templates/ru/search.tmpl
+cups-1.7.5/templates/ru/set-printer-options-header.tmpl
+cups-1.7.5/templates/ru/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/ru/subscription-added.tmpl
+cups-1.7.5/templates/ru/subscription-canceled.tmpl
+cups-1.7.5/templates/ru/test-page.tmpl
+cups-1.7.5/templates/ru/trailer.tmpl
+cups-1.7.5/templates/ru/users.tmpl
+cups-1.7.5/templates/pt_BR/add-class.tmpl
+cups-1.7.5/templates/pt_BR/add-printer.tmpl
+cups-1.7.5/templates/pt_BR/add-rss-subscription.tmpl
+cups-1.7.5/templates/pt_BR/admin.tmpl
+cups-1.7.5/templates/pt_BR/choose-device.tmpl
+cups-1.7.5/templates/pt_BR/choose-make.tmpl
+cups-1.7.5/templates/pt_BR/choose-model.tmpl
+cups-1.7.5/templates/pt_BR/choose-serial.tmpl
+cups-1.7.5/templates/pt_BR/choose-uri.tmpl
+cups-1.7.5/templates/pt_BR/class-added.tmpl
+cups-1.7.5/templates/pt_BR/class-confirm.tmpl
+cups-1.7.5/templates/pt_BR/class-deleted.tmpl
+cups-1.7.5/templates/pt_BR/class-jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/class-modified.tmpl
+cups-1.7.5/templates/pt_BR/class.tmpl
+cups-1.7.5/templates/pt_BR/classes-header.tmpl
+cups-1.7.5/templates/pt_BR/classes.tmpl
+cups-1.7.5/templates/pt_BR/command.tmpl
+cups-1.7.5/templates/pt_BR/edit-config.tmpl
+cups-1.7.5/templates/pt_BR/error-op.tmpl
+cups-1.7.5/templates/pt_BR/error.tmpl
+cups-1.7.5/templates/pt_BR/header.tmpl.in
+cups-1.7.5/templates/pt_BR/help-header.tmpl
+cups-1.7.5/templates/pt_BR/job-cancel.tmpl
+cups-1.7.5/templates/pt_BR/job-hold.tmpl
+cups-1.7.5/templates/pt_BR/job-move.tmpl
+cups-1.7.5/templates/pt_BR/job-moved.tmpl
+cups-1.7.5/templates/pt_BR/job-release.tmpl
+cups-1.7.5/templates/pt_BR/job-restart.tmpl
+cups-1.7.5/templates/pt_BR/jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/jobs.tmpl
+cups-1.7.5/templates/pt_BR/list-available-printers.tmpl
+cups-1.7.5/templates/pt_BR/modify-class.tmpl
+cups-1.7.5/templates/pt_BR/modify-printer.tmpl
+cups-1.7.5/templates/pt_BR/norestart.tmpl
+cups-1.7.5/templates/pt_BR/option-boolean.tmpl
+cups-1.7.5/templates/pt_BR/option-conflict.tmpl
+cups-1.7.5/templates/pt_BR/option-header.tmpl
+cups-1.7.5/templates/pt_BR/option-pickmany.tmpl
+cups-1.7.5/templates/pt_BR/option-pickone.tmpl
+cups-1.7.5/templates/pt_BR/option-trailer.tmpl
+cups-1.7.5/templates/pt_BR/pager.tmpl
+cups-1.7.5/templates/pt_BR/printer-accept.tmpl
+cups-1.7.5/templates/pt_BR/printer-added.tmpl
+cups-1.7.5/templates/pt_BR/printer-configured.tmpl
+cups-1.7.5/templates/pt_BR/printer-confirm.tmpl
+cups-1.7.5/templates/pt_BR/printer-default.tmpl
+cups-1.7.5/templates/pt_BR/printer-deleted.tmpl
+cups-1.7.5/templates/pt_BR/printer-jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/printer-modified.tmpl
+cups-1.7.5/templates/pt_BR/printer-purge.tmpl
+cups-1.7.5/templates/pt_BR/printer-reject.tmpl
+cups-1.7.5/templates/pt_BR/printer-start.tmpl
+cups-1.7.5/templates/pt_BR/printer-stop.tmpl
+cups-1.7.5/templates/pt_BR/printer.tmpl
+cups-1.7.5/templates/pt_BR/printers-header.tmpl
+cups-1.7.5/templates/pt_BR/printers.tmpl
+cups-1.7.5/templates/pt_BR/restart.tmpl
+cups-1.7.5/templates/pt_BR/samba-export.tmpl
+cups-1.7.5/templates/pt_BR/samba-exported.tmpl
+cups-1.7.5/templates/pt_BR/search.tmpl
+cups-1.7.5/templates/pt_BR/set-printer-options-header.tmpl
+cups-1.7.5/templates/pt_BR/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/pt_BR/subscription-added.tmpl
+cups-1.7.5/templates/pt_BR/subscription-canceled.tmpl
+cups-1.7.5/templates/pt_BR/test-page.tmpl
+cups-1.7.5/templates/pt_BR/trailer.tmpl
+cups-1.7.5/templates/pt_BR/users.tmpl
+cups-1.7.5/templates/ja/add-class.tmpl
+cups-1.7.5/templates/ja/add-printer.tmpl
+cups-1.7.5/templates/ja/add-rss-subscription.tmpl
+cups-1.7.5/templates/ja/admin.tmpl
+cups-1.7.5/templates/ja/choose-device.tmpl
+cups-1.7.5/templates/ja/choose-make.tmpl
+cups-1.7.5/templates/ja/choose-model.tmpl
+cups-1.7.5/templates/ja/choose-serial.tmpl
+cups-1.7.5/templates/ja/choose-uri.tmpl
+cups-1.7.5/templates/ja/class-added.tmpl
+cups-1.7.5/templates/ja/class-confirm.tmpl
+cups-1.7.5/templates/ja/class-deleted.tmpl
+cups-1.7.5/templates/ja/class-jobs-header.tmpl
+cups-1.7.5/templates/ja/class-modified.tmpl
+cups-1.7.5/templates/ja/class.tmpl
+cups-1.7.5/templates/ja/classes-header.tmpl
+cups-1.7.5/templates/ja/classes.tmpl
+cups-1.7.5/templates/ja/command.tmpl
+cups-1.7.5/templates/ja/edit-config.tmpl
+cups-1.7.5/templates/ja/error-op.tmpl
+cups-1.7.5/templates/ja/error.tmpl
+cups-1.7.5/templates/ja/header.tmpl.in
+cups-1.7.5/templates/ja/help-header.tmpl
+cups-1.7.5/templates/ja/help-printable.tmpl
+cups-1.7.5/templates/ja/help-trailer.tmpl
+cups-1.7.5/templates/ja/job-cancel.tmpl
+cups-1.7.5/templates/ja/job-hold.tmpl
+cups-1.7.5/templates/ja/job-move.tmpl
+cups-1.7.5/templates/ja/job-moved.tmpl
+cups-1.7.5/templates/ja/job-release.tmpl
+cups-1.7.5/templates/ja/job-restart.tmpl
+cups-1.7.5/templates/ja/jobs-header.tmpl
+cups-1.7.5/templates/ja/jobs.tmpl
+cups-1.7.5/templates/ja/list-available-printers.tmpl
+cups-1.7.5/templates/ja/modify-class.tmpl
+cups-1.7.5/templates/ja/modify-printer.tmpl
+cups-1.7.5/templates/ja/norestart.tmpl
+cups-1.7.5/templates/ja/option-boolean.tmpl
+cups-1.7.5/templates/ja/option-conflict.tmpl
+cups-1.7.5/templates/ja/option-header.tmpl
+cups-1.7.5/templates/ja/option-pickmany.tmpl
+cups-1.7.5/templates/ja/option-pickone.tmpl
+cups-1.7.5/templates/ja/option-trailer.tmpl
+cups-1.7.5/templates/ja/pager.tmpl
+cups-1.7.5/templates/ja/printer-accept.tmpl
+cups-1.7.5/templates/ja/printer-added.tmpl
+cups-1.7.5/templates/ja/printer-configured.tmpl
+cups-1.7.5/templates/ja/printer-confirm.tmpl
+cups-1.7.5/templates/ja/printer-default.tmpl
+cups-1.7.5/templates/ja/printer-deleted.tmpl
+cups-1.7.5/templates/ja/printer-jobs-header.tmpl
+cups-1.7.5/templates/ja/printer-modified.tmpl
+cups-1.7.5/templates/ja/printer-purge.tmpl
+cups-1.7.5/templates/ja/printer-reject.tmpl
+cups-1.7.5/templates/ja/printer-start.tmpl
+cups-1.7.5/templates/ja/printer-stop.tmpl
+cups-1.7.5/templates/ja/printer.tmpl
+cups-1.7.5/templates/ja/printers-header.tmpl
+cups-1.7.5/templates/ja/printers.tmpl
+cups-1.7.5/templates/ja/restart.tmpl
+cups-1.7.5/templates/ja/samba-export.tmpl
+cups-1.7.5/templates/ja/samba-exported.tmpl
+cups-1.7.5/templates/ja/search.tmpl
+cups-1.7.5/templates/ja/set-printer-options-header.tmpl
+cups-1.7.5/templates/ja/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/ja/subscription-added.tmpl
+cups-1.7.5/templates/ja/subscription-canceled.tmpl
+cups-1.7.5/templates/ja/test-page.tmpl
+cups-1.7.5/templates/ja/trailer.tmpl
+cups-1.7.5/templates/ja/users.tmpl
+cups-1.7.5/templates/it/add-class.tmpl
+cups-1.7.5/templates/it/add-printer.tmpl
+cups-1.7.5/templates/it/add-rss-subscription.tmpl
+cups-1.7.5/templates/it/admin.tmpl
+cups-1.7.5/templates/it/choose-device.tmpl
+cups-1.7.5/templates/it/choose-make.tmpl
+cups-1.7.5/templates/it/choose-model.tmpl
+cups-1.7.5/templates/it/choose-serial.tmpl
+cups-1.7.5/templates/it/choose-uri.tmpl
+cups-1.7.5/templates/it/class-added.tmpl
+cups-1.7.5/templates/it/class-confirm.tmpl
+cups-1.7.5/templates/it/class-deleted.tmpl
+cups-1.7.5/templates/it/class-jobs-header.tmpl
+cups-1.7.5/templates/it/class-modified.tmpl
+cups-1.7.5/templates/it/class.tmpl
+cups-1.7.5/templates/it/classes-header.tmpl
+cups-1.7.5/templates/it/classes.tmpl
+cups-1.7.5/templates/it/command.tmpl
+cups-1.7.5/templates/it/edit-config.tmpl
+cups-1.7.5/templates/it/error-op.tmpl
+cups-1.7.5/templates/it/error.tmpl
+cups-1.7.5/templates/it/header.tmpl.in
+cups-1.7.5/templates/it/help-header.tmpl
+cups-1.7.5/templates/it/help-printable.tmpl
+cups-1.7.5/templates/it/help-trailer.tmpl
+cups-1.7.5/templates/it/job-cancel.tmpl
+cups-1.7.5/templates/it/job-hold.tmpl
+cups-1.7.5/templates/it/job-move.tmpl
+cups-1.7.5/templates/it/job-moved.tmpl
+cups-1.7.5/templates/it/job-release.tmpl
+cups-1.7.5/templates/it/job-restart.tmpl
+cups-1.7.5/templates/it/jobs-header.tmpl
+cups-1.7.5/templates/it/jobs.tmpl
+cups-1.7.5/templates/it/list-available-printers.tmpl
+cups-1.7.5/templates/it/modify-class.tmpl
+cups-1.7.5/templates/it/modify-printer.tmpl
+cups-1.7.5/templates/it/norestart.tmpl
+cups-1.7.5/templates/it/option-boolean.tmpl
+cups-1.7.5/templates/it/option-conflict.tmpl
+cups-1.7.5/templates/it/option-header.tmpl
+cups-1.7.5/templates/it/option-pickmany.tmpl
+cups-1.7.5/templates/it/option-pickone.tmpl
+cups-1.7.5/templates/it/option-trailer.tmpl
+cups-1.7.5/templates/it/pager.tmpl
+cups-1.7.5/templates/it/printer-accept.tmpl
+cups-1.7.5/templates/it/printer-added.tmpl
+cups-1.7.5/templates/it/printer-configured.tmpl
+cups-1.7.5/templates/it/printer-confirm.tmpl
+cups-1.7.5/templates/it/printer-default.tmpl
+cups-1.7.5/templates/it/printer-deleted.tmpl
+cups-1.7.5/templates/it/printer-jobs-header.tmpl
+cups-1.7.5/templates/it/printer-modified.tmpl
+cups-1.7.5/templates/it/printer-purge.tmpl
+cups-1.7.5/templates/it/printer-reject.tmpl
+cups-1.7.5/templates/it/printer-start.tmpl
+cups-1.7.5/templates/it/printer-stop.tmpl
+cups-1.7.5/templates/it/printer.tmpl
+cups-1.7.5/templates/it/printers-header.tmpl
+cups-1.7.5/templates/it/printers.tmpl
+cups-1.7.5/templates/it/restart.tmpl
+cups-1.7.5/templates/it/samba-export.tmpl
+cups-1.7.5/templates/it/samba-exported.tmpl
+cups-1.7.5/templates/it/search.tmpl
+cups-1.7.5/templates/it/set-printer-options-header.tmpl
+cups-1.7.5/templates/it/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/it/subscription-added.tmpl
+cups-1.7.5/templates/it/subscription-canceled.tmpl
+cups-1.7.5/templates/it/test-page.tmpl
+cups-1.7.5/templates/it/trailer.tmpl
+cups-1.7.5/templates/it/users.tmpl
+cups-1.7.5/templates/fr/add-class.tmpl
+cups-1.7.5/templates/fr/add-printer.tmpl
+cups-1.7.5/templates/fr/add-rss-subscription.tmpl
+cups-1.7.5/templates/fr/admin.tmpl
+cups-1.7.5/templates/fr/choose-device.tmpl
+cups-1.7.5/templates/fr/choose-make.tmpl
+cups-1.7.5/templates/fr/choose-model.tmpl
+cups-1.7.5/templates/fr/choose-serial.tmpl
+cups-1.7.5/templates/fr/choose-uri.tmpl
+cups-1.7.5/templates/fr/class-added.tmpl
+cups-1.7.5/templates/fr/class-confirm.tmpl
+cups-1.7.5/templates/fr/class-deleted.tmpl
+cups-1.7.5/templates/fr/class-jobs-header.tmpl
+cups-1.7.5/templates/fr/class-modified.tmpl
+cups-1.7.5/templates/fr/class.tmpl
+cups-1.7.5/templates/fr/classes-header.tmpl
+cups-1.7.5/templates/fr/classes.tmpl
+cups-1.7.5/templates/fr/command.tmpl
+cups-1.7.5/templates/fr/edit-config.tmpl
+cups-1.7.5/templates/fr/error-op.tmpl
+cups-1.7.5/templates/fr/error.tmpl
+cups-1.7.5/templates/fr/header.tmpl.in
+cups-1.7.5/templates/fr/help-header.tmpl
+cups-1.7.5/templates/fr/help-printable.tmpl
+cups-1.7.5/templates/fr/help-trailer.tmpl
+cups-1.7.5/templates/fr/job-cancel.tmpl
+cups-1.7.5/templates/fr/job-hold.tmpl
+cups-1.7.5/templates/fr/job-move.tmpl
+cups-1.7.5/templates/fr/job-moved.tmpl
+cups-1.7.5/templates/fr/job-release.tmpl
+cups-1.7.5/templates/fr/job-restart.tmpl
+cups-1.7.5/templates/fr/jobs-header.tmpl
+cups-1.7.5/templates/fr/jobs.tmpl
+cups-1.7.5/templates/fr/list-available-printers.tmpl
+cups-1.7.5/templates/fr/modify-class.tmpl
+cups-1.7.5/templates/fr/modify-printer.tmpl
+cups-1.7.5/templates/fr/norestart.tmpl
+cups-1.7.5/templates/fr/option-boolean.tmpl
+cups-1.7.5/templates/fr/option-conflict.tmpl
+cups-1.7.5/templates/fr/option-header.tmpl
+cups-1.7.5/templates/fr/option-pickmany.tmpl
+cups-1.7.5/templates/fr/option-pickone.tmpl
+cups-1.7.5/templates/fr/option-trailer.tmpl
+cups-1.7.5/templates/fr/pager.tmpl
+cups-1.7.5/templates/fr/printer-accept.tmpl
+cups-1.7.5/templates/fr/printer-added.tmpl
+cups-1.7.5/temp--output truncated--
+2026-07-21 00:45:49,691 - 492577 - INFO - CUPS reinstall successful on i-0e87970bfe3028a6d
+2026-07-21 00:45:49,972 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: 5846a4cd-2ace-4646-9fb0-8948b675b529)
+2026-07-21 00:45:56,251 - 492577 - INFO - Instance i-03878907b98ea0469 stopped successfully.
+2026-07-21 00:45:56,499 - 492577 - INFO - Stopped i-03878907b98ea0469 in 0:01:46.604638
+2026-07-21 00:45:56,499 - 492577 - INFO - Starting EC2 instance: i-03878907b98ea0469
+2026-07-21 00:46:12,643 - 492577 - INFO - Instance i-03878907b98ea0469 started successfully.
+2026-07-21 00:46:12,643 - 492577 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03878907b98ea0469...
+2026-07-21 00:46:20,070 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:45:50.145835
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.8G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:45:51.075915
+==============================================================================
+
+2026-07-21 00:46:20,070 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 00:46:20,199 - 492577 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:46:20,199 - 492577 - INFO - RED re-validation mail sent for i-0e87970bfe3028a6d
+2026-07-21 00:46:20,199 - 492577 - INFO - Still Red after restart - starting retry for i-0e87970bfe3028a6d
+2026-07-21 00:46:20,199 - 492577 - INFO - [Retry-1] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 00:47:52,721 - 492577 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-07-21 00:47:52,896 - 492577 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-07-21 00:47:53,033 - 492577 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-07-21 00:47:53,180 - 492577 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-07-21 00:47:53,319 - 492577 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-07-21 00:49:53,741 - 492577 - WARNING - i-03878907b98ea0469 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05 after timeout.
+2026-07-21 00:49:53,754 - 492577 - WARNING - i-03878907b98ea0469 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8 after timeout.
+2026-07-21 00:49:53,761 - 492577 - WARNING - i-03878907b98ea0469 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9 after timeout.
+2026-07-21 00:49:53,771 - 492577 - WARNING - i-03878907b98ea0469 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579 after timeout.
+2026-07-21 00:49:53,771 - 492577 - WARNING - i-03878907b98ea0469: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 00:49:54,358 - 492577 - INFO - Sent app_validation.py to i-03878907b98ea0469 (command_id: 5fe2d53f-d690-4e67-adc0-89bd25ada1fa)
+2026-07-21 00:50:24,452 - 492577 - INFO - app_validation.py output for i-03878907b98ea0469:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:49:54.721152
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.29
+Hostname | ip-172-28-25-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 68.7G | 171.1G | 28% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4252 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.29:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4178 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.29:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3873 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.29:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:49:57.360146
+==============================================================================
+
+2026-07-21 00:50:24,452 - 492577 - ERROR - app_validation.py errors for i-03878907b98ea0469:
+
+2026-07-21 00:50:24,454 - 492577 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-AfterPatching-2026-07-21-00-50-24-454.log
+2026-07-21 00:50:24,508 - 492577 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-Validation-details-2026-07-21-00-50-24-454.html
+2026-07-21 00:50:24,689 - 492577 - INFO - Daemon count - Pre: 14, Post: 0
+2026-07-21 00:50:24,689 - 492577 - INFO - CUPS: before=running after=not running version=1.7.5
+2026-07-21 00:50:24,689 - 492577 - INFO - Manage_cron: True, daemon_action: True, cups_action: True
+2026-07-21 00:50:24,689 - 492577 - INFO - Background: restarting daemons on i-03878907b98ea0469
+2026-07-21 00:50:24,690 - 492577 - INFO - Background thread started for i-03878907b98ea0469 - daemon:True cups:True
+2026-07-21 00:50:25,113 - 492577 - INFO - Started i-03878907b98ea0469 in 0:04:28.613470
+2026-07-21 00:50:25,113 - 492577 - INFO - All instances processed.
+2026-07-21 00:50:25,118 - 492577 - INFO - Restart Total time: 0:14:37.615211
+2026-07-21 00:50:25,119 - 492577 - INFO - Auto-confirmed services are restarted
+2026-07-21 00:50:25,119 - 492577 - INFO - Confirmed - services are started
+2026-07-21 00:50:25,231 - 492577 - INFO - The following instances have failed the patch: []
+2026-07-21 00:50:25,231 - 492577 - INFO - No instances have failed the patch.
+2026-07-21 00:50:25,231 - 492577 - INFO - Total Patch Process time: 0:25:22.886088
+2026-07-21 00:50:55,062 - 492577 - INFO - Daemon restart output: /data/batchapp/softeon/upshchabuat/startall-upshchabuat-daemon.sh
+
+
+Starting breruleenginedaemon
+
+
+Starting clustercreationdaemon1
+
+
+Starting clustercreationdaemon2
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting hardallocationdaemon
+
+
+Starting reportdaemon
+
+
+Starting reportjqgridexportdaemon
+
+
+Starting taskinvallocationdaemon
+
+
+Starting wsqdaemon
+
+
+Starting wavelaunchdaemon1
+
+
+Starting wavelaunchdaemon2
+
+
+Starting habhardallocationdaemon
+/data/batchapp/softeon/upshchabwesuat/startall-upshchabwesuat-daemon.sh
+
+2026-07-21 00:50:55,066 - 492577 - INFO - Waiting 100 sec for daemons to start on i-03878907b98ea0469
+2026-07-21 00:51:20,409 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: 502bc5b9-04be-4967-bf54-4f3b2a2d2cea)
+2026-07-21 00:51:25,812 - 492577 - INFO - Log file ./logs/patching_2026-07-21_UPSHC-HAB-UAT.log uploaded to s3://q3-2026-aws-security-patching/UPSHC-HAB-UAT_Patch/2026-07-21/patching_2026-07-21_UPSHC-HAB-UAT.log
+2026-07-21 00:51:50,467 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:51:20.670585
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.8G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:51:21.700284
+==============================================================================
+
+2026-07-21 00:51:50,467 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 00:51:50,472 - 492577 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry1-2026-07-21-00-51-50-472.log
+2026-07-21 00:51:50,529 - 492577 - INFO - [Retry-1] RED for UPSHC-HAB UAT Application Server and  Batch Server - 2 (172.28.25.59), retrying... (Total waited: 300s)
+2026-07-21 00:51:50,529 - 492577 - INFO - [Retry-2] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 00:52:35,167 - 492577 - INFO - CUPS was running (v1.7.5) before, not running after - reinstalling on i-03878907b98ea0469
+2026-07-21 00:52:35,313 - 492577 - INFO - CUPS upgrade command sent to i-03878907b98ea0469 (command_id: 8c67b35b-1217-4872-b94d-aec2c09a5bfb)
+2026-07-21 00:53:35,475 - 492577 - INFO - CUPS upgrade output: '/etc/cups' -> '/tmp/cups-backup/cups1.7.5/cups'
+'/etc/cups/ssl' -> '/tmp/cups-backup/cups1.7.5/cups/ssl'
+'/etc/cups/cups-files.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/cups-files.conf.N'
+'/etc/cups/cupsd.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf.N'
+'/etc/cups/cupsd.conf.default' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf.default'
+'/etc/cups/snmp.conf.N' -> '/tmp/cups-backup/cups1.7.5/cups/snmp.conf.N'
+'/etc/cups/cups-files.conf' -> '/tmp/cups-backup/cups1.7.5/cups/cups-files.conf'
+'/etc/cups/client.conf' -> '/tmp/cups-backup/cups1.7.5/cups/client.conf'
+'/etc/cups/snmp.conf' -> '/tmp/cups-backup/cups1.7.5/cups/snmp.conf'
+'/etc/cups/printers.conf.O' -> '/tmp/cups-backup/cups1.7.5/cups/printers.conf.O'
+'/etc/cups/printers.conf' -> '/tmp/cups-backup/cups1.7.5/cups/printers.conf'
+'/etc/cups/cupsd.conf' -> '/tmp/cups-backup/cups1.7.5/cups/cupsd.conf'
+'/etc/cups/interfaces' -> '/tmp/cups-backup/cups1.7.5/cups/interfaces'
+'/etc/cups/ppd' -> '/tmp/cups-backup/cups1.7.5/cups/ppd'
+Last metadata expiration check: 0:18:21 ago on Tue Jul 21 04:34:16 2026.
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Installing Groups:
+ Development Tools                                                             
+
+Transaction Summary
+================================================================================
+
+Complete!
+cups-1.7.5/
+cups-1.7.5/backend/
+cups-1.7.5/berkeley/
+cups-1.7.5/cgi-bin/
+cups-1.7.5/CHANGES-1.0.txt
+cups-1.7.5/CHANGES-1.1.txt
+cups-1.7.5/CHANGES-1.2.txt
+cups-1.7.5/CHANGES-1.3.txt
+cups-1.7.5/CHANGES-1.4.txt
+cups-1.7.5/CHANGES-1.5.txt
+cups-1.7.5/CHANGES-1.6.txt
+cups-1.7.5/CHANGES-IPPTOOL.txt
+cups-1.7.5/CHANGES.txt
+cups-1.7.5/conf/
+cups-1.7.5/config-scripts/
+cups-1.7.5/config.h.in
+cups-1.7.5/configure
+cups-1.7.5/configure.in
+cups-1.7.5/CREDITS.txt
+cups-1.7.5/cups/
+cups-1.7.5/cups-config.in
+cups-1.7.5/data/
+cups-1.7.5/desktop/
+cups-1.7.5/doc/
+cups-1.7.5/examples/
+cups-1.7.5/filter/
+cups-1.7.5/install-sh
+cups-1.7.5/INSTALL.txt
+cups-1.7.5/IPPTOOL.txt
+cups-1.7.5/LICENSE.txt
+cups-1.7.5/locale/
+cups-1.7.5/Makedefs.in
+cups-1.7.5/Makefile
+cups-1.7.5/man/
+cups-1.7.5/monitor/
+cups-1.7.5/notifier/
+cups-1.7.5/packaging/
+cups-1.7.5/ppdc/
+cups-1.7.5/README.txt
+cups-1.7.5/scheduler/
+cups-1.7.5/systemv/
+cups-1.7.5/templates/
+cups-1.7.5/test/
+cups-1.7.5/vcnet/
+cups-1.7.5/xcode/
+cups-1.7.5/xcode/config.h
+cups-1.7.5/xcode/CUPS.xcodeproj/
+cups-1.7.5/xcode/CUPS.xcodeproj/project.pbxproj
+cups-1.7.5/vcnet/config.h
+cups-1.7.5/vcnet/cups.sln
+cups-1.7.5/vcnet/cupstestppd.vcproj
+cups-1.7.5/vcnet/ippfind.vcproj
+cups-1.7.5/vcnet/ipptool-installer.vdproj
+cups-1.7.5/vcnet/ipptool.vcproj
+cups-1.7.5/vcnet/libcups2-installer.vdproj
+cups-1.7.5/vcnet/libcups2.vcproj
+cups-1.7.5/vcnet/libcupsimage2.vcproj
+cups-1.7.5/vcnet/README.txt
+cups-1.7.5/vcnet/regex/
+cups-1.7.5/vcnet/regex.vcproj
+cups-1.7.5/vcnet/setdebug.bat
+cups-1.7.5/vcnet/testfile.vcproj
+cups-1.7.5/vcnet/testhttp.vcproj
+cups-1.7.5/vcnet/regex/cclass.h
+cups-1.7.5/vcnet/regex/cname.h
+cups-1.7.5/vcnet/regex/COPYRIGHT
+cups-1.7.5/vcnet/regex/debug.c
+cups-1.7.5/vcnet/regex/debug.ih
+cups-1.7.5/vcnet/regex/engine.c
+cups-1.7.5/vcnet/regex/engine.ih
+cups-1.7.5/vcnet/regex/main.c
+cups-1.7.5/vcnet/regex/main.ih
+cups-1.7.5/vcnet/regex/Makefile
+cups-1.7.5/vcnet/regex/mkh
+cups-1.7.5/vcnet/regex/README
+cups-1.7.5/vcnet/regex/regcomp.c
+cups-1.7.5/vcnet/regex/regcomp.ih
+cups-1.7.5/vcnet/regex/regerror.c
+cups-1.7.5/vcnet/regex/regerror.ih
+cups-1.7.5/vcnet/regex/regex.3
+cups-1.7.5/vcnet/regex/regex.7
+cups-1.7.5/vcnet/regex/regex.def
+cups-1.7.5/vcnet/regex/regex.h
+cups-1.7.5/vcnet/regex/regex2.h
+cups-1.7.5/vcnet/regex/regexec.c
+cups-1.7.5/vcnet/regex/regfree.c
+cups-1.7.5/vcnet/regex/split.c
+cups-1.7.5/vcnet/regex/tests
+cups-1.7.5/vcnet/regex/utils.h
+cups-1.7.5/vcnet/regex/WHATSNEW
+cups-1.7.5/test/4.1-requests.test
+cups-1.7.5/test/4.2-cups-printer-ops.test
+cups-1.7.5/test/4.3-job-ops.test
+cups-1.7.5/test/4.4-subscription-ops.test
+cups-1.7.5/test/5.1-lpadmin.sh
+cups-1.7.5/test/5.2-lpc.sh
+cups-1.7.5/test/5.3-lpq.sh
+cups-1.7.5/test/5.4-lpstat.sh
+cups-1.7.5/test/5.5-lp.sh
+cups-1.7.5/test/5.6-lpr.sh
+cups-1.7.5/test/5.7-lprm.sh
+cups-1.7.5/test/5.8-cancel.sh
+cups-1.7.5/test/5.9-lpinfo.sh
+cups-1.7.5/test/cancel-current-job.test
+cups-1.7.5/test/color.jpg
+cups-1.7.5/test/create-job-format.test
+cups-1.7.5/test/create-job-sheets.test
+cups-1.7.5/test/create-job-timeout.test
+cups-1.7.5/test/create-job.test
+cups-1.7.5/test/create-printer-subscription.test
+cups-1.7.5/test/Dependencies
+cups-1.7.5/test/document-a4.pdf
+cups-1.7.5/test/document-a4.ps
+cups-1.7.5/test/document-a4.sla
+cups-1.7.5/test/document-letter.pdf
+cups-1.7.5/test/document-letter.ps
+cups-1.7.5/test/document-letter.sla
+cups-1.7.5/test/get-completed-jobs.test
+cups-1.7.5/test/get-devices.test
+cups-1.7.5/test/get-job-attributes.test
+cups-1.7.5/test/get-job-attributes2.test
+cups-1.7.5/test/get-jobs.test
+cups-1.7.5/test/get-notifications.test
+cups-1.7.5/test/get-ppd-printer.test
+cups-1.7.5/test/get-ppd.test
+cups-1.7.5/test/get-ppds-drv-only.test
+cups-1.7.5/test/get-ppds-language.test
+cups-1.7.5/test/get-ppds-make-and-model.test
+cups-1.7.5/test/get-ppds-make.test
+cups-1.7.5/test/get-ppds-product.test
+cups-1.7.5/test/get-ppds-psversion.test
+cups-1.7.5/test/get-ppds.test
+cups-1.7.5/test/get-printer-attributes-2.0.test
+cups-1.7.5/test/get-printer-attributes.test
+cups-1.7.5/test/get-printers.test
+cups-1.7.5/test/get-subscriptions.test
+cups-1.7.5/test/gray.jpg
+cups-1.7.5/test/ipp-1.1.test
+cups-1.7.5/test/ipp-2.0.test
+cups-1.7.5/test/ipp-2.1.test
+cups-1.7.5/test/ipp-2.2.test
+cups-1.7.5/test/ipp-backend.test
+cups-1.7.5/test/ipp-everywhere.test
+cups-1.7.5/test/ippdiscover.c
+cups-1.7.5/test/ippfind.c
+cups-1.7.5/test/ippserver.c
+cups-1.7.5/test/ipptool.c
+cups-1.7.5/test/make-ippeverywhere-print-tests.sh
+cups-1.7.5/test/Makefile
+cups-1.7.5/test/onepage-a4-300-black-1.pwg.gz
+cups-1.7.5/test/onepage-a4.pdf
+cups-1.7.5/test/onepage-a4.ps
+cups-1.7.5/test/onepage-a4.sla
+cups-1.7.5/test/onepage-letter-300-black-1.pwg.gz
+cups-1.7.5/test/onepage-letter.pdf
+cups-1.7.5/test/onepage-letter.ps
+cups-1.7.5/test/onepage-letter.sla
+cups-1.7.5/test/print-job-and-wait.test
+cups-1.7.5/test/print-job-deflate.test
+cups-1.7.5/test/print-job-gzip.test
+cups-1.7.5/test/print-job-hold.test
+cups-1.7.5/test/print-job-media-col.test
+cups-1.7.5/test/print-job-password.test
+cups-1.7.5/test/print-job.test
+cups-1.7.5/test/print-uri.test
+cups-1.7.5/test/printer.opacity
+cups-1.7.5/test/printer.png
+cups-1.7.5/test/run-stp-tests.sh
+cups-1.7.5/test/set-attrs-hold.test
+cups-1.7.5/test/str-header.html
+cups-1.7.5/test/str-trailer.html
+cups-1.7.5/test/test.convs
+cups-1.7.5/test/testfile.jpg
+cups-1.7.5/test/testfile.pcl
+cups-1.7.5/test/testfile.pdf
+cups-1.7.5/test/testfile.ps
+cups-1.7.5/test/testfile.txt
+cups-1.7.5/test/testhp.ppd
+cups-1.7.5/test/testps.ppd
+cups-1.7.5/test/validate-job.test
+cups-1.7.5/test/waitjobs.sh
+cups-1.7.5/test/xmltotest.c
+cups-1.7.5/templates/add-class.tmpl
+cups-1.7.5/templates/add-printer.tmpl
+cups-1.7.5/templates/add-rss-subscription.tmpl
+cups-1.7.5/templates/admin.tmpl
+cups-1.7.5/templates/ca/
+cups-1.7.5/templates/choose-device.tmpl
+cups-1.7.5/templates/choose-make.tmpl
+cups-1.7.5/templates/choose-model.tmpl
+cups-1.7.5/templates/choose-serial.tmpl
+cups-1.7.5/templates/choose-uri.tmpl
+cups-1.7.5/templates/class-added.tmpl
+cups-1.7.5/templates/class-confirm.tmpl
+cups-1.7.5/templates/class-deleted.tmpl
+cups-1.7.5/templates/class-jobs-header.tmpl
+cups-1.7.5/templates/class-modified.tmpl
+cups-1.7.5/templates/class.tmpl
+cups-1.7.5/templates/classes-header.tmpl
+cups-1.7.5/templates/classes.tmpl
+cups-1.7.5/templates/command.tmpl
+cups-1.7.5/templates/cs/
+cups-1.7.5/templates/de/
+cups-1.7.5/templates/edit-config.tmpl
+cups-1.7.5/templates/error-op.tmpl
+cups-1.7.5/templates/error.tmpl
+cups-1.7.5/templates/es/
+cups-1.7.5/templates/fr/
+cups-1.7.5/templates/header.tmpl.in
+cups-1.7.5/templates/help-header.tmpl
+cups-1.7.5/templates/help-printable.tmpl
+cups-1.7.5/templates/help-trailer.tmpl
+cups-1.7.5/templates/it/
+cups-1.7.5/templates/ja/
+cups-1.7.5/templates/job-cancel.tmpl
+cups-1.7.5/templates/job-hold.tmpl
+cups-1.7.5/templates/job-move.tmpl
+cups-1.7.5/templates/job-moved.tmpl
+cups-1.7.5/templates/job-release.tmpl
+cups-1.7.5/templates/job-restart.tmpl
+cups-1.7.5/templates/jobs-header.tmpl
+cups-1.7.5/templates/jobs.tmpl
+cups-1.7.5/templates/list-available-printers.tmpl
+cups-1.7.5/templates/Makefile
+cups-1.7.5/templates/modify-class.tmpl
+cups-1.7.5/templates/modify-printer.tmpl
+cups-1.7.5/templates/norestart.tmpl
+cups-1.7.5/templates/option-boolean.tmpl
+cups-1.7.5/templates/option-conflict.tmpl
+cups-1.7.5/templates/option-header.tmpl
+cups-1.7.5/templates/option-pickmany.tmpl
+cups-1.7.5/templates/option-pickone.tmpl
+cups-1.7.5/templates/option-trailer.tmpl
+cups-1.7.5/templates/pager.tmpl
+cups-1.7.5/templates/printer-accept.tmpl
+cups-1.7.5/templates/printer-added.tmpl
+cups-1.7.5/templates/printer-configured.tmpl
+cups-1.7.5/templates/printer-confirm.tmpl
+cups-1.7.5/templates/printer-default.tmpl
+cups-1.7.5/templates/printer-deleted.tmpl
+cups-1.7.5/templates/printer-jobs-header.tmpl
+cups-1.7.5/templates/printer-modified.tmpl
+cups-1.7.5/templates/printer-purge.tmpl
+cups-1.7.5/templates/printer-reject.tmpl
+cups-1.7.5/templates/printer-start.tmpl
+cups-1.7.5/templates/printer-stop.tmpl
+cups-1.7.5/templates/printer.tmpl
+cups-1.7.5/templates/printers-header.tmpl
+cups-1.7.5/templates/printers.tmpl
+cups-1.7.5/templates/pt_BR/
+cups-1.7.5/templates/restart.tmpl
+cups-1.7.5/templates/ru/
+cups-1.7.5/templates/samba-export.tmpl
+cups-1.7.5/templates/samba-exported.tmpl
+cups-1.7.5/templates/search.tmpl
+cups-1.7.5/templates/set-printer-options-header.tmpl
+cups-1.7.5/templates/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/subscription-added.tmpl
+cups-1.7.5/templates/subscription-canceled.tmpl
+cups-1.7.5/templates/test-page.tmpl
+cups-1.7.5/templates/trailer.tmpl
+cups-1.7.5/templates/users.tmpl
+cups-1.7.5/templates/ru/add-class.tmpl
+cups-1.7.5/templates/ru/add-printer.tmpl
+cups-1.7.5/templates/ru/add-rss-subscription.tmpl
+cups-1.7.5/templates/ru/admin.tmpl
+cups-1.7.5/templates/ru/choose-device.tmpl
+cups-1.7.5/templates/ru/choose-make.tmpl
+cups-1.7.5/templates/ru/choose-model.tmpl
+cups-1.7.5/templates/ru/choose-serial.tmpl
+cups-1.7.5/templates/ru/choose-uri.tmpl
+cups-1.7.5/templates/ru/class-added.tmpl
+cups-1.7.5/templates/ru/class-confirm.tmpl
+cups-1.7.5/templates/ru/class-deleted.tmpl
+cups-1.7.5/templates/ru/class-jobs-header.tmpl
+cups-1.7.5/templates/ru/class-modified.tmpl
+cups-1.7.5/templates/ru/class.tmpl
+cups-1.7.5/templates/ru/classes-header.tmpl
+cups-1.7.5/templates/ru/classes.tmpl
+cups-1.7.5/templates/ru/command.tmpl
+cups-1.7.5/templates/ru/edit-config.tmpl
+cups-1.7.5/templates/ru/error-op.tmpl
+cups-1.7.5/templates/ru/error.tmpl
+cups-1.7.5/templates/ru/header.tmpl.in
+cups-1.7.5/templates/ru/help-header.tmpl
+cups-1.7.5/templates/ru/help-printable.tmpl
+cups-1.7.5/templates/ru/help-trailer.tmpl
+cups-1.7.5/templates/ru/job-cancel.tmpl
+cups-1.7.5/templates/ru/job-hold.tmpl
+cups-1.7.5/templates/ru/job-move.tmpl
+cups-1.7.5/templates/ru/job-moved.tmpl
+cups-1.7.5/templates/ru/job-release.tmpl
+cups-1.7.5/templates/ru/job-restart.tmpl
+cups-1.7.5/templates/ru/jobs-header.tmpl
+cups-1.7.5/templates/ru/jobs.tmpl
+cups-1.7.5/templates/ru/list-available-printers.tmpl
+cups-1.7.5/templates/ru/Makefile
+cups-1.7.5/templates/ru/modify-class.tmpl
+cups-1.7.5/templates/ru/modify-printer.tmpl
+cups-1.7.5/templates/ru/norestart.tmpl
+cups-1.7.5/templates/ru/option-boolean.tmpl
+cups-1.7.5/templates/ru/option-conflict.tmpl
+cups-1.7.5/templates/ru/option-header.tmpl
+cups-1.7.5/templates/ru/option-pickmany.tmpl
+cups-1.7.5/templates/ru/option-pickone.tmpl
+cups-1.7.5/templates/ru/option-trailer.tmpl
+cups-1.7.5/templates/ru/pager.tmpl
+cups-1.7.5/templates/ru/printer-accept.tmpl
+cups-1.7.5/templates/ru/printer-added.tmpl
+cups-1.7.5/templates/ru/printer-configured.tmpl
+cups-1.7.5/templates/ru/printer-confirm.tmpl
+cups-1.7.5/templates/ru/printer-default.tmpl
+cups-1.7.5/templates/ru/printer-deleted.tmpl
+cups-1.7.5/templates/ru/printer-jobs-header.tmpl
+cups-1.7.5/templates/ru/printer-modified.tmpl
+cups-1.7.5/templates/ru/printer-purge.tmpl
+cups-1.7.5/templates/ru/printer-reject.tmpl
+cups-1.7.5/templates/ru/printer-start.tmpl
+cups-1.7.5/templates/ru/printer-stop.tmpl
+cups-1.7.5/templates/ru/printer.tmpl
+cups-1.7.5/templates/ru/printers-header.tmpl
+cups-1.7.5/templates/ru/printers.tmpl
+cups-1.7.5/templates/ru/restart.tmpl
+cups-1.7.5/templates/ru/samba-export.tmpl
+cups-1.7.5/templates/ru/samba-exported.tmpl
+cups-1.7.5/templates/ru/search.tmpl
+cups-1.7.5/templates/ru/set-printer-options-header.tmpl
+cups-1.7.5/templates/ru/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/ru/subscription-added.tmpl
+cups-1.7.5/templates/ru/subscription-canceled.tmpl
+cups-1.7.5/templates/ru/test-page.tmpl
+cups-1.7.5/templates/ru/trailer.tmpl
+cups-1.7.5/templates/ru/users.tmpl
+cups-1.7.5/templates/pt_BR/add-class.tmpl
+cups-1.7.5/templates/pt_BR/add-printer.tmpl
+cups-1.7.5/templates/pt_BR/add-rss-subscription.tmpl
+cups-1.7.5/templates/pt_BR/admin.tmpl
+cups-1.7.5/templates/pt_BR/choose-device.tmpl
+cups-1.7.5/templates/pt_BR/choose-make.tmpl
+cups-1.7.5/templates/pt_BR/choose-model.tmpl
+cups-1.7.5/templates/pt_BR/choose-serial.tmpl
+cups-1.7.5/templates/pt_BR/choose-uri.tmpl
+cups-1.7.5/templates/pt_BR/class-added.tmpl
+cups-1.7.5/templates/pt_BR/class-confirm.tmpl
+cups-1.7.5/templates/pt_BR/class-deleted.tmpl
+cups-1.7.5/templates/pt_BR/class-jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/class-modified.tmpl
+cups-1.7.5/templates/pt_BR/class.tmpl
+cups-1.7.5/templates/pt_BR/classes-header.tmpl
+cups-1.7.5/templates/pt_BR/classes.tmpl
+cups-1.7.5/templates/pt_BR/command.tmpl
+cups-1.7.5/templates/pt_BR/edit-config.tmpl
+cups-1.7.5/templates/pt_BR/error-op.tmpl
+cups-1.7.5/templates/pt_BR/error.tmpl
+cups-1.7.5/templates/pt_BR/header.tmpl.in
+cups-1.7.5/templates/pt_BR/help-header.tmpl
+cups-1.7.5/templates/pt_BR/job-cancel.tmpl
+cups-1.7.5/templates/pt_BR/job-hold.tmpl
+cups-1.7.5/templates/pt_BR/job-move.tmpl
+cups-1.7.5/templates/pt_BR/job-moved.tmpl
+cups-1.7.5/templates/pt_BR/job-release.tmpl
+cups-1.7.5/templates/pt_BR/job-restart.tmpl
+cups-1.7.5/templates/pt_BR/jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/jobs.tmpl
+cups-1.7.5/templates/pt_BR/list-available-printers.tmpl
+cups-1.7.5/templates/pt_BR/modify-class.tmpl
+cups-1.7.5/templates/pt_BR/modify-printer.tmpl
+cups-1.7.5/templates/pt_BR/norestart.tmpl
+cups-1.7.5/templates/pt_BR/option-boolean.tmpl
+cups-1.7.5/templates/pt_BR/option-conflict.tmpl
+cups-1.7.5/templates/pt_BR/option-header.tmpl
+cups-1.7.5/templates/pt_BR/option-pickmany.tmpl
+cups-1.7.5/templates/pt_BR/option-pickone.tmpl
+cups-1.7.5/templates/pt_BR/option-trailer.tmpl
+cups-1.7.5/templates/pt_BR/pager.tmpl
+cups-1.7.5/templates/pt_BR/printer-accept.tmpl
+cups-1.7.5/templates/pt_BR/printer-added.tmpl
+cups-1.7.5/templates/pt_BR/printer-configured.tmpl
+cups-1.7.5/templates/pt_BR/printer-confirm.tmpl
+cups-1.7.5/templates/pt_BR/printer-default.tmpl
+cups-1.7.5/templates/pt_BR/printer-deleted.tmpl
+cups-1.7.5/templates/pt_BR/printer-jobs-header.tmpl
+cups-1.7.5/templates/pt_BR/printer-modified.tmpl
+cups-1.7.5/templates/pt_BR/printer-purge.tmpl
+cups-1.7.5/templates/pt_BR/printer-reject.tmpl
+cups-1.7.5/templates/pt_BR/printer-start.tmpl
+cups-1.7.5/templates/pt_BR/printer-stop.tmpl
+cups-1.7.5/templates/pt_BR/printer.tmpl
+cups-1.7.5/templates/pt_BR/printers-header.tmpl
+cups-1.7.5/templates/pt_BR/printers.tmpl
+cups-1.7.5/templates/pt_BR/restart.tmpl
+cups-1.7.5/templates/pt_BR/samba-export.tmpl
+cups-1.7.5/templates/pt_BR/samba-exported.tmpl
+cups-1.7.5/templates/pt_BR/search.tmpl
+cups-1.7.5/templates/pt_BR/set-printer-options-header.tmpl
+cups-1.7.5/templates/pt_BR/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/pt_BR/subscription-added.tmpl
+cups-1.7.5/templates/pt_BR/subscription-canceled.tmpl
+cups-1.7.5/templates/pt_BR/test-page.tmpl
+cups-1.7.5/templates/pt_BR/trailer.tmpl
+cups-1.7.5/templates/pt_BR/users.tmpl
+cups-1.7.5/templates/ja/add-class.tmpl
+cups-1.7.5/templates/ja/add-printer.tmpl
+cups-1.7.5/templates/ja/add-rss-subscription.tmpl
+cups-1.7.5/templates/ja/admin.tmpl
+cups-1.7.5/templates/ja/choose-device.tmpl
+cups-1.7.5/templates/ja/choose-make.tmpl
+cups-1.7.5/templates/ja/choose-model.tmpl
+cups-1.7.5/templates/ja/choose-serial.tmpl
+cups-1.7.5/templates/ja/choose-uri.tmpl
+cups-1.7.5/templates/ja/class-added.tmpl
+cups-1.7.5/templates/ja/class-confirm.tmpl
+cups-1.7.5/templates/ja/class-deleted.tmpl
+cups-1.7.5/templates/ja/class-jobs-header.tmpl
+cups-1.7.5/templates/ja/class-modified.tmpl
+cups-1.7.5/templates/ja/class.tmpl
+cups-1.7.5/templates/ja/classes-header.tmpl
+cups-1.7.5/templates/ja/classes.tmpl
+cups-1.7.5/templates/ja/command.tmpl
+cups-1.7.5/templates/ja/edit-config.tmpl
+cups-1.7.5/templates/ja/error-op.tmpl
+cups-1.7.5/templates/ja/error.tmpl
+cups-1.7.5/templates/ja/header.tmpl.in
+cups-1.7.5/templates/ja/help-header.tmpl
+cups-1.7.5/templates/ja/help-printable.tmpl
+cups-1.7.5/templates/ja/help-trailer.tmpl
+cups-1.7.5/templates/ja/job-cancel.tmpl
+cups-1.7.5/templates/ja/job-hold.tmpl
+cups-1.7.5/templates/ja/job-move.tmpl
+cups-1.7.5/templates/ja/job-moved.tmpl
+cups-1.7.5/templates/ja/job-release.tmpl
+cups-1.7.5/templates/ja/job-restart.tmpl
+cups-1.7.5/templates/ja/jobs-header.tmpl
+cups-1.7.5/templates/ja/jobs.tmpl
+cups-1.7.5/templates/ja/list-available-printers.tmpl
+cups-1.7.5/templates/ja/modify-class.tmpl
+cups-1.7.5/templates/ja/modify-printer.tmpl
+cups-1.7.5/templates/ja/norestart.tmpl
+cups-1.7.5/templates/ja/option-boolean.tmpl
+cups-1.7.5/templates/ja/option-conflict.tmpl
+cups-1.7.5/templates/ja/option-header.tmpl
+cups-1.7.5/templates/ja/option-pickmany.tmpl
+cups-1.7.5/templates/ja/option-pickone.tmpl
+cups-1.7.5/templates/ja/option-trailer.tmpl
+cups-1.7.5/templates/ja/pager.tmpl
+cups-1.7.5/templates/ja/printer-accept.tmpl
+cups-1.7.5/templates/ja/printer-added.tmpl
+cups-1.7.5/templates/ja/printer-configured.tmpl
+cups-1.7.5/templates/ja/printer-confirm.tmpl
+cups-1.7.5/templates/ja/printer-default.tmpl
+cups-1.7.5/templates/ja/printer-deleted.tmpl
+cups-1.7.5/templates/ja/printer-jobs-header.tmpl
+cups-1.7.5/templates/ja/printer-modified.tmpl
+cups-1.7.5/templates/ja/printer-purge.tmpl
+cups-1.7.5/templates/ja/printer-reject.tmpl
+cups-1.7.5/templates/ja/printer-start.tmpl
+cups-1.7.5/templates/ja/printer-stop.tmpl
+cups-1.7.5/templates/ja/printer.tmpl
+cups-1.7.5/templates/ja/printers-header.tmpl
+cups-1.7.5/templates/ja/printers.tmpl
+cups-1.7.5/templates/ja/restart.tmpl
+cups-1.7.5/templates/ja/samba-export.tmpl
+cups-1.7.5/templates/ja/samba-exported.tmpl
+cups-1.7.5/templates/ja/search.tmpl
+cups-1.7.5/templates/ja/set-printer-options-header.tmpl
+cups-1.7.5/templates/ja/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/ja/subscription-added.tmpl
+cups-1.7.5/templates/ja/subscription-canceled.tmpl
+cups-1.7.5/templates/ja/test-page.tmpl
+cups-1.7.5/templates/ja/trailer.tmpl
+cups-1.7.5/templates/ja/users.tmpl
+cups-1.7.5/templates/it/add-class.tmpl
+cups-1.7.5/templates/it/add-printer.tmpl
+cups-1.7.5/templates/it/add-rss-subscription.tmpl
+cups-1.7.5/templates/it/admin.tmpl
+cups-1.7.5/templates/it/choose-device.tmpl
+cups-1.7.5/templates/it/choose-make.tmpl
+cups-1.7.5/templates/it/choose-model.tmpl
+cups-1.7.5/templates/it/choose-serial.tmpl
+cups-1.7.5/templates/it/choose-uri.tmpl
+cups-1.7.5/templates/it/class-added.tmpl
+cups-1.7.5/templates/it/class-confirm.tmpl
+cups-1.7.5/templates/it/class-deleted.tmpl
+cups-1.7.5/templates/it/class-jobs-header.tmpl
+cups-1.7.5/templates/it/class-modified.tmpl
+cups-1.7.5/templates/it/class.tmpl
+cups-1.7.5/templates/it/classes-header.tmpl
+cups-1.7.5/templates/it/classes.tmpl
+cups-1.7.5/templates/it/command.tmpl
+cups-1.7.5/templates/it/edit-config.tmpl
+cups-1.7.5/templates/it/error-op.tmpl
+cups-1.7.5/templates/it/error.tmpl
+cups-1.7.5/templates/it/header.tmpl.in
+cups-1.7.5/templates/it/help-header.tmpl
+cups-1.7.5/templates/it/help-printable.tmpl
+cups-1.7.5/templates/it/help-trailer.tmpl
+cups-1.7.5/templates/it/job-cancel.tmpl
+cups-1.7.5/templates/it/job-hold.tmpl
+cups-1.7.5/templates/it/job-move.tmpl
+cups-1.7.5/templates/it/job-moved.tmpl
+cups-1.7.5/templates/it/job-release.tmpl
+cups-1.7.5/templates/it/job-restart.tmpl
+cups-1.7.5/templates/it/jobs-header.tmpl
+cups-1.7.5/templates/it/jobs.tmpl
+cups-1.7.5/templates/it/list-available-printers.tmpl
+cups-1.7.5/templates/it/modify-class.tmpl
+cups-1.7.5/templates/it/modify-printer.tmpl
+cups-1.7.5/templates/it/norestart.tmpl
+cups-1.7.5/templates/it/option-boolean.tmpl
+cups-1.7.5/templates/it/option-conflict.tmpl
+cups-1.7.5/templates/it/option-header.tmpl
+cups-1.7.5/templates/it/option-pickmany.tmpl
+cups-1.7.5/templates/it/option-pickone.tmpl
+cups-1.7.5/templates/it/option-trailer.tmpl
+cups-1.7.5/templates/it/pager.tmpl
+cups-1.7.5/templates/it/printer-accept.tmpl
+cups-1.7.5/templates/it/printer-added.tmpl
+cups-1.7.5/templates/it/printer-configured.tmpl
+cups-1.7.5/templates/it/printer-confirm.tmpl
+cups-1.7.5/templates/it/printer-default.tmpl
+cups-1.7.5/templates/it/printer-deleted.tmpl
+cups-1.7.5/templates/it/printer-jobs-header.tmpl
+cups-1.7.5/templates/it/printer-modified.tmpl
+cups-1.7.5/templates/it/printer-purge.tmpl
+cups-1.7.5/templates/it/printer-reject.tmpl
+cups-1.7.5/templates/it/printer-start.tmpl
+cups-1.7.5/templates/it/printer-stop.tmpl
+cups-1.7.5/templates/it/printer.tmpl
+cups-1.7.5/templates/it/printers-header.tmpl
+cups-1.7.5/templates/it/printers.tmpl
+cups-1.7.5/templates/it/restart.tmpl
+cups-1.7.5/templates/it/samba-export.tmpl
+cups-1.7.5/templates/it/samba-exported.tmpl
+cups-1.7.5/templates/it/search.tmpl
+cups-1.7.5/templates/it/set-printer-options-header.tmpl
+cups-1.7.5/templates/it/set-printer-options-trailer.tmpl
+cups-1.7.5/templates/it/subscription-added.tmpl
+cups-1.7.5/templates/it/subscription-canceled.tmpl
+cups-1.7.5/templates/it/test-page.tmpl
+cups-1.7.5/templates/it/trailer.tmpl
+cups-1.7.5/templates/it/users.tmpl
+cups-1.7.5/templates/fr/add-class.tmpl
+cups-1.7.5/templates/fr/add-printer.tmpl
+cups-1.7.5/templates/fr/add-rss-subscription.tmpl
+cups-1.7.5/templates/fr/admin.tmpl
+cups-1.7.5/templates/fr/choose-device.tmpl
+cups-1.7.5/templates/fr/choose-make.tmpl
+cups-1.7.5/templates/fr/choose-model.tmpl
+cups-1.7.5/templates/fr/choose-serial.tmpl
+cups-1.7.5/templates/fr/choose-uri.tmpl
+cups-1.7.5/templates/fr/class-added.tmpl
+cups-1.7.5/templates/fr/class-confirm.tmpl
+cups-1.7.5/templates/fr/class-deleted.tmpl
+cups-1.7.5/templates/fr/class-jobs-header.tmpl
+cups-1.7.5/templates/fr/class-modified.tmpl
+cups-1.7.5/templates/fr/class.tmpl
+cups-1.7.5/templates/fr/classes-header.tmpl
+cups-1.7.5/templates/fr/classes.tmpl
+cups-1.7.5/templates/fr/command.tmpl
+cups-1.7.5/templates/fr/edit-config.tmpl
+cups-1.7.5/templates/fr/error-op.tmpl
+cups-1.7.5/templates/fr/error.tmpl
+cups-1.7.5/templates/fr/header.tmpl.in
+cups-1.7.5/templates/fr/help-header.tmpl
+cups-1.7.5/templates/fr/help-printable.tmpl
+cups-1.7.5/templates/fr/help-trailer.tmpl
+cups-1.7.5/templates/fr/job-cancel.tmpl
+cups-1.7.5/templates/fr/job-hold.tmpl
+cups-1.7.5/templates/fr/job-move.tmpl
+cups-1.7.5/templates/fr/job-moved.tmpl
+cups-1.7.5/templates/fr/job-release.tmpl
+cups-1.7.5/templates/fr/job-restart.tmpl
+cups-1.7.5/templates/fr/jobs-header.tmpl
+cups-1.7.5/templates/fr/jobs.tmpl
+cups-1.7.5/templates/fr/list-available-printers.tmpl
+cups-1.7.5/templates/fr/modify-class.tmpl
+cups-1.7.5/templates/fr/modify-printer.tmpl
+cups-1.7.5/templates/fr/norestart.tmpl
+cups-1.7.5/templates/fr/option-boolean.tmpl
+cups-1.7.5/templates/fr/option-conflict.tmpl
+cups-1.7.5/templates/fr/option-header.tmpl
+cups-1.7.5/templates/fr/option-pickmany.tmpl
+cups-1.7.5/templates/fr/option-pickone.tmpl
+cups-1.7.5/templates/fr/option-trailer.tmpl
+cups-1.7.5/templates/fr/pager.tmpl
+cups-1.7.5/templates/fr/printer-accept.tmpl
+cups-1.7.5/templates/fr/printer-added.tmpl
+cups-1.7.5/temp--output truncated--
+2026-07-21 00:53:35,477 - 492577 - INFO - CUPS reinstall successful on i-03878907b98ea0469
+2026-07-21 00:53:35,631 - 492577 - INFO - Sent app_validation.py to i-03878907b98ea0469 (command_id: 93c6b81d-45ec-4912-b04e-541431599259)
+2026-07-21 00:54:05,734 - 492577 - INFO - app_validation.py output for i-03878907b98ea0469:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:53:35.902159
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.29
+Hostname | ip-172-28-25-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 68.8G | 171.1G | 28% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | upshab_bre, upshab_1ccd, upshab_2ccd, upshab_dwa, upshab_event, upshab_ftp, upshab_harp, upshab_rpt, upshab_jqgrid, upshab_tiad, upshab_wsq, upshab_1wld, upshab_2wld, upshab_habha
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+upshab_bre | /data/batchapp/softeon/upshchabuat/breruleenginedaemon
+upshab_1ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon1
+upshab_2ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon2
+upshab_dwa | /data/batchapp/softeon/upshchabuat/downloaddaemon
+upshab_event | /data/batchapp/softeon/upshchabuat/eventdaemon
+upshab_ftp | /data/batchapp/softeon/upshchabuat/ftpdaemon
+upshab_harp | /data/batchapp/softeon/upshchabuat/hardallocationdaemon
+upshab_rpt | /data/batchapp/softeon/upshchabuat/reportdaemon
+upshab_jqgrid | /data/batchapp/softeon/upshchabuat/reportjqgridexportdaemon
+upshab_tiad | /data/batchapp/softeon/upshchabuat/taskinvallocationdaemon
+upshab_wsq | /data/batchapp/softeon/upshchabuat/wsqdaemon
+upshab_1wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon1
+upshab_2wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon2
+upshab_habha | /data/batchapp/softeon/upshchabuat/habhardallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4252 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.29:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4178 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.29:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3873 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.29:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:53:36.817858
+==============================================================================
+
+2026-07-21 00:54:05,734 - 492577 - ERROR - app_validation.py errors for i-03878907b98ea0469:
+
+2026-07-21 00:54:06,053 - 492577 - INFO - Health monitor crontab enabled on all instances
+2026-07-21 00:54:06,054 - 492577 - INFO - Green after restart - cron enabled for i-03878907b98ea0469
+2026-07-21 00:54:06,140 - 492577 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:54:06,140 - 492577 - INFO - GREEN re-validation mail sent for i-03878907b98ea0469
+2026-07-21 00:56:50,830 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: bac9f58f-b884-49e3-8c7f-9fcc84d81e42)
+2026-07-21 00:57:20,959 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:56:51.098707
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.8G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:56:52.099592
+==============================================================================
+
+2026-07-21 00:57:20,960 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 00:57:20,961 - 492577 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry2-2026-07-21-00-57-20-961.log
+2026-07-21 00:57:21,016 - 492577 - INFO - [Retry-2] RED for UPSHC-HAB UAT Application Server and  Batch Server - 2 (172.28.25.59), retrying... (Total waited: 600s)
+2026-07-21 00:57:21,017 - 492577 - INFO - [Retry-3] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 01:02:21,203 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: b1bc36bd-067d-4d90-9e28-2c8afefe868f)
+2026-07-21 01:02:51,289 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:02:21.474290
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.7G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:02:22.210880
+==============================================================================
+
+2026-07-21 01:02:51,290 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 01:02:51,291 - 492577 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry3-2026-07-21-01-02-51-291.log
+2026-07-21 01:02:51,348 - 492577 - INFO - [Retry-3] RED for UPSHC-HAB UAT Application Server and  Batch Server - 2 (172.28.25.59), retrying... (Total waited: 900s)
+2026-07-21 01:02:51,348 - 492577 - INFO - [Retry-4] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 01:07:51,753 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: f685c5b8-4730-4984-8a40-816b9b0fc548)
+2026-07-21 01:08:21,863 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:07:52.006691
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 42.8G | 197.1G | 17% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:07:53.340533
+==============================================================================
+
+2026-07-21 01:08:21,863 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 01:08:21,865 - 492577 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry4-2026-07-21-01-08-21-864.log
+2026-07-21 01:08:21,921 - 492577 - INFO - [Retry-4] RED for UPSHC-HAB UAT Application Server and  Batch Server - 2 (172.28.25.59), retrying... (Total waited: 1200s)
+2026-07-21 01:08:21,921 - 492577 - INFO - [Retry-5] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 01:13:22,210 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: ad9513c1-9076-4852-9711-d7ad3ddbc8ae)
+2026-07-21 01:13:52,306 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:13:22.475604
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 40.4G | 199.4G | 16% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:13:23.478098
+==============================================================================
+
+2026-07-21 01:13:52,306 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 01:13:52,308 - 492577 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry5-2026-07-21-01-13-52-307.log
+2026-07-21 01:13:52,364 - 492577 - INFO - [Retry-5] RED for UPSHC-HAB UAT Application Server and  Batch Server - 2 (172.28.25.59), retrying... (Total waited: 1500s)
+2026-07-21 01:13:52,364 - 492577 - INFO - [Retry-6] Waiting 300s for i-0e87970bfe3028a6d...
+2026-07-21 01:18:52,604 - 492577 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: 37377c33-f4af-4512-a161-c0adb8bd8173)
+2026-07-21 01:19:22,704 - 492577 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:18:52.883332
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 38.0G | 201.8G | 15% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 123.1G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 123.1G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 76
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4258 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4281 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3899 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:18:53.639620
+==============================================================================
+
+2026-07-21 01:19:22,704 - 492577 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-07-21 01:19:22,706 - 492577 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-Retry6-2026-07-21-01-19-22-705.log
+2026-07-21 01:19:23,057 - 492577 - INFO - Health monitor crontab enabled on all instances
+2026-07-21 01:19:23,058 - 492577 - WARNING - [Retry] Timeout - auto cron enabled for i-0e87970bfe3028a6d

@@ -1,0 +1,154 @@
+2026-04-21 00:05:01,823 - 990151 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-21 00:05:01,823 - 990151 - INFO - Script Start Time: 2026-04-21 00:05:01
+2026-04-21 00:05:02,497 - 990151 - INFO - Instance(s) selected for Patching: {'i-08a236b6682eed07d': '172.28.25.61'}
+2026-04-21 00:05:02,572 - 990151 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-21 00:05:02,573 - 990151 - INFO - Now patching instances at: 2026-04-21 00:05:02
+2026-04-21 00:05:02,658 - 990151 - INFO - Sending patch command to instance i-08a236b6682eed07d
+2026-04-21 00:05:02,826 - 990151 - INFO - Command sent successfully to instance i-08a236b6682eed07d. Command ID: 79f5b528-5f23-4e73-9ac0-3d898e9f0042
+2026-04-21 00:14:35,224 - 990151 - INFO - All patches applied successfully.
+2026-04-21 00:14:35,225 - 990151 - INFO - Patching end time: 2026-04-21 00:14:35
+2026-04-21 00:14:35,225 - 990151 - INFO - Patch Elapsed time: 0:09:32.652287
+2026-04-21 00:14:35,302 - 990151 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-21 00:14:35,302 - 990151 - INFO - Confirmed - services are stopped
+2026-04-21 00:14:54,584 - 990151 - INFO - Discovered TG map: {'i-08a236b6682eed07d': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-RF/8a1c91ebb142aa7c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WES/0f0648a442a2ed76', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS/68d5102beb740df5', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-Desktop/de77b7dfdf32c1f7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS-EXT/e73c2b4cee12a8f4']}
+2026-04-21 00:14:55,004 - 990151 - INFO - Sent app_validation.py to i-08a236b6682eed07d (command_id: b1d762c1-f0e6-4a12-8f61-f22fc7dddaa1)
+2026-04-21 00:15:25,106 - 990151 - INFO - app_validation.py output for i-08a236b6682eed07d:
+
+==============================================================================
+Server Availability Check Started | 2026-04-21 04:14:55.405922
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.61
+Hostname | ip-172-28-25-61
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 106.5G | 133.3G | 44% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshcvac | 0B | 129.7G | 0B | 0% | /data2/shared/softeon/upshcvac
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 129.7G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshcvac | /data2/shared/softeon/upshcvac | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.61:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.61 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | hcvac_arcd, hcvac_bre, hcvac_1ccd, hcvac_2ccd, hcvac_dwa, hcvac_event, hcvac_ftp, hcvac_harp, hcvac_rpt, hcvac_jqgrid, hcvac_tiad, hcvac_1wld, hcvac_2wld, hcvac_wsq, hcvac_sdrpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+hcvac_arcd | /data/batchapp/softeon/upshcvacuat/autorouteconversiondaemon
+hcvac_bre | /data/batchapp/softeon/upshcvacuat/breruleenginedaemon
+hcvac_1ccd | /data/batchapp/softeon/upshcvacuat/clustercreationdaemon1
+hcvac_2ccd | /data/batchapp/softeon/upshcvacuat/clustercreationdaemon2
+hcvac_dwa | /data/batchapp/softeon/upshcvacuat/downloaddaemon
+hcvac_event | /data/batchapp/softeon/upshcvacuat/eventdaemon
+hcvac_ftp | /data/batchapp/softeon/upshcvacuat/ftpdaemon
+hcvac_harp | /data/batchapp/softeon/upshcvacuat/hardallocationdaemon
+hcvac_rpt | /data/batchapp/softeon/upshcvacuat/reportdaemon
+hcvac_jqgrid | /data/batchapp/softeon/upshcvacuat/reportjqgridexportdaemon
+hcvac_tiad | /data/batchapp/softeon/upshcvacuat/taskinvallocationdaemon
+hcvac_1wld | /data/batchapp/softeon/upshcvacuat/wavelaunchdaemon
+hcvac_2wld | /data/batchapp/softeon/upshcvacuat/wavelaunchdaemon2
+hcvac_wsq | /data/batchapp/softeon/upshcvacuat/wsqdaemon
+hcvac_sdrpt | /data/batchapp/softeon/upshcvacuat/shippingdocsreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+845122 | upshcvacrfuat | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.25.61:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfuat/standalone
+844994 | upshcvacuat | jboss730eap | upshcvac_jb73 | 8080 | 172.28.25.61:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacuat/standalone
+173150 | upshcvacwesuat | jboss730eap | upshcvacwes_jb7 | 8082 | 172.28.25.61:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-21 04:14:56.834621
+==============================================================================
+
+2026-04-21 00:15:25,106 - 990151 - ERROR - app_validation.py errors for i-08a236b6682eed07d:
+
+2026-04-21 00:15:25,108 - 990151 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-21/UPSHC-VAC-UAT/172.28.25.61/172.28.25.61-BeforePatching-2026-04-21-00-15-25-107.log
+2026-04-21 00:15:25,108 - 990151 - INFO - Deregistering i-08a236b6682eed07d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-RF/8a1c91ebb142aa7c
+2026-04-21 00:15:25,180 - 990151 - INFO - Deregistering i-08a236b6682eed07d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WES/0f0648a442a2ed76
+2026-04-21 00:15:25,218 - 990151 - INFO - Deregistering i-08a236b6682eed07d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS/68d5102beb740df5
+2026-04-21 00:15:25,274 - 990151 - INFO - Deregistering i-08a236b6682eed07d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-Desktop/de77b7dfdf32c1f7
+2026-04-21 00:15:25,320 - 990151 - INFO - Deregistering i-08a236b6682eed07d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS-EXT/e73c2b4cee12a8f4
+2026-04-21 00:15:25,373 - 990151 - INFO - Stopping EC2 instance: i-08a236b6682eed07d at 2026-04-21 00:15:25
+2026-04-21 00:16:26,359 - 990151 - INFO - Instance i-08a236b6682eed07d stopped successfully.
+2026-04-21 00:16:26,493 - 990151 - INFO - Stopped i-08a236b6682eed07d in 0:01:01.119175
+2026-04-21 00:16:26,493 - 990151 - INFO - Starting EC2 instance: i-08a236b6682eed07d
+2026-04-21 00:16:42,382 - 990151 - INFO - Instance i-08a236b6682eed07d started successfully.
+2026-04-21 00:16:42,382 - 990151 - INFO - Waiting 50 seconds for SSM agent to be ready on i-08a236b6682eed07d...
+2026-04-21 00:17:32,416 - 990151 - INFO - Registering i-08a236b6682eed07d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-RF/8a1c91ebb142aa7c
+2026-04-21 00:17:32,601 - 990151 - INFO - Registering i-08a236b6682eed07d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WES/0f0648a442a2ed76
+2026-04-21 00:17:32,742 - 990151 - INFO - Registering i-08a236b6682eed07d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS/68d5102beb740df5
+2026-04-21 00:17:32,874 - 990151 - INFO - Registering i-08a236b6682eed07d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-Desktop/de77b7dfdf32c1f7
+2026-04-21 00:17:33,022 - 990151 - INFO - Registering i-08a236b6682eed07d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS-EXT/e73c2b4cee12a8f4
+2026-04-21 00:22:33,726 - 990151 - WARNING - i-08a236b6682eed07d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-RF/8a1c91ebb142aa7c after timeout.
+2026-04-21 00:27:34,396 - 990151 - WARNING - i-08a236b6682eed07d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WES/0f0648a442a2ed76 after timeout.
+2026-04-21 00:32:35,066 - 990151 - WARNING - i-08a236b6682eed07d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-WS/68d5102beb740df5 after timeout.
+2026-04-21 00:37:35,703 - 990151 - WARNING - i-08a236b6682eed07d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-UAT-Desktop/de77b7dfdf32c1f7 after timeout.
+2026-04-21 00:38:05,911 - 990151 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-21 00:38:05,912 - 990151 - ERROR - Aborting workflow: i-08a236b6682eed07d is not healthy after restart.
+2026-04-21 00:38:05,914 - 990151 - INFO - Restart Total time: 0:23:30.485374
+2026-04-21 00:38:05,914 - 990151 - INFO - Auto-confirmed services are restarted
+2026-04-21 00:38:05,914 - 990151 - INFO - Confirmed - services are started
+2026-04-21 00:38:06,062 - 990151 - INFO - The following instances have failed the patch: []
+2026-04-21 00:38:06,063 - 990151 - INFO - No instances have failed the patch.
+2026-04-21 00:38:06,063 - 990151 - INFO - Total Patch Process time: 0:33:04.239327
+2026-04-21 00:39:06,634 - 990151 - INFO - Log file ./logs/patching_2026-04-21_UPSHC-VAC-UAT.log uploaded to s3://q2-2026-aws-security-patching/UPSHC-VAC-UAT_Patch/2026-04-21/patching_2026-04-21_UPSHC-VAC-UAT.log

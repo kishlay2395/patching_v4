@@ -1,0 +1,465 @@
+2026-07-16 02:05:02,959 - 198030 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-16 02:05:02,960 - 198030 - INFO - Script Start Time: 2026-07-16 02:05:02
+2026-07-16 02:05:03,269 - 198030 - INFO - Instance(s) selected for Patching: {'i-0dff8ad82aa9571bd': '10.0.10.208', 'i-004c31574ae8b0e67': '10.0.10.237'}
+2026-07-16 02:05:03,347 - 198030 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-16 02:05:03,347 - 198030 - INFO - Now patching instances at: 2026-07-16 02:05:03
+2026-07-16 02:05:03,529 - 198030 - INFO - Sent app_validation.py to i-004c31574ae8b0e67 (command_id: 5f1e9c12-088a-4a4f-9376-c25c9da366db)
+2026-07-16 02:05:33,783 - 198030 - INFO - app_validation.py output for i-004c31574ae8b0e67:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:05:03.852503
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.237
+Hostname | ip-10-0-10-237
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 81.0G | 158.9G | 33% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.10.237:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.237 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4004966 | sclsportal | jboss800eap | sclsprtl_jb80ep | 8083 | 10.0.10.237:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsportal/standalone
+4004398 | sclsprod | jboss800eap | sclsprd_jb80eap | 8080 | 10.0.10.237:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsprod/standalone
+4004698 | sclsrfprod | jboss800eap | sclsrfprd_jb80e | 8081 | 10.0.10.237:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsrfprod/standalone
+4004403 | sclswsprod | jboss800eap | sclswsprd_jb80p | 8082 | 10.0.10.237:8082 | Down | 403 | Disabled | /data/app/jboss800eap/softeon/sclswsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-16 02:05:33,783 - 198030 - ERROR - app_validation.py errors for i-004c31574ae8b0e67:
+Traceback (most recent call last):
+  File "<stdin>", line 874, in <module>
+  File "<stdin>", line 865, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-16 02:05:33,784 - 198030 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.237/10.0.10.237-BeforePatching-2026-07-16-02-05-33-784.log
+2026-07-16 02:05:33,966 - 198030 - INFO - Sent app_validation.py to i-0dff8ad82aa9571bd (command_id: 55c07839-4d36-4a09-ade9-8094ccf3c100)
+2026-07-16 02:06:04,129 - 198030 - INFO - app_validation.py output for i-0dff8ad82aa9571bd:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:05:34.333068
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.208
+Hostname | ip-10-0-10-208
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 67.9G | 172.0G | 28% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.10.208:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.208 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2068452 | sclsportal | jboss800eap | sclsprtl_jb80ep | 8083 | 10.0.10.208:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsportal/standalone
+2067661 | sclsprod | jboss800eap | sclsprd_jb80eap | 8080 | 10.0.10.208:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsprod/standalone
+2068426 | sclsrfprod | jboss800eap | sclsrfprd_jb80e | 8081 | 10.0.10.208:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsrfprod/standalone
+2068288 | sclswsprod | jboss800eap | sclswsprd_jb80p | 8082 | 10.0.10.208:8082 | Down | 403 | Disabled | /data/app/jboss800eap/softeon/sclswsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-16 02:06:04,129 - 198030 - ERROR - app_validation.py errors for i-0dff8ad82aa9571bd:
+Traceback (most recent call last):
+  File "<stdin>", line 874, in <module>
+  File "<stdin>", line 865, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-16 02:06:04,130 - 198030 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.208/10.0.10.208-BeforePatching-2026-07-16-02-06-04-130.log
+2026-07-16 02:06:09,563 - 198030 - INFO - i-004c31574ae8b0e67: Cron was active = False
+2026-07-16 02:06:14,787 - 198030 - INFO - i-0dff8ad82aa9571bd: Cron was active = False
+2026-07-16 02:06:14,787 - 198030 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-16 02:06:14,871 - 198030 - INFO - Sending patch command to instance i-004c31574ae8b0e67
+2026-07-16 02:06:14,986 - 198030 - INFO - Command sent successfully to instance i-004c31574ae8b0e67. Command ID: 534fcda9-6acc-4f1b-927a-95e65e3b2818
+2026-07-16 02:06:15,137 - 198030 - INFO - Sending patch command to instance i-0dff8ad82aa9571bd
+2026-07-16 02:06:15,246 - 198030 - INFO - Command sent successfully to instance i-0dff8ad82aa9571bd. Command ID: a7e4da14-d3e0-4491-bd7c-f204de18ef43
+2026-07-16 02:13:47,517 - 198030 - INFO - All patches applied successfully.
+2026-07-16 02:13:47,518 - 198030 - INFO - Patching end time: 2026-07-16 02:13:47
+2026-07-16 02:13:47,518 - 198030 - INFO - Patch Elapsed time: 0:08:44.170806
+2026-07-16 02:13:47,586 - 198030 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-16 02:13:47,587 - 198030 - INFO - Confirmed - services are stopped
+2026-07-16 02:14:08,365 - 198030 - INFO - Discovered TG map: {'i-004c31574ae8b0e67': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237'], 'i-0dff8ad82aa9571bd': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237']}
+2026-07-16 02:14:08,541 - 198030 - INFO - Deregistering i-004c31574ae8b0e67 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019
+2026-07-16 02:14:08,608 - 198030 - INFO - Deregistering i-004c31574ae8b0e67 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68
+2026-07-16 02:14:08,649 - 198030 - INFO - Deregistering i-004c31574ae8b0e67 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914
+2026-07-16 02:14:08,714 - 198030 - INFO - Deregistering i-004c31574ae8b0e67 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237
+2026-07-16 02:14:08,761 - 198030 - INFO - Stopping EC2 instance: i-004c31574ae8b0e67 at 2026-07-16 02:14:08
+2026-07-16 02:15:24,833 - 198030 - INFO - Instance i-004c31574ae8b0e67 stopped successfully.
+2026-07-16 02:15:25,180 - 198030 - INFO - Stopped i-004c31574ae8b0e67 in 0:01:16.418637
+2026-07-16 02:15:25,181 - 198030 - INFO - Starting EC2 instance: i-004c31574ae8b0e67
+2026-07-16 02:15:41,003 - 198030 - INFO - Instance i-004c31574ae8b0e67 started successfully.
+2026-07-16 02:15:41,003 - 198030 - INFO - Waiting 100 seconds for SSM agent to be ready on i-004c31574ae8b0e67...
+2026-07-16 02:17:21,021 - 198030 - INFO - Registering i-004c31574ae8b0e67 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019
+2026-07-16 02:17:21,204 - 198030 - INFO - Registering i-004c31574ae8b0e67 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68
+2026-07-16 02:17:21,355 - 198030 - INFO - Registering i-004c31574ae8b0e67 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914
+2026-07-16 02:17:21,490 - 198030 - INFO - Registering i-004c31574ae8b0e67 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237
+2026-07-16 02:19:22,217 - 198030 - INFO - Sent app_validation.py to i-004c31574ae8b0e67 (command_id: 6cceaf75-ea1d-48ab-bf6b-abf8ee344213)
+2026-07-16 02:19:52,430 - 198030 - INFO - app_validation.py output for i-004c31574ae8b0e67:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:19:22.536357
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.237
+Hostname | ip-10-0-10-237
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 80.6G | 159.3G | 33% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.237:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.237 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4459 | sclsportal | jboss800eap | sclsprtl_jb80ep | 8083 | 10.0.10.237:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsportal/standalone
+5036 | sclsprod | jboss800eap | sclsprd_jb80eap | 8080 | 10.0.10.237:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsprod/standalone
+5043 | sclsrfprod | jboss800eap | sclsrfprd_jb80e | 8081 | 10.0.10.237:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsrfprod/standalone
+4536 | sclswsprod | jboss800eap | sclswsprd_jb80p | 8082 | 10.0.10.237:8082 | Down | 403 | Disabled | /data/app/jboss800eap/softeon/sclswsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-16 02:19:52,430 - 198030 - ERROR - app_validation.py errors for i-004c31574ae8b0e67:
+Traceback (most recent call last):
+  File "<stdin>", line 874, in <module>
+  File "<stdin>", line 865, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-16 02:19:52,432 - 198030 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.237/10.0.10.237-AfterPatching-2026-07-16-02-19-52-431.log
+2026-07-16 02:19:52,497 - 198030 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.237/10.0.10.237-Validation-details-2026-07-16-02-19-52-431.html
+2026-07-16 02:19:52,682 - 198030 - INFO - i-004c31574ae8b0e67: Cron was not active - skipping enable
+2026-07-16 02:19:52,757 - 198030 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-16 02:19:52,757 - 198030 - INFO - GREEN mail sent for i-004c31574ae8b0e67
+2026-07-16 02:19:53,011 - 198030 - INFO - Started i-004c31574ae8b0e67 in 0:04:27.830037
+2026-07-16 02:19:53,011 - 198030 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-16 02:21:53,043 - 198030 - INFO - Deregistering i-0dff8ad82aa9571bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019
+2026-07-16 02:21:53,111 - 198030 - INFO - Deregistering i-0dff8ad82aa9571bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68
+2026-07-16 02:21:53,157 - 198030 - INFO - Deregistering i-0dff8ad82aa9571bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914
+2026-07-16 02:21:53,201 - 198030 - INFO - Deregistering i-0dff8ad82aa9571bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237
+2026-07-16 02:21:53,243 - 198030 - INFO - Stopping EC2 instance: i-0dff8ad82aa9571bd at 2026-07-16 02:21:53
+2026-07-16 02:23:24,552 - 198030 - INFO - Instance i-0dff8ad82aa9571bd stopped successfully.
+2026-07-16 02:23:24,852 - 198030 - INFO - Stopped i-0dff8ad82aa9571bd in 0:01:31.609414
+2026-07-16 02:23:24,853 - 198030 - INFO - Starting EC2 instance: i-0dff8ad82aa9571bd
+2026-07-16 02:23:40,797 - 198030 - INFO - Instance i-0dff8ad82aa9571bd started successfully.
+2026-07-16 02:23:40,797 - 198030 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0dff8ad82aa9571bd...
+2026-07-16 02:25:20,897 - 198030 - INFO - Registering i-0dff8ad82aa9571bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Desktop/5f87e12b3bb1f019
+2026-07-16 02:25:21,120 - 198030 - INFO - Registering i-0dff8ad82aa9571bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-WS/0889d4e4c8f9ef68
+2026-07-16 02:25:21,252 - 198030 - INFO - Registering i-0dff8ad82aa9571bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-Portal/b78cecbc8eeee914
+2026-07-16 02:25:21,377 - 198030 - INFO - Registering i-0dff8ad82aa9571bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SCLS-PROD-RF/e62dbf63b0ee7237
+2026-07-16 02:27:22,080 - 198030 - INFO - Sent app_validation.py to i-0dff8ad82aa9571bd (command_id: 5faf6051-62df-425b-99c0-1eda7e3c97a2)
+2026-07-16 02:27:52,185 - 198030 - INFO - app_validation.py output for i-0dff8ad82aa9571bd:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:27:22.476658
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.208
+Hostname | ip-10-0-10-208
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 67.4G | 172.5G | 28% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.208:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.208 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4585 | sclsportal | jboss800eap | sclsprtl_jb80ep | 8083 | 10.0.10.208:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsportal/standalone
+5048 | sclsprod | jboss800eap | sclsprd_jb80eap | 8080 | 10.0.10.208:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsprod/standalone
+5091 | sclsrfprod | jboss800eap | sclsrfprd_jb80e | 8081 | 10.0.10.208:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/sclsrfprod/standalone
+4541 | sclswsprod | jboss800eap | sclswsprd_jb80p | 8082 | 10.0.10.208:8082 | Down | 403 | Disabled | /data/app/jboss800eap/softeon/sclswsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-16 02:27:52,186 - 198030 - ERROR - app_validation.py errors for i-0dff8ad82aa9571bd:
+Traceback (most recent call last):
+  File "<stdin>", line 874, in <module>
+  File "<stdin>", line 865, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-16 02:27:52,187 - 198030 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.208/10.0.10.208-AfterPatching-2026-07-16-02-27-52-187.log
+2026-07-16 02:27:52,239 - 198030 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-App/10.0.10.208/10.0.10.208-Validation-details-2026-07-16-02-27-52-187.html
+2026-07-16 02:27:52,540 - 198030 - INFO - i-0dff8ad82aa9571bd: Cron was not active - skipping enable
+2026-07-16 02:27:52,616 - 198030 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-16 02:27:52,616 - 198030 - INFO - GREEN mail sent for i-0dff8ad82aa9571bd
+2026-07-16 02:27:52,872 - 198030 - INFO - Started i-0dff8ad82aa9571bd in 0:04:28.019258
+2026-07-16 02:27:52,873 - 198030 - INFO - All instances processed.
+2026-07-16 02:27:52,877 - 198030 - INFO - Restart Total time: 0:14:05.154006
+2026-07-16 02:27:52,877 - 198030 - INFO - Auto-confirmed services are restarted
+2026-07-16 02:27:52,877 - 198030 - INFO - Confirmed - services are started
+2026-07-16 02:27:52,996 - 198030 - INFO - The following instances have failed the patch: []
+2026-07-16 02:27:52,996 - 198030 - INFO - No instances have failed the patch.
+2026-07-16 02:27:52,997 - 198030 - INFO - Total Patch Process time: 0:22:50.036241
+2026-07-16 02:28:53,452 - 198030 - INFO - Log file ./logs/patching_2026-07-16_SaddleCreek-scls-App.log uploaded to s3://q3-2026-aws-security-patching/SaddleCreek-scls-App_Patch/2026-07-16/patching_2026-07-16_SaddleCreek-scls-App.log

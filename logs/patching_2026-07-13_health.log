@@ -1,0 +1,391 @@
+2026-07-13 08:55:03,072 - 45658 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-13 08:55:03,072 - 45658 - INFO - Script Start Time: 2026-07-13 08:55:03
+2026-07-13 08:55:03,417 - 45658 - INFO - Instance(s) selected for Patching: {'i-0f5e72a889805011d': '172.31.3.20'}
+2026-07-13 08:55:03,487 - 45658 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 08:55:03,488 - 45658 - INFO - Now patching instances at: 2026-07-13 08:55:03
+2026-07-13 08:55:03,732 - 45658 - INFO - Sent app_validation.py to i-0f5e72a889805011d (command_id: 4435baf8-9a39-4b20-b0e7-ded0a410159f)
+2026-07-13 08:55:33,849 - 45658 - INFO - app_validation.py output for i-0f5e72a889805011d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 12:55:03.980598
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.3.20
+Hostname | ip-172-31-3-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 166.8G | 73.1G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.3.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.3.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | domsora_prls, domsora_cardt, domsora_dwa, domsora_event, domsora_gp, domsora_hold, domsora_omas, domsora_ord, domsora_opst, domsora_sch, domsora_1sch, domsora_src, domsora_srcth, domsora_inbq, domsora_wmsrl, domsora_wkfl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+domsora_prls | /data/batchapp/softeon/domsora261demo/PreReleaseDaemon
+domsora_cardt | /data/batchapp/softeon/domsora261demo/carrierdeterminationdaemon
+domsora_dwa | /data/batchapp/softeon/domsora261demo/downloaddaemon
+domsora_event | /data/batchapp/softeon/domsora261demo/eventdaemon
+domsora_gp | /data/batchapp/softeon/domsora261demo/genericdaemon
+domsora_hold | /data/batchapp/softeon/domsora261demo/holddaemon
+domsora_omas | /data/batchapp/softeon/domsora261demo/massupdatedaemon
+domsora_ord | /data/batchapp/softeon/domsora261demo/ordercreationdaemon
+domsora_opst | /data/batchapp/softeon/domsora261demo/orderpostdaemon
+domsora_sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon
+domsora_1sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon1
+domsora_src | /data/batchapp/softeon/domsora261demo/sourcingdaemon
+domsora_srcth | /data/batchapp/softeon/domsora261demo/sourcingthread
+domsora_inbq | /data/batchapp/softeon/domsora261demo/uploaddaemon
+domsora_wmsrl | /data/batchapp/softeon/domsora261demo/wmsreleasedaemon
+domsora_wkfl | /data/batchapp/softeon/domsora261demo/workflowdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5058 | domsora261demo | jboss800eap | domsora261_jb80 | 8087 | 172.31.3.20:8087 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/domsora261demo/standalone
+7104 | softeonimpl | jboss810eap | impl_jb800eap | 8080 | 172.31.3.20:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/softeonimpl/standalone
+6414 | swp251orabeta | jboss800eap | swp251ora_jb8 | 8085 | 172.31.3.20:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swp251orabeta/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 12:55:08.559155
+==============================================================================
+
+2026-07-13 08:55:33,850 - 45658 - ERROR - app_validation.py errors for i-0f5e72a889805011d:
+
+2026-07-13 08:55:33,851 - 45658 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-13/health/172.31.3.20/172.31.3.20-BeforePatching-2026-07-13-08-55-33-851.log
+2026-07-13 08:55:39,091 - 45658 - INFO - i-0f5e72a889805011d: Cron was active = True
+2026-07-13 08:55:39,332 - 45658 - INFO - Health monitor crontab disabled on all instances
+2026-07-13 08:55:39,333 - 45658 - INFO - Disabled cron for: ['i-0f5e72a889805011d']
+2026-07-13 08:55:39,417 - 45658 - INFO - Sending patch command to instance i-0f5e72a889805011d
+2026-07-13 08:55:39,540 - 45658 - INFO - Command sent successfully to instance i-0f5e72a889805011d. Command ID: 996625eb-23a8-45c1-8401-69dbbd3214d2
+2026-07-13 08:57:10,415 - 45658 - INFO - All patches applied successfully.
+2026-07-13 08:57:10,416 - 45658 - INFO - Patching end time: 2026-07-13 08:57:10
+2026-07-13 08:57:10,416 - 45658 - INFO - Patch Elapsed time: 0:02:06.928510
+2026-07-13 08:57:10,489 - 45658 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 08:57:10,489 - 45658 - INFO - Confirmed - services are stopped
+2026-07-13 08:57:30,730 - 45658 - INFO - Discovered TG map: {'i-0f5e72a889805011d': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Jboss-Session-Persistence/60877c4db5bc9909']}
+2026-07-13 08:57:30,961 - 45658 - INFO - Deregistering i-0f5e72a889805011d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Jboss-Session-Persistence/60877c4db5bc9909
+2026-07-13 08:57:31,035 - 45658 - INFO - Stopping EC2 instance: i-0f5e72a889805011d at 2026-07-13 08:57:31
+2026-07-13 08:59:02,423 - 45658 - INFO - Instance i-0f5e72a889805011d stopped successfully.
+2026-07-13 08:59:02,749 - 45658 - INFO - Stopped i-0f5e72a889805011d in 0:01:31.713469
+2026-07-13 08:59:02,749 - 45658 - INFO - Starting EC2 instance: i-0f5e72a889805011d
+2026-07-13 08:59:18,792 - 45658 - INFO - Instance i-0f5e72a889805011d started successfully.
+2026-07-13 08:59:18,792 - 45658 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f5e72a889805011d...
+2026-07-13 09:00:58,801 - 45658 - INFO - Registering i-0f5e72a889805011d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Jboss-Session-Persistence/60877c4db5bc9909
+2026-07-13 09:01:29,255 - 45658 - INFO - Sent app_validation.py to i-0f5e72a889805011d (command_id: 09832f5b-8adf-451d-aef7-a9d031f94075)
+2026-07-13 09:01:59,321 - 45658 - INFO - app_validation.py output for i-0f5e72a889805011d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 13:01:29.678941
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.3.20
+Hostname | ip-172-31-3-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 166.8G | 73.0G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.3.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.3.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | domsora_prls, domsora_cardt, domsora_dwa, domsora_event, domsora_gp, domsora_hold, domsora_omas, domsora_ord, domsora_opst, domsora_sch, domsora_1sch, domsora_src, domsora_srcth, domsora_inbq, domsora_wmsrl, domsora_wkfl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+domsora_prls | /data/batchapp/softeon/domsora261demo/PreReleaseDaemon
+domsora_cardt | /data/batchapp/softeon/domsora261demo/carrierdeterminationdaemon
+domsora_dwa | /data/batchapp/softeon/domsora261demo/downloaddaemon
+domsora_event | /data/batchapp/softeon/domsora261demo/eventdaemon
+domsora_gp | /data/batchapp/softeon/domsora261demo/genericdaemon
+domsora_hold | /data/batchapp/softeon/domsora261demo/holddaemon
+domsora_omas | /data/batchapp/softeon/domsora261demo/massupdatedaemon
+domsora_ord | /data/batchapp/softeon/domsora261demo/ordercreationdaemon
+domsora_opst | /data/batchapp/softeon/domsora261demo/orderpostdaemon
+domsora_sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon
+domsora_1sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon1
+domsora_src | /data/batchapp/softeon/domsora261demo/sourcingdaemon
+domsora_srcth | /data/batchapp/softeon/domsora261demo/sourcingthread
+domsora_inbq | /data/batchapp/softeon/domsora261demo/uploaddaemon
+domsora_wmsrl | /data/batchapp/softeon/domsora261demo/wmsreleasedaemon
+domsora_wkfl | /data/batchapp/softeon/domsora261demo/workflowdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5055 | domsora261demo | jboss800eap | domsora261_jb80 | 8087 | 172.31.3.20:8087 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/domsora261demo/standalone
+7718 | s251orabeta1 | jboss800eap | s251orabeta1_j8 | 8080 | 172.31.3.20:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/s251orabeta1/standalone
+7415 | softeonimpl | jboss810eap | impl_jb800eap | 8080 | 172.31.3.20:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/softeonimpl/standalone
+6785 | swp251orabeta | jboss800eap | swp251ora_jb8 | 8085 | 172.31.3.20:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swp251orabeta/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 13:01:33.061711
+==============================================================================
+
+2026-07-13 09:01:59,321 - 45658 - ERROR - app_validation.py errors for i-0f5e72a889805011d:
+
+2026-07-13 09:01:59,323 - 45658 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-13/health/172.31.3.20/172.31.3.20-AfterPatching-2026-07-13-09-01-59-322.log
+2026-07-13 09:01:59,388 - 45658 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-13/health/172.31.3.20/172.31.3.20-Validation-details-2026-07-13-09-01-59-322.html
+2026-07-13 09:01:59,569 - 45658 - INFO - Daemon count - Pre: 16, Post: 16
+2026-07-13 09:01:59,569 - 45658 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-13 09:01:59,569 - 45658 - INFO - Manage_cron: True, daemon_action: False, cups_action: False
+2026-07-13 09:01:59,646 - 45658 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-13 09:01:59,646 - 45658 - INFO - RED mail sent for i-0f5e72a889805011d - no daemon/cups issue
+2026-07-13 09:01:59,647 - 45658 - INFO - [Retry-1] Waiting 300s for i-0f5e72a889805011d...
+2026-07-13 09:01:59,647 - 45658 - INFO - Retry thread started for i-0f5e72a889805011d
+2026-07-13 09:01:59,871 - 45658 - INFO - Started i-0f5e72a889805011d in 0:02:57.122129
+2026-07-13 09:01:59,872 - 45658 - INFO - All instances processed.
+2026-07-13 09:01:59,876 - 45658 - INFO - Restart Total time: 0:04:49.262436
+2026-07-13 09:01:59,877 - 45658 - INFO - Auto-confirmed services are restarted
+2026-07-13 09:01:59,877 - 45658 - INFO - Confirmed - services are started
+2026-07-13 09:01:59,989 - 45658 - INFO - The following instances have failed the patch: []
+2026-07-13 09:01:59,990 - 45658 - INFO - No instances have failed the patch.
+2026-07-13 09:01:59,990 - 45658 - INFO - Total Patch Process time: 0:06:56.917338
+2026-07-13 09:03:00,476 - 45658 - INFO - Log file ./logs/patching_2026-07-13_health.log uploaded to s3://q3-2026-aws-security-patching/health_Patch/2026-07-13/patching_2026-07-13_health.log
+2026-07-13 09:06:59,893 - 45658 - INFO - Sent app_validation.py to i-0f5e72a889805011d (command_id: 2ac91ebc-9eef-4471-b7cb-a28adb8060ae)
+2026-07-13 09:07:29,974 - 45658 - INFO - app_validation.py output for i-0f5e72a889805011d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 13:07:00.160207
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.3.20
+Hostname | ip-172-31-3-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 166.8G | 73.0G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.3.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.3.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | domsora_prls, domsora_cardt, domsora_dwa, domsora_event, domsora_gp, domsora_hold, domsora_omas, domsora_ord, domsora_opst, domsora_sch, domsora_1sch, domsora_src, domsora_srcth, domsora_inbq, domsora_wmsrl, domsora_wkfl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+domsora_prls | /data/batchapp/softeon/domsora261demo/PreReleaseDaemon
+domsora_cardt | /data/batchapp/softeon/domsora261demo/carrierdeterminationdaemon
+domsora_dwa | /data/batchapp/softeon/domsora261demo/downloaddaemon
+domsora_event | /data/batchapp/softeon/domsora261demo/eventdaemon
+domsora_gp | /data/batchapp/softeon/domsora261demo/genericdaemon
+domsora_hold | /data/batchapp/softeon/domsora261demo/holddaemon
+domsora_omas | /data/batchapp/softeon/domsora261demo/massupdatedaemon
+domsora_ord | /data/batchapp/softeon/domsora261demo/ordercreationdaemon
+domsora_opst | /data/batchapp/softeon/domsora261demo/orderpostdaemon
+domsora_sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon
+domsora_1sch | /data/batchapp/softeon/domsora261demo/schedulerdaemon1
+domsora_src | /data/batchapp/softeon/domsora261demo/sourcingdaemon
+domsora_srcth | /data/batchapp/softeon/domsora261demo/sourcingthread
+domsora_inbq | /data/batchapp/softeon/domsora261demo/uploaddaemon
+domsora_wmsrl | /data/batchapp/softeon/domsora261demo/wmsreleasedaemon
+domsora_wkfl | /data/batchapp/softeon/domsora261demo/workflowdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5055 | domsora261demo | jboss800eap | domsora261_jb80 | 8087 | 172.31.3.20:8087 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/domsora261demo/standalone
+7415 | softeonimpl | jboss810eap | impl_jb800eap | 8080 | 172.31.3.20:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/softeonimpl/standalone
+6785 | swp251orabeta | jboss800eap | swp251ora_jb8 | 8085 | 172.31.3.20:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swp251orabeta/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 13:07:00.939985
+==============================================================================
+
+2026-07-13 09:07:29,974 - 45658 - ERROR - app_validation.py errors for i-0f5e72a889805011d:
+
+2026-07-13 09:07:29,976 - 45658 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-13/health/172.31.3.20/172.31.3.20-AfterPatching-Retry1-2026-07-13-09-07-29-976.log
+2026-07-13 09:07:30,450 - 45658 - INFO - Health monitor crontab enabled on all instances
+2026-07-13 09:07:30,452 - 45658 - INFO - [Retry] Green - cron enabled for i-0f5e72a889805011d
+2026-07-13 09:07:30,528 - 45658 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-13 09:07:30,529 - 45658 - INFO - [Retry] GREEN mail sent for i-0f5e72a889805011d

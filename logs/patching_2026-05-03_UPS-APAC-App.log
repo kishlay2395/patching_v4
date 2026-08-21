@@ -1,0 +1,424 @@
+2026-05-03 00:05:01,839 - 204241 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-03 00:05:01,839 - 204241 - INFO - Script Start Time: 2026-05-03 00:05:01
+2026-05-03 00:05:02,196 - 204241 - INFO - Instance(s) selected for Patching: {'i-07d53feec41e476f3': '172.29.61.136', 'i-0c3de637b079f40da': '172.29.61.23'}
+2026-05-03 00:05:02,297 - 204241 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-03 00:05:02,297 - 204241 - INFO - Now patching instances at: 2026-05-03 00:05:02
+2026-05-03 00:05:02,394 - 204241 - INFO - Sending patch command to instance i-0c3de637b079f40da
+2026-05-03 00:05:02,566 - 204241 - INFO - Command sent successfully to instance i-0c3de637b079f40da. Command ID: e9dd2528-c00c-4032-9708-5cd75f2d9bad
+2026-05-03 00:05:02,724 - 204241 - INFO - Sending patch command to instance i-07d53feec41e476f3
+2026-05-03 00:05:02,856 - 204241 - INFO - Command sent successfully to instance i-07d53feec41e476f3. Command ID: 52af64c5-1fb2-472c-982a-ec7ac4811cf4
+2026-05-03 00:10:04,606 - 204241 - INFO - All patches applied successfully.
+2026-05-03 00:10:04,607 - 204241 - INFO - Patching end time: 2026-05-03 00:10:04
+2026-05-03 00:10:04,607 - 204241 - INFO - Patch Elapsed time: 0:05:02.309579
+2026-05-03 00:10:04,678 - 204241 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-03 00:10:04,679 - 204241 - INFO - Confirmed - services are stopped
+2026-05-03 00:10:24,175 - 204241 - INFO - Discovered TG map: {'i-0c3de637b079f40da': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34'], 'i-07d53feec41e476f3': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34']}
+2026-05-03 00:10:24,569 - 204241 - INFO - Sent app_validation.py to i-0c3de637b079f40da (command_id: 1dfe6a65-db5d-41fb-8cf1-d58ed4911d90)
+2026-05-03 00:10:54,687 - 204241 - INFO - app_validation.py output for i-0c3de637b079f40da:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 04:10:24.841676
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.23
+Hostname | ip-172-29-61-23
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 21.3G | 146.7G | 12% | /data
+fs-73269f3b.efs.us-east-1.amazonaws.com:/ | 0B | 853.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-73269f3b.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.61.23:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.23 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1197875 | upsapacprod | jboss62eap | apacprd_jboss | 80 | 172.29.61.23:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacprod/standalone
+1197991 | upsapacrfprod | jboss62eap | apacrfprd_jboss | 8080 | 172.29.61.23:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 04:10:25.272671
+==============================================================================
+
+2026-05-03 00:10:54,687 - 204241 - ERROR - app_validation.py errors for i-0c3de637b079f40da:
+
+2026-05-03 00:10:54,688 - 204241 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.23/172.29.61.23-BeforePatching-2026-05-03-00-10-54-688.log
+2026-05-03 00:10:54,688 - 204241 - INFO - Deregistering i-0c3de637b079f40da from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c
+2026-05-03 00:10:54,756 - 204241 - INFO - Deregistering i-0c3de637b079f40da from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34
+2026-05-03 00:10:54,796 - 204241 - INFO - Stopping EC2 instance: i-0c3de637b079f40da at 2026-05-03 00:10:54
+2026-05-03 00:11:55,872 - 204241 - INFO - Instance i-0c3de637b079f40da stopped successfully.
+2026-05-03 00:11:56,185 - 204241 - INFO - Stopped i-0c3de637b079f40da in 0:01:01.388837
+2026-05-03 00:11:56,185 - 204241 - INFO - Starting EC2 instance: i-0c3de637b079f40da
+2026-05-03 00:12:12,201 - 204241 - INFO - Instance i-0c3de637b079f40da started successfully.
+2026-05-03 00:12:12,202 - 204241 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0c3de637b079f40da...
+2026-05-03 00:13:52,302 - 204241 - INFO - Registering i-0c3de637b079f40da to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c
+2026-05-03 00:13:52,472 - 204241 - INFO - Registering i-0c3de637b079f40da to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34
+2026-05-03 00:16:53,325 - 204241 - INFO - Sent app_validation.py to i-0c3de637b079f40da (command_id: 6d694788-f37b-46af-8ad8-0ba4ae82d531)
+2026-05-03 00:17:23,415 - 204241 - INFO - app_validation.py output for i-0c3de637b079f40da:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 04:16:53.781990
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.23
+Hostname | ip-172-29-61-23
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 21.1G | 146.9G | 11% | /data
+fs-73269f3b.efs.us-east-1.amazonaws.com:/ | 0B | 853.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-73269f3b.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.23 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3043 | upsapacprod | jboss62eap | apacprd_jboss | 80 | 172.29.61.23:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacprod/standalone
+3044 | upsapacrfprod | jboss62eap | apacrfprd_jboss | 8080 | 172.29.61.23:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 04:16:54.835822
+==============================================================================
+
+2026-05-03 00:17:23,415 - 204241 - ERROR - app_validation.py errors for i-0c3de637b079f40da:
+
+2026-05-03 00:17:23,416 - 204241 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.23/172.29.61.23-AfterPatching-2026-05-03-00-17-23-416.log
+2026-05-03 00:17:23,468 - 204241 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.23/172.29.61.23-Validation-details-2026-05-03-00-17-23-416.html
+2026-05-03 00:17:23,729 - 204241 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-03 00:17:23,729 - 204241 - INFO - HTML validation report email sent for i-0c3de637b079f40da
+2026-05-03 00:17:23,986 - 204241 - INFO - Started i-0c3de637b079f40da in 0:05:27.800618
+2026-05-03 00:17:23,986 - 204241 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-03 00:19:24,236 - 204241 - INFO - Sent app_validation.py to i-07d53feec41e476f3 (command_id: b02345f1-27a4-4341-88c5-4fe840265e02)
+2026-05-03 00:19:54,329 - 204241 - INFO - app_validation.py output for i-07d53feec41e476f3:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 04:19:24.536505
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.136
+Hostname | ip-172-29-61-136
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 29.7G | 138.3G | 16% | /data
+fs-73269f3b.efs.us-east-1.amazonaws.com:/ | 0B | 853.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-73269f3b.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.61.136:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.136 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1149052 | upsapacprod | jboss62eap | apacprd_jboss | 80 | 172.29.61.136:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacprod/standalone
+1149173 | upsapacrfprod | jboss62eap | apacrfprd_jboss | 8080 | 172.29.61.136:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 04:19:24.874594
+==============================================================================
+
+2026-05-03 00:19:54,329 - 204241 - ERROR - app_validation.py errors for i-07d53feec41e476f3:
+
+2026-05-03 00:19:54,332 - 204241 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.136/172.29.61.136-BeforePatching-2026-05-03-00-19-54-331.log
+2026-05-03 00:19:54,332 - 204241 - INFO - Deregistering i-07d53feec41e476f3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c
+2026-05-03 00:19:54,413 - 204241 - INFO - Deregistering i-07d53feec41e476f3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34
+2026-05-03 00:19:54,461 - 204241 - INFO - Stopping EC2 instance: i-07d53feec41e476f3 at 2026-05-03 00:19:54
+2026-05-03 00:21:10,739 - 204241 - INFO - Instance i-07d53feec41e476f3 stopped successfully.
+2026-05-03 00:21:10,996 - 204241 - INFO - Stopped i-07d53feec41e476f3 in 0:01:16.534230
+2026-05-03 00:21:10,996 - 204241 - INFO - Starting EC2 instance: i-07d53feec41e476f3
+2026-05-03 00:21:26,998 - 204241 - INFO - Instance i-07d53feec41e476f3 started successfully.
+2026-05-03 00:21:26,998 - 204241 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07d53feec41e476f3...
+2026-05-03 00:23:07,091 - 204241 - INFO - Registering i-07d53feec41e476f3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-Desktop/ac738fcb4e89ad3c
+2026-05-03 00:23:07,310 - 204241 - INFO - Registering i-07d53feec41e476f3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-Production-RF/fdc4ca05da717c34
+2026-05-03 00:23:37,851 - 204241 - INFO - Sent app_validation.py to i-07d53feec41e476f3 (command_id: 94049756-448d-4825-8102-ad077fccb819)
+2026-05-03 00:24:07,979 - 204241 - INFO - app_validation.py output for i-07d53feec41e476f3:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 04:23:38.213508
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.136
+Hostname | ip-172-29-61-136
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 29.6G | 138.4G | 16% | /data
+fs-73269f3b.efs.us-east-1.amazonaws.com:/ | 0B | 853.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-73269f3b.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.136 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3031 | upsapacprod | jboss62eap | apacprd_jboss | 80 | 172.29.61.136:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacprod/standalone
+3043 | upsapacrfprod | jboss62eap | apacrfprd_jboss | 8080 | 172.29.61.136:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 04:23:38.903059
+==============================================================================
+
+2026-05-03 00:24:07,979 - 204241 - ERROR - app_validation.py errors for i-07d53feec41e476f3:
+
+2026-05-03 00:24:07,981 - 204241 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.136/172.29.61.136-AfterPatching-2026-05-03-00-24-07-981.log
+2026-05-03 00:24:08,033 - 204241 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-03/UPS-APAC-App/172.29.61.136/172.29.61.136-Validation-details-2026-05-03-00-24-07-981.html
+2026-05-03 00:24:08,248 - 204241 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-03 00:24:08,249 - 204241 - INFO - HTML validation report email sent for i-07d53feec41e476f3
+2026-05-03 00:24:08,506 - 204241 - INFO - Started i-07d53feec41e476f3 in 0:02:57.509997
+2026-05-03 00:24:08,507 - 204241 - INFO - All instances processed.
+2026-05-03 00:24:08,512 - 204241 - INFO - Restart Total time: 0:14:03.537357
+2026-05-03 00:24:08,512 - 204241 - INFO - Auto-confirmed services are restarted
+2026-05-03 00:24:08,512 - 204241 - INFO - Confirmed - services are started
+2026-05-03 00:24:08,646 - 204241 - INFO - The following instances have failed the patch: []
+2026-05-03 00:24:08,646 - 204241 - INFO - No instances have failed the patch.
+2026-05-03 00:24:08,646 - 204241 - INFO - Total Patch Process time: 0:19:06.806792
+2026-05-03 00:25:09,282 - 204241 - INFO - Log file ./logs/patching_2026-05-03_UPS-APAC-App.log uploaded to s3://q2-2026-aws-security-patching/UPS-APAC-App_Patch/2026-05-03/patching_2026-05-03_UPS-APAC-App.log

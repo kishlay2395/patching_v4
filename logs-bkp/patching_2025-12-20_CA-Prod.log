@@ -1,0 +1,476 @@
+2025-12-20 03:00:04,132 - 29268 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-20 03:09:33,874 - 29268 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-12-20 03:09:33,993 - 29268 - INFO - Log file ./logs/backup_2025-12-20.log uploaded to s3://q3-2025-aws-security-patching/CA-Prod_Patch_Backup/2025-12-20/backup_2025-12-20.log
+2025-12-20 07:00:03,040 - 9724 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-12-20 07:00:03,040 - 9724 - INFO - Script Start Time: 2025-12-20 07:00:03
+2025-12-20 07:00:03,340 - 9724 - INFO - Instance(s) selected for Patching: {'i-06b489804cc6e6b6c': '172.31.15.44', 'i-0f7c1f6c428a3d667': '172.31.15.15'}
+2025-12-20 07:00:03,456 - 9724 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-20 07:00:03,456 - 9724 - INFO - Now patching instances at: 2025-12-20 07:00:03
+2025-12-20 07:00:03,554 - 9724 - INFO - Sending patch command to instance i-0f7c1f6c428a3d667
+2025-12-20 07:00:03,708 - 9724 - INFO - Command sent successfully to instance i-0f7c1f6c428a3d667. Command ID: 5f90b120-5fbe-4041-993a-a910673c2271
+2025-12-20 07:00:03,902 - 9724 - INFO - Sending patch command to instance i-06b489804cc6e6b6c
+2025-12-20 07:00:04,027 - 9724 - INFO - Command sent successfully to instance i-06b489804cc6e6b6c. Command ID: fd888986-12dc-463e-9ddb-67f942c3e68d
+2025-12-20 07:06:36,147 - 9724 - INFO - All patches applied successfully.
+2025-12-20 07:06:36,147 - 9724 - INFO - Patching end time: 2025-12-20 07:06:36
+2025-12-20 07:06:36,147 - 9724 - INFO - Patch Elapsed time: 0:06:32.691066
+2025-12-20 07:06:36,224 - 9724 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-20 07:06:36,224 - 9724 - INFO - Confirmed - services are stopped
+2025-12-20 07:06:55,192 - 9724 - INFO - Discovered TG map: {'i-0f7c1f6c428a3d667': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848'], 'i-06b489804cc6e6b6c': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848']}
+2025-12-20 07:06:55,474 - 9724 - INFO - Sent app_validation.sh to i-0f7c1f6c428a3d667 (command_id: 93bba460-0ded-4c83-95b4-6a052cbf6187)
+2025-12-20 07:07:25,555 - 9724 - INFO - app_validation.sh output for i-0f7c1f6c428a3d667:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 20 07:06:55 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.15.15
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-15-15
+Uptime: up 15 weeks, 5 days, 1 hour, 28 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.15.15:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.15.15
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 3561 MB
+Free Physical Memory  = 12050 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.28 0.84 0.48 1/383 3291683
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                            Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                         20G  6.0G   15G  30% /
+/dev/nvme0n1p128                                       10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                        180G   38G  143G  21% /data
+172.31.15.44:/data/app/jboss62eap/caprod/Labels       180G   77G  104G  43% /data/app/jboss62eap/caprod/Labels
+172.31.15.44:/data/app/jboss62eap/caprod/logs/report  180G   77G  104G  43% /data/app/jboss62eap/caprod/logs/report
+172.31.15.44:/data/softeon/interfaces                 180G   77G  104G  43% /data/softeon/interfaces
+devtmpfs                                              4.0M     0  4.0M   0% /dev
+tmpfs                                                 7.7G     0  7.7G   0% /dev/shm
+tmpfs                                                 3.1G  696K  3.1G   1% /run
+tmpfs                                                 1.6G     0  1.6G   0% /run/user/1001
+tmpfs                                                 7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.15.15 started on Sat Dec 20 07:06:55 EST 2025
+
+Server IP: 172.31.15.15 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.15.15
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.15.15
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.15.15
+-------------------------------------
+
+Total number of Java process running on this host 172.31.15.15 is 3
+Total number of Daemon / Batch (java) application process available is 2
+
+Daemon Process id and name details are given below
+Process ID: 3150474, Process Name: 5:46
+Process ID: 3150476, Process Name: 5:45
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.15.15
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 3208475, Process Name: 14:38
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.15.15
+Port 80:	caprod_jbos	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 20 07:06:56 EST 2025
+==============================================================================
+
+
+2025-12-20 07:07:25,555 - 9724 - ERROR - app_validation.sh errors for i-0f7c1f6c428a3d667:
+
+2025-12-20 07:07:25,557 - 9724 - INFO - Before patching validation saved to: output/validation-2025-12-20/172.31.15.15-BeforePatching-2025-12-20-07-07-25-556.log
+2025-12-20 07:07:25,557 - 9724 - INFO - Deregistering i-0f7c1f6c428a3d667 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848
+2025-12-20 07:07:25,625 - 9724 - INFO - Stopping EC2 instance: i-0f7c1f6c428a3d667 at 2025-12-20 07:07:25
+2025-12-20 07:09:12,141 - 9724 - INFO - Instance i-0f7c1f6c428a3d667 stopped successfully.
+2025-12-20 07:09:12,412 - 9724 - INFO - Stopped i-0f7c1f6c428a3d667 in 0:01:46.787713
+2025-12-20 07:09:12,412 - 9724 - INFO - Starting EC2 instance: i-0f7c1f6c428a3d667
+2025-12-20 07:09:28,506 - 9724 - INFO - Instance i-0f7c1f6c428a3d667 started successfully.
+2025-12-20 07:09:28,506 - 9724 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0f7c1f6c428a3d667...
+2025-12-20 07:09:58,536 - 9724 - INFO - Registering i-0f7c1f6c428a3d667 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848
+2025-12-20 07:11:59,176 - 9724 - INFO - Sent app_validation.sh to i-0f7c1f6c428a3d667 (command_id: e510a589-c742-4ac2-b01e-87f7adc65a08)
+2025-12-20 07:12:29,259 - 9724 - INFO - app_validation.sh output for i-0f7c1f6c428a3d667:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 20 07:11:59 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.15.15
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-15-15
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.15.15:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.15.15
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15623 MB
+Used Physical Memory  = 2179 MB
+Free Physical Memory  = 13444 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.28 0.22 0.09 1/301 3281
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                            Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                         20G  5.7G   15G  29% /
+/dev/nvme0n1p128                                       10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                        180G   38G  143G  21% /data
+172.31.15.44:/data/app/jboss62eap/caprod/Labels       180G   77G  104G  43% /data/app/jboss62eap/caprod/Labels
+172.31.15.44:/data/app/jboss62eap/caprod/logs/report  180G   77G  104G  43% /data/app/jboss62eap/caprod/logs/report
+172.31.15.44:/data/softeon/interfaces                 180G   77G  104G  43% /data/softeon/interfaces
+devtmpfs                                              4.0M     0  4.0M   0% /dev
+tmpfs                                                 7.7G     0  7.7G   0% /dev/shm
+tmpfs                                                 3.1G  668K  3.1G   1% /run
+tmpfs                                                 7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.15.15 started on Sat Dec 20 07:11:59 EST 2025
+
+Server IP: 172.31.15.15 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.15.15
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.15.15
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.15.15
+-------------------------------------
+
+Total number of Java process running on this host 172.31.15.15 is 1
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.15.15
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 3016, Process Name: 0:34
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.15.15
+Port 80:	caprod_jboss	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 20 07:12:00 EST 2025
+==============================================================================
+
+
+2025-12-20 07:12:29,259 - 9724 - ERROR - app_validation.sh errors for i-0f7c1f6c428a3d667:
+
+2025-12-20 07:12:29,261 - 9724 - INFO - After patching validation saved to: output/validation-2025-12-20/172.31.15.15-AfterPatching-2025-12-20-07-12-29-261.log
+2025-12-20 07:12:29,299 - 9724 - INFO - Validation comparison report generated: output/validation-2025-12-20/172.31.15.15-Validation-details-2025-12-20-07-12-29-261.log
+2025-12-20 07:12:29,379 - 9724 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-20 07:12:29,379 - 9724 - INFO - HTML validation report email sent for i-0f7c1f6c428a3d667
+2025-12-20 07:12:29,612 - 9724 - INFO - Started i-0f7c1f6c428a3d667 in 0:03:17.199666
+2025-12-20 07:12:29,612 - 9724 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-12-20 07:14:29,816 - 9724 - INFO - Sent app_validation.sh to i-06b489804cc6e6b6c (command_id: 0e439ae5-d58c-47b5-9bb3-102ff72d78e0)
+2025-12-20 07:14:59,937 - 9724 - INFO - app_validation.sh output for i-06b489804cc6e6b6c:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 20 07:14:30 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.15.44
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-15-44
+Uptime: up 15 weeks, 5 days, 1 hour, 34 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.15.44:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.15.44
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 5843 MB
+Free Physical Memory  = 9768 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 159 MB
+Free Swap Memory  = 20320 MB
+-------------------------------------
+Load Average: 0.00 0.17 0.27 1/626 1638916
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.8G   15G  29% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    180G   77G  104G  43% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  684K  3.1G   1% /run
+tmpfs             1.6G     0  1.6G   0% /run/user/1001
+tmpfs             7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.15.44 started on Sat Dec 20 07:14:30 EST 2025
+
+Server IP: 172.31.15.44 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.15.44
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.15.44
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.15.44
+-------------------------------------
+
+Total number of Java process running on this host 172.31.15.44 is 15
+Total number of Daemon / Batch (java) application process available is 14
+
+Daemon Process id and name details are given below
+Process ID: 1549971, Process Name: 0:18
+Process ID: 1549676, Process Name: 0:15
+Process ID: 1549720, Process Name: 0:13
+Process ID: 1549695, Process Name: 0:29
+Process ID: 1549745, Process Name: 0:11
+Process ID: 1549765, Process Name: 0:38
+Process ID: 1549794, Process Name: 0:13
+Process ID: 1549819, Process Name: 0:50
+Process ID: 1549948, Process Name: 0:10
+Process ID: 1549926, Process Name: 0:10
+Process ID: 1549838, Process Name: 0:13
+Process ID: 1549861, Process Name: 0:51
+Process ID: 1549884, Process Name: 0:14
+Process ID: 1549904, Process Name: 0:28
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.15.44
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 1549318, Process Name: 14:46
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.15.44
+Port 80:	caprod_jbos	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 20 07:14:31 EST 2025
+==============================================================================
+
+
+2025-12-20 07:14:59,937 - 9724 - ERROR - app_validation.sh errors for i-06b489804cc6e6b6c:
+
+2025-12-20 07:14:59,939 - 9724 - INFO - Before patching validation saved to: output/validation-2025-12-20/172.31.15.44-BeforePatching-2025-12-20-07-14-59-939.log
+2025-12-20 07:14:59,940 - 9724 - INFO - Deregistering i-06b489804cc6e6b6c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848
+2025-12-20 07:15:00,018 - 9724 - INFO - Stopping EC2 instance: i-06b489804cc6e6b6c at 2025-12-20 07:15:00
+2025-12-20 07:18:17,088 - 9724 - INFO - Instance i-06b489804cc6e6b6c stopped successfully.
+2025-12-20 07:18:17,352 - 9724 - INFO - Stopped i-06b489804cc6e6b6c in 0:03:17.334181
+2025-12-20 07:18:17,352 - 9724 - INFO - Starting EC2 instance: i-06b489804cc6e6b6c
+2025-12-20 07:18:33,476 - 9724 - INFO - Instance i-06b489804cc6e6b6c started successfully.
+2025-12-20 07:18:33,476 - 9724 - INFO - Waiting 30 seconds for SSM agent to be ready on i-06b489804cc6e6b6c...
+2025-12-20 07:19:03,506 - 9724 - INFO - Registering i-06b489804cc6e6b6c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CA-Prod-WS-Target/034dd3ad79671848
+2025-12-20 07:21:04,114 - 9724 - INFO - Sent app_validation.sh to i-06b489804cc6e6b6c (command_id: cd422fe4-0645-4b16-b1b2-e7186e571241)
+2025-12-20 07:21:34,185 - 9724 - INFO - app_validation.sh output for i-06b489804cc6e6b6c:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 20 07:21:04 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.15.44
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-15-44
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.15.44:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.15.44
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15623 MB
+Used Physical Memory  = 2876 MB
+Free Physical Memory  = 12747 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.31 0.26 0.11 1/315 3240
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.6G   15G  28% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    180G   77G  104G  43% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  660K  3.1G   1% /run
+tmpfs             7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.15.44 started on Sat Dec 20 07:21:04 EST 2025
+
+Server IP: 172.31.15.44 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.15.44
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.15.44
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.15.44
+-------------------------------------
+
+Total number of Java process running on this host 172.31.15.44 is 1
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.15.44
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 2948, Process Name: 0:35
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.15.44
+Port 80:	caprod_jboss	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 20 07:21:04 EST 2025
+==============================================================================
+
+
+2025-12-20 07:21:34,185 - 9724 - ERROR - app_validation.sh errors for i-06b489804cc6e6b6c:
+
+2025-12-20 07:21:34,187 - 9724 - INFO - After patching validation saved to: output/validation-2025-12-20/172.31.15.44-AfterPatching-2025-12-20-07-21-34-187.log
+2025-12-20 07:21:34,226 - 9724 - INFO - Validation comparison report generated: output/validation-2025-12-20/172.31.15.44-Validation-details-2025-12-20-07-21-34-187.log
+2025-12-20 07:21:34,315 - 9724 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-20 07:21:34,315 - 9724 - INFO - HTML validation report email sent for i-06b489804cc6e6b6c
+2025-12-20 07:21:34,569 - 9724 - INFO - Started i-06b489804cc6e6b6c in 0:03:17.216623
+2025-12-20 07:21:34,570 - 9724 - INFO - All instances processed.
+2025-12-20 07:21:34,573 - 9724 - INFO - Restart Total time: 0:14:58.221747
+2025-12-20 07:21:34,574 - 9724 - INFO - Auto-confirmed services are restarted
+2025-12-20 07:21:34,574 - 9724 - INFO - Confirmed - services are started
+2025-12-20 07:21:34,675 - 9724 - INFO - The following instances have failed the patch: []
+2025-12-20 07:21:34,675 - 9724 - INFO - No instances have failed the patch.
+2025-12-20 07:21:34,675 - 9724 - INFO - Total Patch Process time: 0:21:31.634338
+2025-12-20 07:21:34,964 - 9724 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-20 07:22:35,255 - 9724 - INFO - Log file ./logs/patching_2025-12-20_CA-Prod.log uploaded to s3://q4-2025-aws-security-patching/CA-Prod_Patch/2025-12-20/patching_2025-12-20_CA-Prod.log

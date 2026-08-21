@@ -1,0 +1,1158 @@
+2026-08-09 00:15:03,601 - 1812227 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-09 00:15:03,602 - 1812227 - INFO - Script Start Time: 2026-08-09 00:15:03
+2026-08-09 00:15:03,935 - 1812227 - INFO - Tag: dib-msq-prod-batch, IPs: ['10.64.20.6'], Environment: prod
+2026-08-09 00:15:03,935 - 1812227 - INFO - Instance(s) selected for Patching: {'i-0dc96de80a5851705': '10.64.20.6'}
+2026-08-09 00:15:04,009 - 1812227 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:15:04,010 - 1812227 - INFO - Now patching instances at: 2026-08-09 00:15:04
+2026-08-09 00:15:04,558 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 39e1b16c-3bcd-47b4-be71-b7bf227137c5)
+2026-08-09 00:15:34,686 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:15:34,686 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:15:05.035221
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.9G | 126.0G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_wld, wmsmsq_zplp, wmsmsq_vmmsq, wmsmsq_2vmmsq, drivemonitor, dibsso_3vomobad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+drivemonitor | Unknown
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:15:07.596205
+==============================================================================
+
+2026-08-09 00:15:34,688 - 1812227 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-BeforePatching-2026-08-09-00-15-34-687.log
+2026-08-09 00:15:40,218 - 1812227 - INFO - i-0dc96de80a5851705: Cron was active = True
+2026-08-09 00:15:40,725 - 1812227 - INFO - Health monitor crontab disabled on all instances
+2026-08-09 00:15:40,726 - 1812227 - INFO - Disabled cron for: ['i-0dc96de80a5851705']
+2026-08-09 00:15:40,849 - 1812227 - INFO - Sending patch command to instance i-0dc96de80a5851705
+2026-08-09 00:15:41,217 - 1812227 - INFO - Command sent successfully to instance i-0dc96de80a5851705. Command ID: 0f66460e-8db3-41ef-a2cb-37b28db15807
+2026-08-09 00:20:13,286 - 1812227 - INFO - All patches applied successfully.
+2026-08-09 00:20:13,287 - 1812227 - INFO - Patching end time: 2026-08-09 00:20:13
+2026-08-09 00:20:13,287 - 1812227 - INFO - Patch Elapsed time: 0:05:09.277081
+2026-08-09 00:20:13,348 - 1812227 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:20:13,348 - 1812227 - INFO - Confirmed - services are stopped
+2026-08-09 00:20:15,282 - 1812227 - INFO - Discovered TG map: {}
+2026-08-09 00:20:15,681 - 1812227 - INFO - Stopping EC2 instance: i-0dc96de80a5851705 at 2026-08-09 00:20:15
+2026-08-09 00:23:33,481 - 1812227 - INFO - Instance i-0dc96de80a5851705 stopped successfully.
+2026-08-09 00:23:33,655 - 1812227 - INFO - Stopped i-0dc96de80a5851705 in 0:03:17.974147
+2026-08-09 00:23:33,656 - 1812227 - INFO - Starting EC2 instance: i-0dc96de80a5851705
+2026-08-09 00:23:49,786 - 1812227 - INFO - Instance i-0dc96de80a5851705 started successfully.
+2026-08-09 00:23:49,787 - 1812227 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0dc96de80a5851705...
+2026-08-09 00:25:30,431 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 4de1a5cb-4a32-4063-b179-cd234e611d8e)
+2026-08-09 00:26:00,568 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:26:00,568 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:25:30.708145
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.6G | 126.3G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:25:31.200118
+==============================================================================
+
+2026-08-09 00:26:00,570 - 1812227 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-2026-08-09-00-26-00-570.log
+2026-08-09 00:26:00,626 - 1812227 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-Validation-details-2026-08-09-00-26-00-570.html
+2026-08-09 00:26:01,024 - 1812227 - INFO - Daemon count - Pre: 20, Post: 0
+2026-08-09 00:26:01,024 - 1812227 - INFO - CUPS: before=running after=running version=cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-09 00:26:01,024 - 1812227 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-09 00:26:01,024 - 1812227 - INFO - Background: restarting daemons on i-0dc96de80a5851705
+2026-08-09 00:26:01,024 - 1812227 - INFO - Background thread started for i-0dc96de80a5851705 - daemon:True cups:False
+2026-08-09 00:26:01,538 - 1812227 - INFO - Started i-0dc96de80a5851705 in 0:02:27.881563
+2026-08-09 00:26:01,539 - 1812227 - INFO - All instances processed.
+2026-08-09 00:26:01,545 - 1812227 - INFO - Restart Total time: 0:05:48.060585
+2026-08-09 00:26:01,546 - 1812227 - INFO - Auto-confirmed services are restarted
+2026-08-09 00:26:01,546 - 1812227 - INFO - Confirmed - services are started
+2026-08-09 00:26:01,817 - 1812227 - INFO - The following instances have failed the patch: []
+2026-08-09 00:26:01,818 - 1812227 - INFO - No instances have failed the patch.
+2026-08-09 00:26:01,818 - 1812227 - INFO - Total Patch Process time: 0:10:58.215605
+2026-08-09 00:26:31,851 - 1812227 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: dibssoprod
+Checking folder: dibwmsmsqprod
+/data/batchapp/softeon/dibwmsmsqprod/startall-dibwmsmsqprod-daemon.sh
+Batch process is executed with user appadmin
+
+
+Starting autobatchdistributiondaemon
+Batch process is executed with user appadmin
+
+
+Starting clustercreationdaemon
+Batch process is executed with user appadmin
+
+
+Starting downloaddaemon
+Batch process is executed with user appadmin
+
+
+Starting eventdaemon
+Batch process is executed with user appadmin
+
+
+Starting ftpdaemon
+Batch process is executed with user appadmin
+
+
+Starting hardallocationdaemon
+Batch process is executed with user appadmin
+
+
+Starting labeldaemon
+Batch process is executed with user appadmin
+
+
+Starting replenishmentdaemon
+Batch process is executed with user appadmin
+
+
+Starting replenishmentpickloccanceldaemon
+Batch process is executed with user appadmin
+
+
+Starting reportdaemon
+Batch process is executed with user appadmin
+
+
+Starting reportdaemon1
+Batch process is executed with user appadmin
+
+
+Starting reportjqgridexportdaemon
+Batch process is executed with user appadmin
+
+
+Starting schedulerdaemon
+Batch process is executed with user appadmin
+
+
+Starting uploaddaemon
+Batch process is executed with user appadmin
+
+
+Starting voicemobilemsq2daemon
+Batch process is executed with user appadmin
+
+
+Starting voicemobilemsqdaemon
+Batch process is executed with user appadmin
+
+
+Starting wavelaunchdaemon
+Batch process is executed with user appadmin
+
+
+Starting zebraprintdaemon
+
+2026-08-09 00:26:31,852 - 1812227 - INFO - Waiting 100 sec for daemons to start on i-0dc96de80a5851705
+2026-08-09 00:27:02,533 - 1812227 - INFO - Log file ./logs/patching_2026-08-09_dib-msq-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/dib-msq-prod-batch_Patch/2026-08-09/patching_2026-08-09_dib-msq-prod-batch.log
+2026-08-09 00:28:11,889 - 1812227 - INFO - CUPS no action needed for i-0dc96de80a5851705 - before:running after:running version:cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-09 00:28:12,409 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 46bbcfe1-57d4-47e0-a880-6c16fc44a0f5)
+2026-08-09 00:28:42,550 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:28:42,550 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:28:12.598502
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.8G | 126.1G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:28:13.782010
+==============================================================================
+
+2026-08-09 00:28:42,686 - 1812227 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 00:28:42,687 - 1812227 - INFO - RED re-validation mail sent for i-0dc96de80a5851705
+2026-08-09 00:28:42,687 - 1812227 - INFO - Still Red after restart - starting retry for i-0dc96de80a5851705
+2026-08-09 00:28:42,687 - 1812227 - INFO - [Retry-1] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 00:33:43,493 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 7ddcfdbf-bdbe-4f5e-9d46-63883d47c4f5)
+2026-08-09 00:34:13,624 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:34:13,624 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:33:43.712208
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.6G | 126.3G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:33:44.884833
+==============================================================================
+
+2026-08-09 00:34:13,626 - 1812227 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry1-2026-08-09-00-34-13-625.log
+2026-08-09 00:34:13,687 - 1812227 - INFO - [Retry-1] RED for DoItBest-N.CA Production Batch Server - 1 (MSQ) (10.64.20.6), retrying... (Total waited: 300s)
+2026-08-09 00:34:13,687 - 1812227 - INFO - [Retry-2] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 00:39:14,306 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 705e38ad-062c-4080-a0a4-6e87119d1c2f)
+2026-08-09 00:39:44,421 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:39:44,421 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:39:14.611692
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.7G | 126.2G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:39:15.803840
+==============================================================================
+
+2026-08-09 00:39:44,423 - 1812227 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry2-2026-08-09-00-39-44-423.log
+2026-08-09 00:39:44,481 - 1812227 - INFO - [Retry-2] RED for DoItBest-N.CA Production Batch Server - 1 (MSQ) (10.64.20.6), retrying... (Total waited: 600s)
+2026-08-09 00:39:44,481 - 1812227 - INFO - [Retry-3] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 00:44:45,149 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 61836944-100c-4c98-bd35-bbf955fd6b01)
+2026-08-09 00:45:15,291 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:45:15,291 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:44:45.347354
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.8G | 126.1G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java, dibsso_3vomobad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:44:46.639850
+==============================================================================
+
+2026-08-09 00:45:15,293 - 1812227 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry3-2026-08-09-00-45-15-293.log
+2026-08-09 00:45:15,353 - 1812227 - INFO - [Retry-3] RED for DoItBest-N.CA Production Batch Server - 1 (MSQ) (10.64.20.6), retrying... (Total waited: 900s)
+2026-08-09 00:45:15,353 - 1812227 - INFO - [Retry-4] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 00:50:15,983 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 7eb51541-13b3-43da-a67c-7d58f5d55985)
+2026-08-09 00:50:46,115 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:50:46,116 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:50:16.189753
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.8G | 126.1G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java, dibsso_3vomobad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:50:17.714759
+==============================================================================
+
+2026-08-09 00:50:46,117 - 1812227 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry4-2026-08-09-00-50-46-117.log
+2026-08-09 00:50:46,178 - 1812227 - INFO - [Retry-4] RED for DoItBest-N.CA Production Batch Server - 1 (MSQ) (10.64.20.6), retrying... (Total waited: 1200s)
+2026-08-09 00:50:46,178 - 1812227 - INFO - [Retry-5] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 00:55:46,814 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 91ddc4d8-f999-45ce-919a-f7f0fe301916)
+2026-08-09 00:56:16,936 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 00:56:16,936 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 04:55:46.983463
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.8G | 126.1G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java, dibsso_3vomobad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 04:55:48.364595
+==============================================================================
+
+2026-08-09 00:56:16,938 - 1812227 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry5-2026-08-09-00-56-16-937.log
+2026-08-09 00:56:16,996 - 1812227 - INFO - [Retry-5] RED for DoItBest-N.CA Production Batch Server - 1 (MSQ) (10.64.20.6), retrying... (Total waited: 1500s)
+2026-08-09 00:56:16,996 - 1812227 - INFO - [Retry-6] Waiting 300s for i-0dc96de80a5851705...
+2026-08-09 01:01:17,698 - 1812227 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 76f46b17-0794-4a8d-9330-8e2ed8588aaf)
+2026-08-09 01:01:47,829 - 1812227 - INFO - SSM Command Status: Success
+2026-08-09 01:01:47,829 - 1812227 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 05:01:17.914387
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 113.9G | 126.0G | 47% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 278.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_2vmmsq, wmsmsq_vmmsq, wmsmsq_wld, wmsmsq_zplp, sh, java, dibsso_3vomobad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+sh | /bin/sh
+java | /data2/shared/softeon/dibmsq/db_alerts/java_gather_stats
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 05:01:19.210388
+==============================================================================
+
+2026-08-09 01:01:47,831 - 1812227 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-08-09/dib-msq-prod-batch/10.64.20.6/10.64.20.6-AfterPatching-Retry6-2026-08-09-01-01-47-830.log
+2026-08-09 01:01:48,302 - 1812227 - INFO - Health monitor crontab enabled on all instances
+2026-08-09 01:01:48,304 - 1812227 - WARNING - [Retry] Timeout - auto cron enabled for i-0dc96de80a5851705

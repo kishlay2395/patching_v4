@@ -1,0 +1,635 @@
+2026-07-05 02:00:02,892 - 3777880 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 02:00:02,892 - 3777880 - INFO - Script Start Time: 2026-07-05 02:00:02
+2026-07-05 02:00:04,221 - 3777880 - INFO - Instance(s) selected for Patching: {'i-0cd29f94757bc66a5': '172.29.60.243'}
+2026-07-05 02:00:04,328 - 3777880 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 02:00:04,330 - 3777880 - INFO - Now patching instances at: 2026-07-05 02:00:04
+2026-07-05 02:00:09,890 - 3777880 - INFO - i-0cd29f94757bc66a5: Cron was active = True
+2026-07-05 02:00:10,071 - 3777880 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 02:00:10,072 - 3777880 - INFO - Disabled cron for: ['i-0cd29f94757bc66a5']
+2026-07-05 02:00:10,333 - 3777880 - INFO - Sent app_validation.py to i-0cd29f94757bc66a5 (command_id: 78558701-53af-4d54-a823-69d55a1f2c2f)
+2026-07-05 02:00:40,447 - 3777880 - INFO - app_validation.py output for i-0cd29f94757bc66a5:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:00:10.755292
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.243
+Hostname | ip-172-29-60-243
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 168.4G | 121.4G | 58% | /data
+fs-2172dc69.efs.us-east-1.amazonaws.com:/ | 0B | 579.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-2172dc69.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.243:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.243 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | pznap_dwa, pznap_event, pznap_ftp, pznap_lbl, pznap_repl, pznap_rpt, pznap_jqgrid, pznap_sch, pznap_inbq, pznap_wld, pznap_apick, pznap_tiad, upsismea_dwa, upsismea_event, upsismea_ftp, upsismea_lbl, upsismea_repl, upsismea_rpt, upsismea_jqgrid, upsismea_sch, upsismea_inbq, upsismea_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+pznap_dwa | /data/batchapp/softeon/upsapacpznuat/pznap/downloaddaemon
+pznap_event | /data/batchapp/softeon/upsapacpznuat/pznap/eventdaemon
+pznap_ftp | /data/batchapp/softeon/upsapacpznuat/pznap/ftpdaemon
+pznap_lbl | /data/batchapp/softeon/upsapacpznuat/pznap/labeldaemon
+pznap_repl | /data/batchapp/softeon/upsapacpznuat/pznap/replenishmentdaemon
+pznap_rpt | /data/batchapp/softeon/upsapacpznuat/pznap/reportdaemon
+pznap_jqgrid | /data/batchapp/softeon/upsapacpznuat/pznap/reportjqgridexportdaemon
+pznap_sch | /data/batchapp/softeon/upsapacpznuat/pznap/schdulerdaemon
+pznap_inbq | /data/batchapp/softeon/upsapacpznuat/pznap/uploaddaemon
+pznap_wld | /data/batchapp/softeon/upsapacpznuat/pznap/wavelaunchdaemon
+pznap_apick | /data/batchapp/softeon/upsapacpznuat/pznap/autopickdaemon
+pznap_tiad | /data/batchapp/softeon/upsapacpznuat/pznap/taskinventoryallocationdaemon
+upsismea_dwa | /data/batchapp/softeon/upsapacpznuat/upsismea/downloaddaemon
+upsismea_event | /data/batchapp/softeon/upsapacpznuat/upsismea/eventdaemon
+upsismea_ftp | /data/batchapp/softeon/upsapacpznuat/upsismea/ftpdaemon
+upsismea_lbl | /data/batchapp/softeon/upsapacpznuat/upsismea/labeldaemon
+upsismea_repl | /data/batchapp/softeon/upsapacpznuat/upsismea/replenishmentdaemon
+upsismea_rpt | /data/batchapp/softeon/upsapacpznuat/upsismea/reportdaemon
+upsismea_jqgrid | /data/batchapp/softeon/upsapacpznuat/upsismea/reportjqgridexportdaemon
+upsismea_sch | /data/batchapp/softeon/upsapacpznuat/upsismea/schdulerdaemon
+upsismea_inbq | /data/batchapp/softeon/upsapacpznuat/upsismea/uploaddaemon
+upsismea_wld | /data/batchapp/softeon/upsapacpznuat/upsismea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3807 | upsapacpznrfuat | jboss62eap | apacpznrf_jb62 | 8081 | 172.29.60.243:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznrfuat/standalone
+3819 | upsapacpznuat | jboss62eap | apacpznapp_jb62 | 8080 | 172.29.60.243:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznuat/standalone
+3583430 | upsapacpznv8rfuat | jboss730eap | pznv8rfuat_jb73 | 8084 | 172.29.60.243:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8rfuat/standalone
+3583247 | upsapacpznv8uat | jboss730eap | pznv8uat_jb73 | 8083 | 172.29.60.243:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:00:13.309265
+==============================================================================
+
+2026-07-05 02:00:40,447 - 3777880 - ERROR - app_validation.py errors for i-0cd29f94757bc66a5:
+
+2026-07-05 02:00:40,449 - 3777880 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-BeforePatching-2026-07-05-02-00-40-448.log
+2026-07-05 02:00:40,534 - 3777880 - INFO - Sending patch command to instance i-0cd29f94757bc66a5
+2026-07-05 02:00:40,643 - 3777880 - INFO - Command sent successfully to instance i-0cd29f94757bc66a5. Command ID: 13eba875-4f32-44f1-a874-a3474a3b6e8a
+2026-07-05 02:09:42,812 - 3777880 - INFO - All patches applied successfully.
+2026-07-05 02:09:42,813 - 3777880 - INFO - Patching end time: 2026-07-05 02:09:42
+2026-07-05 02:09:42,814 - 3777880 - INFO - Patch Elapsed time: 0:09:38.483682
+2026-07-05 02:09:42,886 - 3777880 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 02:09:42,886 - 3777880 - INFO - Confirmed - services are stopped
+2026-07-05 02:10:03,385 - 3777880 - INFO - Discovered TG map: {'i-0cd29f94757bc66a5': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-Desktop/917f161448d512e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT/2c2f3ea2172a7fb9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-RF/c273f8e3c7464e3d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT-RF/de7b9d3bb804b2e9']}
+2026-07-05 02:10:03,616 - 3777880 - INFO - Deregistering i-0cd29f94757bc66a5 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-Desktop/917f161448d512e7
+2026-07-05 02:10:03,687 - 3777880 - INFO - Deregistering i-0cd29f94757bc66a5 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT/2c2f3ea2172a7fb9
+2026-07-05 02:10:03,736 - 3777880 - INFO - Deregistering i-0cd29f94757bc66a5 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-RF/c273f8e3c7464e3d
+2026-07-05 02:10:03,784 - 3777880 - INFO - Deregistering i-0cd29f94757bc66a5 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT-RF/de7b9d3bb804b2e9
+2026-07-05 02:10:03,830 - 3777880 - INFO - Stopping EC2 instance: i-0cd29f94757bc66a5 at 2026-07-05 02:10:03
+2026-07-05 02:11:50,211 - 3777880 - INFO - Instance i-0cd29f94757bc66a5 stopped successfully.
+2026-07-05 02:11:50,348 - 3777880 - INFO - Stopped i-0cd29f94757bc66a5 in 0:01:46.518171
+2026-07-05 02:11:50,349 - 3777880 - INFO - Starting EC2 instance: i-0cd29f94757bc66a5
+2026-07-05 02:12:06,379 - 3777880 - INFO - Instance i-0cd29f94757bc66a5 started successfully.
+2026-07-05 02:12:06,379 - 3777880 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0cd29f94757bc66a5...
+2026-07-05 02:13:46,405 - 3777880 - INFO - Registering i-0cd29f94757bc66a5 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-Desktop/917f161448d512e7
+2026-07-05 02:13:46,616 - 3777880 - INFO - Registering i-0cd29f94757bc66a5 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT/2c2f3ea2172a7fb9
+2026-07-05 02:13:46,746 - 3777880 - INFO - Registering i-0cd29f94757bc66a5 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-UAT-RF/c273f8e3c7464e3d
+2026-07-05 02:13:46,888 - 3777880 - INFO - Registering i-0cd29f94757bc66a5 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APACPZN-V8-UAT-RF/de7b9d3bb804b2e9
+2026-07-05 02:19:48,122 - 3777880 - INFO - Sent app_validation.py to i-0cd29f94757bc66a5 (command_id: 73c7580e-6064-4b89-9bc1-ee96b9b0fff1)
+2026-07-05 02:20:18,186 - 3777880 - INFO - app_validation.py output for i-0cd29f94757bc66a5:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:19:48.725073
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.243
+Hostname | ip-172-29-60-243
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 168.2G | 121.7G | 58% | /data
+fs-2172dc69.efs.us-east-1.amazonaws.com:/ | 0B | 579.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-2172dc69.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.243:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.243 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | pznap_dwa, pznap_event, pznap_ftp, pznap_lbl, pznap_repl, pznap_rpt, pznap_jqgrid, pznap_sch, pznap_inbq, pznap_wld, pznap_apick, pznap_tiad, upsismea_dwa, upsismea_event, upsismea_ftp, upsismea_lbl, upsismea_repl, upsismea_rpt, upsismea_jqgrid, upsismea_sch, upsismea_inbq, upsismea_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+pznap_dwa | /data/batchapp/softeon/upsapacpznuat/pznap/downloaddaemon
+pznap_event | /data/batchapp/softeon/upsapacpznuat/pznap/eventdaemon
+pznap_ftp | /data/batchapp/softeon/upsapacpznuat/pznap/ftpdaemon
+pznap_lbl | /data/batchapp/softeon/upsapacpznuat/pznap/labeldaemon
+pznap_repl | /data/batchapp/softeon/upsapacpznuat/pznap/replenishmentdaemon
+pznap_rpt | /data/batchapp/softeon/upsapacpznuat/pznap/reportdaemon
+pznap_jqgrid | /data/batchapp/softeon/upsapacpznuat/pznap/reportjqgridexportdaemon
+pznap_sch | /data/batchapp/softeon/upsapacpznuat/pznap/schdulerdaemon
+pznap_inbq | /data/batchapp/softeon/upsapacpznuat/pznap/uploaddaemon
+pznap_wld | /data/batchapp/softeon/upsapacpznuat/pznap/wavelaunchdaemon
+pznap_apick | /data/batchapp/softeon/upsapacpznuat/pznap/autopickdaemon
+pznap_tiad | /data/batchapp/softeon/upsapacpznuat/pznap/taskinventoryallocationdaemon
+upsismea_dwa | /data/batchapp/softeon/upsapacpznuat/upsismea/downloaddaemon
+upsismea_event | /data/batchapp/softeon/upsapacpznuat/upsismea/eventdaemon
+upsismea_ftp | /data/batchapp/softeon/upsapacpznuat/upsismea/ftpdaemon
+upsismea_lbl | /data/batchapp/softeon/upsapacpznuat/upsismea/labeldaemon
+upsismea_repl | /data/batchapp/softeon/upsapacpznuat/upsismea/replenishmentdaemon
+upsismea_rpt | /data/batchapp/softeon/upsapacpznuat/upsismea/reportdaemon
+upsismea_jqgrid | /data/batchapp/softeon/upsapacpznuat/upsismea/reportjqgridexportdaemon
+upsismea_sch | /data/batchapp/softeon/upsapacpznuat/upsismea/schdulerdaemon
+upsismea_inbq | /data/batchapp/softeon/upsapacpznuat/upsismea/uploaddaemon
+upsismea_wld | /data/batchapp/softeon/upsapacpznuat/upsismea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3123 | upsapacpznrfuat | jboss62eap | apacpznrf_jb62 | 8081 | 172.29.60.243:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznrfuat/standalone
+3170 | upsapacpznuat | jboss62eap | apacpznapp_jb62 | 8080 | 172.29.60.243:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznuat/standalone
+5382 | upsapacpznv8rfuat | jboss730eap | pznv8rfuat_jb73 | 8084 | 172.29.60.243:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8rfuat/standalone
+5087 | upsapacpznv8uat | jboss730eap | pznv8uat_jb73 | 8083 | 172.29.60.243:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:19:51.525663
+==============================================================================
+
+2026-07-05 02:20:18,186 - 3777880 - ERROR - app_validation.py errors for i-0cd29f94757bc66a5:
+
+2026-07-05 02:20:18,188 - 3777880 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-AfterPatching-2026-07-05-02-20-18-187.log
+2026-07-05 02:20:18,241 - 3777880 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-Validation-details-2026-07-05-02-20-18-187.html
+2026-07-05 02:20:18,479 - 3777880 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 02:20:18,479 - 3777880 - INFO - HTML validation report email sent for i-0cd29f94757bc66a5
+2026-07-05 02:20:18,479 - 3777880 - INFO - [Retry-1] Waiting 600s for i-0cd29f94757bc66a5...
+2026-07-05 02:20:18,479 - 3777880 - INFO - RED - Background retry thread started for i-0cd29f94757bc66a5
+2026-07-05 02:20:18,710 - 3777880 - INFO - Started i-0cd29f94757bc66a5 in 0:08:28.360969
+2026-07-05 02:20:18,711 - 3777880 - INFO - All instances processed.
+2026-07-05 02:20:18,715 - 3777880 - INFO - Restart Total time: 0:10:35.701947
+2026-07-05 02:20:18,716 - 3777880 - INFO - Auto-confirmed services are restarted
+2026-07-05 02:20:18,716 - 3777880 - INFO - Confirmed - services are started
+2026-07-05 02:20:18,829 - 3777880 - INFO - The following instances have failed the patch: []
+2026-07-05 02:20:18,829 - 3777880 - INFO - No instances have failed the patch.
+2026-07-05 02:20:18,829 - 3777880 - INFO - Total Patch Process time: 0:20:15.936258
+2026-07-05 02:21:19,150 - 3777880 - INFO - Log file ./logs/patching_2026-07-05_q3-ups-apacpzn-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-ups-apacpzn-uat_Patch/2026-07-05/patching_2026-07-05_q3-ups-apacpzn-uat.log
+2026-07-05 02:30:18,690 - 3777880 - INFO - Sent app_validation.py to i-0cd29f94757bc66a5 (command_id: c40a4643-2f83-4c66-ad21-891eb2d8b49a)
+2026-07-05 02:30:48,779 - 3777880 - INFO - app_validation.py output for i-0cd29f94757bc66a5:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:30:19.047124
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.243
+Hostname | ip-172-29-60-243
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 168.4G | 121.5G | 58% | /data
+fs-2172dc69.efs.us-east-1.amazonaws.com:/ | 0B | 579.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-2172dc69.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.243:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.243 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | pznap_dwa, pznap_event, pznap_ftp, pznap_lbl, pznap_repl, pznap_rpt, pznap_jqgrid, pznap_sch, pznap_inbq, pznap_wld, pznap_apick, pznap_tiad, upsismea_dwa, upsismea_event, upsismea_ftp, upsismea_lbl, upsismea_repl, upsismea_rpt, upsismea_jqgrid, upsismea_sch, upsismea_inbq, upsismea_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+pznap_dwa | /data/batchapp/softeon/upsapacpznuat/pznap/downloaddaemon
+pznap_event | /data/batchapp/softeon/upsapacpznuat/pznap/eventdaemon
+pznap_ftp | /data/batchapp/softeon/upsapacpznuat/pznap/ftpdaemon
+pznap_lbl | /data/batchapp/softeon/upsapacpznuat/pznap/labeldaemon
+pznap_repl | /data/batchapp/softeon/upsapacpznuat/pznap/replenishmentdaemon
+pznap_rpt | /data/batchapp/softeon/upsapacpznuat/pznap/reportdaemon
+pznap_jqgrid | /data/batchapp/softeon/upsapacpznuat/pznap/reportjqgridexportdaemon
+pznap_sch | /data/batchapp/softeon/upsapacpznuat/pznap/schdulerdaemon
+pznap_inbq | /data/batchapp/softeon/upsapacpznuat/pznap/uploaddaemon
+pznap_wld | /data/batchapp/softeon/upsapacpznuat/pznap/wavelaunchdaemon
+pznap_apick | /data/batchapp/softeon/upsapacpznuat/pznap/autopickdaemon
+pznap_tiad | /data/batchapp/softeon/upsapacpznuat/pznap/taskinventoryallocationdaemon
+upsismea_dwa | /data/batchapp/softeon/upsapacpznuat/upsismea/downloaddaemon
+upsismea_event | /data/batchapp/softeon/upsapacpznuat/upsismea/eventdaemon
+upsismea_ftp | /data/batchapp/softeon/upsapacpznuat/upsismea/ftpdaemon
+upsismea_lbl | /data/batchapp/softeon/upsapacpznuat/upsismea/labeldaemon
+upsismea_repl | /data/batchapp/softeon/upsapacpznuat/upsismea/replenishmentdaemon
+upsismea_rpt | /data/batchapp/softeon/upsapacpznuat/upsismea/reportdaemon
+upsismea_jqgrid | /data/batchapp/softeon/upsapacpznuat/upsismea/reportjqgridexportdaemon
+upsismea_sch | /data/batchapp/softeon/upsapacpznuat/upsismea/schdulerdaemon
+upsismea_inbq | /data/batchapp/softeon/upsapacpznuat/upsismea/uploaddaemon
+upsismea_wld | /data/batchapp/softeon/upsapacpznuat/upsismea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3123 | upsapacpznrfuat | jboss62eap | apacpznrf_jb62 | 8081 | 172.29.60.243:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznrfuat/standalone
+3170 | upsapacpznuat | jboss62eap | apacpznapp_jb62 | 8080 | 172.29.60.243:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznuat/standalone
+5382 | upsapacpznv8rfuat | jboss730eap | pznv8rfuat_jb73 | 8084 | 172.29.60.243:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8rfuat/standalone
+5087 | upsapacpznv8uat | jboss730eap | pznv8uat_jb73 | 8083 | 172.29.60.243:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:30:20.150830
+==============================================================================
+
+2026-07-05 02:30:48,779 - 3777880 - ERROR - app_validation.py errors for i-0cd29f94757bc66a5:
+
+2026-07-05 02:30:48,780 - 3777880 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-AfterPatching-Retry1-2026-07-05-02-30-48-780.log
+2026-07-05 02:30:48,834 - 3777880 - INFO - [Retry-1] RED detected for UPS-APACPZN-UAT (172.29.60.243), retrying... (Total waited: 600s)
+2026-07-05 02:30:48,835 - 3777880 - INFO - [Retry-2] Waiting 600s for i-0cd29f94757bc66a5...
+2026-07-05 02:40:49,171 - 3777880 - INFO - Sent app_validation.py to i-0cd29f94757bc66a5 (command_id: 5bfe0981-d962-4f28-8373-892a06c7c5d2)
+2026-07-05 02:41:19,262 - 3777880 - INFO - app_validation.py output for i-0cd29f94757bc66a5:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:40:49.426377
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.243
+Hostname | ip-172-29-60-243
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 168.6G | 121.2G | 58% | /data
+fs-2172dc69.efs.us-east-1.amazonaws.com:/ | 0B | 579.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-2172dc69.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.243:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.243 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | pznap_dwa, pznap_event, pznap_ftp, pznap_lbl, pznap_repl, pznap_rpt, pznap_jqgrid, pznap_sch, pznap_inbq, pznap_wld, pznap_apick, pznap_tiad, upsismea_dwa, upsismea_event, upsismea_ftp, upsismea_lbl, upsismea_repl, upsismea_rpt, upsismea_jqgrid, upsismea_sch, upsismea_inbq, upsismea_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+pznap_dwa | /data/batchapp/softeon/upsapacpznuat/pznap/downloaddaemon
+pznap_event | /data/batchapp/softeon/upsapacpznuat/pznap/eventdaemon
+pznap_ftp | /data/batchapp/softeon/upsapacpznuat/pznap/ftpdaemon
+pznap_lbl | /data/batchapp/softeon/upsapacpznuat/pznap/labeldaemon
+pznap_repl | /data/batchapp/softeon/upsapacpznuat/pznap/replenishmentdaemon
+pznap_rpt | /data/batchapp/softeon/upsapacpznuat/pznap/reportdaemon
+pznap_jqgrid | /data/batchapp/softeon/upsapacpznuat/pznap/reportjqgridexportdaemon
+pznap_sch | /data/batchapp/softeon/upsapacpznuat/pznap/schdulerdaemon
+pznap_inbq | /data/batchapp/softeon/upsapacpznuat/pznap/uploaddaemon
+pznap_wld | /data/batchapp/softeon/upsapacpznuat/pznap/wavelaunchdaemon
+pznap_apick | /data/batchapp/softeon/upsapacpznuat/pznap/autopickdaemon
+pznap_tiad | /data/batchapp/softeon/upsapacpznuat/pznap/taskinventoryallocationdaemon
+upsismea_dwa | /data/batchapp/softeon/upsapacpznuat/upsismea/downloaddaemon
+upsismea_event | /data/batchapp/softeon/upsapacpznuat/upsismea/eventdaemon
+upsismea_ftp | /data/batchapp/softeon/upsapacpznuat/upsismea/ftpdaemon
+upsismea_lbl | /data/batchapp/softeon/upsapacpznuat/upsismea/labeldaemon
+upsismea_repl | /data/batchapp/softeon/upsapacpznuat/upsismea/replenishmentdaemon
+upsismea_rpt | /data/batchapp/softeon/upsapacpznuat/upsismea/reportdaemon
+upsismea_jqgrid | /data/batchapp/softeon/upsapacpznuat/upsismea/reportjqgridexportdaemon
+upsismea_sch | /data/batchapp/softeon/upsapacpznuat/upsismea/schdulerdaemon
+upsismea_inbq | /data/batchapp/softeon/upsapacpznuat/upsismea/uploaddaemon
+upsismea_wld | /data/batchapp/softeon/upsapacpznuat/upsismea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3123 | upsapacpznrfuat | jboss62eap | apacpznrf_jb62 | 8081 | 172.29.60.243:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznrfuat/standalone
+3170 | upsapacpznuat | jboss62eap | apacpznapp_jb62 | 8080 | 172.29.60.243:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznuat/standalone
+5382 | upsapacpznv8rfuat | jboss730eap | pznv8rfuat_jb73 | 8084 | 172.29.60.243:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8rfuat/standalone
+5087 | upsapacpznv8uat | jboss730eap | pznv8uat_jb73 | 8083 | 172.29.60.243:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:40:50.557473
+==============================================================================
+
+2026-07-05 02:41:19,262 - 3777880 - ERROR - app_validation.py errors for i-0cd29f94757bc66a5:
+
+2026-07-05 02:41:19,264 - 3777880 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-AfterPatching-Retry2-2026-07-05-02-41-19-264.log
+2026-07-05 02:41:19,317 - 3777880 - INFO - [Retry-2] RED detected for UPS-APACPZN-UAT (172.29.60.243), retrying... (Total waited: 1200s)
+2026-07-05 02:41:19,317 - 3777880 - INFO - [Retry-3] Waiting 600s for i-0cd29f94757bc66a5...
+2026-07-05 02:51:19,516 - 3777880 - INFO - Sent app_validation.py to i-0cd29f94757bc66a5 (command_id: 91f17af5-dfcd-4b4d-91db-8c894c3c517a)
+2026-07-05 02:51:49,603 - 3777880 - INFO - app_validation.py output for i-0cd29f94757bc66a5:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:51:19.789293
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.243
+Hostname | ip-172-29-60-243
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 168.8G | 121.1G | 58% | /data
+fs-2172dc69.efs.us-east-1.amazonaws.com:/ | 0B | 579.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-2172dc69.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.243:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.243 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | pznap_dwa, pznap_event, pznap_ftp, pznap_lbl, pznap_repl, pznap_rpt, pznap_jqgrid, pznap_sch, pznap_inbq, pznap_wld, pznap_apick, pznap_tiad, upsismea_dwa, upsismea_event, upsismea_ftp, upsismea_lbl, upsismea_repl, upsismea_rpt, upsismea_jqgrid, upsismea_sch, upsismea_inbq, upsismea_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+pznap_dwa | /data/batchapp/softeon/upsapacpznuat/pznap/downloaddaemon
+pznap_event | /data/batchapp/softeon/upsapacpznuat/pznap/eventdaemon
+pznap_ftp | /data/batchapp/softeon/upsapacpznuat/pznap/ftpdaemon
+pznap_lbl | /data/batchapp/softeon/upsapacpznuat/pznap/labeldaemon
+pznap_repl | /data/batchapp/softeon/upsapacpznuat/pznap/replenishmentdaemon
+pznap_rpt | /data/batchapp/softeon/upsapacpznuat/pznap/reportdaemon
+pznap_jqgrid | /data/batchapp/softeon/upsapacpznuat/pznap/reportjqgridexportdaemon
+pznap_sch | /data/batchapp/softeon/upsapacpznuat/pznap/schdulerdaemon
+pznap_inbq | /data/batchapp/softeon/upsapacpznuat/pznap/uploaddaemon
+pznap_wld | /data/batchapp/softeon/upsapacpznuat/pznap/wavelaunchdaemon
+pznap_apick | /data/batchapp/softeon/upsapacpznuat/pznap/autopickdaemon
+pznap_tiad | /data/batchapp/softeon/upsapacpznuat/pznap/taskinventoryallocationdaemon
+upsismea_dwa | /data/batchapp/softeon/upsapacpznuat/upsismea/downloaddaemon
+upsismea_event | /data/batchapp/softeon/upsapacpznuat/upsismea/eventdaemon
+upsismea_ftp | /data/batchapp/softeon/upsapacpznuat/upsismea/ftpdaemon
+upsismea_lbl | /data/batchapp/softeon/upsapacpznuat/upsismea/labeldaemon
+upsismea_repl | /data/batchapp/softeon/upsapacpznuat/upsismea/replenishmentdaemon
+upsismea_rpt | /data/batchapp/softeon/upsapacpznuat/upsismea/reportdaemon
+upsismea_jqgrid | /data/batchapp/softeon/upsapacpznuat/upsismea/reportjqgridexportdaemon
+upsismea_sch | /data/batchapp/softeon/upsapacpznuat/upsismea/schdulerdaemon
+upsismea_inbq | /data/batchapp/softeon/upsapacpznuat/upsismea/uploaddaemon
+upsismea_wld | /data/batchapp/softeon/upsapacpznuat/upsismea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3123 | upsapacpznrfuat | jboss62eap | apacpznrf_jb62 | 8081 | 172.29.60.243:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznrfuat/standalone
+3170 | upsapacpznuat | jboss62eap | apacpznapp_jb62 | 8080 | 172.29.60.243:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upsapacpznuat/standalone
+5382 | upsapacpznv8rfuat | jboss730eap | pznv8rfuat_jb73 | 8084 | 172.29.60.243:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8rfuat/standalone
+5087 | upsapacpznv8uat | jboss730eap | pznv8uat_jb73 | 8083 | 172.29.60.243:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsapacpznv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:51:20.943252
+==============================================================================
+
+2026-07-05 02:51:49,603 - 3777880 - ERROR - app_validation.py errors for i-0cd29f94757bc66a5:
+
+2026-07-05 02:51:49,604 - 3777880 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-apacpzn-uat/172.29.60.243/172.29.60.243-AfterPatching-Retry3-2026-07-05-02-51-49-604.log
+2026-07-05 02:51:49,929 - 3777880 - INFO - Health monitor crontab enabled on all instances
+2026-07-05 02:51:49,930 - 3777880 - WARNING - [Retry] Timeout - auto cron enabled for i-0cd29f94757bc66a5

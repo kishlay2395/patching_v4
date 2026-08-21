@@ -1,0 +1,236 @@
+2026-04-26 01:25:02,831 - 1268686 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-26 01:33:26,822 - 1268686 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-26 01:33:26,993 - 1268686 - INFO - Log file ./logs/backup_2026-04-26.log uploaded to s3://q3-2025-aws-security-patching/q2-crane252-prod-batch_Patch_Backup/2026-04-26/backup_2026-04-26.log
+2026-04-26 05:25:02,450 - 1278885 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-26 05:25:02,450 - 1278885 - INFO - Script Start Time: 2026-04-26 05:25:02
+2026-04-26 05:25:02,656 - 1278885 - INFO - Instance(s) selected for Patching: {'i-086c4e6f6bca3f40c': '172.31.30.41'}
+2026-04-26 05:25:02,722 - 1278885 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 05:25:02,723 - 1278885 - INFO - Now patching instances at: 2026-04-26 05:25:02
+2026-04-26 05:25:02,816 - 1278885 - INFO - Sending patch command to instance i-086c4e6f6bca3f40c
+2026-04-26 05:25:02,976 - 1278885 - INFO - Command sent successfully to instance i-086c4e6f6bca3f40c. Command ID: 39c525a6-bff1-47dd-aed1-4944389c1a6e
+2026-04-26 05:28:34,150 - 1278885 - INFO - All patches applied successfully.
+2026-04-26 05:28:34,150 - 1278885 - INFO - Patching end time: 2026-04-26 05:28:34
+2026-04-26 05:28:34,151 - 1278885 - INFO - Patch Elapsed time: 0:03:31.427950
+2026-04-26 05:28:34,222 - 1278885 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 05:28:34,222 - 1278885 - INFO - Confirmed - services are stopped
+2026-04-26 05:28:53,725 - 1278885 - INFO - Discovered TG map: {}
+2026-04-26 05:28:54,141 - 1278885 - INFO - Sent app_validation.py to i-086c4e6f6bca3f40c (command_id: ab8f73f5-20d5-4070-b1dd-8c4d06328cea)
+2026-04-26 05:29:24,204 - 1278885 - INFO - app_validation.py output for i-086c4e6f6bca3f40c:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 09:28:54.374027
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.30.41
+Hostname | ip-172-31-30-41
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 19.2G | 220.7G | 7% | /data
+fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | 0B | 5.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.31.30.41:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.30.41 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | crn252_abchdis, crn252_lbl, crn252_sch, crn252_rpt, crn252_inbq, crn252_jqgrid, crn252_wld, crn252_cvg_lbl, crn252_dwa, crn252_ftp, crncfg_bcopy, crn252_event, crn252_rplpu, crn252_harp, crn252_rccl, crn252_iah1_wld, crn252_iah1_lbl, crn252_cvg_wld, crn252_repl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+crn252_abchdis | /data/batchapp/softeon/crane252prod/autobatchdistributiondaemon
+crn252_lbl | /data/batchapp/softeon/crane252prod/labeldaemon
+crn252_sch | /data/batchapp/softeon/crane252prod/schedulardaemon
+crn252_rpt | /data/batchapp/softeon/crane252prod/reportdaemon
+crn252_inbq | /data/batchapp/softeon/crane252prod/uploaddeamon
+crn252_jqgrid | /data/batchapp/softeon/crane252prod/reportjqgridexportdaemon
+crn252_wld | /data/batchapp/softeon/crane252prod/wavelaunchdaemon
+crn252_cvg_lbl | /data/batchapp/softeon/crane252prod_cvg/labeldaemon_cvg
+crn252_dwa | /data/batchapp/softeon/crane252prod/downloaddaemon
+crn252_ftp | /data/batchapp/softeon/crane252prod/ftpdaemon
+crncfg_bcopy | /data/batchapp/softeon/craneconfig252prod/bulkdatacopydaemon
+crn252_event | /data/batchapp/softeon/crane252prod/eventdaemon
+crn252_rplpu | /data/batchapp/softeon/crane252prod/replenishmentpriorityupdatedaemon
+crn252_harp | /data/batchapp/softeon/crane252prod/hardallocationdaemon
+crn252_rccl | /data/batchapp/softeon/crane252prod/replenishmentpickloccanceldaemon
+crn252_iah1_wld | /data/batchapp/softeon/crane252prod_iah1/wavelaunchdaemon_iah1
+crn252_iah1_lbl | /data/batchapp/softeon/crane252prod_iah1/labeldaemon_iah1
+crn252_cvg_wld | /data/batchapp/softeon/crane252prod_cvg/wavelaunchdaemon_cvg
+crn252_repl | /data/batchapp/softeon/crane252prod/replenishmentdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 09:28:54.867096
+==============================================================================
+
+2026-04-26 05:29:24,204 - 1278885 - ERROR - app_validation.py errors for i-086c4e6f6bca3f40c:
+
+2026-04-26 05:29:24,206 - 1278885 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-26/q2-crane252-prod-batch/172.31.30.41/172.31.30.41-BeforePatching-2026-04-26-05-29-24-206.log
+2026-04-26 05:29:24,206 - 1278885 - INFO - Stopping EC2 instance: i-086c4e6f6bca3f40c at 2026-04-26 05:29:24
+2026-04-26 05:30:10,163 - 1278885 - INFO - Instance i-086c4e6f6bca3f40c stopped successfully.
+2026-04-26 05:30:10,289 - 1278885 - INFO - Stopped i-086c4e6f6bca3f40c in 0:00:46.083054
+2026-04-26 05:30:10,290 - 1278885 - INFO - Starting EC2 instance: i-086c4e6f6bca3f40c
+2026-04-26 05:30:26,276 - 1278885 - INFO - Instance i-086c4e6f6bca3f40c started successfully.
+2026-04-26 05:30:26,276 - 1278885 - INFO - Waiting 50 seconds for SSM agent to be ready on i-086c4e6f6bca3f40c...
+2026-04-26 05:31:16,549 - 1278885 - INFO - Sent app_validation.py to i-086c4e6f6bca3f40c (command_id: 9b19ae4a-b407-4ff7-af3a-545bb25783b9)
+2026-04-26 05:31:46,664 - 1278885 - INFO - app_validation.py output for i-086c4e6f6bca3f40c:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 09:31:16.868621
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.30.41
+Hostname | ip-172-31-30-41
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 19.1G | 220.8G | 7% | /data
+fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | 0B | 5.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.31.30.41:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.30.41 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 1
+Non-Standalone Java Processes | crn252_iah1_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 1
+Java-Name | Java-Path
+crn252_iah1_wld | /data/batchapp/softeon/crane252prod_iah1/wavelaunchdaemon_iah1
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 09:31:17.122497
+==============================================================================
+
+2026-04-26 05:31:46,664 - 1278885 - ERROR - app_validation.py errors for i-086c4e6f6bca3f40c:
+
+2026-04-26 05:31:46,666 - 1278885 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-26/q2-crane252-prod-batch/172.31.30.41/172.31.30.41-AfterPatching-2026-04-26-05-31-46-665.log
+2026-04-26 05:31:46,725 - 1278885 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-26/q2-crane252-prod-batch/172.31.30.41/172.31.30.41-Validation-details-2026-04-26-05-31-46-665.html
+2026-04-26 05:31:46,802 - 1278885 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-26 05:31:46,802 - 1278885 - INFO - HTML validation report email sent for i-086c4e6f6bca3f40c
+2026-04-26 05:31:46,942 - 1278885 - INFO - Started i-086c4e6f6bca3f40c in 0:01:36.652242
+2026-04-26 05:31:46,943 - 1278885 - INFO - All instances processed.
+2026-04-26 05:31:46,945 - 1278885 - INFO - Restart Total time: 0:03:12.590325
+2026-04-26 05:31:46,945 - 1278885 - INFO - Auto-confirmed services are restarted
+2026-04-26 05:31:46,945 - 1278885 - INFO - Confirmed - services are started
+2026-04-26 05:31:47,055 - 1278885 - INFO - The following instances have failed the patch: []
+2026-04-26 05:31:47,056 - 1278885 - INFO - No instances have failed the patch.
+2026-04-26 05:31:47,056 - 1278885 - INFO - Total Patch Process time: 0:06:44.605166
+2026-04-26 05:32:47,432 - 1278885 - INFO - Log file ./logs/patching_2026-04-26_q2-crane252-prod-batch.log uploaded to s3://q2-2026-aws-security-patching/q2-crane252-prod-batch_Patch/2026-04-26/patching_2026-04-26_q2-crane252-prod-batch.log

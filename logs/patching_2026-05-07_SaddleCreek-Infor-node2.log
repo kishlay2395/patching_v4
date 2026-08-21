@@ -1,0 +1,245 @@
+2026-05-07 02:10:02,754 - 426913 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-07 02:10:02,754 - 426913 - INFO - Script Start Time: 2026-05-07 02:10:02
+2026-05-07 02:10:03,000 - 426913 - INFO - Instance(s) selected for Patching: {'i-0023ffff4d6990326': '10.0.10.234'}
+2026-05-07 02:10:03,077 - 426913 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-07 02:10:03,077 - 426913 - INFO - Now patching instances at: 2026-05-07 02:10:03
+2026-05-07 02:10:03,165 - 426913 - INFO - Sending patch command to instance i-0023ffff4d6990326
+2026-05-07 02:10:03,319 - 426913 - INFO - Command sent successfully to instance i-0023ffff4d6990326. Command ID: f5bfeeb2-e8c9-407f-9399-bf9e06071feb
+2026-05-07 02:14:34,610 - 426913 - INFO - All patches applied successfully.
+2026-05-07 02:14:34,611 - 426913 - INFO - Patching end time: 2026-05-07 02:14:34
+2026-05-07 02:14:34,611 - 426913 - INFO - Patch Elapsed time: 0:04:31.534202
+2026-05-07 02:14:34,688 - 426913 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-07 02:14:34,688 - 426913 - INFO - Confirmed - services are stopped
+2026-05-07 02:14:54,812 - 426913 - INFO - Discovered TG map: {'i-0023ffff4d6990326': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2']}
+2026-05-07 02:14:55,195 - 426913 - INFO - Sent app_validation.py to i-0023ffff4d6990326 (command_id: 1c88a9e7-8ae0-4f28-8dad-ef57bd0afcf4)
+2026-05-07 02:15:25,296 - 426913 - INFO - app_validation.py output for i-0023ffff4d6990326:
+
+==============================================================================
+Server Availability Check Started | 2026-05-07 06:14:55.508334
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.234
+Hostname | ip-10-0-10-234
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 33.5G | 206.4G | 13% | /data
+fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | 0B | 870.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.234:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.234 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 31
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | sclwesinf_dwa, sclwesinf_ftp, sclwesinf_sch, sclwesinf_inbq, sclwesinf_rptex, sclwesinf_bre, sclwesinf_rpt, sclwesinf_wld, scleinf_dwa, scleinf_ftp, scleinf_sch, scleinf_inbq, scleinf_rptex, scleinf_bre, scleinf_rpt, scleinf_wld, sclegro_wld, scleinf_newnwld, sclcinf_dwa, sclcinf_ftp, sclcinf_sch, sclcinf_inbq, sclcinf_rptex, sclcinf_bre, sclcinf_rpt, sclcinf_bescwld, sclcinf_newcwld, sclcinf_edwcwld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+sclwesinf_dwa | /data/batchapp/softeon/sclwesinforprod/downloaddaemon
+sclwesinf_ftp | /data/batchapp/softeon/sclwesinforprod/ftpdaemon
+sclwesinf_sch | /data/batchapp/softeon/sclwesinforprod/schedulerdaemon
+sclwesinf_inbq | /data/batchapp/softeon/sclwesinforprod/uploaddaemon
+sclwesinf_rptex | /data/batchapp/softeon/sclwesinforprod/reportjqgridexportdaemon
+sclwesinf_bre | /data/batchapp/softeon/sclwesinforprod/breruledaemon
+sclwesinf_rpt | /data/batchapp/softeon/sclwesinforprod/reportdaemon
+sclwesinf_wld | /data/batchapp/softeon/sclwesinforprod/wavelaunchdaemon
+scleinf_dwa | /data/batchapp/softeon/sclwesinforprod_scle/downloaddaemon
+scleinf_ftp | /data/batchapp/softeon/sclwesinforprod_scle/ftpdaemon
+scleinf_sch | /data/batchapp/softeon/sclwesinforprod_scle/schedulerdaemon
+scleinf_inbq | /data/batchapp/softeon/sclwesinforprod_scle/uploaddaemon
+scleinf_rptex | /data/batchapp/softeon/sclwesinforprod_scle/reportjqgridexportdaemon
+scleinf_bre | /data/batchapp/softeon/sclwesinforprod_scle/breruledaemon
+scleinf_rpt | /data/batchapp/softeon/sclwesinforprod_scle/reportdaemon
+scleinf_wld | /data/batchapp/softeon/sclwesinforprod_scle/wavelaunchdaemon
+sclegro_wld | /data/batchapp/softeon/sclwesinforprod_scle/wavelaunchdaemon_gro
+scleinf_newnwld | /data/batchapp/softeon/sclwesinforprod_scle/wavelaunchdaemon_newn
+sclcinf_dwa | /data/batchapp/softeon/sclwesinforprod_sclc/downloaddaemon
+sclcinf_ftp | /data/batchapp/softeon/sclwesinforprod_sclc/ftpdaemon
+sclcinf_sch | /data/batchapp/softeon/sclwesinforprod_sclc/schedulerdaemon
+sclcinf_inbq | /data/batchapp/softeon/sclwesinforprod_sclc/uploaddaemon
+sclcinf_rptex | /data/batchapp/softeon/sclwesinforprod_sclc/reportjqgridexportdaemon
+sclcinf_bre | /data/batchapp/softeon/sclwesinforprod_sclc/breruledaemon
+sclcinf_rpt | /data/batchapp/softeon/sclwesinforprod_sclc/reportdaemon
+sclcinf_bescwld | /data/batchapp/softeon/sclwesinforprod_sclc/wavelaunchdaemon_bes
+sclcinf_newcwld | /data/batchapp/softeon/sclwesinforprod_sclc/wavelaunchdaemon_newc
+sclcinf_edwcwld | /data/batchapp/softeon/sclwesinforprod_sclc/wavelaunchdaemon_edw
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3329 | sclwesinforprod | jboss730eap | sclwesinfo_jb73 | 8080 | 10.0.10.234:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesinforprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-07 06:14:56.556472
+==============================================================================
+
+2026-05-07 02:15:25,297 - 426913 - ERROR - app_validation.py errors for i-0023ffff4d6990326:
+
+2026-05-07 02:15:25,298 - 426913 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node2/10.0.10.234/10.0.10.234-BeforePatching-2026-05-07-02-15-25-298.log
+2026-05-07 02:15:25,298 - 426913 - INFO - Deregistering i-0023ffff4d6990326 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2
+2026-05-07 02:15:25,365 - 426913 - INFO - Stopping EC2 instance: i-0023ffff4d6990326 at 2026-05-07 02:15:25
+2026-05-07 02:16:41,664 - 426913 - INFO - Instance i-0023ffff4d6990326 stopped successfully.
+2026-05-07 02:16:41,805 - 426913 - INFO - Stopped i-0023ffff4d6990326 in 0:01:16.439844
+2026-05-07 02:16:41,805 - 426913 - INFO - Starting EC2 instance: i-0023ffff4d6990326
+2026-05-07 02:16:57,868 - 426913 - INFO - Instance i-0023ffff4d6990326 started successfully.
+2026-05-07 02:16:57,868 - 426913 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0023ffff4d6990326...
+2026-05-07 02:18:37,968 - 426913 - INFO - Registering i-0023ffff4d6990326 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2
+2026-05-07 02:19:08,527 - 426913 - INFO - Sent app_validation.py to i-0023ffff4d6990326 (command_id: 65b5c59f-6771-411e-a50d-c091f067086a)
+2026-05-07 02:19:38,587 - 426913 - INFO - app_validation.py output for i-0023ffff4d6990326:
+
+==============================================================================
+Server Availability Check Started | 2026-05-07 06:19:08.864049
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.234
+Hostname | ip-10-0-10-234
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 33.3G | 206.5G | 13% | /data
+fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | 0B | 870.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.234:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.234 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3330 | sclwesinforprod | jboss730eap | sclwesinfo_jb73 | 8080 | 10.0.10.234:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesinforprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-07 06:19:09.310818
+==============================================================================
+
+2026-05-07 02:19:38,587 - 426913 - ERROR - app_validation.py errors for i-0023ffff4d6990326:
+
+2026-05-07 02:19:38,589 - 426913 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node2/10.0.10.234/10.0.10.234-AfterPatching-2026-05-07-02-19-38-589.log
+2026-05-07 02:19:38,642 - 426913 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node2/10.0.10.234/10.0.10.234-Validation-details-2026-05-07-02-19-38-589.html
+2026-05-07 02:19:38,898 - 426913 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-07 02:19:38,899 - 426913 - INFO - HTML validation report email sent for i-0023ffff4d6990326
+2026-05-07 02:19:39,018 - 426913 - INFO - Started i-0023ffff4d6990326 in 0:02:57.212988
+2026-05-07 02:19:39,019 - 426913 - INFO - All instances processed.
+2026-05-07 02:19:39,023 - 426913 - INFO - Restart Total time: 0:05:04.201204
+2026-05-07 02:19:39,023 - 426913 - INFO - Auto-confirmed services are restarted
+2026-05-07 02:19:39,023 - 426913 - INFO - Confirmed - services are started
+2026-05-07 02:19:39,148 - 426913 - INFO - The following instances have failed the patch: []
+2026-05-07 02:19:39,148 - 426913 - INFO - No instances have failed the patch.
+2026-05-07 02:19:39,148 - 426913 - INFO - Total Patch Process time: 0:09:36.393183
+2026-05-07 02:20:39,494 - 426913 - INFO - Log file ./logs/patching_2026-05-07_SaddleCreek-Infor-node2.log uploaded to s3://q2-2026-aws-security-patching/SaddleCreek-Infor-node2_Patch/2026-05-07/patching_2026-05-07_SaddleCreek-Infor-node2.log

@@ -1,0 +1,589 @@
+2026-07-11 01:00:04,230 - 4111124 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-11 01:00:04,230 - 4111124 - INFO - Script Start Time: 2026-07-11 01:00:04
+2026-07-11 01:00:05,077 - 4111124 - INFO - Instance(s) selected for Patching: {'i-02b64cbbcb8336483': '172.30.164.4'}
+2026-07-11 01:00:05,165 - 4111124 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 01:00:05,165 - 4111124 - INFO - Now patching instances at: 2026-07-11 01:00:05
+2026-07-11 01:00:10,710 - 4111124 - INFO - i-02b64cbbcb8336483: Cron was active = True
+2026-07-11 01:00:10,924 - 4111124 - INFO - Health monitor crontab disabled on all instances
+2026-07-11 01:00:10,925 - 4111124 - INFO - Disabled cron for: ['i-02b64cbbcb8336483']
+2026-07-11 01:00:11,245 - 4111124 - INFO - Sent app_validation.py to i-02b64cbbcb8336483 (command_id: 04c849ee-3b50-4d48-bfb3-040b08e56128)
+2026-07-11 01:00:41,331 - 4111124 - INFO - app_validation.py output for i-02b64cbbcb8336483:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 05:00:11.626476
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.4
+Hostname | ip-172-30-164-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 117.5G | 122.3G | 48% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | tigcfg_bcopy, tiguat_dwa, tiguat_event, tiguat_ftp, tiguat_harp, tiguat_lbl, tiguat_repl, tiguat_rccl, tiguat_rplpu, tiguat_rpt, tiguat_jqgrid, tiguat_sch, tiguat_inbq, tiguat_wld, tiguat_ict, tiguat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+tigcfg_bcopy | /data/batchapp/softeon/tigconfiguat/bulkdatacopydaemon
+tiguat_dwa | /data/batchapp/softeon/tiguat/downloaddaemon
+tiguat_event | /data/batchapp/softeon/tiguat/eventdaemon
+tiguat_ftp | /data/batchapp/softeon/tiguat/ftpdaemon
+tiguat_harp | /data/batchapp/softeon/tiguat/hardallocationdaemon
+tiguat_lbl | /data/batchapp/softeon/tiguat/labeldaemon
+tiguat_repl | /data/batchapp/softeon/tiguat/replenishmentdaemon
+tiguat_rccl | /data/batchapp/softeon/tiguat/replenishmentpickloccanceldaemon
+tiguat_rplpu | /data/batchapp/softeon/tiguat/replenishmentpriorityupdatedaemon
+tiguat_rpt | /data/batchapp/softeon/tiguat/reportdaemon
+tiguat_jqgrid | /data/batchapp/softeon/tiguat/reportjqgridexportdaemon
+tiguat_sch | /data/batchapp/softeon/tiguat/schedulerdaemon
+tiguat_inbq | /data/batchapp/softeon/tiguat/uploaddaemon
+tiguat_wld | /data/batchapp/softeon/tiguat/wavelaunchdaemon
+tiguat_ict | /data/batchapp/softeon/tiguat/ictdaemon
+tiguat_tiad | /data/batchapp/softeon/tiguat/tasklevelinventoryallocation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3612 | tigconfiguat | jboss740eap | tigconfuat_j74 | 8083 | 172.30.164.4:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfiguat/standalone
+1056675 | tigrfuat | jboss800eap | tigrfuat_800eap | 8081 | 172.30.164.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfuat/standalone
+3369 | tigswpuat | jboss800eap | tigswpuat_800ea | 8082 | 172.30.164.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpuat/standalone
+1056595 | tiguat | jboss800eap | tiguat_800eap | 8080 | 172.30.164.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 05:00:13.525408
+==============================================================================
+
+2026-07-11 01:00:41,331 - 4111124 - ERROR - app_validation.py errors for i-02b64cbbcb8336483:
+
+2026-07-11 01:00:41,333 - 4111124 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-BeforePatching-2026-07-11-01-00-41-332.log
+2026-07-11 01:00:41,419 - 4111124 - INFO - Sending patch command to instance i-02b64cbbcb8336483
+2026-07-11 01:00:41,599 - 4111124 - INFO - Command sent successfully to instance i-02b64cbbcb8336483. Command ID: 144bea25-f334-4408-9cab-cf1f774af4ae
+2026-07-11 01:08:13,604 - 4111124 - INFO - All patches applied successfully.
+2026-07-11 01:08:13,604 - 4111124 - INFO - Patching end time: 2026-07-11 01:08:13
+2026-07-11 01:08:13,604 - 4111124 - INFO - Patch Elapsed time: 0:08:08.439038
+2026-07-11 01:08:13,669 - 4111124 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 01:08:13,670 - 4111124 - INFO - Confirmed - services are stopped
+2026-07-11 01:08:20,957 - 4111124 - INFO - Discovered TG map: {'i-02b64cbbcb8336483': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Config/e362a9ba4ae64b88', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Desktop/4dcd35a198fe58d5', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Portal-Ext/2530cc6c8fc378ec', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-RF/5fee8015d32c0a36']}
+2026-07-11 01:08:21,296 - 4111124 - INFO - Deregistering i-02b64cbbcb8336483 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Config/e362a9ba4ae64b88
+2026-07-11 01:08:21,415 - 4111124 - INFO - Deregistering i-02b64cbbcb8336483 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Desktop/4dcd35a198fe58d5
+2026-07-11 01:08:21,477 - 4111124 - INFO - Deregistering i-02b64cbbcb8336483 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Portal-Ext/2530cc6c8fc378ec
+2026-07-11 01:08:21,536 - 4111124 - INFO - Deregistering i-02b64cbbcb8336483 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-RF/5fee8015d32c0a36
+2026-07-11 01:08:21,596 - 4111124 - INFO - Stopping EC2 instance: i-02b64cbbcb8336483 at 2026-07-11 01:08:21
+2026-07-11 01:10:38,309 - 4111124 - INFO - Instance i-02b64cbbcb8336483 stopped successfully.
+2026-07-11 01:10:38,447 - 4111124 - INFO - Stopped i-02b64cbbcb8336483 in 0:02:16.851412
+2026-07-11 01:10:38,448 - 4111124 - INFO - Starting EC2 instance: i-02b64cbbcb8336483
+2026-07-11 01:10:54,280 - 4111124 - INFO - Instance i-02b64cbbcb8336483 started successfully.
+2026-07-11 01:10:54,280 - 4111124 - INFO - Waiting 100 seconds for SSM agent to be ready on i-02b64cbbcb8336483...
+2026-07-11 01:12:34,311 - 4111124 - INFO - Registering i-02b64cbbcb8336483 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Config/e362a9ba4ae64b88
+2026-07-11 01:12:34,536 - 4111124 - INFO - Registering i-02b64cbbcb8336483 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Desktop/4dcd35a198fe58d5
+2026-07-11 01:12:34,687 - 4111124 - INFO - Registering i-02b64cbbcb8336483 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-Portal-Ext/2530cc6c8fc378ec
+2026-07-11 01:12:34,821 - 4111124 - INFO - Registering i-02b64cbbcb8336483 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-UAT-RF/5fee8015d32c0a36
+2026-07-11 01:16:05,910 - 4111124 - INFO - Sent app_validation.py to i-02b64cbbcb8336483 (command_id: fdfcb1f5-49b6-4181-ac72-6e05d53ec668)
+2026-07-11 01:16:36,004 - 4111124 - INFO - app_validation.py output for i-02b64cbbcb8336483:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 05:16:06.247001
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.4
+Hostname | ip-172-30-164-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 117.4G | 122.5G | 48% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3649 | tigconfiguat | jboss740eap | tigconfuat_j74 | 8083 | 172.30.164.4:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfiguat/standalone
+4259 | tigrfuat | jboss800eap | tigrfuat_800eap | 8081 | 172.30.164.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfuat/standalone
+3396 | tigswpuat | jboss800eap | tigswpuat_800ea | 8082 | 172.30.164.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpuat/standalone
+4210 | tiguat | jboss800eap | tiguat_800eap | 8080 | 172.30.164.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 05:16:08.598207
+==============================================================================
+
+2026-07-11 01:16:36,005 - 4111124 - ERROR - app_validation.py errors for i-02b64cbbcb8336483:
+
+2026-07-11 01:16:36,006 - 4111124 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-AfterPatching-2026-07-11-01-16-36-006.log
+2026-07-11 01:16:36,059 - 4111124 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-Validation-details-2026-07-11-01-16-36-006.html
+2026-07-11 01:16:36,376 - 4111124 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 01:16:36,376 - 4111124 - INFO - HTML validation report email sent for i-02b64cbbcb8336483
+2026-07-11 01:16:36,377 - 4111124 - INFO - [Retry-1] Waiting 600s for i-02b64cbbcb8336483...
+2026-07-11 01:16:36,377 - 4111124 - INFO - RED - Background retry thread started for i-02b64cbbcb8336483
+2026-07-11 01:16:36,511 - 4111124 - INFO - Started i-02b64cbbcb8336483 in 0:05:58.063170
+2026-07-11 01:16:36,511 - 4111124 - INFO - All instances processed.
+2026-07-11 01:16:36,516 - 4111124 - INFO - Restart Total time: 0:08:22.713217
+2026-07-11 01:16:36,516 - 4111124 - INFO - Auto-confirmed services are restarted
+2026-07-11 01:16:36,516 - 4111124 - INFO - Confirmed - services are started
+2026-07-11 01:16:36,630 - 4111124 - INFO - The following instances have failed the patch: []
+2026-07-11 01:16:36,630 - 4111124 - INFO - No instances have failed the patch.
+2026-07-11 01:16:36,630 - 4111124 - INFO - Total Patch Process time: 0:16:32.399480
+2026-07-11 01:17:37,086 - 4111124 - INFO - Log file ./logs/patching_2026-07-11_q3-TIG-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-TIG-uat_Patch/2026-07-11/patching_2026-07-11_q3-TIG-uat.log
+2026-07-11 01:26:36,704 - 4111124 - INFO - Sent app_validation.py to i-02b64cbbcb8336483 (command_id: e00ecf2d-e84a-410b-9c4d-238d64785435)
+2026-07-11 01:27:06,779 - 4111124 - INFO - app_validation.py output for i-02b64cbbcb8336483:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 05:26:36.966060
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.4
+Hostname | ip-172-30-164-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 117.5G | 122.4G | 48% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | tigcfg_bcopy, tiguat_dwa, tiguat_event, tiguat_ftp, tiguat_harp, tiguat_lbl, tiguat_repl, tiguat_rccl, tiguat_rplpu, tiguat_rpt, tiguat_jqgrid, tiguat_sch, tiguat_inbq, tiguat_wld, tiguat_ict, tiguat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+tigcfg_bcopy | /data/batchapp/softeon/tigconfiguat/bulkdatacopydaemon
+tiguat_dwa | /data/batchapp/softeon/tiguat/downloaddaemon
+tiguat_event | /data/batchapp/softeon/tiguat/eventdaemon
+tiguat_ftp | /data/batchapp/softeon/tiguat/ftpdaemon
+tiguat_harp | /data/batchapp/softeon/tiguat/hardallocationdaemon
+tiguat_lbl | /data/batchapp/softeon/tiguat/labeldaemon
+tiguat_repl | /data/batchapp/softeon/tiguat/replenishmentdaemon
+tiguat_rccl | /data/batchapp/softeon/tiguat/replenishmentpickloccanceldaemon
+tiguat_rplpu | /data/batchapp/softeon/tiguat/replenishmentpriorityupdatedaemon
+tiguat_rpt | /data/batchapp/softeon/tiguat/reportdaemon
+tiguat_jqgrid | /data/batchapp/softeon/tiguat/reportjqgridexportdaemon
+tiguat_sch | /data/batchapp/softeon/tiguat/schedulerdaemon
+tiguat_inbq | /data/batchapp/softeon/tiguat/uploaddaemon
+tiguat_wld | /data/batchapp/softeon/tiguat/wavelaunchdaemon
+tiguat_ict | /data/batchapp/softeon/tiguat/ictdaemon
+tiguat_tiad | /data/batchapp/softeon/tiguat/tasklevelinventoryallocation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3649 | tigconfiguat | jboss740eap | tigconfuat_j74 | 8083 | 172.30.164.4:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfiguat/standalone
+4259 | tigrfuat | jboss800eap | tigrfuat_800eap | 8081 | 172.30.164.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfuat/standalone
+3396 | tigswpuat | jboss800eap | tigswpuat_800ea | 8082 | 172.30.164.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpuat/standalone
+4210 | tiguat | jboss800eap | tiguat_800eap | 8080 | 172.30.164.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 05:26:37.991556
+==============================================================================
+
+2026-07-11 01:27:06,779 - 4111124 - ERROR - app_validation.py errors for i-02b64cbbcb8336483:
+
+2026-07-11 01:27:06,781 - 4111124 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-AfterPatching-Retry1-2026-07-11-01-27-06-781.log
+2026-07-11 01:27:06,834 - 4111124 - INFO - [Retry-1] RED detected for TIG UAT Application and Batch Server (172.30.164.4), retrying... (Total waited: 600s)
+2026-07-11 01:27:06,835 - 4111124 - INFO - [Retry-2] Waiting 600s for i-02b64cbbcb8336483...
+2026-07-11 01:37:07,218 - 4111124 - INFO - Sent app_validation.py to i-02b64cbbcb8336483 (command_id: a1ca3a77-08e1-4b7b-964a-f2a3abdf44f4)
+2026-07-11 01:37:37,308 - 4111124 - INFO - app_validation.py output for i-02b64cbbcb8336483:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 05:37:07.482110
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.4
+Hostname | ip-172-30-164-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 117.5G | 122.4G | 48% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | tigcfg_bcopy, tiguat_dwa, tiguat_event, tiguat_ftp, tiguat_harp, tiguat_lbl, tiguat_repl, tiguat_rccl, tiguat_rplpu, tiguat_rpt, tiguat_jqgrid, tiguat_sch, tiguat_inbq, tiguat_wld, tiguat_ict, tiguat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+tigcfg_bcopy | /data/batchapp/softeon/tigconfiguat/bulkdatacopydaemon
+tiguat_dwa | /data/batchapp/softeon/tiguat/downloaddaemon
+tiguat_event | /data/batchapp/softeon/tiguat/eventdaemon
+tiguat_ftp | /data/batchapp/softeon/tiguat/ftpdaemon
+tiguat_harp | /data/batchapp/softeon/tiguat/hardallocationdaemon
+tiguat_lbl | /data/batchapp/softeon/tiguat/labeldaemon
+tiguat_repl | /data/batchapp/softeon/tiguat/replenishmentdaemon
+tiguat_rccl | /data/batchapp/softeon/tiguat/replenishmentpickloccanceldaemon
+tiguat_rplpu | /data/batchapp/softeon/tiguat/replenishmentpriorityupdatedaemon
+tiguat_rpt | /data/batchapp/softeon/tiguat/reportdaemon
+tiguat_jqgrid | /data/batchapp/softeon/tiguat/reportjqgridexportdaemon
+tiguat_sch | /data/batchapp/softeon/tiguat/schedulerdaemon
+tiguat_inbq | /data/batchapp/softeon/tiguat/uploaddaemon
+tiguat_wld | /data/batchapp/softeon/tiguat/wavelaunchdaemon
+tiguat_ict | /data/batchapp/softeon/tiguat/ictdaemon
+tiguat_tiad | /data/batchapp/softeon/tiguat/tasklevelinventoryallocation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3649 | tigconfiguat | jboss740eap | tigconfuat_j74 | 8083 | 172.30.164.4:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfiguat/standalone
+4259 | tigrfuat | jboss800eap | tigrfuat_800eap | 8081 | 172.30.164.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfuat/standalone
+3396 | tigswpuat | jboss800eap | tigswpuat_800ea | 8082 | 172.30.164.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpuat/standalone
+4210 | tiguat | jboss800eap | tiguat_800eap | 8080 | 172.30.164.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 05:37:08.494893
+==============================================================================
+
+2026-07-11 01:37:37,308 - 4111124 - ERROR - app_validation.py errors for i-02b64cbbcb8336483:
+
+2026-07-11 01:37:37,310 - 4111124 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-AfterPatching-Retry2-2026-07-11-01-37-37-309.log
+2026-07-11 01:37:37,363 - 4111124 - INFO - [Retry-2] RED detected for TIG UAT Application and Batch Server (172.30.164.4), retrying... (Total waited: 1200s)
+2026-07-11 01:37:37,363 - 4111124 - INFO - [Retry-3] Waiting 600s for i-02b64cbbcb8336483...
+2026-07-11 01:47:37,642 - 4111124 - INFO - Sent app_validation.py to i-02b64cbbcb8336483 (command_id: 4948ffdc-cd8c-4d00-9345-687a8c91f3aa)
+2026-07-11 01:48:07,733 - 4111124 - INFO - app_validation.py output for i-02b64cbbcb8336483:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 05:47:37.890578
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.4
+Hostname | ip-172-30-164-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 117.5G | 122.3G | 48% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | tigcfg_bcopy, tiguat_dwa, tiguat_event, tiguat_ftp, tiguat_harp, tiguat_lbl, tiguat_repl, tiguat_rccl, tiguat_rplpu, tiguat_rpt, tiguat_jqgrid, tiguat_sch, tiguat_inbq, tiguat_wld, tiguat_ict, tiguat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+tigcfg_bcopy | /data/batchapp/softeon/tigconfiguat/bulkdatacopydaemon
+tiguat_dwa | /data/batchapp/softeon/tiguat/downloaddaemon
+tiguat_event | /data/batchapp/softeon/tiguat/eventdaemon
+tiguat_ftp | /data/batchapp/softeon/tiguat/ftpdaemon
+tiguat_harp | /data/batchapp/softeon/tiguat/hardallocationdaemon
+tiguat_lbl | /data/batchapp/softeon/tiguat/labeldaemon
+tiguat_repl | /data/batchapp/softeon/tiguat/replenishmentdaemon
+tiguat_rccl | /data/batchapp/softeon/tiguat/replenishmentpickloccanceldaemon
+tiguat_rplpu | /data/batchapp/softeon/tiguat/replenishmentpriorityupdatedaemon
+tiguat_rpt | /data/batchapp/softeon/tiguat/reportdaemon
+tiguat_jqgrid | /data/batchapp/softeon/tiguat/reportjqgridexportdaemon
+tiguat_sch | /data/batchapp/softeon/tiguat/schedulerdaemon
+tiguat_inbq | /data/batchapp/softeon/tiguat/uploaddaemon
+tiguat_wld | /data/batchapp/softeon/tiguat/wavelaunchdaemon
+tiguat_ict | /data/batchapp/softeon/tiguat/ictdaemon
+tiguat_tiad | /data/batchapp/softeon/tiguat/tasklevelinventoryallocation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3649 | tigconfiguat | jboss740eap | tigconfuat_j74 | 8083 | 172.30.164.4:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfiguat/standalone
+4259 | tigrfuat | jboss800eap | tigrfuat_800eap | 8081 | 172.30.164.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfuat/standalone
+3396 | tigswpuat | jboss800eap | tigswpuat_800ea | 8082 | 172.30.164.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpuat/standalone
+4210 | tiguat | jboss800eap | tiguat_800eap | 8080 | 172.30.164.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tiguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 05:47:38.741120
+==============================================================================
+
+2026-07-11 01:48:07,733 - 4111124 - ERROR - app_validation.py errors for i-02b64cbbcb8336483:
+
+2026-07-11 01:48:07,735 - 4111124 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-11/q3-TIG-uat/172.30.164.4/172.30.164.4-AfterPatching-Retry3-2026-07-11-01-48-07-735.log
+2026-07-11 01:48:08,004 - 4111124 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 01:48:08,005 - 4111124 - WARNING - [Retry] Timeout - auto cron enabled for i-02b64cbbcb8336483

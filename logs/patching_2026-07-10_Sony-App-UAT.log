@@ -1,0 +1,432 @@
+2026-07-10 02:00:05,110 - 4057635 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 02:07:22,130 - 4057635 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 02:07:22,335 - 4057635 - INFO - Log file ./logs/backup_2026-07-10.log uploaded to s3://q3-2025-aws-security-patching/Sony-App-UAT_Patch_Backup/2026-07-10/backup_2026-07-10.log
+2026-07-10 06:00:04,111 - 4067738 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-10 06:00:04,114 - 4067738 - INFO - Script Start Time: 2026-07-10 06:00:04
+2026-07-10 06:00:04,581 - 4067738 - INFO - Instance(s) selected for Patching: {'i-0a8a8c33aa4939171': '172.26.240.26', 'i-024b33ce28aa1ec6b': '172.26.240.70'}
+2026-07-10 06:00:04,697 - 4067738 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 06:00:04,697 - 4067738 - INFO - Now patching instances at: 2026-07-10 06:00:04
+2026-07-10 06:00:11,063 - 4067738 - INFO - i-0a8a8c33aa4939171: Cron was active = False
+2026-07-10 06:00:17,261 - 4067738 - INFO - i-024b33ce28aa1ec6b: Cron was active = False
+2026-07-10 06:00:17,262 - 4067738 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-10 06:00:18,679 - 4067738 - INFO - Sent app_validation.py to i-0a8a8c33aa4939171 (command_id: f810fa22-c1ab-479b-845f-9c808855e62b)
+2026-07-10 06:00:48,982 - 4067738 - INFO - app_validation.py output for i-0a8a8c33aa4939171:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 10:00:18.708274
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.240.26
+Hostname | ip-172-26-240-26.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 46.3G | 193.6G | 19% | /data
+fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | 0B | 15.3G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.26.240.26:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.240.26 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2210943 | sonyaurfuat | jboss720eap | sorfau_jb720eap | 8081 | 172.26.240.26:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyaurfuat/standalone
+2210786 | sonyauuat | jboss720eap | soynau_jb720eap | 8080 | 172.26.240.26:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyauuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 10:00:19.152479
+==============================================================================
+
+2026-07-10 06:00:48,982 - 4067738 - ERROR - app_validation.py errors for i-0a8a8c33aa4939171:
+
+2026-07-10 06:00:48,984 - 4067738 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.26/172.26.240.26-BeforePatching-2026-07-10-06-00-48-983.log
+2026-07-10 06:00:50,440 - 4067738 - INFO - Sent app_validation.py to i-024b33ce28aa1ec6b (command_id: 18a0ac82-c601-4469-822f-f02f35af6af0)
+2026-07-10 06:01:20,753 - 4067738 - INFO - app_validation.py output for i-024b33ce28aa1ec6b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 10:00:50.407661
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.240.70
+Hostname | ip-172-26-240-70.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 4.6G | 235.3G | 1% | /data
+fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | 0B | 15.3G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.26.240.70:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.240.70 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1116418 | sonyaurfuat | jboss720eap | sorfau_jb720eap | 8081 | 172.26.240.70:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyaurfuat/standalone
+1116261 | sonyauuat | jboss720eap | soynau_jb720eap | 8080 | 172.26.240.70:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyauuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 10:00:51.092494
+==============================================================================
+
+2026-07-10 06:01:20,753 - 4067738 - ERROR - app_validation.py errors for i-024b33ce28aa1ec6b:
+
+2026-07-10 06:01:20,755 - 4067738 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.70/172.26.240.70-BeforePatching-2026-07-10-06-01-20-754.log
+2026-07-10 06:01:20,894 - 4067738 - INFO - Sending patch command to instance i-0a8a8c33aa4939171
+2026-07-10 06:01:21,832 - 4067738 - INFO - Command sent successfully to instance i-0a8a8c33aa4939171. Command ID: ff893bbc-1247-4293-b709-e6a0d36b6218
+2026-07-10 06:01:21,971 - 4067738 - INFO - Sending patch command to instance i-024b33ce28aa1ec6b
+2026-07-10 06:01:22,258 - 4067738 - INFO - Command sent successfully to instance i-024b33ce28aa1ec6b. Command ID: 80fb68f2-2341-4bb8-921a-ef37cb28f3b7
+2026-07-10 06:05:56,242 - 4067738 - INFO - All patches applied successfully.
+2026-07-10 06:05:56,243 - 4067738 - INFO - Patching end time: 2026-07-10 06:05:56
+2026-07-10 06:05:56,243 - 4067738 - INFO - Patch Elapsed time: 0:05:51.545756
+2026-07-10 06:05:56,309 - 4067738 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 06:05:56,309 - 4067738 - INFO - Confirmed - services are stopped
+2026-07-10 06:06:06,583 - 4067738 - INFO - Discovered TG map: {'i-0a8a8c33aa4939171': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564'], 'i-024b33ce28aa1ec6b': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564']}
+2026-07-10 06:06:06,845 - 4067738 - INFO - Deregistering i-0a8a8c33aa4939171 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6
+2026-07-10 06:06:07,761 - 4067738 - INFO - Deregistering i-0a8a8c33aa4939171 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564
+2026-07-10 06:06:08,014 - 4067738 - INFO - Stopping EC2 instance: i-0a8a8c33aa4939171 at 2026-07-10 06:06:08
+2026-07-10 06:07:41,450 - 4067738 - INFO - Instance i-0a8a8c33aa4939171 stopped successfully.
+2026-07-10 06:07:41,722 - 4067738 - INFO - Stopped i-0a8a8c33aa4939171 in 0:01:33.708368
+2026-07-10 06:07:41,723 - 4067738 - INFO - Starting EC2 instance: i-0a8a8c33aa4939171
+2026-07-10 06:07:58,182 - 4067738 - INFO - Instance i-0a8a8c33aa4939171 started successfully.
+2026-07-10 06:07:58,182 - 4067738 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a8a8c33aa4939171...
+2026-07-10 06:09:38,282 - 4067738 - INFO - Registering i-0a8a8c33aa4939171 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6
+2026-07-10 06:09:39,275 - 4067738 - INFO - Registering i-0a8a8c33aa4939171 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564
+2026-07-10 06:11:12,316 - 4067738 - INFO - Sent app_validation.py to i-0a8a8c33aa4939171 (command_id: dc1fc031-a707-4bea-a5e1-6789af46ed9d)
+2026-07-10 06:11:42,635 - 4067738 - INFO - app_validation.py output for i-0a8a8c33aa4939171:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 10:11:12.389167
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.240.26
+Hostname | ip-172-26-240-26.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 46.3G | 193.6G | 19% | /data
+fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | 0B | 15.3G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.26.240.26:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.240.26 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2587 | sonyaurfuat | jboss720eap | sorfau_jb720eap | 8081 | 172.26.240.26:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyaurfuat/standalone
+2608 | sonyauuat | jboss720eap | soynau_jb720eap | 8080 | 172.26.240.26:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyauuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 10:11:13.880363
+==============================================================================
+
+2026-07-10 06:11:42,635 - 4067738 - ERROR - app_validation.py errors for i-0a8a8c33aa4939171:
+
+2026-07-10 06:11:42,637 - 4067738 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.26/172.26.240.26-AfterPatching-2026-07-10-06-11-42-636.log
+2026-07-10 06:11:42,689 - 4067738 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.26/172.26.240.26-Validation-details-2026-07-10-06-11-42-636.html
+2026-07-10 06:11:43,718 - 4067738 - INFO - i-0a8a8c33aa4939171: Cron was not active before patching - skipping enable.
+2026-07-10 06:11:43,797 - 4067738 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 06:11:43,798 - 4067738 - INFO - HTML validation report email sent for i-0a8a8c33aa4939171
+2026-07-10 06:11:44,047 - 4067738 - INFO - Started i-0a8a8c33aa4939171 in 0:04:02.324556
+2026-07-10 06:11:44,048 - 4067738 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-10 06:13:44,083 - 4067738 - INFO - Deregistering i-024b33ce28aa1ec6b from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6
+2026-07-10 06:13:45,022 - 4067738 - INFO - Deregistering i-024b33ce28aa1ec6b from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564
+2026-07-10 06:13:45,289 - 4067738 - INFO - Stopping EC2 instance: i-024b33ce28aa1ec6b at 2026-07-10 06:13:45
+2026-07-10 06:15:18,822 - 4067738 - INFO - Instance i-024b33ce28aa1ec6b stopped successfully.
+2026-07-10 06:15:19,065 - 4067738 - INFO - Stopped i-024b33ce28aa1ec6b in 0:01:33.776779
+2026-07-10 06:15:19,066 - 4067738 - INFO - Starting EC2 instance: i-024b33ce28aa1ec6b
+2026-07-10 06:15:35,580 - 4067738 - INFO - Instance i-024b33ce28aa1ec6b started successfully.
+2026-07-10 06:15:35,580 - 4067738 - INFO - Waiting 100 seconds for SSM agent to be ready on i-024b33ce28aa1ec6b...
+2026-07-10 06:17:15,680 - 4067738 - INFO - Registering i-024b33ce28aa1ec6b to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-Desktop/1665a971d1f8e1e6
+2026-07-10 06:17:16,724 - 4067738 - INFO - Registering i-024b33ce28aa1ec6b to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Sony-AU-UAT-RF/cc3bf164c4aee564
+2026-07-10 06:18:49,750 - 4067738 - INFO - Sent app_validation.py to i-024b33ce28aa1ec6b (command_id: d4209be7-5afc-47fb-a829-7e49232322fb)
+2026-07-10 06:19:20,063 - 4067738 - INFO - app_validation.py output for i-024b33ce28aa1ec6b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 10:18:49.819864
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.240.70
+Hostname | ip-172-26-240-70.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 4.6G | 235.3G | 1% | /data
+fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | 0B | 15.3G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c19e534.efs.ap-southeast-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.26.240.70:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.240.70 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2593 | sonyaurfuat | jboss720eap | sorfau_jb720eap | 8081 | 172.26.240.70:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyaurfuat/standalone
+2594 | sonyauuat | jboss720eap | soynau_jb720eap | 8080 | 172.26.240.70:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/sonyauuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 10:18:51.992356
+==============================================================================
+
+2026-07-10 06:19:20,063 - 4067738 - ERROR - app_validation.py errors for i-024b33ce28aa1ec6b:
+
+2026-07-10 06:19:20,064 - 4067738 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.70/172.26.240.70-AfterPatching-2026-07-10-06-19-20-064.log
+2026-07-10 06:19:20,117 - 4067738 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-10/Sony-App-UAT/172.26.240.70/172.26.240.70-Validation-details-2026-07-10-06-19-20-064.html
+2026-07-10 06:19:21,109 - 4067738 - INFO - i-024b33ce28aa1ec6b: Cron was not active before patching - skipping enable.
+2026-07-10 06:19:21,186 - 4067738 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 06:19:21,186 - 4067738 - INFO - HTML validation report email sent for i-024b33ce28aa1ec6b
+2026-07-10 06:19:21,436 - 4067738 - INFO - Started i-024b33ce28aa1ec6b in 0:04:02.369887
+2026-07-10 06:19:21,437 - 4067738 - INFO - All instances processed.
+2026-07-10 06:19:21,441 - 4067738 - INFO - Restart Total time: 0:13:24.980591
+2026-07-10 06:19:21,442 - 4067738 - INFO - Auto-confirmed services are restarted
+2026-07-10 06:19:21,442 - 4067738 - INFO - Confirmed - services are started
+2026-07-10 06:19:21,563 - 4067738 - INFO - The following instances have failed the patch: []
+2026-07-10 06:19:21,563 - 4067738 - INFO - No instances have failed the patch.
+2026-07-10 06:19:21,563 - 4067738 - INFO - Total Patch Process time: 0:19:17.448494
+2026-07-10 06:20:22,116 - 4067738 - INFO - Log file ./logs/patching_2026-07-10_Sony-App-UAT.log uploaded to s3://q3-2026-aws-security-patching/Sony-App-UAT_Patch/2026-07-10/patching_2026-07-10_Sony-App-UAT.log

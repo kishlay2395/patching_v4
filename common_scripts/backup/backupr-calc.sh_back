@@ -1,0 +1,24 @@
+# Check if an argument is provided
+if [ $# -ne 1 ]; then
+    echo -e "Usage: $0 <Server IP>"
+    exit 1
+fi
+
+ServerIP=$1
+
+# Validate CUPS Service on Port 631
+CupsPortListen=$(ss -tulnp | grep -w ':631' | grep -w LISTEN)
+CupsPortStatus=$?
+
+# Check Printer Count
+CupsPrinterCount=$(lpstat -v 2>/dev/null | wc -l)
+
+echo -e "\n Checking CUPS Service on Server IP: $ServerIP"
+echo -e "Scan Time: $DATE_TIME"
+
+if [ $CupsPortStatus -eq 0 ]; then
+    echo -e "$CUPS Service (Port:631) is available on Server IP: $ServerIP${RESET}"
+    echo -e "Total Number of Printers Available: $CupsPrinterCount"
+else
+    echo -e "CUPS Service (Port:631) is not available on Server IP: $ServerIP${RESET}"
+fi

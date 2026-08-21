@@ -1,0 +1,61 @@
+#! /bin/sh
+#-------------------------------------------
+DATE_TIME="`date -u +%d-%b-%Y-%H:%M:%S`"
+#-------------------------------------------
+
+# Check if an argument is provided
+
+##Assign the argument to the variable ServerIP
+# Check if an argument is provided
+ if [ $# -ne 1 ]; then
+    echo "Usage: $0 <check argument value>"
+    exit 1
+fi
+
+ServerIP=$1;
+
+##Validate Server reachability. 
+PingStatus=$( ping -c 1 -W 1 -q $ServerIP &>/dev/null ; echo $? )
+
+case $PingStatus in
+	"0")
+		echo -e "\n"
+		echo -e "Application Port Valiation for Server IP:$ServerIP started on $DATE_TIME"
+		echo -e ""
+		echo -e "Server IP:$ServerIP is reachable."
+		SSHPort=22
+		SSHPortStatus=$( nmap -p $SSHPort $ServerIP | grep -w $SSHPort | grep open |awk {'print $2'} )
+		echo -e ""
+		echo -e "SSH / SFTP Service (Port:$SSHPort) is available in Server IP:$ServerIP "
+		;;
+	"1")
+		echo -e "\n"
+		echo -e "Application Port Valiation for Server IP:  $ServerIP  started on $DATE_TIME"
+		echo -e ""
+		##Validate the SSH/SFTP port in the server. 
+
+		SSHPort=22
+		SSHPortStatus=$( nmap -p $SSHPort $ServerIP | grep "$SSHPort" | grep open |awk {'print $2'} )
+		
+		case $SSHPortStatus in
+			"open")
+				echo -e "SSH/SFTP Service (Port:$SSHPort) is available in Server IP:$ServerIP "
+				;;
+			*)
+				echo -e "Please check the server IP or SSH / SFTP Service (Port:$SSHPort) is not available in Server IP: $ServerIP "
+				echo -e "Terminating from Application Port Scan "
+				exit 0
+				;;
+		
+		esac
+         ;;
+	"2")
+		echo -e "Server IP: $ServerIP is not valid. "
+		exit 0
+        ;;
+    *)
+        echo -e "Server IP: $ServerIP is not valid. "
+		exit 0
+        ;;
+
+esac

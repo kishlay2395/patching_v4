@@ -1,0 +1,340 @@
+2026-04-01 00:05:02,526 - 4093699 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-01 00:05:02,526 - 4093699 - INFO - Script Start Time: 2026-04-01 00:05:02
+2026-04-01 00:05:02,754 - 4093699 - INFO - Instance(s) selected for Patching: {'i-05794805ef320641a': '172.30.150.11'}
+2026-04-01 00:05:02,831 - 4093699 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-01 00:05:02,831 - 4093699 - INFO - Now patching instances at: 2026-04-01 00:05:02
+2026-04-01 00:05:02,916 - 4093699 - INFO - Sending patch command to instance i-05794805ef320641a
+2026-04-01 00:05:03,125 - 4093699 - INFO - Command sent successfully to instance i-05794805ef320641a. Command ID: 2eea03ff-c827-4c7e-9972-014b70accb4c
+2026-04-01 00:09:34,596 - 4093699 - INFO - All patches applied successfully.
+2026-04-01 00:09:34,597 - 4093699 - INFO - Patching end time: 2026-04-01 00:09:34
+2026-04-01 00:09:34,597 - 4093699 - INFO - Patch Elapsed time: 0:04:31.765713
+2026-04-01 00:09:34,671 - 4093699 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-01 00:09:34,672 - 4093699 - INFO - Confirmed - services are stopped
+2026-04-01 00:09:42,787 - 4093699 - INFO - Discovered TG map: {'i-05794805ef320641a': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Config/6937a33a19e341b5', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Desktop/dc2d9fb073cd18ba', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-RF/599d794e0e1b7817', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-UAT-AdhocAPI/d30a411e22c42844']}
+2026-04-01 00:09:43,260 - 4093699 - INFO - Sent app_validation.py to i-05794805ef320641a (command_id: 4e3aa4b6-ffb9-4900-9da0-8b050e47058f)
+2026-04-01 00:10:13,391 - 4093699 - INFO - app_validation.py output for i-05794805ef320641a:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 04:09:43.562775
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.150.11
+Hostname | ip-172-30-150-11.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.2G | 131.7G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.150.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.150.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 62
+Batch/Daemon Java Processes | 57
+Non-Standalone Java Processes | jasuat_adhocapi, jasconfig_bcopy, jasdev_apick, jasdev_dwa, jasdev_event, jasdev_ftp, jasdev_harp, jasdev_lbl, jasdev_repl, jasdev_rccl, jasdev_rpt, jasdev_jqgrid, jasdev_sch, jasdev_ptsch, jasdev_etsch, jasdev_inbq, jasdev_wld, jasdev_tiad, jasdev_ict, jasdev_invbt, jasdev_blsch, jasdev_sftwld, jas_k07sch, jas_k09sch, jas_k01sch, jas_sftsch, jasdev_k01wld, jasdev_k04wld, jasdev_wsq, jasdev_locus, jasdev_sftharp, jasdev_mpcpt, jaslg_apick, jaslg_dwa, jaslg_event, jaslg_ftp, jaslg_lbl, jaslg_repl, jaslg_rccl, jaslg_rpt, jaslg_jqgrid, jaslg_sch, jaslg_tiad, jaslg_inbq, jaslg_wld, jaslg_k40wld, jaslg_ict, jaslg_k40sch, jaslg_k17sch, jaslg_k27wld, jaslg_k31wld, jaslg_k32wld, jaslg_k26wld, jaslg_k50wld, jaslg_locus, jaslg_harp, jaslg_wsd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 57
+Java-Name | Java-Path
+jasuat_adhocapi | /data/app/adhocapi/softeon/jasuatadhocapi
+jasconfig_bcopy | /data/batchapp/softeon/jasconfiguat/bulkdatacopydaemon
+jasdev_apick | /data/batchapp/softeon/jasdev/autopicktooldaemon
+jasdev_dwa | /data/batchapp/softeon/jasdev/downloaddaemon
+jasdev_event | /data/batchapp/softeon/jasdev/eventdaemon
+jasdev_ftp | /data/batchapp/softeon/jasdev/ftpdaemon
+jasdev_harp | /data/batchapp/softeon/jasdev/hardallocationdaemon
+jasdev_lbl | /data/batchapp/softeon/jasdev/labeldaemon
+jasdev_repl | /data/batchapp/softeon/jasdev/replenishmentdaemon
+jasdev_rccl | /data/batchapp/softeon/jasdev/replenishmentpickloccanceldaemon
+jasdev_rpt | /data/batchapp/softeon/jasdev/reportdaemon
+jasdev_jqgrid | /data/batchapp/softeon/jasdev/reportjqgridexportdaemon
+jasdev_sch | /data/batchapp/softeon/jasdev/schedulerdaemon
+jasdev_ptsch | /data/batchapp/softeon/jasdev/schedulerdaemon_PT
+jasdev_etsch | /data/batchapp/softeon/jasdev/schedulerdaemon_ET
+jasdev_inbq | /data/batchapp/softeon/jasdev/uploaddaemon
+jasdev_wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon
+jasdev_tiad | /data/batchapp/softeon/jasdev/tasklevelinventoryallocationdaemon
+jasdev_ict | /data/batchapp/softeon/jasdev/inventorycomputationdaemon
+jasdev_invbt | /data/batchapp/softeon/jasdev/billinginvoicebatchdaemon
+jasdev_blsch | /data/batchapp/softeon/jasdev/billingschedulerdaemon
+jasdev_sftwld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_sft
+jas_k07sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k07
+jas_k09sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k09
+jas_k01sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k01
+jas_sftsch | /data/batchapp/softeon/jasdev/schedulerdaemon_sft
+jasdev_k01wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_k01
+jasdev_k04wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_k04
+jasdev_wsq | /data/batchapp/softeon/jasdev/webservicedaemon
+jasdev_locus | /data/batchapp/softeon/jasdev/locusdaemon
+jasdev_sftharp | /data/batchapp/softeon/jasdev/hardallocationdaemon_sft
+jasdev_mpcpt | /data/batchapp/softeon/jasdev/masspickconfirmationdaemon
+jaslg_apick | /data/batchapp/softeon/jaslg/autopicktooldaemon
+jaslg_dwa | /data/batchapp/softeon/jaslg/downloaddaemon
+jaslg_event | /data/batchapp/softeon/jaslg/eventdaemon
+jaslg_ftp | /data/batchapp/softeon/jaslg/ftpdaemon
+jaslg_lbl | /data/batchapp/softeon/jaslg/labeldaemon
+jaslg_repl | /data/batchapp/softeon/jaslg/replenishmentdaemon
+jaslg_rccl | /data/batchapp/softeon/jaslg/replenishmentpickloccanceldaemon
+jaslg_rpt | /data/batchapp/softeon/jaslg/reportdaemon
+jaslg_jqgrid | /data/batchapp/softeon/jaslg/reportjqgridexportdaemon
+jaslg_sch | /data/batchapp/softeon/jaslg/schedulerdaemon
+jaslg_tiad | /data/batchapp/softeon/jaslg/tasklevelinventoryallocationdaemon
+jaslg_inbq | /data/batchapp/softeon/jaslg/uploaddaemon
+jaslg_wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon
+jaslg_k40wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k40
+jaslg_ict | /data/batchapp/softeon/jaslg/inventorycomputationdaemon
+jaslg_k40sch | /data/batchapp/softeon/jaslg/schedulerdaemon_k40
+jaslg_k17sch | /data/batchapp/softeon/jaslg/schedulerdaemon_k17
+jaslg_k27wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k27
+jaslg_k31wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k31
+jaslg_k32wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k32
+jaslg_k26wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k26
+jaslg_k50wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k50
+jaslg_locus | /data/batchapp/softeon/jaslg/locusdaemon
+jaslg_harp | /data/batchapp/softeon/jaslg/hardallocationdaemon
+jaslg_wsd | /data/batchapp/softeon/jaslg/webservicedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6462 | jasconfiguat | jboss730eap | jascon_jb730eap | 8082 | 172.30.150.11:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasconfiguat/standalone
+3304651 | jasdev | jboss730eap | jasdev_jb730eap | 8080 | 172.30.150.11:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasdev/standalone
+3304837 | jasdevrf | jboss730eap | jasdevrf_jb730 | 8081 | 172.30.150.11:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasdevrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 04:09:46.315431
+==============================================================================
+
+2026-04-01 00:10:13,391 - 4093699 - ERROR - app_validation.py errors for i-05794805ef320641a:
+
+2026-04-01 00:10:13,393 - 4093699 - INFO - Before patching validation saved to: output/validation-2026-04-01/172.30.150.11-BeforePatching-2026-04-01-00-10-13-393.log
+2026-04-01 00:10:13,393 - 4093699 - INFO - Deregistering i-05794805ef320641a from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Config/6937a33a19e341b5
+2026-04-01 00:10:13,517 - 4093699 - INFO - Deregistering i-05794805ef320641a from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Desktop/dc2d9fb073cd18ba
+2026-04-01 00:10:13,578 - 4093699 - INFO - Deregistering i-05794805ef320641a from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-RF/599d794e0e1b7817
+2026-04-01 00:10:13,637 - 4093699 - INFO - Deregistering i-05794805ef320641a from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-UAT-AdhocAPI/d30a411e22c42844
+2026-04-01 00:10:13,701 - 4093699 - INFO - Stopping EC2 instance: i-05794805ef320641a at 2026-04-01 00:10:13
+2026-04-01 00:12:30,358 - 4093699 - INFO - Instance i-05794805ef320641a stopped successfully.
+2026-04-01 00:12:30,488 - 4093699 - INFO - Stopped i-05794805ef320641a in 0:02:16.786710
+2026-04-01 00:12:30,488 - 4093699 - INFO - Starting EC2 instance: i-05794805ef320641a
+2026-04-01 00:12:46,402 - 4093699 - INFO - Instance i-05794805ef320641a started successfully.
+2026-04-01 00:12:46,402 - 4093699 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05794805ef320641a...
+2026-04-01 00:14:26,416 - 4093699 - INFO - Registering i-05794805ef320641a to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Config/6937a33a19e341b5
+2026-04-01 00:14:26,621 - 4093699 - INFO - Registering i-05794805ef320641a to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-Desktop/dc2d9fb073cd18ba
+2026-04-01 00:14:26,752 - 4093699 - INFO - Registering i-05794805ef320641a to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-Dev-RF/599d794e0e1b7817
+2026-04-01 00:14:26,891 - 4093699 - INFO - Registering i-05794805ef320641a to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-UAT-AdhocAPI/d30a411e22c42844
+2026-04-01 00:17:27,909 - 4093699 - INFO - Sent app_validation.py to i-05794805ef320641a (command_id: a305b390-1ee9-4b79-905c-3bf6de100112)
+2026-04-01 00:17:58,049 - 4093699 - INFO - app_validation.py output for i-05794805ef320641a:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 04:17:28.486904
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.150.11
+Hostname | ip-172-30-150-11.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.2G | 131.7G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.150.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 62
+Batch/Daemon Java Processes | 56
+Non-Standalone Java Processes | jasdev_apick, jasconfig_bcopy, jaslg_apick, jasuat_adhocapi, jasdev_dwa, jaslg_dwa, jasdev_event, jaslg_event, jasdev_ftp, jaslg_ftp, jasdev_harp, jaslg_lbl, jasdev_lbl, jaslg_repl, jasdev_repl, jaslg_rccl, jasdev_rccl, jaslg_rpt, jasdev_rpt, jaslg_jqgrid, jasdev_jqgrid, jaslg_sch, jasdev_sch, jaslg_tiad, jasdev_ptsch, jaslg_inbq, jasdev_etsch, jaslg_wld, jasdev_inbq, jaslg_k40wld, jasdev_wld, jaslg_ict, jasdev_tiad, jasdev_ict, jaslg_k40sch, jaslg_k17sch, jasdev_blsch, jaslg_k27wld, jasdev_sftwld, jaslg_k31wld, jas_k07sch, jaslg_k32wld, jas_k09sch, jaslg_k26wld, jas_k01sch, jaslg_k50wld, jas_sftsch, jaslg_locus, jasdev_k01wld, jaslg_harp, jasdev_k04wld, jaslg_wsd, jasdev_wsq, jasdev_locus, jasdev_sftharp, jasdev_mpcpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 56
+Java-Name | Java-Path
+jasdev_apick | /data/batchapp/softeon/jasdev/autopicktooldaemon
+jasconfig_bcopy | /data/batchapp/softeon/jasconfiguat/bulkdatacopydaemon
+jaslg_apick | /data/batchapp/softeon/jaslg/autopicktooldaemon
+jasuat_adhocapi | /data/app/adhocapi/softeon/jasuatadhocapi
+jasdev_dwa | /data/batchapp/softeon/jasdev/downloaddaemon
+jaslg_dwa | /data/batchapp/softeon/jaslg/downloaddaemon
+jasdev_event | /data/batchapp/softeon/jasdev/eventdaemon
+jaslg_event | /data/batchapp/softeon/jaslg/eventdaemon
+jasdev_ftp | /data/batchapp/softeon/jasdev/ftpdaemon
+jaslg_ftp | /data/batchapp/softeon/jaslg/ftpdaemon
+jasdev_harp | /data/batchapp/softeon/jasdev/hardallocationdaemon
+jaslg_lbl | /data/batchapp/softeon/jaslg/labeldaemon
+jasdev_lbl | /data/batchapp/softeon/jasdev/labeldaemon
+jaslg_repl | /data/batchapp/softeon/jaslg/replenishmentdaemon
+jasdev_repl | /data/batchapp/softeon/jasdev/replenishmentdaemon
+jaslg_rccl | /data/batchapp/softeon/jaslg/replenishmentpickloccanceldaemon
+jasdev_rccl | /data/batchapp/softeon/jasdev/replenishmentpickloccanceldaemon
+jaslg_rpt | /data/batchapp/softeon/jaslg/reportdaemon
+jasdev_rpt | /data/batchapp/softeon/jasdev/reportdaemon
+jaslg_jqgrid | /data/batchapp/softeon/jaslg/reportjqgridexportdaemon
+jasdev_jqgrid | /data/batchapp/softeon/jasdev/reportjqgridexportdaemon
+jaslg_sch | /data/batchapp/softeon/jaslg/schedulerdaemon
+jasdev_sch | /data/batchapp/softeon/jasdev/schedulerdaemon
+jaslg_tiad | /data/batchapp/softeon/jaslg/tasklevelinventoryallocationdaemon
+jasdev_ptsch | /data/batchapp/softeon/jasdev/schedulerdaemon_PT
+jaslg_inbq | /data/batchapp/softeon/jaslg/uploaddaemon
+jasdev_etsch | /data/batchapp/softeon/jasdev/schedulerdaemon_ET
+jaslg_wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon
+jasdev_inbq | /data/batchapp/softeon/jasdev/uploaddaemon
+jaslg_k40wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k40
+jasdev_wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon
+jaslg_ict | /data/batchapp/softeon/jaslg/inventorycomputationdaemon
+jasdev_tiad | /data/batchapp/softeon/jasdev/tasklevelinventoryallocationdaemon
+jasdev_ict | /data/batchapp/softeon/jasdev/inventorycomputationdaemon
+jaslg_k40sch | /data/batchapp/softeon/jaslg/schedulerdaemon_k40
+jaslg_k17sch | /data/batchapp/softeon/jaslg/schedulerdaemon_k17
+jasdev_blsch | /data/batchapp/softeon/jasdev/billingschedulerdaemon
+jaslg_k27wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k27
+jasdev_sftwld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_sft
+jaslg_k31wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k31
+jas_k07sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k07
+jaslg_k32wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k32
+jas_k09sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k09
+jaslg_k26wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k26
+jas_k01sch | /data/batchapp/softeon/jasdev/schedulerdaemon_k01
+jaslg_k50wld | /data/batchapp/softeon/jaslg/wavelaunchdaemon_k50
+jas_sftsch | /data/batchapp/softeon/jasdev/schedulerdaemon_sft
+jaslg_locus | /data/batchapp/softeon/jaslg/locusdaemon
+jasdev_k01wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_k01
+jaslg_harp | /data/batchapp/softeon/jaslg/hardallocationdaemon
+jasdev_k04wld | /data/batchapp/softeon/jasdev/wavelaunchdaemon_k04
+jaslg_wsd | /data/batchapp/softeon/jaslg/webservicedaemon
+jasdev_wsq | /data/batchapp/softeon/jasdev/webservicedaemon
+jasdev_locus | /data/batchapp/softeon/jasdev/locusdaemon
+jasdev_sftharp | /data/batchapp/softeon/jasdev/hardallocationdaemon_sft
+jasdev_mpcpt | /data/batchapp/softeon/jasdev/masspickconfirmationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6437 | jasconfiguat | jboss730eap | jascon_jb730eap | 8082 | 172.30.150.11:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasconfiguat/standalone
+7128 | jasdev | jboss730eap | jasdev_jb730eap | 8080 | 172.30.150.11:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasdev/standalone
+7310 | jasdevrf | jboss730eap | jasdevrf_jb730 | 8081 | 172.30.150.11:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/jasdevrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 04:17:32.375799
+==============================================================================
+
+2026-04-01 00:17:58,049 - 4093699 - ERROR - app_validation.py errors for i-05794805ef320641a:
+
+2026-04-01 00:17:58,050 - 4093699 - INFO - After patching validation saved to: output/validation-2026-04-01/172.30.150.11-AfterPatching-2026-04-01-00-17-58-050.log
+2026-04-01 00:17:58,112 - 4093699 - INFO - Validation comparison report generated: output/validation-2026-04-01/172.30.150.11-Validation-details-2026-04-01-00-17-58-050.html
+2026-04-01 00:17:58,192 - 4093699 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-01 00:17:58,192 - 4093699 - INFO - HTML validation report email sent for i-05794805ef320641a
+2026-04-01 00:17:58,327 - 4093699 - INFO - Started i-05794805ef320641a in 0:05:27.838948
+2026-04-01 00:17:58,328 - 4093699 - INFO - All instances processed.
+2026-04-01 00:17:58,331 - 4093699 - INFO - Restart Total time: 0:08:23.482230
+2026-04-01 00:17:58,331 - 4093699 - INFO - Auto-confirmed services are restarted
+2026-04-01 00:17:58,331 - 4093699 - INFO - Confirmed - services are started
+2026-04-01 00:17:58,447 - 4093699 - INFO - The following instances have failed the patch: []
+2026-04-01 00:17:58,448 - 4093699 - INFO - No instances have failed the patch.
+2026-04-01 00:17:58,448 - 4093699 - INFO - Total Patch Process time: 0:12:55.921207
+2026-04-01 00:18:58,911 - 4093699 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-01_jas-UAT-1.log to q2-2026-aws-security-patching/jas-UAT-1_Patch/2026-04-01/patching_2026-04-01_jas-UAT-1.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

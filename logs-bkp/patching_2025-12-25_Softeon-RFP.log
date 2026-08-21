@@ -1,0 +1,145 @@
+2025-12-25 00:05:01,619 - 20590 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-12-25 00:05:01,619 - 20590 - INFO - Script Start Time: 2025-12-25 00:05:01
+2025-12-25 00:05:02,125 - 20590 - INFO - Instance(s) selected for Patching: {'i-0f427ff54e4fcfdb0': '172.31.3.24'}
+2025-12-25 00:05:02,255 - 20590 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-25 00:05:02,256 - 20590 - INFO - Now patching instances at: 2025-12-25 00:05:02
+2025-12-25 00:05:02,377 - 20590 - INFO - Sending patch command to instance i-0f427ff54e4fcfdb0
+2025-12-25 00:05:02,556 - 20590 - INFO - Command sent successfully to instance i-0f427ff54e4fcfdb0. Command ID: 382ac60e-cd32-441e-9e01-0a994b31f64f
+2025-12-25 00:10:03,941 - 20590 - INFO - All patches applied successfully.
+2025-12-25 00:10:03,941 - 20590 - INFO - Patching end time: 2025-12-25 00:10:03
+2025-12-25 00:10:03,942 - 20590 - INFO - Patch Elapsed time: 0:05:01.685831
+2025-12-25 00:10:04,024 - 20590 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-25 00:10:04,025 - 20590 - INFO - Confirmed - services are stopped
+2025-12-25 00:10:23,290 - 20590 - INFO - Discovered TG map: {'i-0f427ff54e4fcfdb0': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Aisupportbackend-Test/70a4f7f478691d9f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Ticket-AI-Demo/9e05925771c9c609', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-WMS-Chatbot-Demo/6d0551ab0298b8c0', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Ticket-AIBackend-Demo/b6f463ee4c0e51f5', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-RFP-Assistant/d53d572e0585c467']}
+2025-12-25 00:10:23,567 - 20590 - INFO - Sent app_validation.sh to i-0f427ff54e4fcfdb0 (command_id: f536f8a3-053b-4314-bd7d-58153eeae734)
+2025-12-25 00:10:53,689 - 20590 - INFO - app_validation.sh output for i-0f427ff54e4fcfdb0:
+
+==============================================================================
+Server Availability Check Started at Thu Dec 25 05:10:23 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.3.24
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-3-24
+Uptime: up 5 days, 18 hours, 10 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.3.24:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.3.24
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 7813 MB
+Used Physical Memory  = 2027 MB
+Free Physical Memory  = 5786 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 0.56 0.81 0.39 4/299 308028
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  7.2G   13G  36% /
+/dev/nvme0n1p128   10M  1.4M  8.7M  14% /boot/efi
+/dev/nvme1n1p2     40G  6.2G   34G  16% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             3.9G     0  3.9G   0% /dev/shm
+tmpfs             1.6G  512K  1.6G   1% /run
+tmpfs             3.9G  1.7M  3.9G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.3.24 started on Thu Dec 25 05:10:23 UTC 2025
+
+Server IP: 172.31.3.24 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.3.24
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.3.24
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+CUPS commands not available
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.3.24
+-------------------------------------
+
+Total number of Java process running on this host 172.31.3.24 is 0
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.3.24
+Total number of App java process available is 0
+-------------------------------------
+No Standalone application processes running
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.3.24
+Port 8081:	python3	Running
+Port 8084:	python3	Running
+Port 8085:	node-18	Running
+Port 8089:	python	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Thu Dec 25 05:10:24 UTC 2025
+==============================================================================
+
+
+2025-12-25 00:10:53,689 - 20590 - ERROR - app_validation.sh errors for i-0f427ff54e4fcfdb0:
+
+2025-12-25 00:10:53,692 - 20590 - INFO - Before patching validation saved to: output/validation-2025-12-25/172.31.3.24-BeforePatching-2025-12-25-00-10-53-691.log
+2025-12-25 00:10:53,692 - 20590 - INFO - Deregistering i-0f427ff54e4fcfdb0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Aisupportbackend-Test/70a4f7f478691d9f
+2025-12-25 00:10:53,766 - 20590 - INFO - Deregistering i-0f427ff54e4fcfdb0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Ticket-AI-Demo/9e05925771c9c609
+2025-12-25 00:10:53,814 - 20590 - INFO - Deregistering i-0f427ff54e4fcfdb0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-WMS-Chatbot-Demo/6d0551ab0298b8c0
+2025-12-25 00:10:53,871 - 20590 - INFO - Deregistering i-0f427ff54e4fcfdb0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Ticket-AIBackend-Demo/b6f463ee4c0e51f5
+2025-12-25 00:10:53,922 - 20590 - INFO - Deregistering i-0f427ff54e4fcfdb0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-RFP-Assistant/d53d572e0585c467
+2025-12-25 00:10:53,966 - 20590 - INFO - Stopping EC2 instance: i-0f427ff54e4fcfdb0 at 2025-12-25 00:10:53
+2025-12-25 00:12:40,328 - 20590 - INFO - Instance i-0f427ff54e4fcfdb0 stopped successfully.
+2025-12-25 00:12:40,452 - 20590 - INFO - Stopped i-0f427ff54e4fcfdb0 in 0:01:46.485825
+2025-12-25 00:12:40,452 - 20590 - INFO - Starting EC2 instance: i-0f427ff54e4fcfdb0
+2025-12-25 00:12:56,482 - 20590 - INFO - Instance i-0f427ff54e4fcfdb0 started successfully.
+2025-12-25 00:12:56,483 - 20590 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0f427ff54e4fcfdb0...
+2025-12-25 00:13:26,487 - 20590 - INFO - Registering i-0f427ff54e4fcfdb0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Aisupportbackend-Test/70a4f7f478691d9f
+2025-12-25 00:13:26,665 - 20590 - INFO - Registering i-0f427ff54e4fcfdb0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Ticket-AI-Demo/9e05925771c9c609
+2025-12-25 00:13:26,805 - 20590 - INFO - Registering i-0f427ff54e4fcfdb0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-WMS-Chatbot-Demo/6d0551ab0298b8c0
+2025-12-25 00:13:26,951 - 20590 - INFO - Registering i-0f427ff54e4fcfdb0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Ticket-AIBackend-Demo/b6f463ee4c0e51f5
+2025-12-25 00:13:27,090 - 20590 - INFO - Registering i-0f427ff54e4fcfdb0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-RFP-Assistant/d53d572e0585c467
+2025-12-25 00:18:27,959 - 20590 - WARNING - i-0f427ff54e4fcfdb0 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Aisupportbackend-Test/70a4f7f478691d9f after timeout.
+2025-12-25 00:23:28,627 - 20590 - WARNING - i-0f427ff54e4fcfdb0 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-Ticket-AI-Demo/9e05925771c9c609 after timeout.
+2025-12-25 00:28:29,263 - 20590 - WARNING - i-0f427ff54e4fcfdb0 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Softeon-WMS-Chatbot-Demo/6d0551ab0298b8c0 after timeout.
+2025-12-25 00:33:29,933 - 20590 - WARNING - i-0f427ff54e4fcfdb0 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Ticket-AIBackend-Demo/b6f463ee4c0e51f5 after timeout.
+2025-12-25 00:33:30,046 - 20590 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-25 00:33:30,046 - 20590 - ERROR - Aborting workflow: i-0f427ff54e4fcfdb0 is not healthy after restart.
+2025-12-25 00:33:30,049 - 20590 - INFO - Restart Total time: 0:23:25.756494
+2025-12-25 00:33:30,050 - 20590 - INFO - Auto-confirmed services are restarted
+2025-12-25 00:33:30,050 - 20590 - INFO - Confirmed - services are started
+2025-12-25 00:33:30,175 - 20590 - INFO - The following instances have failed the patch: []
+2025-12-25 00:33:30,176 - 20590 - INFO - No instances have failed the patch.
+2025-12-25 00:33:30,176 - 20590 - INFO - Total Patch Process time: 0:28:28.556292
+2025-12-25 00:33:30,384 - 20590 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-25 00:34:30,554 - 20590 - INFO - Log file ./logs/patching_2025-12-25_Softeon-RFP.log uploaded to s3://q4-2025-aws-security-patching/Softeon-RFP_Patch/2025-12-25/patching_2025-12-25_Softeon-RFP.log

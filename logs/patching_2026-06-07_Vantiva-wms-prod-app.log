@@ -1,0 +1,265 @@
+2026-06-07 02:00:03,596 - 2275114 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-07 02:00:03,596 - 2275114 - INFO - Script Start Time: 2026-06-07 02:00:03
+2026-06-07 02:00:03,955 - 2275114 - INFO - Instance(s) selected for Patching: {'i-01bb855a725259f15': '10.154.0.4', 'i-021a8591842eab664': '10.154.0.43'}
+2026-06-07 02:00:04,058 - 2275114 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:00:04,060 - 2275114 - INFO - Now patching instances at: 2026-06-07 02:00:04
+2026-06-07 02:00:04,265 - 2275114 - INFO - Sent app_validation.py to i-021a8591842eab664 (command_id: f69274c9-7487-405a-ba41-0ce99b576912)
+2026-06-07 02:00:34,371 - 2275114 - INFO - app_validation.py output for i-021a8591842eab664:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:00:04.596180
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.43
+Hostname | ip-10-154-0-43
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 77.0G | 162.9G | 32% | /data
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 103
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1841207 | vantivahybridprod | jboss800eap | vantivahyd_j80 | 8082 | 10.154.0.43:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivahybridprod/standalone
+1838237 | vantivawmsportalprod | jboss800eap | vantivaport_j80 | 8083 | 10.154.0.43:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsportalprod/standalone
+1851117 | vantivawmsprod | jboss800eap | vantiva_jb800 | 8080 | 10.154.0.43:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsprod/standalone
+1847092 | vantivawmsrfprod | jboss800eap | vantivarf_jb800 | 8081 | 10.154.0.43:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsrfprod/standalone
+1843567 | vantivawsprod | jboss800eap | vantivaws_jb8 | 8084 | 10.154.0.43:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:00:06.635086
+==============================================================================
+
+2026-06-07 02:00:34,371 - 2275114 - ERROR - app_validation.py errors for i-021a8591842eab664:
+
+2026-06-07 02:00:34,373 - 2275114 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/Vantiva-wms-prod-app/10.154.0.43/10.154.0.43-BeforePatching-2026-06-07-02-00-34-372.log
+2026-06-07 02:00:34,554 - 2275114 - INFO - Sent app_validation.py to i-01bb855a725259f15 (command_id: 7bdddc33-3c30-4e7e-bc06-64eb2a8e10c3)
+2026-06-07 02:01:04,656 - 2275114 - INFO - app_validation.py output for i-01bb855a725259f15:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:00:34.895976
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.4
+Hostname | ip-10-154-0-4
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 71.1G | 168.8G | 29% | /data
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 103
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2329014 | vantivahybridprod | jboss800eap | vantivahyd_j80 | 8082 | 10.154.0.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivahybridprod/standalone
+2325690 | vantivawmsportalprod | jboss800eap | vantivaport_j80 | 8083 | 10.154.0.4:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsportalprod/standalone
+2333137 | vantivawmsprod | jboss800eap | vantiva_jb800 | 8080 | 10.154.0.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsprod/standalone
+2321755 | vantivawmsrfprod | jboss800eap | vantivarf_jb800 | 8081 | 10.154.0.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsrfprod/standalone
+2324730 | vantivawsprod | jboss800eap | vantivaws_jb8 | 8084 | 10.154.0.4:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:00:35.485440
+==============================================================================
+
+2026-06-07 02:01:04,656 - 2275114 - ERROR - app_validation.py errors for i-01bb855a725259f15:
+
+2026-06-07 02:01:04,658 - 2275114 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/Vantiva-wms-prod-app/10.154.0.4/10.154.0.4-BeforePatching-2026-06-07-02-01-04-657.log
+2026-06-07 02:01:04,815 - 2275114 - INFO - Sending patch command to instance i-021a8591842eab664
+2026-06-07 02:01:04,934 - 2275114 - INFO - Command sent successfully to instance i-021a8591842eab664. Command ID: 72ad1a1c-8c36-4412-86b3-bb97e2c3a649
+2026-06-07 02:01:05,089 - 2275114 - INFO - Sending patch command to instance i-01bb855a725259f15
+2026-06-07 02:01:05,183 - 2275114 - INFO - Command sent successfully to instance i-01bb855a725259f15. Command ID: f6708d95-245b-4eef-8e85-c1db7886291b
+2026-06-07 02:08:37,631 - 2275114 - INFO - All patches applied successfully.
+2026-06-07 02:08:37,631 - 2275114 - INFO - Patching end time: 2026-06-07 02:08:37
+2026-06-07 02:08:37,631 - 2275114 - INFO - Patch Elapsed time: 0:08:33.571748
+2026-06-07 02:08:37,709 - 2275114 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:08:37,709 - 2275114 - INFO - Confirmed - services are stopped
+2026-06-07 02:08:57,598 - 2275114 - INFO - Discovered TG map: {'i-021a8591842eab664': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee'], 'i-01bb855a725259f15': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee']}
+2026-06-07 02:08:57,837 - 2275114 - INFO - Deregistering i-021a8591842eab664 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51
+2026-06-07 02:08:57,902 - 2275114 - INFO - Deregistering i-021a8591842eab664 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac
+2026-06-07 02:08:57,944 - 2275114 - INFO - Deregistering i-021a8591842eab664 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d
+2026-06-07 02:08:57,988 - 2275114 - INFO - Deregistering i-021a8591842eab664 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e
+2026-06-07 02:08:58,031 - 2275114 - INFO - Deregistering i-021a8591842eab664 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee
+2026-06-07 02:08:58,078 - 2275114 - INFO - Stopping EC2 instance: i-021a8591842eab664 at 2026-06-07 02:08:58
+2026-06-07 02:10:44,428 - 2275114 - INFO - Instance i-021a8591842eab664 stopped successfully.
+2026-06-07 02:10:44,677 - 2275114 - INFO - Stopped i-021a8591842eab664 in 0:01:46.598979
+2026-06-07 02:10:44,677 - 2275114 - INFO - Starting EC2 instance: i-021a8591842eab664
+2026-06-07 02:11:01,588 - 2275114 - INFO - Instance i-021a8591842eab664 started successfully.
+2026-06-07 02:11:01,588 - 2275114 - INFO - Waiting 100 seconds for SSM agent to be ready on i-021a8591842eab664...
+2026-06-07 02:12:41,675 - 2275114 - INFO - Registering i-021a8591842eab664 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51
+2026-06-07 02:12:41,840 - 2275114 - INFO - Registering i-021a8591842eab664 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac
+2026-06-07 02:12:41,997 - 2275114 - INFO - Registering i-021a8591842eab664 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d
+2026-06-07 02:12:42,128 - 2275114 - INFO - Registering i-021a8591842eab664 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e
+2026-06-07 02:12:42,260 - 2275114 - INFO - Registering i-021a8591842eab664 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee
+2026-06-07 02:17:43,047 - 2275114 - WARNING - i-021a8591842eab664 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51 after timeout.
+2026-06-07 02:22:43,661 - 2275114 - WARNING - i-021a8591842eab664 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac after timeout.
+2026-06-07 02:27:44,331 - 2275114 - WARNING - i-021a8591842eab664 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d after timeout.
+2026-06-07 02:32:45,021 - 2275114 - WARNING - i-021a8591842eab664 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee after timeout.
+2026-06-07 02:32:45,289 - 2275114 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:32:45,289 - 2275114 - ERROR - Aborting workflow: i-021a8591842eab664 is not healthy after restart.
+2026-06-07 02:32:45,291 - 2275114 - INFO - Deregistering i-01bb855a725259f15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51
+2026-06-07 02:32:45,343 - 2275114 - INFO - Deregistering i-01bb855a725259f15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac
+2026-06-07 02:32:45,388 - 2275114 - INFO - Deregistering i-01bb855a725259f15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d
+2026-06-07 02:32:45,438 - 2275114 - INFO - Deregistering i-01bb855a725259f15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e
+2026-06-07 02:32:45,485 - 2275114 - INFO - Deregistering i-01bb855a725259f15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee
+2026-06-07 02:32:45,540 - 2275114 - INFO - Stopping EC2 instance: i-01bb855a725259f15 at 2026-06-07 02:32:45
+2026-06-07 02:34:31,883 - 2275114 - INFO - Instance i-01bb855a725259f15 stopped successfully.
+2026-06-07 02:34:32,150 - 2275114 - INFO - Stopped i-01bb855a725259f15 in 0:01:46.610187
+2026-06-07 02:34:32,151 - 2275114 - INFO - Starting EC2 instance: i-01bb855a725259f15
+2026-06-07 02:34:48,317 - 2275114 - INFO - Instance i-01bb855a725259f15 started successfully.
+2026-06-07 02:34:48,317 - 2275114 - INFO - Waiting 100 seconds for SSM agent to be ready on i-01bb855a725259f15...
+2026-06-07 02:36:28,371 - 2275114 - INFO - Registering i-01bb855a725259f15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51
+2026-06-07 02:36:28,533 - 2275114 - INFO - Registering i-01bb855a725259f15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac
+2026-06-07 02:36:28,655 - 2275114 - INFO - Registering i-01bb855a725259f15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d
+2026-06-07 02:36:28,779 - 2275114 - INFO - Registering i-01bb855a725259f15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-production-WS-EXT/15574faf3ab94e5e
+2026-06-07 02:36:28,929 - 2275114 - INFO - Registering i-01bb855a725259f15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee
+2026-06-07 02:41:29,727 - 2275114 - WARNING - i-01bb855a725259f15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Desktop/403e4fe7265f0b51 after timeout.
+2026-06-07 02:46:30,361 - 2275114 - WARNING - i-01bb855a725259f15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Hybrid/05b75b06f905d3ac after timeout.
+2026-06-07 02:51:30,981 - 2275114 - WARNING - i-01bb855a725259f15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-Portal/3013a3a58aa44e2d after timeout.
+2026-06-07 02:56:31,694 - 2275114 - WARNING - i-01bb855a725259f15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-Prod-RF/b380f95a1a0f50ee after timeout.
+2026-06-07 02:56:31,986 - 2275114 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:56:31,986 - 2275114 - ERROR - Aborting workflow: i-01bb855a725259f15 is not healthy after restart.
+2026-06-07 02:56:31,986 - 2275114 - INFO - All instances processed.
+2026-06-07 02:56:31,989 - 2275114 - INFO - Restart Total time: 0:47:54.136536
+2026-06-07 02:56:31,990 - 2275114 - INFO - Auto-confirmed services are restarted
+2026-06-07 02:56:31,990 - 2275114 - INFO - Confirmed - services are started
+2026-06-07 02:56:32,128 - 2275114 - INFO - The following instances have failed the patch: []
+2026-06-07 02:56:32,128 - 2275114 - INFO - No instances have failed the patch.
+2026-06-07 02:56:32,128 - 2275114 - INFO - Total Patch Process time: 0:56:28.531883
+2026-06-07 02:57:32,606 - 2275114 - INFO - Log file ./logs/patching_2026-06-07_Vantiva-wms-prod-app.log uploaded to s3://q2-2026-aws-security-patching/Vantiva-wms-prod-app_Patch/2026-06-07/patching_2026-06-07_Vantiva-wms-prod-app.log

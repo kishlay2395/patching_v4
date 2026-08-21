@@ -1,0 +1,576 @@
+2026-07-09 02:05:02,839 - 3999331 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-09 02:05:02,839 - 3999331 - INFO - Script Start Time: 2026-07-09 02:05:02
+2026-07-09 02:05:03,157 - 3999331 - INFO - Instance(s) selected for Patching: {'i-03fe8cd1ae13257b0': '10.0.8.202'}
+2026-07-09 02:05:03,229 - 3999331 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 02:05:03,230 - 3999331 - INFO - Now patching instances at: 2026-07-09 02:05:03
+2026-07-09 02:05:08,475 - 3999331 - INFO - i-03fe8cd1ae13257b0: Cron was active = True
+2026-07-09 02:05:08,694 - 3999331 - INFO - Health monitor crontab disabled on all instances
+2026-07-09 02:05:08,695 - 3999331 - INFO - Disabled cron for: ['i-03fe8cd1ae13257b0']
+2026-07-09 02:05:08,946 - 3999331 - INFO - Sent app_validation.py to i-03fe8cd1ae13257b0 (command_id: 97392f7d-3799-4a15-9d7c-5d31085bdaa0)
+2026-07-09 02:05:39,039 - 3999331 - INFO - app_validation.py output for i-03fe8cd1ae13257b0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 06:05:09.225546
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.8.202
+Hostname | ip-10-0-8-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 137.5G | 123.9G | 49% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.8.202:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.8.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | scln_download, scln_event, scln_jqgrid, scln_label, scln_replment, scln_report, scln_scheduler, scln_upload, scln_ftpdaemon, scln_wave, sclnuat_voadm, sclnuat_vomob, scln_ccd, scln_spsltldaemon, sclwes_bre, sclwes_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+scln_download | /data/app/java/jdk1.7.0_80/bin/scln_download
+scln_event | /data/app/java/jdk1.7.0_80/bin/scln_event
+scln_jqgrid | /data/app/java/jdk1.7.0_80/bin/scln_jqgrid
+scln_label | /data/app/java/jdk1.7.0_80/bin/scln_label
+scln_replment | /data/app/java/jdk1.7.0_80/bin/scln_replment
+scln_report | /data/app/java/jdk1.7.0_80/bin/scln_report
+scln_scheduler | /data/app/java/jdk1.7.0_80/bin/scln_scheduler
+scln_upload | /data/app/java/jdk1.7.0_80/bin/scln_upload
+scln_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scln_ftpdaemon
+scln_wave | /data/app/java/jdk1.7.0_80/bin/scln_wave
+sclnuat_voadm | /data/app/java/jdk1.8.0_144/bin/sclnuat_voadm
+sclnuat_vomob | /data/app/java/jdk1.7.0_80/bin/sclnuat_vomob
+scln_ccd | /data/app/java/jdk1.7.0_80/bin/scln_ccd
+scln_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scln_spsltldaemon
+sclwes_bre | /data/batchapp/sclwesuat/breruleenginedaemon
+sclwes_sch | /data/batchapp/sclwesuat/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2143674 | scluat | jboss730eap | scluat_jb730eap | 8081 | 10.0.8.202:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+2495815 | sclwesuat | jboss730eap | sclwes_jb730eap | 8082 | 10.0.8.202:8082 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 06:05:15.231167
+==============================================================================
+
+2026-07-09 02:05:39,039 - 3999331 - ERROR - app_validation.py errors for i-03fe8cd1ae13257b0:
+
+2026-07-09 02:05:39,041 - 3999331 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-BeforePatching-2026-07-09-02-05-39-040.log
+2026-07-09 02:05:39,126 - 3999331 - INFO - Sending patch command to instance i-03fe8cd1ae13257b0
+2026-07-09 02:05:39,225 - 3999331 - INFO - Command sent successfully to instance i-03fe8cd1ae13257b0. Command ID: 83ab5bcc-09fc-4182-acf8-7fb7c785cfa5
+2026-07-09 02:13:41,276 - 3999331 - INFO - All patches applied successfully.
+2026-07-09 02:13:41,277 - 3999331 - INFO - Patching end time: 2026-07-09 02:13:41
+2026-07-09 02:13:41,277 - 3999331 - INFO - Patch Elapsed time: 0:08:38.046974
+2026-07-09 02:13:41,345 - 3999331 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 02:13:41,346 - 3999331 - INFO - Confirmed - services are stopped
+2026-07-09 02:14:01,862 - 3999331 - INFO - Discovered TG map: {'i-03fe8cd1ae13257b0': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-Nexcom-UAT-WES-Private/b8f6ec7b19121fae']}
+2026-07-09 02:14:02,605 - 3999331 - INFO - Deregistering i-03fe8cd1ae13257b0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-Nexcom-UAT-WES-Private/b8f6ec7b19121fae
+2026-07-09 02:14:02,767 - 3999331 - INFO - Stopping EC2 instance: i-03fe8cd1ae13257b0 at 2026-07-09 02:14:02
+2026-07-09 02:16:34,646 - 3999331 - INFO - Instance i-03fe8cd1ae13257b0 stopped successfully.
+2026-07-09 02:16:34,781 - 3999331 - INFO - Stopped i-03fe8cd1ae13257b0 in 0:02:32.014088
+2026-07-09 02:16:34,781 - 3999331 - INFO - Starting EC2 instance: i-03fe8cd1ae13257b0
+2026-07-09 02:16:50,784 - 3999331 - INFO - Instance i-03fe8cd1ae13257b0 started successfully.
+2026-07-09 02:16:50,784 - 3999331 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03fe8cd1ae13257b0...
+2026-07-09 02:18:30,881 - 3999331 - INFO - Registering i-03fe8cd1ae13257b0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-Nexcom-UAT-WES-Private/b8f6ec7b19121fae
+2026-07-09 02:20:01,701 - 3999331 - INFO - Sent app_validation.py to i-03fe8cd1ae13257b0 (command_id: 718fec9a-ca26-4298-b9e5-5fff5b6aab2c)
+2026-07-09 02:20:31,911 - 3999331 - INFO - app_validation.py output for i-03fe8cd1ae13257b0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 06:20:02.095299
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.8.202
+Hostname | ip-10-0-8-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 137.5G | 123.9G | 49% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.8.202:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.8.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | sclwes_bre, sclwes_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+sclwes_bre | Unknown
+sclwes_sch | Unknown
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4182 | scluat | jboss730eap | scluat_jb730eap | 8081 | 10.0.8.202:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+3896 | sclwesuat | jboss730eap | sclwes_jb730eap | 8082 | 10.0.8.202:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 06:20:05.111974
+==============================================================================
+
+2026-07-09 02:20:31,912 - 3999331 - ERROR - app_validation.py errors for i-03fe8cd1ae13257b0:
+
+2026-07-09 02:20:31,913 - 3999331 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-AfterPatching-2026-07-09-02-20-31-913.log
+2026-07-09 02:20:31,979 - 3999331 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-Validation-details-2026-07-09-02-20-31-913.html
+2026-07-09 02:20:32,227 - 3999331 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-09 02:20:32,227 - 3999331 - INFO - HTML validation report email sent for i-03fe8cd1ae13257b0
+2026-07-09 02:20:32,227 - 3999331 - INFO - [Retry-1] Waiting 600s for i-03fe8cd1ae13257b0...
+2026-07-09 02:20:32,228 - 3999331 - INFO - RED - Background retry thread started for i-03fe8cd1ae13257b0
+2026-07-09 02:20:32,448 - 3999331 - INFO - Started i-03fe8cd1ae13257b0 in 0:03:57.667083
+2026-07-09 02:20:32,449 - 3999331 - INFO - All instances processed.
+2026-07-09 02:20:32,454 - 3999331 - INFO - Restart Total time: 0:06:50.986040
+2026-07-09 02:20:32,454 - 3999331 - INFO - Auto-confirmed services are restarted
+2026-07-09 02:20:32,454 - 3999331 - INFO - Confirmed - services are started
+2026-07-09 02:20:32,570 - 3999331 - INFO - The following instances have failed the patch: []
+2026-07-09 02:20:32,570 - 3999331 - INFO - No instances have failed the patch.
+2026-07-09 02:20:32,570 - 3999331 - INFO - Total Patch Process time: 0:15:29.730550
+2026-07-09 02:21:32,970 - 3999331 - INFO - Log file ./logs/patching_2026-07-09_SaddleCreek-Nexcom-UAT.log uploaded to s3://q3-2026-aws-security-patching/SaddleCreek-Nexcom-UAT_Patch/2026-07-09/patching_2026-07-09_SaddleCreek-Nexcom-UAT.log
+2026-07-09 02:30:32,515 - 3999331 - INFO - Sent app_validation.py to i-03fe8cd1ae13257b0 (command_id: 113f69f5-1495-4c84-ad41-d9f685f208f2)
+2026-07-09 02:31:02,603 - 3999331 - INFO - app_validation.py output for i-03fe8cd1ae13257b0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 06:30:32.788070
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.8.202
+Hostname | ip-10-0-8-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 137.5G | 123.9G | 49% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.8.202:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.8.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclwes_bre, sclwes_sch, scln_download, scln_event, scln_jqgrid, scln_label, scln_report, scln_scheduler, scln_upload, scln_ftpdaemon, scln_wave, sclnuat_voadm, sclnuat_vomob, scln_ccd, scln_spsltldaemon, scln_replment, drivemonitor
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclwes_bre | /data/batchapp/sclwesuat/breruleenginedaemon
+sclwes_sch | /data/batchapp/sclwesuat/schedulerdaemon
+scln_download | /data/app/java/jdk1.7.0_80/bin/scln_download
+scln_event | /data/app/java/jdk1.7.0_80/bin/scln_event
+scln_jqgrid | /data/app/java/jdk1.7.0_80/bin/scln_jqgrid
+scln_label | /data/app/java/jdk1.7.0_80/bin/scln_label
+scln_report | /data/app/java/jdk1.7.0_80/bin/scln_report
+scln_scheduler | /data/app/java/jdk1.7.0_80/bin/scln_scheduler
+scln_upload | /data/app/java/jdk1.7.0_80/bin/scln_upload
+scln_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scln_ftpdaemon
+scln_wave | /data/app/java/jdk1.7.0_80/bin/scln_wave
+sclnuat_voadm | /data/app/java/jdk1.8.0_144/bin/sclnuat_voadm
+sclnuat_vomob | /data/app/java/jdk1.7.0_80/bin/sclnuat_vomob
+scln_ccd | /data/app/java/jdk1.7.0_80/bin/scln_ccd
+scln_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scln_spsltldaemon
+scln_replment | /data/app/java/jdk1.7.0_80/bin/scln_replment
+drivemonitor | /data/batchapp/sclwesuat/drivespacemonitor
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4182 | scluat | jboss730eap | scluat_jb730eap | 8081 | 10.0.8.202:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+3896 | sclwesuat | jboss730eap | sclwes_jb730eap | 8082 | 10.0.8.202:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 06:30:33.504861
+==============================================================================
+
+2026-07-09 02:31:02,603 - 3999331 - ERROR - app_validation.py errors for i-03fe8cd1ae13257b0:
+
+2026-07-09 02:31:02,606 - 3999331 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-AfterPatching-Retry1-2026-07-09-02-31-02-604.log
+2026-07-09 02:31:02,680 - 3999331 - INFO - [Retry-1] RED detected for SaddleCreek Nexcom UAT (10.0.8.202), retrying... (Total waited: 600s)
+2026-07-09 02:31:02,680 - 3999331 - INFO - [Retry-2] Waiting 600s for i-03fe8cd1ae13257b0...
+2026-07-09 02:41:03,089 - 3999331 - INFO - Sent app_validation.py to i-03fe8cd1ae13257b0 (command_id: 9cd191fb-4b87-4d44-9050-771b128acb49)
+2026-07-09 02:41:33,212 - 3999331 - INFO - app_validation.py output for i-03fe8cd1ae13257b0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 06:41:03.353424
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.8.202
+Hostname | ip-10-0-8-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 137.5G | 123.9G | 49% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.8.202:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.8.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | sclwes_bre, sclwes_sch, scln_download, scln_event, scln_jqgrid, scln_label, scln_report, scln_scheduler, scln_upload, scln_ftpdaemon, scln_wave, sclnuat_voadm, sclnuat_vomob, scln_ccd, scln_spsltldaemon, scln_replment
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+sclwes_bre | /data/batchapp/sclwesuat/breruleenginedaemon
+sclwes_sch | /data/batchapp/sclwesuat/schedulerdaemon
+scln_download | /data/app/java/jdk1.7.0_80/bin/scln_download
+scln_event | /data/app/java/jdk1.7.0_80/bin/scln_event
+scln_jqgrid | /data/app/java/jdk1.7.0_80/bin/scln_jqgrid
+scln_label | /data/app/java/jdk1.7.0_80/bin/scln_label
+scln_report | /data/app/java/jdk1.7.0_80/bin/scln_report
+scln_scheduler | /data/app/java/jdk1.7.0_80/bin/scln_scheduler
+scln_upload | /data/app/java/jdk1.7.0_80/bin/scln_upload
+scln_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scln_ftpdaemon
+scln_wave | /data/app/java/jdk1.7.0_80/bin/scln_wave
+sclnuat_voadm | /data/app/java/jdk1.8.0_144/bin/sclnuat_voadm
+sclnuat_vomob | /data/app/java/jdk1.7.0_80/bin/sclnuat_vomob
+scln_ccd | /data/app/java/jdk1.7.0_80/bin/scln_ccd
+scln_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scln_spsltldaemon
+scln_replment | /data/app/java/jdk1.7.0_80/bin/scln_replment
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4182 | scluat | jboss730eap | scluat_jb730eap | 8081 | 10.0.8.202:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+3896 | sclwesuat | jboss730eap | sclwes_jb730eap | 8082 | 10.0.8.202:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 06:41:04.149480
+==============================================================================
+
+2026-07-09 02:41:33,212 - 3999331 - ERROR - app_validation.py errors for i-03fe8cd1ae13257b0:
+
+2026-07-09 02:41:33,214 - 3999331 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-AfterPatching-Retry2-2026-07-09-02-41-33-213.log
+2026-07-09 02:41:33,267 - 3999331 - INFO - [Retry-2] RED detected for SaddleCreek Nexcom UAT (10.0.8.202), retrying... (Total waited: 1200s)
+2026-07-09 02:41:33,267 - 3999331 - INFO - [Retry-3] Waiting 600s for i-03fe8cd1ae13257b0...
+2026-07-09 02:51:33,543 - 3999331 - INFO - Sent app_validation.py to i-03fe8cd1ae13257b0 (command_id: 04dea601-2c40-45cd-8e1e-96621ca39290)
+2026-07-09 02:52:03,640 - 3999331 - INFO - app_validation.py output for i-03fe8cd1ae13257b0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 06:51:33.827919
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.8.202
+Hostname | ip-10-0-8-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 137.5G | 123.9G | 49% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.8.202:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.8.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | sclwes_bre, sclwes_sch, scln_download, scln_event, scln_jqgrid, scln_label, scln_report, scln_scheduler, scln_upload, scln_ftpdaemon, scln_wave, sclnuat_voadm, sclnuat_vomob, scln_ccd, scln_spsltldaemon, scln_replment
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+sclwes_bre | /data/batchapp/sclwesuat/breruleenginedaemon
+sclwes_sch | /data/batchapp/sclwesuat/schedulerdaemon
+scln_download | /data/app/java/jdk1.7.0_80/bin/scln_download
+scln_event | /data/app/java/jdk1.7.0_80/bin/scln_event
+scln_jqgrid | /data/app/java/jdk1.7.0_80/bin/scln_jqgrid
+scln_label | /data/app/java/jdk1.7.0_80/bin/scln_label
+scln_report | /data/app/java/jdk1.7.0_80/bin/scln_report
+scln_scheduler | /data/app/java/jdk1.7.0_80/bin/scln_scheduler
+scln_upload | /data/app/java/jdk1.7.0_80/bin/scln_upload
+scln_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scln_ftpdaemon
+scln_wave | /data/app/java/jdk1.7.0_80/bin/scln_wave
+sclnuat_voadm | /data/app/java/jdk1.8.0_144/bin/sclnuat_voadm
+sclnuat_vomob | /data/app/java/jdk1.7.0_80/bin/sclnuat_vomob
+scln_ccd | /data/app/java/jdk1.7.0_80/bin/scln_ccd
+scln_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scln_spsltldaemon
+scln_replment | /data/app/java/jdk1.7.0_80/bin/scln_replment
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4182 | scluat | jboss730eap | scluat_jb730eap | 8081 | 10.0.8.202:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+3896 | sclwesuat | jboss730eap | sclwes_jb730eap | 8082 | 10.0.8.202:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 06:51:34.535232
+==============================================================================
+
+2026-07-09 02:52:03,640 - 3999331 - ERROR - app_validation.py errors for i-03fe8cd1ae13257b0:
+
+2026-07-09 02:52:03,642 - 3999331 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-Nexcom-UAT/10.0.8.202/10.0.8.202-AfterPatching-Retry3-2026-07-09-02-52-03-641.log
+2026-07-09 02:52:03,971 - 3999331 - INFO - Health monitor crontab enabled on all instances
+2026-07-09 02:52:03,973 - 3999331 - WARNING - [Retry] Timeout - auto cron enabled for i-03fe8cd1ae13257b0

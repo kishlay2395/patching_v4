@@ -1,0 +1,242 @@
+2026-04-03 01:05:02,155 - 11766 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-03 01:05:02,156 - 11766 - INFO - Script Start Time: 2026-04-03 01:05:02
+2026-04-03 01:05:02,597 - 11766 - INFO - Instance(s) selected for Patching: {'i-004f7462d9f3ee58f': '172.18.35.20'}
+2026-04-03 01:05:02,672 - 11766 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-03 01:05:02,672 - 11766 - INFO - Now patching instances at: 2026-04-03 01:05:02
+2026-04-03 01:05:02,758 - 11766 - INFO - Sending patch command to instance i-004f7462d9f3ee58f
+2026-04-03 01:05:02,947 - 11766 - INFO - Command sent successfully to instance i-004f7462d9f3ee58f. Command ID: 232201b4-05f6-4b73-8e19-a4cc815fdbe7
+2026-04-03 01:10:04,497 - 11766 - INFO - All patches applied successfully.
+2026-04-03 01:10:04,498 - 11766 - INFO - Patching end time: 2026-04-03 01:10:04
+2026-04-03 01:10:04,498 - 11766 - INFO - Patch Elapsed time: 0:05:01.825240
+2026-04-03 01:10:04,582 - 11766 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-03 01:10:04,582 - 11766 - INFO - Confirmed - services are stopped
+2026-04-03 01:10:25,802 - 11766 - INFO - Discovered TG map: {'i-004f7462d9f3ee58f': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-Desktop/adab7f3a7f8d57c6', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-RF/052a5688f9417509']}
+2026-04-03 01:10:26,202 - 11766 - INFO - Sent app_validation.py to i-004f7462d9f3ee58f (command_id: fae1db3c-ef28-4fc2-a0e1-e0404547c828)
+2026-04-03 01:10:56,324 - 11766 - INFO - app_validation.py output for i-004f7462d9f3ee58f:
+
+==============================================================================
+Server Availability Check Started | 2026-04-03 05:10:26.562855
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.35.20
+Hostname | ip-172-18-35-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 42.3G | 247.5G | 14% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.35.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 5
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.35.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | cycle_dwa, cycle_event, cycle_lbl, cycle_repl, cycle_rccl, cycle_rpt, cycle_jqgrid, cycle_sch, cycle_wld, cycle_inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+cycle_dwa | /data/batchapp/softeon/cycleuat/downloaddaemon
+cycle_event | /data/batchapp/softeon/cycleuat/eventdaemon
+cycle_lbl | /data/batchapp/softeon/cycleuat/labeldaemon
+cycle_repl | /data/batchapp/softeon/cycleuat/replenishmentdaemon
+cycle_rccl | /data/batchapp/softeon/cycleuat/replenishmentpickloccanceldaemon
+cycle_rpt | /data/batchapp/softeon/cycleuat/reportdaemon
+cycle_jqgrid | /data/batchapp/softeon/cycleuat/reportjqgridexportdaemon
+cycle_sch | /data/batchapp/softeon/cycleuat/schedulardaemon
+cycle_wld | /data/batchapp/softeon/cycleuat/wavelaunchdaemon
+cycle_inbq | /data/batchapp/softeon/cycleuat/uploaddeamon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2878 | cyclerfuat | jboss720eap | cylrfuat_jb720 | 8081 | 172.18.35.20:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/cyclerfuat/standalone
+2473 | cycleuat | jboss720eap | cycleuat_jb720 | 8080 | 172.18.35.20:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/cycleuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-03 05:10:27.206318
+==============================================================================
+
+2026-04-03 01:10:56,325 - 11766 - ERROR - app_validation.py errors for i-004f7462d9f3ee58f:
+
+2026-04-03 01:10:56,326 - 11766 - INFO - Before patching validation saved to: output/validation-2026-04-03/172.18.35.20-BeforePatching-2026-04-03-01-10-56-326.log
+2026-04-03 01:10:56,326 - 11766 - INFO - Deregistering i-004f7462d9f3ee58f from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-Desktop/adab7f3a7f8d57c6
+2026-04-03 01:10:56,391 - 11766 - INFO - Deregistering i-004f7462d9f3ee58f from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-RF/052a5688f9417509
+2026-04-03 01:10:56,436 - 11766 - INFO - Stopping EC2 instance: i-004f7462d9f3ee58f at 2026-04-03 01:10:56
+2026-04-03 01:11:57,782 - 11766 - INFO - Instance i-004f7462d9f3ee58f stopped successfully.
+2026-04-03 01:11:57,912 - 11766 - INFO - Stopped i-004f7462d9f3ee58f in 0:01:01.476295
+2026-04-03 01:11:57,912 - 11766 - INFO - Starting EC2 instance: i-004f7462d9f3ee58f
+2026-04-03 01:12:14,096 - 11766 - INFO - Instance i-004f7462d9f3ee58f started successfully.
+2026-04-03 01:12:14,096 - 11766 - INFO - Waiting 100 seconds for SSM agent to be ready on i-004f7462d9f3ee58f...
+2026-04-03 01:13:54,116 - 11766 - INFO - Registering i-004f7462d9f3ee58f to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-Desktop/adab7f3a7f8d57c6
+2026-04-03 01:13:54,297 - 11766 - INFO - Registering i-004f7462d9f3ee58f to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cycle-UAT-RF/052a5688f9417509
+2026-04-03 01:15:24,982 - 11766 - INFO - Sent app_validation.py to i-004f7462d9f3ee58f (command_id: 6273cacb-aa47-4fa3-9f75-71f16551e744)
+2026-04-03 01:15:55,161 - 11766 - INFO - app_validation.py output for i-004f7462d9f3ee58f:
+
+==============================================================================
+Server Availability Check Started | 2026-04-03 05:15:25.383569
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.35.20
+Hostname | ip-172-18-35-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 42.3G | 247.6G | 14% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.35.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 5
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.35.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | cycle_dwa, cycle_event, cycle_ftp, cycle_lbl, cycle_repl, cycle_rccl, cycle_rpt, cycle_jqgrid, cycle_sch, cycle_inbq, cycle_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+cycle_dwa | /data/batchapp/softeon/cycleuat/downloaddaemon
+cycle_event | /data/batchapp/softeon/cycleuat/eventdaemon
+cycle_ftp | /data/batchapp/softeon/cycleuat/ftpdaemon
+cycle_lbl | /data/batchapp/softeon/cycleuat/labeldaemon
+cycle_repl | /data/batchapp/softeon/cycleuat/replenishmentdaemon
+cycle_rccl | /data/batchapp/softeon/cycleuat/replenishmentpickloccanceldaemon
+cycle_rpt | /data/batchapp/softeon/cycleuat/reportdaemon
+cycle_jqgrid | /data/batchapp/softeon/cycleuat/reportjqgridexportdaemon
+cycle_sch | /data/batchapp/softeon/cycleuat/schedulardaemon
+cycle_inbq | /data/batchapp/softeon/cycleuat/uploaddeamon
+cycle_wld | /data/batchapp/softeon/cycleuat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2818 | cyclerfuat | jboss720eap | cylrfuat_jb720 | 8081 | 172.18.35.20:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/cyclerfuat/standalone
+2486 | cycleuat | jboss720eap | cycleuat_jb720 | 8080 | 172.18.35.20:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/cycleuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-03 05:15:28.045513
+==============================================================================
+
+2026-04-03 01:15:55,161 - 11766 - ERROR - app_validation.py errors for i-004f7462d9f3ee58f:
+
+2026-04-03 01:15:55,163 - 11766 - INFO - After patching validation saved to: output/validation-2026-04-03/172.18.35.20-AfterPatching-2026-04-03-01-15-55-162.log
+2026-04-03 01:15:55,214 - 11766 - INFO - Validation comparison report generated: output/validation-2026-04-03/172.18.35.20-Validation-details-2026-04-03-01-15-55-162.html
+2026-04-03 01:15:55,281 - 11766 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-03 01:15:55,281 - 11766 - INFO - HTML validation report email sent for i-004f7462d9f3ee58f
+2026-04-03 01:15:55,441 - 11766 - INFO - Started i-004f7462d9f3ee58f in 0:03:57.528512
+2026-04-03 01:15:55,442 - 11766 - INFO - All instances processed.
+2026-04-03 01:15:55,445 - 11766 - INFO - Restart Total time: 0:05:50.741981
+2026-04-03 01:15:55,445 - 11766 - INFO - Auto-confirmed services are restarted
+2026-04-03 01:15:55,445 - 11766 - INFO - Confirmed - services are started
+2026-04-03 01:15:55,556 - 11766 - INFO - The following instances have failed the patch: []
+2026-04-03 01:15:55,556 - 11766 - INFO - No instances have failed the patch.
+2026-04-03 01:15:55,556 - 11766 - INFO - Total Patch Process time: 0:10:53.400105
+2026-04-03 01:16:55,924 - 11766 - INFO - Log file ./logs/patching_2026-04-03_Cycle-UAT.log uploaded to s3://q2-2026-aws-security-patching/Cycle-UAT_Patch/2026-04-03/patching_2026-04-03_Cycle-UAT.log

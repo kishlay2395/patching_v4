@@ -1,0 +1,120 @@
+2026-01-02 00:30:02,010 - INFO - Running backup for tag: Curology-UAT
+2026-01-02 00:30:02,863 - INFO - Creating backup for: i-057a37891bb84393d
+2026-01-02 00:30:03,706 - INFO - Backup Job ID: 7db95586-b043-4b9b-8514-f93c77276b9e started at 2026-01-02 00:30:03
+2026-01-02 00:30:04,079 - ERROR - Backup update failed: Object of type UniqueViolation is not JSON serializable
+Traceback (most recent call last):
+  File "/data/patching_v4/common/utils.py", line 90, in bulk_insert
+    result = cursor.executemany(insert_statement, records)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "patching_log_pkey"
+DETAIL:  Key (instance_id, command_id)=(i-057a37891bb84393d, Pending) already exists.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/patching_v4/patching_backup.py", line 111, in backup_instances
+    utils.bulk_insert(db_details, update_stmt, update_sql)
+  File "/data/patching_v4/common/utils.py", line 100, in bulk_insert
+    write_cw_logs(pid, log_level, message)
+  File "/data/patching_v4/common/utils.py", line 158, in write_cw_logs
+    json_message = json.dumps(cw_message)
+  File "/usr/lib64/python3.8/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib64/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UniqueViolation is not JSON serializable
+
+2026-01-02 01:30:03,782 - INFO - Running backup for tag: Cycle-Logistics-UAT
+2026-01-02 01:30:04,054 - INFO - Creating backup for: i-004f7462d9f3ee58f
+2026-01-02 01:30:04,228 - INFO - Backup Job ID: 27095604-4736-480c-906e-3d3c244ad85f started at 2026-01-02 01:30:04
+2026-01-02 01:32:10,377 - INFO - Backup completed: 27095604-4736-480c-906e-3d3c244ad85f
+2026-01-02 01:32:15,524 - INFO - Backup total time: 0:02:10.974798
+2026-01-02 01:32:15,600 - INFO - Completed backups: ['i-004f7462d9f3ee58f']
+2026-01-02 20:05:02,348 - INFO - Running backup for tag: Denso-App
+2026-01-02 20:05:02,647 - INFO - Creating backup for: i-0f7908a2dfa94b044
+2026-01-02 20:05:02,878 - INFO - Backup Job ID: 6a1479f0-ca88-433b-affa-33a63c0433b0 started at 2026-01-02 20:05:02
+2026-01-02 20:05:02,879 - INFO - Creating backup for: i-03a3ede50a1daf0e3
+2026-01-02 20:05:03,051 - INFO - Backup Job ID: 98e12ad7-de60-45ca-8c57-ca0b45f0d27f started at 2026-01-02 20:05:03
+2026-01-02 20:07:09,394 - INFO - Backup completed: 98e12ad7-de60-45ca-8c57-ca0b45f0d27f
+2026-01-02 20:07:14,427 - INFO - Backup completed: 6a1479f0-ca88-433b-affa-33a63c0433b0
+2026-01-02 20:07:19,560 - INFO - Backup total time: 0:02:16.202345
+2026-01-02 20:07:19,638 - INFO - Completed backups: ['i-03a3ede50a1daf0e3', 'i-0f7908a2dfa94b044']
+2026-01-02 20:15:02,711 - INFO - Running backup for tag: Denso-Batch
+2026-01-02 20:15:03,022 - INFO - Creating backup for: i-0416620961779a0a4
+2026-01-02 20:15:03,213 - INFO - Backup Job ID: cd313f3d-a597-4858-8a00-7860696d6f8f started at 2026-01-02 20:15:03
+2026-01-02 20:15:03,214 - INFO - Creating backup for: i-000e4ec780ce15fa9
+2026-01-02 20:15:03,379 - INFO - Backup Job ID: 34fabf7f-313c-4e74-aa84-7fb14e1057df started at 2026-01-02 20:15:03
+2026-01-02 20:31:25,259 - INFO - Backup completed: 34fabf7f-313c-4e74-aa84-7fb14e1057df
+2026-01-02 20:31:30,299 - INFO - Backup completed: cd313f3d-a597-4858-8a00-7860696d6f8f
+2026-01-02 20:31:35,449 - INFO - Backup total time: 0:16:31.728797
+2026-01-02 20:31:35,539 - INFO - Completed backups: ['i-000e4ec780ce15fa9', 'i-0416620961779a0a4']
+2026-01-02 21:00:02,530 - INFO - Running backup for tag: DIB-APP
+2026-01-02 21:00:03,352 - INFO - Creating backup for: i-08a386754cd949103
+2026-01-02 21:00:03,580 - INFO - Backup Job ID: 3632fa8d-2d81-48b6-956a-dcc8dea4df7e started at 2026-01-02 21:00:03
+2026-01-02 21:00:03,580 - INFO - Creating backup for: i-0b2f0394db704a938
+2026-01-02 21:00:03,736 - INFO - Backup Job ID: 152abea1-c35f-4159-9ce9-5b0fc7f0b8dd started at 2026-01-02 21:00:03
+2026-01-02 21:00:03,737 - INFO - Creating backup for: i-0a0d1c277699e6002
+2026-01-02 21:00:03,894 - INFO - Backup Job ID: 5a817c25-3418-4251-b981-7d20f3715177 started at 2026-01-02 21:00:03
+2026-01-02 21:00:03,895 - INFO - Creating backup for: i-0da9db3fe030f8a9e
+2026-01-02 21:00:04,059 - INFO - Backup Job ID: bdea221e-675f-421b-9bf4-56e6c65c93c4 started at 2026-01-02 21:00:04
+2026-01-02 21:09:13,481 - INFO - Backup completed: 152abea1-c35f-4159-9ce9-5b0fc7f0b8dd
+2026-01-02 21:09:38,649 - INFO - Backup completed: bdea221e-675f-421b-9bf4-56e6c65c93c4
+2026-01-02 21:13:45,276 - INFO - Backup completed: 3632fa8d-2d81-48b6-956a-dcc8dea4df7e
+2026-01-02 21:15:02,710 - INFO - Running backup for tag: DIB-Batch-UAT
+2026-01-02 21:15:02,986 - INFO - Creating backup for: i-07347549ed5dc615a
+2026-01-02 21:15:03,124 - INFO - Backup Job ID: 9ba61c0e-ae6f-4440-ac0d-37a51dcd8faa started at 2026-01-02 21:15:03
+2026-01-02 21:15:03,124 - INFO - Creating backup for: i-0d9ded21646d6e67a
+2026-01-02 21:15:03,246 - INFO - Backup Job ID: 6ff3c51e-a107-48e1-a3fb-62abe3603dba started at 2026-01-02 21:15:03
+2026-01-02 21:15:03,247 - INFO - Creating backup for: i-00d7f255d0917e22c
+2026-01-02 21:15:03,368 - INFO - Backup Job ID: 9c0975fc-875f-48ea-9e24-af56c895e697 started at 2026-01-02 21:15:03
+2026-01-02 21:15:03,368 - INFO - Creating backup for: i-0061e0ca24620c596
+2026-01-02 21:15:03,511 - INFO - Backup Job ID: 22f81e4b-2d32-49ff-8160-f5caab511c6c started at 2026-01-02 21:15:03
+2026-01-02 21:21:48,097 - INFO - Backup completed: 5a817c25-3418-4251-b981-7d20f3715177
+2026-01-02 21:21:53,251 - INFO - Backup total time: 0:21:48.605137
+2026-01-02 21:21:53,328 - INFO - Completed backups: ['i-0b2f0394db704a938', 'i-0da9db3fe030f8a9e', 'i-0a0d1c277699e6002', 'i-08a386754cd949103']
+2026-01-02 21:23:21,782 - INFO - Backup completed: 22f81e4b-2d32-49ff-8160-f5caab511c6c
+2026-01-02 21:23:26,807 - INFO - Backup completed: 9ba61c0e-ae6f-4440-ac0d-37a51dcd8faa
+2026-01-02 21:23:31,851 - INFO - Backup completed: 6ff3c51e-a107-48e1-a3fb-62abe3603dba
+2026-01-02 21:51:27,487 - INFO - Backup completed: 9c0975fc-875f-48ea-9e24-af56c895e697
+2026-01-02 21:51:32,639 - INFO - Backup total time: 0:36:28.859512
+2026-01-02 21:51:32,724 - INFO - Completed backups: ['i-07347549ed5dc615a', 'i-0061e0ca24620c596', 'i-0d9ded21646d6e67a', 'i-00d7f255d0917e22c']
+2026-01-02 22:30:02,871 - INFO - Running backup for tag: DuroDyne-UAT
+2026-01-02 22:30:03,549 - INFO - Creating backup for: i-081ef8257f22efb47
+2026-01-02 22:30:03,766 - INFO - Backup Job ID: d9d51d06-a5d5-46c9-868c-6f30c7e59974 started at 2026-01-02 22:30:03
+2026-01-02 22:30:04,154 - ERROR - Backup update failed: Object of type UniqueViolation is not JSON serializable
+Traceback (most recent call last):
+  File "/data/patching_v4/common/utils.py", line 90, in bulk_insert
+    result = cursor.executemany(insert_statement, records)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "patching_log_pkey"
+DETAIL:  Key (instance_id, command_id)=(i-081ef8257f22efb47, Pending) already exists.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/patching_v4/patching_backup.py", line 111, in backup_instances
+    utils.bulk_insert(db_details, update_stmt, update_sql)
+  File "/data/patching_v4/common/utils.py", line 100, in bulk_insert
+    write_cw_logs(pid, log_level, message)
+  File "/data/patching_v4/common/utils.py", line 158, in write_cw_logs
+    json_message = json.dumps(cw_message)
+  File "/usr/lib64/python3.8/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib64/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UniqueViolation is not JSON serializable
+
+2026-01-02 23:30:02,540 - INFO - Running backup for tag: FirstQuality-UAT
+2026-01-02 23:30:03,452 - INFO - Creating backup for: i-0b01781a8a5b42f33
+2026-01-02 23:30:03,635 - INFO - Backup Job ID: 10deb636-f6a4-459e-bb56-a09bb86ad596 started at 2026-01-02 23:30:03
+2026-01-02 23:56:22,877 - INFO - Backup completed: 10deb636-f6a4-459e-bb56-a09bb86ad596
+2026-01-02 23:56:28,025 - INFO - Backup total time: 0:26:23.980623
+2026-01-02 23:56:28,109 - INFO - Completed backups: ['i-0b01781a8a5b42f33']

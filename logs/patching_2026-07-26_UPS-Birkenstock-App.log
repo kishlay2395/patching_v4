@@ -1,0 +1,450 @@
+2026-07-26 00:02:02,778 - 351434 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-26 00:02:02,778 - 351434 - INFO - Script Start Time: 2026-07-26 00:02:02
+2026-07-26 00:02:03,110 - 351434 - INFO - Tag: UPS-Birkenstock-App, IPs: ['172.29.60.234', '172.29.60.211'], Environment: prod
+2026-07-26 00:02:03,110 - 351434 - INFO - Instance(s) selected for Patching: {'i-074fd17de7e1e3045': '172.29.60.234', 'i-0c3a1c217ac432278': '172.29.60.211'}
+2026-07-26 00:02:03,198 - 351434 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-26 00:02:03,199 - 351434 - INFO - Now patching instances at: 2026-07-26 00:02:03
+2026-07-26 00:02:03,449 - 351434 - INFO - Sent app_validation.py to i-074fd17de7e1e3045 (command_id: b73ab13d-f16c-47a1-b23f-314b8b223729)
+2026-07-26 00:02:33,568 - 351434 - INFO - app_validation.py output for i-074fd17de7e1e3045:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:02:03.810767
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.234
+Hostname | ip-172-29-60-234
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 62.9G | 176.9G | 26% | /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/ | 0B | 6.3T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-65e68487.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.234:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 511
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.234 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+434009 | upsbrkv8prod | jboss730eap | upsbrkv8_jb730 | 8082 | 172.29.60.234:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8prod/standalone
+432163 | upsbrkv8rfprod | jboss730eap | upsbrkv8rf_jb73 | 8083 | 172.29.60.234:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8rfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-26 00:02:33,568 - 351434 - ERROR - app_validation.py errors for i-074fd17de7e1e3045:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-26 00:02:33,572 - 351434 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.234/172.29.60.234-BeforePatching-2026-07-26-00-02-33-569.log
+2026-07-26 00:02:33,745 - 351434 - INFO - Sent app_validation.py to i-0c3a1c217ac432278 (command_id: cc1c349a-1554-46f7-b549-44a67ece292e)
+2026-07-26 00:03:03,863 - 351434 - INFO - app_validation.py output for i-0c3a1c217ac432278:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:02:34.091040
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.211
+Hostname | ip-172-29-60-211
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 87.6G | 152.3G | 36% | /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/ | 0B | 6.3T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-65e68487.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.211:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 511
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.211 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1003692 | upsbrkv8prod | jboss730eap | upsbrkv8_jb730 | 8082 | 172.29.60.211:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8prod/standalone
+1003680 | upsbrkv8rfprod | jboss730eap | upsbrkv8rf_jb73 | 8083 | 172.29.60.211:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8rfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-26 00:03:03,863 - 351434 - ERROR - app_validation.py errors for i-0c3a1c217ac432278:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-26 00:03:03,865 - 351434 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.211/172.29.60.211-BeforePatching-2026-07-26-00-03-03-864.log
+2026-07-26 00:03:09,176 - 351434 - INFO - i-074fd17de7e1e3045: Cron was active = False
+2026-07-26 00:03:14,353 - 351434 - INFO - i-0c3a1c217ac432278: Cron was active = False
+2026-07-26 00:03:14,353 - 351434 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-26 00:03:14,443 - 351434 - INFO - Sending patch command to instance i-074fd17de7e1e3045
+2026-07-26 00:03:14,560 - 351434 - INFO - Command sent successfully to instance i-074fd17de7e1e3045. Command ID: 3bd884e7-f2b3-4a24-b794-421b7d1d34bf
+2026-07-26 00:03:14,730 - 351434 - INFO - Sending patch command to instance i-0c3a1c217ac432278
+2026-07-26 00:03:14,828 - 351434 - INFO - Command sent successfully to instance i-0c3a1c217ac432278. Command ID: 5bb17b1f-12f1-4b48-b996-7f083c2505e1
+2026-07-26 00:11:47,117 - 351434 - INFO - All patches applied successfully.
+2026-07-26 00:11:47,117 - 351434 - INFO - Patching end time: 2026-07-26 00:11:47
+2026-07-26 00:11:47,117 - 351434 - INFO - Patch Elapsed time: 0:09:43.918578
+2026-07-26 00:11:47,179 - 351434 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-26 00:11:47,179 - 351434 - INFO - Confirmed - services are stopped
+2026-07-26 00:12:08,749 - 351434 - INFO - Discovered TG map: {'i-0c3a1c217ac432278': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119'], 'i-074fd17de7e1e3045': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119']}
+2026-07-26 00:12:08,928 - 351434 - INFO - Deregistering i-074fd17de7e1e3045 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e
+2026-07-26 00:12:08,992 - 351434 - INFO - Deregistering i-074fd17de7e1e3045 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155
+2026-07-26 00:12:09,037 - 351434 - INFO - Deregistering i-074fd17de7e1e3045 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119
+2026-07-26 00:12:09,092 - 351434 - INFO - Stopping EC2 instance: i-074fd17de7e1e3045 at 2026-07-26 00:12:09
+2026-07-26 00:14:40,751 - 351434 - INFO - Instance i-074fd17de7e1e3045 stopped successfully.
+2026-07-26 00:14:41,000 - 351434 - INFO - Stopped i-074fd17de7e1e3045 in 0:02:31.907793
+2026-07-26 00:14:41,001 - 351434 - INFO - Starting EC2 instance: i-074fd17de7e1e3045
+2026-07-26 00:14:57,134 - 351434 - INFO - Instance i-074fd17de7e1e3045 started successfully.
+2026-07-26 00:14:57,134 - 351434 - INFO - Waiting 100 seconds for SSM agent to be ready on i-074fd17de7e1e3045...
+2026-07-26 00:16:37,229 - 351434 - INFO - Registering i-074fd17de7e1e3045 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e
+2026-07-26 00:16:37,430 - 351434 - INFO - Registering i-074fd17de7e1e3045 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155
+2026-07-26 00:16:37,592 - 351434 - INFO - Registering i-074fd17de7e1e3045 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119
+2026-07-26 00:18:08,218 - 351434 - INFO - Sent app_validation.py to i-074fd17de7e1e3045 (command_id: 5bacc5ec-eaa7-4aee-8762-c7a6d788eb08)
+2026-07-26 00:18:38,306 - 351434 - INFO - app_validation.py output for i-074fd17de7e1e3045:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:18:08.599353
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.234
+Hostname | ip-172-29-60-234
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 61.4G | 178.5G | 25% | /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/ | 0B | 6.3T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-65e68487.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.234:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 511
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.234 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3458 | upsbrkv8prod | jboss730eap | upsbrkv8_jb730 | 8082 | 172.29.60.234:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8prod/standalone
+3451 | upsbrkv8rfprod | jboss730eap | upsbrkv8rf_jb73 | 8083 | 172.29.60.234:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8rfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-26 00:18:38,306 - 351434 - ERROR - app_validation.py errors for i-074fd17de7e1e3045:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-26 00:18:38,307 - 351434 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.234/172.29.60.234-AfterPatching-2026-07-26-00-18-38-307.log
+2026-07-26 00:18:38,364 - 351434 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.234/172.29.60.234-Validation-details-2026-07-26-00-18-38-307.html
+2026-07-26 00:18:38,491 - 351434 - INFO - i-074fd17de7e1e3045: Cron was not active - skipping enable
+2026-07-26 00:18:38,566 - 351434 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-26 00:18:38,567 - 351434 - INFO - GREEN mail sent for i-074fd17de7e1e3045
+2026-07-26 00:18:38,811 - 351434 - INFO - Started i-074fd17de7e1e3045 in 0:03:57.810234
+2026-07-26 00:18:38,811 - 351434 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-26 00:20:38,910 - 351434 - INFO - Deregistering i-0c3a1c217ac432278 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e
+2026-07-26 00:20:39,013 - 351434 - INFO - Deregistering i-0c3a1c217ac432278 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155
+2026-07-26 00:20:39,068 - 351434 - INFO - Deregistering i-0c3a1c217ac432278 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119
+2026-07-26 00:20:39,108 - 351434 - INFO - Stopping EC2 instance: i-0c3a1c217ac432278 at 2026-07-26 00:20:39
+2026-07-26 00:23:10,656 - 351434 - INFO - Instance i-0c3a1c217ac432278 stopped successfully.
+2026-07-26 00:23:10,908 - 351434 - INFO - Stopped i-0c3a1c217ac432278 in 0:02:31.799844
+2026-07-26 00:23:10,908 - 351434 - INFO - Starting EC2 instance: i-0c3a1c217ac432278
+2026-07-26 00:23:26,913 - 351434 - INFO - Instance i-0c3a1c217ac432278 started successfully.
+2026-07-26 00:23:26,913 - 351434 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0c3a1c217ac432278...
+2026-07-26 00:25:06,954 - 351434 - INFO - Registering i-0c3a1c217ac432278 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-Prod/384fdaf2bf00e12e
+2026-07-26 00:25:07,193 - 351434 - INFO - Registering i-0c3a1c217ac432278 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-RF/9263d96cc467c155
+2026-07-26 00:25:07,328 - 351434 - INFO - Registering i-0c3a1c217ac432278 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-Prod-Desktop/f91f55730bb8e119
+2026-07-26 00:26:37,980 - 351434 - INFO - Sent app_validation.py to i-0c3a1c217ac432278 (command_id: 1aeec8e7-f6a3-4ac2-b53e-a557a7ed3ce9)
+2026-07-26 00:27:08,098 - 351434 - INFO - app_validation.py output for i-0c3a1c217ac432278:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:26:38.317392
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.211
+Hostname | ip-172-29-60-211
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 86.8G | 153.1G | 36% | /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/ | 0B | 6.3T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-65e68487.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.211:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 511
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.211 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3419 | upsbrkv8prod | jboss730eap | upsbrkv8_jb730 | 8082 | 172.29.60.211:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8prod/standalone
+3393 | upsbrkv8rfprod | jboss730eap | upsbrkv8rf_jb73 | 8083 | 172.29.60.211:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbrkv8rfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-26 00:27:08,098 - 351434 - ERROR - app_validation.py errors for i-0c3a1c217ac432278:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-26 00:27:08,100 - 351434 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.211/172.29.60.211-AfterPatching-2026-07-26-00-27-08-100.log
+2026-07-26 00:27:08,158 - 351434 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-App/172.29.60.211/172.29.60.211-Validation-details-2026-07-26-00-27-08-100.html
+2026-07-26 00:27:08,327 - 351434 - INFO - i-0c3a1c217ac432278: Cron was not active - skipping enable
+2026-07-26 00:27:08,410 - 351434 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-26 00:27:08,410 - 351434 - INFO - GREEN mail sent for i-0c3a1c217ac432278
+2026-07-26 00:27:08,670 - 351434 - INFO - Started i-0c3a1c217ac432278 in 0:03:57.761115
+2026-07-26 00:27:08,671 - 351434 - INFO - All instances processed.
+2026-07-26 00:27:08,677 - 351434 - INFO - Restart Total time: 0:15:21.359827
+2026-07-26 00:27:08,678 - 351434 - INFO - Auto-confirmed services are restarted
+2026-07-26 00:27:08,678 - 351434 - INFO - Confirmed - services are started
+2026-07-26 00:27:08,795 - 351434 - INFO - The following instances have failed the patch: []
+2026-07-26 00:27:08,795 - 351434 - INFO - No instances have failed the patch.
+2026-07-26 00:27:08,795 - 351434 - INFO - Total Patch Process time: 0:25:06.016712
+2026-07-26 00:28:09,234 - 351434 - INFO - Log file ./logs/patching_2026-07-26_UPS-Birkenstock-App.log uploaded to s3://q3-2026-aws-security-patching/UPS-Birkenstock-App_Patch/2026-07-26/patching_2026-07-26_UPS-Birkenstock-App.log

@@ -1,0 +1,245 @@
+2026-05-31 00:20:02,703 - 1890467 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-31 00:20:02,703 - 1890467 - INFO - Script Start Time: 2026-05-31 00:20:02
+2026-05-31 00:20:03,074 - 1890467 - INFO - Instance(s) selected for Patching: {'i-063f79e7448d6bf81': '172.22.20.51'}
+2026-05-31 00:20:03,157 - 1890467 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 00:20:03,157 - 1890467 - INFO - Now patching instances at: 2026-05-31 00:20:03
+2026-05-31 00:20:03,251 - 1890467 - INFO - Sending patch command to instance i-063f79e7448d6bf81
+2026-05-31 00:20:03,630 - 1890467 - INFO - Command sent successfully to instance i-063f79e7448d6bf81. Command ID: 48729d87-f94c-4a88-aa57-f5122799f28f
+2026-05-31 00:23:35,445 - 1890467 - INFO - All patches applied successfully.
+2026-05-31 00:23:35,446 - 1890467 - INFO - Patching end time: 2026-05-31 00:23:35
+2026-05-31 00:23:35,446 - 1890467 - INFO - Patch Elapsed time: 0:03:32.288333
+2026-05-31 00:23:35,526 - 1890467 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 00:23:35,527 - 1890467 - INFO - Confirmed - services are stopped
+2026-05-31 00:23:40,913 - 1890467 - INFO - Discovered TG map: {}
+2026-05-31 00:23:41,718 - 1890467 - INFO - Sent app_validation.py to i-063f79e7448d6bf81 (command_id: 3198f032-a3a0-4bcf-b76a-614cdfbb743e)
+2026-05-31 00:24:11,887 - 1890467 - INFO - app_validation.py output for i-063f79e7448d6bf81:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 04:23:41.925141
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.20.51
+Hostname | ip-172-22-20-51.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 163.1G | 126.7G | 56% | /data
+fs-cdb1e307.efs.eu-west-1.amazonaws.com:/shared/softeon/umgoms | 0B | 672.2G | 0B | 0% | /data/data2/shared/softeon/umgoms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/sftpuser/umgomsuat	172.22.20.54(rw,sync,no_root_squash,no_all_squash) | /data/sftpuser/umgomsuat	172.22.20.29(rw,sync,no_root_squash,no_all_squash) | /data/sftpuser/umgomsuat	172.22.20.43(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-cdb1e307.efs.eu-west-1.amazonaws.com:/shared/softeon/umgoms | /data/data2/shared/softeon/umgoms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.20.51:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.20.51 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 26
+Non-Standalone Java Processes | umgoms_sqsboagt, umgoms_sqsdcagt, umgoms_sqsicagt, umgoms_sqsiuagt, umgoms_sqslcagt, umgoms_sqscnagt, umgoms_1sqsoca, umgoms_2sqsoca, umgoms_3sqsoca, umgoms_4sqsoca, umgoms_sqsoea, umgoms_1sqsoua, umgoms_2sqsoua, umgoms_sqspcagt, umgoms_sqspdagt, umgoms_1sqspua, umgoms_2sqspua, umgoms_sqsrcagt, umgoms_fhragt, umgoms_1sch, umgoms_2src, umgoms_2wmsrl, umgoms_2ord, umgoms_2wmsprl, umgoms_2hld, drivemonitor
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 26
+Java-Name | Java-Path
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdcagt | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsicagt | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiuagt | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqslcagt | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_sqscnagt | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_1sqsoca | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon1
+umgoms_2sqsoca | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon2
+umgoms_3sqsoca | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon3
+umgoms_4sqsoca | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon4
+umgoms_sqsoea | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_1sqsoua | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon1
+umgoms_2sqsoua | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon2
+umgoms_sqspcagt | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspdagt | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_1sqspua | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon1
+umgoms_2sqspua | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon2
+umgoms_sqsrcagt | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_fhragt | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_2src | /data/batchapp/softeon/umgomsuat/sourcingdaemon2
+umgoms_2wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon2
+umgoms_2ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon2
+umgoms_2wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon2
+umgoms_2hld | /data/batchapp/softeon/umgomsuat/holddaemon2
+drivemonitor | /data/batchapp/softeon/umgomsuat/drivespacemonitor
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 04:23:42.654629
+==============================================================================
+
+2026-05-31 00:24:11,888 - 1890467 - ERROR - app_validation.py errors for i-063f79e7448d6bf81:
+
+2026-05-31 00:24:11,889 - 1890467 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-31/UMGOMS-EU-prod-Batch/172.22.20.51/172.22.20.51-BeforePatching-2026-05-31-00-24-11-889.log
+2026-05-31 00:24:11,889 - 1890467 - INFO - Stopping EC2 instance: i-063f79e7448d6bf81 at 2026-05-31 00:24:11
+2026-05-31 00:25:28,577 - 1890467 - INFO - Instance i-063f79e7448d6bf81 stopped successfully.
+2026-05-31 00:25:28,716 - 1890467 - INFO - Stopped i-063f79e7448d6bf81 in 0:01:16.826888
+2026-05-31 00:25:28,717 - 1890467 - INFO - Starting EC2 instance: i-063f79e7448d6bf81
+2026-05-31 00:25:44,788 - 1890467 - INFO - Instance i-063f79e7448d6bf81 started successfully.
+2026-05-31 00:25:44,788 - 1890467 - INFO - Waiting 100 seconds for SSM agent to be ready on i-063f79e7448d6bf81...
+2026-05-31 00:27:25,464 - 1890467 - INFO - Sent app_validation.py to i-063f79e7448d6bf81 (command_id: 908ea4ca-f33b-4711-98da-ce1a257b4370)
+2026-05-31 00:27:55,617 - 1890467 - INFO - app_validation.py output for i-063f79e7448d6bf81:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 04:27:25.681016
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.20.51
+Hostname | ip-172-22-20-51.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 162.9G | 126.9G | 56% | /data
+fs-cdb1e307.efs.eu-west-1.amazonaws.com:/shared/softeon/umgoms | 0B | 672.2G | 0B | 0% | /data/data2/shared/softeon/umgoms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/sftpuser/umgomsuat	172.22.20.54(rw,sync,no_root_squash,no_all_squash) | /data/sftpuser/umgomsuat	172.22.20.29(rw,sync,no_root_squash,no_all_squash) | /data/sftpuser/umgomsuat	172.22.20.43(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-cdb1e307.efs.eu-west-1.amazonaws.com:/shared/softeon/umgoms | /data/data2/shared/softeon/umgoms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.20.51:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.20.51 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 04:27:26.014853
+==============================================================================
+
+2026-05-31 00:27:55,618 - 1890467 - ERROR - app_validation.py errors for i-063f79e7448d6bf81:
+
+2026-05-31 00:27:55,619 - 1890467 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-31/UMGOMS-EU-prod-Batch/172.22.20.51/172.22.20.51-AfterPatching-2026-05-31-00-27-55-619.log
+2026-05-31 00:27:55,672 - 1890467 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-31/UMGOMS-EU-prod-Batch/172.22.20.51/172.22.20.51-Validation-details-2026-05-31-00-27-55-619.html
+2026-05-31 00:27:56,129 - 1890467 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-31 00:27:56,129 - 1890467 - INFO - HTML validation report email sent for i-063f79e7448d6bf81
+2026-05-31 00:27:56,262 - 1890467 - INFO - Started i-063f79e7448d6bf81 in 0:02:27.545162
+2026-05-31 00:27:56,263 - 1890467 - INFO - All instances processed.
+2026-05-31 00:27:56,266 - 1890467 - INFO - Restart Total time: 0:04:20.580755
+2026-05-31 00:27:56,266 - 1890467 - INFO - Auto-confirmed services are restarted
+2026-05-31 00:27:56,266 - 1890467 - INFO - Confirmed - services are started
+2026-05-31 00:27:56,381 - 1890467 - INFO - The following instances have failed the patch: []
+2026-05-31 00:27:56,381 - 1890467 - INFO - No instances have failed the patch.
+2026-05-31 00:27:56,381 - 1890467 - INFO - Total Patch Process time: 0:07:53.677446
+2026-05-31 00:28:56,839 - 1890467 - INFO - Log file ./logs/patching_2026-05-31_UMGOMS-EU-prod-Batch.log uploaded to s3://q2-2026-aws-security-patching/UMGOMS-EU-prod-Batch_Patch/2026-05-31/patching_2026-05-31_UMGOMS-EU-prod-Batch.log

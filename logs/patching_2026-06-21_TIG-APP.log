@@ -1,0 +1,231 @@
+2026-06-21 01:00:03,226 - 3021904 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-21 01:00:03,226 - 3021904 - INFO - Script Start Time: 2026-06-21 01:00:03
+2026-06-21 01:00:03,777 - 3021904 - INFO - Instance(s) selected for Patching: {'i-092f6f6e666743e49': '172.30.164.28', 'i-0f3080227ce4a6ece': '172.30.164.56'}
+2026-06-21 01:00:03,891 - 3021904 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 01:00:03,891 - 3021904 - INFO - Now patching instances at: 2026-06-21 01:00:03
+2026-06-21 01:00:04,275 - 3021904 - INFO - Sent app_validation.py to i-092f6f6e666743e49 (command_id: 1c78d7e5-ba06-4194-982d-c198dd10200b)
+2026-06-21 01:00:34,437 - 3021904 - INFO - app_validation.py output for i-092f6f6e666743e49:
+
+==============================================================================
+Server Availability Check Started | 2026-06-21 05:00:04.565356
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.28
+Hostname | ip-172-30-164-28.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 47.3G | 192.6G | 19% | /data
+fs-0b9faaf5a85a0da34.efs.us-east-2.amazonaws.com:/ | 0B | 133.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b9faaf5a85a0da34.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.28:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.28 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4271 | tigconfigprod | jboss740eap | tigconfprod_j74 | 8083 | 172.30.164.28:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfigprod/standalone
+3550789 | tigprod | jboss800eap | tigprod_jb800e | 8080 | 172.30.164.28:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigprod/standalone
+3553724 | tigrfprod | jboss800eap | tigrfprod_jb800 | 8081 | 172.30.164.28:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfprod/standalone
+3706300 | tigswpprod | jboss800eap | tigswpprod_jb80 | 8082 | 172.30.164.28:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-21 05:00:05.293580
+==============================================================================
+
+2026-06-21 01:00:34,438 - 3021904 - ERROR - app_validation.py errors for i-092f6f6e666743e49:
+
+2026-06-21 01:00:34,439 - 3021904 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-21/TIG-APP/172.30.164.28/172.30.164.28-BeforePatching-2026-06-21-01-00-34-439.log
+2026-06-21 01:00:34,684 - 3021904 - INFO - Sent app_validation.py to i-0f3080227ce4a6ece (command_id: 4d8862ef-b35f-4eab-8589-d2b1d5c26b4c)
+2026-06-21 01:01:04,774 - 3021904 - INFO - app_validation.py output for i-0f3080227ce4a6ece:
+
+==============================================================================
+Server Availability Check Started | 2026-06-21 05:00:34.977176
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.164.56
+Hostname | ip-172-30-164-56.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 49.7G | 190.2G | 20% | /data
+fs-0b9faaf5a85a0da34.efs.us-east-2.amazonaws.com:/ | 0B | 133.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b9faaf5a85a0da34.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.164.56:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.164.56 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4387 | tigconfigprod | jboss740eap | tigconfprod_j74 | 8083 | 172.30.164.56:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/tigconfigprod/standalone
+179195 | tigprod | jboss800eap | tigprod_jb800e | 8080 | 172.30.164.56:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigprod/standalone
+184934 | tigrfprod | jboss800eap | tigrfprod_jb800 | 8081 | 172.30.164.56:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigrfprod/standalone
+1201800 | tigswpprod | jboss800eap | tigswpprod_jb80 | 8082 | 172.30.164.56:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/tigswpprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-21 05:00:35.620792
+==============================================================================
+
+2026-06-21 01:01:04,774 - 3021904 - ERROR - app_validation.py errors for i-0f3080227ce4a6ece:
+
+2026-06-21 01:01:04,775 - 3021904 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-21/TIG-APP/172.30.164.56/172.30.164.56-BeforePatching-2026-06-21-01-01-04-775.log
+2026-06-21 01:01:04,933 - 3021904 - INFO - Sending patch command to instance i-092f6f6e666743e49
+2026-06-21 01:01:05,105 - 3021904 - INFO - Command sent successfully to instance i-092f6f6e666743e49. Command ID: ac59ed41-1dac-4f7f-94b7-ff269ee58a0f
+2026-06-21 01:01:05,264 - 3021904 - INFO - Sending patch command to instance i-0f3080227ce4a6ece
+2026-06-21 01:01:05,392 - 3021904 - INFO - Command sent successfully to instance i-0f3080227ce4a6ece. Command ID: f12c7d5b-23ee-4746-824d-a28eed8babc8
+2026-06-21 01:09:07,745 - 3021904 - INFO - All patches applied successfully.
+2026-06-21 01:09:07,746 - 3021904 - INFO - Patching end time: 2026-06-21 01:09:07
+2026-06-21 01:09:07,746 - 3021904 - INFO - Patch Elapsed time: 0:09:03.854334
+2026-06-21 01:09:07,816 - 3021904 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-21 01:09:07,816 - 3021904 - INFO - Confirmed - services are stopped
+2026-06-21 01:09:14,757 - 3021904 - INFO - Discovered TG map: {'i-0f3080227ce4a6ece': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Config/6b1eaa90a74babf3', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Desktop/ade07df0f6806068', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Portal-Ext/d089d2afa851cadd', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-RF/fc54cd212fd8e9f5'], 'i-092f6f6e666743e49': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Config/6b1eaa90a74babf3', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Desktop/ade07df0f6806068', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Portal-Ext/d089d2afa851cadd', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-RF/fc54cd212fd8e9f5']}
+2026-06-21 01:09:14,935 - 3021904 - INFO - Deregistering i-092f6f6e666743e49 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Config/6b1eaa90a74babf3
+2026-06-21 01:09:15,033 - 3021904 - INFO - Deregistering i-092f6f6e666743e49 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Desktop/ade07df0f6806068
+2026-06-21 01:09:15,088 - 3021904 - INFO - Deregistering i-092f6f6e666743e49 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Portal-Ext/d089d2afa851cadd
+2026-06-21 01:09:15,142 - 3021904 - INFO - Deregistering i-092f6f6e666743e49 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-RF/fc54cd212fd8e9f5
+2026-06-21 01:09:15,195 - 3021904 - INFO - Stopping EC2 instance: i-092f6f6e666743e49 at 2026-06-21 01:09:15
+2026-06-21 01:11:01,520 - 3021904 - INFO - Instance i-092f6f6e666743e49 stopped successfully.
+2026-06-21 01:11:02,310 - 3021904 - INFO - Stopped i-092f6f6e666743e49 in 0:01:47.114991
+2026-06-21 01:11:02,312 - 3021904 - INFO - Starting EC2 instance: i-092f6f6e666743e49
+2026-06-21 01:11:18,291 - 3021904 - INFO - Instance i-092f6f6e666743e49 started successfully.
+2026-06-21 01:11:18,291 - 3021904 - INFO - Waiting 100 seconds for SSM agent to be ready on i-092f6f6e666743e49...
+2026-06-21 01:12:58,392 - 3021904 - INFO - Registering i-092f6f6e666743e49 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Config/6b1eaa90a74babf3
+2026-06-21 01:12:58,606 - 3021904 - INFO - Registering i-092f6f6e666743e49 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Desktop/ade07df0f6806068
+2026-06-21 01:12:58,731 - 3021904 - INFO - Registering i-092f6f6e666743e49 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Portal-Ext/d089d2afa851cadd
+2026-06-21 01:12:58,867 - 3021904 - INFO - Registering i-092f6f6e666743e49 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-RF/fc54cd212fd8e9f5
+2026-06-21 01:18:29,902 - 3021904 - WARNING - i-092f6f6e666743e49 not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Desktop/ade07df0f6806068 after timeout.
+2026-06-21 01:23:30,771 - 3021904 - WARNING - i-092f6f6e666743e49 not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-Portal-Ext/d089d2afa851cadd after timeout.
+2026-06-21 01:28:31,581 - 3021904 - WARNING - i-092f6f6e666743e49 not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/TIG-Production-RF/fc54cd212fd8e9f5 after timeout.
+2026-06-21 01:28:31,909 - 3021904 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-21 01:28:31,909 - 3021904 - ERROR - Aborting workflow: i-092f6f6e666743e49 is not healthy after restart.
+2026-06-21 01:28:31,912 - 3021904 - INFO - Restart Total time: 0:19:23.952829
+2026-06-21 01:28:31,912 - 3021904 - INFO - Auto-confirmed services are restarted
+2026-06-21 01:28:31,912 - 3021904 - INFO - Confirmed - services are started
+2026-06-21 01:28:32,117 - 3021904 - INFO - The following instances have failed the patch: []
+2026-06-21 01:28:32,117 - 3021904 - INFO - No instances have failed the patch.
+2026-06-21 01:28:32,117 - 3021904 - INFO - Total Patch Process time: 0:28:28.891135
+2026-06-21 01:29:32,598 - 3021904 - INFO - Log file ./logs/patching_2026-06-21_TIG-APP.log uploaded to s3://q2-2026-aws-security-patching/TIG-APP_Patch/2026-06-21/patching_2026-06-21_TIG-APP.log

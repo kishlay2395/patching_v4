@@ -1,0 +1,269 @@
+2026-04-12 00:05:02,240 - 509818 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-12 00:05:02,242 - 509818 - INFO - Script Start Time: 2026-04-12 00:05:02
+2026-04-12 00:05:02,554 - 509818 - INFO - Instance(s) selected for Patching: {'i-0196a0f0cf95fde24': '172.29.61.153'}
+2026-04-12 00:05:02,632 - 509818 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:05:02,632 - 509818 - INFO - Now patching instances at: 2026-04-12 00:05:02
+2026-04-12 00:05:02,720 - 509818 - INFO - Sending patch command to instance i-0196a0f0cf95fde24
+2026-04-12 00:05:02,883 - 509818 - INFO - Command sent successfully to instance i-0196a0f0cf95fde24. Command ID: dcfc7427-caf8-423d-9a82-8c14cb29a2b2
+2026-04-12 00:10:04,357 - 509818 - INFO - All patches applied successfully.
+2026-04-12 00:10:04,358 - 509818 - INFO - Patching end time: 2026-04-12 00:10:04
+2026-04-12 00:10:04,358 - 509818 - INFO - Patch Elapsed time: 0:05:01.725774
+2026-04-12 00:10:04,431 - 509818 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:10:04,431 - 509818 - INFO - Confirmed - services are stopped
+2026-04-12 00:10:25,765 - 509818 - INFO - Discovered TG map: {'i-0196a0f0cf95fde24': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT/3c79232ccf3c3ec5', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-RF/8879a054a0a0c3ff', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-UAT/d065af3e7973d9ea']}
+2026-04-12 00:10:26,170 - 509818 - INFO - Sent app_validation.py to i-0196a0f0cf95fde24 (command_id: 0b550f82-8f7c-40c8-a967-28acbc255dd6)
+2026-04-12 00:10:56,259 - 509818 - INFO - app_validation.py output for i-0196a0f0cf95fde24:
+
+==============================================================================
+Server Availability Check Started | 2026-04-12 00:10:26.471668
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.153
+Hostname | ip-172-29-61-153
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 174.6G | 115.2G | 60% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.61.153:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 223
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.153 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | upsbirk_apick, upsbirk_abchdis, upsbirk_DWA, upsbirk_event, upsbirk_ftp, upsbirk_harp, upsbirk_lbl, upsbirk_repl, upsbirk_rpt, upsbirk_jqgrid, upsbirk_sch, upsbirk_inbq, upsbirk_wld, upsbirk_TIAD, upsbirk_RCCL, upsbirk_cbcd, upsbirk_cartcbc, upsbirk_api_sch, upsbirk_locus, upsbirk_wsq, upsbirk_2wsq, upsbirk_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+upsbirk_apick | /data/batchapp/softeon/upsbirkenstock/apickdaemon
+upsbirk_abchdis | /data/batchapp/softeon/upsbirkenstock/autobatchdistributiondaemon
+upsbirk_DWA | /data/batchapp/softeon/upsbirkenstock/downloaddaemon
+upsbirk_event | /data/batchapp/softeon/upsbirkenstock/eventdaemon
+upsbirk_ftp | /data/batchapp/softeon/upsbirkenstock/ftpdaemon
+upsbirk_harp | /data/batchapp/softeon/upsbirkenstock/hardallocationdaemon
+upsbirk_lbl | /data/batchapp/softeon/upsbirkenstock/labeldaemon
+upsbirk_repl | /data/batchapp/softeon/upsbirkenstock/replenishmentdaemon
+upsbirk_rpt | /data/batchapp/softeon/upsbirkenstock/reportdaemon
+upsbirk_jqgrid | /data/batchapp/softeon/upsbirkenstock/reportjqgridexportdaemon
+upsbirk_sch | /data/batchapp/softeon/upsbirkenstock/schedulardaemon
+upsbirk_inbq | /data/batchapp/softeon/upsbirkenstock/uploaddeamon
+upsbirk_wld | /data/batchapp/softeon/upsbirkenstock/wavelaunchdaemon
+upsbirk_TIAD | /data/batchapp/softeon/upsbirkenstock/tasklevelinventoryallocation
+upsbirk_RCCL | /data/batchapp/softeon/upsbirkenstock/replenishmentcanceldaemon
+upsbirk_cbcd | /data/batchapp/softeon/upsbirkenstock/clusterbatchcreationdaemon
+upsbirk_cartcbc | /data/batchapp/softeon/upsbirkenstock/clusterbatchcarttypedaemon
+upsbirk_api_sch | /data/batchapp/softeon/upsbirkenstock/schedulerdaemon_api
+upsbirk_locus | /data/batchapp/softeon/upsbirkenstock/locusdaemon
+upsbirk_wsq | /data/batchapp/softeon/upsbirkenstock/wsqdaemon
+upsbirk_2wsq | /data/batchapp/softeon/upsbirkenstock/wsq2daemon
+upsbirk_ccd | /data/batchapp/softeon/upsbirkenstock/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3640 | upsbirkenstock | jboss730eap | upsbstk_jb73ap | 8090 | 172.29.61.153:8090 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstock/standalone
+3837456 | upsbirkenstockv8rfuat | jboss730eap | birv8rfuat_jb73 | 8093 | 172.29.61.153:8093 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstockv8rfuat/standalone
+3837280 | upsbirkenstockv8uat | jboss730eap | birv8uat_jb73 | 8092 | 172.29.61.153:8092 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstockv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-12 00:10:27.611046
+==============================================================================
+
+2026-04-12 00:10:56,259 - 509818 - ERROR - app_validation.py errors for i-0196a0f0cf95fde24:
+
+2026-04-12 00:10:56,261 - 509818 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-12/UPS-Birkenstock-UAT/172.29.61.153/172.29.61.153-BeforePatching-2026-04-12-00-10-56-260.log
+2026-04-12 00:10:56,261 - 509818 - INFO - Deregistering i-0196a0f0cf95fde24 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT/3c79232ccf3c3ec5
+2026-04-12 00:10:56,335 - 509818 - INFO - Deregistering i-0196a0f0cf95fde24 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-RF/8879a054a0a0c3ff
+2026-04-12 00:10:56,385 - 509818 - INFO - Deregistering i-0196a0f0cf95fde24 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-UAT/d065af3e7973d9ea
+2026-04-12 00:10:56,436 - 509818 - INFO - Stopping EC2 instance: i-0196a0f0cf95fde24 at 2026-04-12 00:10:56
+2026-04-12 00:13:12,869 - 509818 - INFO - Instance i-0196a0f0cf95fde24 stopped successfully.
+2026-04-12 00:13:13,005 - 509818 - INFO - Stopped i-0196a0f0cf95fde24 in 0:02:16.568605
+2026-04-12 00:13:13,005 - 509818 - INFO - Starting EC2 instance: i-0196a0f0cf95fde24
+2026-04-12 00:13:28,929 - 509818 - INFO - Instance i-0196a0f0cf95fde24 started successfully.
+2026-04-12 00:13:28,929 - 509818 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0196a0f0cf95fde24...
+2026-04-12 00:14:18,976 - 509818 - INFO - Registering i-0196a0f0cf95fde24 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT/3c79232ccf3c3ec5
+2026-04-12 00:14:19,172 - 509818 - INFO - Registering i-0196a0f0cf95fde24 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-RF/8879a054a0a0c3ff
+2026-04-12 00:14:19,318 - 509818 - INFO - Registering i-0196a0f0cf95fde24 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birk-Locus-UAT/d065af3e7973d9ea
+2026-04-12 00:16:50,168 - 509818 - INFO - Sent app_validation.py to i-0196a0f0cf95fde24 (command_id: 0d81d94b-4e49-4de8-9366-5b2f2432d429)
+2026-04-12 00:17:20,263 - 509818 - INFO - app_validation.py output for i-0196a0f0cf95fde24:
+
+==============================================================================
+Server Availability Check Started | 2026-04-12 00:16:50.532947
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.153
+Hostname | ip-172-29-61-153
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 174.5G | 115.3G | 60% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.61.153:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 223
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.153 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | upsbirk_apick, upsbirk_abchdis, upsbirk_DWA, upsbirk_event, upsbirk_ftp, upsbirk_harp, upsbirk_lbl, upsbirk_repl, upsbirk_rpt, upsbirk_jqgrid, upsbirk_sch, upsbirk_inbq, upsbirk_wld, upsbirk_TIAD, upsbirk_RCCL, upsbirk_cbcd, upsbirk_cartcbc, upsbirk_api_sch, upsbirk_locus, upsbirk_wsq, upsbirk_2wsq, upsbirk_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+upsbirk_apick | /data/batchapp/softeon/upsbirkenstock/apickdaemon
+upsbirk_abchdis | /data/batchapp/softeon/upsbirkenstock/autobatchdistributiondaemon
+upsbirk_DWA | /data/batchapp/softeon/upsbirkenstock/downloaddaemon
+upsbirk_event | /data/batchapp/softeon/upsbirkenstock/eventdaemon
+upsbirk_ftp | /data/batchapp/softeon/upsbirkenstock/ftpdaemon
+upsbirk_harp | /data/batchapp/softeon/upsbirkenstock/hardallocationdaemon
+upsbirk_lbl | /data/batchapp/softeon/upsbirkenstock/labeldaemon
+upsbirk_repl | /data/batchapp/softeon/upsbirkenstock/replenishmentdaemon
+upsbirk_rpt | /data/batchapp/softeon/upsbirkenstock/reportdaemon
+upsbirk_jqgrid | /data/batchapp/softeon/upsbirkenstock/reportjqgridexportdaemon
+upsbirk_sch | /data/batchapp/softeon/upsbirkenstock/schedulardaemon
+upsbirk_inbq | /data/batchapp/softeon/upsbirkenstock/uploaddeamon
+upsbirk_wld | /data/batchapp/softeon/upsbirkenstock/wavelaunchdaemon
+upsbirk_TIAD | /data/batchapp/softeon/upsbirkenstock/tasklevelinventoryallocation
+upsbirk_RCCL | /data/batchapp/softeon/upsbirkenstock/replenishmentcanceldaemon
+upsbirk_cbcd | /data/batchapp/softeon/upsbirkenstock/clusterbatchcreationdaemon
+upsbirk_cartcbc | /data/batchapp/softeon/upsbirkenstock/clusterbatchcarttypedaemon
+upsbirk_api_sch | /data/batchapp/softeon/upsbirkenstock/schedulerdaemon_api
+upsbirk_locus | /data/batchapp/softeon/upsbirkenstock/locusdaemon
+upsbirk_wsq | /data/batchapp/softeon/upsbirkenstock/wsqdaemon
+upsbirk_2wsq | /data/batchapp/softeon/upsbirkenstock/wsq2daemon
+upsbirk_ccd | /data/batchapp/softeon/upsbirkenstock/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3635 | upsbirkenstock | jboss730eap | upsbstk_jb73ap | 8090 | 172.29.61.153:8090 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstock/standalone
+4482 | upsbirkenstockv8rfuat | jboss730eap | birv8rfuat_jb73 | 8093 | 172.29.61.153:8093 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstockv8rfuat/standalone
+4313 | upsbirkenstockv8uat | jboss730eap | birv8uat_jb73 | 8092 | 172.29.61.153:8092 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsbirkenstockv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-12 00:16:53.196225
+==============================================================================
+
+2026-04-12 00:17:20,263 - 509818 - ERROR - app_validation.py errors for i-0196a0f0cf95fde24:
+
+2026-04-12 00:17:20,264 - 509818 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-12/UPS-Birkenstock-UAT/172.29.61.153/172.29.61.153-AfterPatching-2026-04-12-00-17-20-264.log
+2026-04-12 00:17:20,316 - 509818 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-12/UPS-Birkenstock-UAT/172.29.61.153/172.29.61.153-Validation-details-2026-04-12-00-17-20-264.html
+2026-04-12 00:17:20,391 - 509818 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-12 00:17:20,392 - 509818 - INFO - HTML validation report email sent for i-0196a0f0cf95fde24
+2026-04-12 00:17:20,527 - 509818 - INFO - Started i-0196a0f0cf95fde24 in 0:04:07.521811
+2026-04-12 00:17:20,528 - 509818 - INFO - All instances processed.
+2026-04-12 00:17:20,531 - 509818 - INFO - Restart Total time: 0:07:15.969830
+2026-04-12 00:17:20,531 - 509818 - INFO - Auto-confirmed services are restarted
+2026-04-12 00:17:20,531 - 509818 - INFO - Confirmed - services are started
+2026-04-12 00:17:20,644 - 509818 - INFO - The following instances have failed the patch: []
+2026-04-12 00:17:20,644 - 509818 - INFO - No instances have failed the patch.
+2026-04-12 00:17:20,644 - 509818 - INFO - Total Patch Process time: 0:12:18.401788
+2026-04-12 00:18:21,014 - 509818 - INFO - Log file ./logs/patching_2026-04-12_UPS-Birkenstock-UAT.log uploaded to s3://q2-2026-aws-security-patching/UPS-Birkenstock-UAT_Patch/2026-04-12/patching_2026-04-12_UPS-Birkenstock-UAT.log

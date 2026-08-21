@@ -1,0 +1,637 @@
+2026-07-21 00:06:03,698 - 491495 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-21 00:06:03,698 - 491495 - INFO - Script Start Time: 2026-07-21 00:06:03
+2026-07-21 00:06:04,048 - 491495 - INFO - Tag: UPSHC-NA-Batch, IPs: ['172.28.25.9'], Environment: uat
+2026-07-21 00:06:04,048 - 491495 - INFO - Instance(s) selected for Patching: {'i-05db489fb69802280': '172.28.25.9'}
+2026-07-21 00:06:04,136 - 491495 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:06:04,136 - 491495 - INFO - Now patching instances at: 2026-07-21 00:06:04
+2026-07-21 00:06:04,318 - 491495 - INFO - Sent app_validation.py to i-05db489fb69802280 (command_id: c10c4744-e0f3-4b70-9ff1-77fbafa4c1e4)
+2026-07-21 00:06:34,406 - 491495 - INFO - app_validation.py output for i-05db489fb69802280:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:06:04.659423
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.9
+Hostname | ip-172-28-25-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 72.2G | 217.6G | 24% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | hcsa_abchdis, hcsa_bre, hcsa_ccd, hcsa_dwa, hcsa_event, hcsa_ftp, hcsa_harp, hcsa_ict, hcsa_mqconsumer, hcsa_mq1produce, hcsa_mq2produce, hcsa_mq3produce, hcsa_repl, hcsa_rccl, hcsa_sch, hcsa_pac_sch, hcsa_tiad, hcsa_ialloc, hcsa_inbq, hcsa_1_inbq, hcsa_wld, hcsa_2_inbq, hcsa_rptsd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+hcsa_abchdis | /data/batchapp/softeon/upshcuat_hcsa/autobatchdistributiondaemon
+hcsa_bre | /data/batchapp/softeon/upshcuat_hcsa/breruledaemon
+hcsa_ccd | /data/batchapp/softeon/upshcuat_hcsa/clustercreationdaemon
+hcsa_dwa | /data/batchapp/softeon/upshcuat_hcsa/downloaddaemon
+hcsa_event | /data/batchapp/softeon/upshcuat_hcsa/eventdaemon
+hcsa_ftp | /data/batchapp/softeon/upshcuat_hcsa/ftpdaemon
+hcsa_harp | /data/batchapp/softeon/upshcuat_hcsa/hardallocationdaemon
+hcsa_ict | /data/batchapp/softeon/upshcuat_hcsa/invcomputationbytask
+hcsa_mqconsumer | /data/batchapp/softeon/upshcuat_hcsa/mqconsumerdaemon
+hcsa_mq1produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon
+hcsa_mq2produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_02
+hcsa_mq3produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_03
+hcsa_repl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentdaemon
+hcsa_rccl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentpickloccanceldaemon
+hcsa_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon
+hcsa_pac_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon_pacific
+hcsa_tiad | /data/batchapp/softeon/upshcuat_hcsa/taskinvallocationdaemon
+hcsa_ialloc | /data/batchapp/softeon/upshcuat_hcsa/uploadallocationdaemon
+hcsa_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon
+hcsa_1_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon1
+hcsa_wld | /data/batchapp/softeon/upshcuat_hcsa/wavelaunchdaemon
+hcsa_2_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon2
+hcsa_rptsd | /data/batchapp/softeon/upshcuat_hcsa/shippingdocsreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4346 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4054 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:06:10.828553
+==============================================================================
+
+2026-07-21 00:06:34,406 - 491495 - ERROR - app_validation.py errors for i-05db489fb69802280:
+
+2026-07-21 00:06:34,408 - 491495 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-Batch/172.28.25.9/172.28.25.9-BeforePatching-2026-07-21-00-06-34-407.log
+2026-07-21 00:06:39,657 - 491495 - INFO - i-05db489fb69802280: Cron was active = True
+2026-07-21 00:06:39,888 - 491495 - INFO - Health monitor crontab disabled on all instances
+2026-07-21 00:06:39,889 - 491495 - INFO - Disabled cron for: ['i-05db489fb69802280']
+2026-07-21 00:06:39,973 - 491495 - INFO - Sending patch command to instance i-05db489fb69802280
+2026-07-21 00:06:40,088 - 491495 - INFO - Command sent successfully to instance i-05db489fb69802280. Command ID: 33e71c9f-6c4d-4aff-93a8-19bbf3f76434
+2026-07-21 00:14:11,924 - 491495 - INFO - All patches applied successfully.
+2026-07-21 00:14:11,924 - 491495 - INFO - Patching end time: 2026-07-21 00:14:11
+2026-07-21 00:14:11,924 - 491495 - INFO - Patch Elapsed time: 0:08:07.788068
+2026-07-21 00:14:11,996 - 491495 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:14:11,996 - 491495 - INFO - Confirmed - services are stopped
+2026-07-21 00:14:32,447 - 491495 - INFO - Discovered TG map: {}
+2026-07-21 00:14:32,675 - 491495 - INFO - Stopping EC2 instance: i-05db489fb69802280 at 2026-07-21 00:14:32
+2026-07-21 00:16:49,391 - 491495 - INFO - Instance i-05db489fb69802280 stopped successfully.
+2026-07-21 00:16:49,517 - 491495 - INFO - Stopped i-05db489fb69802280 in 0:02:16.842543
+2026-07-21 00:16:49,518 - 491495 - INFO - Starting EC2 instance: i-05db489fb69802280
+2026-07-21 00:17:05,615 - 491495 - INFO - Instance i-05db489fb69802280 started successfully.
+2026-07-21 00:17:05,615 - 491495 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05db489fb69802280...
+2026-07-21 00:18:45,859 - 491495 - INFO - Sent app_validation.py to i-05db489fb69802280 (command_id: 4899a1c3-61a4-4e6c-8af6-6c926468bd26)
+2026-07-21 00:19:16,192 - 491495 - INFO - app_validation.py output for i-05db489fb69802280:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:18:46.363918
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.9
+Hostname | ip-172-28-25-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 72.2G | 217.7G | 24% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | hcsa_harp, hcsa_ict, hcsa_mqconsumer, hcsa_mq1produce, hcsa_mq2produce, hcsa_mq3produce, hcsa_repl, hcsa_rccl, hcsa_sch, hcsa_pac_sch, hcsa_tiad, hcsa_ialloc, hcsa_inbq, hcsa_1_inbq, hcsa_wld, hcsa_2_inbq, hcsa_rptsd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+hcsa_harp | /data/batchapp/softeon/upshcuat_hcsa/hardallocationdaemon
+hcsa_ict | /data/batchapp/softeon/upshcuat_hcsa/invcomputationbytask
+hcsa_mqconsumer | /data/batchapp/softeon/upshcuat_hcsa/mqconsumerdaemon
+hcsa_mq1produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon
+hcsa_mq2produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_02
+hcsa_mq3produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_03
+hcsa_repl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentdaemon
+hcsa_rccl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentpickloccanceldaemon
+hcsa_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon
+hcsa_pac_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon_pacific
+hcsa_tiad | /data/batchapp/softeon/upshcuat_hcsa/taskinvallocationdaemon
+hcsa_ialloc | /data/batchapp/softeon/upshcuat_hcsa/uploadallocationdaemon
+hcsa_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon
+hcsa_1_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon1
+hcsa_wld | /data/batchapp/softeon/upshcuat_hcsa/wavelaunchdaemon
+hcsa_2_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon2
+hcsa_rptsd | /data/batchapp/softeon/upshcuat_hcsa/shippingdocsreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4257 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.9:8081 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4169 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.9:8080 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:18:58.185494
+==============================================================================
+
+2026-07-21 00:19:16,193 - 491495 - ERROR - app_validation.py errors for i-05db489fb69802280:
+
+2026-07-21 00:19:16,194 - 491495 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-NA-Batch/172.28.25.9/172.28.25.9-AfterPatching-2026-07-21-00-19-16-194.log
+2026-07-21 00:19:16,248 - 491495 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-NA-Batch/172.28.25.9/172.28.25.9-Validation-details-2026-07-21-00-19-16-194.html
+2026-07-21 00:19:16,423 - 491495 - INFO - Daemon count - Pre: 23, Post: 17
+2026-07-21 00:19:16,423 - 491495 - INFO - CUPS: before=running after=running version=cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-07-21 00:19:16,423 - 491495 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-21 00:19:16,423 - 491495 - INFO - Background: restarting daemons on i-05db489fb69802280
+2026-07-21 00:19:16,423 - 491495 - INFO - Background thread started for i-05db489fb69802280 - daemon:True cups:False
+2026-07-21 00:19:16,730 - 491495 - INFO - Started i-05db489fb69802280 in 0:02:27.211823
+2026-07-21 00:19:16,730 - 491495 - INFO - All instances processed.
+2026-07-21 00:19:16,733 - 491495 - INFO - Restart Total time: 0:05:04.603518
+2026-07-21 00:19:16,734 - 491495 - INFO - Auto-confirmed services are restarted
+2026-07-21 00:19:16,734 - 491495 - INFO - Confirmed - services are started
+2026-07-21 00:19:16,850 - 491495 - INFO - The following instances have failed the patch: []
+2026-07-21 00:19:16,850 - 491495 - INFO - No instances have failed the patch.
+2026-07-21 00:19:16,850 - 491495 - INFO - Total Patch Process time: 0:13:13.151773
+2026-07-21 00:19:46,763 - 491495 - INFO - Daemon restart output: 
+2026-07-21 00:19:46,764 - 491495 - INFO - Waiting 100 sec for daemons to start on i-05db489fb69802280
+2026-07-21 00:20:17,205 - 491495 - INFO - Log file ./logs/patching_2026-07-21_UPSHC-NA-Batch.log uploaded to s3://q3-2026-aws-security-patching/UPSHC-NA-Batch_Patch/2026-07-21/patching_2026-07-21_UPSHC-NA-Batch.log
+2026-07-21 00:21:26,781 - 491495 - INFO - CUPS no action needed for i-05db489fb69802280 - before:running after:running version:cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-07-21 00:21:27,086 - 491495 - INFO - Sent app_validation.py to i-05db489fb69802280 (command_id: 85cf6099-307d-4472-84c2-83d41bf08d72)
+2026-07-21 00:21:57,144 - 491495 - INFO - app_validation.py output for i-05db489fb69802280:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:21:27.353278
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.9
+Hostname | ip-172-28-25-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 72.2G | 217.7G | 24% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | hcsa_harp, hcsa_ict, hcsa_mqconsumer, hcsa_mq1produce, hcsa_mq2produce, hcsa_mq3produce, hcsa_repl, hcsa_rccl, hcsa_sch, hcsa_pac_sch, hcsa_tiad, hcsa_ialloc, hcsa_inbq, hcsa_1_inbq, hcsa_wld, hcsa_2_inbq, hcsa_rptsd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+hcsa_harp | /data/batchapp/softeon/upshcuat_hcsa/hardallocationdaemon
+hcsa_ict | /data/batchapp/softeon/upshcuat_hcsa/invcomputationbytask
+hcsa_mqconsumer | /data/batchapp/softeon/upshcuat_hcsa/mqconsumerdaemon
+hcsa_mq1produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon
+hcsa_mq2produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_02
+hcsa_mq3produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_03
+hcsa_repl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentdaemon
+hcsa_rccl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentpickloccanceldaemon
+hcsa_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon
+hcsa_pac_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon_pacific
+hcsa_tiad | /data/batchapp/softeon/upshcuat_hcsa/taskinvallocationdaemon
+hcsa_ialloc | /data/batchapp/softeon/upshcuat_hcsa/uploadallocationdaemon
+hcsa_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon
+hcsa_1_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon1
+hcsa_wld | /data/batchapp/softeon/upshcuat_hcsa/wavelaunchdaemon
+hcsa_2_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon2
+hcsa_rptsd | /data/batchapp/softeon/upshcuat_hcsa/shippingdocsreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4257 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4169 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:21:28.682443
+==============================================================================
+
+2026-07-21 00:21:57,144 - 491495 - ERROR - app_validation.py errors for i-05db489fb69802280:
+
+2026-07-21 00:21:57,269 - 491495 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:21:57,269 - 491495 - INFO - RED re-validation mail sent for i-05db489fb69802280
+2026-07-21 00:21:57,269 - 491495 - INFO - Still Red after restart - starting retry for i-05db489fb69802280
+2026-07-21 00:21:57,269 - 491495 - INFO - [Retry-1] Waiting 300s for i-05db489fb69802280...
+2026-07-21 00:26:57,507 - 491495 - INFO - Sent app_validation.py to i-05db489fb69802280 (command_id: fc2d309d-7c97-4913-8d37-1d12b9cd546a)
+2026-07-21 00:27:27,608 - 491495 - INFO - app_validation.py output for i-05db489fb69802280:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:26:57.797605
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.9
+Hostname | ip-172-28-25-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 72.2G | 217.6G | 24% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | hcsa_harp, hcsa_ict, hcsa_mqconsumer, hcsa_mq1produce, hcsa_mq2produce, hcsa_mq3produce, hcsa_repl, hcsa_rccl, hcsa_sch, hcsa_pac_sch, hcsa_tiad, hcsa_ialloc, hcsa_inbq, hcsa_1_inbq, hcsa_wld, hcsa_2_inbq, hcsa_rptsd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+hcsa_harp | /data/batchapp/softeon/upshcuat_hcsa/hardallocationdaemon
+hcsa_ict | /data/batchapp/softeon/upshcuat_hcsa/invcomputationbytask
+hcsa_mqconsumer | /data/batchapp/softeon/upshcuat_hcsa/mqconsumerdaemon
+hcsa_mq1produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon
+hcsa_mq2produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_02
+hcsa_mq3produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_03
+hcsa_repl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentdaemon
+hcsa_rccl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentpickloccanceldaemon
+hcsa_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon
+hcsa_pac_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon_pacific
+hcsa_tiad | /data/batchapp/softeon/upshcuat_hcsa/taskinvallocationdaemon
+hcsa_ialloc | /data/batchapp/softeon/upshcuat_hcsa/uploadallocationdaemon
+hcsa_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon
+hcsa_1_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon1
+hcsa_wld | /data/batchapp/softeon/upshcuat_hcsa/wavelaunchdaemon
+hcsa_2_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon2
+hcsa_rptsd | /data/batchapp/softeon/upshcuat_hcsa/shippingdocsreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4257 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4169 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:26:59.737124
+==============================================================================
+
+2026-07-21 00:27:27,608 - 491495 - ERROR - app_validation.py errors for i-05db489fb69802280:
+
+2026-07-21 00:27:27,610 - 491495 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-Batch/172.28.25.9/172.28.25.9-AfterPatching-Retry1-2026-07-21-00-27-27-609.log
+2026-07-21 00:27:27,667 - 491495 - INFO - [Retry-1] RED for UPSHC UAT Batch Server 2 (172.28.25.9), retrying... (Total waited: 300s)
+2026-07-21 00:27:27,667 - 491495 - INFO - [Retry-2] Waiting 300s for i-05db489fb69802280...
+2026-07-21 00:32:27,987 - 491495 - INFO - Sent app_validation.py to i-05db489fb69802280 (command_id: 8f0bffe3-b951-48df-9383-a626861935ac)
+2026-07-21 00:32:58,083 - 491495 - INFO - app_validation.py output for i-05db489fb69802280:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:32:28.301314
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.9
+Hostname | ip-172-28-25-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 72.2G | 217.6G | 24% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | hcsa_harp, hcsa_ict, hcsa_mqconsumer, hcsa_mq1produce, hcsa_mq2produce, hcsa_mq3produce, hcsa_repl, hcsa_rccl, hcsa_sch, hcsa_pac_sch, hcsa_tiad, hcsa_ialloc, hcsa_inbq, hcsa_1_inbq, hcsa_wld, hcsa_2_inbq, hcsa_rptsd, hcsa_abchdis, hcsa_bre, hcsa_ccd, hcsa_dwa, hcsa_event, hcsa_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+hcsa_harp | /data/batchapp/softeon/upshcuat_hcsa/hardallocationdaemon
+hcsa_ict | /data/batchapp/softeon/upshcuat_hcsa/invcomputationbytask
+hcsa_mqconsumer | /data/batchapp/softeon/upshcuat_hcsa/mqconsumerdaemon
+hcsa_mq1produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon
+hcsa_mq2produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_02
+hcsa_mq3produce | /data/batchapp/softeon/upshcuat_hcsa/mqproducerdaemon_03
+hcsa_repl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentdaemon
+hcsa_rccl | /data/batchapp/softeon/upshcuat_hcsa/replenishmentpickloccanceldaemon
+hcsa_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon
+hcsa_pac_sch | /data/batchapp/softeon/upshcuat_hcsa/schedulardaemon_pacific
+hcsa_tiad | /data/batchapp/softeon/upshcuat_hcsa/taskinvallocationdaemon
+hcsa_ialloc | /data/batchapp/softeon/upshcuat_hcsa/uploadallocationdaemon
+hcsa_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon
+hcsa_1_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon1
+hcsa_wld | /data/batchapp/softeon/upshcuat_hcsa/wavelaunchdaemon
+hcsa_2_inbq | /data/batchapp/softeon/upshcuat_hcsa/uploaddeamon2
+hcsa_rptsd | /data/batchapp/softeon/upshcuat_hcsa/shippingdocsreportdaemon
+hcsa_abchdis | /data/batchapp/softeon/upshcuat_hcsa/autobatchdistributiondaemon
+hcsa_bre | /data/batchapp/softeon/upshcuat_hcsa/breruledaemon
+hcsa_ccd | /data/batchapp/softeon/upshcuat_hcsa/clustercreationdaemon
+hcsa_dwa | /data/batchapp/softeon/upshcuat_hcsa/downloaddaemon
+hcsa_event | /data/batchapp/softeon/upshcuat_hcsa/eventdaemon
+hcsa_ftp | /data/batchapp/softeon/upshcuat_hcsa/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4257 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4169 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:32:30.021938
+==============================================================================
+
+2026-07-21 00:32:58,083 - 491495 - ERROR - app_validation.py errors for i-05db489fb69802280:
+
+2026-07-21 00:32:58,085 - 491495 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-Batch/172.28.25.9/172.28.25.9-AfterPatching-Retry2-2026-07-21-00-32-58-085.log
+2026-07-21 00:32:58,311 - 491495 - INFO - Health monitor crontab enabled on all instances
+2026-07-21 00:32:58,312 - 491495 - INFO - [Retry] Green - cron enabled for i-05db489fb69802280
+2026-07-21 00:32:58,387 - 491495 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:32:58,387 - 491495 - INFO - [Retry] GREEN mail sent for i-05db489fb69802280

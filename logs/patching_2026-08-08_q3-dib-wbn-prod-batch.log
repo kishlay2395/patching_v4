@@ -1,0 +1,980 @@
+2026-08-08 03:45:03,485 - 1415423 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-08 03:45:03,486 - 1415423 - INFO - Script Start Time: 2026-08-08 03:45:03
+2026-08-08 03:45:03,714 - 1415423 - INFO - Tag: q3-dib-wbn-prod-batch, IPs: ['10.64.16.21'], Environment: prod
+2026-08-08 03:45:03,714 - 1415423 - INFO - Instance(s) selected for Patching: {'i-0329a29cada237c40': '10.64.16.21'}
+2026-08-08 03:45:03,779 - 1415423 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 03:45:03,779 - 1415423 - INFO - Now patching instances at: 2026-08-08 03:45:03
+2026-08-08 03:45:04,358 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 8561dc36-9716-4df7-8320-0640facbd8b9)
+2026-08-08 03:45:34,499 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 03:45:34,499 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:45:04.823029
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.2G | 156.6G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_wld, dibwmswbn_zplp, dibwmswbn_wcso, dibwmswbn_wcsi, dibwmswb_2vomob, dibwmswbn_vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:45:05.980939
+==============================================================================
+
+2026-08-08 03:45:34,501 - 1415423 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-BeforePatching-2026-08-08-03-45-34-501.log
+2026-08-08 03:45:40,045 - 1415423 - INFO - i-0329a29cada237c40: Cron was active = True
+2026-08-08 03:45:40,495 - 1415423 - INFO - Health monitor crontab disabled on all instances
+2026-08-08 03:45:40,496 - 1415423 - INFO - Disabled cron for: ['i-0329a29cada237c40']
+2026-08-08 03:45:40,582 - 1415423 - INFO - Sending patch command to instance i-0329a29cada237c40
+2026-08-08 03:45:40,958 - 1415423 - INFO - Command sent successfully to instance i-0329a29cada237c40. Command ID: 011cd196-73a9-4fbe-9bd8-4e8b6793ba53
+2026-08-08 03:50:43,224 - 1415423 - INFO - All patches applied successfully.
+2026-08-08 03:50:43,224 - 1415423 - INFO - Patching end time: 2026-08-08 03:50:43
+2026-08-08 03:50:43,224 - 1415423 - INFO - Patch Elapsed time: 0:05:39.445177
+2026-08-08 03:50:43,306 - 1415423 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 03:50:43,307 - 1415423 - INFO - Confirmed - services are stopped
+2026-08-08 03:50:48,077 - 1415423 - INFO - Discovered TG map: {}
+2026-08-08 03:50:48,328 - 1415423 - INFO - Stopping EC2 instance: i-0329a29cada237c40 at 2026-08-08 03:50:48
+2026-08-08 03:52:05,056 - 1415423 - INFO - Instance i-0329a29cada237c40 stopped successfully.
+2026-08-08 03:52:05,195 - 1415423 - INFO - Stopped i-0329a29cada237c40 in 0:01:16.866113
+2026-08-08 03:52:05,195 - 1415423 - INFO - Starting EC2 instance: i-0329a29cada237c40
+2026-08-08 03:52:21,239 - 1415423 - INFO - Instance i-0329a29cada237c40 started successfully.
+2026-08-08 03:52:21,239 - 1415423 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0329a29cada237c40...
+2026-08-08 03:54:03,030 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: e555683d-e348-477e-8a4e-294e7027e391)
+2026-08-08 03:54:33,173 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 03:54:33,173 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:54:03.261527
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.2G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:54:04.336400
+==============================================================================
+
+2026-08-08 03:54:33,174 - 1415423 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-2026-08-08-03-54-33-174.log
+2026-08-08 03:54:33,231 - 1415423 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-Validation-details-2026-08-08-03-54-33-174.html
+2026-08-08 03:54:33,584 - 1415423 - INFO - Daemon count - Pre: 20, Post: 20
+2026-08-08 03:54:33,584 - 1415423 - INFO - CUPS: before=running after=running version=cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-08-08 03:54:33,584 - 1415423 - INFO - Manage_cron: True, daemon_action: False, cups_action: False
+2026-08-08 03:54:33,666 - 1415423 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-08 03:54:33,667 - 1415423 - INFO - RED mail sent for i-0329a29cada237c40 - no daemon/cups issue
+2026-08-08 03:54:33,667 - 1415423 - INFO - [Retry-1] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 03:54:33,667 - 1415423 - INFO - Retry thread started for i-0329a29cada237c40
+2026-08-08 03:54:33,801 - 1415423 - INFO - Started i-0329a29cada237c40 in 0:02:28.605784
+2026-08-08 03:54:33,801 - 1415423 - INFO - All instances processed.
+2026-08-08 03:54:33,804 - 1415423 - INFO - Restart Total time: 0:03:50.333673
+2026-08-08 03:54:33,805 - 1415423 - INFO - Auto-confirmed services are restarted
+2026-08-08 03:54:33,805 - 1415423 - INFO - Confirmed - services are started
+2026-08-08 03:54:33,918 - 1415423 - INFO - The following instances have failed the patch: []
+2026-08-08 03:54:33,918 - 1415423 - INFO - No instances have failed the patch.
+2026-08-08 03:54:33,918 - 1415423 - INFO - Total Patch Process time: 0:09:30.432534
+2026-08-08 03:55:34,496 - 1415423 - INFO - Log file ./logs/patching_2026-08-08_q3-dib-wbn-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/q3-dib-wbn-prod-batch_Patch/2026-08-08/patching_2026-08-08_q3-dib-wbn-prod-batch.log
+2026-08-08 03:59:34,304 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 40029914-d5e2-4eec-ad07-40d2653cb595)
+2026-08-08 04:00:04,451 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:00:04,451 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:59:34.451587
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.1G | 156.8G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:59:35.584422
+==============================================================================
+
+2026-08-08 04:00:04,458 - 1415423 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry1-2026-08-08-04-00-04-456.log
+2026-08-08 04:00:04,560 - 1415423 - INFO - [Retry-1] RED for DoItBest-West Production Batch Server - 2 (WBN) (10.64.16.21), retrying... (Total waited: 300s)
+2026-08-08 04:00:04,560 - 1415423 - INFO - [Retry-2] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 04:05:05,194 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 99f10718-b417-48b6-9dfa-f612f6ef43bd)
+2026-08-08 04:05:35,325 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:05:35,325 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:05:05.363477
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.1G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:05:06.467401
+==============================================================================
+
+2026-08-08 04:05:35,326 - 1415423 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry2-2026-08-08-04-05-35-326.log
+2026-08-08 04:05:35,386 - 1415423 - INFO - [Retry-2] RED for DoItBest-West Production Batch Server - 2 (WBN) (10.64.16.21), retrying... (Total waited: 600s)
+2026-08-08 04:05:35,387 - 1415423 - INFO - [Retry-3] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 04:10:36,132 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 0153b530-88a3-4594-9eb9-4952a3eb65ad)
+2026-08-08 04:11:06,273 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:11:06,273 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:10:36.285082
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.2G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:10:37.289678
+==============================================================================
+
+2026-08-08 04:11:06,274 - 1415423 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry3-2026-08-08-04-11-06-274.log
+2026-08-08 04:11:06,331 - 1415423 - INFO - [Retry-3] RED for DoItBest-West Production Batch Server - 2 (WBN) (10.64.16.21), retrying... (Total waited: 900s)
+2026-08-08 04:11:06,331 - 1415423 - INFO - [Retry-4] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 04:16:06,995 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 362b78a3-141a-4541-98cf-fb1df151f9ce)
+2026-08-08 04:16:37,148 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:16:37,149 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:16:07.134945
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.1G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:16:08.134454
+==============================================================================
+
+2026-08-08 04:16:37,150 - 1415423 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry4-2026-08-08-04-16-37-150.log
+2026-08-08 04:16:37,212 - 1415423 - INFO - [Retry-4] RED for DoItBest-West Production Batch Server - 2 (WBN) (10.64.16.21), retrying... (Total waited: 1200s)
+2026-08-08 04:16:37,213 - 1415423 - INFO - [Retry-5] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 04:21:37,950 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 60a44030-c6d5-4a44-91ab-4f0798fe10d8)
+2026-08-08 04:22:08,090 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:22:08,090 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:21:38.107166
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.1G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:21:39.232714
+==============================================================================
+
+2026-08-08 04:22:08,092 - 1415423 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry5-2026-08-08-04-22-08-091.log
+2026-08-08 04:22:08,158 - 1415423 - INFO - [Retry-5] RED for DoItBest-West Production Batch Server - 2 (WBN) (10.64.16.21), retrying... (Total waited: 1500s)
+2026-08-08 04:22:08,158 - 1415423 - INFO - [Retry-6] Waiting 300s for i-0329a29cada237c40...
+2026-08-08 04:27:08,768 - 1415423 - INFO - Sent app_validation.py to i-0329a29cada237c40 (command_id: 8aa1134a-89ad-45f4-992f-28f7a50b8bb2)
+2026-08-08 04:27:38,891 - 1415423 - INFO - SSM Command Status: Success
+2026-08-08 04:27:38,892 - 1415423 - INFO - app_validation.py output for i-0329a29cada237c40:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:27:08.927671
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.16.21
+Hostname | ip-10-64-16-21.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 83.2G | 156.7G | 34% | /data
+fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | 0B | 478.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02c0a34dbbba7b5dc.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.16.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 35
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.16.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | dibwms_abchdis, dibwmswbn_ccd, dibwmswbn_dwa, dibwmswbn_event, dibwmswbn_ftp, dibwmswbn_harp, dibwmswbn_lbl, dibwmswbn_repl, dibwmswbn_rccl, dibwmswbn_rpt, dibwmswbn_1rpt, dibwmswb_jqgrid, dibwmswbn_sch, dibwmswbn_inbq, dibwmswbn_vomob, dibwmswbn_wld, dibwmswbn_zplp, dibwmswb_2vomob, dibwmswbn_wcso, dibwmswbn_wcsi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmswbnprod/autobatchdistributiondaemon
+dibwmswbn_ccd | /data/batchapp/softeon/dibwmswbnprod/clustercreationdaemon
+dibwmswbn_dwa | /data/batchapp/softeon/dibwmswbnprod/downloaddaemon
+dibwmswbn_event | /data/batchapp/softeon/dibwmswbnprod/eventdaemon
+dibwmswbn_ftp | /data/batchapp/softeon/dibwmswbnprod/ftpdaemon
+dibwmswbn_harp | /data/batchapp/softeon/dibwmswbnprod/hardallocationdaemon
+dibwmswbn_lbl | /data/batchapp/softeon/dibwmswbnprod/labeldaemon
+dibwmswbn_repl | /data/batchapp/softeon/dibwmswbnprod/replenishmentdaemon
+dibwmswbn_rccl | /data/batchapp/softeon/dibwmswbnprod/replenishmentpickloccanceldaemon
+dibwmswbn_rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon
+dibwmswbn_1rpt | /data/batchapp/softeon/dibwmswbnprod/reportdaemon1
+dibwmswb_jqgrid | /data/batchapp/softeon/dibwmswbnprod/reportjqgridexportdaemon
+dibwmswbn_sch | /data/batchapp/softeon/dibwmswbnprod/schedulerdaemon
+dibwmswbn_inbq | /data/batchapp/softeon/dibwmswbnprod/uploaddaemon
+dibwmswbn_vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobiledaemon
+dibwmswbn_wld | /data/batchapp/softeon/dibwmswbnprod/wavelaunchdaemon
+dibwmswbn_zplp | /data/batchapp/softeon/dibwmswbnprod/zebraprintdaemon
+dibwmswb_2vomob | /data/batchapp/softeon/dibwmswbnprod/voicemobilewbn2daemon
+dibwmswbn_wcso | /data/batchapp/softeon/dibwmswbnprod/wcsoutbounddaemon
+dibwmswbn_wcsi | /data/batchapp/softeon/dibwmswbnprod/wcsinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:27:10.026038
+==============================================================================
+
+2026-08-08 04:27:38,893 - 1415423 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-08-08/q3-dib-wbn-prod-batch/10.64.16.21/10.64.16.21-AfterPatching-Retry6-2026-08-08-04-27-38-893.log
+2026-08-08 04:27:39,366 - 1415423 - INFO - Health monitor crontab enabled on all instances
+2026-08-08 04:27:39,368 - 1415423 - WARNING - [Retry] Timeout - auto cron enabled for i-0329a29cada237c40

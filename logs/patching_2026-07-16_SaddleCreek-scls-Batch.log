@@ -1,0 +1,1116 @@
+2026-07-16 02:10:03,259 - 198220 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-16 02:10:03,259 - 198220 - INFO - Script Start Time: 2026-07-16 02:10:03
+2026-07-16 02:10:03,710 - 198220 - INFO - Instance(s) selected for Patching: {'i-09998514a98d2ee07': '10.0.10.214'}
+2026-07-16 02:10:03,797 - 198220 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-16 02:10:03,797 - 198220 - INFO - Now patching instances at: 2026-07-16 02:10:03
+2026-07-16 02:10:03,991 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 85f46b02-f2fc-4128-aac2-8c9e6cc1939d)
+2026-07-16 02:10:34,052 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:10:04.348352
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.8G | 93.1G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli, sclsprod_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:10:04.959830
+==============================================================================
+
+2026-07-16 02:10:34,053 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:10:34,054 - 198220 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-BeforePatching-2026-07-16-02-10-34-054.log
+2026-07-16 02:10:39,289 - 198220 - INFO - i-09998514a98d2ee07: Cron was active = True
+2026-07-16 02:10:39,516 - 198220 - INFO - Health monitor crontab disabled on all instances
+2026-07-16 02:10:39,517 - 198220 - INFO - Disabled cron for: ['i-09998514a98d2ee07']
+2026-07-16 02:10:39,602 - 198220 - INFO - Sending patch command to instance i-09998514a98d2ee07
+2026-07-16 02:10:39,707 - 198220 - INFO - Command sent successfully to instance i-09998514a98d2ee07. Command ID: 7bd6be1c-bc21-4475-ba7b-dc6a135edfb1
+2026-07-16 02:20:42,175 - 198220 - INFO - All patches applied successfully.
+2026-07-16 02:20:42,176 - 198220 - INFO - Patching end time: 2026-07-16 02:20:42
+2026-07-16 02:20:42,176 - 198220 - INFO - Patch Elapsed time: 0:10:38.379218
+2026-07-16 02:20:42,246 - 198220 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-16 02:20:42,246 - 198220 - INFO - Confirmed - services are stopped
+2026-07-16 02:21:02,925 - 198220 - INFO - Discovered TG map: {}
+2026-07-16 02:21:03,155 - 198220 - INFO - Stopping EC2 instance: i-09998514a98d2ee07 at 2026-07-16 02:21:03
+2026-07-16 02:22:19,425 - 198220 - INFO - Instance i-09998514a98d2ee07 stopped successfully.
+2026-07-16 02:22:19,573 - 198220 - INFO - Stopped i-09998514a98d2ee07 in 0:01:16.417128
+2026-07-16 02:22:19,573 - 198220 - INFO - Starting EC2 instance: i-09998514a98d2ee07
+2026-07-16 02:22:35,499 - 198220 - INFO - Instance i-09998514a98d2ee07 started successfully.
+2026-07-16 02:22:35,499 - 198220 - INFO - Waiting 100 seconds for SSM agent to be ready on i-09998514a98d2ee07...
+2026-07-16 02:24:15,767 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 82926a8a-87c3-436f-a769-1ddd22650a76)
+2026-07-16 02:24:45,899 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:24:16.145967
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.4G | 93.5G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:24:16.603200
+==============================================================================
+
+2026-07-16 02:24:45,899 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:24:45,901 - 198220 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-2026-07-16-02-24-45-900.log
+2026-07-16 02:24:45,953 - 198220 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-Validation-details-2026-07-16-02-24-45-900.html
+2026-07-16 02:24:46,143 - 198220 - INFO - Daemon count - Pre: 17, Post: 0
+2026-07-16 02:24:46,143 - 198220 - INFO - CUPS: before=running after=running version=cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-07-16 02:24:46,143 - 198220 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-16 02:24:46,143 - 198220 - INFO - Background: restarting daemons on i-09998514a98d2ee07
+2026-07-16 02:24:46,143 - 198220 - INFO - Background thread started for i-09998514a98d2ee07 - daemon:True cups:False
+2026-07-16 02:24:46,414 - 198220 - INFO - Started i-09998514a98d2ee07 in 0:02:26.840357
+2026-07-16 02:24:46,414 - 198220 - INFO - All instances processed.
+2026-07-16 02:24:46,417 - 198220 - INFO - Restart Total time: 0:04:03.958494
+2026-07-16 02:24:46,417 - 198220 - INFO - Auto-confirmed services are restarted
+2026-07-16 02:24:46,417 - 198220 - INFO - Confirmed - services are started
+2026-07-16 02:24:46,543 - 198220 - INFO - The following instances have failed the patch: []
+2026-07-16 02:24:46,543 - 198220 - INFO - No instances have failed the patch.
+2026-07-16 02:24:46,543 - 198220 - INFO - Total Patch Process time: 0:14:43.284013
+2026-07-16 02:25:16,515 - 198220 - INFO - Daemon restart output: /data/batchapp/softeon/sclsprod/startall-sclsprod-Daemon.sh
+
+
+Starting autobatchdistribution
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting labeldaemon
+
+
+Starting picktooldaemon
+
+
+Starting replenishmentdaemon
+
+
+Starting replenishmentpickloccanceldaemon
+
+
+Starting reportdaemon
+
+
+Starting reportjqgridexportdaemon
+
+
+Starting schedulerdaemon
+
+
+Starting uploaddaemon
+
+
+Starting wavelaunchdaemon
+
+
+Starting wavecreationdaemon
+
+
+Starting wesinbounddaemon
+
+
+Starting wesoutbounddaemon
+
+
+Starting weszplinbounddaemon
+
+2026-07-16 02:25:16,516 - 198220 - INFO - Waiting 100 sec for daemons to start on i-09998514a98d2ee07
+2026-07-16 02:25:46,926 - 198220 - INFO - Log file ./logs/patching_2026-07-16_SaddleCreek-scls-Batch.log uploaded to s3://q3-2026-aws-security-patching/SaddleCreek-scls-Batch_Patch/2026-07-16/patching_2026-07-16_SaddleCreek-scls-Batch.log
+2026-07-16 02:26:56,617 - 198220 - INFO - CUPS no action needed for i-09998514a98d2ee07 - before:running after:running version:cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-07-16 02:26:56,929 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 7a57f198-0aca-44a1-b712-4ac803e9e06e)
+2026-07-16 02:27:27,128 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:26:57.223071
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.6G | 93.3G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:26:57.886074
+==============================================================================
+
+2026-07-16 02:27:27,128 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:27:27,277 - 198220 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-16 02:27:27,277 - 198220 - INFO - RED re-validation mail sent for i-09998514a98d2ee07
+2026-07-16 02:27:27,277 - 198220 - INFO - Still Red after restart - starting retry for i-09998514a98d2ee07
+2026-07-16 02:27:27,277 - 198220 - INFO - [Retry-1] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:32:27,479 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 9df2b134-cd85-4f75-b643-028e48ae8923)
+2026-07-16 02:32:57,597 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:32:27.774849
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.7G | 93.2G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:32:28.327250
+==============================================================================
+
+2026-07-16 02:32:57,598 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:32:57,599 - 198220 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry1-2026-07-16-02-32-57-599.log
+2026-07-16 02:32:57,653 - 198220 - INFO - [Retry-1] RED for SaddleCreek SCLS Production Batch Server - 1 (10.0.10.214), retrying... (Total waited: 300s)
+2026-07-16 02:32:57,653 - 198220 - INFO - [Retry-2] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:37:57,980 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 5c2a3acc-f6b6-4317-927e-2183157ae0e0)
+2026-07-16 02:38:28,129 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:37:58.270754
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.7G | 93.2G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:37:58.960652
+==============================================================================
+
+2026-07-16 02:38:28,129 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:38:28,131 - 198220 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry2-2026-07-16-02-38-28-131.log
+2026-07-16 02:38:28,190 - 198220 - INFO - [Retry-2] RED for SaddleCreek SCLS Production Batch Server - 1 (10.0.10.214), retrying... (Total waited: 600s)
+2026-07-16 02:38:28,190 - 198220 - INFO - [Retry-3] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:43:28,403 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: f0b397fa-c27e-4757-892f-f61a9b35f481)
+2026-07-16 02:43:58,487 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:43:28.704906
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.7G | 93.2G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:43:29.254989
+==============================================================================
+
+2026-07-16 02:43:58,487 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:43:58,488 - 198220 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry3-2026-07-16-02-43-58-488.log
+2026-07-16 02:43:58,542 - 198220 - INFO - [Retry-3] RED for SaddleCreek SCLS Production Batch Server - 1 (10.0.10.214), retrying... (Total waited: 900s)
+2026-07-16 02:43:58,543 - 198220 - INFO - [Retry-4] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:48:58,749 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 6b9e0781-8db6-4df6-9777-d49c60c4372b)
+2026-07-16 02:49:28,840 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:48:59.183751
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.7G | 93.1G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:48:59.747177
+==============================================================================
+
+2026-07-16 02:49:28,840 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:49:28,842 - 198220 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry4-2026-07-16-02-49-28-842.log
+2026-07-16 02:49:28,896 - 198220 - INFO - [Retry-4] RED for SaddleCreek SCLS Production Batch Server - 1 (10.0.10.214), retrying... (Total waited: 1200s)
+2026-07-16 02:49:28,896 - 198220 - INFO - [Retry-5] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:54:29,309 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 496168fd-baba-4ccc-b8c7-004f920da5a2)
+2026-07-16 02:54:59,434 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:54:29.601398
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.8G | 93.1G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 06:54:30.314331
+==============================================================================
+
+2026-07-16 02:54:59,434 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 02:54:59,436 - 198220 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry5-2026-07-16-02-54-59-435.log
+2026-07-16 02:54:59,490 - 198220 - INFO - [Retry-5] RED for SaddleCreek SCLS Production Batch Server - 1 (10.0.10.214), retrying... (Total waited: 1500s)
+2026-07-16 02:54:59,490 - 198220 - INFO - [Retry-6] Waiting 300s for i-09998514a98d2ee07...
+2026-07-16 02:59:59,699 - 198220 - INFO - Sent app_validation.py to i-09998514a98d2ee07 (command_id: 0e0c1d1e-9a7e-4d0b-ba0c-f57a26684483)
+2026-07-16 03:00:29,979 - 198220 - INFO - app_validation.py output for i-09998514a98d2ee07:
+
+==============================================================================
+Server Availability Check Started | 2026-07-16 06:59:59.996188
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.214
+Hostname | ip-10-0-10-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.8G | 93.1G | 61% | /data
+fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | 0B | 983.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0946abfd2e4a0677e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.0.10.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 20
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sclsprd_abchdis, sclsprod_dwa, sclsprod_event, sclsprod_ftp, sclsprod_lbl, sclsprod_apick, sclsprod_repl, sclsprod_rccl, sclsprod_rpt, sclsprod_jqgrid, sclsprod_sch, sclsprod_inbq, sclsprod_wlddsw, sclsprod_wcre, sclsprod_iwes, sclsprod_weso, sclsprod_zpli
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sclsprd_abchdis | /data/batchapp/softeon/sclsprod/autobatchdistribution
+sclsprod_dwa | /data/batchapp/softeon/sclsprod/downloaddaemon
+sclsprod_event | /data/batchapp/softeon/sclsprod/eventdaemon
+sclsprod_ftp | /data/batchapp/softeon/sclsprod/ftpdaemon
+sclsprod_lbl | /data/batchapp/softeon/sclsprod/labeldaemon
+sclsprod_apick | /data/batchapp/softeon/sclsprod/picktooldaemon
+sclsprod_repl | /data/batchapp/softeon/sclsprod/replenishmentdaemon
+sclsprod_rccl | /data/batchapp/softeon/sclsprod/replenishmentpickloccanceldaemon
+sclsprod_rpt | /data/batchapp/softeon/sclsprod/reportdaemon
+sclsprod_jqgrid | /data/batchapp/softeon/sclsprod/reportjqgridexportdaemon
+sclsprod_sch | /data/batchapp/softeon/sclsprod/schedulerdaemon
+sclsprod_inbq | /data/batchapp/softeon/sclsprod/uploaddaemon
+sclsprod_wlddsw | /data/batchapp/softeon/sclsprod/wavelaunchdaemon
+sclsprod_wcre | /data/batchapp/softeon/sclsprod/wavecreationdaemon
+sclsprod_iwes | /data/batchapp/softeon/sclsprod/wesinbounddaemon
+sclsprod_weso | /data/batchapp/softeon/sclsprod/wesoutbounddaemon
+sclsprod_zpli | /data/batchapp/softeon/sclsprod/weszplinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-16 07:00:00.814644
+==============================================================================
+
+2026-07-16 03:00:29,979 - 198220 - ERROR - app_validation.py errors for i-09998514a98d2ee07:
+
+2026-07-16 03:00:29,981 - 198220 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-16/SaddleCreek-scls-Batch/10.0.10.214/10.0.10.214-AfterPatching-Retry6-2026-07-16-03-00-29-980.log
+2026-07-16 03:00:30,216 - 198220 - INFO - Health monitor crontab enabled on all instances
+2026-07-16 03:00:30,217 - 198220 - WARNING - [Retry] Timeout - auto cron enabled for i-09998514a98d2ee07

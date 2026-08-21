@@ -1,0 +1,939 @@
+2026-08-09 00:10:03,569 - 1810602 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:36:28,409 - 1810602 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:36:28,664 - 1810602 - INFO - Log file ./logs/backup_2026-08-09.log uploaded to s3://q3-2025-aws-security-patching/nfi-prod-batch_Patch_Backup/2026-08-09/backup_2026-08-09.log
+2026-08-09 04:10:02,986 - 1887645 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-09 04:10:02,987 - 1887645 - INFO - Script Start Time: 2026-08-09 04:10:02
+2026-08-09 04:10:03,362 - 1887645 - INFO - Tag: nfi-prod-batch, IPs: ['172.18.10.52'], Environment: prod
+2026-08-09 04:10:03,362 - 1887645 - INFO - Instance(s) selected for Patching: {'i-03fba0551fdf718ff': '172.18.10.52'}
+2026-08-09 04:10:03,428 - 1887645 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 04:10:03,428 - 1887645 - INFO - Now patching instances at: 2026-08-09 04:10:03
+2026-08-09 04:10:03,607 - 1887645 - INFO - Sent app_validation.py to i-03fba0551fdf718ff (command_id: 9ef5d9ee-974e-4961-b915-a154b18c3444)
+2026-08-09 04:10:33,720 - 1887645 - INFO - SSM Command Status: Success
+2026-08-09 04:10:33,720 - 1887645 - INFO - app_validation.py output for i-03fba0551fdf718ff:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 08:10:03.886900
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.10.52
+Hostname | ip-172-18-10-52
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 215.0G | 74.9G | 74% | /data
+fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | 0B | 536.5G | 0B | 0% | /data/shared/softeon
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | /data/shared/softeon | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.10.52:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 355
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.10.52 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 65
+Batch/Daemon Java Processes | 65
+Non-Standalone Java Processes | nfiprod_label, nfiprod_schcent, nfiprod_scheast, nfiprod_schpaci, nfiprod_upload, nfiprod_wavelaun, nfiprod_downld, nfiprod_ftp, nfi_repelenis, nfi_evnt, nfiprod_wsqrd, nfi_rpt_bill, nfiprd_admvomob, nfiprod_inbqp, nfiprod_1downld, nficha_wavelaun, nfipep_wavelaun, nfivan_wavelaun, nfi375_wavelaun, nfi385_wavelaun, nfi386_wavelaun, nfi362_wavelaun, nfi774_wavelaun, nfi2017_wavlaun, nfi2018_wavlaun, nfi208_wavlaun, nfi208_abchdis, nfi215_wavelaun, nfi209_wavelaun, nfi295_wavelaun, nfi626_wavlaun, nfi626_abchdis, nfi793_wavlaun, nfi793_abchdis, nfiprod_wave633, nfi665_wavlaun, nfi294_wavelaun, nfi294_294_mp, nfi203_wavelaun, nfprod_218_wavl, nfi143_wave, nfprod_145_wavl, nfprod_147_wavl, nfprod_175_wavl, nfprod_192_wavl, nfprod_107_wavl, nfi273_wavelaun, nfi273_abchdis, nfi273_mp, nfprod_215_wavl, nfi794_wavelaun, nfi659_wavlaun, nfi748_wavelaun, nfi120_wld, nfi362ko_wave, nfi108_wld, nfi123_wavelaun, nfiprod-36_wavl, nfiprod_364wld, wms_svomob, nfiprod_report, nfiprod_reportjq, nfiprod_1vomob, nfiprod_vomob, nfi_billcharge
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 65
+Java-Name | Java-Path
+nfiprod_label | /data/app/java/jdk1.7.0_80/bin/nfiprod_label
+nfiprod_schcent | /data/app/java/jdk1.7.0_80/bin/nfiprod_schcent
+nfiprod_scheast | /data/app/java/jdk1.7.0_80/bin/nfiprod_scheast
+nfiprod_schpaci | /data/app/java/jdk1.7.0_80/bin/nfiprod_schpaci
+nfiprod_upload | /data/app/java/jdk1.7.0_80/bin/nfiprod_upload
+nfiprod_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfiprod_wavelaun
+nfiprod_downld | /data/app/java/jdk1.7.0_80/bin/nfiprod_downld
+nfiprod_ftp | /data/app/java/jdk1.7.0_80/bin/nfiprod_ftp
+nfi_repelenis | /data/app/java/jdk1.7.0_80/bin/nfi_repelenis
+nfi_evnt | /data/app/java/jdk1.7.0_80/bin/nfi_evnt
+nfiprod_wsqrd | /data/app/java/jdk1.7.0_80/bin/nfiprod_wsqrd
+nfi_rpt_bill | /data/app/java/jdk1.7.0_80/bin/nfi_rpt_bill
+nfiprd_admvomob | /data/batchapp/softeon/nfiprod/voiceadminserver
+nfiprod_inbqp | /data/app/java/jdk1.7.0_80/bin/nfiprod_inbqp
+nfiprod_1downld | /data/batchapp/softeon/nfiprod/downloaddaemon1
+nficha_wavelaun | /data/app/java/jdk1.7.0_80/bin/nficha_wavelaun
+nfipep_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfipep_wavelaun
+nfivan_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfivan_wavelaun
+nfi375_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi375_wavelaun
+nfi385_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi385_wavelaun
+nfi386_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi386_wavelaun
+nfi362_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi362_wavelaun
+nfi774_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi774_wavelaun
+nfi2017_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2017_wavlaun
+nfi2018_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2018_wavlaun
+nfi208_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi208_wavlaun
+nfi208_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi208_abchdis
+nfi215_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi215_wavelaun
+nfi209_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi209_wavelaun
+nfi295_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi295_wavelaun
+nfi626_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi626_wavlaun
+nfi626_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi626_abchdis
+nfi793_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi793_wavlaun
+nfi793_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi793_abchdis
+nfiprod_wave633 | /data/app/java/jdk1.7.0_80/bin/nfiprod_wave633
+nfi665_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi665_wavlaun
+nfi294_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi294_wavelaun
+nfi294_294_mp | /data/app/java/jdk1.7.0_80/bin/nfi294_294_mp
+nfi203_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi203_wavelaun
+nfprod_218_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_218_wavl
+nfi143_wave | /data/app/java/jdk1.7.0_80/bin/nfi143_wave
+nfprod_145_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_145_wavl
+nfprod_147_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_147_wavl
+nfprod_175_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_175_wavl
+nfprod_192_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_192_wavl
+nfprod_107_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_107_wavl
+nfi273_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi273_wavelaun
+nfi273_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi273_abchdis
+nfi273_mp | /data/app/java/jdk1.7.0_80/bin/nfi273_mp
+nfprod_215_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_215_wavl
+nfi794_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi794_wavelaun
+nfi659_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi659_wavlaun
+nfi748_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi748_wavelaun
+nfi120_wld | /data/app/java/jdk1.7.0_80/bin/nfi120_wld
+nfi362ko_wave | /data/app/java/jdk1.7.0_80/bin/nfi362ko_wave
+nfi108_wld | /data/app/java/jdk1.7.0_80/bin/nfi108_wld
+nfi123_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi123_wavelaun
+nfiprod-36_wavl | /data/app/java/jdk1.7.0_80/bin/nfiprod-36_wavl
+nfiprod_364wld | /data/app/java/jdk1.7.0_80/bin/nfiprod_364wld
+wms_svomob | /data/app/java/jdk1.7.0_80/bin/wms_svomob
+nfiprod_report | /data/app/java/jdk1.7.0_80/bin/nfiprod_report
+nfiprod_reportjq | /data/app/java/jdk1.7.0_80/bin/nfiprod_reportjq
+nfiprod_1vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_1vomob
+nfiprod_vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_vomob
+nfi_billcharge | /data/app/java/jdk1.7.0_80/bin/nfi_billcharge
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 08:10:06.699921
+==============================================================================
+
+2026-08-09 04:10:33,722 - 1887645 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-09/nfi-prod-batch/172.18.10.52/172.18.10.52-BeforePatching-2026-08-09-04-10-33-722.log
+2026-08-09 04:10:39,033 - 1887645 - INFO - i-03fba0551fdf718ff: Cron was active = True
+2026-08-09 04:10:39,302 - 1887645 - INFO - Health monitor crontab disabled on all instances
+2026-08-09 04:10:39,303 - 1887645 - INFO - Disabled cron for: ['i-03fba0551fdf718ff']
+2026-08-09 04:10:39,389 - 1887645 - INFO - Sending patch command to instance i-03fba0551fdf718ff
+2026-08-09 04:10:39,505 - 1887645 - INFO - Command sent successfully to instance i-03fba0551fdf718ff. Command ID: adde736b-783f-4fc5-9e13-6f1cc2a299f4
+2026-08-09 04:15:41,004 - 1887645 - INFO - All patches applied successfully.
+2026-08-09 04:15:41,005 - 1887645 - INFO - Patching end time: 2026-08-09 04:15:41
+2026-08-09 04:15:41,005 - 1887645 - INFO - Patch Elapsed time: 0:05:37.576167
+2026-08-09 04:15:41,076 - 1887645 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 04:15:41,076 - 1887645 - INFO - Confirmed - services are stopped
+2026-08-09 04:16:02,142 - 1887645 - INFO - Discovered TG map: {}
+2026-08-09 04:16:02,819 - 1887645 - INFO - Stopping EC2 instance: i-03fba0551fdf718ff at 2026-08-09 04:16:02
+2026-08-09 04:19:19,917 - 1887645 - INFO - Instance i-03fba0551fdf718ff stopped successfully.
+2026-08-09 04:19:20,068 - 1887645 - INFO - Stopped i-03fba0551fdf718ff in 0:03:17.248720
+2026-08-09 04:19:20,069 - 1887645 - INFO - Starting EC2 instance: i-03fba0551fdf718ff
+2026-08-09 04:19:36,316 - 1887645 - INFO - Instance i-03fba0551fdf718ff started successfully.
+2026-08-09 04:19:36,316 - 1887645 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03fba0551fdf718ff...
+2026-08-09 04:21:16,559 - 1887645 - INFO - Sent app_validation.py to i-03fba0551fdf718ff (command_id: 977023be-ad68-45f9-8a5d-38e0d2463d0f)
+2026-08-09 04:21:46,658 - 1887645 - INFO - SSM Command Status: Success
+2026-08-09 04:21:46,659 - 1887645 - INFO - app_validation.py output for i-03fba0551fdf718ff:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 08:21:16.909820
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.10.52
+Hostname | ip-172-18-10-52
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 214.5G | 75.3G | 74% | /data
+fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | 0B | 536.5G | 0B | 0% | /data/shared/softeon
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | /data/shared/softeon | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.10.52:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 355
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.10.52 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 08:21:17.376282
+==============================================================================
+
+2026-08-09 04:21:46,660 - 1887645 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-09/nfi-prod-batch/172.18.10.52/172.18.10.52-AfterPatching-2026-08-09-04-21-46-660.log
+2026-08-09 04:21:46,719 - 1887645 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-09/nfi-prod-batch/172.18.10.52/172.18.10.52-Validation-details-2026-08-09-04-21-46-660.html
+2026-08-09 04:21:46,896 - 1887645 - INFO - Daemon count - Pre: 65, Post: 0
+2026-08-09 04:21:46,896 - 1887645 - INFO - CUPS: before=running after=running version=1.7.5
+2026-08-09 04:21:46,896 - 1887645 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-09 04:21:46,897 - 1887645 - INFO - Background: restarting daemons on i-03fba0551fdf718ff
+2026-08-09 04:21:46,897 - 1887645 - INFO - Background thread started for i-03fba0551fdf718ff - daemon:True cups:False
+2026-08-09 04:21:47,162 - 1887645 - INFO - Started i-03fba0551fdf718ff in 0:02:27.093171
+2026-08-09 04:21:47,162 - 1887645 - INFO - All instances processed.
+2026-08-09 04:21:47,166 - 1887645 - INFO - Restart Total time: 0:06:05.964978
+2026-08-09 04:21:47,166 - 1887645 - INFO - Auto-confirmed services are restarted
+2026-08-09 04:21:47,166 - 1887645 - INFO - Confirmed - services are started
+2026-08-09 04:21:47,280 - 1887645 - INFO - The following instances have failed the patch: []
+2026-08-09 04:21:47,281 - 1887645 - INFO - No instances have failed the patch.
+2026-08-09 04:21:47,281 - 1887645 - INFO - Total Patch Process time: 0:11:44.293776
+2026-08-09 04:22:47,374 - 1887645 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: nfiprod-107
+/data/batchapp/softeon/nfiprod-107/startall-nfiprod-107.sh
+Checking folder: nfiprod-108
+/data/batchapp/softeon/nfiprod-108/startall-nfiprod-108.sh
+Checking folder: nfiprod-120
+/data/batchapp/softeon/nfiprod-120/startall-nfiprod-120.sh
+Checking folder: nfiprod-123
+/data/batchapp/softeon/nfiprod-123/startall-nfiprod-123.sh
+Checking folder: nfiprod-143
+/data/batchapp/softeon/nfiprod-143/startall-nfiprod-143.sh
+Agents are running on the host ip-172-18-10-52
+Checking folder: nfiprod-145
+/data/batchapp/softeon/nfiprod-145/startall-nfiprod-145.sh
+Checking folder: nfiprod-147
+/data/batchapp/softeon/nfiprod-147/startall-nfiprod-147.sh
+Checking folder: nfiprod-175
+/data/batchapp/softeon/nfiprod-175/startall-nfiprod-175.sh
+Checking folder: nfiprod-192
+/data/batchapp/softeon/nfiprod-192/startall-nfiprod-192.sh
+Checking folder: nfiprod-2017
+/data/batchapp/softeon/nfiprod-2017/startall-nfiprod-2017.sh
+Checking folder: nfiprod-2018
+/data/batchapp/softeon/nfiprod-2018/startall-nfiprod-2018.sh
+Checking folder: nfiprod-203
+/data/batchapp/softeon/nfiprod-203/startall-nfiprod-203.sh
+Checking folder: nfiprod-208
+/data/batchapp/softeon/nfiprod-208/startall-nfiprod-208.sh
+Startall nfiprod Agents are running on the host ip-172-18-10-52
+Checking folder: nfiprod-209
+/data/batchapp/softeon/nfiprod-209/startall-nfiprod-209.sh
+Checking folder: nfiprod-215
+/data/batchapp/softeon/nfiprod-215/startall-nfiprod-215.sh
+Checking folder: nfiprod-215GPF
+/data/batchapp/softeon/nfiprod-215GPF/startall-nfiprod-215GPF.sh
+Checking folder: nfiprod-218
+/data/batchapp/softeon/nfiprod-218/startall-nfiprod-218.sh
+Checking folder: nfiprod-273
+/data/batchapp/softeon/nfiprod-273/startall-nfiprod-273.sh
+Checking folder: nfiprod-294
+/data/batchapp/softeon/nfiprod-294/startall-nfiprod-294.sh
+Checking folder: nfiprod-295
+/data/batchapp/softeon/nfiprod-295/startall-nfiprod-295.sh
+Checking folder: nfiprod-36
+/data/batchapp/softeon/nfiprod-36/startall-nfiprod-36.sh
+Checking folder: nfiprod-362
+/data/batchapp/softeon/nfiprod-362/startall-nfiprod-362.sh
+Checking folder: nfiprod-362ko
+/data/batchapp/softeon/nfiprod-362ko/startall-nfiprod-362ko.sh
+Checking folder: nfiprod-364
+/data/batchapp/softeon/nfiprod-364/startall-nfiprod-364.sh
+Checking folder: nfiprod-375
+/data/batchapp/softeon/nfiprod-375/startall-nfiprod-375.sh
+Checking folder: nfiprod-385
+/data/batchapp/softeon/nfiprod-385/startall-nfiprod-385.sh
+Checking folder: nfiprod-386
+/data/batchapp/softeon/nfiprod-386/startall-nfiprod-386.sh
+Checking folder: nfiprod-626
+/data/batchapp/softeon/nfiprod-626/startall-nfiprod-626.sh
+Checking folder: nfiprod-633
+/data/batchapp/softeon/nfiprod-633/startall-nfiprod-633.sh
+Checking folder: nfiprod-659
+/data/batchapp/softeon/nfiprod-659/startall-nfiprod-659.sh
+Checking folder: nfiprod-665
+/data/batchapp/softeon/nfiprod-665/startall-nfiprod-665.sh
+Checking folder: nfiprod-748
+/data/batchapp/softeon/nfiprod-748/startall-nfiprod-748.sh
+Checking folder: nfiprod-774
+/data/batchapp/softeon/nfiprod-774/startall-nfiprod-774.sh
+Checking folder: nfiprod-793
+/data/batchapp/softeon/nfiprod-793/startall-nfiprod-793.sh
+Checking folder: nfiprod-794
+/data/batchapp/softeon/nfiprod-794/startall-nfiprod-794.sh
+Checking folder: nfiprod-cha
+/data/batchapp/softeon/nfiprod-cha/startall-nfiprod-cha.sh
+Checking folder: nfiprod-pep
+Checking folder: nfiprod-van
+Checking folder: nfiprod
+/data/batchapp/softeon/nfiprod/startall-nfiprod.sh
+Startall nfiprod Agents are running on the host ip-172-18-10-52
+
+
+
+Starting voicemobiledaemon
+
+
+Starting voicemobiledaemon1
+Startall nfiprod-cha Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4743
+Current Batch  Application process already running with Process id: 4771
+Startall nfiprod-pep Agents are running on the host ip-172-18-10-52
+Startall nfiprod-van Agents are running on the host ip-172-18-10-52
+Startall nfiprod-375 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4312
+Startall nfiprod-385 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4345
+Startall nfiprod-386 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4377
+Startall nfiprod-362 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4210
+Startall nfiprod-774 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4615
+Startall nfiprod-2017 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3724
+Startall nfiprod-2018 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3754
+Startall nfiprod-208 Agents are running on the host ip-172-18-10-52
+Startall nfiprod Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3814
+Current Batch  Application process already running with Process id: 3848
+Current Batch  Application process already running with Process id: 3941
+Current Batch  Application process already running with Process id: 3880
+Current Batch  Application process already running with Process id: 4150
+Current Batch  Application process already running with Process id: 4409
+Current Batch  Application process already running with Process id: 4443
+Current Batch  Application process already running with Process id: 4650
+Current Batch  Application process already running with Process id: 4677
+Current Batch  Application process already running with Process id: 4473
+Current Batch  Application process already running with Process id: 4541
+Current Batch  Application process already running with Process id: 4091
+Current Batch  Application process already running with Process id: 4121
+Current Batch  Application process already running with Process id: 3785
+Current Batch  Application process already running with Process id: 3971
+Startall nfiprod-143 Agents are running on the host ip-172-18-10-52
+Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3570
+Current Batch  Application process already running with Process id: 3600
+Current Batch  Application process already running with Process id: 3632
+Current Batch  Application process already running with Process id: 3664
+Current Batch  Application process already running with Process id: 3694
+Current Batch  Application process already running with Process id: 3453
+Current Batch  Application process already running with Process id: 4004
+Current Batch  Application process already running with Process id: 4029
+Current Batch  Application process already running with Process id: 4061
+Current Batch  Application process already running with Process id: 3905
+Current Batch  Application process already running with Process id: 4707
+Current Batch  Application process already running with Process id: 4501
+Startall nfiprod-748 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4574
+Startall nfiprod-120 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3511
+Startall nfiprod-362 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4246
+Startall nfiprod-108 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3482
+Startall nfiprod-123 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 3540
+Startall nfiprod-123 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4184
+Startall nfiprod-123 Agents are running on the host ip-172-18-10-52
+Current Batch  Application process already running with Process id: 4278
+Checking folder: nfiwmsstage
+
+2026-08-09 04:22:47,376 - 1887645 - INFO - Waiting 100 sec for daemons to start on i-03fba0551fdf718ff
+2026-08-09 04:22:47,658 - 1887645 - INFO - Log file ./logs/patching_2026-08-09_nfi-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/nfi-prod-batch_Patch/2026-08-09/patching_2026-08-09_nfi-prod-batch.log
+2026-08-09 04:24:27,409 - 1887645 - INFO - CUPS no action needed for i-03fba0551fdf718ff - before:running after:running version:1.7.5
+2026-08-09 04:24:27,723 - 1887645 - INFO - Sent app_validation.py to i-03fba0551fdf718ff (command_id: f740adb3-76fe-45fb-aaf3-d92ed7156e96)
+2026-08-09 04:24:57,819 - 1887645 - INFO - SSM Command Status: Success
+2026-08-09 04:24:57,819 - 1887645 - INFO - app_validation.py output for i-03fba0551fdf718ff:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 08:24:27.973513
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.10.52
+Hostname | ip-172-18-10-52
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 215.0G | 74.9G | 74% | /data
+fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | 0B | 536.5G | 0B | 0% | /data/shared/softeon
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | /data/shared/softeon | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.10.52:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 355
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.10.52 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 63
+Batch/Daemon Java Processes | 64
+Non-Standalone Java Processes | nfprod_107_wavl, nfi108_wld, nfi120_wld, nfi123_wavelaun, nfi143_wave, nfprod_145_wavl, nfprod_147_wavl, nfprod_175_wavl, nfprod_192_wavl, nfi2017_wavlaun, nfi2018_wavlaun, nfi203_wavelaun, nfi208_wavlaun, nfi208_abchdis, nfi209_wavelaun, nfprod_215_wavl, nfi215_wavelaun, nfprod_218_wavl, nfi273_wavelaun, nfi273_abchdis, nfi273_mp, nfi294_wavelaun, nfi294_294_mp, nfi295_wavelaun, nfiprod-36_wavl, nfi362_wavelaun, nfi362ko_wave, nfiprod_364wld, nfi375_wavelaun, nfi385_wavelaun, nfi386_wavelaun, nfi626_wavlaun, nfi626_abchdis, nfiprod_wave633, nfi659_wavlaun, nfi665_wavlaun, nfi748_wavelaun, nfi774_wavelaun, nfi793_wavlaun, nfi793_abchdis, nfi794_wavelaun, nficha_wavelaun, nfiprod_label, nfiprod_report, nfiprod_reportjq, nfiprod_schcent, nfiprod_scheast, nfiprod_schpaci, nfiprod_upload, nfiprod_wavelaun, nfiprod_downld, nfiprod_ftp, nfi_repelenis, nfi_evnt, nfi_billcharge, nfiprod_wsqrd, nfi_rpt_bill, nfiprd_admvomob, nfiprod_vomob, nfiprod_1vomob, nfiprod_inbqp, nfiprod_1downld, nfipep_wavelaun, nfivan_wavelaun
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 64
+Java-Name | Java-Path
+nfprod_107_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_107_wavl
+nfi108_wld | /data/app/java/jdk1.7.0_80/bin/nfi108_wld
+nfi120_wld | /data/app/java/jdk1.7.0_80/bin/nfi120_wld
+nfi123_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi123_wavelaun
+nfi143_wave | /data/app/java/jdk1.7.0_80/bin/nfi143_wave
+nfprod_145_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_145_wavl
+nfprod_147_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_147_wavl
+nfprod_175_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_175_wavl
+nfprod_192_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_192_wavl
+nfi2017_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2017_wavlaun
+nfi2018_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2018_wavlaun
+nfi203_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi203_wavelaun
+nfi208_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi208_wavlaun
+nfi208_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi208_abchdis
+nfi209_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi209_wavelaun
+nfprod_215_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_215_wavl
+nfi215_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi215_wavelaun
+nfprod_218_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_218_wavl
+nfi273_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi273_wavelaun
+nfi273_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi273_abchdis
+nfi273_mp | /data/app/java/jdk1.7.0_80/bin/nfi273_mp
+nfi294_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi294_wavelaun
+nfi294_294_mp | /data/app/java/jdk1.7.0_80/bin/nfi294_294_mp
+nfi295_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi295_wavelaun
+nfiprod-36_wavl | /data/app/java/jdk1.7.0_80/bin/nfiprod-36_wavl
+nfi362_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi362_wavelaun
+nfi362ko_wave | /data/app/java/jdk1.7.0_80/bin/nfi362ko_wave
+nfiprod_364wld | /data/app/java/jdk1.7.0_80/bin/nfiprod_364wld
+nfi375_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi375_wavelaun
+nfi385_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi385_wavelaun
+nfi386_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi386_wavelaun
+nfi626_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi626_wavlaun
+nfi626_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi626_abchdis
+nfiprod_wave633 | /data/app/java/jdk1.7.0_80/bin/nfiprod_wave633
+nfi659_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi659_wavlaun
+nfi665_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi665_wavlaun
+nfi748_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi748_wavelaun
+nfi774_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi774_wavelaun
+nfi793_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi793_wavlaun
+nfi793_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi793_abchdis
+nfi794_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi794_wavelaun
+nficha_wavelaun | /data/app/java/jdk1.7.0_80/bin/nficha_wavelaun
+nfiprod_label | /data/app/java/jdk1.7.0_80/bin/nfiprod_label
+nfiprod_report | /data/app/java/jdk1.7.0_80/bin/nfiprod_report
+nfiprod_reportjq | /data/app/java/jdk1.7.0_80/bin/nfiprod_reportjq
+nfiprod_schcent | /data/app/java/jdk1.7.0_80/bin/nfiprod_schcent
+nfiprod_scheast | /data/app/java/jdk1.7.0_80/bin/nfiprod_scheast
+nfiprod_schpaci | /data/app/java/jdk1.7.0_80/bin/nfiprod_schpaci
+nfiprod_upload | /data/app/java/jdk1.7.0_80/bin/nfiprod_upload
+nfiprod_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfiprod_wavelaun
+nfiprod_downld | /data/app/java/jdk1.7.0_80/bin/nfiprod_downld
+nfiprod_ftp | /data/app/java/jdk1.7.0_80/bin/nfiprod_ftp
+nfi_repelenis | /data/app/java/jdk1.7.0_80/bin/nfi_repelenis
+nfi_evnt | /data/app/java/jdk1.7.0_80/bin/nfi_evnt
+nfi_billcharge | /data/app/java/jdk1.7.0_80/bin/nfi_billcharge
+nfiprod_wsqrd | /data/app/java/jdk1.7.0_80/bin/nfiprod_wsqrd
+nfi_rpt_bill | /data/app/java/jdk1.7.0_80/bin/nfi_rpt_bill
+nfiprd_admvomob | /data/batchapp/softeon/nfiprod/voiceadminserver
+nfiprod_vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_vomob
+nfiprod_1vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_1vomob
+nfiprod_inbqp | /data/app/java/jdk1.7.0_80/bin/nfiprod_inbqp
+nfiprod_1downld | /data/batchapp/softeon/nfiprod/downloaddaemon1
+nfipep_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfipep_wavelaun
+nfivan_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfivan_wavelaun
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 08:24:30.701844
+==============================================================================
+
+2026-08-09 04:24:57,976 - 1887645 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 04:24:57,977 - 1887645 - INFO - RED re-validation mail sent for i-03fba0551fdf718ff
+2026-08-09 04:24:57,977 - 1887645 - INFO - Still Red after restart - starting retry for i-03fba0551fdf718ff
+2026-08-09 04:24:57,977 - 1887645 - INFO - [Retry-1] Waiting 300s for i-03fba0551fdf718ff...
+2026-08-09 04:29:58,197 - 1887645 - INFO - Sent app_validation.py to i-03fba0551fdf718ff (command_id: acb0a48b-21bf-4435-901b-b20676b5f140)
+2026-08-09 04:30:28,279 - 1887645 - INFO - SSM Command Status: Success
+2026-08-09 04:30:28,279 - 1887645 - INFO - app_validation.py output for i-03fba0551fdf718ff:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 08:29:58.451532
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.10.52
+Hostname | ip-172-18-10-52
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 214.9G | 74.9G | 74% | /data
+fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | 0B | 536.5G | 0B | 0% | /data/shared/softeon
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | /data/shared/softeon | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.10.52:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 355
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.10.52 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 64
+Batch/Daemon Java Processes | 65
+Non-Standalone Java Processes | nfprod_107_wavl, nfi108_wld, nfi120_wld, nfi123_wavelaun, nfi143_wave, nfprod_145_wavl, nfprod_147_wavl, nfprod_175_wavl, nfprod_192_wavl, nfi2017_wavlaun, nfi2018_wavlaun, nfi203_wavelaun, nfi208_wavlaun, nfi208_abchdis, nfi209_wavelaun, nfprod_215_wavl, nfi215_wavelaun, nfprod_218_wavl, nfi273_wavelaun, nfi273_abchdis, nfi273_mp, nfi294_wavelaun, nfi294_294_mp, nfi295_wavelaun, nfiprod-36_wavl, nfi362_wavelaun, nfi362ko_wave, nfiprod_364wld, nfi375_wavelaun, nfi385_wavelaun, nfi386_wavelaun, nfi626_wavlaun, nfi626_abchdis, nfiprod_wave633, nfi659_wavlaun, nfi665_wavlaun, nfi748_wavelaun, nfi774_wavelaun, nfi793_wavlaun, nfi793_abchdis, nfi794_wavelaun, nficha_wavelaun, nfiprod_label, nfiprod_report, nfiprod_reportjq, nfiprod_schcent, nfiprod_scheast, nfiprod_schpaci, nfiprod_upload, nfiprod_wavelaun, nfiprod_downld, nfiprod_ftp, nfi_repelenis, nfi_evnt, nfi_billcharge, nfiprod_wsqrd, nfi_rpt_bill, nfiprd_admvomob, nfiprod_vomob, nfiprod_1vomob, nfiprod_inbqp, nfiprod_1downld, nfipep_wavelaun, nfivan_wavelaun, wms_svomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 65
+Java-Name | Java-Path
+nfprod_107_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_107_wavl
+nfi108_wld | /data/app/java/jdk1.7.0_80/bin/nfi108_wld
+nfi120_wld | /data/app/java/jdk1.7.0_80/bin/nfi120_wld
+nfi123_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi123_wavelaun
+nfi143_wave | /data/app/java/jdk1.7.0_80/bin/nfi143_wave
+nfprod_145_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_145_wavl
+nfprod_147_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_147_wavl
+nfprod_175_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_175_wavl
+nfprod_192_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_192_wavl
+nfi2017_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2017_wavlaun
+nfi2018_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2018_wavlaun
+nfi203_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi203_wavelaun
+nfi208_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi208_wavlaun
+nfi208_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi208_abchdis
+nfi209_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi209_wavelaun
+nfprod_215_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_215_wavl
+nfi215_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi215_wavelaun
+nfprod_218_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_218_wavl
+nfi273_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi273_wavelaun
+nfi273_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi273_abchdis
+nfi273_mp | /data/app/java/jdk1.7.0_80/bin/nfi273_mp
+nfi294_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi294_wavelaun
+nfi294_294_mp | /data/app/java/jdk1.7.0_80/bin/nfi294_294_mp
+nfi295_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi295_wavelaun
+nfiprod-36_wavl | /data/app/java/jdk1.7.0_80/bin/nfiprod-36_wavl
+nfi362_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi362_wavelaun
+nfi362ko_wave | /data/app/java/jdk1.7.0_80/bin/nfi362ko_wave
+nfiprod_364wld | /data/app/java/jdk1.7.0_80/bin/nfiprod_364wld
+nfi375_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi375_wavelaun
+nfi385_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi385_wavelaun
+nfi386_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi386_wavelaun
+nfi626_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi626_wavlaun
+nfi626_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi626_abchdis
+nfiprod_wave633 | /data/app/java/jdk1.7.0_80/bin/nfiprod_wave633
+nfi659_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi659_wavlaun
+nfi665_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi665_wavlaun
+nfi748_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi748_wavelaun
+nfi774_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi774_wavelaun
+nfi793_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi793_wavlaun
+nfi793_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi793_abchdis
+nfi794_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi794_wavelaun
+nficha_wavelaun | /data/app/java/jdk1.7.0_80/bin/nficha_wavelaun
+nfiprod_label | /data/app/java/jdk1.7.0_80/bin/nfiprod_label
+nfiprod_report | /data/app/java/jdk1.7.0_80/bin/nfiprod_report
+nfiprod_reportjq | /data/app/java/jdk1.7.0_80/bin/nfiprod_reportjq
+nfiprod_schcent | /data/app/java/jdk1.7.0_80/bin/nfiprod_schcent
+nfiprod_scheast | /data/app/java/jdk1.7.0_80/bin/nfiprod_scheast
+nfiprod_schpaci | /data/app/java/jdk1.7.0_80/bin/nfiprod_schpaci
+nfiprod_upload | /data/app/java/jdk1.7.0_80/bin/nfiprod_upload
+nfiprod_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfiprod_wavelaun
+nfiprod_downld | /data/app/java/jdk1.7.0_80/bin/nfiprod_downld
+nfiprod_ftp | /data/app/java/jdk1.7.0_80/bin/nfiprod_ftp
+nfi_repelenis | /data/app/java/jdk1.7.0_80/bin/nfi_repelenis
+nfi_evnt | /data/app/java/jdk1.7.0_80/bin/nfi_evnt
+nfi_billcharge | /data/app/java/jdk1.7.0_80/bin/nfi_billcharge
+nfiprod_wsqrd | /data/app/java/jdk1.7.0_80/bin/nfiprod_wsqrd
+nfi_rpt_bill | /data/app/java/jdk1.7.0_80/bin/nfi_rpt_bill
+nfiprd_admvomob | /data/batchapp/softeon/nfiprod/voiceadminserver
+nfiprod_vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_vomob
+nfiprod_1vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_1vomob
+nfiprod_inbqp | /data/app/java/jdk1.7.0_80/bin/nfiprod_inbqp
+nfiprod_1downld | /data/batchapp/softeon/nfiprod/downloaddaemon1
+nfipep_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfipep_wavelaun
+nfivan_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfivan_wavelaun
+wms_svomob | /data/app/java/jdk1.7.0_80/bin/wms_svomob
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 08:30:01.182755
+==============================================================================
+
+2026-08-09 04:30:28,281 - 1887645 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-09/nfi-prod-batch/172.18.10.52/172.18.10.52-AfterPatching-Retry1-2026-08-09-04-30-28-281.log
+2026-08-09 04:30:28,338 - 1887645 - INFO - [Retry-1] RED for NFI Production Batch Server (172.18.10.52), retrying... (Total waited: 300s)
+2026-08-09 04:30:28,338 - 1887645 - INFO - [Retry-2] Waiting 300s for i-03fba0551fdf718ff...
+2026-08-09 04:35:28,756 - 1887645 - INFO - Sent app_validation.py to i-03fba0551fdf718ff (command_id: a40a6202-55b1-4be6-9c77-442ac9f0093e)
+2026-08-09 04:35:58,843 - 1887645 - INFO - SSM Command Status: Success
+2026-08-09 04:35:58,843 - 1887645 - INFO - app_validation.py output for i-03fba0551fdf718ff:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 08:35:29.018781
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.10.52
+Hostname | ip-172-18-10-52
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 215.0G | 74.9G | 74% | /data
+fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | 0B | 536.5G | 0B | 0% | /data/shared/softeon
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1d5c469e.efs.us-east-1.amazonaws.com:/shared/softeon | /data/shared/softeon | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.10.52:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 355
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.10.52 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 65
+Batch/Daemon Java Processes | 65
+Non-Standalone Java Processes | nfprod_107_wavl, nfi108_wld, nfi120_wld, nfi123_wavelaun, nfi143_wave, nfprod_145_wavl, nfprod_147_wavl, nfprod_175_wavl, nfprod_192_wavl, nfi2017_wavlaun, nfi2018_wavlaun, nfi203_wavelaun, nfi208_wavlaun, nfi208_abchdis, nfi209_wavelaun, nfprod_215_wavl, nfi215_wavelaun, nfprod_218_wavl, nfi273_wavelaun, nfi273_abchdis, nfi273_mp, nfi294_wavelaun, nfi294_294_mp, nfi295_wavelaun, nfiprod-36_wavl, nfi362_wavelaun, nfi362ko_wave, nfiprod_364wld, nfi375_wavelaun, nfi385_wavelaun, nfi386_wavelaun, nfi626_wavlaun, nfi626_abchdis, nfiprod_wave633, nfi659_wavlaun, nfi665_wavlaun, nfi748_wavelaun, nfi774_wavelaun, nfi793_wavlaun, nfi793_abchdis, nfi794_wavelaun, nficha_wavelaun, nfiprod_label, nfiprod_report, nfiprod_reportjq, nfiprod_schcent, nfiprod_scheast, nfiprod_schpaci, nfiprod_upload, nfiprod_wavelaun, nfiprod_downld, nfiprod_ftp, nfi_repelenis, nfi_evnt, nfi_billcharge, nfiprod_wsqrd, nfi_rpt_bill, nfiprd_admvomob, nfiprod_vomob, nfiprod_1vomob, nfiprod_inbqp, nfiprod_1downld, nfipep_wavelaun, nfivan_wavelaun, wms_svomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 65
+Java-Name | Java-Path
+nfprod_107_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_107_wavl
+nfi108_wld | /data/app/java/jdk1.7.0_80/bin/nfi108_wld
+nfi120_wld | /data/app/java/jdk1.7.0_80/bin/nfi120_wld
+nfi123_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi123_wavelaun
+nfi143_wave | /data/app/java/jdk1.7.0_80/bin/nfi143_wave
+nfprod_145_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_145_wavl
+nfprod_147_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_147_wavl
+nfprod_175_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_175_wavl
+nfprod_192_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_192_wavl
+nfi2017_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2017_wavlaun
+nfi2018_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi2018_wavlaun
+nfi203_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi203_wavelaun
+nfi208_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi208_wavlaun
+nfi208_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi208_abchdis
+nfi209_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi209_wavelaun
+nfprod_215_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_215_wavl
+nfi215_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi215_wavelaun
+nfprod_218_wavl | /data/app/java/jdk1.7.0_80/bin/nfprod_218_wavl
+nfi273_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi273_wavelaun
+nfi273_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi273_abchdis
+nfi273_mp | /data/app/java/jdk1.7.0_80/bin/nfi273_mp
+nfi294_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi294_wavelaun
+nfi294_294_mp | /data/app/java/jdk1.7.0_80/bin/nfi294_294_mp
+nfi295_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi295_wavelaun
+nfiprod-36_wavl | /data/app/java/jdk1.7.0_80/bin/nfiprod-36_wavl
+nfi362_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi362_wavelaun
+nfi362ko_wave | /data/app/java/jdk1.7.0_80/bin/nfi362ko_wave
+nfiprod_364wld | /data/app/java/jdk1.7.0_80/bin/nfiprod_364wld
+nfi375_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi375_wavelaun
+nfi385_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi385_wavelaun
+nfi386_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi386_wavelaun
+nfi626_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi626_wavlaun
+nfi626_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi626_abchdis
+nfiprod_wave633 | /data/app/java/jdk1.7.0_80/bin/nfiprod_wave633
+nfi659_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi659_wavlaun
+nfi665_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi665_wavlaun
+nfi748_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi748_wavelaun
+nfi774_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi774_wavelaun
+nfi793_wavlaun | /data/app/java/jdk1.7.0_80/bin/nfi793_wavlaun
+nfi793_abchdis | /data/app/java/jdk1.7.0_80/bin/nfi793_abchdis
+nfi794_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfi794_wavelaun
+nficha_wavelaun | /data/app/java/jdk1.7.0_80/bin/nficha_wavelaun
+nfiprod_label | /data/app/java/jdk1.7.0_80/bin/nfiprod_label
+nfiprod_report | /data/app/java/jdk1.7.0_80/bin/nfiprod_report
+nfiprod_reportjq | /data/app/java/jdk1.7.0_80/bin/nfiprod_reportjq
+nfiprod_schcent | /data/app/java/jdk1.7.0_80/bin/nfiprod_schcent
+nfiprod_scheast | /data/app/java/jdk1.7.0_80/bin/nfiprod_scheast
+nfiprod_schpaci | /data/app/java/jdk1.7.0_80/bin/nfiprod_schpaci
+nfiprod_upload | /data/app/java/jdk1.7.0_80/bin/nfiprod_upload
+nfiprod_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfiprod_wavelaun
+nfiprod_downld | /data/app/java/jdk1.7.0_80/bin/nfiprod_downld
+nfiprod_ftp | /data/app/java/jdk1.7.0_80/bin/nfiprod_ftp
+nfi_repelenis | /data/app/java/jdk1.7.0_80/bin/nfi_repelenis
+nfi_evnt | /data/app/java/jdk1.7.0_80/bin/nfi_evnt
+nfi_billcharge | /data/app/java/jdk1.7.0_80/bin/nfi_billcharge
+nfiprod_wsqrd | /data/app/java/jdk1.7.0_80/bin/nfiprod_wsqrd
+nfi_rpt_bill | /data/app/java/jdk1.7.0_80/bin/nfi_rpt_bill
+nfiprd_admvomob | /data/batchapp/softeon/nfiprod/voiceadminserver
+nfiprod_vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_vomob
+nfiprod_1vomob | /data/app/java/jdk1.7.0_80/bin/nfiprod_1vomob
+nfiprod_inbqp | /data/app/java/jdk1.7.0_80/bin/nfiprod_inbqp
+nfiprod_1downld | /data/batchapp/softeon/nfiprod/downloaddaemon1
+nfipep_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfipep_wavelaun
+nfivan_wavelaun | /data/app/java/jdk1.7.0_80/bin/nfivan_wavelaun
+wms_svomob | /data/app/java/jdk1.7.0_80/bin/wms_svomob
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 08:35:31.754130
+==============================================================================
+
+2026-08-09 04:35:58,845 - 1887645 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-09/nfi-prod-batch/172.18.10.52/172.18.10.52-AfterPatching-Retry2-2026-08-09-04-35-58-845.log
+2026-08-09 04:35:59,073 - 1887645 - INFO - Health monitor crontab enabled on all instances
+2026-08-09 04:35:59,075 - 1887645 - INFO - [Retry] Green - cron enabled for i-03fba0551fdf718ff
+2026-08-09 04:35:59,140 - 1887645 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 04:35:59,140 - 1887645 - INFO - [Retry] GREEN mail sent for i-03fba0551fdf718ff

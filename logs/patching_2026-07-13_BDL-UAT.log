@@ -1,0 +1,608 @@
+2026-07-13 01:00:04,679 - 25421 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-13 01:00:04,679 - 25421 - INFO - Script Start Time: 2026-07-13 01:00:04
+2026-07-13 01:00:05,267 - 25421 - INFO - Instance(s) selected for Patching: {'i-02703e160c186ce79': '172.26.10.21'}
+2026-07-13 01:00:05,380 - 25421 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 01:00:05,380 - 25421 - INFO - Now patching instances at: 2026-07-13 01:00:05
+2026-07-13 01:00:11,736 - 25421 - INFO - i-02703e160c186ce79: Cron was active = True
+2026-07-13 01:00:12,732 - 25421 - INFO - Health monitor crontab disabled on all instances
+2026-07-13 01:00:12,733 - 25421 - INFO - Disabled cron for: ['i-02703e160c186ce79']
+2026-07-13 01:00:14,201 - 25421 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: 9cf9cf40-4013-45c8-8302-5281204e9df7)
+2026-07-13 01:00:44,486 - 25421 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 05:00:14.195437
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 158.4G | 81.5G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 158.4G | 81.5G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 158.4G | 81.5G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | bdluat_lbl, bdluat_event, bdluat_rpt, bdluat_repl, bdluat_wld, bdluat_invbt, bdluat_jqgrid, bdluat_mpcpt, bdluat_inbq, bdluat_rccl, bdluat_bisd, bdluat_chgdae, bdluat_dwa, bdluat_apick, bdluat_sch, bdluat_ict, bdluat_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_invbt | /data/batchapp/softeon/bdluat/billinginvoicebatchdaemon
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+bdluat_wsq | /data/batchapp/softeon/bdluat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+86017 | bdlconfig | jboss740eap | bdlconfig_jb740 | 8083 | 172.26.10.21:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/bdlconfig/standalone
+113179 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+1273659 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+109481 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 05:00:16.550811
+==============================================================================
+
+2026-07-13 01:00:44,486 - 25421 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-07-13 01:00:44,488 - 25421 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-BeforePatching-2026-07-13-01-00-44-488.log
+2026-07-13 01:00:44,572 - 25421 - INFO - Sending patch command to instance i-02703e160c186ce79
+2026-07-13 01:00:45,512 - 25421 - INFO - Command sent successfully to instance i-02703e160c186ce79. Command ID: bdedaba4-d545-4442-8503-c8af9517be84
+2026-07-13 01:04:18,762 - 25421 - INFO - All patches applied successfully.
+2026-07-13 01:04:18,763 - 25421 - INFO - Patching end time: 2026-07-13 01:04:18
+2026-07-13 01:04:18,763 - 25421 - INFO - Patch Elapsed time: 0:04:13.383264
+2026-07-13 01:04:18,857 - 25421 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 01:04:18,857 - 25421 - INFO - Confirmed - services are stopped
+2026-07-13 01:04:29,438 - 25421 - INFO - Discovered TG map: {'i-02703e160c186ce79': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Config/a349c5dfab8e9abe', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6']}
+2026-07-13 01:04:29,689 - 25421 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Config/a349c5dfab8e9abe
+2026-07-13 01:04:30,604 - 25421 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a
+2026-07-13 01:04:30,854 - 25421 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a
+2026-07-13 01:04:31,133 - 25421 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b
+2026-07-13 01:04:31,399 - 25421 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6
+2026-07-13 01:04:31,652 - 25421 - INFO - Stopping EC2 instance: i-02703e160c186ce79 at 2026-07-13 01:04:31
+2026-07-13 01:06:51,037 - 25421 - INFO - Instance i-02703e160c186ce79 stopped successfully.
+2026-07-13 01:06:51,177 - 25421 - INFO - Stopped i-02703e160c186ce79 in 0:02:19.524283
+2026-07-13 01:06:51,177 - 25421 - INFO - Starting EC2 instance: i-02703e160c186ce79
+2026-07-13 01:07:07,613 - 25421 - INFO - Instance i-02703e160c186ce79 started successfully.
+2026-07-13 01:07:07,613 - 25421 - INFO - Waiting 100 seconds for SSM agent to be ready on i-02703e160c186ce79...
+2026-07-13 01:08:47,713 - 25421 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Config/a349c5dfab8e9abe
+2026-07-13 01:08:48,707 - 25421 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a
+2026-07-13 01:08:49,055 - 25421 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a
+2026-07-13 01:08:49,397 - 25421 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b
+2026-07-13 01:08:49,726 - 25421 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6
+2026-07-13 01:19:59,737 - 25421 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: 0757b062-a4dd-4db4-8480-1620517116b9)
+2026-07-13 01:20:30,028 - 25421 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 05:19:59.869434
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.8G | 65% | /data
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.8G | 65% | /data2
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.8G | 65% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bdluat_jqgrid, bdluat_chgdae, bdluat_bisd, bdluat_apick, bdluat_lbl, bdluat_mpcpt, bdluat_event, bdluat_rccl, bdluat_rpt, bdluat_dwa, bdluat_inbq, bdluat_wld, bdluat_repl, bdluat_sch, bdluat_wsq, bdluat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_wsq | /data/batchapp/softeon/bdluat/wsqdaemon
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5908 | bdlconfig | jboss740eap | bdlconfig_jb740 | 8083 | 172.26.10.21:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/bdlconfig/standalone
+12755 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+5090 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+11440 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 05:20:07.276400
+==============================================================================
+
+2026-07-13 01:20:30,029 - 25421 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-07-13 01:20:30,030 - 25421 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-AfterPatching-2026-07-13-01-20-30-030.log
+2026-07-13 01:20:30,085 - 25421 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-Validation-details-2026-07-13-01-20-30-030.html
+2026-07-13 01:20:31,159 - 25421 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-13 01:20:31,160 - 25421 - INFO - HTML validation report email sent for i-02703e160c186ce79
+2026-07-13 01:20:31,160 - 25421 - INFO - [Retry-1] Waiting 600s for i-02703e160c186ce79...
+2026-07-13 01:20:31,160 - 25421 - INFO - RED - Background retry thread started for i-02703e160c186ce79
+2026-07-13 01:20:31,304 - 25421 - INFO - Started i-02703e160c186ce79 in 0:13:40.126856
+2026-07-13 01:20:31,304 - 25421 - INFO - All instances processed.
+2026-07-13 01:20:31,309 - 25421 - INFO - Restart Total time: 0:16:12.320648
+2026-07-13 01:20:31,309 - 25421 - INFO - Auto-confirmed services are restarted
+2026-07-13 01:20:31,310 - 25421 - INFO - Confirmed - services are started
+2026-07-13 01:20:31,432 - 25421 - INFO - The following instances have failed the patch: []
+2026-07-13 01:20:31,433 - 25421 - INFO - No instances have failed the patch.
+2026-07-13 01:20:31,433 - 25421 - INFO - Total Patch Process time: 0:20:26.753261
+2026-07-13 01:21:31,950 - 25421 - INFO - Log file ./logs/patching_2026-07-13_BDL-UAT.log uploaded to s3://q3-2026-aws-security-patching/BDL-UAT_Patch/2026-07-13/patching_2026-07-13_BDL-UAT.log
+2026-07-13 01:30:32,615 - 25421 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: 2d46bbc8-6944-4ec5-a07e-925899922215)
+2026-07-13 01:31:02,905 - 25421 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 05:30:32.786274
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.7G | 65% | /data
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.7G | 65% | /data2
+/dev/nvme1n1p2 | 239.9G | 157.1G | 82.7G | 65% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bdluat_jqgrid, bdluat_chgdae, bdluat_bisd, bdluat_apick, bdluat_lbl, bdluat_mpcpt, bdluat_event, bdluat_rccl, bdluat_rpt, bdluat_dwa, bdluat_inbq, bdluat_wld, bdluat_repl, bdluat_sch, bdluat_wsq, bdluat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_wsq | /data/batchapp/softeon/bdluat/wsqdaemon
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5908 | bdlconfig | jboss740eap | bdlconfig_jb740 | 8083 | 172.26.10.21:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/bdlconfig/standalone
+12755 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+5090 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+11440 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 05:30:33.619320
+==============================================================================
+
+2026-07-13 01:31:02,905 - 25421 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-07-13 01:31:02,907 - 25421 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-AfterPatching-Retry1-2026-07-13-01-31-02-906.log
+2026-07-13 01:31:02,976 - 25421 - INFO - [Retry-1] RED detected for BDL UAT Application and Batch Server (172.26.10.21), retrying... (Total waited: 600s)
+2026-07-13 01:31:02,977 - 25421 - INFO - [Retry-2] Waiting 600s for i-02703e160c186ce79...
+2026-07-13 01:41:04,498 - 25421 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: bdcc83d3-c3fc-406b-b0ed-1dce5c7f3b41)
+2026-07-13 01:41:34,795 - 25421 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 05:41:04.439739
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 157.2G | 82.7G | 65% | /data
+/dev/nvme1n1p2 | 239.9G | 157.2G | 82.7G | 65% | /data2
+/dev/nvme1n1p2 | 239.9G | 157.2G | 82.7G | 65% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bdluat_jqgrid, bdluat_chgdae, bdluat_bisd, bdluat_apick, bdluat_lbl, bdluat_mpcpt, bdluat_event, bdluat_rccl, bdluat_rpt, bdluat_dwa, bdluat_inbq, bdluat_wld, bdluat_repl, bdluat_sch, bdluat_wsq, bdluat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_wsq | /data/batchapp/softeon/bdluat/wsqdaemon
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5908 | bdlconfig | jboss740eap | bdlconfig_jb740 | 8083 | 172.26.10.21:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/bdlconfig/standalone
+12755 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+5090 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+11440 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 05:41:05.230092
+==============================================================================
+
+2026-07-13 01:41:34,795 - 25421 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-07-13 01:41:34,797 - 25421 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-AfterPatching-Retry2-2026-07-13-01-41-34-796.log
+2026-07-13 01:41:34,853 - 25421 - INFO - [Retry-2] RED detected for BDL UAT Application and Batch Server (172.26.10.21), retrying... (Total waited: 1200s)
+2026-07-13 01:41:34,853 - 25421 - INFO - [Retry-3] Waiting 600s for i-02703e160c186ce79...
+2026-07-13 01:51:36,426 - 25421 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: 28599049-4311-4392-9d94-efe05a74e7f0)
+2026-07-13 01:52:06,710 - 25421 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 05:51:36.375467
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 157.3G | 82.6G | 65% | /data
+/dev/nvme1n1p2 | 239.9G | 157.3G | 82.6G | 65% | /data2
+/dev/nvme1n1p2 | 239.9G | 157.3G | 82.6G | 65% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bdluat_jqgrid, bdluat_chgdae, bdluat_bisd, bdluat_apick, bdluat_lbl, bdluat_mpcpt, bdluat_event, bdluat_rccl, bdluat_rpt, bdluat_dwa, bdluat_inbq, bdluat_wld, bdluat_repl, bdluat_sch, bdluat_wsq, bdluat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_wsq | /data/batchapp/softeon/bdluat/wsqdaemon
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5908 | bdlconfig | jboss740eap | bdlconfig_jb740 | 8083 | 172.26.10.21:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/bdlconfig/standalone
+12755 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+5090 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+11440 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 05:51:37.140243
+==============================================================================
+
+2026-07-13 01:52:06,710 - 25421 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-07-13 01:52:06,712 - 25421 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-13/BDL-UAT/172.26.10.21/172.26.10.21-AfterPatching-Retry3-2026-07-13-01-52-06-712.log
+2026-07-13 01:52:07,767 - 25421 - INFO - Health monitor crontab enabled on all instances
+2026-07-13 01:52:07,768 - 25421 - WARNING - [Retry] Timeout - auto cron enabled for i-02703e160c186ce79

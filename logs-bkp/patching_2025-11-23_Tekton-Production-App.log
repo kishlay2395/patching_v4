@@ -1,0 +1,480 @@
+2025-11-23 02:30:03,427 - 23527 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-23 02:38:23,084 - 23527 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-11-23 02:38:23,207 - 23527 - INFO - Log file ./logs/backup_2025-11-23.log uploaded to s3://q3-2025-aws-security-patching/Tekton-Production-App_Patch_Backup/2025-11-23/backup_2025-11-23.log
+2025-11-23 06:30:02,905 - 3976 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-11-23 06:30:02,906 - 3976 - INFO - Script Start Time: 2025-11-23 06:30:02
+2025-11-23 06:30:03,148 - 3976 - INFO - Instance(s) selected for Patching: {'i-0ddfff726a5813c2f': '172.30.132.22', 'i-0354165490f950351': '172.30.132.102'}
+2025-11-23 06:30:03,266 - 3976 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-23 06:30:03,267 - 3976 - INFO - Now patching instances at: 2025-11-23 06:30:03
+2025-11-23 06:30:03,372 - 3976 - INFO - Sending patch command to instance i-0ddfff726a5813c2f
+2025-11-23 06:30:03,606 - 3976 - INFO - Command sent successfully to instance i-0ddfff726a5813c2f. Command ID: b375c67d-f550-4ffe-8b98-c43962ec3e7c
+2025-11-23 06:30:03,734 - 3976 - INFO - Sending patch command to instance i-0354165490f950351
+2025-11-23 06:30:03,859 - 3976 - INFO - Command sent successfully to instance i-0354165490f950351. Command ID: 8e5ff595-fbcf-494b-97e2-fadec33d9f30
+2025-11-23 06:35:35,753 - 3976 - INFO - All patches applied successfully.
+2025-11-23 06:35:35,753 - 3976 - INFO - Patching end time: 2025-11-23 06:35:35
+2025-11-23 06:35:35,753 - 3976 - INFO - Patch Elapsed time: 0:05:32.486603
+2025-11-23 06:35:35,835 - 3976 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-23 06:35:35,835 - 3976 - INFO - Confirmed - services are stopped
+2025-11-23 06:35:43,756 - 3976 - INFO - Discovered TG map: {'i-0ddfff726a5813c2f': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11'], 'i-0354165490f950351': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11']}
+2025-11-23 06:35:44,036 - 3976 - INFO - Sent app_validation.sh to i-0ddfff726a5813c2f (command_id: 348dcfe9-c366-4578-81b9-6e5e764b96cd)
+2025-11-23 06:36:14,129 - 3976 - INFO - app_validation.sh output for i-0ddfff726a5813c2f:
+
+==============================================================================
+Server Availability Check Started at Sun Nov 23 11:35:44 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.132.22
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-132-22.us-east-2.compute.internal
+Uptime: up 13 weeks, 1 day, 1 hour, 31 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.132.22:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.132.22
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 11331 MB
+Free Physical Memory  = 4280 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 3643 MB
+Free Swap Memory  = 6596 MB
+-------------------------------------
+Load Average: 0.43 0.81 0.42 3/642 4009876
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.7G   15G  29% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             240G   55G  186G  23% /data
+fs-c612e0bd.efs.us-east-2.amazonaws.com:/  8.0E  102G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  664K  3.1G   1% /run
+tmpfs                                      7.7G   31M  7.6G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.132.22 started on Sun Nov 23 11:35:44 UTC 2025
+
+Server IP: 172.30.132.22 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.132.22
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.132.22
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.132.22
+-------------------------------------
+
+Total number of Java process running on this host 172.30.132.22 is 3
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.132.22
+Total number of App java process available is 3
+-------------------------------------
+App Process details:
+Process ID: 2515386, Process Name: 323:59
+Process ID: 2515531, Process Name: 146:49
+Process ID: 2515707, Process Name: 122:28
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.132.22
+Port 8080:	wmsprod_jb7	Running
+Port 8081:	wmsrfprod_j	Running
+Port 8082:	wmsrfprod_j	Not Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Nov 23 11:35:45 UTC 2025
+==============================================================================
+
+
+2025-11-23 06:36:14,129 - 3976 - ERROR - app_validation.sh errors for i-0ddfff726a5813c2f:
+
+2025-11-23 06:36:14,131 - 3976 - INFO - Before patching validation saved to: output/validation-2025-11-23/172.30.132.22-BeforePatching-2025-11-23-06-36-14-130.log
+2025-11-23 06:36:14,131 - 3976 - INFO - Deregistering i-0ddfff726a5813c2f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093
+2025-11-23 06:36:14,258 - 3976 - INFO - Deregistering i-0ddfff726a5813c2f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f
+2025-11-23 06:36:14,316 - 3976 - INFO - Deregistering i-0ddfff726a5813c2f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11
+2025-11-23 06:36:14,372 - 3976 - INFO - Stopping EC2 instance: i-0ddfff726a5813c2f at 2025-11-23 06:36:14
+2025-11-23 06:38:16,007 - 3976 - INFO - Instance i-0ddfff726a5813c2f stopped successfully.
+2025-11-23 06:38:16,229 - 3976 - INFO - Stopped i-0ddfff726a5813c2f in 0:02:01.857284
+2025-11-23 06:38:16,229 - 3976 - INFO - Starting EC2 instance: i-0ddfff726a5813c2f
+2025-11-23 06:38:32,256 - 3976 - INFO - Instance i-0ddfff726a5813c2f started successfully.
+2025-11-23 06:38:32,256 - 3976 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0ddfff726a5813c2f...
+2025-11-23 06:39:02,286 - 3976 - INFO - Registering i-0ddfff726a5813c2f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093
+2025-11-23 06:39:02,509 - 3976 - INFO - Registering i-0ddfff726a5813c2f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f
+2025-11-23 06:39:02,653 - 3976 - INFO - Registering i-0ddfff726a5813c2f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11
+2025-11-23 06:42:03,733 - 3976 - INFO - Sent app_validation.sh to i-0ddfff726a5813c2f (command_id: 2ecc98ae-4e7c-435e-a672-3f8b282e78eb)
+2025-11-23 06:42:33,871 - 3976 - INFO - app_validation.sh output for i-0ddfff726a5813c2f:
+
+==============================================================================
+Server Availability Check Started at Sun Nov 23 11:42:04 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.132.22
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-132-22.us-east-2.compute.internal
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.132.22:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.132.22
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 8903 MB
+Free Physical Memory  = 6708 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.11 1.88 0.80 2/527 4375
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.5G   15G  28% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             240G   55G  186G  23% /data
+fs-c612e0bd.efs.us-east-2.amazonaws.com:/  8.0E  102G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  660K  3.1G   1% /run
+tmpfs                                      7.7G   31M  7.6G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.132.22 started on Sun Nov 23 11:42:04 UTC 2025
+
+Server IP: 172.30.132.22 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.132.22
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.132.22
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.132.22
+-------------------------------------
+
+Total number of Java process running on this host 172.30.132.22 is 3
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.132.22
+Total number of App java process available is 3
+-------------------------------------
+App Process details:
+Process ID: 3092, Process Name: 0:50
+Process ID: 3097, Process Name: 0:52
+Process ID: 3283, Process Name: 0:47
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.132.22
+Port 8080:	wmsprod_jb730	Running
+Port 8081:	wmsrfprod_jb73	Running
+Port 8082:	wmsrfprod_jb73	Not Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Nov 23 11:42:04 UTC 2025
+==============================================================================
+
+
+2025-11-23 06:42:33,871 - 3976 - ERROR - app_validation.sh errors for i-0ddfff726a5813c2f:
+
+2025-11-23 06:42:33,873 - 3976 - INFO - After patching validation saved to: output/validation-2025-11-23/172.30.132.22-AfterPatching-2025-11-23-06-42-33-873.log
+2025-11-23 06:42:33,909 - 3976 - INFO - Validation comparison report generated: output/validation-2025-11-23/172.30.132.22-Validation-details-2025-11-23-06-42-33-873.log
+2025-11-23 06:42:33,997 - 3976 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-23 06:42:33,997 - 3976 - INFO - HTML validation report email sent for i-0ddfff726a5813c2f
+2025-11-23 06:42:34,279 - 3976 - INFO - Started i-0ddfff726a5813c2f in 0:04:18.049727
+2025-11-23 06:42:34,280 - 3976 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-11-23 06:44:34,556 - 3976 - INFO - Sent app_validation.sh to i-0354165490f950351 (command_id: e122b564-27a7-4351-acac-6854d6ac2edd)
+2025-11-23 06:45:04,620 - 3976 - INFO - app_validation.sh output for i-0354165490f950351:
+
+==============================================================================
+Server Availability Check Started at Sun Nov 23 11:44:34 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.132.102
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-132-102.us-east-2.compute.internal
+Uptime: up 13 weeks, 1 day, 1 hour, 32 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.132.102:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.132.102
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 11463 MB
+Free Physical Memory  = 4148 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 3769 MB
+Free Swap Memory  = 6470 MB
+-------------------------------------
+Load Average: 0.00 0.16 0.26 3/688 4171176
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.7G   15G  29% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             240G   53G  188G  22% /data
+fs-c612e0bd.efs.us-east-2.amazonaws.com:/  8.0E  102G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  712K  3.1G   1% /run
+tmpfs                                      7.7G   31M  7.6G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.132.102 started on Sun Nov 23 11:44:34 UTC 2025
+
+Server IP: 172.30.132.102 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.132.102
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.132.102
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.132.102
+-------------------------------------
+
+Total number of Java process running on this host 172.30.132.102 is 3
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.132.102
+Total number of App java process available is 3
+-------------------------------------
+App Process details:
+Process ID: 2664000, Process Name: 127:18
+Process ID: 2664143, Process Name: 121:20
+Process ID: 2664291, Process Name: 255:32
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.132.102
+Port 8080:	wmsprod_jb7	Running
+Port 8081:	wmsrfprod_j	Running
+Port 8082:	wmsrfprod_j	Not Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Nov 23 11:44:35 UTC 2025
+==============================================================================
+
+
+2025-11-23 06:45:04,620 - 3976 - ERROR - app_validation.sh errors for i-0354165490f950351:
+
+2025-11-23 06:45:04,622 - 3976 - INFO - Before patching validation saved to: output/validation-2025-11-23/172.30.132.102-BeforePatching-2025-11-23-06-45-04-621.log
+2025-11-23 06:45:04,623 - 3976 - INFO - Deregistering i-0354165490f950351 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093
+2025-11-23 06:45:04,756 - 3976 - INFO - Deregistering i-0354165490f950351 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f
+2025-11-23 06:45:04,811 - 3976 - INFO - Deregistering i-0354165490f950351 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11
+2025-11-23 06:45:04,870 - 3976 - INFO - Stopping EC2 instance: i-0354165490f950351 at 2025-11-23 06:45:04
+2025-11-23 06:47:06,623 - 3976 - INFO - Instance i-0354165490f950351 stopped successfully.
+2025-11-23 06:47:06,919 - 3976 - INFO - Stopped i-0354165490f950351 in 0:02:02.049385
+2025-11-23 06:47:06,920 - 3976 - INFO - Starting EC2 instance: i-0354165490f950351
+2025-11-23 06:47:22,905 - 3976 - INFO - Instance i-0354165490f950351 started successfully.
+2025-11-23 06:47:22,906 - 3976 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0354165490f950351...
+2025-11-23 06:47:52,927 - 3976 - INFO - Registering i-0354165490f950351 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-Desktop/91f385a5ef96a093
+2025-11-23 06:47:53,138 - 3976 - INFO - Registering i-0354165490f950351 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-WMS-RF/279538924e45e23f
+2025-11-23 06:47:53,282 - 3976 - INFO - Registering i-0354165490f950351 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Tekton-Prod-Webservices/db68136f23b09d11
+2025-11-23 06:50:24,160 - 3976 - INFO - Sent app_validation.sh to i-0354165490f950351 (command_id: 06baf0e7-0bee-4317-8dce-2c4e574b90d7)
+2025-11-23 06:50:54,268 - 3976 - INFO - app_validation.sh output for i-0354165490f950351:
+
+==============================================================================
+Server Availability Check Started at Sun Nov 23 11:50:24 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.132.102
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-132-102.us-east-2.compute.internal
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.132.102:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.132.102
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 7633 MB
+Free Physical Memory  = 7978 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.75 1.68 0.66 7/708 4418
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.5G   15G  28% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             240G   53G  188G  22% /data
+fs-c612e0bd.efs.us-east-2.amazonaws.com:/  8.0E  102G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  660K  3.1G   1% /run
+tmpfs                                      7.7G   31M  7.6G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.132.102 started on Sun Nov 23 11:50:24 UTC 2025
+
+Server IP: 172.30.132.102 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.132.102
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.132.102
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.132.102
+-------------------------------------
+
+Total number of Java process running on this host 172.30.132.102 is 3
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.132.102
+Total number of App java process available is 3
+-------------------------------------
+App Process details:
+Process ID: 2972, Process Name: 0:45
+Process ID: 3267, Process Name: 0:50
+Process ID: 3271, Process Name: 0:49
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.132.102
+Port 8080:	wmsprod_jb730	Running
+Port 8081:	wmsrfprod_jb73	Running
+Port 8082:	wmsrfprod_jb73	Not Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Nov 23 11:50:26 UTC 2025
+==============================================================================
+
+
+2025-11-23 06:50:54,268 - 3976 - ERROR - app_validation.sh errors for i-0354165490f950351:
+
+2025-11-23 06:50:54,270 - 3976 - INFO - After patching validation saved to: output/validation-2025-11-23/172.30.132.102-AfterPatching-2025-11-23-06-50-54-269.log
+2025-11-23 06:50:54,303 - 3976 - INFO - Validation comparison report generated: output/validation-2025-11-23/172.30.132.102-Validation-details-2025-11-23-06-50-54-269.log
+2025-11-23 06:50:54,384 - 3976 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-23 06:50:54,384 - 3976 - INFO - HTML validation report email sent for i-0354165490f950351
+2025-11-23 06:50:54,626 - 3976 - INFO - Started i-0354165490f950351 in 0:03:47.706153
+2025-11-23 06:50:54,626 - 3976 - INFO - All instances processed.
+2025-11-23 06:50:54,630 - 3976 - INFO - Restart Total time: 0:15:18.653196
+2025-11-23 06:50:54,630 - 3976 - INFO - Auto-confirmed services are restarted
+2025-11-23 06:50:54,630 - 3976 - INFO - Confirmed - services are started
+2025-11-23 06:50:54,732 - 3976 - INFO - The following instances have failed the patch: []
+2025-11-23 06:50:54,732 - 3976 - INFO - No instances have failed the patch.
+2025-11-23 06:50:54,732 - 3976 - INFO - Total Patch Process time: 0:20:51.825896
+2025-11-23 06:50:55,008 - 3976 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-23 06:51:55,157 - 3976 - INFO - Log file ./logs/patching_2025-11-23_Tekton-Production-App.log uploaded to s3://q4-2025-aws-security-patching/Tekton-Production-App_Patch/2025-11-23/patching_2025-11-23_Tekton-Production-App.log

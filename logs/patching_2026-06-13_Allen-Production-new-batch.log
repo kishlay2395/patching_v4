@@ -1,0 +1,272 @@
+2026-06-13 01:35:02,977 - 2594300 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-13 02:41:32,069 - 2594300 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-13 02:41:32,250 - 2594300 - INFO - Log file ./logs/backup_2026-06-13.log uploaded to s3://q3-2025-aws-security-patching/Allen-Production-new-batch_Patch_Backup/2026-06-13/backup_2026-06-13.log
+2026-06-13 05:35:02,940 - 2602932 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-13 05:35:02,940 - 2602932 - INFO - Script Start Time: 2026-06-13 05:35:02
+2026-06-13 05:35:03,170 - 2602932 - INFO - Instance(s) selected for Patching: {'i-0729ab018b722d3c8': '172.18.40.106'}
+2026-06-13 05:35:03,249 - 2602932 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:35:03,250 - 2602932 - INFO - Now patching instances at: 2026-06-13 05:35:03
+2026-06-13 05:35:03,484 - 2602932 - INFO - Sent app_validation.py to i-0729ab018b722d3c8 (command_id: dd1cb8c2-4c66-4cb8-a947-dd51b3ba38e3)
+2026-06-13 05:35:33,613 - 2602932 - INFO - app_validation.py output for i-0729ab018b722d3c8:
+
+==============================================================================
+Server Availability Check Started | 2026-06-13 09:35:03.891486
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.106
+Hostname | ip-172-18-40-106
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 161.9G | 78.0G | 67% | /data
+fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | 0B | 662.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.106:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 294
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.106 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 26
+Non-Standalone Java Processes | adprod_cgclbt, adprod_invbt, adprod_billsch, adprod_dwa, adprod_event, adprod_ftp, adprod_ict, adprod_lbl, adprod_repl, adprod_rccl, adprod_18_rccl, adprod_19_rccl, adprod_3_rccl, adprod_rpt, adprod_jqgrid, adprod_sch, adprod_1_rpt, adprod_inbq, adprod_1_vomob, adprod_2_vomob, adprod_wld, adprod_wsq, adprod_mqconsum, adprod_2rpt, adprod_2voadm, adprod_3rpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 26
+Java-Name | Java-Path
+adprod_cgclbt | /data/batchapp/softeon/adprod/billingchargescancelbatch
+adprod_invbt | /data/batchapp/softeon/adprod/billinginvoicebatchdaemon_bldg1
+adprod_billsch | /data/batchapp/softeon/adprod/billingschedulerdaemon
+adprod_dwa | /data/batchapp/softeon/adprod/downloaddaemon
+adprod_event | /data/batchapp/softeon/adprod/eventdaemon
+adprod_ftp | /data/batchapp/softeon/adprod/ftpdaemon
+adprod_ict | /data/batchapp/softeon/adprod/inventorycomputationbytaskdaemon
+adprod_lbl | /data/batchapp/softeon/adprod/labeldaemon
+adprod_repl | /data/batchapp/softeon/adprod/replenishmentdaemon
+adprod_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon
+adprod_18_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_18
+adprod_19_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_19
+adprod_3_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_3
+adprod_rpt | /data/batchapp/softeon/adprod/reportdaemon
+adprod_jqgrid | /data/batchapp/softeon/adprod/reportjqgridexportdaemon
+adprod_sch | /data/batchapp/softeon/adprod/schedulardaemon
+adprod_1_rpt | /data/batchapp/softeon/adprod/shippingdocsreportdeamon
+adprod_inbq | /data/batchapp/softeon/adprod/uploaddeamon
+adprod_1_vomob | /data/batchapp/softeon/adprod/voicemobiledaemon1
+adprod_2_vomob | /data/batchapp/softeon/adprod/voicemobiledaemon2
+adprod_wld | /data/batchapp/softeon/adprod/wavelaunchdaemon
+adprod_wsq | /data/batchapp/softeon/adprod/wsqdeamon
+adprod_mqconsum | /data/batchapp/softeon/adprod/lucamqconsumerdaemon
+adprod_2rpt | /data/batchapp/softeon/adprod/shippingdocsreportdeamon_closetruck
+adprod_2voadm | /data/batchapp/softeon/adprod/voiceadminserver2
+adprod_3rpt | /data/batchapp/softeon/adprod/productivityreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-13 09:35:04.823305
+==============================================================================
+
+2026-06-13 05:35:33,613 - 2602932 - ERROR - app_validation.py errors for i-0729ab018b722d3c8:
+
+2026-06-13 05:35:33,615 - 2602932 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-13/Allen-Production-new-batch/172.18.40.106/172.18.40.106-BeforePatching-2026-06-13-05-35-33-614.log
+2026-06-13 05:35:33,701 - 2602932 - INFO - Sending patch command to instance i-0729ab018b722d3c8
+2026-06-13 05:35:33,818 - 2602932 - INFO - Command sent successfully to instance i-0729ab018b722d3c8. Command ID: ed5ba94f-19fb-4ea0-b2b0-a998035e16ac
+2026-06-13 05:48:06,616 - 2602932 - INFO - All patches applied successfully.
+2026-06-13 05:48:06,617 - 2602932 - INFO - Patching end time: 2026-06-13 05:48:06
+2026-06-13 05:48:06,617 - 2602932 - INFO - Patch Elapsed time: 0:13:03.366838
+2026-06-13 05:48:06,686 - 2602932 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:48:06,686 - 2602932 - INFO - Confirmed - services are stopped
+2026-06-13 05:48:26,712 - 2602932 - INFO - Discovered TG map: {'i-0729ab018b722d3c8': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution242-Prod-Voice/e16e8ddfd3daa83f']}
+2026-06-13 05:48:26,966 - 2602932 - INFO - Deregistering i-0729ab018b722d3c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution242-Prod-Voice/e16e8ddfd3daa83f
+2026-06-13 05:48:27,044 - 2602932 - INFO - Stopping EC2 instance: i-0729ab018b722d3c8 at 2026-06-13 05:48:27
+2026-06-13 05:50:58,633 - 2602932 - INFO - Instance i-0729ab018b722d3c8 stopped successfully.
+2026-06-13 05:50:58,766 - 2602932 - INFO - Stopped i-0729ab018b722d3c8 in 0:02:31.722504
+2026-06-13 05:50:58,767 - 2602932 - INFO - Starting EC2 instance: i-0729ab018b722d3c8
+2026-06-13 05:51:14,671 - 2602932 - INFO - Instance i-0729ab018b722d3c8 started successfully.
+2026-06-13 05:51:14,672 - 2602932 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0729ab018b722d3c8...
+2026-06-13 05:52:54,681 - 2602932 - INFO - Registering i-0729ab018b722d3c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution242-Prod-Voice/e16e8ddfd3daa83f
+2026-06-13 05:53:55,277 - 2602932 - INFO - Sent app_validation.py to i-0729ab018b722d3c8 (command_id: 51b4cde0-48cb-4530-b01c-e2a8df1f2c78)
+2026-06-13 05:54:25,357 - 2602932 - INFO - app_validation.py output for i-0729ab018b722d3c8:
+
+==============================================================================
+Server Availability Check Started | 2026-06-13 09:53:55.904393
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.106
+Hostname | ip-172-18-40-106
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 162.5G | 77.4G | 67% | /data
+fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | 0B | 662.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.106:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 294
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.106 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 74
+Batch/Daemon Java Processes | 26
+Non-Standalone Java Processes | adprod_ict, adprod_lbl, adprod_repl, adprod_rccl, adprod_18_rccl, adprod_19_rccl, adprod_3_rccl, adprod_rpt, adprod_jqgrid, adprod_sch, adprod_1_rpt, adprod_inbq, adprod_1_vomob, adprod_2_vomob, adprod_wld, adprod_wsq, adprod_mqconsum, adprod_2rpt, adprod_2voadm, adprod_3rpt, adprod_dwa, adprod_event, adprod_billsch, adprod_cgclbt, adprod_ftp, adprod_invbt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 26
+Java-Name | Java-Path
+adprod_ict | /data/batchapp/softeon/adprod/inventorycomputationbytaskdaemon
+adprod_lbl | /data/batchapp/softeon/adprod/labeldaemon
+adprod_repl | /data/batchapp/softeon/adprod/replenishmentdaemon
+adprod_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon
+adprod_18_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_18
+adprod_19_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_19
+adprod_3_rccl | /data/batchapp/softeon/adprod/replenishmentpickloccanceldaemon_3
+adprod_rpt | /data/batchapp/softeon/adprod/reportdaemon
+adprod_jqgrid | /data/batchapp/softeon/adprod/reportjqgridexportdaemon
+adprod_sch | /data/batchapp/softeon/adprod/schedulardaemon
+adprod_1_rpt | /data/batchapp/softeon/adprod/shippingdocsreportdeamon
+adprod_inbq | /data/batchapp/softeon/adprod/uploaddeamon
+adprod_1_vomob | /data/batchapp/softeon/adprod/voicemobiledaemon1
+adprod_2_vomob | /data/batchapp/softeon/adprod/voicemobiledaemon2
+adprod_wld | /data/batchapp/softeon/adprod/wavelaunchdaemon
+adprod_wsq | /data/batchapp/softeon/adprod/wsqdeamon
+adprod_mqconsum | /data/batchapp/softeon/adprod/lucamqconsumerdaemon
+adprod_2rpt | /data/batchapp/softeon/adprod/shippingdocsreportdeamon_closetruck
+adprod_2voadm | /data/batchapp/softeon/adprod/voiceadminserver2
+adprod_3rpt | /data/batchapp/softeon/adprod/productivityreportdaemon
+adprod_dwa | /data/batchapp/softeon/adprod/downloaddaemon
+adprod_event | /data/batchapp/softeon/adprod/eventdaemon
+adprod_billsch | /data/batchapp/softeon/adprod/billingschedulerdaemon
+adprod_cgclbt | /data/batchapp/softeon/adprod/billingchargescancelbatch
+adprod_ftp | /data/batchapp/softeon/adprod/ftpdaemon
+adprod_invbt | /data/batchapp/softeon/adprod/billinginvoicebatchdaemon_bldg1
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-13 09:54:02.198694
+==============================================================================
+
+2026-06-13 05:54:25,357 - 2602932 - ERROR - app_validation.py errors for i-0729ab018b722d3c8:
+
+2026-06-13 05:54:25,359 - 2602932 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-13/Allen-Production-new-batch/172.18.40.106/172.18.40.106-AfterPatching-2026-06-13-05-54-25-358.log
+2026-06-13 05:54:25,411 - 2602932 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-13/Allen-Production-new-batch/172.18.40.106/172.18.40.106-Validation-details-2026-06-13-05-54-25-358.html
+2026-06-13 05:54:25,589 - 2602932 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:54:25,589 - 2602932 - INFO - HTML validation report email sent for i-0729ab018b722d3c8
+2026-06-13 05:54:25,743 - 2602932 - INFO - Started i-0729ab018b722d3c8 in 0:03:26.975829
+2026-06-13 05:54:25,743 - 2602932 - INFO - All instances processed.
+2026-06-13 05:54:25,750 - 2602932 - INFO - Restart Total time: 0:06:18.948574
+2026-06-13 05:54:25,750 - 2602932 - INFO - Auto-confirmed services are restarted
+2026-06-13 05:54:25,750 - 2602932 - INFO - Confirmed - services are started
+2026-06-13 05:54:25,896 - 2602932 - INFO - The following instances have failed the patch: []
+2026-06-13 05:54:25,896 - 2602932 - INFO - No instances have failed the patch.
+2026-06-13 05:54:25,896 - 2602932 - INFO - Total Patch Process time: 0:19:22.956071
+2026-06-13 05:55:26,295 - 2602932 - INFO - Log file ./logs/patching_2026-06-13_Allen-Production-new-batch.log uploaded to s3://q2-2026-aws-security-patching/Allen-Production-new-batch_Patch/2026-06-13/patching_2026-06-13_Allen-Production-new-batch.log

@@ -1,0 +1,841 @@
+2026-07-10 18:30:04,818 - 4096415 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 18:56:30,519 - 4096415 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 18:56:30,707 - 4096415 - INFO - Log file ./logs/backup_2026-07-10.log uploaded to s3://q3-2025-aws-security-patching/q3-UPS-Europe-UAT_Patch_Backup/2026-07-10/backup_2026-07-10.log
+2026-07-10 22:30:04,098 - 4105385 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-10 22:30:04,098 - 4105385 - INFO - Script Start Time: 2026-07-10 22:30:04
+2026-07-10 22:30:04,413 - 4105385 - INFO - Instance(s) selected for Patching: {'i-0d7a0d13fb486b16c': '172.22.10.7', 'i-00ec4313927ed1fd3': '172.22.10.58', 'i-0714ff8b1eb72c978': '172.22.10.51'}
+2026-07-10 22:30:04,478 - 4105385 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 22:30:04,479 - 4105385 - INFO - Now patching instances at: 2026-07-10 22:30:04
+2026-07-10 22:30:10,042 - 4105385 - INFO - i-00ec4313927ed1fd3: Cron was active = True
+2026-07-10 22:30:15,572 - 4105385 - INFO - i-0714ff8b1eb72c978: Cron was active = False
+2026-07-10 22:30:21,184 - 4105385 - INFO - i-0d7a0d13fb486b16c: Cron was active = False
+2026-07-10 22:30:21,610 - 4105385 - INFO - Health monitor crontab disabled on all instances
+2026-07-10 22:30:21,612 - 4105385 - INFO - Disabled cron for: ['i-00ec4313927ed1fd3']
+2026-07-10 22:30:22,185 - 4105385 - INFO - Sent app_validation.py to i-00ec4313927ed1fd3 (command_id: 068bb6bd-4848-457d-a347-9390b5459aea)
+2026-07-10 22:30:52,378 - 4105385 - INFO - app_validation.py output for i-00ec4313927ed1fd3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 02:30:22.406452
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.58
+Hostname | ip-172-22-10-58.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 143.4G | 118.0G | 52% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.58:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 459
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.58 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | upseuevent, upseu_ftp, upseulabel, upseu_1_pksp1, upseureplcancel, upseureplreq, upseurptjqgrid, upseushipdocrpt, upseutasklevinv, upseu_3_abchdis, upseu_abdhr, upseudownloadv8, upseu_1_abchdis, upseu_2_abchdis, upseuschedulerv8, upseuschedulerdst, upseuuploadv8, upseuwavelaunchv8, upseu_5_abchdis, upseu_6_abchdis, upseu_1_rccl, upseu_1_2pksp, upseu_picksim, upseu_psim
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+upseuevent | /data/batchapp/softeonuat/upseu/eventdaemon
+upseu_ftp | /data/batchapp/softeonuat/upseu/ftpdaemon
+upseulabel | /data/batchapp/softeonuat/upseu/labeldaemon
+upseu_1_pksp1 | /data/batchapp/softeonuat/upseu/printpackslipdaemon
+upseureplcancel | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon
+upseureplreq | /data/batchapp/softeonuat/upseu/replenishmentrequestdaemon
+upseurptjqgrid | /data/batchapp/softeonuat/upseu/reportjqgridexportdaemon
+upseushipdocrpt | /data/batchapp/softeonuat/upseu/shippingdocsreportdaemon
+upseutasklevinv | /data/batchapp/softeonuat/upseu/tasklevelinventoryallocation
+upseu_3_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent3
+upseu_abdhr | /data/batchapp/softeonuat/upseu/autopicktoolagentasginment
+upseudownloadv8 | /data/batchapp/softeonuat/upseu/downloaddaemonv8
+upseu_1_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent1
+upseu_2_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent2
+upseuschedulerv8 | /data/batchapp/softeonuat/upseu/schedulerdaemonv8
+upseuschedulerdst | /data/batchapp/softeonuat/upseu/schedulerdaemon_dst
+upseuuploadv8 | /data/batchapp/softeonuat/upseu/uploaddaemonv8
+upseuwavelaunchv8 | /data/batchapp/softeonuat/upseu/wavelaunchdaemonv8
+upseu_5_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent5
+upseu_6_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent6
+upseu_1_rccl | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon_lfc
+upseu_1_2pksp | /data/batchapp/softeonuat/upseu/printpackslipdaemon2
+upseu_picksim | /data/batchapp/softeonuat/upseu/onlinepicksimulation
+upseu_psim | /data/batchapp/softeonuat/upseu/packsimulation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3077662 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.58:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3077480 | upseuv8uat | jboss730eap | euv8uat_jb730ep | 8083 | 172.22.10.58:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 02:30:23.683569
+==============================================================================
+
+2026-07-10 22:30:52,378 - 4105385 - ERROR - app_validation.py errors for i-00ec4313927ed1fd3:
+
+2026-07-10 22:30:52,379 - 4105385 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-BeforePatching-2026-07-10-22-30-52-379.log
+2026-07-10 22:30:53,046 - 4105385 - INFO - Sent app_validation.py to i-0714ff8b1eb72c978 (command_id: 298a8a4e-e277-4366-9d9b-82d9f03aed26)
+2026-07-10 22:31:23,207 - 4105385 - INFO - app_validation.py output for i-0714ff8b1eb72c978:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 02:30:53.241791
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.51
+Hostname | ip-172-22-10-51.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 130.2G | 131.2G | 47% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.51:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 456
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.51 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2726461 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.51:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3267 | upseuswpuat | jboss730eap | upseuswpuat_j73 | 8085 | 172.22.10.51:8085 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuswpuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 02:30:53.786663
+==============================================================================
+
+2026-07-10 22:31:23,207 - 4105385 - ERROR - app_validation.py errors for i-0714ff8b1eb72c978:
+
+2026-07-10 22:31:23,209 - 4105385 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.51/172.22.10.51-BeforePatching-2026-07-10-22-31-23-208.log
+2026-07-10 22:31:23,783 - 4105385 - INFO - Sent app_validation.py to i-0d7a0d13fb486b16c (command_id: 9e6253c8-01f4-4607-82ef-04d91c84f591)
+2026-07-10 22:31:53,977 - 4105385 - INFO - app_validation.py output for i-0d7a0d13fb486b16c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 02:31:24.025728
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.7
+Hostname | ip-172-22-10-7.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 100.1G | 161.3G | 36% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 455
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | upseu_rpt, upseu_dwavs, upseu_lblvs, upseu_wldvs, upseu_astrvs, upseu_inbqvs, upseu_schvs, upseu_rptsdvs, upseu_bre, upseu_ccd, upseu_3inbqvs, upseu_queueallo, upseu_2inbqvs, upseu_vsqueueal, upseu_autopck, upseu_vs2inbqvs, upseu_vs3inbqvs, upseu_cbcd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+upseu_rpt | /data/batchapp/softeonuat/upseu/reportdaemon
+upseu_dwavs | /data/batchapp/softeonuat/upseu/downloaddaemonvs
+upseu_lblvs | /data/batchapp/softeonuat/upseu/labeldaemonvs
+upseu_wldvs | /data/batchapp/softeonuat/upseu/wavelaunchdaemonvs
+upseu_astrvs | /data/batchapp/softeonuat/upseu/uploaddaemonastorevs
+upseu_inbqvs | /data/batchapp/softeonuat/upseu/uploaddaemonvs
+upseu_schvs | /data/batchapp/softeonuat/upseu/schedulerdaemonvs
+upseu_rptsdvs | /data/batchapp/softeonuat/upseu/shippingdocsreportdaemonvs
+upseu_bre | /data/batchapp/softeonuat/upseu/breruleenginedaemon
+upseu_ccd | /data/batchapp/softeonuat/upseu/clustercreationdaemon
+upseu_3inbqvs | /data/batchapp/softeonuat/upseu/uploaddaemonvs3
+upseu_queueallo | /data/batchapp/softeonuat/upseu/queueallocationdaemon
+upseu_2inbqvs | /data/batchapp/softeonuat/upseu/uploaddaemonvs2
+upseu_vsqueueal | /data/batchapp/softeonuat/upseu/queueallocationdaemonvs
+upseu_autopck | /data/batchapp/softeonuat/upseu/autopickdaemon
+upseu_vs2inbqvs | /data/batchapp/softeonuat/upseu/uploaddaemonastorevs2
+upseu_vs3inbqvs | /data/batchapp/softeonuat/upseu/uploaddaemonastorevs3
+upseu_cbcd | /data/batchapp/softeonuat/upseu/clusterbatchcreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3356 | upseuwesuat | jboss730eap | upswsuat_jb73ep | 8086 | 172.22.10.7:8086 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuwesuat/standalone
+3108 | upseuwsuat | jboss62eap | upseuwsuat_jboss | 8082 | 172.22.10.7:8082 | Down | 404 | Disabled | /data/app/jboss62eap/softeonuat/upseuwsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 02:31:27.235204
+==============================================================================
+
+2026-07-10 22:31:53,978 - 4105385 - ERROR - app_validation.py errors for i-0d7a0d13fb486b16c:
+
+2026-07-10 22:31:53,979 - 4105385 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.7/172.22.10.7-BeforePatching-2026-07-10-22-31-53-979.log
+2026-07-10 22:31:54,145 - 4105385 - INFO - Sending patch command to instance i-00ec4313927ed1fd3
+2026-07-10 22:31:54,515 - 4105385 - INFO - Command sent successfully to instance i-00ec4313927ed1fd3. Command ID: fa072945-fdc7-4fa1-ad2b-c6fd4c5b0a2f
+2026-07-10 22:31:54,647 - 4105385 - INFO - Sending patch command to instance i-0714ff8b1eb72c978
+2026-07-10 22:31:54,804 - 4105385 - INFO - Command sent successfully to instance i-0714ff8b1eb72c978. Command ID: 7d408bea-a944-48cd-a8dd-764b4f7d1cf3
+2026-07-10 22:31:54,937 - 4105385 - INFO - Sending patch command to instance i-0d7a0d13fb486b16c
+2026-07-10 22:31:55,055 - 4105385 - INFO - Command sent successfully to instance i-0d7a0d13fb486b16c. Command ID: 5647c3ee-c433-4ee1-9520-4bb8a6f0180e
+2026-07-10 22:36:27,522 - 4105385 - INFO - All patches applied successfully.
+2026-07-10 22:36:27,523 - 4105385 - INFO - Patching end time: 2026-07-10 22:36:27
+2026-07-10 22:36:27,523 - 4105385 - INFO - Patch Elapsed time: 0:06:23.044147
+2026-07-10 22:36:27,596 - 4105385 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 22:36:27,597 - 4105385 - INFO - Confirmed - services are stopped
+2026-07-10 22:36:33,205 - 4105385 - INFO - Discovered TG map: {'i-0d7a0d13fb486b16c': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/UPS-EU-WES-UAT/91926460981f2a65'], 'i-00ec4313927ed1fd3': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99'], 'i-0714ff8b1eb72c978': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99']}
+2026-07-10 22:36:33,482 - 4105385 - INFO - Deregistering i-00ec4313927ed1fd3 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306
+2026-07-10 22:36:33,822 - 4105385 - INFO - Deregistering i-00ec4313927ed1fd3 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99
+2026-07-10 22:36:33,931 - 4105385 - INFO - Stopping EC2 instance: i-00ec4313927ed1fd3 at 2026-07-10 22:36:33
+2026-07-10 22:38:21,018 - 4105385 - INFO - Instance i-00ec4313927ed1fd3 stopped successfully.
+2026-07-10 22:38:21,591 - 4105385 - INFO - Stopped i-00ec4313927ed1fd3 in 0:01:47.659347
+2026-07-10 22:38:21,591 - 4105385 - INFO - Starting EC2 instance: i-00ec4313927ed1fd3
+2026-07-10 22:38:37,607 - 4105385 - INFO - Instance i-00ec4313927ed1fd3 started successfully.
+2026-07-10 22:38:37,607 - 4105385 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00ec4313927ed1fd3...
+2026-07-10 22:40:17,707 - 4105385 - INFO - Registering i-00ec4313927ed1fd3 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306
+2026-07-10 22:40:18,125 - 4105385 - INFO - Registering i-00ec4313927ed1fd3 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99
+2026-07-10 22:41:49,567 - 4105385 - INFO - Sent app_validation.py to i-00ec4313927ed1fd3 (command_id: d47130ab-addc-446d-8903-8120d27ae1ca)
+2026-07-10 22:42:19,735 - 4105385 - INFO - app_validation.py output for i-00ec4313927ed1fd3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 02:41:49.821747
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.58
+Hostname | ip-172-22-10-58.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 143.6G | 117.8G | 52% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.58 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3515 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.58:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3522 | upseuv8uat | jboss730eap | euv8uat_jb730ep | 8083 | 172.22.10.58:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 02:41:50.781501
+==============================================================================
+
+2026-07-10 22:42:19,735 - 4105385 - ERROR - app_validation.py errors for i-00ec4313927ed1fd3:
+
+2026-07-10 22:42:19,736 - 4105385 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-AfterPatching-2026-07-10-22-42-19-736.log
+2026-07-10 22:42:19,792 - 4105385 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-Validation-details-2026-07-10-22-42-19-736.html
+2026-07-10 22:42:20,299 - 4105385 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 22:42:20,299 - 4105385 - INFO - HTML validation report email sent for i-00ec4313927ed1fd3
+2026-07-10 22:42:20,300 - 4105385 - INFO - [Retry-1] Waiting 600s for i-00ec4313927ed1fd3...
+2026-07-10 22:42:20,300 - 4105385 - INFO - RED - Background retry thread started for i-00ec4313927ed1fd3
+2026-07-10 22:42:20,680 - 4105385 - INFO - Started i-00ec4313927ed1fd3 in 0:03:59.089353
+2026-07-10 22:42:20,680 - 4105385 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-10 22:44:20,698 - 4105385 - INFO - Deregistering i-0714ff8b1eb72c978 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306
+2026-07-10 22:44:21,032 - 4105385 - INFO - Deregistering i-0714ff8b1eb72c978 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99
+2026-07-10 22:44:21,136 - 4105385 - INFO - Stopping EC2 instance: i-0714ff8b1eb72c978 at 2026-07-10 22:44:21
+2026-07-10 22:45:53,087 - 4105385 - INFO - Instance i-0714ff8b1eb72c978 stopped successfully.
+2026-07-10 22:45:53,470 - 4105385 - INFO - Stopped i-0714ff8b1eb72c978 in 0:01:32.334004
+2026-07-10 22:45:53,471 - 4105385 - INFO - Starting EC2 instance: i-0714ff8b1eb72c978
+2026-07-10 22:46:09,476 - 4105385 - INFO - Instance i-0714ff8b1eb72c978 started successfully.
+2026-07-10 22:46:09,476 - 4105385 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0714ff8b1eb72c978...
+2026-07-10 22:47:49,521 - 4105385 - INFO - Registering i-0714ff8b1eb72c978 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306
+2026-07-10 22:47:49,943 - 4105385 - INFO - Registering i-0714ff8b1eb72c978 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-rf-eu/2b0e8d812b6acb99
+2026-07-10 22:52:20,890 - 4105385 - INFO - Sent app_validation.py to i-00ec4313927ed1fd3 (command_id: bed62a5d-a1d1-4ed3-b46d-c08138da206c)
+2026-07-10 22:52:51,078 - 4105385 - INFO - app_validation.py output for i-00ec4313927ed1fd3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 02:52:21.027978
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.58
+Hostname | ip-172-22-10-58.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 144.0G | 117.4G | 52% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.58 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | upseuevent, upseu_ftp, upseulabel, upseu_1_pksp1, upseureplcancel, upseureplreq, upseurptjqgrid, upseushipdocrpt, upseutasklevinv, upseu_3_abchdis, upseu_abdhr, upseudownloadv8, upseu_1_abchdis, upseu_2_abchdis, upseuschedulerv8, upseuschedulerdst, upseur_wessch, upseuuploadv8, upseuwavelaunchv8, upseu_5_abchdis, upseu_6_abchdis, upseu_1_rccl, upseu_1_2pksp, upseu_picksim, upseu_psim
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+upseuevent | /data/batchapp/softeonuat/upseu/eventdaemon
+upseu_ftp | /data/batchapp/softeonuat/upseu/ftpdaemon
+upseulabel | /data/batchapp/softeonuat/upseu/labeldaemon
+upseu_1_pksp1 | /data/batchapp/softeonuat/upseu/printpackslipdaemon
+upseureplcancel | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon
+upseureplreq | /data/batchapp/softeonuat/upseu/replenishmentrequestdaemon
+upseurptjqgrid | /data/batchapp/softeonuat/upseu/reportjqgridexportdaemon
+upseushipdocrpt | /data/batchapp/softeonuat/upseu/shippingdocsreportdaemon
+upseutasklevinv | /data/batchapp/softeonuat/upseu/tasklevelinventoryallocation
+upseu_3_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent3
+upseu_abdhr | /data/batchapp/softeonuat/upseu/autopicktoolagentasginment
+upseudownloadv8 | /data/batchapp/softeonuat/upseu/downloaddaemonv8
+upseu_1_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent1
+upseu_2_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent2
+upseuschedulerv8 | /data/batchapp/softeonuat/upseu/schedulerdaemonv8
+upseuschedulerdst | /data/batchapp/softeonuat/upseu/schedulerdaemon_dst
+upseur_wessch | /data/batchapp/softeonuat/upseu_wes_uat/schedulerdaemon
+upseuuploadv8 | /data/batchapp/softeonuat/upseu/uploaddaemonv8
+upseuwavelaunchv8 | /data/batchapp/softeonuat/upseu/wavelaunchdaemonv8
+upseu_5_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent5
+upseu_6_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent6
+upseu_1_rccl | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon_lfc
+upseu_1_2pksp | /data/batchapp/softeonuat/upseu/printpackslipdaemon2
+upseu_picksim | /data/batchapp/softeonuat/upseu/onlinepicksimulation
+upseu_psim | /data/batchapp/softeonuat/upseu/packsimulation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3515 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.58:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3522 | upseuv8uat | jboss730eap | euv8uat_jb730ep | 8083 | 172.22.10.58:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 02:52:21.879379
+==============================================================================
+
+2026-07-10 22:52:51,078 - 4105385 - ERROR - app_validation.py errors for i-00ec4313927ed1fd3:
+
+2026-07-10 22:52:51,080 - 4105385 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-AfterPatching-Retry1-2026-07-10-22-52-51-079.log
+2026-07-10 22:52:51,135 - 4105385 - INFO - [Retry-1] RED detected for UPS Europe UAT Batch - 1 and Application Server - 2 (172.22.10.58), retrying... (Total waited: 600s)
+2026-07-10 22:52:51,135 - 4105385 - INFO - [Retry-2] Waiting 600s for i-00ec4313927ed1fd3...
+2026-07-10 22:55:52,411 - 4105385 - WARNING - i-0714ff8b1eb72c978 not healthy in arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/ups-uat-eu/ac98d2bce89d1306 after timeout.
+2026-07-10 22:55:52,777 - 4105385 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 22:55:52,777 - 4105385 - ERROR - Aborting workflow: i-0714ff8b1eb72c978 is not healthy after restart.
+2026-07-10 22:55:52,783 - 4105385 - INFO - Restart Total time: 0:19:25.054325
+2026-07-10 22:55:52,783 - 4105385 - INFO - Auto-confirmed services are restarted
+2026-07-10 22:55:52,783 - 4105385 - INFO - Confirmed - services are started
+2026-07-10 22:55:52,918 - 4105385 - INFO - The following instances have failed the patch: []
+2026-07-10 22:55:52,918 - 4105385 - INFO - No instances have failed the patch.
+2026-07-10 22:55:52,918 - 4105385 - INFO - Total Patch Process time: 0:25:48.820057
+2026-07-10 22:56:53,616 - 4105385 - INFO - Log file ./logs/patching_2026-07-10_q3-UPS-Europe-UAT.log uploaded to s3://q3-2026-aws-security-patching/q3-UPS-Europe-UAT_Patch/2026-07-10/patching_2026-07-10_q3-UPS-Europe-UAT.log
+2026-07-10 23:02:51,814 - 4105385 - INFO - Sent app_validation.py to i-00ec4313927ed1fd3 (command_id: 3fe83826-fe1a-4380-8707-40a2a23f5b2c)
+2026-07-10 23:03:22,025 - 4105385 - INFO - app_validation.py output for i-00ec4313927ed1fd3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 03:02:52.000569
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.58
+Hostname | ip-172-22-10-58.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 144.4G | 117.0G | 52% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.58:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 459
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.58 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | upseuevent, upseu_ftp, upseulabel, upseu_1_pksp1, upseureplcancel, upseureplreq, upseurptjqgrid, upseushipdocrpt, upseutasklevinv, upseu_3_abchdis, upseu_abdhr, upseudownloadv8, upseu_1_abchdis, upseu_2_abchdis, upseuschedulerv8, upseuschedulerdst, upseur_wessch, upseuuploadv8, upseuwavelaunchv8, upseu_5_abchdis, upseu_6_abchdis, upseu_1_rccl, upseu_1_2pksp, upseu_picksim, upseu_psim
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+upseuevent | /data/batchapp/softeonuat/upseu/eventdaemon
+upseu_ftp | /data/batchapp/softeonuat/upseu/ftpdaemon
+upseulabel | /data/batchapp/softeonuat/upseu/labeldaemon
+upseu_1_pksp1 | /data/batchapp/softeonuat/upseu/printpackslipdaemon
+upseureplcancel | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon
+upseureplreq | /data/batchapp/softeonuat/upseu/replenishmentrequestdaemon
+upseurptjqgrid | /data/batchapp/softeonuat/upseu/reportjqgridexportdaemon
+upseushipdocrpt | /data/batchapp/softeonuat/upseu/shippingdocsreportdaemon
+upseutasklevinv | /data/batchapp/softeonuat/upseu/tasklevelinventoryallocation
+upseu_3_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent3
+upseu_abdhr | /data/batchapp/softeonuat/upseu/autopicktoolagentasginment
+upseudownloadv8 | /data/batchapp/softeonuat/upseu/downloaddaemonv8
+upseu_1_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent1
+upseu_2_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent2
+upseuschedulerv8 | /data/batchapp/softeonuat/upseu/schedulerdaemonv8
+upseuschedulerdst | /data/batchapp/softeonuat/upseu/schedulerdaemon_dst
+upseur_wessch | /data/batchapp/softeonuat/upseu_wes_uat/schedulerdaemon
+upseuuploadv8 | /data/batchapp/softeonuat/upseu/uploaddaemonv8
+upseuwavelaunchv8 | /data/batchapp/softeonuat/upseu/wavelaunchdaemonv8
+upseu_5_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent5
+upseu_6_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent6
+upseu_1_rccl | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon_lfc
+upseu_1_2pksp | /data/batchapp/softeonuat/upseu/printpackslipdaemon2
+upseu_picksim | /data/batchapp/softeonuat/upseu/onlinepicksimulation
+upseu_psim | /data/batchapp/softeonuat/upseu/packsimulation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3515 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.58:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3522 | upseuv8uat | jboss730eap | euv8uat_jb730ep | 8083 | 172.22.10.58:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 03:02:53.256451
+==============================================================================
+
+2026-07-10 23:03:22,025 - 4105385 - ERROR - app_validation.py errors for i-00ec4313927ed1fd3:
+
+2026-07-10 23:03:22,027 - 4105385 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-AfterPatching-Retry2-2026-07-10-23-03-22-026.log
+2026-07-10 23:03:22,080 - 4105385 - INFO - [Retry-2] RED detected for UPS Europe UAT Batch - 1 and Application Server - 2 (172.22.10.58), retrying... (Total waited: 1200s)
+2026-07-10 23:03:22,081 - 4105385 - INFO - [Retry-3] Waiting 600s for i-00ec4313927ed1fd3...
+2026-07-10 23:13:22,873 - 4105385 - INFO - Sent app_validation.py to i-00ec4313927ed1fd3 (command_id: 3ee3761c-da29-43d5-8136-e036f9cc7543)
+2026-07-10 23:13:53,020 - 4105385 - INFO - app_validation.py output for i-00ec4313927ed1fd3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 03:13:23.022578
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.58
+Hostname | ip-172-22-10-58.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 275.4G | 144.9G | 116.5G | 52% | /data
+fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | 0B | 403.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-765fc0bf.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.58:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 459
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.58 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | upseuevent, upseu_ftp, upseulabel, upseu_1_pksp1, upseureplcancel, upseureplreq, upseurptjqgrid, upseushipdocrpt, upseutasklevinv, upseu_3_abchdis, upseu_abdhr, upseudownloadv8, upseu_1_abchdis, upseu_2_abchdis, upseuschedulerv8, upseuschedulerdst, upseur_wessch, upseuuploadv8, upseuwavelaunchv8, upseu_5_abchdis, upseu_6_abchdis, upseu_1_rccl, upseu_1_2pksp, upseu_picksim, upseu_psim
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+upseuevent | /data/batchapp/softeonuat/upseu/eventdaemon
+upseu_ftp | /data/batchapp/softeonuat/upseu/ftpdaemon
+upseulabel | /data/batchapp/softeonuat/upseu/labeldaemon
+upseu_1_pksp1 | /data/batchapp/softeonuat/upseu/printpackslipdaemon
+upseureplcancel | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon
+upseureplreq | /data/batchapp/softeonuat/upseu/replenishmentrequestdaemon
+upseurptjqgrid | /data/batchapp/softeonuat/upseu/reportjqgridexportdaemon
+upseushipdocrpt | /data/batchapp/softeonuat/upseu/shippingdocsreportdaemon
+upseutasklevinv | /data/batchapp/softeonuat/upseu/tasklevelinventoryallocation
+upseu_3_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent3
+upseu_abdhr | /data/batchapp/softeonuat/upseu/autopicktoolagentasginment
+upseudownloadv8 | /data/batchapp/softeonuat/upseu/downloaddaemonv8
+upseu_1_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent1
+upseu_2_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent2
+upseuschedulerv8 | /data/batchapp/softeonuat/upseu/schedulerdaemonv8
+upseuschedulerdst | /data/batchapp/softeonuat/upseu/schedulerdaemon_dst
+upseur_wessch | /data/batchapp/softeonuat/upseu_wes_uat/schedulerdaemon
+upseuuploadv8 | /data/batchapp/softeonuat/upseu/uploaddaemonv8
+upseuwavelaunchv8 | /data/batchapp/softeonuat/upseu/wavelaunchdaemonv8
+upseu_5_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent5
+upseu_6_abchdis | /data/batchapp/softeonuat/upseu/picktoolagent6
+upseu_1_rccl | /data/batchapp/softeonuat/upseu/replenishmentcanceldaemon_lfc
+upseu_1_2pksp | /data/batchapp/softeonuat/upseu/printpackslipdaemon2
+upseu_picksim | /data/batchapp/softeonuat/upseu/onlinepicksimulation
+upseu_psim | /data/batchapp/softeonuat/upseu/packsimulation
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3515 | upseurfv8uat | jboss730eap | eurfv8uat_jb730 | 8084 | 172.22.10.58:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseurfv8uat/standalone
+3522 | upseuv8uat | jboss730eap | euv8uat_jb730ep | 8083 | 172.22.10.58:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upseuv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 03:13:23.937103
+==============================================================================
+
+2026-07-10 23:13:53,020 - 4105385 - ERROR - app_validation.py errors for i-00ec4313927ed1fd3:
+
+2026-07-10 23:13:53,022 - 4105385 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-10/q3-UPS-Europe-UAT/172.22.10.58/172.22.10.58-AfterPatching-Retry3-2026-07-10-23-13-53-021.log
+2026-07-10 23:13:53,512 - 4105385 - INFO - Health monitor crontab enabled on all instances
+2026-07-10 23:13:53,513 - 4105385 - WARNING - [Retry] Timeout - auto cron enabled for i-00ec4313927ed1fd3

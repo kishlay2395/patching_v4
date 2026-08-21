@@ -1,0 +1,117 @@
+2026-06-28 00:15:03,163 - 3389167 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-28 00:15:03,164 - 3389167 - INFO - Script Start Time: 2026-06-28 00:15:03
+2026-06-28 00:15:03,571 - 3389167 - INFO - Instance(s) selected for Patching: {'i-03fb63aa41fa3e2f8': '172.25.32.29'}
+2026-06-28 00:15:03,659 - 3389167 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-28 00:15:03,659 - 3389167 - INFO - Now patching instances at: 2026-06-28 00:15:03
+2026-06-28 00:15:04,252 - 3389167 - INFO - Sent app_validation.py to i-03fb63aa41fa3e2f8 (command_id: 37e39ba7-65f1-4066-8ca0-bc2983e81bfc)
+2026-06-28 00:15:34,410 - 3389167 - INFO - app_validation.py output for i-03fb63aa41fa3e2f8:
+
+==============================================================================
+Server Availability Check Started | 2026-06-28 04:15:04.688310
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.29
+Hostname | ip-172-25-32-29.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.7G | 174.2G | 27% | /data
+fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | 0B | 113.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | sfbprod_dwa, sfbprod_event, sfbprod_ftp, sfbprod_lbl, sfbprod_rpt, sfbprod_jqgrid, sfbprod_sch, sfbprod_inbq, sfbprod_wsq, sfbprod_repl, sfbprod_1dwa, sfbprod_mpcpt, sfbprod_rccl, sfbprod_17wld, sfbprod_57wld, sfbprod_88wld, sfbprod_drivemt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+sfbprod_dwa | /data/batchapp/softeon/standardfiberprod/downloaddaemon
+sfbprod_event | /data/batchapp/softeon/standardfiberprod/eventdaemon
+sfbprod_ftp | /data/batchapp/softeon/standardfiberprod/ftpdaemon
+sfbprod_lbl | /data/batchapp/softeon/standardfiberprod/labeldaemon
+sfbprod_rpt | /data/batchapp/softeon/standardfiberprod/reportdaemon
+sfbprod_jqgrid | /data/batchapp/softeon/standardfiberprod/reportjqgridexportdaemon
+sfbprod_sch | /data/batchapp/softeon/standardfiberprod/schedulerdaemon
+sfbprod_inbq | /data/batchapp/softeon/standardfiberprod/uploaddaemon
+sfbprod_wsq | /data/batchapp/softeon/standardfiberprod/wsqdaemon
+sfbprod_repl | /data/batchapp/softeon/standardfiberprod/replenishmentdaemon
+sfbprod_1dwa | /data/batchapp/softeon/standardfiberprod/downloaddaemon1
+sfbprod_mpcpt | /data/batchapp/softeon/standardfiberprod/picktooldaemon
+sfbprod_rccl | /data/batchapp/softeon/standardfiberprod/replenishmentpickloccanceldaemon
+sfbprod_17wld | /data/batchapp/softeon/standardfiberprod_17/wavelaunchdaemon
+sfbprod_57wld | /data/batchapp/softeon/standardfiberprod_57/wavelaunchdaemon
+sfbprod_88wld | /data/batchapp/softeon/standardfiberprod_88/wavelaunchdaemon
+sfbprod_drivemt | /data/batchapp/softeon/standardfiberprod/drivespacemonitor
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-28 04:15:05.880980
+==============================================================================
+
+2026-06-28 00:15:34,410 - 3389167 - ERROR - app_validation.py errors for i-03fb63aa41fa3e2f8:
+
+2026-06-28 00:15:34,412 - 3389167 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-28/StandardFiber-Batch/172.25.32.29/172.25.32.29-BeforePatching-2026-06-28-00-15-34-411.log
+2026-06-28 00:15:34,495 - 3389167 - INFO - Sending patch command to instance i-03fb63aa41fa3e2f8
+2026-06-28 00:15:34,847 - 3389167 - INFO - Command sent successfully to instance i-03fb63aa41fa3e2f8. Command ID: 49b451b2-b57d-43c3-b25d-5612b723e97a
+2026-06-28 00:15:35,759 - 3389167 - ERROR - Patch process encountered errors. No interactive prompt available. Exiting script.

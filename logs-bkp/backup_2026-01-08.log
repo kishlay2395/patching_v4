@@ -1,0 +1,68 @@
+2026-01-08 01:45:02,257 - INFO - Running backup for tag: Technicolor-uat
+2026-01-08 01:45:02,561 - INFO - Creating backup for: i-0485c4be2af60c982
+2026-01-08 01:45:02,700 - INFO - Backup Job ID: b88897dd-ef0d-49b3-9ec8-b34b909bfefa started at 2026-01-08 01:45:02
+2026-01-08 01:45:02,701 - INFO - Creating backup for: i-05a5f0ff3e5796950
+2026-01-08 01:45:02,821 - INFO - Backup Job ID: 9a77d9f0-d832-4df3-b853-0241dd8ce4ef started at 2026-01-08 01:45:02
+2026-01-08 01:46:01,893 - INFO - Running backup for tag: TIG-uat
+2026-01-08 01:46:02,029 - INFO - Running backup for tag: Tekton-uat
+2026-01-08 01:46:02,229 - INFO - Creating backup for: i-02b64cbbcb8336483
+2026-01-08 01:46:02,289 - INFO - Creating backup for: i-0b08617cde29d6435
+2026-01-08 01:46:02,423 - INFO - Backup Job ID: 442887c8-9839-4f66-8731-5cab7fbebb5c started at 2026-01-08 01:46:02
+2026-01-08 01:46:02,438 - INFO - Backup Job ID: 676f02de-ba18-4a45-a8fd-ec735b1ce804 started at 2026-01-08 01:46:02
+2026-01-08 01:54:15,843 - INFO - Backup completed: 676f02de-ba18-4a45-a8fd-ec735b1ce804
+2026-01-08 01:54:15,847 - INFO - Backup completed: 442887c8-9839-4f66-8731-5cab7fbebb5c
+2026-01-08 01:54:21,023 - INFO - Backup total time: 0:08:18.272529
+2026-01-08 01:54:21,070 - INFO - Backup total time: 0:08:18.350295
+2026-01-08 01:54:21,109 - INFO - Completed backups: ['i-0b08617cde29d6435']
+2026-01-08 01:54:21,155 - INFO - Completed backups: ['i-02b64cbbcb8336483']
+2026-01-08 01:58:12,752 - INFO - Backup completed: 9a77d9f0-d832-4df3-b853-0241dd8ce4ef
+2026-01-08 03:11:27,400 - INFO - Backup completed: b88897dd-ef0d-49b3-9ec8-b34b909bfefa
+2026-01-08 03:11:32,521 - INFO - Backup total time: 1:26:29.416793
+2026-01-08 03:11:32,614 - INFO - Completed backups: ['i-0485c4be2af60c982', 'i-05a5f0ff3e5796950']
+2026-01-08 21:38:01,587 - INFO - Running backup for tag: USPMotor-uat
+2026-01-08 21:38:02,069 - INFO - Creating backup for: i-075f7294d9df0d053
+2026-01-08 21:38:02,278 - INFO - Backup Job ID: c81bb11e-df20-442e-8f59-4ea73fe61cd0 started at 2026-01-08 21:38:02
+2026-01-08 21:39:02,480 - INFO - Running backup for tag: WhiteCap-uat
+2026-01-08 21:39:02,839 - INFO - Running backup for tag: Touchstone-uat
+2026-01-08 21:39:03,048 - INFO - Creating backup for: i-08a651b45de70e876
+2026-01-08 21:39:03,194 - INFO - Creating backup for: i-0b34eb0e5dfecdada
+2026-01-08 21:39:03,273 - INFO - Backup Job ID: b113bbc8-eaf4-4249-ad40-5fccaf1178b2 started at 2026-01-08 21:39:03
+2026-01-08 21:39:03,274 - INFO - Creating backup for: i-0661622b40ea108ad
+2026-01-08 21:39:03,360 - INFO - Backup Job ID: c8766377-4b1f-4e09-ac72-3671337ddf17 started at 2026-01-08 21:39:03
+2026-01-08 21:39:03,435 - INFO - Backup Job ID: f10e3575-53b3-497f-89ed-5452cea98bc3 started at 2026-01-08 21:39:03
+2026-01-08 21:39:03,436 - INFO - Creating backup for: i-0c96f11748b4150ec
+2026-01-08 21:39:03,584 - INFO - Backup Job ID: 44d9d384-c02e-4126-9ded-62ad86db76fb started at 2026-01-08 21:39:03
+2026-01-08 21:39:03,824 - ERROR - Backup update failed: Object of type UniqueViolation is not JSON serializable
+Traceback (most recent call last):
+  File "/data/patching_v4/common/utils.py", line 90, in bulk_insert
+    result = cursor.executemany(insert_statement, records)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "patching_log_pkey"
+DETAIL:  Key (instance_id, command_id)=(i-08a651b45de70e876, Pending) already exists.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/patching_v4/patching_backup.py", line 111, in backup_instances
+    utils.bulk_insert(db_details, update_stmt, update_sql)
+  File "/data/patching_v4/common/utils.py", line 100, in bulk_insert
+    write_cw_logs(pid, log_level, message)
+  File "/data/patching_v4/common/utils.py", line 158, in write_cw_logs
+    json_message = json.dumps(cw_message)
+  File "/usr/lib64/python3.8/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib64/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UniqueViolation is not JSON serializable
+
+2026-01-08 21:41:09,527 - INFO - Backup completed: c8766377-4b1f-4e09-ac72-3671337ddf17
+2026-01-08 21:41:14,677 - INFO - Backup total time: 0:02:10.987164
+2026-01-08 21:41:14,748 - INFO - Completed backups: ['i-0b34eb0e5dfecdada']
+2026-01-08 21:46:16,048 - INFO - Backup completed: c81bb11e-df20-442e-8f59-4ea73fe61cd0
+2026-01-08 21:46:21,213 - INFO - Backup total time: 0:08:18.462993
+2026-01-08 21:46:21,293 - INFO - Completed backups: ['i-075f7294d9df0d053']
+2026-01-08 22:30:03,064 - INFO - Running backup for tag: SourceLogistics-uat

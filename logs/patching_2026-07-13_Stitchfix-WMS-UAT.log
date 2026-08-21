@@ -1,0 +1,163 @@
+2026-07-13 02:10:02,132 - 28501 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-13 02:10:02,132 - 28501 - INFO - Script Start Time: 2026-07-13 02:10:02
+2026-07-13 02:10:02,557 - 28501 - INFO - Instance(s) selected for Patching: {'i-033301bba3f1e4b8d': '172.16.252.12'}
+2026-07-13 02:10:02,647 - 28501 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 02:10:02,647 - 28501 - INFO - Now patching instances at: 2026-07-13 02:10:02
+2026-07-13 02:10:07,976 - 28501 - INFO - i-033301bba3f1e4b8d: Cron was active = False
+2026-07-13 02:10:07,976 - 28501 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-13 02:10:08,145 - 28501 - INFO - Sent app_validation.py to i-033301bba3f1e4b8d (command_id: 801fe157-608c-4ccb-a7d3-1184d12dd92c)
+2026-07-13 02:10:38,212 - 28501 - INFO - app_validation.py output for i-033301bba3f1e4b8d:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 06:10:08.550854
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.16.252.12
+Hostname | ip-172-16-252-12
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 60.2G | 179.7G | 25% | /data
+/dev/nvme1n1p2 | 239.9G | 60.2G | 179.7G | 25% | /data3
+fs-04e953ccec66f4fc4.efs.us-east-1.amazonaws.com:/ | 0B | 13.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-04e953ccec66f4fc4.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.16.252.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.16.252.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | sfxuat_ccdest, sfxuat_ccdpct, sfxuat_rplpu, sfxuat_ftp, sfxuat_dwa, sfxuat_pjqgrid, sfxuat_abdis, sfxuat_psch, sfxuat_lbl, sfxuat_ewld, sfxuat_erpt, sfxuat_harp, sfxuat_esch, sfxuat_rccl, sfxuat_event, sfxuat_inbq, sfxuat_pwld, sfxuat_ejqgrid, sfxuat_prpt, sfxssouat_dwa, sfxssouat_esch, sfxuat_repl, stitchfix_slice, elastic_hsqldb, feautre_installer
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+sfxuat_ccdest | /data/batchapp/softeon/stitchfixuat/clustercreationdaemon_eastern
+sfxuat_ccdpct | /data/batchapp/softeon/stitchfixuat/clustercreationdaemon_pacific
+sfxuat_rplpu | /data/batchapp/softeon/stitchfixuat/replenishmentpriorityupdatedaemon
+sfxuat_ftp | /data/batchapp/softeon/stitchfixuat/ftpdaemon
+sfxuat_dwa | /data/batchapp/softeon/stitchfixuat/downloaddaemon
+sfxuat_pjqgrid | /data/batchapp/softeon/stitchfixuat/jqgridexportdaemon_pacific
+sfxuat_abdis | /data/batchapp/softeon/stitchfixuat/autobatchdistributiondaemon
+sfxuat_psch | /data/batchapp/softeon/stitchfixuat/schedulerdaemon_pacific
+sfxuat_lbl | /data/batchapp/softeon/stitchfixuat/labeldaemon
+sfxuat_ewld | /data/batchapp/softeon/stitchfixuat/wavelaunchdaemon_eastern
+sfxuat_erpt | /data/batchapp/softeon/stitchfixuat/reportdaemon_eastern
+sfxuat_harp | /data/batchapp/softeon/stitchfixuat/hardallocationdaemon
+sfxuat_esch | /data/batchapp/softeon/stitchfixuat/schedulerdaemon_eastern
+sfxuat_rccl | /data/batchapp/softeon/stitchfixuat/replenishmentpickloccanceldaemon
+sfxuat_event | /data/batchapp/softeon/stitchfixuat/eventdaemon
+sfxuat_inbq | /data/batchapp/softeon/stitchfixuat/uploaddeamon
+sfxuat_pwld | /data/batchapp/softeon/stitchfixuat/wavelaunchdaemon_pacific
+sfxuat_ejqgrid | /data/batchapp/softeon/stitchfixuat/jqgridexportdaemon_eastern
+sfxuat_prpt | /data/batchapp/softeon/stitchfixuat/reportdaemon_pacific
+sfxssouat_dwa | /data/batchapp/softeon/stitchfixssouat/downloaddaemon
+sfxssouat_esch | /data/batchapp/softeon/stitchfixssouat/schedulerdaemon_eastern
+sfxuat_repl | /data/batchapp/softeon/stitchfixuat/replenishmentdaemon
+stitchfix_slice | /data/app/slice
+elastic_hsqldb | /data/app/elastic-ui-4.0.3/softeon/softwares/hsql/data
+feautre_installer | /data/app/elastic-ui-4.0.3/softeon/softwares/release
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2786390 | stitchfixnewuat | jboss810eap | stitchnew_jb810 | 8083 | 172.16.252.12:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/stitchfixnewuat/standalone
+3112926 | stitchfixrfnewuat | jboss810eap | stitchrfnew_j81 | 8084 | 172.16.252.12:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/stitchfixrfnewuat/standalone
+2785589 | stitchfixssonewuat | jboss810eap | stitchssonw_j81 | 8085 | 172.16.252.12:8085 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/stitchfixssonewuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 06:10:12.719680
+==============================================================================
+
+2026-07-13 02:10:38,212 - 28501 - ERROR - app_validation.py errors for i-033301bba3f1e4b8d:
+
+2026-07-13 02:10:38,214 - 28501 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-13/Stitchfix-WMS-UAT/172.16.252.12/172.16.252.12-BeforePatching-2026-07-13-02-10-38-213.log
+2026-07-13 02:10:38,362 - 28501 - INFO - Sending patch command to instance i-033301bba3f1e4b8d
+2026-07-13 02:10:38,474 - 28501 - INFO - Command sent successfully to instance i-033301bba3f1e4b8d. Command ID: a69200eb-cfc2-4f0d-92fc-c4643730332e
+2026-07-13 02:15:39,978 - 28501 - INFO - All patches applied successfully.
+2026-07-13 02:15:39,979 - 28501 - INFO - Patching end time: 2026-07-13 02:15:39
+2026-07-13 02:15:39,979 - 28501 - INFO - Patch Elapsed time: 0:05:37.331686
+2026-07-13 02:15:40,066 - 28501 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 02:15:40,066 - 28501 - INFO - Confirmed - services are stopped
+2026-07-13 02:16:00,296 - 28501 - INFO - Discovered TG map: {'i-033301bba3f1e4b8d': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-Desktop-261/7ac612d27beaba29', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-RF-261/366ccaf2ffee1640', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-SSO-261/3d7b46facb1af764', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI/780a40d323ed5126', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI-Luca/7d55c37229b45541', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-SLICE/72bbff76d5e4161f']}
+2026-07-13 02:16:00,537 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-Desktop-261/7ac612d27beaba29
+2026-07-13 02:16:00,608 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-RF-261/366ccaf2ffee1640
+2026-07-13 02:16:00,677 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-SSO-261/3d7b46facb1af764
+2026-07-13 02:16:00,720 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI/780a40d323ed5126
+2026-07-13 02:16:00,767 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI-Luca/7d55c37229b45541
+2026-07-13 02:16:00,817 - 28501 - INFO - Deregistering i-033301bba3f1e4b8d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-SLICE/72bbff76d5e4161f
+2026-07-13 02:16:00,863 - 28501 - INFO - Stopping EC2 instance: i-033301bba3f1e4b8d at 2026-07-13 02:16:00
+2026-07-13 02:17:47,253 - 28501 - INFO - Instance i-033301bba3f1e4b8d stopped successfully.
+2026-07-13 02:17:47,388 - 28501 - INFO - Stopped i-033301bba3f1e4b8d in 0:01:46.524902
+2026-07-13 02:17:47,388 - 28501 - INFO - Starting EC2 instance: i-033301bba3f1e4b8d
+2026-07-13 02:18:03,319 - 28501 - INFO - Instance i-033301bba3f1e4b8d started successfully.
+2026-07-13 02:18:03,319 - 28501 - INFO - Waiting 100 seconds for SSM agent to be ready on i-033301bba3f1e4b8d...
+2026-07-13 02:19:43,419 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-Desktop-261/7ac612d27beaba29
+2026-07-13 02:19:43,589 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-RF-261/366ccaf2ffee1640
+2026-07-13 02:19:43,747 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-SSO-261/3d7b46facb1af764
+2026-07-13 02:19:43,894 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI/780a40d323ed5126
+2026-07-13 02:19:44,024 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-EUI-Luca/7d55c37229b45541
+2026-07-13 02:19:44,172 - 28501 - INFO - Registering i-033301bba3f1e4b8d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Stitchfixwms-UAT-SLICE/72bbff76d5e4161f
+2026-07-13 02:29:45,675 - 28501 - WARNING - i-033301bba3f1e4b8d not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/StitchFix-UAT-SSO-261/3d7b46facb1af764 after timeout.
+2026-07-13 02:29:45,899 - 28501 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-13 02:29:45,899 - 28501 - ERROR - Aborting workflow: i-033301bba3f1e4b8d is not healthy after restart.
+2026-07-13 02:29:45,902 - 28501 - INFO - Restart Total time: 0:14:05.712453
+2026-07-13 02:29:45,902 - 28501 - INFO - Auto-confirmed services are restarted
+2026-07-13 02:29:45,902 - 28501 - INFO - Confirmed - services are started
+2026-07-13 02:29:46,029 - 28501 - INFO - The following instances have failed the patch: []
+2026-07-13 02:29:46,029 - 28501 - INFO - No instances have failed the patch.
+2026-07-13 02:29:46,029 - 28501 - INFO - Total Patch Process time: 0:19:43.896522
+2026-07-13 02:30:46,415 - 28501 - INFO - Log file ./logs/patching_2026-07-13_Stitchfix-WMS-UAT.log uploaded to s3://q3-2026-aws-security-patching/Stitchfix-WMS-UAT_Patch/2026-07-13/patching_2026-07-13_Stitchfix-WMS-UAT.log

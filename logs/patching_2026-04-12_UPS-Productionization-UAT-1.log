@@ -1,0 +1,212 @@
+2026-04-12 00:45:02,526 - 511320 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-12 00:45:02,526 - 511320 - INFO - Script Start Time: 2026-04-12 00:45:02
+2026-04-12 00:45:02,760 - 511320 - INFO - Instance(s) selected for Patching: {'i-0aa0af4bf368a2b47': '172.29.60.181', 'i-0bb8fc1b391cfcd9f': '172.29.61.14', 'i-0aa7e0754fce91add': '172.29.60.165'}
+2026-04-12 00:45:02,832 - 511320 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:45:02,832 - 511320 - INFO - Now patching instances at: 2026-04-12 00:45:02
+2026-04-12 00:45:02,918 - 511320 - INFO - Sending patch command to instance i-0aa0af4bf368a2b47
+2026-04-12 00:45:03,064 - 511320 - INFO - Command sent successfully to instance i-0aa0af4bf368a2b47. Command ID: b35e7934-09e8-4873-aec5-fb6f131473df
+2026-04-12 00:45:03,215 - 511320 - INFO - Sending patch command to instance i-0bb8fc1b391cfcd9f
+2026-04-12 00:45:03,353 - 511320 - INFO - Command sent successfully to instance i-0bb8fc1b391cfcd9f. Command ID: 86c645b6-d91a-405d-861a-62b085dc64cd
+2026-04-12 00:45:03,484 - 511320 - INFO - Sending patch command to instance i-0aa7e0754fce91add
+2026-04-12 00:45:03,639 - 511320 - INFO - Command sent successfully to instance i-0aa7e0754fce91add. Command ID: e42afb69-939d-4a5a-a2dd-ea78324c5e34
+2026-04-12 00:53:06,220 - 511320 - INFO - All patches applied successfully.
+2026-04-12 00:53:06,221 - 511320 - INFO - Patching end time: 2026-04-12 00:53:06
+2026-04-12 00:53:06,221 - 511320 - INFO - Patch Elapsed time: 0:08:03.388625
+2026-04-12 00:53:06,303 - 511320 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:53:06,303 - 511320 - INFO - Confirmed - services are stopped
+2026-04-12 00:53:27,333 - 511320 - INFO - Discovered TG map: {'i-0aa0af4bf368a2b47': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-PZN-UAT-SWP/76706e584f82d961', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6011/5e1645d7227b8bd3', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6013/9f46eb83b0493b0b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6014/3fcee22c94ced2a0', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6012/ef393eef26540688', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6015/fff86d9c85fe05a4'], 'i-0bb8fc1b391cfcd9f': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6001/8a428baf9ce619c3', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6004/4e2242595bd8b55b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6005/1f79a5f0e6c77991', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6002/b95b2fd19cd10a7d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6003/d6983aa8043d6940']}
+2026-04-12 00:53:27,742 - 511320 - INFO - Sent app_validation.py to i-0aa0af4bf368a2b47 (command_id: c15e526d-487f-43de-a43e-3d0c87af7bdb)
+2026-04-12 00:53:57,847 - 511320 - INFO - app_validation.py output for i-0aa0af4bf368a2b47:
+
+==============================================================================
+Server Availability Check Started | 2026-04-12 00:53:28.012325
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.181
+Hostname | ip-172-29-60-181
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 175.2G | 104.6G | 62% | /data
+fs-5bdc0713.efs.us-east-1.amazonaws.com:/ | 0B | 1.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-5bdc0713.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.181:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1011
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.181 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 74
+Batch/Daemon Java Processes | 73
+Non-Standalone Java Processes | upsatmpp_ccd, upsatmpp_evntdmn, upsatmpp_ftpdmon, upsatmpp_lbldmon, upsatmpp_rpldmon, upsatmpp_rplcdmn, upsatmpp_rptjqdmn, upsatmpp_schddmn, upsatmpp_wavedmn, upsatmpp_tiad, ups_autopickdaemon, ups_cafoa2_ccd, ups_eventdaemon, ups_harpdaemon, ups_interfaceallocationdaemon, ups_labeldaemon, ups_replenishmentdaemon, ups_cafoarccl, ups_sso_reportjqgrdexprt, ups_schedulerdaemon, ups_shipdocreportdaemon, ups_shipdocreport_gatala, ups_tiad, ups_tmsupload, ups_wjd, ups_wavelaunchdaemon, ups_1wld, ups_2wld, ups_wsqdaemon, ups_bre, ups_ssodownload, ups_sso_schedulerdaemon, ups_abchdis, ups_dimscan, ups_kyeli1, ups_packd, ups_basout, ups_2basiin, ups_4basiin, ups_5basiin, ups_packmhedaemon, ups_locussimu, ups_geeksimulation, ups_packsim, ups_onlinepi, ups_sim_wsqdaemon, ups_cbcd, upspznbil_dwa, upspznbil_jqgridrpt, upspznbil_rpt, upspznbil_sch, upspznbil_inbq, upspzn_schatmn, upspz_atmn_inbq, upspz_atmp_inbq, upstd_evntdmn, upstd_lbldmon, upstd_rpldmon, upstd_jqgrid, upstd_schddmn, upstd_wavedmn, upstd_bre, upstd_bulkp, upsatmn_bre, upsatmn_sch, upstdx_event, upstdx_lbl, upstdx_repl, upstdx_jqgrid, upstdx_sch, upstdx_wld, upstdx_bre, upstdx_bulkp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 73
+Java-Name | Java-Path
+upsatmpp_ccd | /data/batchapp/softeonuat/upsatmpp/clustercreationdaemon
+upsatmpp_evntdmn | /data/batchapp/softeonuat/upsatmpp/eventdaemon
+upsatmpp_ftpdmon | /data/batchapp/softeonuat/upsatmpp/ftpdaemon
+upsatmpp_lbldmon | /data/batchapp/softeonuat/upsatmpp/labeldaemon
+upsatmpp_rpldmon | /data/batchapp/softeonuat/upsatmpp/replenishmentdaemon
+upsatmpp_rplcdmn | /data/batchapp/softeonuat/upsatmpp/replenishmentrequestcanceldaemon
+upsatmpp_rptjqdmn | /data/batchapp/softeonuat/upsatmpp/reportjqgridexportdaemon
+upsatmpp_schddmn | /data/batchapp/softeonuat/upsatmpp/schedulerdaemon
+upsatmpp_wavedmn | /data/batchapp/softeonuat/upsatmpp/wavelaunchdaemon
+upsatmpp_tiad | /data/batchapp/softeonuat/upsatmpp/tasklevelinventoryallocation
+ups_autopickdaemon | /data/batchapp/softeonuat/ups/autopickdaemon
+ups_cafoa2_ccd | /data/batchapp/softeonuat/ups/clustercreationdaemon_cafoa2
+ups_eventdaemon | /data/batchapp/softeonuat/ups/eventdaemon
+ups_harpdaemon | /data/batchapp/softeonuat/ups/harpdaemon
+ups_interfaceallocationdaemon | /data/batchapp/softeonuat/ups/interfaceallocationdaemon
+ups_labeldaemon | /data/batchapp/softeonuat/ups/labeldaemon
+ups_replenishmentdaemon | /data/batchapp/softeonuat/ups/replenishmentdaemon
+ups_cafoarccl | /data/batchapp/softeonuat/ups/replenishmentrequestcanceldaemon_cafoa
+ups_sso_reportjqgrdexprt | /data/batchapp/softeonuat/ups/reportjqgridexportdaemon_sso
+ups_schedulerdaemon | /data/batchapp/softeonuat/ups/schedulerdaemon
+ups_shipdocreportdaemon | /data/batchapp/softeonuat/ups/shippingdocsreportdaemon
+ups_shipdocreport_gatala | /data/batchapp/softeonuat/ups/shippingdocsreportdaemon_gatla
+ups_tiad | /data/batchapp/softeonuat/ups/tasklevelinventoryallocation
+ups_tmsupload | /data/batchapp/softeonuat/ups/uploaddaemon_tms
+ups_wjd | /data/batchapp/softeonuat/ups/wavejobassignmentdaemon
+ups_wavelaunchdaemon | /data/batchapp/softeonuat/ups/wavelaunchdaemon
+ups_1wld | /data/batchapp/softeonuat/ups/wavelaunchdaemonwld1
+ups_2wld | /data/batchapp/softeonuat/ups/wavelaunchdaemonwld2
+ups_wsqdaemon | /data/batchapp/softeonuat/ups/wsqdaemon
+ups_bre | /data/batchapp/softeonuat/ups/breruleenginedaemon
+ups_ssodownload | /data/batchapp/softeonuat/ups/downloaddaemon_sso
+ups_sso_schedulerdaemon | /data/batchapp/softeonuat/ups/schedulerdaemon_sso
+ups_abchdis | /data/batchapp/softeonuat/ups/autobatchdistributiondaemon
+ups_dimscan | /data/batchapp/softeonuat/ups/dimscannercommdaemon
+ups_kyeli1 | /data/batchapp/softeonuat/ups/autobatchdistributiondaemon_KYELI1
+ups_packd | /data/batchapp/softeonuat/ups/packingdaemon
+ups_basout | /data/batchapp/softeonuat/ups/bastianoutboundaemon
+ups_2basiin | /data/batchapp/softeonuat/ups/bastian02inbounddaemon
+ups_4basiin | /data/batchapp/softeonuat/ups/bastian04inbounddaemon
+ups_5basiin | /data/batchapp/softeonuat/ups/bastian05inbounddaemon
+ups_packmhedaemon | /data/batchapp/softeonuat/ups/packmhedaemon
+ups_locussimu | /data/batchapp/softeonuat/ups/locussimulation
+ups_geeksimulation | /data/batchapp/softeonuat/ups/geeksimulation
+ups_packsim | /data/batchapp/softeonuat/ups/packsimulation
+ups_onlinepi | /data/batchapp/softeonuat/ups/onlinepicksimulation
+ups_sim_wsqdaemon | /data/batchapp/softeonuat/ups/wsqdaemonsim
+ups_cbcd | /data/batchapp/softeonuat/ups/clusterbatchcreationdaemon
+upspznbil_dwa | /data/batchapp/softeonuat/upspznbilluat/downloaddaemon
+upspznbil_jqgridrpt | /data/batchapp/softeonuat/upspznbilluat/jqgridreportdaemon
+upspznbil_rpt | /data/batchapp/softeonuat/upspznbilluat/reportdaemon
+upspznbil_sch | /data/batchapp/softeonuat/upspznbilluat/schedulerdaemon
+upspznbil_inbq | /data/batchapp/softeonuat/upspznbilluat/uploaddaemon
+upspzn_schatmn | /data/batchapp/softeonuat/upspznbilluat/schedulerdaemon_upsatmn
+upspz_atmn_inbq | /data/batchapp/softeonuat/upspznbilluat/uploaddaemon_upsatmn
+upspz_atmp_inbq | /data/batchapp/softeonuat/upspznbilluat/uploaddaemon_upsatmpp
+upstd_evntdmn | /data/batchapp/softeonuat/upstd/eventdaemon
+upstd_lbldmon | /data/batchapp/softeonuat/upstd/labeldaemon
+upstd_rpldmon | /data/batchapp/softeonuat/upstd/replenishmentdaemon
+upstd_jqgrid | /data/batchapp/softeonuat/upstd/reportjqgridexportdaemon
+upstd_schddmn | /data/batchapp/softeonuat/upstd/schedulerdaemon
+upstd_wavedmn | /data/batchapp/softeonuat/upstd/wavelaunchdaemon
+upstd_bre | /data/batchapp/softeonuat/upstd/breruleenginedaemon
+upstd_bulkp | /data/batchapp/softeonuat/upstd/bulkpickdaemon
+upsatmn_bre | /data/app/java/jdk1.7.0_80/bin/upsatmn_bre
+upsatmn_sch | /data/app/java/jdk1.7.0_80/bin/upsatmn_sch
+upstdx_event | /data/batchapp/softeonuat/upstdx/eventdaemon
+upstdx_lbl | /data/batchapp/softeonuat/upstdx/labeldaemon
+upstdx_repl | /data/batchapp/softeonuat/upstdx/replenishmentdaemon
+upstdx_jqgrid | /data/batchapp/softeonuat/upstdx/reportjqgridexportdaemon
+upstdx_sch | /data/batchapp/softeonuat/upstdx/schedulerdaemon
+upstdx_wld | /data/batchapp/softeonuat/upstdx/wavelaunchdaemon
+upstdx_bre | /data/batchapp/softeonuat/upstdx/breruleenginedaemon
+upstdx_bulkp | /data/batchapp/softeonuat/upstdx/bulkpickdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+24100 | upspznswpuat | jboss730eap | swpuat_jb730eap | 8087 | 172.29.60.181:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upspznswpuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-12 00:53:29.960396
+==============================================================================
+
+2026-04-12 00:53:57,847 - 511320 - ERROR - app_validation.py errors for i-0aa0af4bf368a2b47:
+
+2026-04-12 00:53:57,849 - 511320 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-12/UPS-Productionization-UAT-1/172.29.60.181/172.29.60.181-BeforePatching-2026-04-12-00-53-57-848.log
+2026-04-12 00:53:57,849 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-PZN-UAT-SWP/76706e584f82d961
+2026-04-12 00:53:57,928 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6011/5e1645d7227b8bd3
+2026-04-12 00:53:57,980 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6013/9f46eb83b0493b0b
+2026-04-12 00:53:58,041 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6014/3fcee22c94ced2a0
+2026-04-12 00:53:58,096 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6012/ef393eef26540688
+2026-04-12 00:53:58,156 - 511320 - INFO - Deregistering i-0aa0af4bf368a2b47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6015/fff86d9c85fe05a4
+2026-04-12 00:53:58,223 - 511320 - INFO - Stopping EC2 instance: i-0aa0af4bf368a2b47 at 2026-04-12 00:53:58
+2026-04-12 00:55:29,484 - 511320 - INFO - Instance i-0aa0af4bf368a2b47 stopped successfully.
+2026-04-12 00:55:29,908 - 511320 - INFO - Stopped i-0aa0af4bf368a2b47 in 0:01:31.685270
+2026-04-12 00:55:29,909 - 511320 - INFO - Starting EC2 instance: i-0aa0af4bf368a2b47
+2026-04-12 00:55:45,802 - 511320 - INFO - Instance i-0aa0af4bf368a2b47 started successfully.
+2026-04-12 00:55:45,802 - 511320 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0aa0af4bf368a2b47...
+2026-04-12 00:56:35,852 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-PZN-UAT-SWP/76706e584f82d961
+2026-04-12 00:56:36,012 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6011/5e1645d7227b8bd3
+2026-04-12 00:56:36,151 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6013/9f46eb83b0493b0b
+2026-04-12 00:56:36,300 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6014/3fcee22c94ced2a0
+2026-04-12 00:56:36,441 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6012/ef393eef26540688
+2026-04-12 00:56:36,591 - 511320 - INFO - Registering i-0aa0af4bf368a2b47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6015/fff86d9c85fe05a4
+2026-04-12 01:01:37,396 - 511320 - WARNING - i-0aa0af4bf368a2b47 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-PZN-UAT-SWP/76706e584f82d961 after timeout.
+2026-04-12 01:06:38,125 - 511320 - WARNING - i-0aa0af4bf368a2b47 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6011/5e1645d7227b8bd3 after timeout.
+2026-04-12 01:11:38,789 - 511320 - WARNING - i-0aa0af4bf368a2b47 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-UAT-Bastin-NLB-6013/9f46eb83b0493b0b after timeout.
+2026-04-12 01:11:38,981 - 511320 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-12 01:11:38,981 - 511320 - ERROR - Aborting workflow: i-0aa0af4bf368a2b47 is not healthy after restart.
+2026-04-12 01:11:38,984 - 511320 - INFO - Restart Total time: 0:18:32.550854
+2026-04-12 01:11:38,984 - 511320 - INFO - Auto-confirmed services are restarted
+2026-04-12 01:11:38,984 - 511320 - INFO - Confirmed - services are started
+2026-04-12 01:11:39,121 - 511320 - INFO - The following instances have failed the patch: []
+2026-04-12 01:11:39,121 - 511320 - INFO - No instances have failed the patch.
+2026-04-12 01:11:39,121 - 511320 - INFO - Total Patch Process time: 0:26:36.594724
+2026-04-12 01:12:39,756 - 511320 - INFO - Log file ./logs/patching_2026-04-12_UPS-Productionization-UAT-1.log uploaded to s3://q2-2026-aws-security-patching/UPS-Productionization-UAT-1_Patch/2026-04-12/patching_2026-04-12_UPS-Productionization-UAT-1.log

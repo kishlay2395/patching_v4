@@ -1,0 +1,814 @@
+2025-11-22 01:30:03,674 - 7013 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-22 01:46:37,074 - 7013 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-11-22 01:46:37,176 - 7013 - INFO - Log file ./logs/backup_2025-11-22.log uploaded to s3://q3-2025-aws-security-patching/ACT-Fulfillment-App_Patch_Backup/2025-11-22/backup_2025-11-22.log
+2025-11-22 05:30:02,358 - 19873 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-11-22 05:30:02,358 - 19873 - INFO - Script Start Time: 2025-11-22 05:30:02
+2025-11-22 05:30:02,824 - 19873 - INFO - Instance(s) selected for Patching: {'i-0d509ad789f79b45d': '172.25.30.25', 'i-035c31fb28e09cc62': '172.25.30.39'}
+2025-11-22 05:30:02,934 - 19873 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-22 05:30:02,934 - 19873 - INFO - Now patching instances at: 2025-11-22 05:30:02
+2025-11-22 05:30:03,038 - 19873 - INFO - Sending patch command to instance i-0d509ad789f79b45d
+2025-11-22 05:30:03,659 - 19873 - INFO - Command sent successfully to instance i-0d509ad789f79b45d. Command ID: 4889d1ce-7510-46b9-a66a-635f508b6ccb
+2025-11-22 05:30:03,787 - 19873 - INFO - Sending patch command to instance i-035c31fb28e09cc62
+2025-11-22 05:30:03,993 - 19873 - INFO - Command sent successfully to instance i-035c31fb28e09cc62. Command ID: e0784b35-4461-4ac9-8ded-2cd7289d344e
+2025-11-22 05:39:38,262 - 19873 - INFO - All patches applied successfully.
+2025-11-22 05:39:38,263 - 19873 - INFO - Patching end time: 2025-11-22 05:39:38
+2025-11-22 05:39:38,263 - 19873 - INFO - Patch Elapsed time: 0:09:35.329108
+2025-11-22 05:39:38,354 - 19873 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-22 05:39:38,354 - 19873 - INFO - Confirmed - services are stopped
+2025-11-22 05:39:43,095 - 19873 - INFO - Discovered TG map: {'i-0d509ad789f79b45d': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2'], 'i-035c31fb28e09cc62': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2']}
+2025-11-22 05:39:43,581 - 19873 - INFO - Sent app_validation.sh to i-0d509ad789f79b45d (command_id: ccf1ee1d-2aef-45a1-95a3-714c0bf868bc)
+2025-11-22 05:42:44,347 - 19873 - INFO - app_validation.sh output for i-0d509ad789f79b45d:
+
+==============================================================================
+Server Availability Check Started at Sat Nov 22 10:39:43 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.25.30.25
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-25-30-25.us-west-2.compute.internal
+Uptime: up 11 weeks, 6 days, 2 hours, 22 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.25.30.25:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.25.30.25
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 11081 MB
+Free Physical Memory  = 4530 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 2170 MB
+Free Swap Memory  = 8069 MB
+-------------------------------------
+Load Average: 1.49 1.79 1.00 8/476 3668157
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  6.7G   14G  34% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   61G  180G  26% /data
+fs-0d1f1fc167399734f.efs.us-west-2.amazonaws.com:/  8.0E  528G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  8.7M  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.25.30.25 started on Sat Nov 22 10:39:44 UTC 2025
+
+Server IP: 172.25.30.25 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.25.30.25
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.25.30.25
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.25.30.25
+-------------------------------------
+
+Total number of Java process running on this host 172.25.30.25 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.25.30.25
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2008017, Process Name: 187:52
+Process ID: 2009526, Process Name: 200:35
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.25.30.25
+Port 8080:	actwmsprd_j	Running
+Port 8081:	actwmsrfpr_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov 22 10:42:17 UTC 2025
+==============================================================================
+
+
+2025-11-22 05:42:44,347 - 19873 - ERROR - app_validation.sh errors for i-0d509ad789f79b45d:
+
+2025-11-22 05:42:44,349 - 19873 - INFO - Before patching validation saved to: output/validation-2025-11-22/172.25.30.25-BeforePatching-2025-11-22-05-42-44-348.log
+2025-11-22 05:42:44,349 - 19873 - INFO - Deregistering i-0d509ad789f79b45d from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93
+2025-11-22 05:42:44,657 - 19873 - INFO - Deregistering i-0d509ad789f79b45d from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2
+2025-11-22 05:42:44,760 - 19873 - INFO - Stopping EC2 instance: i-0d509ad789f79b45d at 2025-11-22 05:42:44
+2025-11-22 05:45:02,120 - 19873 - INFO - Instance i-0d509ad789f79b45d stopped successfully.
+2025-11-22 05:45:02,498 - 19873 - INFO - Stopped i-0d509ad789f79b45d in 0:02:17.738252
+2025-11-22 05:45:02,498 - 19873 - INFO - Starting EC2 instance: i-0d509ad789f79b45d
+2025-11-22 05:45:18,696 - 19873 - INFO - Instance i-0d509ad789f79b45d started successfully.
+2025-11-22 05:45:18,696 - 19873 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0d509ad789f79b45d...
+2025-11-22 05:45:48,707 - 19873 - INFO - Registering i-0d509ad789f79b45d to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93
+2025-11-22 05:45:49,132 - 19873 - INFO - Registering i-0d509ad789f79b45d to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2
+2025-11-22 05:47:50,477 - 19873 - INFO - Sent app_validation.sh to i-0d509ad789f79b45d (command_id: 12911b98-a395-4980-98cd-0b53e86d9670)
+2025-11-22 05:48:20,758 - 19873 - INFO - app_validation.sh output for i-0d509ad789f79b45d:
+
+==============================================================================
+Server Availability Check Started at Sat Nov 22 10:47:50 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.25.30.25
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-25-30-25.us-west-2.compute.internal
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.25.30.25:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.25.30.25
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 6004 MB
+Free Physical Memory  = 9607 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.39 1.14 0.44 9/538 4555
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  6.5G   14G  33% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   61G  180G  26% /data
+fs-0d1f1fc167399734f.efs.us-west-2.amazonaws.com:/  8.0E  528G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  8.7M  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.25.30.25 started on Sat Nov 22 10:47:50 UTC 2025
+
+Server IP: 172.25.30.25 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.25.30.25
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.25.30.25
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 170
+Printer Details:
+printer BK_01 is idle.  enabled since Fri Nov 21 21:17:21 2025
+printer CSR_LP2 is idle.  enabled since Mon Oct 21 11:26:33 2024
+printer DUMMY_LASER is idle.  enabled since Tue Nov 18 06:16:20 2025
+printer HEM_LABEL_01 is idle.  enabled since Mon Sep 29 16:58:15 2025
+printer HEM_LABEL_02 is idle.  enabled since Thu Sep 11 17:54:09 2025
+printer HEM_LABEL_03 is idle.  enabled since Mon Jul 28 21:51:10 2025
+printer HEM_LABEL_05 is idle.  enabled since Mon Oct 21 11:32:12 2024
+printer HEM_LABEL_07 is idle.  enabled since Mon Nov 17 17:18:47 2025
+printer HEM_LABEL_08 is idle.  enabled since Thu Feb 27 15:32:16 2025
+printer HEM_LABEL_09 is idle.  enabled since Thu Nov 13 13:28:41 2025
+printer HEM_LABEL_10 is idle.  enabled since Thu Nov 13 13:10:22 2025
+printer HEM_LABEL_11 is idle.  enabled since Sun Nov 16 15:57:02 2025
+printer HEM_LABEL_12 is idle.  enabled since Thu Feb 20 02:28:45 2025
+printer HEM_LABEL_TB_01 is idle.  enabled since Mon Oct 21 11:24:26 2024
+printer HEM_LABEL_TB_02 is idle.  enabled since Sun Jul 20 08:36:03 2025
+printer HEM_MLABEL_10 is idle.  enabled since Thu Nov 20 21:08:58 2025
+printer HEM_MRLABEL_01 is idle.  enabled since Wed Oct  8 06:01:41 2025
+printer HEM_MRLABEL_02 is idle.  enabled since Tue Nov  4 14:39:32 2025
+printer HEM_MRLABEL_03 is idle.  enabled since Fri Nov 14 22:04:55 2025
+printer HEM_MRLABEL_04 is idle.  enabled since Wed Nov 19 15:57:51 2025
+printer HEM_MRLABEL_05 is idle.  enabled since Thu Oct 16 22:07:01 2025
+printer HEM_OVAS_02 is idle.  enabled since Wed May 28 14:05:12 2025
+printer HEM_OVAS_03 is idle.  enabled since Mon Oct 21 11:28:12 2024
+printer HEM_PKLABEL_01 is idle.  enabled since Fri Nov 21 21:23:50 2025
+printer HEM_PKLABEL_02 is idle.  enabled since Thu Nov 20 00:21:13 2025
+printer HEM_PKLABEL_03 is idle.  enabled since Fri Nov 21 20:59:09 2025
+printer HEM_PKLABEL_04 is idle.  enabled since Fri Nov 21 19:28:35 2025
+printer HEM_PKLABEL_05 is idle.  enabled since Wed Nov 19 16:51:20 2025
+printer HEM_PKLABEL_06 is idle.  enabled since Fri Nov 21 21:22:05 2025
+printer HEM_PKLABEL_07 is idle.  enabled since Fri Nov 21 18:31:43 2025
+printer HEM_PKPAPER_01 is idle.  enabled since Fri Nov 21 16:31:58 2025
+printer HEM_PKPAPER_02 is idle.  enabled since Wed Nov 12 21:09:57 2025
+printer HEM_PKPAPER_03 is idle.  enabled since Fri Nov 21 17:33:07 2025
+printer HEM_PKPAPER_05 is idle.  enabled since Thu Oct 30 16:32:24 2025
+printer HEM_PKPAPER_06 is idle.  enabled since Fri Nov 21 18:42:39 2025
+printer HEM_PKPAPER_07 is idle.  enabled since Fri Oct 17 20:16:27 2025
+printer HEM_SLABEL_01 is idle.  enabled since Fri Nov 21 21:13:15 2025
+printer HEM_SLABEL_02 is idle.  enabled since Fri Nov 21 14:44:33 2025
+printer HEM_SLABEL_03 is idle.  enabled since Fri Nov 21 21:24:23 2025
+printer HEM_SLABEL_04 is idle.  enabled since Fri Nov 21 21:25:13 2025
+printer HEM_SLABEL_05 is idle.  enabled since Tue Nov 11 02:51:37 2025
+printer HEM_SLABEL_06 is idle.  enabled since Fri Nov 21 21:25:27 2025
+printer HEM_SLABEL_07 is idle.  enabled since Sat Nov 15 00:01:26 2025
+printer HEM_SLABEL_08 is idle.  enabled since Fri Nov 21 20:15:36 2025
+printer HEM_SLABEL_09 is idle.  enabled since Fri Nov 21 20:14:55 2025
+printer HEM_SLABEL_10 is idle.  enabled since Tue Nov 18 17:56:10 2025
+printer HEM_SLABEL_11 is idle.  enabled since Tue Nov 18 17:56:12 2025
+printer HEM_UAT_LABEL_01 is idle.  enabled since Fri Feb 28 20:28:51 2025
+printer HEM_UAT_PAPER_01 is idle.  enabled since Fri Jan 24 20:04:31 2025
+printer HEM_UATLABEL_02 is idle.  enabled since Wed Aug 20 20:32:21 2025
+printer HEM_UATPAPER_01 is idle.  enabled since Fri Oct 17 22:37:13 2025
+printer HEM_UPAPER_01 is idle.  enabled since Wed Jun 11 23:21:07 2025
+printer HEM_WHLABEL_01 is idle.  enabled since Fri Aug  1 00:53:28 2025
+printer HEM_WHLABEL_02 is idle.  enabled since Fri Nov 21 21:16:34 2025
+printer HEM_WVAS_01 is idle.  enabled since Tue Apr 22 15:50:04 2025
+printer HEMI_LABEL_01 is idle.  enabled since Tue Aug 19 18:41:04 2025
+printer HEMO_LABEL_01 is idle.  enabled since Wed Oct  1 20:25:15 2025
+printer HLPACKLZ7 is idle.  enabled since Mon Oct 21 11:39:16 2024
+printer HLPR_01 is idle.  enabled since Mon Jul  7 12:38:25 2025
+printer HLPR_02 is idle.  enabled since Fri Nov 21 23:53:56 2025
+printer HLPR_04 is idle.  enabled since Wed Aug 20 13:41:44 2025
+printer HMLP_MB01 is idle.  enabled since Mon Oct 21 11:35:55 2024
+printer INBOUND_PAPER is idle.  enabled since Mon Apr 14 18:54:28 2025
+printer ML_LABEL_02 is idle.  enabled since Wed Nov 19 21:05:45 2025
+printer ML_LABEL_03 is idle.  enabled since Mon Oct 21 10:39:34 2024
+printer ML_LABEL_04 is idle.  enabled since Fri Sep 12 01:46:04 2025
+printer ML_LABEL_06 is idle.  enabled since Fri Sep 19 09:28:07 2025
+printer ML_LABEL_07 is idle.  enabled since Mon Oct 21 10:41:59 2024
+printer ML_LABEL_08 is idle.  enabled since Mon Oct 21 10:41:50 2024
+printer ML_LABEL_09 is idle.  enabled since Fri Nov 21 04:17:00 2025
+printer ML_LABEL_10 is idle.  enabled since Wed Jan 29 16:50:05 2025
+printer ML_LABEL_11 is idle.  enabled since Mon Oct 21 10:43:23 2024
+printer ML_LABEL_13 is idle.  enabled since Mon Oct 21 10:43:42 2024
+printer ML_LABEL_14 is idle.  enabled since Mon Nov 17 18:35:24 2025
+printer ML_LABEL_14_UNIV is idle.  enabled since Fri Nov 21 18:31:38 2025
+printer ML_PKLABEL_05 is idle.  enabled since Fri Jun 13 23:17:42 2025
+printer ML_PKLABEL_06 is idle.  enabled since Fri Jan 24 20:57:41 2025
+printer ML_PKLABEL_07 is idle.  enabled since Fri Jan 24 20:59:29 2025
+printer ML_PKLABEL_08 is idle.  enabled since Fri Jan 24 21:01:12 2025
+printer ML_PKLABEL_09 is idle.  enabled since Fri Nov 21 07:16:56 2025
+printer ML_PKLABEL_10 is idle.  enabled since Fri Nov 21 22:23:14 2025
+printer ML_WHLABEL_11 is idle.  enabled since Wed Apr 16 18:24:47 2025
+printer ML_WHLABEL_12 is idle.  enabled since Wed Oct 30 16:27:06 2024
+printer MLCOPY_17 is idle.  enabled since Tue May 27 14:20:26 2025
+printer MLPR_03_COLOR is idle.  enabled since Wed Oct 23 05:44:17 2024
+printer MLPR_13 is idle.  enabled since Fri Nov 21 21:56:49 2025
+printer MLPR_14 is idle.  enabled since Fri Apr 18 19:47:23 2025
+printer MLPR_15 is idle.  enabled since Wed May 14 17:47:26 2025
+printer MLPR_16 is idle.  enabled since Wed Apr 23 10:03:16 2025
+printer MLPR_18 is idle.  enabled since Mon Oct 21 11:08:18 2024
+printer MLPR_19 is idle.  enabled since Mon Oct 21 11:11:14 2024
+printer MLPR_20 is idle.  enabled since Mon Aug 11 14:25:37 2025
+printer MUNI_PKLABEL_01 is idle.  enabled since Thu Nov 20 20:41:48 2025
+printer MUNI_PKLABEL_02 is idle.  enabled since Mon Nov 17 15:09:02 2025
+printer MUNI_PKLABEL_03 is idle.  enabled since Wed Nov 12 20:36:10 2025
+printer MUNI_PKLABEL_04 is idle.  enabled since Wed Nov 12 23:38:18 2025
+printer MUNI_PKLABEL_05 is idle.  enabled since Wed Nov 12 13:19:33 2025
+printer MUNI_PKLABEL_06 is idle.  enabled since Fri Nov 21 21:00:40 2025
+printer MUNI_PKPAPER_01 is idle.  enabled since Wed Nov  5 04:41:15 2025
+printer MUNI_PKPAPER_02 is idle.  enabled since Mon Oct 27 17:03:13 2025
+printer MUNI_PKPAPER_03 is idle.  enabled since Mon May 12 18:34:39 2025
+printer MUNI_PKPAPER_04 is idle.  enabled since Fri Feb 28 18:44:47 2025
+printer MUNI_PKPAPER_05 is idle.  enabled since Wed Nov  5 10:06:12 2025
+printer MUNI_PKPAPER_06 is idle.  enabled since Thu Aug 14 19:56:07 2025
+printer NUNI_PKLABEL_01 is idle.  enabled since Sat Nov 22 06:28:37 2025
+printer NUNI_PKLABEL_02 is idle.  enabled since Fri Nov 21 20:21:20 2025
+printer NUNI_PKLABEL_03 is idle.  enabled since Mon Oct 27 21:34:02 2025
+printer NUNI_PKLABEL_04 is idle.  enabled since Tue Oct 28 22:19:49 2025
+printer NUNI_PKLABEL_05 is idle.  enabled since Tue Nov  4 19:39:17 2025
+printer NUNI_PKLABEL_06 is idle.  enabled since Fri Oct  3 20:24:06 2025
+printer NUNI_PKPAPER_01 is idle.  enabled since Sat Nov 22 06:28:39 2025
+printer NUNI_PKPAPER_02 is idle.  enabled since Sat Nov 22 06:32:16 2025
+printer NUNI_PKPAPER_03 is idle.  enabled since Fri Nov 21 05:18:47 2025
+printer NUNI_PKPAPER_04 is idle.  enabled since Tue Oct 28 20:18:43 2025
+printer NUNI_PKPAPER_05 is idle.  enabled since Fri Oct  3 04:16:54 2025
+printer NUNI_PKPAPER_06 is idle.  enabled since Wed Oct  1 02:38:52 2025
+printer NUPACK03 is idle.  enabled since Fri Nov 21 05:16:18 2025
+printer OFFICE_LPFO_02 is idle.  enabled since Fri Jan 24 22:13:13 2025
+printer OFFICE_LPFO_08 is idle.  enabled since Mon Oct 21 11:34:10 2024
+printer OFFICE_LPFO_10 is idle.  enabled since Fri Apr  4 15:35:06 2025
+printer OFFICELP1 is idle.  enabled since Thu Jun 19 16:13:50 2025
+printer PACK_LPFO_03 is idle.  enabled since Fri Jun  6 13:19:09 2025
+printer PACK_LPFO_07 is idle.  enabled since Wed May 21 19:37:30 2025
+printer PACK_LZHP_03 is idle.  enabled since Mon Oct 21 11:38:40 2024
+printer PACKSTATIONLZ2 is idle.  enabled since Fri Jan 24 21:31:19 2025
+printer PACKSTATIONLZ4 is idle.  enabled since Fri Jan 24 21:33:03 2025
+printer PACKSTATIONLZ5 is idle.  enabled since Fri Jan 24 21:35:01 2025
+printer PACKSTATIONLZ6 is idle.  enabled since Fri Jan 24 21:36:27 2025
+printer PACKSTATIONLZ7 is idle.  enabled since Thu Jan 23 11:37:22 2025
+printer PACKSTATIONLZ8 is idle.  enabled since Fri Jan 24 21:38:49 2025
+printer SOLUTION_PRINTER is idle.  enabled since Mon Jun 23 14:04:53 2025
+printer SOLUTION_PRINTER_UNI is idle.  enabled since Mon Jun 16 18:03:29 2025
+printer SUNI_CLABEL_01 is idle.  enabled since Thu Mar  6 21:21:50 2025
+printer SUNI_OLABEL_01 is idle.  enabled since Mon Apr 21 23:21:15 2025
+printer SUNI_PKLABEL_01 is idle.  enabled since Thu Apr 17 15:20:23 2025
+printer SUNI_PKLABEL_02 is idle.  enabled since Mon Oct 27 20:16:48 2025
+printer SUNI_PKLABEL_03 is idle.  enabled since Sat Nov 22 06:15:28 2025
+printer SUNI_PKLABEL_04 is idle.  enabled since Sat Nov 22 05:48:31 2025
+printer SUNI_PKLABEL_05 is idle.  enabled since Sat Nov 22 05:34:20 2025
+printer SUNI_PKLABEL_06 is idle.  enabled since Tue Nov 11 16:50:34 2025
+printer SUNI_PKLABEL_07 is idle.  enabled since Wed Nov 12 23:07:51 2025
+printer SUNI_PKLABEL_08 is idle.  enabled since Mon Oct 27 23:17:09 2025
+printer SUNI_PKPAPER_01 is idle.  enabled since Mon Mar 31 20:36:38 2025
+printer SUNI_PKPAPER_02 is idle.  enabled since Thu Oct  2 22:09:10 2025
+printer SUNI_PKPAPER_03 is idle.  enabled since Sat Nov 22 06:15:29 2025
+printer SUNI_PKPAPER_04 is idle.  enabled since Sat Nov 22 06:15:23 2025
+printer SUNI_PKPAPER_05 is idle.  enabled since Sat Nov 22 05:34:21 2025
+printer SUNI_PKPAPER_06 is idle.  enabled since Mon Oct 21 11:11:57 2024
+printer SUNI_PKPAPER_07 is idle.  enabled since Mon Oct 21 11:12:21 2024
+printer SUNI_PKPAPER_08 is idle.  enabled since Fri Oct 17 01:43:20 2025
+printer SUNI_TBLABEL_01 is idle.  enabled since Fri Apr 11 13:52:34 2025
+printer SUNI_TBLABEL_02 is idle.  enabled since Mon Oct 21 11:00:41 2024
+printer SUNI_TBLABEL_03 is idle.  enabled since Fri Jan 24 21:47:26 2025
+printer SUNID_LABEL_01 is idle.  enabled since Mon Oct 21 10:57:19 2024
+printer SUNIV_PAPER_01 is idle.  enabled since Tue Feb  4 22:35:40 2025
+printer THARANCO_LABEL is idle.  enabled since Mon Sep  8 15:53:09 2025
+printer TOSHIBA_RPT_PRINTER3 is idle.  enabled since Fri Jan 24 21:52:39 2025
+printer UNI_MLPR_18 is idle.  enabled since Wed Mar 19 18:59:21 2025
+printer UNI_MPACK_09 is idle.  enabled since Fri Nov 21 22:28:42 2025
+printer UNI_UATLABEL_01 is idle.  enabled since Fri Oct 31 19:55:48 2025
+printer UNI_UATPAPER_01 is idle.  enabled since Tue Nov 11 16:31:25 2025
+printer UNIV_MBLABEL_01 is idle.  enabled since Thu Nov 20 09:04:11 2025
+printer UNIV_MBLABEL_02 is idle.  enabled since Fri Nov 21 13:49:47 2025
+printer UNIV_MBLABEL_03 is idle.  enabled since Thu Nov 13 00:19:04 2025
+printer UNIV_MBLABEL_04 is idle.  enabled since Sat Aug 16 03:15:49 2025
+printer UNIV_PKLABEL_01 is idle.  enabled since Fri Nov 21 18:02:23 2025
+printer UNIV_PKLABEL_02 is idle.  enabled since Fri Nov 21 22:10:17 2025
+printer UNIV_PKPAPER_01 is idle.  enabled since Fri Feb 21 23:25:24 2025
+printer UNIV_PKPAPER_02 is idle.  enabled since Mon Feb  3 23:54:34 2025
+printer YOHANA is idle.  enabled since Mon Oct 21 11:26:14 2024
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.25.30.25
+-------------------------------------
+
+Total number of Java process running on this host 172.25.30.25 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.25.30.25
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3641, Process Name: 0:53
+Process ID: 3923, Process Name: 0:55
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.25.30.25
+Port 8080:	actwmsprd_jb74	Running
+Port 8081:	actwmsrfpr_jb7	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov 22 10:47:54 UTC 2025
+==============================================================================
+
+
+2025-11-22 05:48:20,759 - 19873 - ERROR - app_validation.sh errors for i-0d509ad789f79b45d:
+
+2025-11-22 05:48:20,761 - 19873 - INFO - After patching validation saved to: output/validation-2025-11-22/172.25.30.25-AfterPatching-2025-11-22-05-48-20-760.log
+2025-11-22 05:48:20,805 - 19873 - INFO - Validation comparison report generated: output/validation-2025-11-22/172.25.30.25-Validation-details-2025-11-22-05-48-20-760.log
+2025-11-22 05:48:20,876 - 19873 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-22 05:48:20,876 - 19873 - INFO - HTML validation report email sent for i-0d509ad789f79b45d
+2025-11-22 05:48:21,125 - 19873 - INFO - Started i-0d509ad789f79b45d in 0:03:18.626485
+2025-11-22 05:48:21,125 - 19873 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-11-22 05:50:21,530 - 19873 - INFO - Sent app_validation.sh to i-035c31fb28e09cc62 (command_id: 3284c492-9178-4ada-a49a-f52280aed515)
+2025-11-22 05:52:52,106 - 19873 - INFO - app_validation.sh output for i-035c31fb28e09cc62:
+
+==============================================================================
+Server Availability Check Started at Sat Nov 22 10:50:21 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.25.30.39
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-25-30-39.us-west-2.compute.internal
+Uptime: up 11 weeks, 6 days, 2 hours, 37 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.25.30.39:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.25.30.39
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 11526 MB
+Free Physical Memory  = 4085 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 1672 MB
+Free Swap Memory  = 8567 MB
+-------------------------------------
+Load Average: 1.00 1.11 1.03 6/470 3498833
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  6.3G   14G  32% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   57G  184G  24% /data
+fs-0d1f1fc167399734f.efs.us-west-2.amazonaws.com:/  8.0E  528G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  8.7M  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.25.30.39 started on Sat Nov 22 10:50:21 UTC 2025
+
+Server IP: 172.25.30.39 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.25.30.39
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.25.30.39
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.25.30.39
+-------------------------------------
+
+Total number of Java process running on this host 172.25.30.39 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.25.30.39
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 1874779, Process Name: 180:41
+Process ID: 1876264, Process Name: 194:58
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.25.30.39
+Port 8080:	actwmsprd_j	Running
+Port 8081:	actwmsrfpr_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov 22 10:52:49 UTC 2025
+==============================================================================
+
+
+2025-11-22 05:52:52,106 - 19873 - ERROR - app_validation.sh errors for i-035c31fb28e09cc62:
+
+2025-11-22 05:52:52,108 - 19873 - INFO - Before patching validation saved to: output/validation-2025-11-22/172.25.30.39-BeforePatching-2025-11-22-05-52-52-107.log
+2025-11-22 05:52:52,109 - 19873 - INFO - Deregistering i-035c31fb28e09cc62 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93
+2025-11-22 05:52:52,429 - 19873 - INFO - Deregistering i-035c31fb28e09cc62 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2
+2025-11-22 05:52:52,540 - 19873 - INFO - Stopping EC2 instance: i-035c31fb28e09cc62 at 2025-11-22 05:52:52
+2025-11-22 05:54:39,533 - 19873 - INFO - Instance i-035c31fb28e09cc62 stopped successfully.
+2025-11-22 05:54:39,762 - 19873 - INFO - Stopped i-035c31fb28e09cc62 in 0:01:47.221816
+2025-11-22 05:54:39,762 - 19873 - INFO - Starting EC2 instance: i-035c31fb28e09cc62
+2025-11-22 05:54:55,839 - 19873 - INFO - Instance i-035c31fb28e09cc62 started successfully.
+2025-11-22 05:54:55,839 - 19873 - INFO - Waiting 30 seconds for SSM agent to be ready on i-035c31fb28e09cc62...
+2025-11-22 05:55:25,869 - 19873 - INFO - Registering i-035c31fb28e09cc62 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-Desktop/811ba64491c32e93
+2025-11-22 05:55:26,287 - 19873 - INFO - Registering i-035c31fb28e09cc62 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ACT-Prod-RF/24ebb27f44d93bd2
+2025-11-22 05:57:27,567 - 19873 - INFO - Sent app_validation.sh to i-035c31fb28e09cc62 (command_id: 266690ad-e152-42de-90dc-42a74ec59bb4)
+2025-11-22 05:57:57,827 - 19873 - INFO - app_validation.sh output for i-035c31fb28e09cc62:
+
+==============================================================================
+Server Availability Check Started at Sat Nov 22 10:57:27 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.25.30.39
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-25-30-39.us-west-2.compute.internal
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.25.30.39:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.25.30.39
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 5871 MB
+Free Physical Memory  = 9740 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.16 0.96 0.37 8/467 4611
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  6.0G   14G  31% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   56G  185G  24% /data
+fs-0d1f1fc167399734f.efs.us-west-2.amazonaws.com:/  8.0E  528G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  8.7M  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.25.30.39 started on Sat Nov 22 10:57:27 UTC 2025
+
+Server IP: 172.25.30.39 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.25.30.39
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.25.30.39
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 170
+Printer Details:
+printer BK_01 is idle.  enabled since Fri Nov 14 22:24:39 2025
+printer CSR_LP2 is idle.  enabled since Fri Sep 19 23:03:08 2025
+printer DUMMY_LASER is idle.  enabled since Sat Nov 22 00:45:45 2025
+printer HEM_LABEL_01 is idle.  enabled since Wed Nov 12 20:05:05 2025
+printer HEM_LABEL_02 is idle.  enabled since Mon Nov 10 19:54:32 2025
+printer HEM_LABEL_03 is idle.  enabled since Mon Nov 10 19:55:29 2025
+printer HEM_LABEL_05 is idle.  enabled since Wed Apr 16 22:08:12 2025
+printer HEM_LABEL_07 is idle.  enabled since Sat Aug 16 17:26:47 2025
+printer HEM_LABEL_08 is idle.  enabled since Wed Mar 26 20:44:07 2025
+printer HEM_LABEL_09 is idle.  enabled since Mon Oct 21 11:32:58 2024
+printer HEM_LABEL_10 is idle.  enabled since Thu Sep 11 15:47:54 2025
+printer HEM_LABEL_11 is idle.  enabled since Sat Feb 22 00:25:20 2025
+printer HEM_LABEL_12 is idle.  enabled since Mon Oct 21 11:28:38 2024
+printer HEM_LABEL_TB_01 is idle.  enabled since Fri Apr 18 19:52:51 2025
+printer HEM_LABEL_TB_02 is idle.  enabled since Sun Apr 20 05:37:31 2025
+printer HEM_MLABEL_10 is idle.  enabled since Fri Nov 21 21:32:51 2025
+printer HEM_MRLABEL_01 is idle.  enabled since Fri Nov 14 21:53:48 2025
+printer HEM_MRLABEL_02 is idle.  enabled since Fri Nov 14 22:03:45 2025
+printer HEM_MRLABEL_03 is idle.  enabled since Fri Nov 14 15:38:12 2025
+printer HEM_MRLABEL_04 is idle.  enabled since Thu Nov 20 00:00:28 2025
+printer HEM_MRLABEL_05 is idle.  enabled since Thu Nov  6 19:41:52 2025
+printer HEM_OVAS_02 is idle.  enabled since Sun Feb  9 20:55:22 2025
+printer HEM_OVAS_03 is idle.  enabled since Thu Feb 13 20:56:54 2025
+printer HEM_PKLABEL_01 is idle.  enabled since Fri Nov 21 19:09:22 2025
+printer HEM_PKLABEL_02 is idle.  enabled since Fri Nov 21 21:07:26 2025
+printer HEM_PKLABEL_03 is idle.  enabled since Fri Nov 21 19:58:38 2025
+printer HEM_PKLABEL_04 is idle.  enabled since Fri Nov 21 21:20:54 2025
+printer HEM_PKLABEL_05 is idle.  enabled since Fri Nov 21 21:09:19 2025
+printer HEM_PKLABEL_06 is idle.  enabled since Wed Nov 19 14:39:53 2025
+printer HEM_PKLABEL_07 is idle.  enabled since Wed Nov 19 22:21:53 2025
+printer HEM_PKPAPER_01 is idle.  enabled since Tue Nov 18 17:30:20 2025
+printer HEM_PKPAPER_02 is idle.  enabled since Tue Nov 11 15:41:49 2025
+printer HEM_PKPAPER_03 is idle.  enabled since Tue Oct 28 18:46:39 2025
+printer HEM_PKPAPER_05 is idle.  enabled since Thu Nov 13 16:57:46 2025
+printer HEM_PKPAPER_06 is idle.  enabled since Tue Aug 12 16:39:08 2025
+printer HEM_PKPAPER_07 is idle.  enabled since Mon Oct 20 13:36:19 2025
+printer HEM_SLABEL_01 is idle.  enabled since Thu Nov 20 19:59:26 2025
+printer HEM_SLABEL_02 is idle.  enabled since Thu Nov 20 21:21:31 2025
+printer HEM_SLABEL_03 is idle.  enabled since Thu Nov 20 21:20:55 2025
+printer HEM_SLABEL_04 is idle.  enabled since Thu Nov 20 21:21:56 2025
+printer HEM_SLABEL_05 is idle.  enabled since Thu Jun 19 12:01:05 2025
+printer HEM_SLABEL_06 is idle.  enabled since Thu Nov 20 21:21:14 2025
+printer HEM_SLABEL_07 is idle.  enabled since Sat Nov  1 01:23:18 2025
+printer HEM_SLABEL_08 is idle.  enabled since Fri Nov 21 16:49:51 2025
+printer HEM_SLABEL_09 is idle.  enabled since Fri Nov 21 17:25:43 2025
+printer HEM_SLABEL_10 is idle.  enabled since Thu Oct 30 19:06:04 2025
+printer HEM_SLABEL_11 is idle.  enabled since Thu Oct 30 19:05:55 2025
+printer HEM_UAT_LABEL_01 is idle.  enabled since Fri Jan 24 19:59:35 2025
+printer HEM_UAT_PAPER_01 is idle.  enabled since Fri Jan 24 20:04:38 2025
+printer HEM_UATLABEL_02 is idle.  enabled since Fri Sep 19 06:17:14 2025
+printer HEM_UATPAPER_01 is idle.  enabled since Tue Jun 10 19:05:59 2025
+printer HEM_UPAPER_01 is idle.  enabled since Mon Mar 10 17:44:53 2025
+printer HEM_WHLABEL_01 is idle.  enabled since Mon Oct 21 11:24:55 2024
+printer HEM_WHLABEL_02 is idle.  enabled since Tue Oct 28 19:27:23 2025
+printer HEM_WVAS_01 is idle.  enabled since Thu Oct  2 18:24:33 2025
+printer HEMI_LABEL_01 is idle.  enabled since Wed Aug 13 19:24:35 2025
+printer HEMO_LABEL_01 is idle.  enabled since Thu Sep 18 22:00:11 2025
+printer HLPACKLZ7 is idle.  enabled since Mon Oct 21 11:39:22 2024
+printer HLPR_01 is idle.  enabled since Fri Jun 27 13:52:53 2025
+printer HLPR_02 is idle.  enabled since Mon Nov 17 16:40:46 2025
+printer HLPR_04 is idle.  enabled since Tue Sep 23 20:19:43 2025
+printer HMLP_MB01 is idle.  enabled since Mon Oct 21 11:36:01 2024
+printer INBOUND_PAPER is idle.  enabled since Mon Apr 14 18:54:34 2025
+printer ML_LABEL_02 is idle.  enabled since Tue Nov 18 22:15:19 2025
+printer ML_LABEL_03 is idle.  enabled since Wed Mar 26 18:39:57 2025
+printer ML_LABEL_04 is idle.  enabled since Wed Apr  2 20:45:59 2025
+printer ML_LABEL_06 is idle.  enabled since Thu Mar 20 00:19:26 2025
+printer ML_LABEL_07 is idle.  enabled since Mon Oct 21 10:42:05 2024
+printer ML_LABEL_08 is idle.  enabled since Mon Oct 21 10:41:56 2024
+printer ML_LABEL_09 is idle.  enabled since Sat Nov 15 04:02:18 2025
+printer ML_LABEL_10 is idle.  enabled since Sun Aug  3 02:27:32 2025
+printer ML_LABEL_11 is idle.  enabled since Mon Oct 21 10:43:29 2024
+printer ML_LABEL_13 is idle.  enabled since Mon Oct 21 10:43:48 2024
+printer ML_LABEL_14 is idle.  enabled since Thu Nov 20 16:41:46 2025
+printer ML_LABEL_14_UNIV is idle.  enabled since Tue Nov 18 15:59:56 2025
+printer ML_PKLABEL_05 is idle.  enabled since Fri Jan 24 20:56:01 2025
+printer ML_PKLABEL_06 is idle.  enabled since Wed Apr 16 14:06:31 2025
+printer ML_PKLABEL_07 is idle.  enabled since Thu Mar 13 13:16:06 2025
+printer ML_PKLABEL_08 is idle.  enabled since Sat Mar  8 19:23:01 2025
+printer ML_PKLABEL_09 is idle.  enabled since Sat Nov 15 04:01:12 2025
+printer ML_PKLABEL_10 is idle.  enabled since Wed Nov 19 15:45:35 2025
+printer ML_WHLABEL_11 is idle.  enabled since Wed Apr 16 18:24:53 2025
+printer ML_WHLABEL_12 is idle.  enabled since Fri Feb 28 14:42:56 2025
+printer MLCOPY_17 is idle.  enabled since Thu Sep 11 22:25:03 2025
+printer MLPR_03_COLOR is idle.  enabled since Wed Oct 23 05:44:23 2024
+printer MLPR_13 is idle.  enabled since Sat Nov 15 00:56:21 2025
+printer MLPR_14 is idle.  enabled since Thu Apr  3 18:16:20 2025
+printer MLPR_15 is idle.  enabled since Fri May 16 15:42:45 2025
+printer MLPR_16 is idle.  enabled since Fri Mar 28 00:19:46 2025
+printer MLPR_18 is idle.  enabled since Thu Jul 24 21:46:04 2025
+printer MLPR_19 is idle.  enabled since Mon Oct 21 11:11:20 2024
+printer MLPR_20 is idle.  enabled since Wed Jul  9 17:58:40 2025
+printer MUNI_PKLABEL_01 is idle.  enabled since Tue Nov 18 19:20:54 2025
+printer MUNI_PKLABEL_02 is idle.  enabled since Sat Nov 22 05:14:24 2025
+printer MUNI_PKLABEL_03 is idle.  enabled since Wed Nov 12 20:41:40 2025
+printer MUNI_PKLABEL_04 is idle.  enabled since Fri Nov  7 20:35:28 2025
+printer MUNI_PKLABEL_05 is idle.  enabled since Fri Nov 21 21:30:34 2025
+printer MUNI_PKLABEL_06 is idle.  enabled since Tue Nov 18 14:52:51 2025
+printer MUNI_PKPAPER_01 is idle.  enabled since Sun Aug 31 18:14:09 2025
+printer MUNI_PKPAPER_02 is idle.  enabled since Wed Feb 19 22:09:12 2025
+printer MUNI_PKPAPER_03 is idle.  enabled since Fri Jun 13 15:43:38 2025
+printer MUNI_PKPAPER_04 is idle.  enabled since Mon Mar  3 22:35:39 2025
+printer MUNI_PKPAPER_05 is idle.  enabled since Tue Mar  4 18:15:16 2025
+printer MUNI_PKPAPER_06 is idle.  enabled since Thu Apr 10 17:16:12 2025
+printer NUNI_PKLABEL_01 is idle.  enabled since Sat Nov 22 05:14:31 2025
+printer NUNI_PKLABEL_02 is idle.  enabled since Sat Nov 22 05:10:36 2025
+printer NUNI_PKLABEL_03 is idle.  enabled since Mon Oct 27 21:33:57 2025
+printer NUNI_PKLABEL_04 is idle.  enabled since Thu Nov 13 13:15:57 2025
+printer NUNI_PKLABEL_05 is idle.  enabled since Wed Nov 12 22:47:52 2025
+printer NUNI_PKLABEL_06 is idle.  enabled since Tue Oct  7 04:11:56 2025
+printer NUNI_PKPAPER_01 is idle.  enabled since Fri Nov 21 22:50:03 2025
+printer NUNI_PKPAPER_02 is idle.  enabled since Sat Nov 22 04:58:22 2025
+printer NUNI_PKPAPER_03 is idle.  enabled since Sat Nov 22 06:12:38 2025
+printer NUNI_PKPAPER_04 is idle.  enabled since Wed Oct  1 03:09:03 2025
+printer NUNI_PKPAPER_05 is idle.  enabled since Wed Oct  1 03:31:57 2025
+printer NUNI_PKPAPER_06 is idle.  enabled since Fri Oct  3 04:09:21 2025
+printer NUPACK03 is idle.  enabled since Sat Nov 22 06:44:11 2025
+printer OFFICE_LPFO_02 is idle.  enabled since Fri Jan 24 22:13:19 2025
+printer OFFICE_LPFO_08 is idle.  enabled since Mon Oct 21 11:34:16 2024
+printer OFFICE_LPFO_10 is idle.  enabled since Thu Jul 31 21:37:08 2025
+printer OFFICELP1 is idle.  enabled since Thu Jun 19 16:13:56 2025
+printer PACK_LPFO_03 is idle.  enabled since Wed Nov  5 15:56:53 2025
+printer PACK_LPFO_07 is idle.  enabled since Sun Apr 13 15:01:29 2025
+printer PACK_LZHP_03 is idle.  enabled since Mon Oct 21 11:38:46 2024
+printer PACKSTATIONLZ2 is idle.  enabled since Fri Jan 24 21:31:25 2025
+printer PACKSTATIONLZ4 is idle.  enabled since Fri Jan 24 21:33:09 2025
+printer PACKSTATIONLZ5 is idle.  enabled since Fri Jan 24 21:35:07 2025
+printer PACKSTATIONLZ6 is idle.  enabled since Fri Jan 24 21:36:33 2025
+printer PACKSTATIONLZ7 is idle.  enabled since Thu Jan 23 11:37:28 2025
+printer PACKSTATIONLZ8 is idle.  enabled since Fri Jan 24 21:38:55 2025
+printer SOLUTION_PRINTER is idle.  enabled since Mon Jun 16 18:02:46 2025
+printer SOLUTION_PRINTER_UNI is idle.  enabled since Mon Jun 16 18:03:35 2025
+printer SUNI_CLABEL_01 is idle.  enabled since Thu Mar 13 00:33:59 2025
+printer SUNI_OLABEL_01 is idle.  enabled since Mon Apr 21 23:21:21 2025
+printer SUNI_PKLABEL_01 is idle.  enabled since Thu Mar 27 22:58:15 2025
+printer SUNI_PKLABEL_02 is idle.  enabled since Tue Nov 18 13:29:12 2025
+printer SUNI_PKLABEL_03 is idle.  enabled since Wed Nov 19 04:31:01 2025
+printer SUNI_PKLABEL_04 is idle.  enabled since Fri Nov 21 05:10:41 2025
+printer SUNI_PKLABEL_05 is idle.  enabled since Fri Nov 21 15:42:56 2025
+printer SUNI_PKLABEL_06 is idle.  enabled since Thu May 22 21:00:43 2025
+printer SUNI_PKLABEL_07 is idle.  enabled since Sun Nov  2 05:49:11 2025
+printer SUNI_PKLABEL_08 is idle.  enabled since Sat Oct  4 04:22:37 2025
+printer SUNI_PKPAPER_01 is idle.  enabled since Thu Feb 27 18:36:01 2025
+printer SUNI_PKPAPER_02 is idle.  enabled since Wed Nov 12 00:47:14 2025
+printer SUNI_PKPAPER_03 is idle.  enabled since Wed Nov 19 04:40:25 2025
+printer SUNI_PKPAPER_04 is idle.  enabled since Fri Nov 21 05:10:42 2025
+printer SUNI_PKPAPER_05 is idle.  enabled since Fri Nov 21 05:16:31 2025
+printer SUNI_PKPAPER_06 is idle.  enabled since Thu Oct 24 05:16:06 2024
+printer SUNI_PKPAPER_07 is idle.  enabled since Mon Oct 21 11:12:27 2024
+printer SUNI_PKPAPER_08 is idle.  enabled since Wed Mar 19 18:13:31 2025
+printer SUNI_TBLABEL_01 is idle.  enabled since Mon Oct 21 11:00:23 2024
+printer SUNI_TBLABEL_02 is idle.  enabled since Mon Oct 21 11:00:47 2024
+printer SUNI_TBLABEL_03 is idle.  enabled since Wed Mar  5 15:08:14 2025
+printer SUNID_LABEL_01 is idle.  enabled since Wed Mar 26 16:40:08 2025
+printer SUNIV_PAPER_01 is idle.  enabled since Tue Feb  4 22:35:46 2025
+printer THARANCO_LABEL is idle.  enabled since Tue May 13 13:26:59 2025
+printer TOSHIBA_RPT_PRINTER3 is idle.  enabled since Fri Jan 24 21:52:45 2025
+printer UNI_MLPR_18 is idle.  enabled since Wed Mar 19 18:59:27 2025
+printer UNI_MPACK_09 is idle.  enabled since Sat Nov 22 01:52:48 2025
+printer UNI_UATLABEL_01 is idle.  enabled since Thu Sep 11 16:24:26 2025
+printer UNI_UATPAPER_01 is idle.  enabled since Thu Nov 20 16:36:15 2025
+printer UNIV_MBLABEL_01 is idle.  enabled since Mon Oct 20 21:32:04 2025
+printer UNIV_MBLABEL_02 is idle.  enabled since Thu Nov 20 21:12:54 2025
+printer UNIV_MBLABEL_03 is idle.  enabled since Wed Sep  3 01:04:10 2025
+printer UNIV_MBLABEL_04 is idle.  enabled since Wed May 21 03:49:33 2025
+printer UNIV_PKLABEL_01 is idle.  enabled since Thu Nov 20 21:53:34 2025
+printer UNIV_PKLABEL_02 is idle.  enabled since Wed Nov 19 21:02:39 2025
+printer UNIV_PKPAPER_01 is idle.  enabled since Wed Feb  5 22:21:04 2025
+printer UNIV_PKPAPER_02 is idle.  enabled since Thu Feb  6 18:30:31 2025
+printer YOHANA is idle.  enabled since Fri Sep 19 23:00:38 2025
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.25.30.39
+-------------------------------------
+
+Total number of Java process running on this host 172.25.30.39 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.25.30.39
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3850, Process Name: 0:51
+Process ID: 3858, Process Name: 0:50
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.25.30.39
+Port 8080:	actwmsprd_jb74	Running
+Port 8081:	actwmsrfpr_jb7	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov 22 10:57:31 UTC 2025
+==============================================================================
+
+
+2025-11-22 05:57:57,827 - 19873 - ERROR - app_validation.sh errors for i-035c31fb28e09cc62:
+
+2025-11-22 05:57:57,829 - 19873 - INFO - After patching validation saved to: output/validation-2025-11-22/172.25.30.39-AfterPatching-2025-11-22-05-57-57-828.log
+2025-11-22 05:57:57,864 - 19873 - INFO - Validation comparison report generated: output/validation-2025-11-22/172.25.30.39-Validation-details-2025-11-22-05-57-57-828.log
+2025-11-22 05:57:57,957 - 19873 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-22 05:57:57,957 - 19873 - INFO - HTML validation report email sent for i-035c31fb28e09cc62
+2025-11-22 05:57:58,215 - 19873 - INFO - Started i-035c31fb28e09cc62 in 0:03:18.452922
+2025-11-22 05:57:58,216 - 19873 - INFO - All instances processed.
+2025-11-22 05:57:58,221 - 19873 - INFO - Restart Total time: 0:18:19.748201
+2025-11-22 05:57:58,221 - 19873 - INFO - Auto-confirmed services are restarted
+2025-11-22 05:57:58,221 - 19873 - INFO - Confirmed - services are started
+2025-11-22 05:57:58,322 - 19873 - INFO - The following instances have failed the patch: []
+2025-11-22 05:57:58,322 - 19873 - INFO - No instances have failed the patch.
+2025-11-22 05:57:58,323 - 19873 - INFO - Total Patch Process time: 0:27:55.963683
+2025-11-22 05:57:58,624 - 19873 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-22 05:58:58,821 - 19873 - INFO - Log file ./logs/patching_2025-11-22_ACT-Fulfillment-App.log uploaded to s3://q4-2025-aws-security-patching/ACT-Fulfillment-App_Patch/2025-11-22/patching_2025-11-22_ACT-Fulfillment-App.log

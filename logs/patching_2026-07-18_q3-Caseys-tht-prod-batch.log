@@ -1,0 +1,272 @@
+2026-07-18 02:05:01,716 - 311013 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-18 02:05:01,716 - 311013 - INFO - Script Start Time: 2026-07-18 02:05:01
+2026-07-18 02:05:02,381 - 311013 - INFO - Tag: q3-Caseys-tht-prod-batch, IPs: ['172.30.64.201', '172.30.64.242'], Environment: prod
+2026-07-18 02:05:02,381 - 311013 - INFO - Instance(s) selected for Patching: {'i-037713bd0a4a35c20': '172.30.64.201', 'i-0f63cbbd53b20c862': '172.30.64.242'}
+2026-07-18 02:05:02,457 - 311013 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-18 02:05:02,457 - 311013 - INFO - Now patching instances at: 2026-07-18 02:05:02
+2026-07-18 02:05:02,709 - 311013 - INFO - Sent app_validation.py to i-0f63cbbd53b20c862 (command_id: 79b7d206-ef4e-4388-9ad4-27b82cc2167e)
+2026-07-18 02:05:32,798 - 311013 - INFO - app_validation.py output for i-0f63cbbd53b20c862:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:05:03.049338
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.242
+Hostname | ip-172-30-64-242.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 49.5G | 190.4G | 20% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.242:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.242 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | thtwcsprd_lpick, thtwcsprd_lbl, thtwcsprd_mheo, thtwcsprd_pinda, thtwcsprd_pindb, thtwcsprd_putwa, thtwcsprd_putwb, thtprod_vomobad, thtstage_svomob, thtwcsprd_reple, thtwcsprd_track, thtwcsprd_mhei, thtprod_1vomob, thtprod_2vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+thtwcsprd_lpick | /data/batchapp/softeon/caseysthtwcsprod/ptcdaemon
+thtwcsprd_lbl | /data/batchapp/softeon/caseysthtwcsprod/labeldaemon
+thtwcsprd_mheo | /data/batchapp/softeon/caseysthtwcsprod/mheoutbounddaemon
+thtwcsprd_pinda | /data/batchapp/softeon/caseysthtwcsprod/plcdaemon_indexera
+thtwcsprd_pindb | /data/batchapp/softeon/caseysthtwcsprod/plcdaemon_indexerb
+thtwcsprd_putwa | /data/batchapp/softeon/caseysthtwcsprod/putwalldaemon_linea
+thtwcsprd_putwb | /data/batchapp/softeon/caseysthtwcsprod/putwalldaemon_lineb
+thtprod_vomobad | /data/batchapp/softeon/caseysthtprod/voiceadminserver
+thtstage_svomob | /data/batchapp/softeon/caseysthtstage/voicemobiledaemonstage
+thtwcsprd_reple | /data/batchapp/softeon/caseysthtwcsprod/plcdaemon_replen
+thtwcsprd_track | /data/batchapp/softeon/caseysthtwcsprod/plcdaemon_racetrack
+thtwcsprd_mhei | /data/batchapp/softeon/caseysthtwcsprod/mheinbounddaemon
+thtprod_1vomob | /data/batchapp/softeon/caseysthtprod/voicemobiledaemon1
+thtprod_2vomob | /data/batchapp/softeon/caseysthtprod/voicemobiledaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-18 06:05:03.558806
+==============================================================================
+
+2026-07-18 02:05:32,798 - 311013 - ERROR - app_validation.py errors for i-0f63cbbd53b20c862:
+
+2026-07-18 02:05:32,800 - 311013 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-batch/172.30.64.242/172.30.64.242-BeforePatching-2026-07-18-02-05-32-799.log
+2026-07-18 02:05:33,051 - 311013 - INFO - Sent app_validation.py to i-037713bd0a4a35c20 (command_id: ca060ba7-ccc9-4f64-9f11-09a70b0af189)
+2026-07-18 02:06:03,142 - 311013 - INFO - app_validation.py output for i-037713bd0a4a35c20:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:05:33.303735
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.201
+Hostname | ip-172-30-64-201.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 101.2G | 138.7G | 42% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.201:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.201 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | thtprod_divla, thtprod_divm, thtprod_dwa, thtprod_event, thtprod_ict, thtprod_lbl, thtprod_otp, thtprod_lpick, thtprod_apick, thtprod_repl, thtprod_rccl, thtprod_rplpu, thtprod_rpt, thtprod_1rpt, thtprod_rptex, thtprod_sch, thtprod_inbq, thtprod_wld, thtprod_wcsi, thtprod_wcso, thtprod_forto, thtprod_forti
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+thtprod_divla | /data/batchapp/softeon/caseysthtprod/divertlaneassignmentdaemon
+thtprod_divm | /data/batchapp/softeon/caseysthtprod/divertmessagedaemon
+thtprod_dwa | /data/batchapp/softeon/caseysthtprod/downloaddaemon
+thtprod_event | /data/batchapp/softeon/caseysthtprod/eventdaemon
+thtprod_ict | /data/batchapp/softeon/caseysthtprod/invcomputationbytaskdaemon
+thtprod_lbl | /data/batchapp/softeon/caseysthtprod/labeldaemon
+thtprod_otp | /data/batchapp/softeon/caseysthtprod/ordertruckplanning
+thtprod_lpick | /data/batchapp/softeon/caseysthtprod/ptcdaemon
+thtprod_apick | /data/batchapp/softeon/caseysthtprod/putwallpickconfirmationdaemon
+thtprod_repl | /data/batchapp/softeon/caseysthtprod/replenishmentdaemon
+thtprod_rccl | /data/batchapp/softeon/caseysthtprod/replenishmentpickloccanceldaemon
+thtprod_rplpu | /data/batchapp/softeon/caseysthtprod/replenishmentpriorityupdatedaemon
+thtprod_rpt | /data/batchapp/softeon/caseysthtprod/reportdaemon
+thtprod_1rpt | /data/batchapp/softeon/caseysthtprod/reportdaemon1
+thtprod_rptex | /data/batchapp/softeon/caseysthtprod/reportjqgridexportdaemon
+thtprod_sch | /data/batchapp/softeon/caseysthtprod/schedulardaemon
+thtprod_inbq | /data/batchapp/softeon/caseysthtprod/uploaddeamon
+thtprod_wld | /data/batchapp/softeon/caseysthtprod/wavelaunchdaemon
+thtprod_wcsi | /data/batchapp/softeon/caseysthtprod/wcsinbounddaemon
+thtprod_wcso | /data/batchapp/softeon/caseysthtprod/wcsoutbounddaemon
+thtprod_forto | /data/batchapp/softeon/caseysthtprod/forteoutbounddaemon
+thtprod_forti | /data/batchapp/softeon/caseysthtprod/forteinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-18 06:05:33.910805
+==============================================================================
+
+2026-07-18 02:06:03,142 - 311013 - ERROR - app_validation.py errors for i-037713bd0a4a35c20:
+
+2026-07-18 02:06:03,144 - 311013 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-batch/172.30.64.201/172.30.64.201-BeforePatching-2026-07-18-02-06-03-143.log
+2026-07-18 02:06:08,448 - 311013 - INFO - i-0f63cbbd53b20c862: Cron was active = True
+2026-07-18 02:06:13,694 - 311013 - INFO - i-037713bd0a4a35c20: Cron was active = True
+2026-07-18 02:06:13,877 - 311013 - INFO - Health monitor crontab disabled on all instances
+2026-07-18 02:06:13,878 - 311013 - INFO - Disabled cron for: ['i-0f63cbbd53b20c862', 'i-037713bd0a4a35c20']
+2026-07-18 02:06:14,026 - 311013 - INFO - Sending patch command to instance i-0f63cbbd53b20c862
+2026-07-18 02:06:14,142 - 311013 - INFO - Command sent successfully to instance i-0f63cbbd53b20c862. Command ID: 401dcfd7-9f7f-42e0-b359-0c9221b51ff4
+2026-07-18 02:06:14,274 - 311013 - INFO - Sending patch command to instance i-037713bd0a4a35c20
+2026-07-18 02:06:14,365 - 311013 - INFO - Command sent successfully to instance i-037713bd0a4a35c20. Command ID: fc2ef649-454e-4be2-9bee-0afc2a9c3e72
+2026-07-18 02:12:46,162 - 311013 - INFO - All patches applied successfully.
+2026-07-18 02:12:46,163 - 311013 - INFO - Patching end time: 2026-07-18 02:12:46
+2026-07-18 02:12:46,163 - 311013 - INFO - Patch Elapsed time: 0:07:43.705856
+2026-07-18 02:12:46,236 - 311013 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-18 02:12:46,236 - 311013 - INFO - Confirmed - services are stopped
+2026-07-18 02:12:53,140 - 311013 - INFO - Discovered TG map: {}
+2026-07-18 02:12:53,311 - 311013 - INFO - Stopping EC2 instance: i-0f63cbbd53b20c862 at 2026-07-18 02:12:53
+2026-07-18 02:15:25,376 - 311013 - INFO - Instance i-0f63cbbd53b20c862 stopped successfully.
+2026-07-18 02:15:25,708 - 311013 - INFO - Stopped i-0f63cbbd53b20c862 in 0:02:32.397411
+2026-07-18 02:15:25,709 - 311013 - INFO - Starting EC2 instance: i-0f63cbbd53b20c862
+2026-07-18 02:15:41,600 - 311013 - INFO - Instance i-0f63cbbd53b20c862 started successfully.
+2026-07-18 02:15:41,600 - 311013 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f63cbbd53b20c862...
+2026-07-18 02:17:21,675 - 311013 - ERROR - Error starting instance i-0f63cbbd53b20c862: max_workers must be greater than 0
+2026-07-18 02:17:21,677 - 311013 - INFO - Stopping EC2 instance: i-037713bd0a4a35c20 at 2026-07-18 02:17:21
+2026-07-18 02:20:23,608 - 311013 - INFO - Instance i-037713bd0a4a35c20 stopped successfully.
+2026-07-18 02:20:23,845 - 311013 - INFO - Stopped i-037713bd0a4a35c20 in 0:03:02.168177
+2026-07-18 02:20:23,845 - 311013 - INFO - Starting EC2 instance: i-037713bd0a4a35c20
+2026-07-18 02:20:39,633 - 311013 - INFO - Instance i-037713bd0a4a35c20 started successfully.
+2026-07-18 02:20:39,633 - 311013 - INFO - Waiting 100 seconds for SSM agent to be ready on i-037713bd0a4a35c20...
+2026-07-18 02:22:19,733 - 311013 - ERROR - Error starting instance i-037713bd0a4a35c20: max_workers must be greater than 0
+2026-07-18 02:22:19,733 - 311013 - INFO - All instances processed.
+2026-07-18 02:22:19,734 - 311013 - INFO - Restart Total time: 0:09:33.374395
+2026-07-18 02:22:19,735 - 311013 - INFO - Auto-confirmed services are restarted
+2026-07-18 02:22:19,735 - 311013 - INFO - Confirmed - services are started
+2026-07-18 02:22:19,864 - 311013 - INFO - The following instances have failed the patch: []
+2026-07-18 02:22:19,864 - 311013 - INFO - No instances have failed the patch.
+2026-07-18 02:22:19,864 - 311013 - INFO - Total Patch Process time: 0:17:18.147216
+2026-07-18 02:23:20,369 - 311013 - INFO - Log file ./logs/patching_2026-07-18_q3-Caseys-tht-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/q3-Caseys-tht-prod-batch_Patch/2026-07-18/patching_2026-07-18_q3-Caseys-tht-prod-batch.log

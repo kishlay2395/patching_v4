@@ -1,0 +1,1055 @@
+2026-07-25 00:05:03,367 - 265885 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 00:41:32,138 - 265885 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 00:41:32,325 - 265885 - INFO - Log file ./logs/backup_2026-07-25.log uploaded to s3://q3-2025-aws-security-patching/q3-colenhaan-prod-batch_Patch_Backup/2026-07-25/backup_2026-07-25.log
+2026-07-25 04:05:02,785 - 278518 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-25 04:05:02,785 - 278518 - INFO - Script Start Time: 2026-07-25 04:05:02
+2026-07-25 04:05:03,089 - 278518 - INFO - Tag: q3-colenhaan-prod-batch, IPs: ['172.29.72.24'], Environment: prod
+2026-07-25 04:05:03,089 - 278518 - INFO - Instance(s) selected for Patching: {'i-0111d5f7f0dd0211a': '172.29.72.24'}
+2026-07-25 04:05:03,166 - 278518 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 04:05:03,167 - 278518 - INFO - Now patching instances at: 2026-07-25 04:05:03
+2026-07-25 04:05:03,394 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 69fb616e-669e-4928-a0dd-208cfa3eb54d)
+2026-07-25 04:05:33,476 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 08:05:04.029107
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.3G | 107.6G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 524.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_1wcsi, chaan_2wcsi, chaan_apick, chaan_abchdis, chaan_dwa, chaan_lbdwa, chaan_2wdwa, chaan_event, chaan_ftp, chaan_1ftp, chaan_harp, chaan_ict, chaan_lcd, chaan_lbl, chaan_mpcpt, chaan_rap, chaan_repl, chaan_rpt, chaan_jqgrid, chaan_sch, chaan_tiap, chaan_inbq, chaan_2inbq, chaan_3inbq, chaan_4inbq, chaan_wld, chaan_wsd, chaan_pld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 08:05:06.930858
+==============================================================================
+
+2026-07-25 04:05:33,476 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 04:05:33,480 - 278518 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-BeforePatching-2026-07-25-04-05-33-478.log
+2026-07-25 04:05:38,701 - 278518 - INFO - i-0111d5f7f0dd0211a: Cron was active = True
+2026-07-25 04:05:38,938 - 278518 - INFO - Health monitor crontab disabled on all instances
+2026-07-25 04:05:38,939 - 278518 - INFO - Disabled cron for: ['i-0111d5f7f0dd0211a']
+2026-07-25 04:05:39,026 - 278518 - INFO - Sending patch command to instance i-0111d5f7f0dd0211a
+2026-07-25 04:05:39,216 - 278518 - INFO - Command sent successfully to instance i-0111d5f7f0dd0211a. Command ID: 51a6d3de-9a27-423e-8963-7209a4a87fa9
+2026-07-25 05:21:23,607 - 278518 - INFO - All patches applied successfully.
+2026-07-25 05:21:23,608 - 278518 - INFO - Patching end time: 2026-07-25 05:21:23
+2026-07-25 05:21:23,608 - 278518 - INFO - Patch Elapsed time: 1:16:20.441059
+2026-07-25 05:21:23,697 - 278518 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 05:21:23,697 - 278518 - INFO - Confirmed - services are stopped
+2026-07-25 05:21:44,543 - 278518 - INFO - Discovered TG map: {}
+2026-07-25 05:21:44,772 - 278518 - INFO - Stopping EC2 instance: i-0111d5f7f0dd0211a at 2026-07-25 05:21:44
+2026-07-25 05:25:16,762 - 278518 - INFO - Instance i-0111d5f7f0dd0211a stopped successfully.
+2026-07-25 05:25:16,896 - 278518 - INFO - Stopped i-0111d5f7f0dd0211a in 0:03:32.123559
+2026-07-25 05:25:16,896 - 278518 - INFO - Starting EC2 instance: i-0111d5f7f0dd0211a
+2026-07-25 05:25:32,792 - 278518 - INFO - Instance i-0111d5f7f0dd0211a started successfully.
+2026-07-25 05:25:32,792 - 278518 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0111d5f7f0dd0211a...
+2026-07-25 05:27:12,975 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 96cf2b97-70b3-451a-b8fc-1ace35d561fd)
+2026-07-25 05:27:43,092 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:27:13.332988
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.2G | 107.7G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_harp, chaan_dwa, chaan_lbl, chaan_2wdwa, chaan_lcd, chaan_abchdis, chaan_lbdwa, chaan_rap, chaan_mpcpt, chaan_ftp, chaan_apick, chaan_2inbq, chaan_1ftp, chaan_3inbq, chaan_rpt, chaan_1wcsi, chaan_pld, chaan_wld, chaan_repl, chaan_jqgrid, chaan_tiap, chaan_inbq, chaan_event, chaan_ict, chaan_4inbq, chaan_2wcsi, chaan_wsd, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:27:15.938713
+==============================================================================
+
+2026-07-25 05:27:43,093 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:27:43,094 - 278518 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-2026-07-25-05-27-43-094.log
+2026-07-25 05:27:43,152 - 278518 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-Validation-details-2026-07-25-05-27-43-094.html
+2026-07-25 05:27:43,287 - 278518 - INFO - Daemon count - Pre: 28, Post: 28
+2026-07-25 05:27:43,288 - 278518 - INFO - CUPS: before=running after=running version=cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-07-25 05:27:43,288 - 278518 - INFO - Manage_cron: True, daemon_action: False, cups_action: False
+2026-07-25 05:27:43,369 - 278518 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-25 05:27:43,369 - 278518 - INFO - RED mail sent for i-0111d5f7f0dd0211a - no daemon/cups issue
+2026-07-25 05:27:43,369 - 278518 - INFO - [Retry-1] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 05:27:43,369 - 278518 - INFO - Retry thread started for i-0111d5f7f0dd0211a
+2026-07-25 05:27:43,590 - 278518 - INFO - Started i-0111d5f7f0dd0211a in 0:02:26.693653
+2026-07-25 05:27:43,591 - 278518 - INFO - All instances processed.
+2026-07-25 05:27:43,594 - 278518 - INFO - Restart Total time: 0:06:19.772660
+2026-07-25 05:27:43,594 - 278518 - INFO - Auto-confirmed services are restarted
+2026-07-25 05:27:43,594 - 278518 - INFO - Confirmed - services are started
+2026-07-25 05:27:43,707 - 278518 - INFO - The following instances have failed the patch: []
+2026-07-25 05:27:43,707 - 278518 - INFO - No instances have failed the patch.
+2026-07-25 05:27:43,707 - 278518 - INFO - Total Patch Process time: 1:22:40.921966
+2026-07-25 05:28:44,089 - 278518 - INFO - Log file ./logs/patching_2026-07-25_q3-colenhaan-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/q3-colenhaan-prod-batch_Patch/2026-07-25/patching_2026-07-25_q3-colenhaan-prod-batch.log
+2026-07-25 05:32:43,634 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: fbce8a14-eeca-42f8-a7d9-b35bbe2aadec)
+2026-07-25 05:33:13,730 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:32:44.597747
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.1G | 107.8G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:32:51.637509
+==============================================================================
+
+2026-07-25 05:33:13,730 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:33:13,731 - 278518 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry1-2026-07-25-05-33-13-731.log
+2026-07-25 05:33:13,790 - 278518 - INFO - [Retry-1] RED for Cole Haan Production Batch Server - 1 (172.29.72.24), retrying... (Total waited: 300s)
+2026-07-25 05:33:13,791 - 278518 - INFO - [Retry-2] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 05:38:14,220 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: dffcdf22-4ad8-4136-9aef-17a1b94419f1)
+2026-07-25 05:38:44,303 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:38:14.453083
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.2G | 107.7G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:38:15.330058
+==============================================================================
+
+2026-07-25 05:38:44,303 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:38:44,305 - 278518 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry2-2026-07-25-05-38-44-305.log
+2026-07-25 05:38:44,362 - 278518 - INFO - [Retry-2] RED for Cole Haan Production Batch Server - 1 (172.29.72.24), retrying... (Total waited: 600s)
+2026-07-25 05:38:44,362 - 278518 - INFO - [Retry-3] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 05:43:44,560 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 90248466-752b-4eba-add0-8e82534d1d6a)
+2026-07-25 05:44:14,677 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:43:44.789589
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.2G | 107.6G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:43:45.697921
+==============================================================================
+
+2026-07-25 05:44:14,677 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:44:14,679 - 278518 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry3-2026-07-25-05-44-14-678.log
+2026-07-25 05:44:14,737 - 278518 - INFO - [Retry-3] RED for Cole Haan Production Batch Server - 1 (172.29.72.24), retrying... (Total waited: 900s)
+2026-07-25 05:44:14,738 - 278518 - INFO - [Retry-4] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 05:49:15,180 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 1e5c45bf-123b-4b1e-93cb-8690494e85ce)
+2026-07-25 05:49:45,317 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:49:15.413693
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.4G | 107.5G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:49:16.281932
+==============================================================================
+
+2026-07-25 05:49:45,317 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:49:45,319 - 278518 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry4-2026-07-25-05-49-45-318.log
+2026-07-25 05:49:45,379 - 278518 - INFO - [Retry-4] RED for Cole Haan Production Batch Server - 1 (172.29.72.24), retrying... (Total waited: 1200s)
+2026-07-25 05:49:45,379 - 278518 - INFO - [Retry-5] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 05:54:45,664 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 77d6d628-8c32-49ae-8582-538dbbbf4755)
+2026-07-25 05:55:15,748 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 09:54:45.879907
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.4G | 107.5G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 09:54:46.767679
+==============================================================================
+
+2026-07-25 05:55:15,748 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 05:55:15,750 - 278518 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry5-2026-07-25-05-55-15-750.log
+2026-07-25 05:55:15,832 - 278518 - INFO - [Retry-5] RED for Cole Haan Production Batch Server - 1 (172.29.72.24), retrying... (Total waited: 1500s)
+2026-07-25 05:55:15,833 - 278518 - INFO - [Retry-6] Waiting 300s for i-0111d5f7f0dd0211a...
+2026-07-25 06:00:16,136 - 278518 - INFO - Sent app_validation.py to i-0111d5f7f0dd0211a (command_id: 89f43c96-1bf8-4585-96e9-ce226ea8b004)
+2026-07-25 06:00:46,216 - 278518 - INFO - app_validation.py output for i-0111d5f7f0dd0211a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 10:00:16.367292
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.24
+Hostname | ip-172-29-72-24
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 132.4G | 107.5G | 55% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.24:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.24 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | chaan_abchdis, chaan_rpt, chaan_apick, chaan_tiap, chaan_harp, chaan_wld, chaan_1wcsi, chaan_wsd, chaan_repl, chaan_2inbq, chaan_ict, chaan_lbl, chaan_inbq, chaan_rap, chaan_ftp, chaan_1ftp, chaan_mpcpt, chaan_event, chaan_jqgrid, chaan_4inbq, chaan_2wcsi, chaan_dwa, chaan_3inbq, chaan_pld, chaan_lbdwa, chaan_lcd, chaan_2wdwa, chaan_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+chaan_abchdis | /data/batchapp/softeon/colehaanprod/autobatchdistribution
+chaan_rpt | /data/batchapp/softeon/colehaanprod/reportdaemon
+chaan_apick | /data/batchapp/softeon/colehaanprod/apickdaemon
+chaan_tiap | /data/batchapp/softeon/colehaanprod/taskinventoryallocationatpalletleveldaemon
+chaan_harp | /data/batchapp/softeon/colehaanprod/hardallocationdaemon
+chaan_wld | /data/batchapp/softeon/colehaanprod/wavelaunchdaemon
+chaan_1wcsi | /data/batchapp/softeon/colehaanprod/wcs01inbounddaemon
+chaan_wsd | /data/batchapp/softeon/colehaanprod/webservicelabeldaemon
+chaan_repl | /data/batchapp/softeon/colehaanprod/replenishmentdaemon
+chaan_2inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon2
+chaan_ict | /data/batchapp/softeon/colehaanprod/inventorycomputationdaemon
+chaan_lbl | /data/batchapp/softeon/colehaanprod/labeldaemon
+chaan_inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon
+chaan_rap | /data/batchapp/softeon/colehaanprod/receiveasnpalletdaemon
+chaan_ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon
+chaan_1ftp | /data/batchapp/softeon/colehaanprod/ftpdaemon1
+chaan_mpcpt | /data/batchapp/softeon/colehaanprod/masspicktool
+chaan_event | /data/batchapp/softeon/colehaanprod/eventdaemon
+chaan_jqgrid | /data/batchapp/softeon/colehaanprod/reportjqgridexportdaemon
+chaan_4inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon4
+chaan_2wcsi | /data/batchapp/softeon/colehaanprod/wcs02inbounddaemon
+chaan_dwa | /data/batchapp/softeon/colehaanprod/downloaddaemon
+chaan_3inbq | /data/batchapp/softeon/colehaanprod/uploaddaemon3
+chaan_pld | /data/batchapp/softeon/colehaanprod/picklistlabeldaemon
+chaan_lbdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_label
+chaan_lcd | /data/batchapp/softeon/colehaanprod/labelconsolidatedaemon
+chaan_2wdwa | /data/batchapp/softeon/colehaanprod/downloaddaemon_wave
+chaan_sch | /data/batchapp/softeon/colehaanprod/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-25 10:00:17.317658
+==============================================================================
+
+2026-07-25 06:00:46,216 - 278518 - ERROR - app_validation.py errors for i-0111d5f7f0dd0211a:
+
+2026-07-25 06:00:46,218 - 278518 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-batch/172.29.72.24/172.29.72.24-AfterPatching-Retry6-2026-07-25-06-00-46-218.log
+2026-07-25 06:00:46,593 - 278518 - INFO - Health monitor crontab enabled on all instances
+2026-07-25 06:00:46,595 - 278518 - WARNING - [Retry] Timeout - auto cron enabled for i-0111d5f7f0dd0211a

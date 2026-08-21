@@ -1,0 +1,587 @@
+2026-07-08 00:05:02,718 - 3939033 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-08 00:05:02,718 - 3939033 - INFO - Script Start Time: 2026-07-08 00:05:02
+2026-07-08 00:05:03,101 - 3939033 - INFO - Instance(s) selected for Patching: {'i-0d384985e6994f39c': '10.0.30.22'}
+2026-07-08 00:05:03,178 - 3939033 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 00:05:03,179 - 3939033 - INFO - Now patching instances at: 2026-07-08 00:05:03
+2026-07-08 00:05:08,743 - 3939033 - INFO - i-0d384985e6994f39c: Cron was active = True
+2026-07-08 00:05:09,163 - 3939033 - INFO - Health monitor crontab disabled on all instances
+2026-07-08 00:05:09,164 - 3939033 - INFO - Disabled cron for: ['i-0d384985e6994f39c']
+2026-07-08 00:05:09,744 - 3939033 - INFO - Sent app_validation.py to i-0d384985e6994f39c (command_id: 29b9c653-c645-4738-89a0-78b05c0eec3e)
+2026-07-08 00:05:39,922 - 3939033 - INFO - app_validation.py output for i-0d384985e6994f39c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 23:05:10.038564
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.22
+Hostname | ip-10-0-30-22.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.9G | 130.9G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.30.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | wmslnf_INBQ, wmslnf_fbinv, java, wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_upload, wmsflex_FPOLL, wmsflex_advoice, wmslnf_VOICE, wmslnf_LBL, wmslnf_ftp, wmslnf_SCH, wmslnf_FPOLL
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+wmslnf_INBQ | /data/app/java/jdk1.7.0_80/bin/wmslnf_INBQ
+wmslnf_fbinv | /data/app/java/jdk1.7.0_80/bin/wmslnf_fbinv
+java | /data/deploy/lnf/wmsflextest/captiontool/common
+wmsflex_voice | /data/app/java/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_upload | /data/app/java/jdk1.7.0_80/bin/wmsflex_upload
+wmsflex_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmsflex_FPOLL
+wmsflex_advoice | /data/app/java/openjdk/java-se-8u40-ri/bin/wmsflex_advoice
+wmslnf_VOICE | /data/app/java/jdk1.7.0_80/bin/wmslnf_VOICE
+wmslnf_LBL | /data/app/java/jdk1.7.0_80/bin/wmslnf_LBL
+wmslnf_ftp | /data/app/java/jdk1.7.0_80/bin/wmslnf_ftp
+wmslnf_SCH | /data/app/java/jdk1.7.0_80/bin/wmslnf_SCH
+wmslnf_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmslnf_FPOLL
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2913 | portal | lnf | portal_jboss62 | 8082 | 10.0.30.22:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/lnf_portal/portal/standalone
+840821 | wmsflextest | softeon | wmsflex_jboss62 | 8080 | 10.0.30.22:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmsflextest/standalone
+840800 | wmslnftest | softeon | wmslnf_jboss62 | 8081 | 10.0.30.22:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmslnftest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 23:05:11.097949
+==============================================================================
+
+2026-07-08 00:05:39,923 - 3939033 - ERROR - app_validation.py errors for i-0d384985e6994f39c:
+
+2026-07-08 00:05:39,924 - 3939033 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-BeforePatching-2026-07-08-00-05-39-924.log
+2026-07-08 00:05:40,009 - 3939033 - INFO - Sending patch command to instance i-0d384985e6994f39c
+2026-07-08 00:05:40,378 - 3939033 - INFO - Command sent successfully to instance i-0d384985e6994f39c. Command ID: d486af2e-2040-46cf-b239-e023cd47822c
+2026-07-08 00:10:12,388 - 3939033 - INFO - All patches applied successfully.
+2026-07-08 00:10:12,389 - 3939033 - INFO - Patching end time: 2026-07-08 00:10:12
+2026-07-08 00:10:12,389 - 3939033 - INFO - Patch Elapsed time: 0:05:09.210283
+2026-07-08 00:10:12,467 - 3939033 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 00:10:12,467 - 3939033 - INFO - Confirmed - services are stopped
+2026-07-08 00:10:14,350 - 3939033 - INFO - Discovered TG map: {'i-0d384985e6994f39c': ['arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFTest-wmsflextest/c31b0288f5ba9006', 'arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFUAT-wmslnftest/d88a6fd2486c3721']}
+2026-07-08 00:10:14,604 - 3939033 - INFO - Deregistering i-0d384985e6994f39c from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFTest-wmsflextest/c31b0288f5ba9006
+2026-07-08 00:10:14,904 - 3939033 - INFO - Deregistering i-0d384985e6994f39c from TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFUAT-wmslnftest/d88a6fd2486c3721
+2026-07-08 00:10:15,010 - 3939033 - INFO - Stopping EC2 instance: i-0d384985e6994f39c at 2026-07-08 00:10:15
+2026-07-08 00:11:46,790 - 3939033 - INFO - Instance i-0d384985e6994f39c stopped successfully.
+2026-07-08 00:11:47,142 - 3939033 - INFO - Stopped i-0d384985e6994f39c in 0:01:32.131646
+2026-07-08 00:11:47,142 - 3939033 - INFO - Starting EC2 instance: i-0d384985e6994f39c
+2026-07-08 00:12:03,167 - 3939033 - INFO - Instance i-0d384985e6994f39c started successfully.
+2026-07-08 00:12:03,168 - 3939033 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0d384985e6994f39c...
+2026-07-08 00:13:43,201 - 3939033 - INFO - Registering i-0d384985e6994f39c to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFTest-wmsflextest/c31b0288f5ba9006
+2026-07-08 00:13:43,587 - 3939033 - INFO - Registering i-0d384985e6994f39c to TG arn:aws:elasticloadbalancing:us-west-1:835314132208:targetgroup/LnFUAT-wmslnftest/d88a6fd2486c3721
+2026-07-08 00:15:14,818 - 3939033 - INFO - Sent app_validation.py to i-0d384985e6994f39c (command_id: 2f15ac05-4d60-493a-890e-add465b8d6e6)
+2026-07-08 00:15:45,005 - 3939033 - INFO - app_validation.py output for i-0d384985e6994f39c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 23:15:15.182232
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.22
+Hostname | ip-10-0-30-22.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.9G | 130.9G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.30.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_upload, wmsflex_FPOLL, wmsflex_advoice, wmslnf_VOICE, wmslnf_LBL, wmslnf_ftp, wmslnf_SCH, wmslnf_INBQ, wmslnf_FPOLL, drivemonitor, wmsflex_inv, wmslnf_pro, wmslnf_inv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_upload | /data/app/java/jdk1.7.0_80/bin/wmsflex_upload
+wmsflex_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmsflex_FPOLL
+wmsflex_advoice | /data/app/java/openjdk/java-se-8u40-ri/bin/wmsflex_advoice
+wmslnf_VOICE | /data/app/java/jdk1.7.0_80/bin/wmslnf_VOICE
+wmslnf_LBL | /data/app/java/jdk1.7.0_80/bin/wmslnf_LBL
+wmslnf_ftp | /data/app/java/jdk1.7.0_80/bin/wmslnf_ftp
+wmslnf_SCH | /data/app/java/jdk1.7.0_80/bin/wmslnf_SCH
+wmslnf_INBQ | /data/app/java/jdk1.7.0_80/bin/wmslnf_INBQ
+wmslnf_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmslnf_FPOLL
+drivemonitor | /data/app/java/openjdk/java-se-8u40-ri/bin/drivemonitor
+wmsflex_inv | /data/app/java/jdk1.7.0_80/bin/wmsflex_inv
+wmslnf_pro | /data/app/java/jdk1.7.0_80/bin/wmslnf_pro
+wmslnf_inv | /data/app/java/jdk1.7.0_80/bin/wmslnf_inv
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2636 | portal | lnf | portal_jboss62 | 8082 | 10.0.30.22:8082 | Down | 000 | Disabled | /data/app/jboss62eap/softeon/lnf/lnf_portal/portal/standalone
+2634 | wmsflextest | softeon | wmsflex_jboss62 | 8080 | 10.0.30.22:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmsflextest/standalone
+2593 | wmslnftest | softeon | wmslnf_jboss62 | 8081 | 10.0.30.22:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmslnftest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 23:15:22.439319
+==============================================================================
+
+2026-07-08 00:15:45,005 - 3939033 - ERROR - app_validation.py errors for i-0d384985e6994f39c:
+
+2026-07-08 00:15:45,008 - 3939033 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-AfterPatching-2026-07-08-00-15-45-007.log
+2026-07-08 00:15:45,061 - 3939033 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-Validation-details-2026-07-08-00-15-45-007.html
+2026-07-08 00:15:45,545 - 3939033 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-08 00:15:45,545 - 3939033 - INFO - HTML validation report email sent for i-0d384985e6994f39c
+2026-07-08 00:15:45,546 - 3939033 - INFO - [Retry-1] Waiting 600s for i-0d384985e6994f39c...
+2026-07-08 00:15:45,546 - 3939033 - INFO - RED - Background retry thread started for i-0d384985e6994f39c
+2026-07-08 00:15:45,684 - 3939033 - INFO - Started i-0d384985e6994f39c in 0:03:58.541619
+2026-07-08 00:15:45,684 - 3939033 - INFO - All instances processed.
+2026-07-08 00:15:45,689 - 3939033 - INFO - Restart Total time: 0:05:33.074420
+2026-07-08 00:15:45,689 - 3939033 - INFO - Auto-confirmed services are restarted
+2026-07-08 00:15:45,689 - 3939033 - INFO - Confirmed - services are started
+2026-07-08 00:15:45,802 - 3939033 - INFO - The following instances have failed the patch: []
+2026-07-08 00:15:45,802 - 3939033 - INFO - No instances have failed the patch.
+2026-07-08 00:15:45,802 - 3939033 - INFO - Total Patch Process time: 0:10:43.083527
+2026-07-08 00:16:46,305 - 3939033 - INFO - Log file ./logs/patching_2026-07-08_q3-lnf-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-lnf-uat_Patch/2026-07-08/patching_2026-07-08_q3-lnf-uat.log
+2026-07-08 00:25:46,161 - 3939033 - INFO - Sent app_validation.py to i-0d384985e6994f39c (command_id: 3174a9b8-5f32-4b8b-860a-0af272d3b3a9)
+2026-07-08 00:26:16,324 - 3939033 - INFO - app_validation.py output for i-0d384985e6994f39c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 23:25:46.367655
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.22
+Hostname | ip-10-0-30-22.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.9G | 130.9G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.30.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_upload, wmsflex_FPOLL, wmsflex_advoice, wmslnf_VOICE, wmslnf_LBL, wmslnf_ftp, wmslnf_SCH, wmslnf_INBQ, wmslnf_FPOLL
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_upload | /data/app/java/jdk1.7.0_80/bin/wmsflex_upload
+wmsflex_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmsflex_FPOLL
+wmsflex_advoice | /data/app/java/openjdk/java-se-8u40-ri/bin/wmsflex_advoice
+wmslnf_VOICE | /data/app/java/jdk1.7.0_80/bin/wmslnf_VOICE
+wmslnf_LBL | /data/app/java/jdk1.7.0_80/bin/wmslnf_LBL
+wmslnf_ftp | /data/app/java/jdk1.7.0_80/bin/wmslnf_ftp
+wmslnf_SCH | /data/app/java/jdk1.7.0_80/bin/wmslnf_SCH
+wmslnf_INBQ | /data/app/java/jdk1.7.0_80/bin/wmslnf_INBQ
+wmslnf_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmslnf_FPOLL
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2636 | portal | lnf | portal_jboss62 | 8082 | 10.0.30.22:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/lnf_portal/portal/standalone
+2634 | wmsflextest | softeon | wmsflex_jboss62 | 8080 | 10.0.30.22:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmsflextest/standalone
+2593 | wmslnftest | softeon | wmslnf_jboss62 | 8081 | 10.0.30.22:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmslnftest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 23:25:47.137425
+==============================================================================
+
+2026-07-08 00:26:16,324 - 3939033 - ERROR - app_validation.py errors for i-0d384985e6994f39c:
+
+2026-07-08 00:26:16,326 - 3939033 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-AfterPatching-Retry1-2026-07-08-00-26-16-325.log
+2026-07-08 00:26:16,378 - 3939033 - INFO - [Retry-1] RED detected for LNF UAT Application and Batch Server (10.0.30.22), retrying... (Total waited: 600s)
+2026-07-08 00:26:16,378 - 3939033 - INFO - [Retry-2] Waiting 600s for i-0d384985e6994f39c...
+2026-07-08 00:36:16,938 - 3939033 - INFO - Sent app_validation.py to i-0d384985e6994f39c (command_id: 52d00e72-08ba-46ed-a939-575db04547c5)
+2026-07-08 00:36:47,111 - 3939033 - INFO - app_validation.py output for i-0d384985e6994f39c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 23:36:17.150500
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.22
+Hostname | ip-10-0-30-22.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.9G | 130.9G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.30.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_upload, wmsflex_FPOLL, wmsflex_advoice, wmslnf_VOICE, wmslnf_LBL, wmslnf_ftp, wmslnf_SCH, wmslnf_INBQ, wmslnf_FPOLL
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_upload | /data/app/java/jdk1.7.0_80/bin/wmsflex_upload
+wmsflex_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmsflex_FPOLL
+wmsflex_advoice | /data/app/java/openjdk/java-se-8u40-ri/bin/wmsflex_advoice
+wmslnf_VOICE | /data/app/java/jdk1.7.0_80/bin/wmslnf_VOICE
+wmslnf_LBL | /data/app/java/jdk1.7.0_80/bin/wmslnf_LBL
+wmslnf_ftp | /data/app/java/jdk1.7.0_80/bin/wmslnf_ftp
+wmslnf_SCH | /data/app/java/jdk1.7.0_80/bin/wmslnf_SCH
+wmslnf_INBQ | /data/app/java/jdk1.7.0_80/bin/wmslnf_INBQ
+wmslnf_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmslnf_FPOLL
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2636 | portal | lnf | portal_jboss62 | 8082 | 10.0.30.22:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/lnf_portal/portal/standalone
+2634 | wmsflextest | softeon | wmsflex_jboss62 | 8080 | 10.0.30.22:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmsflextest/standalone
+2593 | wmslnftest | softeon | wmslnf_jboss62 | 8081 | 10.0.30.22:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmslnftest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 23:36:18.254351
+==============================================================================
+
+2026-07-08 00:36:47,111 - 3939033 - ERROR - app_validation.py errors for i-0d384985e6994f39c:
+
+2026-07-08 00:36:47,112 - 3939033 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-AfterPatching-Retry2-2026-07-08-00-36-47-112.log
+2026-07-08 00:36:47,166 - 3939033 - INFO - [Retry-2] RED detected for LNF UAT Application and Batch Server (10.0.30.22), retrying... (Total waited: 1200s)
+2026-07-08 00:36:47,166 - 3939033 - INFO - [Retry-3] Waiting 600s for i-0d384985e6994f39c...
+2026-07-08 00:46:47,864 - 3939033 - INFO - Sent app_validation.py to i-0d384985e6994f39c (command_id: 42c92f4f-2583-4d06-a28c-5fcab0285197)
+2026-07-08 00:47:18,065 - 3939033 - INFO - app_validation.py output for i-0d384985e6994f39c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 23:46:48.063885
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.22
+Hostname | ip-10-0-30-22.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 158.9G | 130.9G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.30.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 47
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_upload, wmsflex_FPOLL, wmsflex_advoice, wmslnf_VOICE, wmslnf_LBL, wmslnf_ftp, wmslnf_SCH, wmslnf_INBQ, wmslnf_FPOLL
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_upload | /data/app/java/jdk1.7.0_80/bin/wmsflex_upload
+wmsflex_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmsflex_FPOLL
+wmsflex_advoice | /data/app/java/openjdk/java-se-8u40-ri/bin/wmsflex_advoice
+wmslnf_VOICE | /data/app/java/jdk1.7.0_80/bin/wmslnf_VOICE
+wmslnf_LBL | /data/app/java/jdk1.7.0_80/bin/wmslnf_LBL
+wmslnf_ftp | /data/app/java/jdk1.7.0_80/bin/wmslnf_ftp
+wmslnf_SCH | /data/app/java/jdk1.7.0_80/bin/wmslnf_SCH
+wmslnf_INBQ | /data/app/java/jdk1.7.0_80/bin/wmslnf_INBQ
+wmslnf_FPOLL | /data/app/java/jdk1.7.0_80/bin/wmslnf_FPOLL
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2636 | portal | lnf | portal_jboss62 | 8082 | 10.0.30.22:8082 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/lnf_portal/portal/standalone
+2634 | wmsflextest | softeon | wmsflex_jboss62 | 8080 | 10.0.30.22:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmsflextest/standalone
+2593 | wmslnftest | softeon | wmslnf_jboss62 | 8081 | 10.0.30.22:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/lnf/wmslnftest/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 23:46:49.018003
+==============================================================================
+
+2026-07-08 00:47:18,065 - 3939033 - ERROR - app_validation.py errors for i-0d384985e6994f39c:
+
+2026-07-08 00:47:18,067 - 3939033 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-08/q3-lnf-uat/10.0.30.22/10.0.30.22-AfterPatching-Retry3-2026-07-08-00-47-18-066.log
+2026-07-08 00:47:18,533 - 3939033 - INFO - Health monitor crontab enabled on all instances
+2026-07-08 00:47:18,534 - 3939033 - WARNING - [Retry] Timeout - auto cron enabled for i-0d384985e6994f39c

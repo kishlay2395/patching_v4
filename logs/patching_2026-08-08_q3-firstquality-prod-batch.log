@@ -1,0 +1,843 @@
+2026-08-08 03:20:03,026 - 1407719 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-08 03:20:03,026 - 1407719 - INFO - Script Start Time: 2026-08-08 03:20:03
+2026-08-08 03:20:03,264 - 1407719 - INFO - Tag: q3-firstquality-prod-batch, IPs: ['10.50.28.60'], Environment: prod
+2026-08-08 03:20:03,264 - 1407719 - INFO - Instance(s) selected for Patching: {'i-0800b9d8c211631fb': '10.50.28.60'}
+2026-08-08 03:20:03,358 - 1407719 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 03:20:03,358 - 1407719 - INFO - Now patching instances at: 2026-08-08 03:20:03
+2026-08-08 03:20:03,574 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: d8d7e20c-d304-449c-9032-a4daaa4f8fa1)
+2026-08-08 03:20:33,657 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:20:33,658 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:20:03.866841
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 170.1G | 69.8G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | fqprd_dwa, fqprd_event, fqprd_ict, fqprd_jqgrictrl, fqprd_jqgridest, fqprd_jqgripsf, fqprd_lbl, fqprd_repl, fqprd_rppsf, fqprd_cen_sch, fqprd_est_sch, fqprd_pac_sch, fqprd_inbq, fqprd_wldctl, fqprd_wldest, fqprd_wldpsf, fqprd_estabd, fqprd_psfabd, fqprd_ctlabd, fqprd_1913pksp, fqprd_1914pksp, fqprd_1955pksp, fqprd_1958pksp, fqprd_1959pksp, fqprd_2estabd, fqprd_2ctlabd, fqprd_rpctrl, fqprd_rpest
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+fqprd_dwa | /data/batchapp/softeon/firstqprod/downloaddaemon
+fqprd_event | /data/batchapp/softeon/firstqprod/eventdaemon
+fqprd_ict | /data/batchapp/softeon/firstqprod/inventorycomputationbytaskdaemon
+fqprd_jqgrictrl | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_central
+fqprd_jqgridest | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_eastern
+fqprd_jqgripsf | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_pacific
+fqprd_lbl | /data/batchapp/softeon/firstqprod/labeldaemon
+fqprd_repl | /data/batchapp/softeon/firstqprod/replenishmentdaemon
+fqprd_rppsf | /data/batchapp/softeon/firstqprod/reportdaemon_pacific
+fqprd_cen_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_central
+fqprd_est_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_eastern
+fqprd_pac_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_pacific
+fqprd_inbq | /data/batchapp/softeon/firstqprod/uploaddaemon
+fqprd_wldctl | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_central
+fqprd_wldest | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_eastern
+fqprd_wldpsf | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_pacific
+fqprd_estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_eastern
+fqprd_psfabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_pacific
+fqprd_ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_central
+fqprd_1913pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1913
+fqprd_1914pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1914
+fqprd_1955pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1955
+fqprd_1958pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1958
+fqprd_1959pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1959
+fqprd_2estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_eastern
+fqprd_2ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_central
+fqprd_rpctrl | /data/batchapp/softeon/firstqprod/reportdaemon_central
+fqprd_rpest | /data/batchapp/softeon/firstqprod/reportdaemon_eastern
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:20:05.144643
+==============================================================================
+
+2026-08-08 03:20:33,659 - 1407719 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-BeforePatching-2026-08-08-03-20-33-659.log
+2026-08-08 03:20:38,878 - 1407719 - INFO - i-0800b9d8c211631fb: Cron was active = True
+2026-08-08 03:20:39,116 - 1407719 - INFO - Health monitor crontab disabled on all instances
+2026-08-08 03:20:39,117 - 1407719 - INFO - Disabled cron for: ['i-0800b9d8c211631fb']
+2026-08-08 03:20:39,204 - 1407719 - INFO - Sending patch command to instance i-0800b9d8c211631fb
+2026-08-08 03:20:39,315 - 1407719 - INFO - Command sent successfully to instance i-0800b9d8c211631fb. Command ID: db65da80-18fd-440f-8e9c-ad3ddbd50fe9
+2026-08-08 03:24:40,504 - 1407719 - INFO - All patches applied successfully.
+2026-08-08 03:24:40,505 - 1407719 - INFO - Patching end time: 2026-08-08 03:24:40
+2026-08-08 03:24:40,505 - 1407719 - INFO - Patch Elapsed time: 0:04:37.146806
+2026-08-08 03:24:40,576 - 1407719 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 03:24:40,577 - 1407719 - INFO - Confirmed - services are stopped
+2026-08-08 03:25:01,125 - 1407719 - INFO - Discovered TG map: {}
+2026-08-08 03:25:01,901 - 1407719 - INFO - Stopping EC2 instance: i-0800b9d8c211631fb at 2026-08-08 03:25:01
+2026-08-08 03:26:18,035 - 1407719 - INFO - Instance i-0800b9d8c211631fb stopped successfully.
+2026-08-08 03:26:18,235 - 1407719 - INFO - Stopped i-0800b9d8c211631fb in 0:01:16.333981
+2026-08-08 03:26:18,235 - 1407719 - INFO - Starting EC2 instance: i-0800b9d8c211631fb
+2026-08-08 03:26:34,095 - 1407719 - INFO - Instance i-0800b9d8c211631fb started successfully.
+2026-08-08 03:26:34,096 - 1407719 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0800b9d8c211631fb...
+2026-08-08 03:28:14,343 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: bf5affc3-e979-4573-8a8a-89c7f7639c80)
+2026-08-08 03:28:44,468 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:28:44,468 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:28:14.658572
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 169.9G | 70.0G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:28:14.997584
+==============================================================================
+
+2026-08-08 03:28:44,469 - 1407719 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-AfterPatching-2026-08-08-03-28-44-469.log
+2026-08-08 03:28:44,525 - 1407719 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-Validation-details-2026-08-08-03-28-44-469.html
+2026-08-08 03:28:44,723 - 1407719 - INFO - Daemon count - Pre: 28, Post: 0
+2026-08-08 03:28:44,723 - 1407719 - INFO - CUPS: before=running after=running version=cups-2.4.19-1.amzn2023.0.1.aarch64
+2026-08-08 03:28:44,723 - 1407719 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-08 03:28:44,724 - 1407719 - INFO - Background: restarting daemons on i-0800b9d8c211631fb
+2026-08-08 03:28:44,724 - 1407719 - INFO - Background thread started for i-0800b9d8c211631fb - daemon:True cups:False
+2026-08-08 03:28:44,994 - 1407719 - INFO - Started i-0800b9d8c211631fb in 0:02:26.758687
+2026-08-08 03:28:44,995 - 1407719 - INFO - All instances processed.
+2026-08-08 03:28:44,998 - 1407719 - INFO - Restart Total time: 0:04:04.295802
+2026-08-08 03:28:44,998 - 1407719 - INFO - Auto-confirmed services are restarted
+2026-08-08 03:28:44,998 - 1407719 - INFO - Confirmed - services are started
+2026-08-08 03:28:45,168 - 1407719 - INFO - The following instances have failed the patch: []
+2026-08-08 03:28:45,168 - 1407719 - INFO - No instances have failed the patch.
+2026-08-08 03:28:45,168 - 1407719 - INFO - Total Patch Process time: 0:08:42.141541
+2026-08-08 03:29:15,139 - 1407719 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: firstqprod
+/data/batchapp/softeon/firstqprod/startall-firstqprod-daemon.sh
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting inventorycomputationbytaskdaemon
+
+
+Starting jqgridexportdaemon_central
+
+
+Starting jqgridexportdaemon_eastern
+
+
+Starting jqgridexportdaemon_pacific
+
+
+Starting labeldaemon
+
+
+Starting replenishmentdaemon
+
+
+Starting reportdaemon_central
+
+
+Starting reportdaemon_eastern
+
+
+Starting reportdaemon_pacific
+
+
+Starting schedulerdaemon_central
+
+
+Starting schedulerdaemon_eastern
+
+
+Starting schedulerdaemon_pacific
+
+
+Starting uploaddaemon
+
+
+Starting wavelaunchdaemon_central
+
+
+Starting wavelaunchdaemon_eastern
+
+
+Starting wavelaunchdaemon_pacific
+
+
+Starting autobatchdistributiondaemon_eastern
+
+
+Starting autobatchdistributiondaemon_pacific
+
+
+Starting autobatchdistributiondaemon_central
+
+
+Starting printpackslipdaemon_1913
+
+
+Starting printpackslipdaemon_1914
+
+
+Starting printpackslipdaemon_1955
+
+
+Starting printpackslipdaemon_1958
+
+
+Starting printpackslipdaemon_1959
+
+
+Starting autobatchdistributiondaemon2_eastern
+
+2026-08-08 03:29:15,140 - 1407719 - INFO - Waiting 100 sec for daemons to start on i-0800b9d8c211631fb
+2026-08-08 03:29:45,599 - 1407719 - INFO - Log file ./logs/patching_2026-08-08_q3-firstquality-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/q3-firstquality-prod-batch_Patch/2026-08-08/patching_2026-08-08_q3-firstquality-prod-batch.log
+2026-08-08 03:30:55,189 - 1407719 - INFO - CUPS no action needed for i-0800b9d8c211631fb - before:running after:running version:cups-2.4.19-1.amzn2023.0.1.aarch64
+2026-08-08 03:30:55,512 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: 26215041-8c46-47c1-889e-3b6bfa0fb66c)
+2026-08-08 03:31:25,598 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:31:25,599 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:30:55.760057
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 170.1G | 69.8G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | fqprd_dwa, fqprd_event, fqprd_ict, fqprd_jqgrictrl, fqprd_jqgridest, fqprd_jqgripsf, fqprd_lbl, fqprd_repl, fqprd_rpctrl, fqprd_rpest, fqprd_rppsf, fqprd_cen_sch, fqprd_est_sch, fqprd_pac_sch, fqprd_inbq, fqprd_wldctl, fqprd_wldest, fqprd_wldpsf, fqprd_estabd, fqprd_psfabd, fqprd_ctlabd, fqprd_1913pksp, fqprd_1914pksp, fqprd_1955pksp, fqprd_1958pksp, fqprd_1959pksp, fqprd_2estabd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+fqprd_dwa | /data/batchapp/softeon/firstqprod/downloaddaemon
+fqprd_event | /data/batchapp/softeon/firstqprod/eventdaemon
+fqprd_ict | /data/batchapp/softeon/firstqprod/inventorycomputationbytaskdaemon
+fqprd_jqgrictrl | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_central
+fqprd_jqgridest | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_eastern
+fqprd_jqgripsf | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_pacific
+fqprd_lbl | /data/batchapp/softeon/firstqprod/labeldaemon
+fqprd_repl | /data/batchapp/softeon/firstqprod/replenishmentdaemon
+fqprd_rpctrl | /data/batchapp/softeon/firstqprod/reportdaemon_central
+fqprd_rpest | /data/batchapp/softeon/firstqprod/reportdaemon_eastern
+fqprd_rppsf | /data/batchapp/softeon/firstqprod/reportdaemon_pacific
+fqprd_cen_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_central
+fqprd_est_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_eastern
+fqprd_pac_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_pacific
+fqprd_inbq | /data/batchapp/softeon/firstqprod/uploaddaemon
+fqprd_wldctl | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_central
+fqprd_wldest | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_eastern
+fqprd_wldpsf | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_pacific
+fqprd_estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_eastern
+fqprd_psfabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_pacific
+fqprd_ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_central
+fqprd_1913pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1913
+fqprd_1914pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1914
+fqprd_1955pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1955
+fqprd_1958pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1958
+fqprd_1959pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1959
+fqprd_2estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_eastern
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:30:56.904532
+==============================================================================
+
+2026-08-08 03:31:25,729 - 1407719 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-08 03:31:25,730 - 1407719 - INFO - RED re-validation mail sent for i-0800b9d8c211631fb
+2026-08-08 03:31:25,730 - 1407719 - INFO - Still Red after restart - starting retry for i-0800b9d8c211631fb
+2026-08-08 03:31:25,730 - 1407719 - INFO - [Retry-1] Waiting 300s for i-0800b9d8c211631fb...
+2026-08-08 03:36:25,996 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: 5a211240-e563-4af1-9aef-825dd6de14b0)
+2026-08-08 03:36:56,100 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:36:56,100 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:36:26.266975
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 170.1G | 69.8G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | fqprd_dwa, fqprd_event, fqprd_ict, fqprd_jqgrictrl, fqprd_jqgridest, fqprd_jqgripsf, fqprd_lbl, fqprd_repl, fqprd_rpctrl, fqprd_rpest, fqprd_rppsf, fqprd_cen_sch, fqprd_est_sch, fqprd_pac_sch, fqprd_inbq, fqprd_wldctl, fqprd_wldest, fqprd_wldpsf, fqprd_estabd, fqprd_psfabd, fqprd_ctlabd, fqprd_1913pksp, fqprd_1914pksp, fqprd_1955pksp, fqprd_1958pksp, fqprd_1959pksp, fqprd_2estabd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+fqprd_dwa | /data/batchapp/softeon/firstqprod/downloaddaemon
+fqprd_event | /data/batchapp/softeon/firstqprod/eventdaemon
+fqprd_ict | /data/batchapp/softeon/firstqprod/inventorycomputationbytaskdaemon
+fqprd_jqgrictrl | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_central
+fqprd_jqgridest | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_eastern
+fqprd_jqgripsf | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_pacific
+fqprd_lbl | /data/batchapp/softeon/firstqprod/labeldaemon
+fqprd_repl | /data/batchapp/softeon/firstqprod/replenishmentdaemon
+fqprd_rpctrl | /data/batchapp/softeon/firstqprod/reportdaemon_central
+fqprd_rpest | /data/batchapp/softeon/firstqprod/reportdaemon_eastern
+fqprd_rppsf | /data/batchapp/softeon/firstqprod/reportdaemon_pacific
+fqprd_cen_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_central
+fqprd_est_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_eastern
+fqprd_pac_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_pacific
+fqprd_inbq | /data/batchapp/softeon/firstqprod/uploaddaemon
+fqprd_wldctl | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_central
+fqprd_wldest | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_eastern
+fqprd_wldpsf | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_pacific
+fqprd_estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_eastern
+fqprd_psfabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_pacific
+fqprd_ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_central
+fqprd_1913pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1913
+fqprd_1914pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1914
+fqprd_1955pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1955
+fqprd_1958pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1958
+fqprd_1959pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1959
+fqprd_2estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_eastern
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:36:27.400437
+==============================================================================
+
+2026-08-08 03:36:56,103 - 1407719 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-AfterPatching-Retry1-2026-08-08-03-36-56-102.log
+2026-08-08 03:36:56,160 - 1407719 - INFO - [Retry-1] RED for FirstQuality Production Batch Server (10.50.28.60), retrying... (Total waited: 300s)
+2026-08-08 03:36:56,160 - 1407719 - INFO - [Retry-2] Waiting 300s for i-0800b9d8c211631fb...
+2026-08-08 03:41:56,560 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: c64fccc6-e771-40eb-8fda-427a22d7b06d)
+2026-08-08 03:42:26,650 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:42:26,650 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:41:56.798727
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 170.1G | 69.8G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | fqprd_dwa, fqprd_event, fqprd_ict, fqprd_jqgrictrl, fqprd_jqgridest, fqprd_jqgripsf, fqprd_lbl, fqprd_repl, fqprd_rpctrl, fqprd_rpest, fqprd_rppsf, fqprd_cen_sch, fqprd_est_sch, fqprd_pac_sch, fqprd_inbq, fqprd_wldctl, fqprd_wldest, fqprd_wldpsf, fqprd_estabd, fqprd_psfabd, fqprd_ctlabd, fqprd_1913pksp, fqprd_1914pksp, fqprd_1955pksp, fqprd_1958pksp, fqprd_1959pksp, fqprd_2estabd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+fqprd_dwa | /data/batchapp/softeon/firstqprod/downloaddaemon
+fqprd_event | /data/batchapp/softeon/firstqprod/eventdaemon
+fqprd_ict | /data/batchapp/softeon/firstqprod/inventorycomputationbytaskdaemon
+fqprd_jqgrictrl | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_central
+fqprd_jqgridest | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_eastern
+fqprd_jqgripsf | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_pacific
+fqprd_lbl | /data/batchapp/softeon/firstqprod/labeldaemon
+fqprd_repl | /data/batchapp/softeon/firstqprod/replenishmentdaemon
+fqprd_rpctrl | /data/batchapp/softeon/firstqprod/reportdaemon_central
+fqprd_rpest | /data/batchapp/softeon/firstqprod/reportdaemon_eastern
+fqprd_rppsf | /data/batchapp/softeon/firstqprod/reportdaemon_pacific
+fqprd_cen_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_central
+fqprd_est_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_eastern
+fqprd_pac_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_pacific
+fqprd_inbq | /data/batchapp/softeon/firstqprod/uploaddaemon
+fqprd_wldctl | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_central
+fqprd_wldest | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_eastern
+fqprd_wldpsf | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_pacific
+fqprd_estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_eastern
+fqprd_psfabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_pacific
+fqprd_ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_central
+fqprd_1913pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1913
+fqprd_1914pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1914
+fqprd_1955pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1955
+fqprd_1958pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1958
+fqprd_1959pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1959
+fqprd_2estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_eastern
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:41:57.910386
+==============================================================================
+
+2026-08-08 03:42:26,652 - 1407719 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-AfterPatching-Retry2-2026-08-08-03-42-26-651.log
+2026-08-08 03:42:26,710 - 1407719 - INFO - [Retry-2] RED for FirstQuality Production Batch Server (10.50.28.60), retrying... (Total waited: 600s)
+2026-08-08 03:42:26,710 - 1407719 - INFO - [Retry-3] Waiting 300s for i-0800b9d8c211631fb...
+2026-08-08 03:47:27,008 - 1407719 - INFO - Sent app_validation.py to i-0800b9d8c211631fb (command_id: 0e1a9b9a-ed69-4293-8d31-01ffaa873cac)
+2026-08-08 03:47:57,120 - 1407719 - INFO - SSM Command Status: Success
+2026-08-08 03:47:57,121 - 1407719 - INFO - app_validation.py output for i-0800b9d8c211631fb:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 07:47:27.274149
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.60
+Hostname | ip-10-50-28-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 170.1G | 69.7G | 70% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 206.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://10.50.28.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | fqprd_dwa, fqprd_event, fqprd_ict, fqprd_jqgrictrl, fqprd_jqgridest, fqprd_jqgripsf, fqprd_lbl, fqprd_repl, fqprd_rpctrl, fqprd_rpest, fqprd_rppsf, fqprd_cen_sch, fqprd_est_sch, fqprd_pac_sch, fqprd_inbq, fqprd_wldctl, fqprd_wldest, fqprd_wldpsf, fqprd_estabd, fqprd_psfabd, fqprd_ctlabd, fqprd_1913pksp, fqprd_1914pksp, fqprd_1955pksp, fqprd_1958pksp, fqprd_1959pksp, fqprd_2estabd, fqprd_2ctlabd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+fqprd_dwa | /data/batchapp/softeon/firstqprod/downloaddaemon
+fqprd_event | /data/batchapp/softeon/firstqprod/eventdaemon
+fqprd_ict | /data/batchapp/softeon/firstqprod/inventorycomputationbytaskdaemon
+fqprd_jqgrictrl | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_central
+fqprd_jqgridest | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_eastern
+fqprd_jqgripsf | /data/batchapp/softeon/firstqprod/jqgridexportdaemon_pacific
+fqprd_lbl | /data/batchapp/softeon/firstqprod/labeldaemon
+fqprd_repl | /data/batchapp/softeon/firstqprod/replenishmentdaemon
+fqprd_rpctrl | /data/batchapp/softeon/firstqprod/reportdaemon_central
+fqprd_rpest | /data/batchapp/softeon/firstqprod/reportdaemon_eastern
+fqprd_rppsf | /data/batchapp/softeon/firstqprod/reportdaemon_pacific
+fqprd_cen_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_central
+fqprd_est_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_eastern
+fqprd_pac_sch | /data/batchapp/softeon/firstqprod/schedulerdaemon_pacific
+fqprd_inbq | /data/batchapp/softeon/firstqprod/uploaddaemon
+fqprd_wldctl | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_central
+fqprd_wldest | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_eastern
+fqprd_wldpsf | /data/batchapp/softeon/firstqprod/wavelaunchdaemon_pacific
+fqprd_estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_eastern
+fqprd_psfabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_pacific
+fqprd_ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon_central
+fqprd_1913pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1913
+fqprd_1914pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1914
+fqprd_1955pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1955
+fqprd_1958pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1958
+fqprd_1959pksp | /data/batchapp/softeon/firstqprod/printpackslipdaemon_1959
+fqprd_2estabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_eastern
+fqprd_2ctlabd | /data/batchapp/softeon/firstqprod/autobatchdistributiondaemon2_central
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 07:47:28.455323
+==============================================================================
+
+2026-08-08 03:47:57,122 - 1407719 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-08/q3-firstquality-prod-batch/10.50.28.60/10.50.28.60-AfterPatching-Retry3-2026-08-08-03-47-57-122.log
+2026-08-08 03:47:57,352 - 1407719 - INFO - Health monitor crontab enabled on all instances
+2026-08-08 03:47:57,354 - 1407719 - INFO - [Retry] Green - cron enabled for i-0800b9d8c211631fb
+2026-08-08 03:47:57,427 - 1407719 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-08 03:47:57,427 - 1407719 - INFO - [Retry] GREEN mail sent for i-0800b9d8c211631fb

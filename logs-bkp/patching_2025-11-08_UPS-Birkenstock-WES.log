@@ -1,0 +1,251 @@
+2025-11-08 01:30:02,340 - 18342 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-11-08 01:30:02,340 - 18342 - INFO - Script Start Time: 2025-11-08 01:30:02
+2025-11-08 01:30:03,048 - 18342 - INFO - Instance(s) selected for Patching: {'i-044eccb080abcdba4': '172.29.61.133'}
+2025-11-08 01:30:03,136 - 18342 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-08 01:30:03,136 - 18342 - INFO - Now patching instances at: 2025-11-08 01:30:03
+2025-11-08 01:30:03,195 - 18342 - INFO - Sending patch command to instance i-044eccb080abcdba4
+2025-11-08 01:30:03,388 - 18342 - INFO - Command sent successfully to instance i-044eccb080abcdba4. Command ID: 0deb180d-c990-446e-a544-ba0fd71575df
+2025-11-08 01:35:04,589 - 18342 - INFO - All patches applied successfully.
+2025-11-08 01:35:04,590 - 18342 - INFO - Patching end time: 2025-11-08 01:35:04
+2025-11-08 01:35:04,590 - 18342 - INFO - Patch Elapsed time: 0:05:01.454238
+2025-11-08 01:35:04,694 - 18342 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-08 01:35:04,694 - 18342 - INFO - Confirmed - services are stopped
+2025-11-08 01:35:24,877 - 18342 - INFO - Discovered TG map: {'i-044eccb080abcdba4': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d']}
+2025-11-08 01:35:25,177 - 18342 - INFO - Sent app_validation.sh to i-044eccb080abcdba4 (command_id: 545bd595-e492-4cf5-bd58-75845d6f609e)
+2025-11-08 01:35:55,295 - 18342 - INFO - app_validation.sh output for i-044eccb080abcdba4:
+
+==============================================================================
+Server Availability Check Started at Sat Nov  8 06:35:25 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.29.61.133
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-29-61-133
+Uptime: up 11 weeks, 1 hour, 28 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.29.61.133:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.29.61.133
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 5300 MB
+Free Physical Memory  = 10311 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 882 MB
+Free Swap Memory  = 9357 MB
+-------------------------------------
+Load Average: 0.88 1.00 0.48 1/520 2929671
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                                              Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                                           20G  6.5G   14G  33% /
+/dev/nvme0n1p128                                                         10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                                          190G  141G   50G  75% /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/shared/softeon/upsbirkenstock  8.0E  6.0T  8.0E   1% /data/data2/shared/softeon/upsbirkenstock
+devtmpfs                                                                4.0M     0  4.0M   0% /dev
+tmpfs                                                                   7.7G     0  7.7G   0% /dev/shm
+tmpfs                                                                   3.1G  748K  3.1G   1% /run
+tmpfs                                                                   1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                                                   7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.29.61.133 started on Sat Nov  8 06:35:25 UTC 2025
+
+Server IP: 172.29.61.133 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.29.61.133
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.29.61.133
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.29.61.133
+-------------------------------------
+
+Total number of Java process running on this host 172.29.61.133 is 3
+Total number of Daemon / Batch (java) application process available is 1
+
+Daemon Process id and name details are given below
+Process ID: 2714861, Process Name: 3:35
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.29.61.133
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3251, Process Name: 375:22
+Process ID: 3685, Process Name: 318:40
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.29.61.133
+Port 8081:	birkuiwes_jb72	Running
+Port 8083:	upsbirui_jb730	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov  8 06:35:26 UTC 2025
+==============================================================================
+
+
+2025-11-08 01:35:55,295 - 18342 - ERROR - app_validation.sh errors for i-044eccb080abcdba4:
+
+2025-11-08 01:35:55,297 - 18342 - INFO - Before patching validation saved to: output/validation-2025-11-08/172.29.61.133-BeforePatching-2025-11-08-01-35-55-296.log
+2025-11-08 01:35:55,297 - 18342 - INFO - Deregistering i-044eccb080abcdba4 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4
+2025-11-08 01:35:55,370 - 18342 - INFO - Deregistering i-044eccb080abcdba4 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d
+2025-11-08 01:35:55,423 - 18342 - INFO - Stopping EC2 instance: i-044eccb080abcdba4 at 2025-11-08 01:35:55
+2025-11-08 01:37:11,793 - 18342 - INFO - Instance i-044eccb080abcdba4 stopped successfully.
+2025-11-08 01:37:11,915 - 18342 - INFO - Stopped i-044eccb080abcdba4 in 0:01:16.492583
+2025-11-08 01:37:11,916 - 18342 - INFO - Starting EC2 instance: i-044eccb080abcdba4
+2025-11-08 01:37:27,619 - 18342 - INFO - Instance i-044eccb080abcdba4 started successfully.
+2025-11-08 01:37:27,619 - 18342 - INFO - Waiting 30 seconds for SSM agent to be ready on i-044eccb080abcdba4...
+2025-11-08 01:37:57,650 - 18342 - INFO - Registering i-044eccb080abcdba4 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4
+2025-11-08 01:37:57,841 - 18342 - INFO - Registering i-044eccb080abcdba4 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d
+2025-11-08 01:39:58,428 - 18342 - INFO - Sent app_validation.sh to i-044eccb080abcdba4 (command_id: 6957caa0-893b-4047-abed-09cc8a7c9f0a)
+2025-11-08 01:40:28,500 - 18342 - INFO - app_validation.sh output for i-044eccb080abcdba4:
+
+==============================================================================
+Server Availability Check Started at Sat Nov  8 06:39:58 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.29.61.133
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-29-61-133
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.29.61.133:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.29.61.133
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 6249 MB
+Free Physical Memory  = 9362 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 1.53 1.55 0.67 3/533 4270
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                                              Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                                           20G  6.3G   14G  32% /
+/dev/nvme0n1p128                                                         10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                                          190G  141G   50G  75% /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/shared/softeon/upsbirkenstock  8.0E  6.0T  8.0E   1% /data/data2/shared/softeon/upsbirkenstock
+devtmpfs                                                                4.0M     0  4.0M   0% /dev
+tmpfs                                                                   7.7G     0  7.7G   0% /dev/shm
+tmpfs                                                                   3.1G  724K  3.1G   1% /run
+tmpfs                                                                   1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                                                   7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.29.61.133 started on Sat Nov  8 06:39:58 UTC 2025
+
+Server IP: 172.29.61.133 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.29.61.133
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.29.61.133
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.29.61.133
+-------------------------------------
+
+Total number of Java process running on this host 172.29.61.133 is 8
+Total number of Daemon / Batch (java) application process available is 6
+
+Daemon Process id and name details are given below
+Process ID: 2844, Process Name: 0:02
+Process ID: 2968, Process Name: 0:02
+Process ID: 3064, Process Name: 0:02
+Process ID: 2897, Process Name: 0:03
+Process ID: 3017, Process Name: 0:02
+Process ID: 2871, Process Name: 0:03
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.29.61.133
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3235, Process Name: 0:47
+Process ID: 3652, Process Name: 0:46
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.29.61.133
+Port 8081:	birkuiwes_jb72	Running
+Port 8083:	upsbirui_jb730	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Nov  8 06:40:00 UTC 2025
+==============================================================================
+
+
+2025-11-08 01:40:28,500 - 18342 - ERROR - app_validation.sh errors for i-044eccb080abcdba4:
+
+2025-11-08 01:40:28,501 - 18342 - INFO - After patching validation saved to: output/validation-2025-11-08/172.29.61.133-AfterPatching-2025-11-08-01-40-28-501.log
+2025-11-08 01:40:28,536 - 18342 - INFO - Validation comparison report generated: output/validation-2025-11-08/172.29.61.133-Validation-details-2025-11-08-01-40-28-501.log
+2025-11-08 01:40:28,606 - 18342 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-08 01:40:28,607 - 18342 - INFO - HTML validation report email sent for i-044eccb080abcdba4
+2025-11-08 01:40:28,724 - 18342 - INFO - Started i-044eccb080abcdba4 in 0:03:16.808177
+2025-11-08 01:40:28,724 - 18342 - INFO - All instances processed.
+2025-11-08 01:40:28,728 - 18342 - INFO - Restart Total time: 0:05:23.908140
+2025-11-08 01:40:28,728 - 18342 - INFO - Auto-confirmed services are restarted
+2025-11-08 01:40:28,728 - 18342 - INFO - Confirmed - services are started
+2025-11-08 01:40:28,838 - 18342 - INFO - The following instances have failed the patch: []
+2025-11-08 01:40:28,838 - 18342 - INFO - No instances have failed the patch.
+2025-11-08 01:40:28,838 - 18342 - INFO - Total Patch Process time: 0:10:26.497576
+2025-11-08 01:40:29,016 - 18342 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-08 01:41:29,174 - 18342 - INFO - Log file ./logs/patching_2025-11-08_UPS-Birkenstock-WES.log uploaded to s3://q4-2025-aws-security-patching/UPS-Birkenstock-WES_Patch/2025-11-08/patching_2025-11-08_UPS-Birkenstock-WES.log

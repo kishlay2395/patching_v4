@@ -1,0 +1,446 @@
+2026-08-09 01:30:04,115 - 1836196 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-09 01:30:04,116 - 1836196 - INFO - Script Start Time: 2026-08-09 01:30:04
+2026-08-09 01:30:04,520 - 1836196 - INFO - Tag: dib-mtg-prod-app, IPs: ['10.64.24.16', '10.64.24.119'], Environment: prod
+2026-08-09 01:30:04,520 - 1836196 - INFO - Instance(s) selected for Patching: {'i-0b2f5828f0452fc4e': '10.64.24.16', 'i-037675bda469526bf': '10.64.24.119'}
+2026-08-09 01:30:04,599 - 1836196 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 01:30:04,599 - 1836196 - INFO - Now patching instances at: 2026-08-09 01:30:04
+2026-08-09 01:30:04,793 - 1836196 - INFO - Sent app_validation.py to i-0b2f5828f0452fc4e (command_id: d91db5c1-a1fd-48bd-9e9f-bc966a97a7ff)
+2026-08-09 01:30:34,869 - 1836196 - INFO - SSM Command Status: Success
+2026-08-09 01:30:34,869 - 1836196 - INFO - app_validation.py output for i-0b2f5828f0452fc4e:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 05:30:05.122983
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.16
+Hostname | ip-10-64-24-16
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 30.8G | 209.1G | 12% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.24.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 54
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3957019 | dibwmsmtgprod | jboss730eap | mtgprd_jb730eap | 8080 | 10.64.24.16:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgprod/standalone
+3957707 | dibwmsmtgrfprod | jboss730eap | mtgrfprd_jb7eap | 8081 | 10.64.24.16:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 05:30:05.676266
+==============================================================================
+
+2026-08-09 01:30:34,871 - 1836196 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.16/10.64.24.16-BeforePatching-2026-08-09-01-30-34-870.log
+2026-08-09 01:30:35,059 - 1836196 - INFO - Sent app_validation.py to i-037675bda469526bf (command_id: 1a2a274a-64e2-47d3-a4a0-dc1296ec422b)
+2026-08-09 01:31:05,137 - 1836196 - INFO - SSM Command Status: Success
+2026-08-09 01:31:05,138 - 1836196 - INFO - app_validation.py output for i-037675bda469526bf:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 05:30:35.407634
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.119
+Hostname | ip-10-64-24-119
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 34.0G | 205.8G | 14% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.64.24.119:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 54
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.119 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4004464 | dibwmsmtgprod | jboss730eap | mtgprd_jb730eap | 8080 | 10.64.24.119:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgprod/standalone
+4010803 | dibwmsmtgrfprod | jboss730eap | mtgrfprd_jb7eap | 8081 | 10.64.24.119:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 05:30:36.021744
+==============================================================================
+
+2026-08-09 01:31:05,139 - 1836196 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.119/10.64.24.119-BeforePatching-2026-08-09-01-31-05-139.log
+2026-08-09 01:31:10,419 - 1836196 - INFO - i-0b2f5828f0452fc4e: Cron was active = False
+2026-08-09 01:31:15,624 - 1836196 - INFO - i-037675bda469526bf: Cron was active = False
+2026-08-09 01:31:15,625 - 1836196 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-09 01:31:15,712 - 1836196 - INFO - Sending patch command to instance i-0b2f5828f0452fc4e
+2026-08-09 01:31:15,830 - 1836196 - INFO - Command sent successfully to instance i-0b2f5828f0452fc4e. Command ID: 744b918e-e084-42b3-9b31-dc46a8fd0248
+2026-08-09 01:31:15,972 - 1836196 - INFO - Sending patch command to instance i-037675bda469526bf
+2026-08-09 01:31:16,063 - 1836196 - INFO - Command sent successfully to instance i-037675bda469526bf. Command ID: dd0daad6-48c8-4569-94ab-a34cead7cec0
+2026-08-09 01:40:18,470 - 1836196 - INFO - All patches applied successfully.
+2026-08-09 01:40:18,471 - 1836196 - INFO - Patching end time: 2026-08-09 01:40:18
+2026-08-09 01:40:18,471 - 1836196 - INFO - Patch Elapsed time: 0:10:13.872270
+2026-08-09 01:40:18,546 - 1836196 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 01:40:18,546 - 1836196 - INFO - Confirmed - services are stopped
+2026-08-09 01:40:39,637 - 1836196 - INFO - Discovered TG map: {'i-0b2f5828f0452fc4e': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa'], 'i-037675bda469526bf': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa']}
+2026-08-09 01:40:39,813 - 1836196 - INFO - Deregistering i-0b2f5828f0452fc4e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38
+2026-08-09 01:40:39,899 - 1836196 - INFO - Deregistering i-0b2f5828f0452fc4e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa
+2026-08-09 01:40:39,957 - 1836196 - INFO - Stopping EC2 instance: i-0b2f5828f0452fc4e at 2026-08-09 01:40:39
+2026-08-09 01:42:11,315 - 1836196 - INFO - Instance i-0b2f5828f0452fc4e stopped successfully.
+2026-08-09 01:42:11,570 - 1836196 - INFO - Stopped i-0b2f5828f0452fc4e in 0:01:31.613606
+2026-08-09 01:42:11,571 - 1836196 - INFO - Starting EC2 instance: i-0b2f5828f0452fc4e
+2026-08-09 01:42:27,587 - 1836196 - INFO - Instance i-0b2f5828f0452fc4e started successfully.
+2026-08-09 01:42:27,587 - 1836196 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0b2f5828f0452fc4e...
+2026-08-09 01:44:07,679 - 1836196 - INFO - Registering i-0b2f5828f0452fc4e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38
+2026-08-09 01:44:07,827 - 1836196 - INFO - Registering i-0b2f5828f0452fc4e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa
+2026-08-09 01:45:08,390 - 1836196 - INFO - Sent app_validation.py to i-0b2f5828f0452fc4e (command_id: 2b72a8f0-4d29-4dfb-8bbf-82fac043cb86)
+2026-08-09 01:45:38,472 - 1836196 - INFO - SSM Command Status: Success
+2026-08-09 01:45:38,472 - 1836196 - INFO - app_validation.py output for i-0b2f5828f0452fc4e:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 05:45:08.729362
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.16
+Hostname | ip-10-64-24-16
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 30.8G | 209.1G | 12% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.24.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 54
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3436 | dibwmsmtgprod | jboss730eap | mtgprd_jb730eap | 8080 | 10.64.24.16:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgprod/standalone
+3667 | dibwmsmtgrfprod | jboss730eap | mtgrfprd_jb7eap | 8081 | 10.64.24.16:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 05:45:10.181618
+==============================================================================
+
+2026-08-09 01:45:38,475 - 1836196 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.16/10.64.24.16-AfterPatching-2026-08-09-01-45-38-474.log
+2026-08-09 01:45:38,537 - 1836196 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.16/10.64.24.16-Validation-details-2026-08-09-01-45-38-474.html
+2026-08-09 01:45:38,711 - 1836196 - INFO - i-0b2f5828f0452fc4e: Cron was not active - skipping enable
+2026-08-09 01:45:38,789 - 1836196 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 01:45:38,789 - 1836196 - INFO - GREEN mail sent for i-0b2f5828f0452fc4e
+2026-08-09 01:45:39,041 - 1836196 - INFO - Started i-0b2f5828f0452fc4e in 0:03:27.470621
+2026-08-09 01:45:39,042 - 1836196 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-08-09 01:47:39,141 - 1836196 - INFO - Deregistering i-037675bda469526bf from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38
+2026-08-09 01:47:39,223 - 1836196 - INFO - Deregistering i-037675bda469526bf from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa
+2026-08-09 01:47:39,295 - 1836196 - INFO - Stopping EC2 instance: i-037675bda469526bf at 2026-08-09 01:47:39
+2026-08-09 01:48:55,528 - 1836196 - INFO - Instance i-037675bda469526bf stopped successfully.
+2026-08-09 01:48:55,775 - 1836196 - INFO - Stopped i-037675bda469526bf in 0:01:16.480100
+2026-08-09 01:48:55,776 - 1836196 - INFO - Starting EC2 instance: i-037675bda469526bf
+2026-08-09 01:49:11,715 - 1836196 - INFO - Instance i-037675bda469526bf started successfully.
+2026-08-09 01:49:11,715 - 1836196 - INFO - Waiting 100 seconds for SSM agent to be ready on i-037675bda469526bf...
+2026-08-09 01:50:51,779 - 1836196 - INFO - Registering i-037675bda469526bf to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-Desktop/8a491dea5f677f38
+2026-08-09 01:50:51,986 - 1836196 - INFO - Registering i-037675bda469526bf to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DoItBest-NV-MTG-Prod-RF/421e0a64216599fa
+2026-08-09 01:51:52,493 - 1836196 - INFO - Sent app_validation.py to i-037675bda469526bf (command_id: 49afff75-2fb3-4134-ac26-e2c3efc0f32c)
+2026-08-09 01:52:22,566 - 1836196 - INFO - SSM Command Status: Success
+2026-08-09 01:52:22,566 - 1836196 - INFO - app_validation.py output for i-037675bda469526bf:
+
+==============================================================================
+Server Availability Check Started | 2026-08-09 05:51:52.817694
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.119
+Hostname | ip-10-64-24-119
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 34.1G | 205.8G | 14% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.24.119:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 54
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.119 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3565 | dibwmsmtgprod | jboss730eap | mtgprd_jb730eap | 8080 | 10.64.24.119:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgprod/standalone
+3572 | dibwmsmtgrfprod | jboss730eap | mtgrfprd_jb7eap | 8081 | 10.64.24.119:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsmtgrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-09 05:51:54.096968
+==============================================================================
+
+2026-08-09 01:52:22,568 - 1836196 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.119/10.64.24.119-AfterPatching-2026-08-09-01-52-22-568.log
+2026-08-09 01:52:22,625 - 1836196 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-09/dib-mtg-prod-app/10.64.24.119/10.64.24.119-Validation-details-2026-08-09-01-52-22-568.html
+2026-08-09 01:52:22,942 - 1836196 - INFO - i-037675bda469526bf: Cron was not active - skipping enable
+2026-08-09 01:52:23,040 - 1836196 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 01:52:23,040 - 1836196 - INFO - GREEN mail sent for i-037675bda469526bf
+2026-08-09 01:52:23,295 - 1836196 - INFO - Started i-037675bda469526bf in 0:03:27.519423
+2026-08-09 01:52:23,296 - 1836196 - INFO - All instances processed.
+2026-08-09 01:52:23,303 - 1836196 - INFO - Restart Total time: 0:12:04.618337
+2026-08-09 01:52:23,303 - 1836196 - INFO - Auto-confirmed services are restarted
+2026-08-09 01:52:23,303 - 1836196 - INFO - Confirmed - services are started
+2026-08-09 01:52:23,429 - 1836196 - INFO - The following instances have failed the patch: []
+2026-08-09 01:52:23,430 - 1836196 - INFO - No instances have failed the patch.
+2026-08-09 01:52:23,430 - 1836196 - INFO - Total Patch Process time: 0:22:19.313897
+2026-08-09 01:53:23,895 - 1836196 - INFO - Log file ./logs/patching_2026-08-09_dib-mtg-prod-app.log uploaded to s3://q3-2026-aws-security-patching/dib-mtg-prod-app_Patch/2026-08-09/patching_2026-08-09_dib-mtg-prod-app.log

@@ -1,0 +1,236 @@
+2026-05-30 00:20:02,731 - 1833698 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-30 00:20:02,731 - 1833698 - INFO - Script Start Time: 2026-05-30 00:20:02
+2026-05-30 00:20:03,273 - 1833698 - INFO - Instance(s) selected for Patching: {'i-07983881a997c0d68': '172.29.10.56'}
+2026-05-30 00:20:03,346 - 1833698 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 00:20:03,346 - 1833698 - INFO - Now patching instances at: 2026-05-30 00:20:03
+2026-05-30 00:20:03,435 - 1833698 - INFO - Sending patch command to instance i-07983881a997c0d68
+2026-05-30 00:20:03,606 - 1833698 - INFO - Command sent successfully to instance i-07983881a997c0d68. Command ID: 56d0be58-a368-4f44-8abd-e2676cb4686f
+2026-05-30 00:28:05,832 - 1833698 - INFO - All patches applied successfully.
+2026-05-30 00:28:05,833 - 1833698 - INFO - Patching end time: 2026-05-30 00:28:05
+2026-05-30 00:28:05,833 - 1833698 - INFO - Patch Elapsed time: 0:08:02.486610
+2026-05-30 00:28:05,899 - 1833698 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 00:28:05,899 - 1833698 - INFO - Confirmed - services are stopped
+2026-05-30 00:28:25,620 - 1833698 - INFO - Discovered TG map: {}
+2026-05-30 00:28:26,027 - 1833698 - INFO - Sent app_validation.py to i-07983881a997c0d68 (command_id: 96e1e8d8-fc6e-428c-b657-6c2d162adf86)
+2026-05-30 00:28:56,116 - 1833698 - INFO - app_validation.py output for i-07983881a997c0d68:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:28:26.312778
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.56
+Hostname | ip-172-29-10-56
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 25.0G | 264.8G | 8% | /data
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.56:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.56 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | umgoms_sqsrc, umgoms_2sqspu, umgoms_1sqspu, umgoms_sqspd, umgoms_sqspc, umgoms_2sqsou, umgoms_1sqsou, umgoms_sqsoe, umgoms_1sqso, umgoms_2sqsoc, umgoms_3sqsoc, umgoms_4sqsoc, umgoms_sqscnagt, umgoms_sqslcagt, umgoms_sqsiu, umgoms_sqsic, umgoms_sqsdcagt, umgoms_sqsbo, umgoms_fhragt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+umgoms_sqsrc | /data/batchapp/softeon/umgomsus/sqsrefundcreatedaemon
+umgoms_2sqspu | /data/batchapp/softeon/umgomsus/sqsproductupdatedaemon2
+umgoms_1sqspu | /data/batchapp/softeon/umgomsus/sqsproductupdatedaemon1
+umgoms_sqspd | /data/batchapp/softeon/umgomsus/sqsproductdeletedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsus/sqsproductcreatedaemon
+umgoms_2sqsou | /data/batchapp/softeon/umgomsus/sqsorderupdatedaemon2
+umgoms_1sqsou | /data/batchapp/softeon/umgomsus/sqsorderupdatedaemon1
+umgoms_sqsoe | /data/batchapp/softeon/umgomsus/sqsordereditdaemon
+umgoms_1sqso | /data/batchapp/softeon/umgomsus/sqsordercreatedaemon1
+umgoms_2sqsoc | /data/batchapp/softeon/umgomsus/sqsordercreatedaemon2
+umgoms_3sqsoc | /data/batchapp/softeon/umgomsus/sqsordercreatedaemon3
+umgoms_4sqsoc | /data/batchapp/softeon/umgomsus/sqsordercreatedaemon4
+umgoms_sqscnagt | /data/batchapp/softeon/umgomsus/sqsordercanceldaemon
+umgoms_sqslcagt | /data/batchapp/softeon/umgomsus/sqslocationdaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsus/sqsinventoryupdatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsus/sqsinventorycreatedaemon
+umgoms_sqsdcagt | /data/batchapp/softeon/umgomsus/sqsdisputecreatedaemon
+umgoms_sqsbo | /data/batchapp/softeon/umgomsus/sqsbulkoperationdaemon
+umgoms_fhragt | /data/batchapp/softeon/umgomsus/sqsfulfillmentholdreleasedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:28:26.823821
+==============================================================================
+
+2026-05-30 00:28:56,116 - 1833698 - ERROR - app_validation.py errors for i-07983881a997c0d68:
+
+2026-05-30 00:28:56,118 - 1833698 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-batch/172.29.10.56/172.29.10.56-BeforePatching-2026-05-30-00-28-56-117.log
+2026-05-30 00:28:56,118 - 1833698 - INFO - Stopping EC2 instance: i-07983881a997c0d68 at 2026-05-30 00:28:56
+2026-05-30 00:29:57,263 - 1833698 - INFO - Instance i-07983881a997c0d68 stopped successfully.
+2026-05-30 00:29:57,408 - 1833698 - INFO - Stopped i-07983881a997c0d68 in 0:01:01.290120
+2026-05-30 00:29:57,409 - 1833698 - INFO - Starting EC2 instance: i-07983881a997c0d68
+2026-05-30 00:30:13,413 - 1833698 - INFO - Instance i-07983881a997c0d68 started successfully.
+2026-05-30 00:30:13,413 - 1833698 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07983881a997c0d68...
+2026-05-30 00:31:53,770 - 1833698 - INFO - Sent app_validation.py to i-07983881a997c0d68 (command_id: e3532da4-0653-4cc0-9ce4-bc509f94e8aa)
+2026-05-30 00:32:23,860 - 1833698 - INFO - app_validation.py output for i-07983881a997c0d68:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:31:54.129792
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.56
+Hostname | ip-172-29-10-56
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 25.0G | 264.9G | 8% | /data
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.56:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.56 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:31:54.437542
+==============================================================================
+
+2026-05-30 00:32:23,860 - 1833698 - ERROR - app_validation.py errors for i-07983881a997c0d68:
+
+2026-05-30 00:32:23,862 - 1833698 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-batch/172.29.10.56/172.29.10.56-AfterPatching-2026-05-30-00-32-23-862.log
+2026-05-30 00:32:23,913 - 1833698 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-batch/172.29.10.56/172.29.10.56-Validation-details-2026-05-30-00-32-23-862.html
+2026-05-30 00:32:24,177 - 1833698 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-30 00:32:24,177 - 1833698 - INFO - HTML validation report email sent for i-07983881a997c0d68
+2026-05-30 00:32:24,308 - 1833698 - INFO - Started i-07983881a997c0d68 in 0:02:26.898796
+2026-05-30 00:32:24,308 - 1833698 - INFO - All instances processed.
+2026-05-30 00:32:24,311 - 1833698 - INFO - Restart Total time: 0:04:18.280502
+2026-05-30 00:32:24,312 - 1833698 - INFO - Auto-confirmed services are restarted
+2026-05-30 00:32:24,312 - 1833698 - INFO - Confirmed - services are started
+2026-05-30 00:32:24,465 - 1833698 - INFO - The following instances have failed the patch: []
+2026-05-30 00:32:24,465 - 1833698 - INFO - No instances have failed the patch.
+2026-05-30 00:32:24,465 - 1833698 - INFO - Total Patch Process time: 0:12:21.734008
+2026-05-30 00:33:24,841 - 1833698 - INFO - Log file ./logs/patching_2026-05-30_UMG-OMS-US-prod-batch.log uploaded to s3://q2-2026-aws-security-patching/UMG-OMS-US-prod-batch_Patch/2026-05-30/patching_2026-05-30_UMG-OMS-US-prod-batch.log

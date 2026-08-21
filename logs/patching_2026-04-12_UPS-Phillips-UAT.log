@@ -1,0 +1,246 @@
+2026-04-12 00:15:02,183 - 510195 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-12 00:15:02,184 - 510195 - INFO - Script Start Time: 2026-04-12 00:15:02
+2026-04-12 00:15:02,803 - 510195 - INFO - Instance(s) selected for Patching: {'i-0fbfb37de825ca2ab': '172.29.60.143'}
+2026-04-12 00:15:02,883 - 510195 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:15:02,883 - 510195 - INFO - Now patching instances at: 2026-04-12 00:15:02
+2026-04-12 00:15:02,971 - 510195 - INFO - Sending patch command to instance i-0fbfb37de825ca2ab
+2026-04-12 00:15:03,126 - 510195 - INFO - Command sent successfully to instance i-0fbfb37de825ca2ab. Command ID: 7c2f7d00-a4fc-4fb6-9c0b-d19923751a32
+2026-04-12 00:20:04,451 - 510195 - INFO - All patches applied successfully.
+2026-04-12 00:20:04,452 - 510195 - INFO - Patching end time: 2026-04-12 00:20:04
+2026-04-12 00:20:04,453 - 510195 - INFO - Patch Elapsed time: 0:05:01.569642
+2026-04-12 00:20:04,532 - 510195 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-12 00:20:04,532 - 510195 - INFO - Confirmed - services are stopped
+2026-04-12 00:20:25,837 - 510195 - INFO - Discovered TG map: {'i-0fbfb37de825ca2ab': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f']}
+2026-04-12 00:20:26,252 - 510195 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 91b5e2a4-8185-4341-98e0-04a40d47400b)
+2026-04-12 00:20:56,337 - 510195 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-04-12 04:20:26.664402
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.3G | 167.6G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 160.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 31
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | philip_download, philip_event, philip_label, philip_replnsmt, philip_report, philip_rptjqgrd, philip_schedler, philip_upload, philip_wavlauch, phapac_download, phapac_event, phapac_label, phapac_replnsmt, phapac_report, phapac_rptjqgrd, phapac_schedler, phapac_upload, phapac_wavlauch, phapa_ftpdaemon, phemea_download, phemea_event, phemea_label, phemea_report, phemea_rptjqgrd, phemea_schedler, phemea_upload, phemea_wavlauch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+philip_download | /data/batchapp/softeonuat/upsphilipsuat/downloaddaemon
+philip_event | /data/batchapp/softeonuat/upsphilipsuat/eventdaemon
+philip_label | /data/batchapp/softeonuat/upsphilipsuat/labeldaemon
+philip_replnsmt | /data/batchapp/softeonuat/upsphilipsuat/replenishmentdaemon
+philip_report | /data/batchapp/softeonuat/upsphilipsuat/reportdaemon
+philip_rptjqgrd | /data/batchapp/softeonuat/upsphilipsuat/reportjqgridexportdaemon
+philip_schedler | /data/batchapp/softeonuat/upsphilipsuat/schedulerdaemon
+philip_upload | /data/batchapp/softeonuat/upsphilipsuat/uploaddaemon
+philip_wavlauch | /data/batchapp/softeonuat/upsphilipsuat/wavelaunchdaemon
+phapac_download | /data/batchapp/softeonuat/upsphapac/downloaddaemon
+phapac_event | /data/batchapp/softeonuat/upsphapac/eventdaemon
+phapac_label | /data/batchapp/softeonuat/upsphapac/labeldaemon
+phapac_replnsmt | /data/batchapp/softeonuat/upsphapac/replenishmentdaemon
+phapac_report | /data/batchapp/softeonuat/upsphapac/reportdaemon
+phapac_rptjqgrd | /data/batchapp/softeonuat/upsphapac/reportjqgridexportdaemon
+phapac_schedler | /data/batchapp/softeonuat/upsphapac/schedulerdaemon
+phapac_upload | /data/batchapp/softeonuat/upsphapac/uploaddaemon
+phapac_wavlauch | /data/batchapp/softeonuat/upsphapac/wavelaunchdaemon
+phapa_ftpdaemon | /data/batchapp/softeonuat/upsphapac/ftpdaemon
+phemea_download | /data/batchapp/softeonuat/upsphemea/downloaddaemon
+phemea_event | /data/batchapp/softeonuat/upsphemea/eventdaemon
+phemea_label | /data/batchapp/softeonuat/upsphemea/labeldaemon
+phemea_report | /data/batchapp/softeonuat/upsphemea/reportdaemon
+phemea_rptjqgrd | /data/batchapp/softeonuat/upsphemea/reportjqgridexportdaemon
+phemea_schedler | /data/batchapp/softeonuat/upsphemea/schedulerdaemon
+phemea_upload | /data/batchapp/softeonuat/upsphemea/uploaddaemon
+phemea_wavlauch | /data/batchapp/softeonuat/upsphemea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1206967 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+1207159 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-12 04:20:27.733232
+==============================================================================
+
+2026-04-12 00:20:56,337 - 510195 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-04-12 00:20:56,339 - 510195 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-12/UPS-Phillips-UAT/172.29.60.143/172.29.60.143-BeforePatching-2026-04-12-00-20-56-338.log
+2026-04-12 00:20:56,339 - 510195 - INFO - Deregistering i-0fbfb37de825ca2ab from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f
+2026-04-12 00:20:56,420 - 510195 - INFO - Stopping EC2 instance: i-0fbfb37de825ca2ab at 2026-04-12 00:20:56
+2026-04-12 00:22:27,668 - 510195 - INFO - Instance i-0fbfb37de825ca2ab stopped successfully.
+2026-04-12 00:22:27,801 - 510195 - INFO - Stopped i-0fbfb37de825ca2ab in 0:01:31.380819
+2026-04-12 00:22:27,801 - 510195 - INFO - Starting EC2 instance: i-0fbfb37de825ca2ab
+2026-04-12 00:22:43,797 - 510195 - INFO - Instance i-0fbfb37de825ca2ab started successfully.
+2026-04-12 00:22:43,798 - 510195 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0fbfb37de825ca2ab...
+2026-04-12 00:23:33,846 - 510195 - INFO - Registering i-0fbfb37de825ca2ab to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f
+2026-04-12 00:25:04,586 - 510195 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 6b836a0a-c37a-4b6a-abfa-e2db7b249e87)
+2026-04-12 00:25:34,704 - 510195 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-04-12 04:25:04.924629
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.3G | 167.6G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 160.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3685 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+3678 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-12 04:25:05.822095
+==============================================================================
+
+2026-04-12 00:25:34,704 - 510195 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-04-12 00:25:34,706 - 510195 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-12/UPS-Phillips-UAT/172.29.60.143/172.29.60.143-AfterPatching-2026-04-12-00-25-34-706.log
+2026-04-12 00:25:34,758 - 510195 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-12/UPS-Phillips-UAT/172.29.60.143/172.29.60.143-Validation-details-2026-04-12-00-25-34-706.html
+2026-04-12 00:25:34,832 - 510195 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-12 00:25:34,832 - 510195 - INFO - HTML validation report email sent for i-0fbfb37de825ca2ab
+2026-04-12 00:25:34,975 - 510195 - INFO - Started i-0fbfb37de825ca2ab in 0:03:07.173712
+2026-04-12 00:25:34,975 - 510195 - INFO - All instances processed.
+2026-04-12 00:25:34,979 - 510195 - INFO - Restart Total time: 0:05:30.314412
+2026-04-12 00:25:34,979 - 510195 - INFO - Auto-confirmed services are restarted
+2026-04-12 00:25:34,979 - 510195 - INFO - Confirmed - services are started
+2026-04-12 00:25:35,098 - 510195 - INFO - The following instances have failed the patch: []
+2026-04-12 00:25:35,099 - 510195 - INFO - No instances have failed the patch.
+2026-04-12 00:25:35,099 - 510195 - INFO - Total Patch Process time: 0:10:32.914257
+2026-04-12 00:26:35,449 - 510195 - INFO - Log file ./logs/patching_2026-04-12_UPS-Phillips-UAT.log uploaded to s3://q2-2026-aws-security-patching/UPS-Phillips-UAT_Patch/2026-04-12/patching_2026-04-12_UPS-Phillips-UAT.log

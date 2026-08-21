@@ -1,0 +1,499 @@
+2026-04-18 16:40:03,213 - 869002 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-18 17:06:32,161 - 869002 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-18 17:06:32,335 - 869002 - INFO - Log file ./logs/backup_2026-04-18.log uploaded to s3://q3-2025-aws-security-patching/UPS-EU-Batch_Patch_Backup/2026-04-18/backup_2026-04-18.log
+2026-04-18 20:40:02,845 - 877557 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-18 20:40:02,845 - 877557 - INFO - Script Start Time: 2026-04-18 20:40:02
+2026-04-18 20:40:03,180 - 877557 - INFO - Instance(s) selected for Patching: {'i-08f43b606b5e41fe4': '172.22.10.12', 'i-078ce009d29416e40': '172.22.10.44'}
+2026-04-18 20:40:03,253 - 877557 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-18 20:40:03,253 - 877557 - INFO - Now patching instances at: 2026-04-18 20:40:03
+2026-04-18 20:40:03,338 - 877557 - INFO - Sending patch command to instance i-078ce009d29416e40
+2026-04-18 20:40:03,727 - 877557 - INFO - Command sent successfully to instance i-078ce009d29416e40. Command ID: 54b4bbf1-bb88-4add-aded-f9bfe94c9856
+2026-04-18 20:40:03,882 - 877557 - INFO - Sending patch command to instance i-08f43b606b5e41fe4
+2026-04-18 20:40:04,103 - 877557 - INFO - Command sent successfully to instance i-08f43b606b5e41fe4. Command ID: a63abe85-b4cb-4a5d-80aa-95773db2e9f3
+2026-04-18 20:43:05,892 - 877557 - INFO - All patches applied successfully.
+2026-04-18 20:43:05,893 - 877557 - INFO - Patching end time: 2026-04-18 20:43:05
+2026-04-18 20:43:05,893 - 877557 - INFO - Patch Elapsed time: 0:03:02.640165
+2026-04-18 20:43:05,973 - 877557 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-18 20:43:05,973 - 877557 - INFO - Confirmed - services are stopped
+2026-04-18 20:43:11,833 - 877557 - INFO - Discovered TG map: {}
+2026-04-18 20:43:12,638 - 877557 - INFO - Sent app_validation.py to i-078ce009d29416e40 (command_id: e0bf60b0-8f9c-4f16-9291-67ab173a3cea)
+2026-04-18 20:43:42,785 - 877557 - INFO - app_validation.py output for i-078ce009d29416e40:
+
+==============================================================================
+Server Availability Check Started | 2026-04-19 00:43:12.846051
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.44
+Hostname | ip-172-22-10-44.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 186.9G | 103.0G | 64% | /data
+fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | 0B | 4.8T | 0B | 0% | /data2
+172.22.10.12:/data/sftpuser/upseusftpuser/ | 177.0G | 97.1G | 70.9G | 54% | /data/sftpuser/upseusftpuser
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | 172.22.10.12:/data/sftpuser/upseusftpuser/ | /data/sftpuser/upseusftpuser | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.44:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 563
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.44 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | upseur_rpt, upseur_jqgrid, upseur_sch, upseur_sdocs, upseur_inbq, upseur_astinbq, upseur_wld, upseuv8_label, upseuv8_labelvs, upseur_2inbq, upseur_3inbq, upseur_4inbq, upseur_5inbq, upseu_5_abchdi, upseu_6_abchdi, upseur_lfcwld, upseur_abdhr, upseu_abchtest, upseur_bre, upseur_dwa
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+upseur_rpt | /data/batchapp/softeon/upseuv8prod/reportdaemon
+upseur_jqgrid | /data/batchapp/softeon/upseuv8prod/reportjqgridexportdaemon
+upseur_sch | /data/batchapp/softeon/upseuv8prod/schedulerdaemon
+upseur_sdocs | /data/batchapp/softeon/upseuv8prod/shippingdocsreportdaemon
+upseur_inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon
+upseur_astinbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon_astore
+upseur_wld | /data/batchapp/softeon/upseuv8prod/wavelaunchdaemon
+upseuv8_label | /data/batchapp/softeon/upseuv8prod/labeldaemon
+upseuv8_labelvs | /data/batchapp/softeon/upseuv8prod/labeldaemonvs
+upseur_2inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon2
+upseur_3inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon3
+upseur_4inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon4
+upseur_5inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon5
+upseu_5_abchdi | /data/batchapp/softeon/upseuv8prod/picktoolagent5
+upseu_6_abchdi | /data/batchapp/softeon/upseuv8prod/picktoolagent6
+upseur_lfcwld | /data/batchapp/softeon/upseuv8prod/wavelaunchdaemon_nlrndlfc
+upseur_abdhr | /data/batchapp/softeon/upseuv8prod/autopicktoolagentasginment
+upseu_abchtest | /data/batchapp/softeon/upseuv8prod/picktoolagenttest
+upseur_bre | /data/batchapp/softeon/upseuv8prod/breruleenginedaemon
+upseur_dwa | /data/batchapp/softeon/upseuv8prod/downloaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-19 00:43:13.669310
+==============================================================================
+
+2026-04-18 20:43:42,785 - 877557 - ERROR - app_validation.py errors for i-078ce009d29416e40:
+
+2026-04-18 20:43:42,787 - 877557 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.44/172.22.10.44-BeforePatching-2026-04-18-20-43-42-786.log
+2026-04-18 20:43:42,787 - 877557 - INFO - Stopping EC2 instance: i-078ce009d29416e40 at 2026-04-18 20:43:42
+2026-04-18 20:44:59,556 - 877557 - INFO - Instance i-078ce009d29416e40 stopped successfully.
+2026-04-18 20:44:59,818 - 877557 - INFO - Stopped i-078ce009d29416e40 in 0:01:17.031301
+2026-04-18 20:44:59,819 - 877557 - INFO - Starting EC2 instance: i-078ce009d29416e40
+2026-04-18 20:45:15,862 - 877557 - INFO - Instance i-078ce009d29416e40 started successfully.
+2026-04-18 20:45:15,862 - 877557 - INFO - Waiting 50 seconds for SSM agent to be ready on i-078ce009d29416e40...
+2026-04-18 20:46:06,476 - 877557 - INFO - Sent app_validation.py to i-078ce009d29416e40 (command_id: d6d73c64-fbda-4469-893a-83c2ca49e84e)
+2026-04-18 20:46:36,721 - 877557 - INFO - app_validation.py output for i-078ce009d29416e40:
+
+==============================================================================
+Server Availability Check Started | 2026-04-19 00:46:06.755392
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.44
+Hostname | ip-172-22-10-44.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 180.7G | 109.1G | 62% | /data
+fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | 0B | 4.8T | 0B | 0% | /data2
+172.22.10.12:/data/sftpuser/upseusftpuser/ | 177.0G | 90.8G | 77.2G | 51% | /data/sftpuser/upseusftpuser
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | 172.22.10.12:/data/sftpuser/upseusftpuser/ | /data/sftpuser/upseusftpuser | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.44:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 563
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.44 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | upseur_dwa, upseur_rpt, upseur_jqgrid, upseur_sch, upseur_sdocs, upseur_inbq, upseur_astinbq, upseur_wld, upseuv8_label, upseuv8_labelvs, upseur_2inbq, upseur_3inbq, upseur_4inbq, upseur_5inbq, upseu_5_abchdi, upseu_6_abchdi, upseur_lfcwld, upseur_abdhr, upseu_abchtest, upseur_bre
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+upseur_dwa | /data/batchapp/softeon/upseuv8prod/downloaddaemon
+upseur_rpt | /data/batchapp/softeon/upseuv8prod/reportdaemon
+upseur_jqgrid | /data/batchapp/softeon/upseuv8prod/reportjqgridexportdaemon
+upseur_sch | /data/batchapp/softeon/upseuv8prod/schedulerdaemon
+upseur_sdocs | /data/batchapp/softeon/upseuv8prod/shippingdocsreportdaemon
+upseur_inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon
+upseur_astinbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon_astore
+upseur_wld | /data/batchapp/softeon/upseuv8prod/wavelaunchdaemon
+upseuv8_label | /data/batchapp/softeon/upseuv8prod/labeldaemon
+upseuv8_labelvs | /data/batchapp/softeon/upseuv8prod/labeldaemonvs
+upseur_2inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon2
+upseur_3inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon3
+upseur_4inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon4
+upseur_5inbq | /data/batchapp/softeon/upseuv8prod/uploaddaemon5
+upseu_5_abchdi | /data/batchapp/softeon/upseuv8prod/picktoolagent5
+upseu_6_abchdi | /data/batchapp/softeon/upseuv8prod/picktoolagent6
+upseur_lfcwld | /data/batchapp/softeon/upseuv8prod/wavelaunchdaemon_nlrndlfc
+upseur_abdhr | /data/batchapp/softeon/upseuv8prod/autopicktoolagentasginment
+upseu_abchtest | /data/batchapp/softeon/upseuv8prod/picktoolagenttest
+upseur_bre | /data/batchapp/softeon/upseuv8prod/breruleenginedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-19 00:46:07.943051
+==============================================================================
+
+2026-04-18 20:46:36,721 - 877557 - ERROR - app_validation.py errors for i-078ce009d29416e40:
+
+2026-04-18 20:46:36,722 - 877557 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.44/172.22.10.44-AfterPatching-2026-04-18-20-46-36-722.log
+2026-04-18 20:46:36,773 - 877557 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.44/172.22.10.44-Validation-details-2026-04-18-20-46-36-722.html
+2026-04-18 20:46:36,841 - 877557 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-18 20:46:36,841 - 877557 - INFO - HTML validation report email sent for i-078ce009d29416e40
+2026-04-18 20:46:37,094 - 877557 - INFO - Started i-078ce009d29416e40 in 0:01:37.275572
+2026-04-18 20:46:37,095 - 877557 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-18 20:48:37,807 - 877557 - INFO - Sent app_validation.py to i-08f43b606b5e41fe4 (command_id: f0828f15-040d-4edd-acce-e8c48e4e23c5)
+2026-04-18 20:49:07,987 - 877557 - INFO - app_validation.py output for i-08f43b606b5e41fe4:
+
+==============================================================================
+Server Availability Check Started | 2026-04-19 00:48:38.088628
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.12
+Hostname | ip-172-22-10-12.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 74.8G | 93.2G | 42% | /data
+fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | 0B | 4.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/sftpuser/upseusftpuser            172.22.10.44(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 608
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upseur_download, upseur_event, upseur_label, upseur_replreq, upseur_schedule, upseur_upload, upseur_wavelaun, upseur_ordexfil, upseur_ftpd, upseur_taskleve, upseur_INBQXLS, upseur_astrvsin, upseur_vsinbq, upseur_vssch, upseur_vssdocs, upseur_vsdwa, upseur_vswld, upseur_3inbqvs, upseur_queueall, upseur_2astrvs, upseur_3astrvs
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upseur_download | /data/app/java/jdk1.7.0_80/bin/upseur_download
+upseur_event | /data/app/java/jdk1.7.0_80/bin/upseur_event
+upseur_label | /data/app/java/jdk1.7.0_80/bin/upseur_label
+upseur_replreq | /data/batchapp/softeon/upseur/replenishmentrequestdaemon
+upseur_schedule | /data/app/java/jdk1.8.0_144/bin/upseur_schedule
+upseur_upload | /data/app/java/jdk1.8.0_144/bin/upseur_upload
+upseur_wavelaun | /data/app/java/jdk1.7.0_80/bin/upseur_wavelaun
+upseur_ordexfil | /data/app/java/jdk1.7.0_80/bin/upseur_ordexfil
+upseur_ftpd | /data/app/java/jdk1.7.0_80/bin/upseur_ftpd
+upseur_taskleve | /data/batchapp/softeon/upseur/tasklevelinventoryallocationdaemon
+upseur_INBQXLS | /data/app/java/jdk1.8.0_144/bin/upseur_INBQXLS
+upseur_astrvsin | /data/batchapp/softeon/upseur/uploaddaemonastorevs
+upseur_vsinbq | /data/batchapp/softeon/upseur/uploaddaemonvs
+upseur_vssch | /data/batchapp/softeon/upseur/schedulerdaemonvs
+upseur_vssdocs | /data/batchapp/softeon/upseur/shippingdocsreportdaemonvs
+upseur_vsdwa | /data/batchapp/softeon/upseur/downloaddaemonvs
+upseur_vswld | /data/batchapp/softeon/upseur/wavelaunchdaemonvs
+upseur_3inbqvs | /data/app/java/jdk1.8.0_144/bin/upseur_3inbqvs
+upseur_queueall | /data/app/java/jdk1.7.0_80/bin/upseur_queueall
+upseur_2astrvs | /data/batchapp/softeon/upseur/uploaddaemonastorevs2
+upseur_3astrvs | /data/batchapp/softeon/upseur/uploaddaemonastorevs3
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-19 00:48:39.097925
+==============================================================================
+
+2026-04-18 20:49:07,988 - 877557 - ERROR - app_validation.py errors for i-08f43b606b5e41fe4:
+
+2026-04-18 20:49:07,989 - 877557 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.12/172.22.10.12-BeforePatching-2026-04-18-20-49-07-989.log
+2026-04-18 20:49:07,989 - 877557 - INFO - Stopping EC2 instance: i-08f43b606b5e41fe4 at 2026-04-18 20:49:07
+2026-04-18 20:50:09,692 - 877557 - INFO - Instance i-08f43b606b5e41fe4 stopped successfully.
+2026-04-18 20:50:09,934 - 877557 - INFO - Stopped i-08f43b606b5e41fe4 in 0:01:01.944821
+2026-04-18 20:50:09,935 - 877557 - INFO - Starting EC2 instance: i-08f43b606b5e41fe4
+2026-04-18 20:50:26,011 - 877557 - INFO - Instance i-08f43b606b5e41fe4 started successfully.
+2026-04-18 20:50:26,011 - 877557 - INFO - Waiting 50 seconds for SSM agent to be ready on i-08f43b606b5e41fe4...
+2026-04-18 20:51:16,623 - 877557 - INFO - Sent app_validation.py to i-08f43b606b5e41fe4 (command_id: f2ac1cc4-5307-4def-9e8d-1c6f1dd22254)
+2026-04-18 20:51:46,812 - 877557 - INFO - app_validation.py output for i-08f43b606b5e41fe4:
+
+==============================================================================
+Server Availability Check Started | 2026-04-19 00:51:16.830496
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.10.12
+Hostname | ip-172-22-10-12.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 177.0G | 70.9G | 97.0G | 40% | /data
+fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | 0B | 4.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/sftpuser/upseusftpuser            172.22.10.44(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-0e7211c7.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.10.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 559
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.10.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upseur_astrvsin, upseur_download, upseur_vsinbq, upseur_event, upseur_label, upseur_vssch, upseur_replreq, upseur_vssdocs, upseur_schedule, upseur_vsdwa, upseur_upload, upseur_wavelaun, upseur_vswld, upseur_ordexfil, upseur_3inbqvs, upseur_ftpd, upseur_queueall, upseur_taskleve, upseur_2astrvs, upseur_3astrvs, upseur_INBQXLS
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upseur_astrvsin | /data/batchapp/softeon/upseur/uploaddaemonastorevs
+upseur_download | /data/app/java/jdk1.7.0_80/bin/upseur_download
+upseur_vsinbq | /data/batchapp/softeon/upseur/uploaddaemonvs
+upseur_event | /data/app/java/jdk1.7.0_80/bin/upseur_event
+upseur_label | /data/app/java/jdk1.7.0_80/bin/upseur_label
+upseur_vssch | /data/batchapp/softeon/upseur/schedulerdaemonvs
+upseur_replreq | /data/batchapp/softeon/upseur/replenishmentrequestdaemon
+upseur_vssdocs | /data/batchapp/softeon/upseur/shippingdocsreportdaemonvs
+upseur_schedule | /data/app/java/jdk1.8.0_144/bin/upseur_schedule
+upseur_vsdwa | /data/batchapp/softeon/upseur/downloaddaemonvs
+upseur_upload | /data/app/java/jdk1.8.0_144/bin/upseur_upload
+upseur_wavelaun | /data/app/java/jdk1.7.0_80/bin/upseur_wavelaun
+upseur_vswld | /data/batchapp/softeon/upseur/wavelaunchdaemonvs
+upseur_ordexfil | /data/app/java/jdk1.7.0_80/bin/upseur_ordexfil
+upseur_3inbqvs | /data/app/java/jdk1.8.0_144/bin/upseur_3inbqvs
+upseur_ftpd | /data/app/java/jdk1.7.0_80/bin/upseur_ftpd
+upseur_queueall | /data/app/java/jdk1.7.0_80/bin/upseur_queueall
+upseur_taskleve | /data/batchapp/softeon/upseur/tasklevelinventoryallocationdaemon
+upseur_2astrvs | /data/batchapp/softeon/upseur/uploaddaemonastorevs2
+upseur_3astrvs | /data/batchapp/softeon/upseur/uploaddaemonastorevs3
+upseur_INBQXLS | /data/app/java/jdk1.8.0_144/bin/upseur_INBQXLS
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-19 00:51:17.805920
+==============================================================================
+
+2026-04-18 20:51:46,812 - 877557 - ERROR - app_validation.py errors for i-08f43b606b5e41fe4:
+
+2026-04-18 20:51:46,814 - 877557 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.12/172.22.10.12-AfterPatching-2026-04-18-20-51-46-814.log
+2026-04-18 20:51:46,865 - 877557 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-18/UPS-EU-Batch/172.22.10.12/172.22.10.12-Validation-details-2026-04-18-20-51-46-814.html
+2026-04-18 20:51:46,942 - 877557 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-18 20:51:46,942 - 877557 - INFO - HTML validation report email sent for i-08f43b606b5e41fe4
+2026-04-18 20:51:47,193 - 877557 - INFO - Started i-08f43b606b5e41fe4 in 0:01:37.257670
+2026-04-18 20:51:47,193 - 877557 - INFO - All instances processed.
+2026-04-18 20:51:47,195 - 877557 - INFO - Restart Total time: 0:08:41.009751
+2026-04-18 20:51:47,196 - 877557 - INFO - Auto-confirmed services are restarted
+2026-04-18 20:51:47,196 - 877557 - INFO - Confirmed - services are started
+2026-04-18 20:51:47,311 - 877557 - INFO - The following instances have failed the patch: []
+2026-04-18 20:51:47,311 - 877557 - INFO - No instances have failed the patch.
+2026-04-18 20:51:47,311 - 877557 - INFO - Total Patch Process time: 0:11:44.465621
+2026-04-18 20:52:47,940 - 877557 - INFO - Log file ./logs/patching_2026-04-18_UPS-EU-Batch.log uploaded to s3://q2-2026-aws-security-patching/UPS-EU-Batch_Patch/2026-04-18/patching_2026-04-18_UPS-EU-Batch.log

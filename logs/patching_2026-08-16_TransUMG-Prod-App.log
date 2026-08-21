@@ -1,0 +1,440 @@
+2026-08-16 02:00:03,751 - 959215 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-16 02:00:03,751 - 959215 - INFO - Script Start Time: 2026-08-16 02:00:03
+2026-08-16 02:00:04,083 - 959215 - INFO - Tag: TransUMG-Prod-App, IPs: ['172.29.10.169', '172.29.10.212'], Environment: prod
+2026-08-16 02:00:04,083 - 959215 - INFO - Starting log monitor
+2026-08-16 02:00:11,094 - 959215 - INFO - Log monitor started for: /data/patching_v4/logs/patching_2026-08-16_TransUMG-Prod-App.log
+2026-08-16 02:00:11,095 - 959215 - INFO - Instance(s) selected for Patching: {'i-0ab50c66a96956a20': '172.29.10.169', 'i-06fdfe35fe79c7d92': '172.29.10.212'}
+2026-08-16 02:00:11,184 - 959215 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-16 02:00:11,185 - 959215 - INFO - Now patching instances at: 2026-08-16 02:00:11
+2026-08-16 02:00:11,385 - 959215 - INFO - Sent app_validation.py to i-0ab50c66a96956a20 (command_id: 89582554-ea29-4630-bd48-460148508fc7)
+2026-08-16 02:00:41,456 - 959215 - INFO - SSM Command Status: Success
+2026-08-16 02:00:41,456 - 959215 - INFO - app_validation.py output for i-0ab50c66a96956a20:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:00:12.641122
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.169
+Hostname | ip-172-29-10-169
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 29.0G | 210.9G | 12% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 46.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.10.169:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.169 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3472264 | transumgprod | jboss730eap | transpumg_jb730 | 8080 | 172.29.10.169:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumgprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:00:13.308556
+==============================================================================
+
+2026-08-16 02:00:41,459 - 959215 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.169/172.29.10.169-BeforePatching-2026-08-16-02-00-41-458.log
+2026-08-16 02:00:41,640 - 959215 - INFO - Sent app_validation.py to i-06fdfe35fe79c7d92 (command_id: 318f709e-6bf4-4f15-9c66-c1a22f858b01)
+2026-08-16 02:01:11,731 - 959215 - INFO - SSM Command Status: Success
+2026-08-16 02:01:11,732 - 959215 - INFO - app_validation.py output for i-06fdfe35fe79c7d92:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:00:41.907766
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.212
+Hostname | ip-172-29-10-212
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 11.2G | 228.7G | 4% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 46.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.10.212:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.212 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3761002 | transumgprod | jboss730eap | transpumg_jb730 | 8080 | 172.29.10.212:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumgprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:00:42.471075
+==============================================================================
+
+2026-08-16 02:01:11,733 - 959215 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.212/172.29.10.212-BeforePatching-2026-08-16-02-01-11-733.log
+2026-08-16 02:01:17,011 - 959215 - INFO - i-0ab50c66a96956a20: Cron was active = False
+2026-08-16 02:01:22,196 - 959215 - INFO - i-06fdfe35fe79c7d92: Cron was active = False
+2026-08-16 02:01:22,196 - 959215 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-16 02:01:22,283 - 959215 - INFO - Sending patch command to instance i-0ab50c66a96956a20
+2026-08-16 02:01:22,394 - 959215 - INFO - Command sent successfully to instance i-0ab50c66a96956a20. Command ID: 40627ad2-ec2b-45d3-be4e-fb318d6da6be
+2026-08-16 02:01:22,538 - 959215 - INFO - Sending patch command to instance i-06fdfe35fe79c7d92
+2026-08-16 02:01:22,634 - 959215 - INFO - Command sent successfully to instance i-06fdfe35fe79c7d92. Command ID: 8886e369-d775-4aaa-b172-d5a1605c017d
+2026-08-16 02:06:24,389 - 959215 - INFO - All patches applied successfully.
+2026-08-16 02:06:24,390 - 959215 - INFO - Patching end time: 2026-08-16 02:06:24
+2026-08-16 02:06:24,390 - 959215 - INFO - Patch Elapsed time: 0:06:13.205036
+2026-08-16 02:06:24,465 - 959215 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-16 02:06:24,466 - 959215 - INFO - Confirmed - services are stopped
+2026-08-16 02:06:45,370 - 959215 - INFO - Discovered TG map: {'i-0ab50c66a96956a20': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257'], 'i-06fdfe35fe79c7d92': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257']}
+2026-08-16 02:06:45,548 - 959215 - INFO - Deregistering i-0ab50c66a96956a20 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257
+2026-08-16 02:06:45,623 - 959215 - INFO - Stopping EC2 instance: i-0ab50c66a96956a20 at 2026-08-16 02:06:45
+2026-08-16 02:08:31,893 - 959215 - INFO - Instance i-0ab50c66a96956a20 stopped successfully.
+2026-08-16 02:08:32,137 - 959215 - INFO - Stopped i-0ab50c66a96956a20 in 0:01:46.514043
+2026-08-16 02:08:32,138 - 959215 - INFO - Starting EC2 instance: i-0ab50c66a96956a20
+2026-08-16 02:08:48,247 - 959215 - INFO - Instance i-0ab50c66a96956a20 started successfully.
+2026-08-16 02:08:48,247 - 959215 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0ab50c66a96956a20...
+2026-08-16 02:10:28,348 - 959215 - INFO - Registering i-0ab50c66a96956a20 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257
+2026-08-16 02:10:58,844 - 959215 - INFO - Sent app_validation.py to i-0ab50c66a96956a20 (command_id: a07f38f6-d7db-4d86-a9c6-47a855dfd39c)
+2026-08-16 02:11:28,945 - 959215 - INFO - SSM Command Status: Success
+2026-08-16 02:11:28,945 - 959215 - INFO - app_validation.py output for i-0ab50c66a96956a20:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:10:59.194567
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.169
+Hostname | ip-172-29-10-169
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 29.0G | 210.9G | 12% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 46.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.10.169:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.169 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3187 | transumgprod | jboss730eap | transpumg_jb730 | 8080 | 172.29.10.169:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumgprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:11:00.089720
+==============================================================================
+
+2026-08-16 02:11:28,947 - 959215 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.169/172.29.10.169-AfterPatching-2026-08-16-02-11-28-946.log
+2026-08-16 02:11:29,003 - 959215 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.169/172.29.10.169-Validation-details-2026-08-16-02-11-28-946.html
+2026-08-16 02:11:29,184 - 959215 - INFO - i-0ab50c66a96956a20: Cron was not active - skipping enable
+2026-08-16 02:11:29,257 - 959215 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-16 02:11:29,257 - 959215 - INFO - GREEN mail sent for i-0ab50c66a96956a20
+2026-08-16 02:11:29,621 - 959215 - INFO - Started i-0ab50c66a96956a20 in 0:02:57.483265
+2026-08-16 02:11:29,621 - 959215 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-08-16 02:13:29,721 - 959215 - INFO - Deregistering i-06fdfe35fe79c7d92 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257
+2026-08-16 02:13:29,805 - 959215 - INFO - Stopping EC2 instance: i-06fdfe35fe79c7d92 at 2026-08-16 02:13:29
+2026-08-16 02:14:30,770 - 959215 - INFO - Instance i-06fdfe35fe79c7d92 stopped successfully.
+2026-08-16 02:14:31,032 - 959215 - INFO - Stopped i-06fdfe35fe79c7d92 in 0:01:01.227102
+2026-08-16 02:14:31,032 - 959215 - INFO - Starting EC2 instance: i-06fdfe35fe79c7d92
+2026-08-16 02:14:47,129 - 959215 - INFO - Instance i-06fdfe35fe79c7d92 started successfully.
+2026-08-16 02:14:47,129 - 959215 - INFO - Waiting 100 seconds for SSM agent to be ready on i-06fdfe35fe79c7d92...
+2026-08-16 02:16:27,163 - 959215 - INFO - Registering i-06fdfe35fe79c7d92 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-Prod/15aef12167f7c257
+2026-08-16 02:16:57,631 - 959215 - INFO - Sent app_validation.py to i-06fdfe35fe79c7d92 (command_id: ddd25d97-d4a3-46cf-8e2e-87068d27d023)
+2026-08-16 02:17:27,828 - 959215 - INFO - SSM Command Status: Success
+2026-08-16 02:17:27,828 - 959215 - INFO - app_validation.py output for i-06fdfe35fe79c7d92:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:16:58.026471
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.212
+Hostname | ip-172-29-10-212
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 11.2G | 228.7G | 4% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 46.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.10.212:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.212 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3273 | transumgprod | jboss730eap | transpumg_jb730 | 8080 | 172.29.10.212:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumgprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:16:58.524501
+==============================================================================
+
+2026-08-16 02:17:27,834 - 959215 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.212/172.29.10.212-AfterPatching-2026-08-16-02-17-27-833.log
+2026-08-16 02:17:27,890 - 959215 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-16/TransUMG-Prod-App/172.29.10.212/172.29.10.212-Validation-details-2026-08-16-02-17-27-833.html
+2026-08-16 02:17:28,157 - 959215 - INFO - i-06fdfe35fe79c7d92: Cron was not active - skipping enable
+2026-08-16 02:17:28,247 - 959215 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-16 02:17:28,248 - 959215 - INFO - GREEN mail sent for i-06fdfe35fe79c7d92
+2026-08-16 02:17:28,506 - 959215 - INFO - Started i-06fdfe35fe79c7d92 in 0:02:57.473754
+2026-08-16 02:17:28,506 - 959215 - INFO - All instances processed.
+2026-08-16 02:17:28,511 - 959215 - INFO - Restart Total time: 0:11:03.917176
+2026-08-16 02:17:28,512 - 959215 - INFO - Auto-confirmed services are restarted
+2026-08-16 02:17:28,512 - 959215 - INFO - Confirmed - services are started
+2026-08-16 02:17:28,625 - 959215 - INFO - The following instances have failed the patch: []
+2026-08-16 02:17:28,626 - 959215 - INFO - No instances have failed the patch.
+2026-08-16 02:17:28,626 - 959215 - INFO - Total Patch Process time: 0:17:24.874334
+2026-08-16 02:18:29,117 - 959215 - INFO - Log file ./logs/patching_2026-08-16_TransUMG-Prod-App.log uploaded to s3://q3-2026-aws-security-patching/TransUMG-Prod-App_Patch/2026-08-16/patching_2026-08-16_TransUMG-Prod-App.log

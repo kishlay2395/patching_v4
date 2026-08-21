@@ -1,0 +1,432 @@
+2026-05-09 00:05:02,264 - 534816 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-09 00:05:02,264 - 534816 - INFO - Script Start Time: 2026-05-09 00:05:02
+2026-05-09 00:05:02,746 - 534816 - INFO - Instance(s) selected for Patching: {'i-0fb825dd572810fb8': '172.30.144.7', 'i-0f90cf89c3348018f': '172.30.144.54'}
+2026-05-09 00:05:02,809 - 534816 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 00:05:02,809 - 534816 - INFO - Now patching instances at: 2026-05-09 00:05:02
+2026-05-09 00:05:02,897 - 534816 - INFO - Sending patch command to instance i-0fb825dd572810fb8
+2026-05-09 00:05:03,084 - 534816 - INFO - Command sent successfully to instance i-0fb825dd572810fb8. Command ID: 966f689d-17b3-402b-8ae8-cb18de71db14
+2026-05-09 00:05:03,225 - 534816 - INFO - Sending patch command to instance i-0f90cf89c3348018f
+2026-05-09 00:05:03,373 - 534816 - INFO - Command sent successfully to instance i-0f90cf89c3348018f. Command ID: 9e2cb189-911c-44a9-ac29-09c1d9131b91
+2026-05-09 00:10:35,415 - 534816 - INFO - All patches applied successfully.
+2026-05-09 00:10:35,416 - 534816 - INFO - Patching end time: 2026-05-09 00:10:35
+2026-05-09 00:10:35,416 - 534816 - INFO - Patch Elapsed time: 0:05:32.606884
+2026-05-09 00:10:35,479 - 534816 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 00:10:35,479 - 534816 - INFO - Confirmed - services are stopped
+2026-05-09 00:10:43,612 - 534816 - INFO - Discovered TG map: {'i-0f90cf89c3348018f': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab'], 'i-0fb825dd572810fb8': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab']}
+2026-05-09 00:10:44,085 - 534816 - INFO - Sent app_validation.py to i-0fb825dd572810fb8 (command_id: f700afc7-95d3-4aa1-bd83-1a2602c562df)
+2026-05-09 00:11:14,206 - 534816 - INFO - app_validation.py output for i-0fb825dd572810fb8:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 04:10:44.315149
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.7
+Hostname | ip-172-30-144-7.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 21.7G | 218.2G | 9% | /data
+fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | 0B | 71.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 19
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2031944 | gabesprod | jboss730eap | gabesprod_jb730 | 8080 | 172.30.144.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesprod/standalone
+1880134 | gabesrfprod | jboss730eap | gabesrfprod_jb7 | 8081 | 172.30.144.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesrfprod/standalone
+991436 | gabeswsprod | jboss730eap | gabeswsprod_jb7 | 8082 | 172.30.144.7:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabeswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 04:10:44.698471
+==============================================================================
+
+2026-05-09 00:11:14,206 - 534816 - ERROR - app_validation.py errors for i-0fb825dd572810fb8:
+
+2026-05-09 00:11:14,208 - 534816 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.7/172.30.144.7-BeforePatching-2026-05-09-00-11-14-207.log
+2026-05-09 00:11:14,208 - 534816 - INFO - Deregistering i-0fb825dd572810fb8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a
+2026-05-09 00:11:14,327 - 534816 - INFO - Deregistering i-0fb825dd572810fb8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b
+2026-05-09 00:11:14,381 - 534816 - INFO - Deregistering i-0fb825dd572810fb8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab
+2026-05-09 00:11:14,435 - 534816 - INFO - Stopping EC2 instance: i-0fb825dd572810fb8 at 2026-05-09 00:11:14
+2026-05-09 00:12:30,661 - 534816 - INFO - Instance i-0fb825dd572810fb8 stopped successfully.
+2026-05-09 00:12:30,928 - 534816 - INFO - Stopped i-0fb825dd572810fb8 in 0:01:16.493408
+2026-05-09 00:12:30,929 - 534816 - INFO - Starting EC2 instance: i-0fb825dd572810fb8
+2026-05-09 00:12:46,883 - 534816 - INFO - Instance i-0fb825dd572810fb8 started successfully.
+2026-05-09 00:12:46,883 - 534816 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0fb825dd572810fb8...
+2026-05-09 00:14:26,981 - 534816 - INFO - Registering i-0fb825dd572810fb8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a
+2026-05-09 00:14:27,227 - 534816 - INFO - Registering i-0fb825dd572810fb8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b
+2026-05-09 00:14:27,374 - 534816 - INFO - Registering i-0fb825dd572810fb8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab
+2026-05-09 00:15:58,105 - 534816 - INFO - Sent app_validation.py to i-0fb825dd572810fb8 (command_id: c499b454-2902-4fc5-be36-a26cd6e9f058)
+2026-05-09 00:16:28,263 - 534816 - INFO - app_validation.py output for i-0fb825dd572810fb8:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 04:15:58.403387
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.7
+Hostname | ip-172-30-144-7.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 21.7G | 218.2G | 9% | /data
+fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | 0B | 71.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 19
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3938 | gabesprod | jboss730eap | gabesprod_jb730 | 8080 | 172.30.144.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesprod/standalone
+3832 | gabesrfprod | jboss730eap | gabesrfprod_jb7 | 8081 | 172.30.144.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesrfprod/standalone
+3535 | gabeswsprod | jboss730eap | gabeswsprod_jb7 | 8082 | 172.30.144.7:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabeswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 04:15:59.446557
+==============================================================================
+
+2026-05-09 00:16:28,263 - 534816 - ERROR - app_validation.py errors for i-0fb825dd572810fb8:
+
+2026-05-09 00:16:28,265 - 534816 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.7/172.30.144.7-AfterPatching-2026-05-09-00-16-28-264.log
+2026-05-09 00:16:28,325 - 534816 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.7/172.30.144.7-Validation-details-2026-05-09-00-16-28-264.html
+2026-05-09 00:16:28,697 - 534816 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-09 00:16:28,697 - 534816 - INFO - HTML validation report email sent for i-0fb825dd572810fb8
+2026-05-09 00:16:28,965 - 534816 - INFO - Started i-0fb825dd572810fb8 in 0:03:58.036746
+2026-05-09 00:16:28,966 - 534816 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-09 00:18:29,284 - 534816 - INFO - Sent app_validation.py to i-0f90cf89c3348018f (command_id: 34594034-d856-41dd-ad8e-78f8da3d7662)
+2026-05-09 00:18:59,442 - 534816 - INFO - app_validation.py output for i-0f90cf89c3348018f:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 04:18:29.506874
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.54
+Hostname | ip-172-30-144-54.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 20.4G | 219.5G | 8% | /data
+fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | 0B | 71.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.54:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 19
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.54 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2102629 | gabesprod | jboss730eap | gabesprod_jb730 | 8080 | 172.30.144.54:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesprod/standalone
+1071255 | gabesrfprod | jboss730eap | gabesrfprod_jb7 | 8081 | 172.30.144.54:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesrfprod/standalone
+1071465 | gabeswsprod | jboss730eap | gabeswsprod_jb7 | 8082 | 172.30.144.54:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabeswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 04:18:30.044500
+==============================================================================
+
+2026-05-09 00:18:59,442 - 534816 - ERROR - app_validation.py errors for i-0f90cf89c3348018f:
+
+2026-05-09 00:18:59,444 - 534816 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.54/172.30.144.54-BeforePatching-2026-05-09-00-18-59-443.log
+2026-05-09 00:18:59,444 - 534816 - INFO - Deregistering i-0f90cf89c3348018f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a
+2026-05-09 00:18:59,554 - 534816 - INFO - Deregistering i-0f90cf89c3348018f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b
+2026-05-09 00:18:59,609 - 534816 - INFO - Deregistering i-0f90cf89c3348018f from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab
+2026-05-09 00:18:59,659 - 534816 - INFO - Stopping EC2 instance: i-0f90cf89c3348018f at 2026-05-09 00:18:59
+2026-05-09 00:20:46,073 - 534816 - INFO - Instance i-0f90cf89c3348018f stopped successfully.
+2026-05-09 00:20:46,325 - 534816 - INFO - Stopped i-0f90cf89c3348018f in 0:01:46.665505
+2026-05-09 00:20:46,325 - 534816 - INFO - Starting EC2 instance: i-0f90cf89c3348018f
+2026-05-09 00:21:02,205 - 534816 - INFO - Instance i-0f90cf89c3348018f started successfully.
+2026-05-09 00:21:02,205 - 534816 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f90cf89c3348018f...
+2026-05-09 00:22:42,261 - 534816 - INFO - Registering i-0f90cf89c3348018f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-Desktop/0f788c21615cc95a
+2026-05-09 00:22:42,494 - 534816 - INFO - Registering i-0f90cf89c3348018f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-RF/37bdbff1120f0e0b
+2026-05-09 00:22:42,632 - 534816 - INFO - Registering i-0f90cf89c3348018f to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Prod-WS/dfaca138a62f91ab
+2026-05-09 00:24:13,424 - 534816 - INFO - Sent app_validation.py to i-0f90cf89c3348018f (command_id: 5ee24452-f979-4973-a919-e28b3c73ef1c)
+2026-05-09 00:24:43,518 - 534816 - INFO - app_validation.py output for i-0f90cf89c3348018f:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 04:24:13.653781
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.54
+Hostname | ip-172-30-144-54.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 20.4G | 219.5G | 8% | /data
+fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | 0B | 71.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0043e733010122936.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.54:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 19
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.54 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3969 | gabesprod | jboss730eap | gabesprod_jb730 | 8080 | 172.30.144.54:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesprod/standalone
+3860 | gabesrfprod | jboss730eap | gabesrfprod_jb7 | 8081 | 172.30.144.54:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesrfprod/standalone
+3578 | gabeswsprod | jboss730eap | gabeswsprod_jb7 | 8082 | 172.30.144.54:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabeswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 04:24:14.104693
+==============================================================================
+
+2026-05-09 00:24:43,519 - 534816 - ERROR - app_validation.py errors for i-0f90cf89c3348018f:
+
+2026-05-09 00:24:43,523 - 534816 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.54/172.30.144.54-AfterPatching-2026-05-09-00-24-43-523.log
+2026-05-09 00:24:43,574 - 534816 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-09/gabes-Prod-app/172.30.144.54/172.30.144.54-Validation-details-2026-05-09-00-24-43-523.html
+2026-05-09 00:24:43,819 - 534816 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-09 00:24:43,819 - 534816 - INFO - HTML validation report email sent for i-0f90cf89c3348018f
+2026-05-09 00:24:44,112 - 534816 - INFO - Started i-0f90cf89c3348018f in 0:03:57.787185
+2026-05-09 00:24:44,113 - 534816 - INFO - All instances processed.
+2026-05-09 00:24:44,117 - 534816 - INFO - Restart Total time: 0:14:08.435706
+2026-05-09 00:24:44,118 - 534816 - INFO - Auto-confirmed services are restarted
+2026-05-09 00:24:44,118 - 534816 - INFO - Confirmed - services are started
+2026-05-09 00:24:44,239 - 534816 - INFO - The following instances have failed the patch: []
+2026-05-09 00:24:44,239 - 534816 - INFO - No instances have failed the patch.
+2026-05-09 00:24:44,239 - 534816 - INFO - Total Patch Process time: 0:19:41.974377
+2026-05-09 00:25:44,725 - 534816 - INFO - Log file ./logs/patching_2026-05-09_gabes-Prod-app.log uploaded to s3://q2-2026-aws-security-patching/gabes-Prod-app_Patch/2026-05-09/patching_2026-05-09_gabes-Prod-app.log

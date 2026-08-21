@@ -1,0 +1,1022 @@
+2026-08-09 00:15:03,733 - 1812230 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-09 00:15:03,734 - 1812230 - INFO - Script Start Time: 2026-08-09 00:15:03
+2026-08-09 00:15:03,989 - 1812230 - INFO - Tag: hensley-prod-batch, IPs: ['10.225.12.11'], Environment: prod
+2026-08-09 00:15:03,989 - 1812230 - INFO - Instance(s) selected for Patching: {'i-077f36c5d38050c4b': '10.225.12.11'}
+2026-08-09 00:15:04,048 - 1812230 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:15:04,049 - 1812230 - INFO - Now patching instances at: 2026-08-09 00:15:04
+2026-08-09 00:15:04,617 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: d981b122-909c-4796-b13a-e039f136c706)
+2026-08-09 00:15:34,753 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:15:34,753 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:15:04.900760
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.7G | 228.2G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2091 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | hensley_wmsflextestlabeldaemon, hensleyrasflex_ftpdaemon, hensleyrasflex_reportdaemon, hensleyrasflex_schedulerdaemon, henselyrasflex_mobilityuploaddaemon, hensleyrasflex_allocationdaemon, henselyrasflex_mobilityuploaddaemon2, henselyrasflex_mobilityuploaddaemon3, henselyrasflex_downloaddaemon, hensleyrasflex_vipuploaddaemon, hensleyrasflex_vipuploaddaemon2, hensleyrasflex_vipuploaddaemon3, hensleyrasflex_reportjqgriddaemon, henselyrasflex_dsduploaddaemon, java, hensleyrasflex_uploaddaemon, hensleyrasflex_pickshipdaemon, hensleyrasflex_2pickshipdaemon, hensely_voiceadmindaemon, hensley_wmsflexproduploaddaemon, hensley_ftpdaemon, hensley_wmsflexprodschedulerdaemon, hensley_wmsflexprodvoicedaemon, wmsflex_productivityprocess
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+hensley_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflextestlabeldaemon
+hensleyrasflex_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_ftpdaemon
+hensleyrasflex_reportdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportdaemon
+hensleyrasflex_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_schedulerdaemon
+henselyrasflex_mobilityuploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon
+hensleyrasflex_allocationdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_allocationdaemon
+henselyrasflex_mobilityuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon2
+henselyrasflex_mobilityuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon3
+henselyrasflex_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_downloaddaemon
+hensleyrasflex_vipuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon
+hensleyrasflex_vipuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon2
+hensleyrasflex_vipuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon3
+hensleyrasflex_reportjqgriddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportjqgriddaemon
+henselyrasflex_dsduploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_dsduploaddaemon
+java | /data/app/Vocollect/VoiceConsole/tomcat/bin
+hensleyrasflex_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_uploaddaemon
+hensleyrasflex_pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_pickshipdaemon
+hensleyrasflex_2pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_2pickshipdaemon
+hensely_voiceadmindaemon | /data/app/java/jdk1.8.0_45/bin/hensely_voiceadmindaemon
+hensley_wmsflexproduploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexproduploaddaemon
+hensley_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_ftpdaemon
+hensley_wmsflexprodschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodschedulerdaemon
+hensley_wmsflexprodvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodvoicedaemon
+wmsflex_productivityprocess | /data/app/java/jdk1.7.0_80/bin/wmsflex_productivityprocess
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:15:06.110855
+==============================================================================
+
+2026-08-09 00:15:34,757 - 1812230 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-BeforePatching-2026-08-09-00-15-34-755.log
+2026-08-09 00:15:40,255 - 1812230 - INFO - i-077f36c5d38050c4b: Cron was active = True
+2026-08-09 00:15:40,755 - 1812230 - INFO - Health monitor crontab disabled on all instances
+2026-08-09 00:15:40,757 - 1812230 - INFO - Disabled cron for: ['i-077f36c5d38050c4b']
+2026-08-09 00:15:40,881 - 1812230 - INFO - Sending patch command to instance i-077f36c5d38050c4b
+2026-08-09 00:15:41,218 - 1812230 - INFO - Command sent successfully to instance i-077f36c5d38050c4b. Command ID: 2ff09ed8-ac06-485d-b5e6-64298d8d8ff9
+2026-08-09 00:20:13,253 - 1812230 - INFO - All patches applied successfully.
+2026-08-09 00:20:13,254 - 1812230 - INFO - Patching end time: 2026-08-09 00:20:13
+2026-08-09 00:20:13,254 - 1812230 - INFO - Patch Elapsed time: 0:05:09.205203
+2026-08-09 00:20:13,328 - 1812230 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-09 00:20:13,329 - 1812230 - INFO - Confirmed - services are stopped
+2026-08-09 00:20:15,284 - 1812230 - INFO - Discovered TG map: {}
+2026-08-09 00:20:15,682 - 1812230 - INFO - Stopping EC2 instance: i-077f36c5d38050c4b at 2026-08-09 00:20:15
+2026-08-09 00:24:03,805 - 1812230 - INFO - Instance i-077f36c5d38050c4b stopped successfully.
+2026-08-09 00:24:03,975 - 1812230 - INFO - Stopped i-077f36c5d38050c4b in 0:03:48.293484
+2026-08-09 00:24:03,976 - 1812230 - INFO - Starting EC2 instance: i-077f36c5d38050c4b
+2026-08-09 00:24:20,020 - 1812230 - INFO - Instance i-077f36c5d38050c4b started successfully.
+2026-08-09 00:24:20,020 - 1812230 - INFO - Waiting 100 seconds for SSM agent to be ready on i-077f36c5d38050c4b...
+2026-08-09 00:26:00,767 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: fcf7261e-6ffb-4b35-b74e-6e1c5e57f406)
+2026-08-09 00:26:30,901 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:26:30,901 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:26:01.050496
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.0G | 228.8G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:26:01.510415
+==============================================================================
+
+2026-08-09 00:26:30,903 - 1812230 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-2026-08-09-00-26-30-902.log
+2026-08-09 00:26:30,959 - 1812230 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-Validation-details-2026-08-09-00-26-30-902.html
+2026-08-09 00:26:31,351 - 1812230 - INFO - Daemon count - Pre: 24, Post: 0
+2026-08-09 00:26:31,351 - 1812230 - INFO - CUPS: before=running after=running version=cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-09 00:26:31,351 - 1812230 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-09 00:26:31,351 - 1812230 - INFO - Background: restarting daemons on i-077f36c5d38050c4b
+2026-08-09 00:26:31,351 - 1812230 - INFO - Background thread started for i-077f36c5d38050c4b - daemon:True cups:False
+2026-08-09 00:26:31,625 - 1812230 - INFO - Started i-077f36c5d38050c4b in 0:02:27.648987
+2026-08-09 00:26:31,626 - 1812230 - INFO - All instances processed.
+2026-08-09 00:26:31,630 - 1812230 - INFO - Restart Total time: 0:06:18.156012
+2026-08-09 00:26:31,630 - 1812230 - INFO - Auto-confirmed services are restarted
+2026-08-09 00:26:31,630 - 1812230 - INFO - Confirmed - services are started
+2026-08-09 00:26:31,801 - 1812230 - INFO - The following instances have failed the patch: []
+2026-08-09 00:26:31,801 - 1812230 - INFO - No instances have failed the patch.
+2026-08-09 00:26:31,801 - 1812230 - INFO - Total Patch Process time: 0:11:28.067202
+2026-08-09 00:27:02,010 - 1812230 - INFO - Daemon restart output: Found base path: /data/softeon/batchapp
+Checking folder: hensleyprod
+Checking folder: logarchivepurge
+
+2026-08-09 00:27:02,011 - 1812230 - INFO - Waiting 100 sec for daemons to start on i-077f36c5d38050c4b
+2026-08-09 00:27:32,159 - 1812230 - INFO - Log file ./logs/patching_2026-08-09_hensley-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/hensley-prod-batch_Patch/2026-08-09/patching_2026-08-09_hensley-prod-batch.log
+2026-08-09 00:28:42,112 - 1812230 - INFO - CUPS no action needed for i-077f36c5d38050c4b - before:running after:running version:cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-09 00:28:42,642 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: b17bb6ae-aa94-4472-b9ca-5270cc497ce2)
+2026-08-09 00:29:12,773 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:29:12,773 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:28:42.841744
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.0G | 228.8G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:28:43.096598
+==============================================================================
+
+2026-08-09 00:29:12,907 - 1812230 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-09 00:29:12,907 - 1812230 - INFO - RED re-validation mail sent for i-077f36c5d38050c4b
+2026-08-09 00:29:12,907 - 1812230 - INFO - Still Red after restart - starting retry for i-077f36c5d38050c4b
+2026-08-09 00:29:12,907 - 1812230 - INFO - [Retry-1] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 00:34:13,694 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: d6e13434-df2d-460f-af55-2bd31e1b19ef)
+2026-08-09 00:34:43,826 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:34:43,826 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:34:13.901600
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.0G | 228.8G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:34:14.166291
+==============================================================================
+
+2026-08-09 00:34:43,828 - 1812230 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry1-2026-08-09-00-34-43-827.log
+2026-08-09 00:34:43,884 - 1812230 - INFO - [Retry-1] RED for Hensley Production Batch Server (10.225.12.11), retrying... (Total waited: 300s)
+2026-08-09 00:34:43,885 - 1812230 - INFO - [Retry-2] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 00:39:44,500 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: ee159663-aba9-4ea7-80ba-3470bc9a7027)
+2026-08-09 00:40:14,634 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:40:14,634 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:39:44.685087
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.0G | 228.8G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:39:44.935975
+==============================================================================
+
+2026-08-09 00:40:14,636 - 1812230 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry2-2026-08-09-00-40-14-635.log
+2026-08-09 00:40:14,693 - 1812230 - INFO - [Retry-2] RED for Hensley Production Batch Server (10.225.12.11), retrying... (Total waited: 600s)
+2026-08-09 00:40:14,693 - 1812230 - INFO - [Retry-3] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 00:45:15,431 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: ead21ada-f0ff-46d4-981b-6f61035ab55d)
+2026-08-09 00:45:45,567 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:45:45,567 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:45:15.641888
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.0G | 228.8G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:45:15.902396
+==============================================================================
+
+2026-08-09 00:45:45,569 - 1812230 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry3-2026-08-09-00-45-45-568.log
+2026-08-09 00:45:45,626 - 1812230 - INFO - [Retry-3] RED for Hensley Production Batch Server (10.225.12.11), retrying... (Total waited: 900s)
+2026-08-09 00:45:45,627 - 1812230 - INFO - [Retry-4] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 00:50:46,291 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: db65a4d6-149e-4625-9495-918f2e2d5f67)
+2026-08-09 00:51:16,421 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:51:16,421 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:50:46.550109
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.5G | 228.3G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | hensleyrasflex_ftpdaemon, hensleyrasflex_gltransactiondaemon, hensleyrasflex_reportdaemon, hensleyrasflex_schedulerdaemon, henselyrasflex_mobilityuploaddaemon, hensleyrasflex_uploaddaemon, hensleyrasflex_pickshipdaemon, hensleyrasflex_2pickshipdaemon, hensleyrasflex_allocationdaemon, henselyrasflex_mobilityuploaddaemon2, henselyrasflex_mobilityuploaddaemon3, henselyrasflex_downloaddaemon, hensleyrasflex_vipuploaddaemon, hensleyrasflex_vipuploaddaemon2, hensleyrasflex_vipuploaddaemon3, hensleyrasflex_reportjqgriddaemon, hensley_wmsflextestlabeldaemon, hensley_wmsflexprodschedulerdaemon, hensley_wmsflexproduploaddaemon, hensley_wmsflexprodvoicedaemon, hensley_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+hensleyrasflex_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_ftpdaemon
+hensleyrasflex_gltransactiondaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_gltransactiondaemon
+hensleyrasflex_reportdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportdaemon
+hensleyrasflex_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_schedulerdaemon
+henselyrasflex_mobilityuploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon
+hensleyrasflex_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_uploaddaemon
+hensleyrasflex_pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_pickshipdaemon
+hensleyrasflex_2pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_2pickshipdaemon
+hensleyrasflex_allocationdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_allocationdaemon
+henselyrasflex_mobilityuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon2
+henselyrasflex_mobilityuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon3
+henselyrasflex_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_downloaddaemon
+hensleyrasflex_vipuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon
+hensleyrasflex_vipuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon2
+hensleyrasflex_vipuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon3
+hensleyrasflex_reportjqgriddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportjqgriddaemon
+hensley_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflextestlabeldaemon
+hensley_wmsflexprodschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodschedulerdaemon
+hensley_wmsflexproduploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexproduploaddaemon
+hensley_wmsflexprodvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodvoicedaemon
+hensley_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:50:47.608420
+==============================================================================
+
+2026-08-09 00:51:16,423 - 1812230 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry4-2026-08-09-00-51-16-422.log
+2026-08-09 00:51:16,481 - 1812230 - INFO - [Retry-4] RED for Hensley Production Batch Server (10.225.12.11), retrying... (Total waited: 1200s)
+2026-08-09 00:51:16,481 - 1812230 - INFO - [Retry-5] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 00:56:17,129 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: 567287e3-38ac-494f-bf6d-3369a3dcfef8)
+2026-08-09 00:56:47,273 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 00:56:47,273 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 21:56:17.328245
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.5G | 228.3G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | hensleyrasflex_ftpdaemon, hensleyrasflex_gltransactiondaemon, hensleyrasflex_reportdaemon, hensleyrasflex_schedulerdaemon, henselyrasflex_mobilityuploaddaemon, hensleyrasflex_uploaddaemon, hensleyrasflex_pickshipdaemon, hensleyrasflex_2pickshipdaemon, hensleyrasflex_allocationdaemon, henselyrasflex_mobilityuploaddaemon2, henselyrasflex_mobilityuploaddaemon3, henselyrasflex_downloaddaemon, hensleyrasflex_vipuploaddaemon, hensleyrasflex_vipuploaddaemon2, hensleyrasflex_vipuploaddaemon3, hensleyrasflex_reportjqgriddaemon, hensley_wmsflextestlabeldaemon, hensley_wmsflexprodschedulerdaemon, hensley_wmsflexproduploaddaemon, hensley_wmsflexprodvoicedaemon, hensley_ftpdaemon, henselyrasflex_dsduploaddaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+hensleyrasflex_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_ftpdaemon
+hensleyrasflex_gltransactiondaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_gltransactiondaemon
+hensleyrasflex_reportdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportdaemon
+hensleyrasflex_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_schedulerdaemon
+henselyrasflex_mobilityuploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon
+hensleyrasflex_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_uploaddaemon
+hensleyrasflex_pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_pickshipdaemon
+hensleyrasflex_2pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_2pickshipdaemon
+hensleyrasflex_allocationdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_allocationdaemon
+henselyrasflex_mobilityuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon2
+henselyrasflex_mobilityuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon3
+henselyrasflex_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_downloaddaemon
+hensleyrasflex_vipuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon
+hensleyrasflex_vipuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon2
+hensleyrasflex_vipuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon3
+hensleyrasflex_reportjqgriddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportjqgriddaemon
+hensley_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflextestlabeldaemon
+hensley_wmsflexprodschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodschedulerdaemon
+hensley_wmsflexproduploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexproduploaddaemon
+hensley_wmsflexprodvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodvoicedaemon
+hensley_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_ftpdaemon
+henselyrasflex_dsduploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_dsduploaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 21:56:18.413973
+==============================================================================
+
+2026-08-09 00:56:47,275 - 1812230 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry5-2026-08-09-00-56-47-275.log
+2026-08-09 00:56:47,337 - 1812230 - INFO - [Retry-5] RED for Hensley Production Batch Server (10.225.12.11), retrying... (Total waited: 1500s)
+2026-08-09 00:56:47,337 - 1812230 - INFO - [Retry-6] Waiting 300s for i-077f36c5d38050c4b...
+2026-08-09 01:01:48,114 - 1812230 - INFO - Sent app_validation.py to i-077f36c5d38050c4b (command_id: 631386fb-1ff2-4377-8b77-d4a4c905792f)
+2026-08-09 01:02:18,247 - 1812230 - INFO - SSM Command Status: Success
+2026-08-09 01:02:18,247 - 1812230 - INFO - app_validation.py output for i-077f36c5d38050c4b:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 22:01:48.305100
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.225.12.11
+Hostname | ip-10-225-12-11.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | MST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 51.5G | 228.3G | 18% | /data
+fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | 0B | 2.9T | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared    10.225.12.13(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.44(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.8(no_root_squash,rw,sync) | /data/softeon/shared    10.225.12.46(no_root_squash,rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-064ce56e0139cbf6d.efs.us-west-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.225.12.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 10.225.12.11 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 2053 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | hensleyrasflex_ftpdaemon, hensleyrasflex_gltransactiondaemon, hensleyrasflex_reportdaemon, hensleyrasflex_schedulerdaemon, henselyrasflex_mobilityuploaddaemon, hensleyrasflex_uploaddaemon, hensleyrasflex_pickshipdaemon, hensleyrasflex_2pickshipdaemon, hensleyrasflex_allocationdaemon, henselyrasflex_mobilityuploaddaemon2, henselyrasflex_mobilityuploaddaemon3, henselyrasflex_downloaddaemon, hensleyrasflex_vipuploaddaemon, hensleyrasflex_vipuploaddaemon2, hensleyrasflex_vipuploaddaemon3, hensleyrasflex_reportjqgriddaemon, hensley_wmsflextestlabeldaemon, hensley_wmsflexprodschedulerdaemon, hensley_wmsflexproduploaddaemon, hensley_wmsflexprodvoicedaemon, hensley_ftpdaemon, henselyrasflex_dsduploaddaemon, hensely_voiceadmindaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+hensleyrasflex_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_ftpdaemon
+hensleyrasflex_gltransactiondaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_gltransactiondaemon
+hensleyrasflex_reportdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportdaemon
+hensleyrasflex_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_schedulerdaemon
+henselyrasflex_mobilityuploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon
+hensleyrasflex_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_uploaddaemon
+hensleyrasflex_pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_pickshipdaemon
+hensleyrasflex_2pickshipdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_2pickshipdaemon
+hensleyrasflex_allocationdaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_allocationdaemon
+henselyrasflex_mobilityuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon2
+henselyrasflex_mobilityuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_mobilityuploaddaemon3
+henselyrasflex_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_downloaddaemon
+hensleyrasflex_vipuploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon
+hensleyrasflex_vipuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon2
+hensleyrasflex_vipuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_vipuploaddaemon3
+hensleyrasflex_reportjqgriddaemon | /data/app/java/jdk1.7.0_80/bin/hensleyrasflex_reportjqgriddaemon
+hensley_wmsflextestlabeldaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflextestlabeldaemon
+hensley_wmsflexprodschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodschedulerdaemon
+hensley_wmsflexproduploaddaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexproduploaddaemon
+hensley_wmsflexprodvoicedaemon | /data/app/java/jdk1.7.0_80/bin/hensley_wmsflexprodvoicedaemon
+hensley_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/hensley_ftpdaemon
+henselyrasflex_dsduploaddaemon | /data/app/java/jdk1.7.0_80/bin/henselyrasflex_dsduploaddaemon
+hensely_voiceadmindaemon | /data/app/java/jdk1.8.0_45/bin/hensely_voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 22:01:49.373460
+==============================================================================
+
+2026-08-09 01:02:18,249 - 1812230 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-08-09/hensley-prod-batch/10.225.12.11/10.225.12.11-AfterPatching-Retry6-2026-08-09-01-02-18-249.log
+2026-08-09 01:02:18,827 - 1812230 - INFO - Health monitor crontab enabled on all instances
+2026-08-09 01:02:18,828 - 1812230 - WARNING - [Retry] Timeout - auto cron enabled for i-077f36c5d38050c4b

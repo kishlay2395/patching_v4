@@ -1,0 +1,140 @@
+2026-04-07 01:10:02,248 - 226010 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-07 01:10:02,248 - 226010 - INFO - Script Start Time: 2026-04-07 01:10:02
+2026-04-07 01:10:02,809 - 226010 - INFO - Instance(s) selected for Patching: {'i-05555ce4d17077b7a': '172.29.100.15'}
+2026-04-07 01:10:02,881 - 226010 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 01:10:02,881 - 226010 - INFO - Now patching instances at: 2026-04-07 01:10:02
+2026-04-07 01:10:02,967 - 226010 - INFO - Sending patch command to instance i-05555ce4d17077b7a
+2026-04-07 01:10:03,133 - 226010 - INFO - Command sent successfully to instance i-05555ce4d17077b7a. Command ID: 1be44336-02e6-4d80-9a5e-1ffc47a3d77e
+2026-04-07 01:13:04,199 - 226010 - INFO - All patches applied successfully.
+2026-04-07 01:13:04,199 - 226010 - INFO - Patching end time: 2026-04-07 01:13:04
+2026-04-07 01:13:04,199 - 226010 - INFO - Patch Elapsed time: 0:03:01.318016
+2026-04-07 01:13:04,282 - 226010 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 01:13:04,282 - 226010 - INFO - Confirmed - services are stopped
+2026-04-07 01:13:25,529 - 226010 - INFO - Discovered TG map: {'i-05555ce4d17077b7a': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-Desktop/a293e5bdca4e7846', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-RF/1332561365582d52']}
+2026-04-07 01:13:25,944 - 226010 - INFO - Sent app_validation.py to i-05555ce4d17077b7a (command_id: be848a50-e984-4f68-953f-f68f3d7ee2a5)
+2026-04-07 01:13:56,000 - 226010 - INFO - app_validation.py output for i-05555ce4d17077b7a:
+
+==============================================================================
+Server Availability Check Started | 2026-04-07 05:13:26.208516
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.15
+Hostname | ip-172-29-100-15
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 18.2G | 221.7G | 7% | /data
+/dev/nvme1n1p2 | 239.9G | 18.2G | 221.7G | 7% | /data2
+/dev/nvme1n1p2 | 239.9G | 18.2G | 221.7G | 7% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.29.100.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 15
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | nsi252uat_jqrpt, nsi252uat_harp, nsi252uat_rplpu, nsi252uat_event, nsi252uat_inbq, nsi252uat_lbl, nsi252uat_ftp, nsi252uat_sch, nsi252uat_rccl, nsi252uat_repl, nsi252uat_dwa, nsi252uat_rpt, nsi252uat_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+nsi252uat_jqrpt | /data/batchapp/softeon/nsi252uat/reportjqgridexportdaemon
+nsi252uat_harp | /data/batchapp/softeon/nsi252uat/hardallocationdaemon
+nsi252uat_rplpu | /data/batchapp/softeon/nsi252uat/replenishmentpriorityupdatedaemon
+nsi252uat_event | /data/batchapp/softeon/nsi252uat/eventdaemon
+nsi252uat_inbq | /data/batchapp/softeon/nsi252uat/uploaddaemon
+nsi252uat_lbl | /data/batchapp/softeon/nsi252uat/labeldaemon
+nsi252uat_ftp | /data/batchapp/softeon/nsi252uat/ftpdaemon
+nsi252uat_sch | /data/batchapp/softeon/nsi252uat/schedulerdaemon
+nsi252uat_rccl | /data/batchapp/softeon/nsi252uat/replenishmentpickloccanceldaemon
+nsi252uat_repl | /data/batchapp/softeon/nsi252uat/replenishmentdaemon
+nsi252uat_dwa | /data/batchapp/softeon/nsi252uat/downloaddaemon
+nsi252uat_rpt | /data/batchapp/softeon/nsi252uat/reportdaemon
+nsi252uat_wld | /data/batchapp/softeon/nsi252uat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3894151 | nsi252rfuat | jboss800eap | nsi252rfuat_jb8 | 8081 | 172.29.100.15:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/nsi252rfuat/standalone
+3893859 | nsi252uat | jboss800eap | nsi252uat_jb800 | 8080 | 172.29.100.15:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/nsi252uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-07 05:13:26.729196
+==============================================================================
+
+2026-04-07 01:13:56,000 - 226010 - ERROR - app_validation.py errors for i-05555ce4d17077b7a:
+
+2026-04-07 01:13:56,002 - 226010 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-07/NSI-UAT-2/172.29.100.15/172.29.100.15-BeforePatching-2026-04-07-01-13-56-002.log
+2026-04-07 01:13:56,002 - 226010 - INFO - Deregistering i-05555ce4d17077b7a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-Desktop/a293e5bdca4e7846
+2026-04-07 01:13:56,083 - 226010 - INFO - Deregistering i-05555ce4d17077b7a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-RF/1332561365582d52
+2026-04-07 01:13:56,129 - 226010 - INFO - Stopping EC2 instance: i-05555ce4d17077b7a at 2026-04-07 01:13:56
+2026-04-07 01:14:42,181 - 226010 - INFO - Instance i-05555ce4d17077b7a stopped successfully.
+2026-04-07 01:14:42,318 - 226010 - INFO - Stopped i-05555ce4d17077b7a in 0:00:46.188250
+2026-04-07 01:14:42,318 - 226010 - INFO - Starting EC2 instance: i-05555ce4d17077b7a
+2026-04-07 01:14:58,404 - 226010 - INFO - Instance i-05555ce4d17077b7a started successfully.
+2026-04-07 01:14:58,405 - 226010 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05555ce4d17077b7a...
+2026-04-07 01:16:38,436 - 226010 - INFO - Registering i-05555ce4d17077b7a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-Desktop/a293e5bdca4e7846
+2026-04-07 01:16:38,626 - 226010 - INFO - Registering i-05555ce4d17077b7a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-RF/1332561365582d52
+2026-04-07 01:21:39,435 - 226010 - WARNING - i-05555ce4d17077b7a not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-Desktop/a293e5bdca4e7846 after timeout.
+2026-04-07 01:26:40,093 - 226010 - WARNING - i-05555ce4d17077b7a not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-252-UAT-RF/1332561365582d52 after timeout.
+2026-04-07 01:26:40,183 - 226010 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-07 01:26:40,183 - 226010 - ERROR - Aborting workflow: i-05555ce4d17077b7a is not healthy after restart.
+2026-04-07 01:26:40,186 - 226010 - INFO - Restart Total time: 0:13:35.767050
+2026-04-07 01:26:40,186 - 226010 - INFO - Auto-confirmed services are restarted
+2026-04-07 01:26:40,186 - 226010 - INFO - Confirmed - services are started
+2026-04-07 01:26:40,315 - 226010 - INFO - The following instances have failed the patch: []
+2026-04-07 01:26:40,316 - 226010 - INFO - No instances have failed the patch.
+2026-04-07 01:26:40,316 - 226010 - INFO - Total Patch Process time: 0:16:38.067065
+2026-04-07 01:27:40,770 - 226010 - INFO - Log file ./logs/patching_2026-04-07_NSI-UAT-2.log uploaded to s3://q2-2026-aws-security-patching/NSI-UAT-2_Patch/2026-04-07/patching_2026-04-07_NSI-UAT-2.log

@@ -1,0 +1,217 @@
+2026-06-06 03:12:03,261 - 2223882 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-06 03:12:03,261 - 2223882 - INFO - Script Start Time: 2026-06-06 03:12:03
+2026-06-06 03:12:03,697 - 2223882 - INFO - Instance(s) selected for Patching: {'i-0aebce2b269d02212': '10.154.0.9'}
+2026-06-06 03:12:03,787 - 2223882 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-06 03:12:03,787 - 2223882 - INFO - Now patching instances at: 2026-06-06 03:12:03
+2026-06-06 03:12:03,987 - 2223882 - INFO - Sent app_validation.py to i-0aebce2b269d02212 (command_id: d1b4b193-aedd-4176-a4bc-ee99785817d3)
+2026-06-06 03:12:34,136 - 2223882 - INFO - app_validation.py output for i-0aebce2b269d02212:
+
+==============================================================================
+Server Availability Check Started | 2026-06-06 02:12:04.264696
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.9
+Hostname | ip-10-154-0-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 51.6G | 238.2G | 17% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 1.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 164
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-06 02:12:04.518659
+==============================================================================
+
+2026-06-06 03:12:34,136 - 2223882 - ERROR - app_validation.py errors for i-0aebce2b269d02212:
+
+2026-06-06 03:12:34,138 - 2223882 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-06/Technicolor-prod-batch2/10.154.0.9/10.154.0.9-BeforePatching-2026-06-06-03-12-34-137.log
+2026-06-06 03:12:34,227 - 2223882 - INFO - Sending patch command to instance i-0aebce2b269d02212
+2026-06-06 03:12:34,350 - 2223882 - INFO - Command sent successfully to instance i-0aebce2b269d02212. Command ID: 6a9ba2b3-ecad-4324-9341-bcce1f055e69
+2026-06-06 03:19:36,176 - 2223882 - INFO - All patches applied successfully.
+2026-06-06 03:19:36,177 - 2223882 - INFO - Patching end time: 2026-06-06 03:19:36
+2026-06-06 03:19:36,177 - 2223882 - INFO - Patch Elapsed time: 0:07:32.389814
+2026-06-06 03:19:36,256 - 2223882 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-06 03:19:36,257 - 2223882 - INFO - Confirmed - services are stopped
+2026-06-06 03:19:56,205 - 2223882 - INFO - Discovered TG map: {}
+2026-06-06 03:19:56,454 - 2223882 - INFO - Stopping EC2 instance: i-0aebce2b269d02212 at 2026-06-06 03:19:56
+2026-06-06 03:20:57,636 - 2223882 - INFO - Instance i-0aebce2b269d02212 stopped successfully.
+2026-06-06 03:20:57,770 - 2223882 - INFO - Stopped i-0aebce2b269d02212 in 0:01:01.316152
+2026-06-06 03:20:57,771 - 2223882 - INFO - Starting EC2 instance: i-0aebce2b269d02212
+2026-06-06 03:21:13,833 - 2223882 - INFO - Instance i-0aebce2b269d02212 started successfully.
+2026-06-06 03:21:13,833 - 2223882 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0aebce2b269d02212...
+2026-06-06 03:22:54,129 - 2223882 - INFO - Sent app_validation.py to i-0aebce2b269d02212 (command_id: 9be7b890-60d3-44f9-931c-4c4a61816ef3)
+2026-06-06 03:23:24,207 - 2223882 - INFO - app_validation.py output for i-0aebce2b269d02212:
+
+==============================================================================
+Server Availability Check Started | 2026-06-06 02:22:54.443695
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.9
+Hostname | ip-10-154-0-9
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 51.6G | 238.2G | 17% | /data
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 1.5T | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 164
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-06 02:22:54.761089
+==============================================================================
+
+2026-06-06 03:23:24,207 - 2223882 - ERROR - app_validation.py errors for i-0aebce2b269d02212:
+
+2026-06-06 03:23:24,208 - 2223882 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-06/Technicolor-prod-batch2/10.154.0.9/10.154.0.9-AfterPatching-2026-06-06-03-23-24-208.log
+2026-06-06 03:23:24,259 - 2223882 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-06/Technicolor-prod-batch2/10.154.0.9/10.154.0.9-Validation-details-2026-06-06-03-23-24-208.html
+2026-06-06 03:23:24,449 - 2223882 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-06 03:23:24,449 - 2223882 - INFO - HTML validation report email sent for i-0aebce2b269d02212
+2026-06-06 03:23:24,592 - 2223882 - INFO - Started i-0aebce2b269d02212 in 0:02:26.820715
+2026-06-06 03:23:24,592 - 2223882 - INFO - All instances processed.
+2026-06-06 03:23:24,595 - 2223882 - INFO - Restart Total time: 0:03:48.215956
+2026-06-06 03:23:24,596 - 2223882 - INFO - Auto-confirmed services are restarted
+2026-06-06 03:23:24,596 - 2223882 - INFO - Confirmed - services are started
+2026-06-06 03:23:24,715 - 2223882 - INFO - The following instances have failed the patch: []
+2026-06-06 03:23:24,716 - 2223882 - INFO - No instances have failed the patch.
+2026-06-06 03:23:24,716 - 2223882 - INFO - Total Patch Process time: 0:11:21.454083
+2026-06-06 03:24:25,096 - 2223882 - INFO - Log file ./logs/patching_2026-06-06_Technicolor-prod-batch2.log uploaded to s3://q2-2026-aws-security-patching/Technicolor-prod-batch2_Patch/2026-06-06/patching_2026-06-06_Technicolor-prod-batch2.log

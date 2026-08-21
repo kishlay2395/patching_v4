@@ -1,0 +1,779 @@
+2026-07-11 00:00:05,887 - 4108650 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 00:32:13,739 - 4108650 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 00:32:13,930 - 4108650 - INFO - Log file ./logs/backup_2026-07-11.log uploaded to s3://q3-2025-aws-security-patching/q3-UMG-OMS-uat-US_Patch_Backup/2026-07-11/backup_2026-07-11.log
+2026-07-11 04:00:03,501 - 4117624 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-11 04:00:03,502 - 4117624 - INFO - Script Start Time: 2026-07-11 04:00:03
+2026-07-11 04:00:03,967 - 4117624 - INFO - Instance(s) selected for Patching: {'i-0112abf53f9f2e386': '172.29.10.46'}
+2026-07-11 04:00:04,116 - 4117624 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 04:00:04,116 - 4117624 - INFO - Now patching instances at: 2026-07-11 04:00:04
+2026-07-11 04:00:09,474 - 4117624 - INFO - i-0112abf53f9f2e386: Cron was active = True
+2026-07-11 04:00:09,810 - 4117624 - INFO - Health monitor crontab disabled on all instances
+2026-07-11 04:00:09,814 - 4117624 - INFO - Disabled cron for: ['i-0112abf53f9f2e386']
+2026-07-11 04:00:10,110 - 4117624 - INFO - Sent app_validation.py to i-0112abf53f9f2e386 (command_id: 9eb6548a-3841-48ba-8eb6-6ef68d6e1282)
+2026-07-11 04:00:40,202 - 4117624 - INFO - app_validation.py output for i-0112abf53f9f2e386:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 04:00:10.446014
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.46
+Hostname | ip-172-29-10-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 203.9G | 86.0G | 70% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 105.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 54
+Batch/Daemon Java Processes | 51
+Non-Standalone Java Processes | umgoms_iaagt, umgstrut_cardt, umgoms_dwa, umgoms_fctagt, umgoms_ftp, umgoms_foagt, umgoms_gen, umgoms_gwagt, umgoms_hld, umgoms_IOAGT, umgoms_iuagt, umgomsdev_lpr, umgoms_omas, umgoms_opst, umgoms_ord, umgoms_ouagt1, umgoms_ouagt2, umgoms_omagt, umgoms_ppfagt, umgoms_jqgrid, umgoms_raagt, umgoms_ruagt, umgoms_sch, umgoms_1sch, umgoms_scfk, umgoms_spagt, umgoms_smiagt, umgoms_src, umgoms_sqsboagt, umgoms_sqsdc, umgoms_sqsic, umgoms_sqsiu, umgoms_sqsla, umgoms_SQSOC, umgoms_sqsoc, umgoms_sqsoe, umgoms_sqsou, umgoms_sqspc, umgoms_sqspd, umgoms_sqspu, umgoms_sqsrc, umgoms_inbq, umgoms_1inbq, umgoms_wmsprl, umgoms_wmsrl, umgoms_wsq, umgoms_sqsf, umgoms_itaagt, umgoms_smad, umgoms_sqsstkmv, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 51
+Java-Name | Java-Path
+umgoms_iaagt | /data/batchapp/softeon/umgomsuat/adjustmentdaemon
+umgstrut_cardt | /data/batchapp/softeon/umgomsuat/carrierdeterminationdaemon
+umgoms_dwa | /data/batchapp/softeon/umgomsuat/downloaddaemon
+umgoms_fctagt | /data/batchapp/softeon/umgomsuat/fedexcarrtrackdaemon
+umgoms_ftp | /data/batchapp/softeon/umgomsuat/ftpdaemon
+umgoms_foagt | /data/batchapp/softeon/umgomsuat/fulfillmentdaemon
+umgoms_gen | /data/batchapp/softeon/umgomsuat/genericdaemon
+umgoms_gwagt | /data/batchapp/softeon/umgomsuat/genericwebhookdaemon
+umgoms_hld | /data/batchapp/softeon/umgomsuat/holddaemon
+umgoms_IOAGT | /data/batchapp/softeon/umgomsuat/invoverlaydaemon
+umgoms_iuagt | /data/batchapp/softeon/umgomsuat/itemuploaddaemon
+umgomsdev_lpr | /data/batchapp/softeon/umgomsuat/loopreturndaemon
+umgoms_omas | /data/batchapp/softeon/umgomsuat/massupdatedaemon
+umgoms_opst | /data/batchapp/softeon/umgomsuat/orderpostprocessdaemon
+umgoms_ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon
+umgoms_ouagt1 | /data/batchapp/softeon/umgomsuat/orderuploadagent1
+umgoms_ouagt2 | /data/batchapp/softeon/umgomsuat/orderuploadagent2
+umgoms_omagt | /data/batchapp/softeon/umgomsuat/ordmetafielddaemon
+umgoms_ppfagt | /data/batchapp/softeon/umgomsuat/prepopulationfulfillmentdaemon
+umgoms_jqgrid | /data/batchapp/softeon/umgomsuat/reportjqgridexportdaemon
+umgoms_raagt | /data/batchapp/softeon/umgomsuat/reserveadjdaemon
+umgoms_ruagt | /data/batchapp/softeon/umgomsuat/riskuploaddaemon
+umgoms_sch | /data/batchapp/softeon/umgomsuat/schedulardaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_scfk | /data/batchapp/softeon/umgomsuat/shipconfirmfillkilldaemon
+umgoms_spagt | /data/batchapp/softeon/umgomsuat/shipmentdaemon
+umgoms_smiagt | /data/batchapp/softeon/umgomsuat/skumanageinvdaemon
+umgoms_src | /data/batchapp/softeon/umgomsuat/sourcingdaemon
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdc | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqsla | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_SQSOC | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_sqsoc | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon
+umgoms_sqsoe | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_sqsou | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspd | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_sqspu | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon
+umgoms_sqsrc | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon
+umgoms_1inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon1
+umgoms_wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon
+umgoms_wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon
+umgoms_wsq | /data/batchapp/softeon/umgomsuat/wsqdaemon
+umgoms_sqsf | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_itaagt | /data/batchapp/softeon/umgomsuat/invtransadjustdaemon
+umgoms_smad | /data/batchapp/softeon/umgomsuat/smartyaddressdaemon
+umgoms_sqsstkmv | /data/batchapp/softeon/umgomsuat/sqsstockmovedaemon
+java | /data3/UMGUSOMS_HKP/UMGUSOMS_HKP_PROCESS
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+815198 | umgconfiguat | app | umguat_jb740eap | 8082 | 172.29.10.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/umgconfiguat/standalone
+1744621 | umgomsuat | jboss720eap | umgoms_jb720eap | 8080 | 172.29.10.46:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsuat/standalone
+814158 | umgomsvendorportal | jboss720eap | vportal_jb720ea | 8081 | 172.29.10.46:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsvendorportal/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 04:00:12.706813
+==============================================================================
+
+2026-07-11 04:00:40,202 - 4117624 - ERROR - app_validation.py errors for i-0112abf53f9f2e386:
+
+2026-07-11 04:00:40,204 - 4117624 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-BeforePatching-2026-07-11-04-00-40-204.log
+2026-07-11 04:00:40,290 - 4117624 - INFO - Sending patch command to instance i-0112abf53f9f2e386
+2026-07-11 04:00:40,411 - 4117624 - INFO - Command sent successfully to instance i-0112abf53f9f2e386. Command ID: a9a98631-d995-4198-bf86-1f368be3768b
+2026-07-11 04:09:42,571 - 4117624 - INFO - All patches applied successfully.
+2026-07-11 04:09:42,573 - 4117624 - INFO - Patching end time: 2026-07-11 04:09:42
+2026-07-11 04:09:42,573 - 4117624 - INFO - Patch Elapsed time: 0:09:38.456325
+2026-07-11 04:09:42,646 - 4117624 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 04:09:42,646 - 4117624 - INFO - Confirmed - services are stopped
+2026-07-11 04:10:03,748 - 4117624 - INFO - Discovered TG map: {'i-0112abf53f9f2e386': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-UAT-APP/29a67d9aa9863706', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-Vendor-Portal-UAT/35b8cc33f919e46d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-Technicolor-UAT-DOMS-Ext/02b48de156df8f43', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-DOMS-EXT/5fc31e1e3f6525f8']}
+2026-07-11 04:10:04,025 - 4117624 - INFO - Deregistering i-0112abf53f9f2e386 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-UAT-APP/29a67d9aa9863706
+2026-07-11 04:10:04,099 - 4117624 - INFO - Deregistering i-0112abf53f9f2e386 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-Vendor-Portal-UAT/35b8cc33f919e46d
+2026-07-11 04:10:04,152 - 4117624 - INFO - Deregistering i-0112abf53f9f2e386 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-Technicolor-UAT-DOMS-Ext/02b48de156df8f43
+2026-07-11 04:10:04,205 - 4117624 - INFO - Deregistering i-0112abf53f9f2e386 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-DOMS-EXT/5fc31e1e3f6525f8
+2026-07-11 04:10:04,267 - 4117624 - INFO - Stopping EC2 instance: i-0112abf53f9f2e386 at 2026-07-11 04:10:04
+2026-07-11 04:13:06,196 - 4117624 - INFO - Instance i-0112abf53f9f2e386 stopped successfully.
+2026-07-11 04:13:06,343 - 4117624 - INFO - Stopped i-0112abf53f9f2e386 in 0:03:02.076353
+2026-07-11 04:13:06,344 - 4117624 - INFO - Starting EC2 instance: i-0112abf53f9f2e386
+2026-07-11 04:13:22,509 - 4117624 - INFO - Instance i-0112abf53f9f2e386 started successfully.
+2026-07-11 04:13:22,509 - 4117624 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0112abf53f9f2e386...
+2026-07-11 04:15:02,609 - 4117624 - INFO - Registering i-0112abf53f9f2e386 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-UAT-APP/29a67d9aa9863706
+2026-07-11 04:15:02,787 - 4117624 - INFO - Registering i-0112abf53f9f2e386 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-Vendor-Portal-UAT/35b8cc33f919e46d
+2026-07-11 04:15:02,934 - 4117624 - INFO - Registering i-0112abf53f9f2e386 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-Technicolor-UAT-DOMS-Ext/02b48de156df8f43
+2026-07-11 04:15:03,091 - 4117624 - INFO - Registering i-0112abf53f9f2e386 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-DOMS-EXT/5fc31e1e3f6525f8
+2026-07-11 04:15:33,624 - 4117624 - INFO - Sent app_validation.py to i-0112abf53f9f2e386 (command_id: 82919621-7531-45c3-bf8a-65f40fd6fc9c)
+2026-07-11 04:16:03,706 - 4117624 - INFO - app_validation.py output for i-0112abf53f9f2e386:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 04:15:33.888405
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.46
+Hostname | ip-172-29-10-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 204.2G | 85.7G | 70% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 105.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 51
+Batch/Daemon Java Processes | 49
+Non-Standalone Java Processes | umgoms_iaagt, umgstrut_cardt, umgoms_dwa, umgoms_fctagt, umgoms_foagt, umgoms_gen, umgoms_gwagt, umgoms_hld, umgoms_IOAGT, umgoms_iuagt, umgomsdev_lpr, umgoms_omas, umgoms_opst, umgoms_ord, umgoms_ouagt1, umgoms_ouagt2, umgoms_omagt, umgoms_ppfagt, umgoms_jqgrid, umgoms_raagt, umgoms_ruagt, umgoms_sch, umgoms_1sch, umgoms_scfk, umgoms_spagt, umgoms_smiagt, umgoms_src, umgoms_sqsboagt, umgoms_sqsdc, umgoms_sqsic, umgoms_sqsiu, umgoms_sqsla, umgoms_SQSOC, umgoms_sqsoc, umgoms_sqsoe, umgoms_sqsou, umgoms_sqspc, umgoms_sqspd, umgoms_sqspu, umgoms_sqsrc, umgoms_inbq, umgoms_1inbq, umgoms_wmsprl, umgoms_wmsrl, umgoms_wsq, umgoms_sqsf, umgoms_itaagt, umgoms_smad, umgoms_sqsstkmv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 49
+Java-Name | Java-Path
+umgoms_iaagt | /data/batchapp/softeon/umgomsuat/adjustmentdaemon
+umgstrut_cardt | /data/batchapp/softeon/umgomsuat/carrierdeterminationdaemon
+umgoms_dwa | /data/batchapp/softeon/umgomsuat/downloaddaemon
+umgoms_fctagt | /data/batchapp/softeon/umgomsuat/fedexcarrtrackdaemon
+umgoms_foagt | /data/batchapp/softeon/umgomsuat/fulfillmentdaemon
+umgoms_gen | /data/batchapp/softeon/umgomsuat/genericdaemon
+umgoms_gwagt | /data/batchapp/softeon/umgomsuat/genericwebhookdaemon
+umgoms_hld | /data/batchapp/softeon/umgomsuat/holddaemon
+umgoms_IOAGT | /data/batchapp/softeon/umgomsuat/invoverlaydaemon
+umgoms_iuagt | /data/batchapp/softeon/umgomsuat/itemuploaddaemon
+umgomsdev_lpr | /data/batchapp/softeon/umgomsuat/loopreturndaemon
+umgoms_omas | /data/batchapp/softeon/umgomsuat/massupdatedaemon
+umgoms_opst | /data/batchapp/softeon/umgomsuat/orderpostprocessdaemon
+umgoms_ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon
+umgoms_ouagt1 | /data/batchapp/softeon/umgomsuat/orderuploadagent1
+umgoms_ouagt2 | /data/batchapp/softeon/umgomsuat/orderuploadagent2
+umgoms_omagt | /data/batchapp/softeon/umgomsuat/ordmetafielddaemon
+umgoms_ppfagt | /data/batchapp/softeon/umgomsuat/prepopulationfulfillmentdaemon
+umgoms_jqgrid | /data/batchapp/softeon/umgomsuat/reportjqgridexportdaemon
+umgoms_raagt | /data/batchapp/softeon/umgomsuat/reserveadjdaemon
+umgoms_ruagt | /data/batchapp/softeon/umgomsuat/riskuploaddaemon
+umgoms_sch | /data/batchapp/softeon/umgomsuat/schedulardaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_scfk | /data/batchapp/softeon/umgomsuat/shipconfirmfillkilldaemon
+umgoms_spagt | /data/batchapp/softeon/umgomsuat/shipmentdaemon
+umgoms_smiagt | /data/batchapp/softeon/umgomsuat/skumanageinvdaemon
+umgoms_src | /data/batchapp/softeon/umgomsuat/sourcingdaemon
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdc | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqsla | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_SQSOC | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_sqsoc | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon
+umgoms_sqsoe | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_sqsou | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspd | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_sqspu | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon
+umgoms_sqsrc | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon
+umgoms_1inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon1
+umgoms_wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon
+umgoms_wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon
+umgoms_wsq | /data/batchapp/softeon/umgomsuat/wsqdaemon
+umgoms_sqsf | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_itaagt | /data/batchapp/softeon/umgomsuat/invtransadjustdaemon
+umgoms_smad | /data/batchapp/softeon/umgomsuat/smartyaddressdaemon
+umgoms_sqsstkmv | /data/batchapp/softeon/umgomsuat/sqsstockmovedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6323 | umgomsuat | jboss720eap | umgoms_jb720eap | 8080 | 172.29.10.46:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsuat/standalone
+6316 | umgomsvendorportal | jboss720eap | vportal_jb720ea | 8081 | 172.29.10.46:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsvendorportal/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 04:15:36.559680
+==============================================================================
+
+2026-07-11 04:16:03,706 - 4117624 - ERROR - app_validation.py errors for i-0112abf53f9f2e386:
+
+2026-07-11 04:16:03,708 - 4117624 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-AfterPatching-2026-07-11-04-16-03-707.log
+2026-07-11 04:16:03,764 - 4117624 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-Validation-details-2026-07-11-04-16-03-707.html
+2026-07-11 04:16:04,020 - 4117624 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 04:16:04,021 - 4117624 - INFO - HTML validation report email sent for i-0112abf53f9f2e386
+2026-07-11 04:16:04,021 - 4117624 - INFO - [Retry-1] Waiting 600s for i-0112abf53f9f2e386...
+2026-07-11 04:16:04,021 - 4117624 - INFO - RED - Background retry thread started for i-0112abf53f9f2e386
+2026-07-11 04:16:04,294 - 4117624 - INFO - Started i-0112abf53f9f2e386 in 0:02:57.949957
+2026-07-11 04:16:04,294 - 4117624 - INFO - All instances processed.
+2026-07-11 04:16:04,299 - 4117624 - INFO - Restart Total time: 0:06:21.524310
+2026-07-11 04:16:04,299 - 4117624 - INFO - Auto-confirmed services are restarted
+2026-07-11 04:16:04,299 - 4117624 - INFO - Confirmed - services are started
+2026-07-11 04:16:04,429 - 4117624 - INFO - The following instances have failed the patch: []
+2026-07-11 04:16:04,429 - 4117624 - INFO - No instances have failed the patch.
+2026-07-11 04:16:04,430 - 4117624 - INFO - Total Patch Process time: 0:16:00.927517
+2026-07-11 04:17:04,779 - 4117624 - INFO - Log file ./logs/patching_2026-07-11_q3-UMG-OMS-uat-US.log uploaded to s3://q3-2026-aws-security-patching/q3-UMG-OMS-uat-US_Patch/2026-07-11/patching_2026-07-11_q3-UMG-OMS-uat-US.log
+2026-07-11 04:26:04,240 - 4117624 - INFO - Sent app_validation.py to i-0112abf53f9f2e386 (command_id: 787161dd-08eb-472f-9256-df9bfbebc1a3)
+2026-07-11 04:26:34,341 - 4117624 - INFO - app_validation.py output for i-0112abf53f9f2e386:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 04:26:04.503643
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.46
+Hostname | ip-172-29-10-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 204.4G | 85.5G | 70% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 105.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 52
+Batch/Daemon Java Processes | 50
+Non-Standalone Java Processes | umgoms_iaagt, umgstrut_cardt, umgoms_dwa, umgoms_fctagt, umgoms_ftp, umgoms_foagt, umgoms_gen, umgoms_gwagt, umgoms_hld, umgoms_IOAGT, umgoms_iuagt, umgomsdev_lpr, umgoms_omas, umgoms_opst, umgoms_ord, umgoms_ouagt1, umgoms_ouagt2, umgoms_omagt, umgoms_ppfagt, umgoms_jqgrid, umgoms_raagt, umgoms_ruagt, umgoms_sch, umgoms_1sch, umgoms_scfk, umgoms_spagt, umgoms_smiagt, umgoms_src, umgoms_sqsboagt, umgoms_sqsdc, umgoms_sqsic, umgoms_sqsiu, umgoms_sqsla, umgoms_SQSOC, umgoms_sqsoc, umgoms_sqsoe, umgoms_sqsou, umgoms_sqspc, umgoms_sqspd, umgoms_sqspu, umgoms_sqsrc, umgoms_inbq, umgoms_1inbq, umgoms_wmsprl, umgoms_wmsrl, umgoms_wsq, umgoms_sqsf, umgoms_itaagt, umgoms_smad, umgoms_sqsstkmv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 50
+Java-Name | Java-Path
+umgoms_iaagt | /data/batchapp/softeon/umgomsuat/adjustmentdaemon
+umgstrut_cardt | /data/batchapp/softeon/umgomsuat/carrierdeterminationdaemon
+umgoms_dwa | /data/batchapp/softeon/umgomsuat/downloaddaemon
+umgoms_fctagt | /data/batchapp/softeon/umgomsuat/fedexcarrtrackdaemon
+umgoms_ftp | /data/batchapp/softeon/umgomsuat/ftpdaemon
+umgoms_foagt | /data/batchapp/softeon/umgomsuat/fulfillmentdaemon
+umgoms_gen | /data/batchapp/softeon/umgomsuat/genericdaemon
+umgoms_gwagt | /data/batchapp/softeon/umgomsuat/genericwebhookdaemon
+umgoms_hld | /data/batchapp/softeon/umgomsuat/holddaemon
+umgoms_IOAGT | /data/batchapp/softeon/umgomsuat/invoverlaydaemon
+umgoms_iuagt | /data/batchapp/softeon/umgomsuat/itemuploaddaemon
+umgomsdev_lpr | /data/batchapp/softeon/umgomsuat/loopreturndaemon
+umgoms_omas | /data/batchapp/softeon/umgomsuat/massupdatedaemon
+umgoms_opst | /data/batchapp/softeon/umgomsuat/orderpostprocessdaemon
+umgoms_ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon
+umgoms_ouagt1 | /data/batchapp/softeon/umgomsuat/orderuploadagent1
+umgoms_ouagt2 | /data/batchapp/softeon/umgomsuat/orderuploadagent2
+umgoms_omagt | /data/batchapp/softeon/umgomsuat/ordmetafielddaemon
+umgoms_ppfagt | /data/batchapp/softeon/umgomsuat/prepopulationfulfillmentdaemon
+umgoms_jqgrid | /data/batchapp/softeon/umgomsuat/reportjqgridexportdaemon
+umgoms_raagt | /data/batchapp/softeon/umgomsuat/reserveadjdaemon
+umgoms_ruagt | /data/batchapp/softeon/umgomsuat/riskuploaddaemon
+umgoms_sch | /data/batchapp/softeon/umgomsuat/schedulardaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_scfk | /data/batchapp/softeon/umgomsuat/shipconfirmfillkilldaemon
+umgoms_spagt | /data/batchapp/softeon/umgomsuat/shipmentdaemon
+umgoms_smiagt | /data/batchapp/softeon/umgomsuat/skumanageinvdaemon
+umgoms_src | /data/batchapp/softeon/umgomsuat/sourcingdaemon
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdc | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqsla | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_SQSOC | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_sqsoc | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon
+umgoms_sqsoe | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_sqsou | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspd | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_sqspu | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon
+umgoms_sqsrc | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon
+umgoms_1inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon1
+umgoms_wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon
+umgoms_wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon
+umgoms_wsq | /data/batchapp/softeon/umgomsuat/wsqdaemon
+umgoms_sqsf | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_itaagt | /data/batchapp/softeon/umgomsuat/invtransadjustdaemon
+umgoms_smad | /data/batchapp/softeon/umgomsuat/smartyaddressdaemon
+umgoms_sqsstkmv | /data/batchapp/softeon/umgomsuat/sqsstockmovedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6323 | umgomsuat | jboss720eap | umgoms_jb720eap | 8080 | 172.29.10.46:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsuat/standalone
+6316 | umgomsvendorportal | jboss720eap | vportal_jb720ea | 8081 | 172.29.10.46:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsvendorportal/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 04:26:05.691079
+==============================================================================
+
+2026-07-11 04:26:34,342 - 4117624 - ERROR - app_validation.py errors for i-0112abf53f9f2e386:
+
+2026-07-11 04:26:34,343 - 4117624 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-AfterPatching-Retry1-2026-07-11-04-26-34-343.log
+2026-07-11 04:26:34,398 - 4117624 - INFO - [Retry-1] RED detected for UMG-OMS US UAT Application and Batch Server (172.29.10.46), retrying... (Total waited: 600s)
+2026-07-11 04:26:34,399 - 4117624 - INFO - [Retry-2] Waiting 600s for i-0112abf53f9f2e386...
+2026-07-11 04:36:34,818 - 4117624 - INFO - Sent app_validation.py to i-0112abf53f9f2e386 (command_id: 2918168b-d8c8-4f70-806a-a443d0761c30)
+2026-07-11 04:37:04,898 - 4117624 - INFO - app_validation.py output for i-0112abf53f9f2e386:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 04:36:35.076036
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.46
+Hostname | ip-172-29-10-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 204.5G | 85.3G | 70% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 105.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 52
+Batch/Daemon Java Processes | 50
+Non-Standalone Java Processes | umgoms_iaagt, umgstrut_cardt, umgoms_dwa, umgoms_fctagt, umgoms_ftp, umgoms_foagt, umgoms_gen, umgoms_gwagt, umgoms_hld, umgoms_IOAGT, umgoms_iuagt, umgomsdev_lpr, umgoms_omas, umgoms_opst, umgoms_ord, umgoms_ouagt1, umgoms_ouagt2, umgoms_omagt, umgoms_ppfagt, umgoms_jqgrid, umgoms_raagt, umgoms_ruagt, umgoms_sch, umgoms_1sch, umgoms_scfk, umgoms_spagt, umgoms_smiagt, umgoms_src, umgoms_sqsboagt, umgoms_sqsdc, umgoms_sqsic, umgoms_sqsiu, umgoms_sqsla, umgoms_SQSOC, umgoms_sqsoc, umgoms_sqsoe, umgoms_sqsou, umgoms_sqspc, umgoms_sqspd, umgoms_sqspu, umgoms_sqsrc, umgoms_inbq, umgoms_1inbq, umgoms_wmsprl, umgoms_wmsrl, umgoms_wsq, umgoms_sqsf, umgoms_itaagt, umgoms_smad, umgoms_sqsstkmv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 50
+Java-Name | Java-Path
+umgoms_iaagt | /data/batchapp/softeon/umgomsuat/adjustmentdaemon
+umgstrut_cardt | /data/batchapp/softeon/umgomsuat/carrierdeterminationdaemon
+umgoms_dwa | /data/batchapp/softeon/umgomsuat/downloaddaemon
+umgoms_fctagt | /data/batchapp/softeon/umgomsuat/fedexcarrtrackdaemon
+umgoms_ftp | /data/batchapp/softeon/umgomsuat/ftpdaemon
+umgoms_foagt | /data/batchapp/softeon/umgomsuat/fulfillmentdaemon
+umgoms_gen | /data/batchapp/softeon/umgomsuat/genericdaemon
+umgoms_gwagt | /data/batchapp/softeon/umgomsuat/genericwebhookdaemon
+umgoms_hld | /data/batchapp/softeon/umgomsuat/holddaemon
+umgoms_IOAGT | /data/batchapp/softeon/umgomsuat/invoverlaydaemon
+umgoms_iuagt | /data/batchapp/softeon/umgomsuat/itemuploaddaemon
+umgomsdev_lpr | /data/batchapp/softeon/umgomsuat/loopreturndaemon
+umgoms_omas | /data/batchapp/softeon/umgomsuat/massupdatedaemon
+umgoms_opst | /data/batchapp/softeon/umgomsuat/orderpostprocessdaemon
+umgoms_ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon
+umgoms_ouagt1 | /data/batchapp/softeon/umgomsuat/orderuploadagent1
+umgoms_ouagt2 | /data/batchapp/softeon/umgomsuat/orderuploadagent2
+umgoms_omagt | /data/batchapp/softeon/umgomsuat/ordmetafielddaemon
+umgoms_ppfagt | /data/batchapp/softeon/umgomsuat/prepopulationfulfillmentdaemon
+umgoms_jqgrid | /data/batchapp/softeon/umgomsuat/reportjqgridexportdaemon
+umgoms_raagt | /data/batchapp/softeon/umgomsuat/reserveadjdaemon
+umgoms_ruagt | /data/batchapp/softeon/umgomsuat/riskuploaddaemon
+umgoms_sch | /data/batchapp/softeon/umgomsuat/schedulardaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_scfk | /data/batchapp/softeon/umgomsuat/shipconfirmfillkilldaemon
+umgoms_spagt | /data/batchapp/softeon/umgomsuat/shipmentdaemon
+umgoms_smiagt | /data/batchapp/softeon/umgomsuat/skumanageinvdaemon
+umgoms_src | /data/batchapp/softeon/umgomsuat/sourcingdaemon
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdc | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqsla | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_SQSOC | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_sqsoc | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon
+umgoms_sqsoe | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_sqsou | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspd | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_sqspu | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon
+umgoms_sqsrc | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon
+umgoms_1inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon1
+umgoms_wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon
+umgoms_wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon
+umgoms_wsq | /data/batchapp/softeon/umgomsuat/wsqdaemon
+umgoms_sqsf | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_itaagt | /data/batchapp/softeon/umgomsuat/invtransadjustdaemon
+umgoms_smad | /data/batchapp/softeon/umgomsuat/smartyaddressdaemon
+umgoms_sqsstkmv | /data/batchapp/softeon/umgomsuat/sqsstockmovedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6323 | umgomsuat | jboss720eap | umgoms_jb720eap | 8080 | 172.29.10.46:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsuat/standalone
+6316 | umgomsvendorportal | jboss720eap | vportal_jb720ea | 8081 | 172.29.10.46:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsvendorportal/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 04:36:36.228345
+==============================================================================
+
+2026-07-11 04:37:04,898 - 4117624 - ERROR - app_validation.py errors for i-0112abf53f9f2e386:
+
+2026-07-11 04:37:04,900 - 4117624 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-AfterPatching-Retry2-2026-07-11-04-37-04-899.log
+2026-07-11 04:37:04,954 - 4117624 - INFO - [Retry-2] RED detected for UMG-OMS US UAT Application and Batch Server (172.29.10.46), retrying... (Total waited: 1200s)
+2026-07-11 04:37:04,955 - 4117624 - INFO - [Retry-3] Waiting 600s for i-0112abf53f9f2e386...
+2026-07-11 04:47:05,195 - 4117624 - INFO - Sent app_validation.py to i-0112abf53f9f2e386 (command_id: 470b9da5-4b48-4a1d-bb8f-79e0c6c92bfc)
+2026-07-11 04:47:35,319 - 4117624 - INFO - app_validation.py output for i-0112abf53f9f2e386:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 04:47:05.453374
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.46
+Hostname | ip-172-29-10-46
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 204.9G | 84.9G | 70% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 105.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 52
+Batch/Daemon Java Processes | 50
+Non-Standalone Java Processes | umgoms_iaagt, umgstrut_cardt, umgoms_dwa, umgoms_fctagt, umgoms_ftp, umgoms_foagt, umgoms_gen, umgoms_gwagt, umgoms_hld, umgoms_IOAGT, umgoms_iuagt, umgomsdev_lpr, umgoms_omas, umgoms_opst, umgoms_ord, umgoms_ouagt1, umgoms_ouagt2, umgoms_omagt, umgoms_ppfagt, umgoms_jqgrid, umgoms_raagt, umgoms_ruagt, umgoms_sch, umgoms_1sch, umgoms_scfk, umgoms_spagt, umgoms_smiagt, umgoms_src, umgoms_sqsboagt, umgoms_sqsdc, umgoms_sqsic, umgoms_sqsiu, umgoms_sqsla, umgoms_SQSOC, umgoms_sqsoc, umgoms_sqsoe, umgoms_sqsou, umgoms_sqspc, umgoms_sqspd, umgoms_sqspu, umgoms_sqsrc, umgoms_inbq, umgoms_1inbq, umgoms_wmsprl, umgoms_wmsrl, umgoms_wsq, umgoms_sqsf, umgoms_itaagt, umgoms_smad, umgoms_sqsstkmv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 50
+Java-Name | Java-Path
+umgoms_iaagt | /data/batchapp/softeon/umgomsuat/adjustmentdaemon
+umgstrut_cardt | /data/batchapp/softeon/umgomsuat/carrierdeterminationdaemon
+umgoms_dwa | /data/batchapp/softeon/umgomsuat/downloaddaemon
+umgoms_fctagt | /data/batchapp/softeon/umgomsuat/fedexcarrtrackdaemon
+umgoms_ftp | /data/batchapp/softeon/umgomsuat/ftpdaemon
+umgoms_foagt | /data/batchapp/softeon/umgomsuat/fulfillmentdaemon
+umgoms_gen | /data/batchapp/softeon/umgomsuat/genericdaemon
+umgoms_gwagt | /data/batchapp/softeon/umgomsuat/genericwebhookdaemon
+umgoms_hld | /data/batchapp/softeon/umgomsuat/holddaemon
+umgoms_IOAGT | /data/batchapp/softeon/umgomsuat/invoverlaydaemon
+umgoms_iuagt | /data/batchapp/softeon/umgomsuat/itemuploaddaemon
+umgomsdev_lpr | /data/batchapp/softeon/umgomsuat/loopreturndaemon
+umgoms_omas | /data/batchapp/softeon/umgomsuat/massupdatedaemon
+umgoms_opst | /data/batchapp/softeon/umgomsuat/orderpostprocessdaemon
+umgoms_ord | /data/batchapp/softeon/umgomsuat/ordersplitdaemon
+umgoms_ouagt1 | /data/batchapp/softeon/umgomsuat/orderuploadagent1
+umgoms_ouagt2 | /data/batchapp/softeon/umgomsuat/orderuploadagent2
+umgoms_omagt | /data/batchapp/softeon/umgomsuat/ordmetafielddaemon
+umgoms_ppfagt | /data/batchapp/softeon/umgomsuat/prepopulationfulfillmentdaemon
+umgoms_jqgrid | /data/batchapp/softeon/umgomsuat/reportjqgridexportdaemon
+umgoms_raagt | /data/batchapp/softeon/umgomsuat/reserveadjdaemon
+umgoms_ruagt | /data/batchapp/softeon/umgomsuat/riskuploaddaemon
+umgoms_sch | /data/batchapp/softeon/umgomsuat/schedulardaemon
+umgoms_1sch | /data/batchapp/softeon/umgomsuat/schedulardaemon1
+umgoms_scfk | /data/batchapp/softeon/umgomsuat/shipconfirmfillkilldaemon
+umgoms_spagt | /data/batchapp/softeon/umgomsuat/shipmentdaemon
+umgoms_smiagt | /data/batchapp/softeon/umgomsuat/skumanageinvdaemon
+umgoms_src | /data/batchapp/softeon/umgomsuat/sourcingdaemon
+umgoms_sqsboagt | /data/batchapp/softeon/umgomsuat/sqsbulkoperationdaemon
+umgoms_sqsdc | /data/batchapp/softeon/umgomsuat/sqsdisputecreatedaemon
+umgoms_sqsic | /data/batchapp/softeon/umgomsuat/sqsinventorycreatedaemon
+umgoms_sqsiu | /data/batchapp/softeon/umgomsuat/sqsinventoryupdatedaemon
+umgoms_sqsla | /data/batchapp/softeon/umgomsuat/sqslocationdaemon
+umgoms_SQSOC | /data/batchapp/softeon/umgomsuat/sqsordercanceldaemon
+umgoms_sqsoc | /data/batchapp/softeon/umgomsuat/sqsordercreatedaemon
+umgoms_sqsoe | /data/batchapp/softeon/umgomsuat/sqsordereditdaemon
+umgoms_sqsou | /data/batchapp/softeon/umgomsuat/sqsorderupdatedaemon
+umgoms_sqspc | /data/batchapp/softeon/umgomsuat/sqsproductcreatedaemon
+umgoms_sqspd | /data/batchapp/softeon/umgomsuat/sqsproductdeletedaemon
+umgoms_sqspu | /data/batchapp/softeon/umgomsuat/sqsproductupdatedaemon
+umgoms_sqsrc | /data/batchapp/softeon/umgomsuat/sqsrefundcreatedaemon
+umgoms_inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon
+umgoms_1inbq | /data/batchapp/softeon/umgomsuat/uploaddeamon1
+umgoms_wmsprl | /data/batchapp/softeon/umgomsuat/wmspostreleasedaemon
+umgoms_wmsrl | /data/batchapp/softeon/umgomsuat/wmsreleasedaemon
+umgoms_wsq | /data/batchapp/softeon/umgomsuat/wsqdaemon
+umgoms_sqsf | /data/batchapp/softeon/umgomsuat/sqsfulfillmentholdreleasedaemon
+umgoms_itaagt | /data/batchapp/softeon/umgomsuat/invtransadjustdaemon
+umgoms_smad | /data/batchapp/softeon/umgomsuat/smartyaddressdaemon
+umgoms_sqsstkmv | /data/batchapp/softeon/umgomsuat/sqsstockmovedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6323 | umgomsuat | jboss720eap | umgoms_jb720eap | 8080 | 172.29.10.46:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsuat/standalone
+6316 | umgomsvendorportal | jboss720eap | vportal_jb720ea | 8081 | 172.29.10.46:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/umgomsvendorportal/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 04:47:06.585533
+==============================================================================
+
+2026-07-11 04:47:35,319 - 4117624 - ERROR - app_validation.py errors for i-0112abf53f9f2e386:
+
+2026-07-11 04:47:35,321 - 4117624 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-11/q3-UMG-OMS-uat-US/172.29.10.46/172.29.10.46-AfterPatching-Retry3-2026-07-11-04-47-35-320.log
+2026-07-11 04:47:35,658 - 4117624 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 04:47:35,659 - 4117624 - WARNING - [Retry] Timeout - auto cron enabled for i-0112abf53f9f2e386

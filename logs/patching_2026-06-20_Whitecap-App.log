@@ -1,0 +1,440 @@
+2026-06-20 01:15:03,432 - 2968530 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-20 01:15:03,432 - 2968530 - INFO - Script Start Time: 2026-06-20 01:15:03
+2026-06-20 01:15:03,661 - 2968530 - INFO - Instance(s) selected for Patching: {'i-0ef193b3133d45590': '10.248.224.13', 'i-08a55b40b7090d7eb': '10.248.224.47'}
+2026-06-20 01:15:03,729 - 2968530 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-20 01:15:03,729 - 2968530 - INFO - Now patching instances at: 2026-06-20 01:15:03
+2026-06-20 01:15:03,987 - 2968530 - INFO - Sent app_validation.py to i-0ef193b3133d45590 (command_id: ed574777-ad17-47cf-b4a1-239e6311f776)
+2026-06-20 01:15:34,122 - 2968530 - INFO - app_validation.py output for i-0ef193b3133d45590:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:15:04.291679
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.248.224.13
+Hostname | ip-10-248-224-13.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.0G | 173.8G | 27% | /data
+fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | 0B | 179.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.248.224.13:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.248.224.13 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3689 | whitecapconfigprod | jboss740eap | whiteconfg_jb74 | 8083 | 10.248.224.13:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/whitecapconfigprod/standalone
+3738759 | whitecapprod | jboss730eap | witeprd_jb730e | 8080 | 10.248.224.13:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapprod/standalone
+3738717 | whitecaprfprod | jboss730eap | witerfprd_jb73 | 8081 | 10.248.224.13:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecaprfprod/standalone
+3738944 | whitecapwsprod | jboss730eap | witewsprd_jb73 | 8082 | 10.248.224.13:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:15:06.356022
+==============================================================================
+
+2026-06-20 01:15:34,123 - 2968530 - ERROR - app_validation.py errors for i-0ef193b3133d45590:
+
+2026-06-20 01:15:34,124 - 2968530 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.13/10.248.224.13-BeforePatching-2026-06-20-01-15-34-124.log
+2026-06-20 01:15:34,369 - 2968530 - INFO - Sent app_validation.py to i-08a55b40b7090d7eb (command_id: d4fa17c6-89b9-482c-92e4-4699b14d1bd8)
+2026-06-20 01:16:04,500 - 2968530 - INFO - app_validation.py output for i-08a55b40b7090d7eb:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:15:34.692441
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.248.224.47
+Hostname | ip-10-248-224-47.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 69.3G | 170.6G | 28% | /data
+fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | 0B | 179.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.248.224.47:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.248.224.47 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3716 | whitecapconfigprod | jboss740eap | whiteconfg_jb74 | 8083 | 10.248.224.47:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/whitecapconfigprod/standalone
+3484405 | whitecapprod | jboss730eap | witeprd_jb730e | 8080 | 10.248.224.47:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapprod/standalone
+3484592 | whitecaprfprod | jboss730eap | witerfprd_jb73 | 8081 | 10.248.224.47:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecaprfprod/standalone
+3484775 | whitecapwsprod | jboss730eap | witewsprd_jb73 | 8082 | 10.248.224.47:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:15:36.757555
+==============================================================================
+
+2026-06-20 01:16:04,500 - 2968530 - ERROR - app_validation.py errors for i-08a55b40b7090d7eb:
+
+2026-06-20 01:16:04,502 - 2968530 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.47/10.248.224.47-BeforePatching-2026-06-20-01-16-04-502.log
+2026-06-20 01:16:04,657 - 2968530 - INFO - Sending patch command to instance i-0ef193b3133d45590
+2026-06-20 01:16:04,809 - 2968530 - INFO - Command sent successfully to instance i-0ef193b3133d45590. Command ID: 42ced105-c1d5-4475-9fda-348a732081ea
+2026-06-20 01:16:04,943 - 2968530 - INFO - Sending patch command to instance i-08a55b40b7090d7eb
+2026-06-20 01:16:05,086 - 2968530 - INFO - Command sent successfully to instance i-08a55b40b7090d7eb. Command ID: 58fbfc4a-383c-4c37-948f-08b0fd7755e4
+2026-06-20 01:24:37,532 - 2968530 - INFO - All patches applied successfully.
+2026-06-20 01:24:37,533 - 2968530 - INFO - Patching end time: 2026-06-20 01:24:37
+2026-06-20 01:24:37,533 - 2968530 - INFO - Patch Elapsed time: 0:09:33.803963
+2026-06-20 01:24:37,607 - 2968530 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-20 01:24:37,607 - 2968530 - INFO - Confirmed - services are stopped
+2026-06-20 01:24:44,649 - 2968530 - INFO - Discovered TG map: {'i-08a55b40b7090d7eb': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817'], 'i-0ef193b3133d45590': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817']}
+2026-06-20 01:24:44,828 - 2968530 - INFO - Deregistering i-0ef193b3133d45590 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101
+2026-06-20 01:24:44,933 - 2968530 - INFO - Deregistering i-0ef193b3133d45590 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329
+2026-06-20 01:24:44,984 - 2968530 - INFO - Deregistering i-0ef193b3133d45590 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8
+2026-06-20 01:24:45,043 - 2968530 - INFO - Deregistering i-0ef193b3133d45590 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817
+2026-06-20 01:24:45,096 - 2968530 - INFO - Stopping EC2 instance: i-0ef193b3133d45590 at 2026-06-20 01:24:45
+2026-06-20 01:26:31,505 - 2968530 - INFO - Instance i-0ef193b3133d45590 stopped successfully.
+2026-06-20 01:26:31,759 - 2968530 - INFO - Stopped i-0ef193b3133d45590 in 0:01:46.663401
+2026-06-20 01:26:31,760 - 2968530 - INFO - Starting EC2 instance: i-0ef193b3133d45590
+2026-06-20 01:26:47,683 - 2968530 - INFO - Instance i-0ef193b3133d45590 started successfully.
+2026-06-20 01:26:47,683 - 2968530 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0ef193b3133d45590...
+2026-06-20 01:28:27,761 - 2968530 - INFO - Registering i-0ef193b3133d45590 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101
+2026-06-20 01:28:27,977 - 2968530 - INFO - Registering i-0ef193b3133d45590 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329
+2026-06-20 01:28:28,099 - 2968530 - INFO - Registering i-0ef193b3133d45590 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8
+2026-06-20 01:28:28,239 - 2968530 - INFO - Registering i-0ef193b3133d45590 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817
+2026-06-20 01:30:29,193 - 2968530 - INFO - Sent app_validation.py to i-0ef193b3133d45590 (command_id: 41aea7d4-5f74-4693-92e2-9426d160f8d8)
+2026-06-20 01:30:59,300 - 2968530 - INFO - app_validation.py output for i-0ef193b3133d45590:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:30:29.441423
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.248.224.13
+Hostname | ip-10-248-224-13.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.9G | 174.0G | 27% | /data
+fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | 0B | 179.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.248.224.13 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3734 | whitecapconfigprod | jboss740eap | whiteconfg_jb74 | 8083 | 10.248.224.13:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/whitecapconfigprod/standalone
+3958 | whitecapprod | jboss730eap | witeprd_jb730e | 8080 | 10.248.224.13:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapprod/standalone
+4312 | whitecaprfprod | jboss730eap | witerfprd_jb73 | 8081 | 10.248.224.13:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecaprfprod/standalone
+4321 | whitecapwsprod | jboss730eap | witewsprd_jb73 | 8082 | 10.248.224.13:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:30:32.716651
+==============================================================================
+
+2026-06-20 01:30:59,300 - 2968530 - ERROR - app_validation.py errors for i-0ef193b3133d45590:
+
+2026-06-20 01:30:59,302 - 2968530 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.13/10.248.224.13-AfterPatching-2026-06-20-01-30-59-302.log
+2026-06-20 01:30:59,353 - 2968530 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.13/10.248.224.13-Validation-details-2026-06-20-01-30-59-302.html
+2026-06-20 01:30:59,677 - 2968530 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-20 01:30:59,677 - 2968530 - INFO - HTML validation report email sent for i-0ef193b3133d45590
+2026-06-20 01:30:59,937 - 2968530 - INFO - Started i-0ef193b3133d45590 in 0:04:28.176934
+2026-06-20 01:30:59,937 - 2968530 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-06-20 01:33:00,058 - 2968530 - INFO - Deregistering i-08a55b40b7090d7eb from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101
+2026-06-20 01:33:00,248 - 2968530 - INFO - Deregistering i-08a55b40b7090d7eb from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329
+2026-06-20 01:33:00,299 - 2968530 - INFO - Deregistering i-08a55b40b7090d7eb from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8
+2026-06-20 01:33:00,353 - 2968530 - INFO - Deregistering i-08a55b40b7090d7eb from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817
+2026-06-20 01:33:00,406 - 2968530 - INFO - Stopping EC2 instance: i-08a55b40b7090d7eb at 2026-06-20 01:33:00
+2026-06-20 01:34:31,681 - 2968530 - INFO - Instance i-08a55b40b7090d7eb stopped successfully.
+2026-06-20 01:34:31,931 - 2968530 - INFO - Stopped i-08a55b40b7090d7eb in 0:01:31.524661
+2026-06-20 01:34:31,931 - 2968530 - INFO - Starting EC2 instance: i-08a55b40b7090d7eb
+2026-06-20 01:34:47,788 - 2968530 - INFO - Instance i-08a55b40b7090d7eb started successfully.
+2026-06-20 01:34:47,788 - 2968530 - INFO - Waiting 100 seconds for SSM agent to be ready on i-08a55b40b7090d7eb...
+2026-06-20 01:36:27,821 - 2968530 - INFO - Registering i-08a55b40b7090d7eb to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-Desktop/310c10f868cdf101
+2026-06-20 01:36:28,030 - 2968530 - INFO - Registering i-08a55b40b7090d7eb to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-RF/98004d0d9392d329
+2026-06-20 01:36:28,155 - 2968530 - INFO - Registering i-08a55b40b7090d7eb to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-WS/cc59b0ed64e31dc8
+2026-06-20 01:36:28,291 - 2968530 - INFO - Registering i-08a55b40b7090d7eb to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/WhiteCap-Production-config/339004f1fb895817
+2026-06-20 01:38:29,223 - 2968530 - INFO - Sent app_validation.py to i-08a55b40b7090d7eb (command_id: 665ca6e3-2b34-40a8-b22e-246868c73a55)
+2026-06-20 01:38:59,388 - 2968530 - INFO - app_validation.py output for i-08a55b40b7090d7eb:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:38:29.544684
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.248.224.47
+Hostname | ip-10-248-224-47.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 69.2G | 170.7G | 28% | /data
+fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | 0B | 179.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d11c0fbe5cfc767e.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.248.224.47 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3727 | whitecapconfigprod | jboss740eap | whiteconfg_jb74 | 8083 | 10.248.224.47:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/whitecapconfigprod/standalone
+3954 | whitecapprod | jboss730eap | witeprd_jb730e | 8080 | 10.248.224.47:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapprod/standalone
+4312 | whitecaprfprod | jboss730eap | witerfprd_jb73 | 8081 | 10.248.224.47:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecaprfprod/standalone
+4227 | whitecapwsprod | jboss730eap | witewsprd_jb73 | 8082 | 10.248.224.47:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/whitecapwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:38:32.539350
+==============================================================================
+
+2026-06-20 01:38:59,388 - 2968530 - ERROR - app_validation.py errors for i-08a55b40b7090d7eb:
+
+2026-06-20 01:38:59,390 - 2968530 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.47/10.248.224.47-AfterPatching-2026-06-20-01-38-59-390.log
+2026-06-20 01:38:59,442 - 2968530 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-20/Whitecap-App/10.248.224.47/10.248.224.47-Validation-details-2026-06-20-01-38-59-390.html
+2026-06-20 01:38:59,759 - 2968530 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-20 01:38:59,759 - 2968530 - INFO - HTML validation report email sent for i-08a55b40b7090d7eb
+2026-06-20 01:39:00,020 - 2968530 - INFO - Started i-08a55b40b7090d7eb in 0:04:28.088610
+2026-06-20 01:39:00,021 - 2968530 - INFO - All instances processed.
+2026-06-20 01:39:00,035 - 2968530 - INFO - Restart Total time: 0:14:22.295239
+2026-06-20 01:39:00,036 - 2968530 - INFO - Auto-confirmed services are restarted
+2026-06-20 01:39:00,036 - 2968530 - INFO - Confirmed - services are started
+2026-06-20 01:39:00,203 - 2968530 - INFO - The following instances have failed the patch: []
+2026-06-20 01:39:00,203 - 2968530 - INFO - No instances have failed the patch.
+2026-06-20 01:39:00,203 - 2968530 - INFO - Total Patch Process time: 0:23:56.771014
+2026-06-20 01:40:00,693 - 2968530 - INFO - Log file ./logs/patching_2026-06-20_Whitecap-App.log uploaded to s3://q2-2026-aws-security-patching/Whitecap-App_Patch/2026-06-20/patching_2026-06-20_Whitecap-App.log

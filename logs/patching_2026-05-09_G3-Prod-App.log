@@ -1,0 +1,443 @@
+2026-05-09 01:30:04,129 - 537935 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 01:38:29,516 - 537935 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 01:38:29,709 - 537935 - INFO - Log file ./logs/backup_2026-05-09.log uploaded to s3://q3-2025-aws-security-patching/G3-Prod-App_Patch_Backup/2026-05-09/backup_2026-05-09.log
+2026-05-09 05:30:03,406 - 546714 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-09 05:30:03,406 - 546714 - INFO - Script Start Time: 2026-05-09 05:30:03
+2026-05-09 05:30:03,799 - 546714 - INFO - Instance(s) selected for Patching: {'i-05630f70c4f97ac63': '192.168.161.126', 'i-0795ae1a7b41de078': '192.168.161.25'}
+2026-05-09 05:30:03,886 - 546714 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 05:30:03,887 - 546714 - INFO - Now patching instances at: 2026-05-09 05:30:03
+2026-05-09 05:30:03,978 - 546714 - INFO - Sending patch command to instance i-05630f70c4f97ac63
+2026-05-09 05:30:04,366 - 546714 - INFO - Command sent successfully to instance i-05630f70c4f97ac63. Command ID: c35bc47f-c0ed-4859-82ac-439d9c61b195
+2026-05-09 05:30:04,542 - 546714 - INFO - Sending patch command to instance i-0795ae1a7b41de078
+2026-05-09 05:30:04,729 - 546714 - INFO - Command sent successfully to instance i-0795ae1a7b41de078. Command ID: 04714872-078b-4922-94bf-8da247fe4ea7
+2026-05-09 05:35:37,537 - 546714 - INFO - All patches applied successfully.
+2026-05-09 05:35:37,538 - 546714 - INFO - Patching end time: 2026-05-09 05:35:37
+2026-05-09 05:35:37,538 - 546714 - INFO - Patch Elapsed time: 0:05:33.651047
+2026-05-09 05:35:37,606 - 546714 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-09 05:35:37,607 - 546714 - INFO - Confirmed - services are stopped
+2026-05-09 05:35:42,813 - 546714 - INFO - Discovered TG map: {'i-0795ae1a7b41de078': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161'], 'i-05630f70c4f97ac63': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161']}
+2026-05-09 05:35:43,600 - 546714 - INFO - Sent app_validation.py to i-05630f70c4f97ac63 (command_id: 107e4b53-9ea2-4709-99c8-fa5f6d996465)
+2026-05-09 05:36:13,777 - 546714 - INFO - app_validation.py output for i-05630f70c4f97ac63:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 09:35:43.989600
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.126
+Hostname | ip-192-168-161-126.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 57.0G | 182.9G | 23% | /data
+fs-85963b80.efs.us-west-2.amazonaws.com:/ | 0B | 49.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-85963b80.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://192.168.161.126:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.126 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1482696 | g3extprod | jboss720eap | g3ext_jb720eap | 8082 | 192.168.161.126:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3extprod/standalone
+1481410 | g3prod | jboss720eap | g3prod_jb720eap | 8080 | 192.168.161.126:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3prod/standalone
+1482047 | g3rfprod | jboss720eap | g3rfprod_jb720 | 8081 | 192.168.161.126:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3rfprod/standalone
+1483351 | g3wsprod | jboss720eap | g3wsprod_jb72 | 8083 | 192.168.161.126:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3wsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 09:35:44.580415
+==============================================================================
+
+2026-05-09 05:36:13,777 - 546714 - ERROR - app_validation.py errors for i-05630f70c4f97ac63:
+
+2026-05-09 05:36:13,779 - 546714 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.126/192.168.161.126-BeforePatching-2026-05-09-05-36-13-779.log
+2026-05-09 05:36:13,779 - 546714 - INFO - Deregistering i-05630f70c4f97ac63 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d
+2026-05-09 05:36:14,086 - 546714 - INFO - Deregistering i-05630f70c4f97ac63 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0
+2026-05-09 05:36:14,188 - 546714 - INFO - Deregistering i-05630f70c4f97ac63 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c
+2026-05-09 05:36:14,288 - 546714 - INFO - Deregistering i-05630f70c4f97ac63 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161
+2026-05-09 05:36:14,391 - 546714 - INFO - Stopping EC2 instance: i-05630f70c4f97ac63 at 2026-05-09 05:36:14
+2026-05-09 05:37:46,206 - 546714 - INFO - Instance i-05630f70c4f97ac63 stopped successfully.
+2026-05-09 05:37:46,457 - 546714 - INFO - Stopped i-05630f70c4f97ac63 in 0:01:32.066055
+2026-05-09 05:37:46,458 - 546714 - INFO - Starting EC2 instance: i-05630f70c4f97ac63
+2026-05-09 05:38:02,551 - 546714 - INFO - Instance i-05630f70c4f97ac63 started successfully.
+2026-05-09 05:38:02,551 - 546714 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05630f70c4f97ac63...
+2026-05-09 05:39:42,629 - 546714 - INFO - Registering i-05630f70c4f97ac63 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d
+2026-05-09 05:39:43,010 - 546714 - INFO - Registering i-05630f70c4f97ac63 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0
+2026-05-09 05:39:43,200 - 546714 - INFO - Registering i-05630f70c4f97ac63 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c
+2026-05-09 05:39:43,383 - 546714 - INFO - Registering i-05630f70c4f97ac63 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161
+2026-05-09 05:41:44,888 - 546714 - INFO - Sent app_validation.py to i-05630f70c4f97ac63 (command_id: 1805a66b-850b-4ee9-8912-430d63e03f05)
+2026-05-09 05:42:15,089 - 546714 - INFO - app_validation.py output for i-05630f70c4f97ac63:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 09:41:45.156071
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.126
+Hostname | ip-192-168-161-126.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 48.5G | 191.4G | 20% | /data
+fs-85963b80.efs.us-west-2.amazonaws.com:/ | 0B | 49.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-85963b80.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.126 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3157 | g3extprod | jboss720eap | g3ext_jb720eap | 8082 | 192.168.161.126:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3extprod/standalone
+3610 | g3prod | jboss720eap | g3prod_jb720eap | 8080 | 192.168.161.126:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3prod/standalone
+3449 | g3rfprod | jboss720eap | g3rfprod_jb720 | 8081 | 192.168.161.126:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3rfprod/standalone
+3592 | g3wsprod | jboss720eap | g3wsprod_jb72 | 8083 | 192.168.161.126:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3wsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 09:41:46.532552
+==============================================================================
+
+2026-05-09 05:42:15,089 - 546714 - ERROR - app_validation.py errors for i-05630f70c4f97ac63:
+
+2026-05-09 05:42:15,090 - 546714 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.126/192.168.161.126-AfterPatching-2026-05-09-05-42-15-090.log
+2026-05-09 05:42:15,144 - 546714 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.126/192.168.161.126-Validation-details-2026-05-09-05-42-15-090.html
+2026-05-09 05:42:15,718 - 546714 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-09 05:42:15,718 - 546714 - INFO - HTML validation report email sent for i-05630f70c4f97ac63
+2026-05-09 05:42:15,986 - 546714 - INFO - Started i-05630f70c4f97ac63 in 0:04:29.528244
+2026-05-09 05:42:15,987 - 546714 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-09 05:44:16,605 - 546714 - INFO - Sent app_validation.py to i-0795ae1a7b41de078 (command_id: 0060f40c-b44d-4c6a-9569-4862312b70ab)
+2026-05-09 05:44:46,749 - 546714 - INFO - app_validation.py output for i-0795ae1a7b41de078:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 09:44:16.984514
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.25
+Hostname | ip-192-168-161-25.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 78.5G | 161.4G | 32% | /data
+fs-85963b80.efs.us-west-2.amazonaws.com:/ | 0B | 49.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-85963b80.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://192.168.161.25:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.25 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1557042 | g3extprod | jboss720eap | g3ext_jb720eap | 8082 | 192.168.161.25:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3extprod/standalone
+1555776 | g3prod | jboss720eap | g3prod_jb720eap | 8080 | 192.168.161.25:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3prod/standalone
+1556419 | g3rfprod | jboss720eap | g3rfprod_jb720 | 8081 | 192.168.161.25:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3rfprod/standalone
+1557692 | g3wsprod | jboss720eap | g3wsprod_jb72 | 8083 | 192.168.161.25:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3wsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 09:44:17.544920
+==============================================================================
+
+2026-05-09 05:44:46,749 - 546714 - ERROR - app_validation.py errors for i-0795ae1a7b41de078:
+
+2026-05-09 05:44:46,751 - 546714 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.25/192.168.161.25-BeforePatching-2026-05-09-05-44-46-750.log
+2026-05-09 05:44:46,751 - 546714 - INFO - Deregistering i-0795ae1a7b41de078 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d
+2026-05-09 05:44:47,042 - 546714 - INFO - Deregistering i-0795ae1a7b41de078 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0
+2026-05-09 05:44:47,148 - 546714 - INFO - Deregistering i-0795ae1a7b41de078 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c
+2026-05-09 05:44:47,249 - 546714 - INFO - Deregistering i-0795ae1a7b41de078 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161
+2026-05-09 05:44:47,349 - 546714 - INFO - Stopping EC2 instance: i-0795ae1a7b41de078 at 2026-05-09 05:44:47
+2026-05-09 05:46:19,175 - 546714 - INFO - Instance i-0795ae1a7b41de078 stopped successfully.
+2026-05-09 05:46:19,436 - 546714 - INFO - Stopped i-0795ae1a7b41de078 in 0:01:32.087664
+2026-05-09 05:46:19,437 - 546714 - INFO - Starting EC2 instance: i-0795ae1a7b41de078
+2026-05-09 05:46:35,456 - 546714 - INFO - Instance i-0795ae1a7b41de078 started successfully.
+2026-05-09 05:46:35,456 - 546714 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0795ae1a7b41de078...
+2026-05-09 05:48:15,521 - 546714 - INFO - Registering i-0795ae1a7b41de078 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-External-Portal/799c23b37ead5c3d
+2026-05-09 05:48:15,898 - 546714 - INFO - Registering i-0795ae1a7b41de078 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-Desktop-App-ALB/9fa314bf1a03ebf0
+2026-05-09 05:48:16,082 - 546714 - INFO - Registering i-0795ae1a7b41de078 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-RF-App-ALB/d69d0a296b592b4c
+2026-05-09 05:48:16,255 - 546714 - INFO - Registering i-0795ae1a7b41de078 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-Prod-WES/ab5e702aedf8a161
+2026-05-09 05:50:17,876 - 546714 - INFO - Sent app_validation.py to i-0795ae1a7b41de078 (command_id: 8331be46-cc9d-4ff9-8931-97f942ce809b)
+2026-05-09 05:50:48,017 - 546714 - INFO - app_validation.py output for i-0795ae1a7b41de078:
+
+==============================================================================
+Server Availability Check Started | 2026-05-09 09:50:18.107614
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.25
+Hostname | ip-192-168-161-25.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 70.2G | 169.7G | 29% | /data
+fs-85963b80.efs.us-west-2.amazonaws.com:/ | 0B | 49.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-85963b80.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.25 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3155 | g3extprod | jboss720eap | g3ext_jb720eap | 8082 | 192.168.161.25:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3extprod/standalone
+3576 | g3prod | jboss720eap | g3prod_jb720eap | 8080 | 192.168.161.25:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3prod/standalone
+3587 | g3rfprod | jboss720eap | g3rfprod_jb720 | 8081 | 192.168.161.25:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3rfprod/standalone
+3583 | g3wsprod | jboss720eap | g3wsprod_jb72 | 8083 | 192.168.161.25:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/g3wsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-09 09:50:19.338626
+==============================================================================
+
+2026-05-09 05:50:48,017 - 546714 - ERROR - app_validation.py errors for i-0795ae1a7b41de078:
+
+2026-05-09 05:50:48,018 - 546714 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.25/192.168.161.25-AfterPatching-2026-05-09-05-50-48-018.log
+2026-05-09 05:50:48,070 - 546714 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-09/G3-Prod-App/192.168.161.25/192.168.161.25-Validation-details-2026-05-09-05-50-48-018.html
+2026-05-09 05:50:48,687 - 546714 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-09 05:50:48,687 - 546714 - INFO - HTML validation report email sent for i-0795ae1a7b41de078
+2026-05-09 05:50:48,942 - 546714 - INFO - Started i-0795ae1a7b41de078 in 0:04:29.504963
+2026-05-09 05:50:48,942 - 546714 - INFO - All instances processed.
+2026-05-09 05:50:48,946 - 546714 - INFO - Restart Total time: 0:15:11.144148
+2026-05-09 05:50:48,947 - 546714 - INFO - Auto-confirmed services are restarted
+2026-05-09 05:50:48,947 - 546714 - INFO - Confirmed - services are started
+2026-05-09 05:50:49,067 - 546714 - INFO - The following instances have failed the patch: []
+2026-05-09 05:50:49,068 - 546714 - INFO - No instances have failed the patch.
+2026-05-09 05:50:49,068 - 546714 - INFO - Total Patch Process time: 0:20:45.661187
+2026-05-09 05:51:49,546 - 546714 - INFO - Log file ./logs/patching_2026-05-09_G3-Prod-App.log uploaded to s3://q2-2026-aws-security-patching/G3-Prod-App_Patch/2026-05-09/patching_2026-05-09_G3-Prod-App.log

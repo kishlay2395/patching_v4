@@ -1,0 +1,1223 @@
+2026-07-19 03:50:02,392 - 375714 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-19 03:50:02,392 - 375714 - INFO - Script Start Time: 2026-07-19 03:50:02
+2026-07-19 03:50:02,798 - 375714 - INFO - Tag: BFA-Batch, IPs: ['172.30.140.138'], Environment: prod
+2026-07-19 03:50:02,798 - 375714 - INFO - Instance(s) selected for Patching: {'i-0a0f0aa129fe15e94': '172.30.140.138'}
+2026-07-19 03:50:02,862 - 375714 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 03:50:02,862 - 375714 - INFO - Now patching instances at: 2026-07-19 03:50:02
+2026-07-19 03:50:03,101 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: a35ac4c2-3a12-447e-ae34-71a2adf32db3)
+2026-07-19 03:50:33,190 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:50:03.416210
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 106.0G | 183.9G | 36% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | bfawesprod_sch, bfawesprod_bre, java, bfaprod_dwa, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_apisch, bfaprod_ffpp, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1, bfaprod_wcso2, bfaprod_3wcso, bfaprd_ou_4wcso, bfaprod_ptlo
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+java | /data/batchapp/softeon/Dbconn_health_check
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:50:04.227187
+==============================================================================
+
+2026-07-19 03:50:33,190 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 03:50:33,192 - 375714 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-BeforePatching-2026-07-19-03-50-33-191.log
+2026-07-19 03:50:38,454 - 375714 - INFO - i-0a0f0aa129fe15e94: Cron was active = True
+2026-07-19 03:50:38,698 - 375714 - INFO - Health monitor crontab disabled on all instances
+2026-07-19 03:50:38,699 - 375714 - INFO - Disabled cron for: ['i-0a0f0aa129fe15e94']
+2026-07-19 03:50:38,780 - 375714 - INFO - Sending patch command to instance i-0a0f0aa129fe15e94
+2026-07-19 03:50:38,928 - 375714 - INFO - Command sent successfully to instance i-0a0f0aa129fe15e94. Command ID: ac7b059c-0d17-4a7a-8029-99075af79c46
+2026-07-19 04:00:11,108 - 375714 - INFO - All patches applied successfully.
+2026-07-19 04:00:11,109 - 375714 - INFO - Patching end time: 2026-07-19 04:00:11
+2026-07-19 04:00:11,109 - 375714 - INFO - Patch Elapsed time: 0:10:08.247102
+2026-07-19 04:00:11,181 - 375714 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 04:00:11,181 - 375714 - INFO - Confirmed - services are stopped
+2026-07-19 04:00:18,287 - 375714 - INFO - Discovered TG map: {}
+2026-07-19 04:00:18,510 - 375714 - INFO - Stopping EC2 instance: i-0a0f0aa129fe15e94 at 2026-07-19 04:00:18
+2026-07-19 04:03:05,463 - 375714 - INFO - Instance i-0a0f0aa129fe15e94 stopped successfully.
+2026-07-19 04:03:05,613 - 375714 - INFO - Stopped i-0a0f0aa129fe15e94 in 0:02:47.103002
+2026-07-19 04:03:05,613 - 375714 - INFO - Starting EC2 instance: i-0a0f0aa129fe15e94
+2026-07-19 04:03:21,606 - 375714 - INFO - Instance i-0a0f0aa129fe15e94 started successfully.
+2026-07-19 04:03:21,606 - 375714 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a0f0aa129fe15e94...
+2026-07-19 04:05:01,912 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: ec662eb7-699a-4206-acde-90a51ea9f9c7)
+2026-07-19 04:05:31,982 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:05:02.218284
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso1, bfaprod_wcso2, bfaprod_3wcso, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:05:03.071649
+==============================================================================
+
+2026-07-19 04:05:31,982 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:05:31,984 - 375714 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-2026-07-19-04-05-31-984.log
+2026-07-19 04:05:32,036 - 375714 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-Validation-details-2026-07-19-04-05-31-984.html
+2026-07-19 04:05:32,206 - 375714 - INFO - Daemon count - Pre: 28, Post: 27
+2026-07-19 04:05:32,206 - 375714 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-19 04:05:32,206 - 375714 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-19 04:05:32,206 - 375714 - INFO - Background: restarting daemons on i-0a0f0aa129fe15e94
+2026-07-19 04:05:32,206 - 375714 - INFO - Background thread started for i-0a0f0aa129fe15e94 - daemon:True cups:False
+2026-07-19 04:05:32,458 - 375714 - INFO - Started i-0a0f0aa129fe15e94 in 0:02:26.845118
+2026-07-19 04:05:32,459 - 375714 - INFO - All instances processed.
+2026-07-19 04:05:32,462 - 375714 - INFO - Restart Total time: 0:05:21.144134
+2026-07-19 04:05:32,462 - 375714 - INFO - Auto-confirmed services are restarted
+2026-07-19 04:05:32,462 - 375714 - INFO - Confirmed - services are started
+2026-07-19 04:05:32,572 - 375714 - INFO - The following instances have failed the patch: []
+2026-07-19 04:05:32,573 - 375714 - INFO - No instances have failed the patch.
+2026-07-19 04:05:32,573 - 375714 - INFO - Total Patch Process time: 0:15:30.180425
+2026-07-19 04:06:02,611 - 375714 - INFO - Daemon restart output: /data/batchapp/softeon/bfaprod/startall-bfaprod-daemon.sh
+
+Current Batch  Application process already running with Process id: 2775
+
+
+Current Batch  Application process already running with Process id: 2983
+Current Batch  Application process already running with Process id: 2924
+
+Current Batch  Application process already running with Process id: 3052
+
+Current Batch  Application process already running with Process id: 3105
+
+Current Batch  Application process already running with Process id: 3155
+
+
+Starting replenishmentdaemon
+
+Current Batch  Application process already running with Process id: 3256
+
+Current Batch  Application process already running with Process id: 3313
+
+Current Batch  Application process already running with Process id: 3366
+
+Current Batch  Application process already running with Process id: 3423
+
+Current Batch  Application process already running with Process id: 3475
+
+Current Batch  Application process already running with Process id: 3529
+
+Current Batch  Application process already running with Process id: 3580
+
+Current Batch  Application process already running with Process id: 3631
+
+Current Batch  Application process already running with Process id: 3683
+
+Current Batch  Application process already running with Process id: 3738
+
+Current Batch  Application process already running with Process id: 3791
+
+Current Batch  Application process already running with Process id: 3842
+
+Current Batch  Application process already running with Process id: 3903
+
+Current Batch  Application process already running with Process id: 3958
+
+Current Batch  Application process already running with Process id: 4013
+
+Current Batch  Application process already running with Process id: 4065
+
+Current Batch  Application process already running with Process id: 4117
+
+Current Batch  Application process already running with Process id: 4170
+
+Current Batch  Application process already running with Process id: 4222
+/data/batchapp/softeon/bfawesprod/startall-bfawesprod-daemon.sh
+
+Current Batch  Application process already running with Process id: 2774
+
+Current Batch  Application process already running with Process id: 2916
+
+2026-07-19 04:06:02,612 - 375714 - INFO - Waiting 100 sec for daemons to start on i-0a0f0aa129fe15e94
+2026-07-19 04:06:32,881 - 375714 - INFO - Log file ./logs/patching_2026-07-19_BFA-Batch.log uploaded to s3://q3-2026-aws-security-patching/BFA-Batch_Patch/2026-07-19/patching_2026-07-19_BFA-Batch.log
+2026-07-19 04:07:42,651 - 375714 - INFO - CUPS no action needed for i-0a0f0aa129fe15e94 - before:running after:running version:1.7.5
+2026-07-19 04:07:42,981 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 88497ec7-7780-4fd1-bbcb-22ae70eb3905)
+2026-07-19 04:08:13,081 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:07:43.232771
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso1, bfaprod_wcso2, bfaprod_3wcso, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:07:43.806752
+==============================================================================
+
+2026-07-19 04:08:13,082 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:08:13,209 - 375714 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-19 04:08:13,209 - 375714 - INFO - RED re-validation mail sent for i-0a0f0aa129fe15e94
+2026-07-19 04:08:13,209 - 375714 - INFO - Still Red after restart - starting retry for i-0a0f0aa129fe15e94
+2026-07-19 04:08:13,209 - 375714 - INFO - [Retry-1] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:13:13,455 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 645482f4-c857-4981-93b1-f5e20a968cd9)
+2026-07-19 04:13:43,544 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:13:13.680401
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso1, bfaprod_wcso2, bfaprod_3wcso, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:13:14.247297
+==============================================================================
+
+2026-07-19 04:13:43,544 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:13:43,545 - 375714 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry1-2026-07-19-04-13-43-545.log
+2026-07-19 04:13:43,597 - 375714 - INFO - [Retry-1] RED for BFA Production Batch Server (172.30.140.138), retrying... (Total waited: 300s)
+2026-07-19 04:13:43,598 - 375714 - INFO - [Retry-2] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:18:43,922 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 1ac05880-4a0b-4ddc-971d-729bba81fdb4)
+2026-07-19 04:19:14,016 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:18:44.163933
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso2, bfaprod_3wcso, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:18:44.823822
+==============================================================================
+
+2026-07-19 04:19:14,016 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:19:14,017 - 375714 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry2-2026-07-19-04-19-14-017.log
+2026-07-19 04:19:14,070 - 375714 - INFO - [Retry-2] RED for BFA Production Batch Server (172.30.140.138), retrying... (Total waited: 600s)
+2026-07-19 04:19:14,070 - 375714 - INFO - [Retry-3] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:24:14,440 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 1f0173ff-33e5-4ee1-9bc9-1397a46a4488)
+2026-07-19 04:24:44,536 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:24:14.683793
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso2, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1, bfaprod_3wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:24:15.253748
+==============================================================================
+
+2026-07-19 04:24:44,536 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:24:44,538 - 375714 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry3-2026-07-19-04-24-44-537.log
+2026-07-19 04:24:44,589 - 375714 - INFO - [Retry-3] RED for BFA Production Batch Server (172.30.140.138), retrying... (Total waited: 900s)
+2026-07-19 04:24:44,590 - 375714 - INFO - [Retry-4] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:29:44,864 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 5ddc3867-a331-420c-aa0a-5a02d7c73e10)
+2026-07-19 04:30:14,931 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:29:45.092064
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso2, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1, bfaprod_3wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:29:45.768018
+==============================================================================
+
+2026-07-19 04:30:14,931 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:30:14,933 - 375714 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry4-2026-07-19-04-30-14-932.log
+2026-07-19 04:30:14,986 - 375714 - INFO - [Retry-4] RED for BFA Production Batch Server (172.30.140.138), retrying... (Total waited: 1200s)
+2026-07-19 04:30:14,986 - 375714 - INFO - [Retry-5] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:35:15,295 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: e815020e-3ced-4755-8e3b-82377599a422)
+2026-07-19 04:35:45,385 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:35:15.519293
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso2, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1, bfaprod_3wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:35:16.190824
+==============================================================================
+
+2026-07-19 04:35:45,385 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:35:45,387 - 375714 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry5-2026-07-19-04-35-45-387.log
+2026-07-19 04:35:45,441 - 375714 - INFO - [Retry-5] RED for BFA Production Batch Server (172.30.140.138), retrying... (Total waited: 1500s)
+2026-07-19 04:35:45,441 - 375714 - INFO - [Retry-6] Waiting 300s for i-0a0f0aa129fe15e94...
+2026-07-19 04:40:45,859 - 375714 - INFO - Sent app_validation.py to i-0a0f0aa129fe15e94 (command_id: 13998505-72d7-4f45-858c-4f947eca4262)
+2026-07-19 04:41:15,931 - 375714 - INFO - app_validation.py output for i-0a0f0aa129fe15e94:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:40:46.119039
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.138
+Hostname | ip-172-30-140-138.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 104.1G | 185.8G | 35% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.138:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 68
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | bfawesprod_sch, bfaprod_dwa, bfawesprod_bre, bfaprod_1dwa, bfaprod_event, bfaprod_ftp, bfaprod_harp, bfaprod_lbl, bfaprod_rccl, bfaprod_rpt, bfaprod_jqgrid, bfaprod_sch, bfaprod_inbq, bfaprod_wld, bfaprod_wcsi1, bfaprod_wcso2, bfaprod_mpcpt, bfaprod_lnp, bfaprod_ptli, bfaprod_ptlo, bfaprod_apisch, bfaprod_ffpp, bfaprd_ou_4wcso, bfaprd_in_2wcsi, bfaprod_allsch, bfaprod_wcso1, bfaprod_3wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+bfawesprod_sch | /data/batchapp/softeon/bfawesprod/schedulerdaemon
+bfaprod_dwa | /data/batchapp/softeon/bfaprod/downloaddaemon
+bfawesprod_bre | /data/batchapp/softeon/bfawesprod/bfa_breruledaemon
+bfaprod_1dwa | /data/batchapp/softeon/bfaprod/downloaddaemon1
+bfaprod_event | /data/batchapp/softeon/bfaprod/eventdaemon
+bfaprod_ftp | /data/batchapp/softeon/bfaprod/ftpdaemon
+bfaprod_harp | /data/batchapp/softeon/bfaprod/hardallocationdaemon
+bfaprod_lbl | /data/batchapp/softeon/bfaprod/labeldaemon
+bfaprod_rccl | /data/batchapp/softeon/bfaprod/replenishmentpickloccanceldaemon
+bfaprod_rpt | /data/batchapp/softeon/bfaprod/reportdaemon
+bfaprod_jqgrid | /data/batchapp/softeon/bfaprod/reportjqgridexportdaemon
+bfaprod_sch | /data/batchapp/softeon/bfaprod/schedulerdaemon
+bfaprod_inbq | /data/batchapp/softeon/bfaprod/uploaddaemon
+bfaprod_wld | /data/batchapp/softeon/bfaprod/wavelaunchdaemon
+bfaprod_wcsi1 | /data/batchapp/softeon/bfaprod/wcs01_inbounddaemon
+bfaprod_wcso2 | /data/batchapp/softeon/bfaprod/wcs02_outbounddaemon
+bfaprod_mpcpt | /data/batchapp/softeon/bfaprod/autopicktooldaemon
+bfaprod_lnp | /data/batchapp/softeon/bfaprod/linepickdaemon
+bfaprod_ptli | /data/batchapp/softeon/bfaprod/ptl_inbounddaemon
+bfaprod_ptlo | /data/batchapp/softeon/bfaprod/ptl_outbounddaemon
+bfaprod_apisch | /data/batchapp/softeon/bfaprod/apischedulerdaemon
+bfaprod_ffpp | /data/batchapp/softeon/bfaprod/fastfetchpickprocessordaemon
+bfaprd_ou_4wcso | /data/batchapp/softeon/bfaprod/wcs04_outbounddaemon
+bfaprd_in_2wcsi | /data/batchapp/softeon/bfaprod/wcs02_inbounddaemon
+bfaprod_allsch | /data/batchapp/softeon/bfaprod/allocationlabelschedulerdaemon
+bfaprod_wcso1 | /data/batchapp/softeon/bfaprod/wcs01_outbounddaemon
+bfaprod_3wcso | /data/batchapp/softeon/bfaprod/wcs03_outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:40:46.695832
+==============================================================================
+
+2026-07-19 04:41:15,932 - 375714 - ERROR - app_validation.py errors for i-0a0f0aa129fe15e94:
+
+2026-07-19 04:41:15,933 - 375714 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-19/BFA-Batch/172.30.140.138/172.30.140.138-AfterPatching-Retry6-2026-07-19-04-41-15-933.log
+2026-07-19 04:41:16,202 - 375714 - INFO - Health monitor crontab enabled on all instances
+2026-07-19 04:41:16,203 - 375714 - WARNING - [Retry] Timeout - auto cron enabled for i-0a0f0aa129fe15e94

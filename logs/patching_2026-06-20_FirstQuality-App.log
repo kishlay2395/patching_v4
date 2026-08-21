@@ -1,0 +1,234 @@
+2026-06-20 01:00:03,182 - 2967980 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-20 01:00:03,182 - 2967980 - INFO - Script Start Time: 2026-06-20 01:00:03
+2026-06-20 01:00:03,736 - 2967980 - INFO - Instance(s) selected for Patching: {'i-010f037cb731971d1': '10.50.28.4', 'i-0f9f6d121122d01e6': '10.50.28.47'}
+2026-06-20 01:00:03,856 - 2967980 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-20 01:00:03,857 - 2967980 - INFO - Now patching instances at: 2026-06-20 01:00:03
+2026-06-20 01:00:04,399 - 2967980 - INFO - Sent app_validation.py to i-0f9f6d121122d01e6 (command_id: 39c93f7b-8120-441d-8434-c64cbf431f84)
+2026-06-20 01:00:34,543 - 2967980 - INFO - app_validation.py output for i-0f9f6d121122d01e6:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:00:04.672802
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.47
+Hostname | ip-10-50-28-47
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 64.2G | 175.7G | 26% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 172.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://10.50.28.47:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.47 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3066452 | firstqprod | jboss800eap | firstqprd_jb8ep | 8080 | 10.50.28.47:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqprod/standalone
+3051930 | firstqrfprod | jboss800eap | frstqrfprd_jb8p | 8081 | 10.50.28.47:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqrfprod/standalone
+3040857 | firstqwsprod | jboss800eap | frstqwsprd_jb8p | 8082 | 10.50.28.47:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:00:05.341378
+==============================================================================
+
+2026-06-20 01:00:34,543 - 2967980 - ERROR - app_validation.py errors for i-0f9f6d121122d01e6:
+
+2026-06-20 01:00:34,545 - 2967980 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-20/FirstQuality-App/10.50.28.47/10.50.28.47-BeforePatching-2026-06-20-01-00-34-544.log
+2026-06-20 01:00:34,736 - 2967980 - INFO - Sent app_validation.py to i-010f037cb731971d1 (command_id: 139e1eb8-e491-4f33-9b95-f51d45239785)
+2026-06-20 01:01:04,794 - 2967980 - INFO - app_validation.py output for i-010f037cb731971d1:
+
+==============================================================================
+Server Availability Check Started | 2026-06-20 05:00:35.009113
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.28.4
+Hostname | ip-10-50-28-4
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 149.9G | 90.0G | 62% | /data
+fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | 0B | 172.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-05bbf36a28e4ca039.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://10.50.28.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.28.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1459580 | firstqprod | jboss800eap | firstqprd_jb8ep | 8080 | 10.50.28.4:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqprod/standalone
+1470062 | firstqrfprod | jboss800eap | frstqrfprd_jb8p | 8081 | 10.50.28.4:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqrfprod/standalone
+1468075 | firstqwsprod | jboss800eap | frstqwsprd_jb8p | 8082 | 10.50.28.4:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/firstqwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-20 05:00:35.433884
+==============================================================================
+
+2026-06-20 01:01:04,794 - 2967980 - ERROR - app_validation.py errors for i-010f037cb731971d1:
+
+2026-06-20 01:01:04,796 - 2967980 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-20/FirstQuality-App/10.50.28.4/10.50.28.4-BeforePatching-2026-06-20-01-01-04-795.log
+2026-06-20 01:01:04,943 - 2967980 - INFO - Sending patch command to instance i-0f9f6d121122d01e6
+2026-06-20 01:01:05,079 - 2967980 - INFO - Command sent successfully to instance i-0f9f6d121122d01e6. Command ID: 9fc8ca72-524f-4326-a484-f19d8816ce71
+2026-06-20 01:01:05,233 - 2967980 - INFO - Sending patch command to instance i-010f037cb731971d1
+2026-06-20 01:01:05,323 - 2967980 - INFO - Command sent successfully to instance i-010f037cb731971d1. Command ID: 24e8f35c-03d0-4ce2-ae88-608fdb827970
+2026-06-20 01:06:07,142 - 2967980 - INFO - All patches applied successfully.
+2026-06-20 01:06:07,143 - 2967980 - INFO - Patching end time: 2026-06-20 01:06:07
+2026-06-20 01:06:07,143 - 2967980 - INFO - Patch Elapsed time: 0:06:03.286408
+2026-06-20 01:06:07,208 - 2967980 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-20 01:06:07,209 - 2967980 - INFO - Confirmed - services are stopped
+2026-06-20 01:06:28,128 - 2967980 - INFO - Discovered TG map: {'i-010f037cb731971d1': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-Desktop-Ext/2d298a3b30e596f2', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-RF-Ext/7e68ab077c3b0d00', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-WS-Ext/a452efb3447d5e88', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-Desktop/37a4245c8f8dfc9e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-RF/e9ecc99cd0506733', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-WS/cadf3b4d3610b14b'], 'i-0f9f6d121122d01e6': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-Desktop-Ext/2d298a3b30e596f2', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-RF-Ext/7e68ab077c3b0d00', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-WS-Ext/a452efb3447d5e88', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-Desktop/37a4245c8f8dfc9e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-RF/e9ecc99cd0506733', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-WS/cadf3b4d3610b14b']}
+2026-06-20 01:06:28,374 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-Desktop-Ext/2d298a3b30e596f2
+2026-06-20 01:06:28,445 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-RF-Ext/7e68ab077c3b0d00
+2026-06-20 01:06:28,497 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-WS-Ext/a452efb3447d5e88
+2026-06-20 01:06:28,546 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-Desktop/37a4245c8f8dfc9e
+2026-06-20 01:06:28,595 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-RF/e9ecc99cd0506733
+2026-06-20 01:06:28,647 - 2967980 - INFO - Deregistering i-0f9f6d121122d01e6 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-WS/cadf3b4d3610b14b
+2026-06-20 01:06:28,691 - 2967980 - INFO - Stopping EC2 instance: i-0f9f6d121122d01e6 at 2026-06-20 01:06:28
+2026-06-20 01:08:14,935 - 2967980 - INFO - Instance i-0f9f6d121122d01e6 stopped successfully.
+2026-06-20 01:08:15,194 - 2967980 - INFO - Stopped i-0f9f6d121122d01e6 in 0:01:46.503146
+2026-06-20 01:08:15,195 - 2967980 - INFO - Starting EC2 instance: i-0f9f6d121122d01e6
+2026-06-20 01:08:31,054 - 2967980 - INFO - Instance i-0f9f6d121122d01e6 started successfully.
+2026-06-20 01:08:31,054 - 2967980 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f9f6d121122d01e6...
+2026-06-20 01:10:11,066 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-Desktop-Ext/2d298a3b30e596f2
+2026-06-20 01:10:11,223 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-RF-Ext/7e68ab077c3b0d00
+2026-06-20 01:10:11,397 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-WS-Ext/a452efb3447d5e88
+2026-06-20 01:10:11,526 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-Desktop/37a4245c8f8dfc9e
+2026-06-20 01:10:11,659 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-RF/e9ecc99cd0506733
+2026-06-20 01:10:11,803 - 2967980 - INFO - Registering i-0f9f6d121122d01e6 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-WS/cadf3b4d3610b14b
+2026-06-20 01:15:12,561 - 2967980 - WARNING - i-0f9f6d121122d01e6 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-Desktop-Ext/2d298a3b30e596f2 after timeout.
+2026-06-20 01:20:13,151 - 2967980 - WARNING - i-0f9f6d121122d01e6 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Prod-RF-Ext/7e68ab077c3b0d00 after timeout.
+2026-06-20 01:25:13,861 - 2967980 - WARNING - i-0f9f6d121122d01e6 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-Desktop/37a4245c8f8dfc9e after timeout.
+2026-06-20 01:30:14,548 - 2967980 - WARNING - i-0f9f6d121122d01e6 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FirstQuality-Production-RF/e9ecc99cd0506733 after timeout.
+2026-06-20 01:30:14,866 - 2967980 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-20 01:30:14,866 - 2967980 - ERROR - Aborting workflow: i-0f9f6d121122d01e6 is not healthy after restart.
+2026-06-20 01:30:14,869 - 2967980 - INFO - Restart Total time: 0:24:07.530284
+2026-06-20 01:30:14,869 - 2967980 - INFO - Auto-confirmed services are restarted
+2026-06-20 01:30:14,869 - 2967980 - INFO - Confirmed - services are started
+2026-06-20 01:30:15,001 - 2967980 - INFO - The following instances have failed the patch: []
+2026-06-20 01:30:15,001 - 2967980 - INFO - No instances have failed the patch.
+2026-06-20 01:30:15,001 - 2967980 - INFO - Total Patch Process time: 0:30:11.818520
+2026-06-20 01:31:15,456 - 2967980 - INFO - Log file ./logs/patching_2026-06-20_FirstQuality-App.log uploaded to s3://q2-2026-aws-security-patching/FirstQuality-App_Patch/2026-06-20/patching_2026-06-20_FirstQuality-App.log

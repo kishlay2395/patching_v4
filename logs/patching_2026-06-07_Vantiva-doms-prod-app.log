@@ -1,0 +1,436 @@
+2026-06-07 02:10:02,946 - 2275646 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-07 02:10:02,946 - 2275646 - INFO - Script Start Time: 2026-06-07 02:10:02
+2026-06-07 02:10:03,248 - 2275646 - INFO - Instance(s) selected for Patching: {'i-0037193f2fcf5f484': '10.154.0.199', 'i-06032ca5cf7091843': '10.154.0.229'}
+2026-06-07 02:10:03,326 - 2275646 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:10:03,327 - 2275646 - INFO - Now patching instances at: 2026-06-07 02:10:03
+2026-06-07 02:10:03,516 - 2275646 - INFO - Sent app_validation.py to i-0037193f2fcf5f484 (command_id: b6f8d5c4-5792-4ff3-be2c-74ffe3c2906d)
+2026-06-07 02:10:33,628 - 2275646 - INFO - app_validation.py output for i-0037193f2fcf5f484:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:10:03.863719
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.199
+Hostname | ip-10-154-0-199
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 91.2G | 148.7G | 38% | /data
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.199:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.199 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1090376 | vantivadomsprod | jboss730eap | vandomsprd_jb73 | 8080 | 10.154.0.199:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/vantivadomsprod/standalone
+1090991 | vantivadomswsprod | jboss730eap | domswsprd_jb73 | 8081 | 10.154.0.199:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/vantivadomswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:10:04.362066
+==============================================================================
+
+2026-06-07 02:10:33,628 - 2275646 - ERROR - app_validation.py errors for i-0037193f2fcf5f484:
+
+2026-06-07 02:10:33,630 - 2275646 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.199/10.154.0.199-BeforePatching-2026-06-07-02-10-33-630.log
+2026-06-07 02:10:33,821 - 2275646 - INFO - Sent app_validation.py to i-06032ca5cf7091843 (command_id: eb33eb1b-2607-4d02-9894-5f37e8a4d2a6)
+2026-06-07 02:11:03,904 - 2275646 - INFO - app_validation.py output for i-06032ca5cf7091843:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:10:34.187680
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.229
+Hostname | ip-10-154-0-229
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 123.8G | 116.1G | 51% | /data
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.229:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.229 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+243418 | vantivadomsprod | jboss730eap | vandomsprd_jb73 | 8080 | 10.154.0.229:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/vantivadomsprod/standalone
+244298 | vantivadomswsprod | jboss730eap | domswsprd_jb73 | 8081 | 10.154.0.229:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/vantivadomswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:10:34.611342
+==============================================================================
+
+2026-06-07 02:11:03,904 - 2275646 - ERROR - app_validation.py errors for i-06032ca5cf7091843:
+
+2026-06-07 02:11:03,906 - 2275646 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.229/10.154.0.229-BeforePatching-2026-06-07-02-11-03-906.log
+2026-06-07 02:11:04,064 - 2275646 - INFO - Sending patch command to instance i-0037193f2fcf5f484
+2026-06-07 02:11:04,202 - 2275646 - INFO - Command sent successfully to instance i-0037193f2fcf5f484. Command ID: fc6071d4-8676-42cb-a9d3-93404b3755b0
+2026-06-07 02:11:04,347 - 2275646 - INFO - Sending patch command to instance i-06032ca5cf7091843
+2026-06-07 02:11:04,435 - 2275646 - INFO - Command sent successfully to instance i-06032ca5cf7091843. Command ID: ecfcbc93-4e32-419d-a1a8-488afe984453
+2026-06-07 02:19:37,393 - 2275646 - INFO - All patches applied successfully.
+2026-06-07 02:19:37,393 - 2275646 - INFO - Patching end time: 2026-06-07 02:19:37
+2026-06-07 02:19:37,393 - 2275646 - INFO - Patch Elapsed time: 0:09:34.066849
+2026-06-07 02:19:37,468 - 2275646 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:19:37,469 - 2275646 - INFO - Confirmed - services are stopped
+2026-06-07 02:19:57,630 - 2275646 - INFO - Discovered TG map: {'i-0037193f2fcf5f484': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18'], 'i-06032ca5cf7091843': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18']}
+2026-06-07 02:19:57,869 - 2275646 - INFO - Deregistering i-0037193f2fcf5f484 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083
+2026-06-07 02:19:57,947 - 2275646 - INFO - Deregistering i-0037193f2fcf5f484 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40
+2026-06-07 02:19:57,995 - 2275646 - INFO - Deregistering i-0037193f2fcf5f484 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18
+2026-06-07 02:19:58,038 - 2275646 - INFO - Stopping EC2 instance: i-0037193f2fcf5f484 at 2026-06-07 02:19:58
+2026-06-07 02:21:29,296 - 2275646 - INFO - Instance i-0037193f2fcf5f484 stopped successfully.
+2026-06-07 02:21:29,543 - 2275646 - INFO - Stopped i-0037193f2fcf5f484 in 0:01:31.505144
+2026-06-07 02:21:29,544 - 2275646 - INFO - Starting EC2 instance: i-0037193f2fcf5f484
+2026-06-07 02:21:45,472 - 2275646 - INFO - Instance i-0037193f2fcf5f484 started successfully.
+2026-06-07 02:21:45,472 - 2275646 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0037193f2fcf5f484...
+2026-06-07 02:23:25,521 - 2275646 - INFO - Registering i-0037193f2fcf5f484 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083
+2026-06-07 02:23:25,693 - 2275646 - INFO - Registering i-0037193f2fcf5f484 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40
+2026-06-07 02:23:25,819 - 2275646 - INFO - Registering i-0037193f2fcf5f484 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18
+2026-06-07 02:23:56,300 - 2275646 - INFO - Sent app_validation.py to i-0037193f2fcf5f484 (command_id: 39a099c8-f258-4830-8030-766628e21277)
+2026-06-07 02:24:26,422 - 2275646 - INFO - app_validation.py output for i-0037193f2fcf5f484:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:23:56.637823
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.199
+Hostname | ip-10-154-0-199
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 91.1G | 148.8G | 37% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.199:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.199 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3634 | vantivadomsprod | jboss730eap | vandomsprd_jb73 | 8080 | 10.154.0.199:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/vantivadomsprod/standalone
+3358 | vantivadomswsprod | jboss730eap | domswsprd_jb73 | 8081 | 10.154.0.199:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/vantivadomswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:23:57.843719
+==============================================================================
+
+2026-06-07 02:24:26,422 - 2275646 - ERROR - app_validation.py errors for i-0037193f2fcf5f484:
+
+2026-06-07 02:24:26,424 - 2275646 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.199/10.154.0.199-AfterPatching-2026-06-07-02-24-26-423.log
+2026-06-07 02:24:26,475 - 2275646 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.199/10.154.0.199-Validation-details-2026-06-07-02-24-26-423.html
+2026-06-07 02:24:26,726 - 2275646 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:24:26,727 - 2275646 - INFO - HTML validation report email sent for i-0037193f2fcf5f484
+2026-06-07 02:24:26,987 - 2275646 - INFO - Started i-0037193f2fcf5f484 in 0:02:57.443214
+2026-06-07 02:24:26,988 - 2275646 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-06-07 02:26:27,043 - 2275646 - INFO - Deregistering i-06032ca5cf7091843 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083
+2026-06-07 02:26:27,117 - 2275646 - INFO - Deregistering i-06032ca5cf7091843 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40
+2026-06-07 02:26:27,157 - 2275646 - INFO - Deregistering i-06032ca5cf7091843 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18
+2026-06-07 02:26:27,213 - 2275646 - INFO - Stopping EC2 instance: i-06032ca5cf7091843 at 2026-06-07 02:26:27
+2026-06-07 02:27:58,310 - 2275646 - INFO - Instance i-06032ca5cf7091843 stopped successfully.
+2026-06-07 02:27:58,598 - 2275646 - INFO - Stopped i-06032ca5cf7091843 in 0:01:31.385585
+2026-06-07 02:27:58,599 - 2275646 - INFO - Starting EC2 instance: i-06032ca5cf7091843
+2026-06-07 02:28:14,427 - 2275646 - INFO - Instance i-06032ca5cf7091843 started successfully.
+2026-06-07 02:28:14,427 - 2275646 - INFO - Waiting 100 seconds for SSM agent to be ready on i-06032ca5cf7091843...
+2026-06-07 02:29:54,481 - 2275646 - INFO - Registering i-06032ca5cf7091843 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-DOMS-Production-Portal/56aeb6455f5b5083
+2026-06-07 02:29:54,643 - 2275646 - INFO - Registering i-06032ca5cf7091843 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-Desktop/f919733ed6787d40
+2026-06-07 02:29:54,767 - 2275646 - INFO - Registering i-06032ca5cf7091843 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-DOMS-Production-WS/c1c3e0666426cf18
+2026-06-07 02:30:25,317 - 2275646 - INFO - Sent app_validation.py to i-06032ca5cf7091843 (command_id: b11751fe-48dd-4bed-9f47-85ef92bcd141)
+2026-06-07 02:30:55,428 - 2275646 - INFO - app_validation.py output for i-06032ca5cf7091843:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 06:30:25.662778
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.229
+Hostname | ip-10-154-0-229
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 123.9G | 116.0G | 51% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 201.3G | 0B | 0% | /data4
+fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | 0B | 14.4T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-01290a7ce6c8beb52.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.229:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.229 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3662 | vantivadomsprod | jboss730eap | vandomsprd_jb73 | 8080 | 10.154.0.229:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/vantivadomsprod/standalone
+3387 | vantivadomswsprod | jboss730eap | domswsprd_jb73 | 8081 | 10.154.0.229:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/vantivadomswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 06:30:26.025696
+==============================================================================
+
+2026-06-07 02:30:55,428 - 2275646 - ERROR - app_validation.py errors for i-06032ca5cf7091843:
+
+2026-06-07 02:30:55,429 - 2275646 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.229/10.154.0.229-AfterPatching-2026-06-07-02-30-55-429.log
+2026-06-07 02:30:55,480 - 2275646 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-07/Vantiva-doms-prod-app/10.154.0.229/10.154.0.229-Validation-details-2026-06-07-02-30-55-429.html
+2026-06-07 02:30:55,728 - 2275646 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 02:30:55,728 - 2275646 - INFO - HTML validation report email sent for i-06032ca5cf7091843
+2026-06-07 02:30:55,982 - 2275646 - INFO - Started i-06032ca5cf7091843 in 0:02:57.383351
+2026-06-07 02:30:55,983 - 2275646 - INFO - All instances processed.
+2026-06-07 02:30:55,988 - 2275646 - INFO - Restart Total time: 0:11:18.387382
+2026-06-07 02:30:55,988 - 2275646 - INFO - Auto-confirmed services are restarted
+2026-06-07 02:30:55,988 - 2275646 - INFO - Confirmed - services are started
+2026-06-07 02:30:56,113 - 2275646 - INFO - The following instances have failed the patch: []
+2026-06-07 02:30:56,114 - 2275646 - INFO - No instances have failed the patch.
+2026-06-07 02:30:56,114 - 2275646 - INFO - Total Patch Process time: 0:20:53.167621
+2026-06-07 02:31:56,766 - 2275646 - INFO - Log file ./logs/patching_2026-06-07_Vantiva-doms-prod-app.log uploaded to s3://q2-2026-aws-security-patching/Vantiva-doms-prod-app_Patch/2026-06-07/patching_2026-06-07_Vantiva-doms-prod-app.log

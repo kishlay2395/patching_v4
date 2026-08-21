@@ -1,0 +1,479 @@
+2026-04-20 19:30:04,122 - 980026 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-20 19:38:28,561 - 980026 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-20 19:38:28,745 - 980026 - INFO - Log file ./logs/backup_2026-04-20.log uploaded to s3://q3-2025-aws-security-patching/UPSHC-HAB-UAT_Patch_Backup/2026-04-20/backup_2026-04-20.log
+2026-04-20 23:30:03,534 - 988649 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-20 23:30:03,534 - 988649 - INFO - Script Start Time: 2026-04-20 23:30:03
+2026-04-20 23:30:04,025 - 988649 - INFO - Instance(s) selected for Patching: {'i-03878907b98ea0469': '172.28.25.29', 'i-0e87970bfe3028a6d': '172.28.25.59'}
+2026-04-20 23:30:04,112 - 988649 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-20 23:30:04,112 - 988649 - INFO - Now patching instances at: 2026-04-20 23:30:04
+2026-04-20 23:30:04,197 - 988649 - INFO - Sending patch command to instance i-03878907b98ea0469
+2026-04-20 23:30:04,344 - 988649 - INFO - Command sent successfully to instance i-03878907b98ea0469. Command ID: 7f61aab3-1c3b-496e-992a-e2240776a33e
+2026-04-20 23:30:04,543 - 988649 - INFO - Sending patch command to instance i-0e87970bfe3028a6d
+2026-04-20 23:30:04,663 - 988649 - INFO - Command sent successfully to instance i-0e87970bfe3028a6d. Command ID: 55ff4934-0cfb-4013-a6de-1ad06d05b612
+2026-04-20 23:40:07,121 - 988649 - INFO - All patches applied successfully.
+2026-04-20 23:40:07,122 - 988649 - INFO - Patching end time: 2026-04-20 23:40:07
+2026-04-20 23:40:07,122 - 988649 - INFO - Patch Elapsed time: 0:10:03.009991
+2026-04-20 23:40:07,194 - 988649 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-20 23:40:07,194 - 988649 - INFO - Confirmed - services are stopped
+2026-04-20 23:40:26,402 - 988649 - INFO - Discovered TG map: {'i-0e87970bfe3028a6d': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9'], 'i-03878907b98ea0469': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9']}
+2026-04-20 23:40:26,814 - 988649 - INFO - Sent app_validation.py to i-03878907b98ea0469 (command_id: baaa0326-1a5a-4c51-946d-d95bfbaf2a8f)
+2026-04-20 23:40:56,947 - 988649 - INFO - app_validation.py output for i-03878907b98ea0469:
+
+==============================================================================
+Server Availability Check Started | 2026-04-21 03:40:27.213187
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.29
+Hostname | ip-172-28-25-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 53.9G | 186.0G | 22% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 129.7G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 129.7G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | upshab_bre, upshab_1ccd, upshab_2ccd, upshab_dwa, upshab_event, upshab_ftp, upshab_harp, upshab_rpt, upshab_jqgrid, upshab_tiad, upshab_wsq, upshab_1wld, upshab_2wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+upshab_bre | /data/batchapp/softeon/upshchabuat/breruleenginedaemon
+upshab_1ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon1
+upshab_2ccd | /data/batchapp/softeon/upshchabuat/clustercreationdaemon2
+upshab_dwa | /data/batchapp/softeon/upshchabuat/downloaddaemon
+upshab_event | /data/batchapp/softeon/upshchabuat/eventdaemon
+upshab_ftp | /data/batchapp/softeon/upshchabuat/ftpdaemon
+upshab_harp | /data/batchapp/softeon/upshchabuat/hardallocationdaemon
+upshab_rpt | /data/batchapp/softeon/upshchabuat/reportdaemon
+upshab_jqgrid | /data/batchapp/softeon/upshchabuat/reportjqgridexportdaemon
+upshab_tiad | /data/batchapp/softeon/upshchabuat/taskinvallocationdaemon
+upshab_wsq | /data/batchapp/softeon/upshchabuat/wsqdaemon
+upshab_1wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon1
+upshab_2wld | /data/batchapp/softeon/upshchabuat/wavelaunchdaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+454117 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.29:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+453190 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.29:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+7005 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.29:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-21 03:40:28.535052
+==============================================================================
+
+2026-04-20 23:40:56,947 - 988649 - ERROR - app_validation.py errors for i-03878907b98ea0469:
+
+2026-04-20 23:40:56,948 - 988649 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-BeforePatching-2026-04-20-23-40-56-948.log
+2026-04-20 23:40:56,948 - 988649 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-04-20 23:40:57,019 - 988649 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-04-20 23:40:57,067 - 988649 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-04-20 23:40:57,112 - 988649 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-04-20 23:40:57,156 - 988649 - INFO - Deregistering i-03878907b98ea0469 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-04-20 23:40:57,211 - 988649 - INFO - Stopping EC2 instance: i-03878907b98ea0469 at 2026-04-20 23:40:57
+2026-04-20 23:42:13,513 - 988649 - INFO - Instance i-03878907b98ea0469 stopped successfully.
+2026-04-20 23:42:13,811 - 988649 - INFO - Stopped i-03878907b98ea0469 in 0:01:16.599760
+2026-04-20 23:42:13,812 - 988649 - INFO - Starting EC2 instance: i-03878907b98ea0469
+2026-04-20 23:42:29,762 - 988649 - INFO - Instance i-03878907b98ea0469 started successfully.
+2026-04-20 23:42:29,763 - 988649 - INFO - Waiting 50 seconds for SSM agent to be ready on i-03878907b98ea0469...
+2026-04-20 23:43:19,806 - 988649 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-04-20 23:43:19,986 - 988649 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-04-20 23:43:20,128 - 988649 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-04-20 23:43:20,265 - 988649 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-04-20 23:43:20,406 - 988649 - INFO - Registering i-03878907b98ea0469 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-04-20 23:46:21,315 - 988649 - INFO - Sent app_validation.py to i-03878907b98ea0469 (command_id: 1ae9a578-b2df-47c1-80c2-fdc7f6a489ff)
+2026-04-20 23:46:51,404 - 988649 - INFO - app_validation.py output for i-03878907b98ea0469:
+
+==============================================================================
+Server Availability Check Started | 2026-04-21 03:46:21.600828
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.29
+Hostname | ip-172-28-25-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 53.8G | 186.1G | 22% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 129.7G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 129.7G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4109 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.29:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4274 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.29:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3875 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.29:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-21 03:46:22.938332
+==============================================================================
+
+2026-04-20 23:46:51,404 - 988649 - ERROR - app_validation.py errors for i-03878907b98ea0469:
+
+2026-04-20 23:46:51,406 - 988649 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-AfterPatching-2026-04-20-23-46-51-406.log
+2026-04-20 23:46:51,457 - 988649 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.29/172.28.25.29-Validation-details-2026-04-20-23-46-51-406.html
+2026-04-20 23:46:51,563 - 988649 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-20 23:46:51,563 - 988649 - INFO - HTML validation report email sent for i-03878907b98ea0469
+2026-04-20 23:46:51,810 - 988649 - INFO - Started i-03878907b98ea0469 in 0:04:37.998362
+2026-04-20 23:46:51,811 - 988649 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-20 23:48:52,013 - 988649 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: f181525c-b1a9-4c2e-90cb-77ebe68fb21e)
+2026-04-20 23:49:22,124 - 988649 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-04-21 03:48:52.397079
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 37.8G | 202.0G | 15% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 129.7G | 0B | 0% | /data2/shared/softeon/upshchab
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 129.7G | 0B | 0% | /data2/logarchivepurge
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.25.59:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_sch, upshab_ialloc, upshab_inbq, upshab_1inbq, upshab_2inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+upshab_ict | /data/batchapp/softeon/upshchabuat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabuat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabuat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabuat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabuat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabuat/replenishmentpickloccanceldaemon
+upshab_sch | /data/batchapp/softeon/upshchabuat/schedulerdaemon
+upshab_ialloc | /data/batchapp/softeon/upshchabuat/uploadallocationdaemon
+upshab_inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabuat/uploaddaemon2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1367393 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+1368422 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+705902 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-21 03:48:53.234344
+==============================================================================
+
+2026-04-20 23:49:22,124 - 988649 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-04-20 23:49:22,126 - 988649 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-BeforePatching-2026-04-20-23-49-22-125.log
+2026-04-20 23:49:22,126 - 988649 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-04-20 23:49:22,199 - 988649 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-04-20 23:49:22,247 - 988649 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-04-20 23:49:22,294 - 988649 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-04-20 23:49:22,349 - 988649 - INFO - Deregistering i-0e87970bfe3028a6d from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-04-20 23:49:22,400 - 988649 - INFO - Stopping EC2 instance: i-0e87970bfe3028a6d at 2026-04-20 23:49:22
+2026-04-20 23:50:38,681 - 988649 - INFO - Instance i-0e87970bfe3028a6d stopped successfully.
+2026-04-20 23:50:38,925 - 988649 - INFO - Stopped i-0e87970bfe3028a6d in 0:01:16.524769
+2026-04-20 23:50:38,925 - 988649 - INFO - Starting EC2 instance: i-0e87970bfe3028a6d
+2026-04-20 23:50:54,799 - 988649 - INFO - Instance i-0e87970bfe3028a6d started successfully.
+2026-04-20 23:50:54,799 - 988649 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0e87970bfe3028a6d...
+2026-04-20 23:51:44,846 - 988649 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-Desktop/68cdfc7435a7dc05
+2026-04-20 23:51:45,059 - 988649 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WES/9077d0219445fdbc
+2026-04-20 23:51:45,199 - 988649 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS-Ext/623b6c63f3e0fec8
+2026-04-20 23:51:45,345 - 988649 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-RF/e3aca03a4e0d0579
+2026-04-20 23:51:45,488 - 988649 - INFO - Registering i-0e87970bfe3028a6d to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-UAT-WS/c85f5757e9a6fef9
+2026-04-20 23:54:46,439 - 988649 - INFO - Sent app_validation.py to i-0e87970bfe3028a6d (command_id: 05f33c4b-f3e8-408c-9366-db26b87a35d1)
+2026-04-20 23:55:16,530 - 988649 - INFO - app_validation.py output for i-0e87970bfe3028a6d:
+
+==============================================================================
+Server Availability Check Started | 2026-04-21 03:54:46.783120
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.59
+Hostname | ip-172-28-25-59
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 37.8G | 202.1G | 15% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | 0B | 129.7G | 0B | 0% | /data2/logarchivepurge
+fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | 0B | 129.7G | 0B | 0% | /data2/shared/softeon/upshchab
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/logarchivepurge | /data2/logarchivepurge | nfs4
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/shared/softeon/upshchab | /data2/shared/softeon/upshchab | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.59 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4087 | upshchabrfuat | jboss730eap | hchabrf_jb73eap | 8081 | 172.28.25.59:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfuat/standalone
+4261 | upshchabuat | jboss730eap | hchab_jb730eap | 8080 | 172.28.25.59:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabuat/standalone
+3881 | upshchabwesuat | jboss730eap | hchabwes_jb73ap | 8082 | 172.28.25.59:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-21 03:54:48.867408
+==============================================================================
+
+2026-04-20 23:55:16,531 - 988649 - ERROR - app_validation.py errors for i-0e87970bfe3028a6d:
+
+2026-04-20 23:55:16,532 - 988649 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-AfterPatching-2026-04-20-23-55-16-532.log
+2026-04-20 23:55:16,584 - 988649 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-20/UPSHC-HAB-UAT/172.28.25.59/172.28.25.59-Validation-details-2026-04-20-23-55-16-532.html
+2026-04-20 23:55:16,663 - 988649 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-20 23:55:16,663 - 988649 - INFO - HTML validation report email sent for i-0e87970bfe3028a6d
+2026-04-20 23:55:16,930 - 988649 - INFO - Started i-0e87970bfe3028a6d in 0:04:38.004728
+2026-04-20 23:55:16,931 - 988649 - INFO - All instances processed.
+2026-04-20 23:55:16,934 - 988649 - INFO - Restart Total time: 0:15:09.551830
+2026-04-20 23:55:16,935 - 988649 - INFO - Auto-confirmed services are restarted
+2026-04-20 23:55:16,935 - 988649 - INFO - Confirmed - services are started
+2026-04-20 23:55:17,052 - 988649 - INFO - The following instances have failed the patch: []
+2026-04-20 23:55:17,052 - 988649 - INFO - No instances have failed the patch.
+2026-04-20 23:55:17,053 - 988649 - INFO - Total Patch Process time: 0:25:13.517588
+2026-04-20 23:56:17,529 - 988649 - INFO - Log file ./logs/patching_2026-04-20_UPSHC-HAB-UAT.log uploaded to s3://q2-2026-aws-security-patching/UPSHC-HAB-UAT_Patch/2026-04-20/patching_2026-04-20_UPSHC-HAB-UAT.log

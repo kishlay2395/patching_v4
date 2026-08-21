@@ -1,0 +1,243 @@
+2026-06-07 00:15:02,170 - 2270861 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-07 00:15:02,171 - 2270861 - INFO - Script Start Time: 2026-06-07 00:15:02
+2026-06-07 00:15:02,703 - 2270861 - INFO - Instance(s) selected for Patching: {'i-0b445092eb5e1234b': '172.30.150.22', 'i-078901db286cc7137': '172.30.150.47'}
+2026-06-07 00:15:02,786 - 2270861 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 00:15:02,786 - 2270861 - INFO - Now patching instances at: 2026-06-07 00:15:02
+2026-06-07 00:15:03,210 - 2270861 - INFO - Sent app_validation.py to i-0b445092eb5e1234b (command_id: 813e13e4-87f0-4318-a962-35935f046e83)
+2026-06-07 00:15:33,288 - 2270861 - INFO - app_validation.py output for i-0b445092eb5e1234b:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 04:15:03.550201
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.150.22
+Hostname | ip-172-30-150-22.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 34.9G | 205.0G | 14% | /data
+fs-0c2f0550c6d1249bb.efs.us-east-2.amazonaws.com:/ | 0B | 156.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c2f0550c6d1249bb.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.30.150.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 152
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.150.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1720779 | jasprod | jboss800eap | jasprod_jb800 | 8080 | 172.30.150.22:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jasprod/standalone
+1718097 | jasrfprod | jboss800eap | jasrfprod_jb8 | 8081 | 172.30.150.22:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jasrfprod/standalone
+1712026 | jaswsprod | jboss800eap | jaswsprod_jb800 | 8082 | 172.30.150.22:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jaswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 04:15:04.268992
+==============================================================================
+
+2026-06-07 00:15:33,288 - 2270861 - ERROR - app_validation.py errors for i-0b445092eb5e1234b:
+
+2026-06-07 00:15:33,290 - 2270861 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/jas-prod-252-app/172.30.150.22/172.30.150.22-BeforePatching-2026-06-07-00-15-33-289.log
+2026-06-07 00:15:33,533 - 2270861 - INFO - Sent app_validation.py to i-078901db286cc7137 (command_id: 2c4b2d5d-128e-408d-bdb3-023a402f5501)
+2026-06-07 00:16:03,645 - 2270861 - INFO - app_validation.py output for i-078901db286cc7137:
+
+==============================================================================
+Server Availability Check Started | 2026-06-07 04:15:33.895834
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.150.47
+Hostname | ip-172-30-150-47.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.6G | 206.2G | 14% | /data
+fs-0c2f0550c6d1249bb.efs.us-east-2.amazonaws.com:/ | 0B | 156.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c2f0550c6d1249bb.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.30.150.47:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 150
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.150.47 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1552930 | jasprod | jboss800eap | jasprod_jb800 | 8080 | 172.30.150.47:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jasprod/standalone
+1554679 | jasrfprod | jboss800eap | jasrfprod_jb8 | 8081 | 172.30.150.47:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jasrfprod/standalone
+1544364 | jaswsprod | jboss800eap | jaswsprod_jb800 | 8082 | 172.30.150.47:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/jaswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-07 04:15:34.611145
+==============================================================================
+
+2026-06-07 00:16:03,646 - 2270861 - ERROR - app_validation.py errors for i-078901db286cc7137:
+
+2026-06-07 00:16:03,647 - 2270861 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-07/jas-prod-252-app/172.30.150.47/172.30.150.47-BeforePatching-2026-06-07-00-16-03-647.log
+2026-06-07 00:16:03,800 - 2270861 - INFO - Sending patch command to instance i-0b445092eb5e1234b
+2026-06-07 00:16:03,961 - 2270861 - INFO - Command sent successfully to instance i-0b445092eb5e1234b. Command ID: f6dc076b-de35-4759-8e16-d3677c97ed14
+2026-06-07 00:16:04,113 - 2270861 - INFO - Sending patch command to instance i-078901db286cc7137
+2026-06-07 00:16:04,221 - 2270861 - INFO - Command sent successfully to instance i-078901db286cc7137. Command ID: 7bf54258-5f2e-46da-9442-22cedc16bc6f
+2026-06-07 00:21:06,059 - 2270861 - INFO - All patches applied successfully.
+2026-06-07 00:21:06,060 - 2270861 - INFO - Patching end time: 2026-06-07 00:21:06
+2026-06-07 00:21:06,060 - 2270861 - INFO - Patch Elapsed time: 0:06:03.273482
+2026-06-07 00:21:06,137 - 2270861 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 00:21:06,137 - 2270861 - INFO - Confirmed - services are stopped
+2026-06-07 00:21:13,089 - 2270861 - INFO - Discovered TG map: {'i-078901db286cc7137': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be'], 'i-0b445092eb5e1234b': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be']}
+2026-06-07 00:21:13,264 - 2270861 - INFO - Deregistering i-0b445092eb5e1234b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7
+2026-06-07 00:21:13,387 - 2270861 - INFO - Deregistering i-0b445092eb5e1234b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0
+2026-06-07 00:21:13,439 - 2270861 - INFO - Deregistering i-0b445092eb5e1234b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be
+2026-06-07 00:21:13,491 - 2270861 - INFO - Stopping EC2 instance: i-0b445092eb5e1234b at 2026-06-07 00:21:13
+2026-06-07 00:22:59,858 - 2270861 - INFO - Instance i-0b445092eb5e1234b stopped successfully.
+2026-06-07 00:23:00,202 - 2270861 - INFO - Stopped i-0b445092eb5e1234b in 0:01:46.711001
+2026-06-07 00:23:00,203 - 2270861 - INFO - Starting EC2 instance: i-0b445092eb5e1234b
+2026-06-07 00:23:16,011 - 2270861 - INFO - Instance i-0b445092eb5e1234b started successfully.
+2026-06-07 00:23:16,011 - 2270861 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0b445092eb5e1234b...
+2026-06-07 00:24:56,091 - 2270861 - INFO - Registering i-0b445092eb5e1234b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7
+2026-06-07 00:24:56,334 - 2270861 - INFO - Registering i-0b445092eb5e1234b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0
+2026-06-07 00:24:56,460 - 2270861 - INFO - Registering i-0b445092eb5e1234b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be
+2026-06-07 00:29:57,351 - 2270861 - WARNING - i-0b445092eb5e1234b not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7 after timeout.
+2026-06-07 00:34:58,161 - 2270861 - WARNING - i-0b445092eb5e1234b not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0 after timeout.
+2026-06-07 00:34:58,446 - 2270861 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 00:34:58,446 - 2270861 - ERROR - Aborting workflow: i-0b445092eb5e1234b is not healthy after restart.
+2026-06-07 00:34:58,448 - 2270861 - INFO - Deregistering i-078901db286cc7137 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7
+2026-06-07 00:34:58,502 - 2270861 - INFO - Deregistering i-078901db286cc7137 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0
+2026-06-07 00:34:58,556 - 2270861 - INFO - Deregistering i-078901db286cc7137 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be
+2026-06-07 00:34:58,614 - 2270861 - INFO - Stopping EC2 instance: i-078901db286cc7137 at 2026-06-07 00:34:58
+2026-06-07 00:36:45,067 - 2270861 - INFO - Instance i-078901db286cc7137 stopped successfully.
+2026-06-07 00:36:45,394 - 2270861 - INFO - Stopped i-078901db286cc7137 in 0:01:46.779609
+2026-06-07 00:36:45,394 - 2270861 - INFO - Starting EC2 instance: i-078901db286cc7137
+2026-06-07 00:37:01,217 - 2270861 - INFO - Instance i-078901db286cc7137 started successfully.
+2026-06-07 00:37:01,217 - 2270861 - INFO - Waiting 100 seconds for SSM agent to be ready on i-078901db286cc7137...
+2026-06-07 00:38:41,221 - 2270861 - INFO - Registering i-078901db286cc7137 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7
+2026-06-07 00:38:41,425 - 2270861 - INFO - Registering i-078901db286cc7137 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0
+2026-06-07 00:38:41,562 - 2270861 - INFO - Registering i-078901db286cc7137 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-WS/ad23fab81748d4be
+2026-06-07 00:43:42,507 - 2270861 - WARNING - i-078901db286cc7137 not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-Desktop/276a210bb262f5d7 after timeout.
+2026-06-07 00:48:43,272 - 2270861 - WARNING - i-078901db286cc7137 not healthy in arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/JAS-252-Production-RF/acdece1a328b00e0 after timeout.
+2026-06-07 00:48:43,539 - 2270861 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-07 00:48:43,539 - 2270861 - ERROR - Aborting workflow: i-078901db286cc7137 is not healthy after restart.
+2026-06-07 00:48:43,539 - 2270861 - INFO - All instances processed.
+2026-06-07 00:48:43,542 - 2270861 - INFO - Restart Total time: 0:27:37.268216
+2026-06-07 00:48:43,542 - 2270861 - INFO - Auto-confirmed services are restarted
+2026-06-07 00:48:43,542 - 2270861 - INFO - Confirmed - services are started
+2026-06-07 00:48:43,666 - 2270861 - INFO - The following instances have failed the patch: []
+2026-06-07 00:48:43,667 - 2270861 - INFO - No instances have failed the patch.
+2026-06-07 00:48:43,667 - 2270861 - INFO - Total Patch Process time: 0:33:41.495777
+2026-06-07 00:49:44,153 - 2270861 - INFO - Log file ./logs/patching_2026-06-07_jas-prod-252-app.log uploaded to s3://q2-2026-aws-security-patching/jas-prod-252-app_Patch/2026-06-07/patching_2026-06-07_jas-prod-252-app.log

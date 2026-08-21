@@ -1,0 +1,446 @@
+2026-08-02 01:30:04,735 - 2714745 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-02 01:30:04,735 - 2714745 - INFO - Script Start Time: 2026-08-02 01:30:04
+2026-08-02 01:30:05,403 - 2714745 - INFO - Tag: q3-dib-sik-prod-app, IPs: ['10.64.12.5', '10.64.12.51'], Environment: prod
+2026-08-02 01:30:05,403 - 2714745 - INFO - Instance(s) selected for Patching: {'i-05ab94d2840118108': '10.64.12.5', 'i-00a1b384085e279df': '10.64.12.51'}
+2026-08-02 01:30:05,468 - 2714745 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 01:30:05,469 - 2714745 - INFO - Now patching instances at: 2026-08-02 01:30:05
+2026-08-02 01:30:06,075 - 2714745 - INFO - Sent app_validation.py to i-00a1b384085e279df (command_id: 7701e491-39ee-4bf8-a193-d976d17d0854)
+2026-08-02 01:30:36,179 - 2714745 - INFO - SSM Command Status: Success
+2026-08-02 01:30:36,179 - 2714745 - INFO - app_validation.py output for i-00a1b384085e279df:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 05:30:06.360613
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.51
+Hostname | ip-10-64-12-51.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 28.5G | 211.4G | 11% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.51:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 43
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.51 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+484666 | dibwmssikprod | jboss730eap | dibsikprd_jb730 | 8080 | 10.64.12.51:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikprod/standalone
+484854 | dibwmssikrfprod | jboss730eap | dibsikrf_jb730 | 8081 | 10.64.12.51:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 05:30:06.737199
+==============================================================================
+
+2026-08-02 01:30:36,181 - 2714745 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.51/10.64.12.51-BeforePatching-2026-08-02-01-30-36-181.log
+2026-08-02 01:30:36,704 - 2714745 - INFO - Sent app_validation.py to i-05ab94d2840118108 (command_id: b839e971-3dbe-4f3d-9887-55d8b36ab0ec)
+2026-08-02 01:31:06,789 - 2714745 - INFO - SSM Command Status: Success
+2026-08-02 01:31:06,789 - 2714745 - INFO - app_validation.py output for i-05ab94d2840118108:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 05:30:37.003476
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.5
+Hostname | ip-10-64-12-5.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.2G | 206.7G | 13% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 43
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+496452 | dibwmssikprod | jboss730eap | dibsikprd_jb730 | 8080 | 10.64.12.5:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikprod/standalone
+496644 | dibwmssikrfprod | jboss730eap | dibsikrf_jb730 | 8081 | 10.64.12.5:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 05:30:37.394305
+==============================================================================
+
+2026-08-02 01:31:06,792 - 2714745 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.5/10.64.12.5-BeforePatching-2026-08-02-01-31-06-791.log
+2026-08-02 01:31:12,422 - 2714745 - INFO - i-00a1b384085e279df: Cron was active = False
+2026-08-02 01:31:17,716 - 2714745 - INFO - i-05ab94d2840118108: Cron was active = False
+2026-08-02 01:31:17,717 - 2714745 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-02 01:31:17,926 - 2714745 - INFO - Sending patch command to instance i-00a1b384085e279df
+2026-08-02 01:31:18,092 - 2714745 - INFO - Command sent successfully to instance i-00a1b384085e279df. Command ID: 7e36e895-a636-4a5e-8f2d-c174d45d9e3b
+2026-08-02 01:31:18,297 - 2714745 - INFO - Sending patch command to instance i-05ab94d2840118108
+2026-08-02 01:31:18,400 - 2714745 - INFO - Command sent successfully to instance i-05ab94d2840118108. Command ID: 887e9640-87b4-4638-9f4d-d6126457719d
+2026-08-02 01:39:20,780 - 2714745 - INFO - All patches applied successfully.
+2026-08-02 01:39:20,781 - 2714745 - INFO - Patching end time: 2026-08-02 01:39:20
+2026-08-02 01:39:20,781 - 2714745 - INFO - Patch Elapsed time: 0:09:15.312128
+2026-08-02 01:39:20,856 - 2714745 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 01:39:20,857 - 2714745 - INFO - Confirmed - services are stopped
+2026-08-02 01:39:27,453 - 2714745 - INFO - Discovered TG map: {'i-05ab94d2840118108': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247'], 'i-00a1b384085e279df': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247']}
+2026-08-02 01:39:27,717 - 2714745 - INFO - Deregistering i-00a1b384085e279df from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17
+2026-08-02 01:39:27,831 - 2714745 - INFO - Deregistering i-00a1b384085e279df from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247
+2026-08-02 01:39:27,887 - 2714745 - INFO - Stopping EC2 instance: i-00a1b384085e279df at 2026-08-02 01:39:27
+2026-08-02 01:42:29,976 - 2714745 - INFO - Instance i-00a1b384085e279df stopped successfully.
+2026-08-02 01:42:30,215 - 2714745 - INFO - Stopped i-00a1b384085e279df in 0:03:02.327907
+2026-08-02 01:42:30,216 - 2714745 - INFO - Starting EC2 instance: i-00a1b384085e279df
+2026-08-02 01:42:46,136 - 2714745 - INFO - Instance i-00a1b384085e279df started successfully.
+2026-08-02 01:42:46,136 - 2714745 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00a1b384085e279df...
+2026-08-02 01:44:26,229 - 2714745 - INFO - Registering i-00a1b384085e279df to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17
+2026-08-02 01:44:26,477 - 2714745 - INFO - Registering i-00a1b384085e279df to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247
+2026-08-02 01:44:57,113 - 2714745 - INFO - Sent app_validation.py to i-00a1b384085e279df (command_id: 1dcdea77-804d-4555-ad27-86c206ecc33d)
+2026-08-02 01:45:27,200 - 2714745 - INFO - SSM Command Status: Success
+2026-08-02 01:45:27,200 - 2714745 - INFO - app_validation.py output for i-00a1b384085e279df:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 05:44:57.410257
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.51
+Hostname | ip-10-64-12-51.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 28.3G | 211.5G | 11% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.51:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 43
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.51 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3377 | dibwmssikprod | jboss730eap | dibsikprd_jb730 | 8080 | 10.64.12.51:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikprod/standalone
+3621 | dibwmssikrfprod | jboss730eap | dibsikrf_jb730 | 8081 | 10.64.12.51:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 05:44:58.229374
+==============================================================================
+
+2026-08-02 01:45:27,202 - 2714745 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.51/10.64.12.51-AfterPatching-2026-08-02-01-45-27-202.log
+2026-08-02 01:45:27,259 - 2714745 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.51/10.64.12.51-Validation-details-2026-08-02-01-45-27-202.html
+2026-08-02 01:45:27,430 - 2714745 - INFO - i-00a1b384085e279df: Cron was not active - skipping enable
+2026-08-02 01:45:27,508 - 2714745 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-02 01:45:27,509 - 2714745 - INFO - GREEN mail sent for i-00a1b384085e279df
+2026-08-02 01:45:27,738 - 2714745 - INFO - Started i-00a1b384085e279df in 0:02:57.522167
+2026-08-02 01:45:27,738 - 2714745 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-08-02 01:47:27,837 - 2714745 - INFO - Deregistering i-05ab94d2840118108 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17
+2026-08-02 01:47:27,958 - 2714745 - INFO - Deregistering i-05ab94d2840118108 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247
+2026-08-02 01:47:28,010 - 2714745 - INFO - Stopping EC2 instance: i-05ab94d2840118108 at 2026-08-02 01:47:28
+2026-08-02 01:50:30,019 - 2714745 - INFO - Instance i-05ab94d2840118108 stopped successfully.
+2026-08-02 01:50:30,329 - 2714745 - INFO - Stopped i-05ab94d2840118108 in 0:03:02.318681
+2026-08-02 01:50:30,329 - 2714745 - INFO - Starting EC2 instance: i-05ab94d2840118108
+2026-08-02 01:50:46,270 - 2714745 - INFO - Instance i-05ab94d2840118108 started successfully.
+2026-08-02 01:50:46,270 - 2714745 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05ab94d2840118108...
+2026-08-02 01:52:26,369 - 2714745 - INFO - Registering i-05ab94d2840118108 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-Desktop/04668f3bc8d8fb17
+2026-08-02 01:52:26,741 - 2714745 - INFO - Registering i-05ab94d2840118108 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-SIK-PROD-RF/4c0e54f2130bd247
+2026-08-02 01:52:57,322 - 2714745 - INFO - Sent app_validation.py to i-05ab94d2840118108 (command_id: 7e64bbcb-4d31-48ae-9e25-4e3fae13431d)
+2026-08-02 01:53:27,407 - 2714745 - INFO - SSM Command Status: Success
+2026-08-02 01:53:27,407 - 2714745 - INFO - app_validation.py output for i-05ab94d2840118108:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 05:52:57.623044
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.5
+Hostname | ip-10-64-12-5.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.0G | 206.9G | 13% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 43
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3343 | dibwmssikprod | jboss730eap | dibsikprd_jb730 | 8080 | 10.64.12.5:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikprod/standalone
+3633 | dibwmssikrfprod | jboss730eap | dibsikrf_jb730 | 8081 | 10.64.12.5:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmssikrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 05:52:58.109832
+==============================================================================
+
+2026-08-02 01:53:27,409 - 2714745 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.5/10.64.12.5-AfterPatching-2026-08-02-01-53-27-408.log
+2026-08-02 01:53:27,465 - 2714745 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-02/q3-dib-sik-prod-app/10.64.12.5/10.64.12.5-Validation-details-2026-08-02-01-53-27-408.html
+2026-08-02 01:53:27,640 - 2714745 - INFO - i-05ab94d2840118108: Cron was not active - skipping enable
+2026-08-02 01:53:27,719 - 2714745 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-02 01:53:27,719 - 2714745 - INFO - GREEN mail sent for i-05ab94d2840118108
+2026-08-02 01:53:28,050 - 2714745 - INFO - Started i-05ab94d2840118108 in 0:02:57.720338
+2026-08-02 01:53:28,050 - 2714745 - INFO - All instances processed.
+2026-08-02 01:53:28,056 - 2714745 - INFO - Restart Total time: 0:14:07.085198
+2026-08-02 01:53:28,056 - 2714745 - INFO - Auto-confirmed services are restarted
+2026-08-02 01:53:28,056 - 2714745 - INFO - Confirmed - services are started
+2026-08-02 01:53:28,178 - 2714745 - INFO - The following instances have failed the patch: []
+2026-08-02 01:53:28,178 - 2714745 - INFO - No instances have failed the patch.
+2026-08-02 01:53:28,178 - 2714745 - INFO - Total Patch Process time: 0:23:23.442743
+2026-08-02 01:54:28,824 - 2714745 - INFO - Log file ./logs/patching_2026-08-02_q3-dib-sik-prod-app.log uploaded to s3://q3-2026-aws-security-patching/q3-dib-sik-prod-app_Patch/2026-08-02/patching_2026-08-02_q3-dib-sik-prod-app.log

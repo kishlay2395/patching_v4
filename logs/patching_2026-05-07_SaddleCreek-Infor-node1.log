@@ -1,0 +1,217 @@
+2026-05-07 02:00:02,650 - 426479 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-07 02:00:02,650 - 426479 - INFO - Script Start Time: 2026-05-07 02:00:02
+2026-05-07 02:00:03,367 - 426479 - INFO - Instance(s) selected for Patching: {'i-0d9d5f9e220c34b36': '10.0.10.196'}
+2026-05-07 02:00:03,467 - 426479 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-07 02:00:03,467 - 426479 - INFO - Now patching instances at: 2026-05-07 02:00:03
+2026-05-07 02:00:03,590 - 426479 - INFO - Sending patch command to instance i-0d9d5f9e220c34b36
+2026-05-07 02:00:03,742 - 426479 - INFO - Command sent successfully to instance i-0d9d5f9e220c34b36. Command ID: 60fb514d-c8bc-43e3-9e03-4769292bad2a
+2026-05-07 02:04:35,395 - 426479 - INFO - All patches applied successfully.
+2026-05-07 02:04:35,396 - 426479 - INFO - Patching end time: 2026-05-07 02:04:35
+2026-05-07 02:04:35,396 - 426479 - INFO - Patch Elapsed time: 0:04:31.928187
+2026-05-07 02:04:35,467 - 426479 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-07 02:04:35,468 - 426479 - INFO - Confirmed - services are stopped
+2026-05-07 02:04:55,434 - 426479 - INFO - Discovered TG map: {'i-0d9d5f9e220c34b36': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2']}
+2026-05-07 02:04:55,838 - 426479 - INFO - Sent app_validation.py to i-0d9d5f9e220c34b36 (command_id: 28fb8b99-598b-4c40-bf67-8a034e00d3af)
+2026-05-07 02:05:25,910 - 426479 - INFO - app_validation.py output for i-0d9d5f9e220c34b36:
+
+==============================================================================
+Server Availability Check Started | 2026-05-07 06:04:56.104021
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.196
+Hostname | ip-10-0-10-196
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 4.8G | 235.1G | 1% | /data
+fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | 0B | 870.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.196:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.196 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3181 | sclwesinforprod | jboss730eap | sclwesinfo_jb73 | 8080 | 10.0.10.196:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesinforprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-07 06:04:56.471252
+==============================================================================
+
+2026-05-07 02:05:25,910 - 426479 - ERROR - app_validation.py errors for i-0d9d5f9e220c34b36:
+
+2026-05-07 02:05:25,912 - 426479 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node1/10.0.10.196/10.0.10.196-BeforePatching-2026-05-07-02-05-25-911.log
+2026-05-07 02:05:25,912 - 426479 - INFO - Deregistering i-0d9d5f9e220c34b36 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2
+2026-05-07 02:05:25,988 - 426479 - INFO - Stopping EC2 instance: i-0d9d5f9e220c34b36 at 2026-05-07 02:05:25
+2026-05-07 02:06:27,072 - 426479 - INFO - Instance i-0d9d5f9e220c34b36 stopped successfully.
+2026-05-07 02:06:27,215 - 426479 - INFO - Stopped i-0d9d5f9e220c34b36 in 0:01:01.226892
+2026-05-07 02:06:27,216 - 426479 - INFO - Starting EC2 instance: i-0d9d5f9e220c34b36
+2026-05-07 02:06:43,177 - 426479 - INFO - Instance i-0d9d5f9e220c34b36 started successfully.
+2026-05-07 02:06:43,177 - 426479 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0d9d5f9e220c34b36...
+2026-05-07 02:08:23,198 - 426479 - INFO - Registering i-0d9d5f9e220c34b36 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Infor-Prod/a3d333675c8ac3a2
+2026-05-07 02:08:53,751 - 426479 - INFO - Sent app_validation.py to i-0d9d5f9e220c34b36 (command_id: 85b4dca8-4398-4c7c-b062-bcfd866437f6)
+2026-05-07 02:09:23,941 - 426479 - INFO - app_validation.py output for i-0d9d5f9e220c34b36:
+
+==============================================================================
+Server Availability Check Started | 2026-05-07 06:08:54.111435
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.196
+Hostname | ip-10-0-10-196
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 4.7G | 235.2G | 1% | /data
+fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | 0B | 870.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-055d972b9c8d5fa05.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.196:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.196 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3180 | sclwesinforprod | jboss730eap | sclwesinfo_jb73 | 8080 | 10.0.10.196:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesinforprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-07 06:08:54.394949
+==============================================================================
+
+2026-05-07 02:09:23,941 - 426479 - ERROR - app_validation.py errors for i-0d9d5f9e220c34b36:
+
+2026-05-07 02:09:23,942 - 426479 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node1/10.0.10.196/10.0.10.196-AfterPatching-2026-05-07-02-09-23-942.log
+2026-05-07 02:09:23,993 - 426479 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-07/SaddleCreek-Infor-node1/10.0.10.196/10.0.10.196-Validation-details-2026-05-07-02-09-23-942.html
+2026-05-07 02:09:24,256 - 426479 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-07 02:09:24,256 - 426479 - INFO - HTML validation report email sent for i-0d9d5f9e220c34b36
+2026-05-07 02:09:24,398 - 426479 - INFO - Started i-0d9d5f9e220c34b36 in 0:02:57.182427
+2026-05-07 02:09:24,399 - 426479 - INFO - All instances processed.
+2026-05-07 02:09:24,403 - 426479 - INFO - Restart Total time: 0:04:48.803130
+2026-05-07 02:09:24,403 - 426479 - INFO - Auto-confirmed services are restarted
+2026-05-07 02:09:24,403 - 426479 - INFO - Confirmed - services are started
+2026-05-07 02:09:24,521 - 426479 - INFO - The following instances have failed the patch: []
+2026-05-07 02:09:24,522 - 426479 - INFO - No instances have failed the patch.
+2026-05-07 02:09:24,522 - 426479 - INFO - Total Patch Process time: 0:09:21.870797
+2026-05-07 02:10:24,850 - 426479 - INFO - Log file ./logs/patching_2026-05-07_SaddleCreek-Infor-node1.log uploaded to s3://q2-2026-aws-security-patching/SaddleCreek-Infor-node1_Patch/2026-05-07/patching_2026-05-07_SaddleCreek-Infor-node1.log

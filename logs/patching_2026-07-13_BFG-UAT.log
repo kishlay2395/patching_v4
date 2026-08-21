@@ -1,0 +1,632 @@
+2026-07-13 00:00:04,816 - 22875 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 00:21:51,526 - 22875 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 00:21:51,728 - 22875 - INFO - Log file ./logs/backup_2026-07-13.log uploaded to s3://q3-2025-aws-security-patching/BFG-UAT_Patch_Backup/2026-07-13/backup_2026-07-13.log
+2026-07-13 04:00:02,440 - 33132 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-13 04:00:02,440 - 33132 - INFO - Script Start Time: 2026-07-13 04:00:02
+2026-07-13 04:00:03,614 - 33132 - INFO - Instance(s) selected for Patching: {'i-0cbb0583822427ca8': '172.22.130.46'}
+2026-07-13 04:00:03,702 - 33132 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 04:00:03,702 - 33132 - INFO - Now patching instances at: 2026-07-13 04:00:03
+2026-07-13 04:00:09,384 - 33132 - INFO - i-0cbb0583822427ca8: Cron was active = True
+2026-07-13 04:00:09,884 - 33132 - INFO - Health monitor crontab disabled on all instances
+2026-07-13 04:00:09,885 - 33132 - INFO - Disabled cron for: ['i-0cbb0583822427ca8']
+2026-07-13 04:00:10,536 - 33132 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 8d3ac9d6-7a9d-4c67-b8b7-ab127de97d6b)
+2026-07-13 04:00:40,706 - 33132 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 08:00:10.846278
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | bfgconfig_bdd, bfguat_invbt, bfguat_abchdis, bfguat_apick, bfguat_dwa, bfguat_event, bfguat_ftp, bfguat_harp, bfguat_lbl, bfguat_lpick, bfguat_rccl, bfguat_rplpu, bfguat_rpt, bfguat_jqgrid, bfguat_sch, bfguat_inbq, bfguat_wld, bfguat_billcb, bfguat_repl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+bfgconfig_bdd | /data/batchapp/softeon/bfgconfiguat/bulkdatadaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_lpick | /data/batchapp/softeon/bfguat/ptcdaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1162919 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+3070265 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+2471043 | bfgrfuat | jboss810eap | bfgrfuat_jb810e | 8084 | 172.22.130.46:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfuat/standalone
+2877677 | bfgswpuat | jboss800eap | bfgswpuat_jb800 | 8085 | 172.22.130.46:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgswpuat/standalone
+4161139 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+2470721 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 08:00:19.249424
+==============================================================================
+
+2026-07-13 04:00:40,707 - 33132 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-07-13 04:00:40,708 - 33132 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-BeforePatching-2026-07-13-04-00-40-708.log
+2026-07-13 04:00:40,794 - 33132 - INFO - Sending patch command to instance i-0cbb0583822427ca8
+2026-07-13 04:00:41,152 - 33132 - INFO - Command sent successfully to instance i-0cbb0583822427ca8. Command ID: ab22dcff-a3d8-4eff-a00f-1d8e86ee00c0
+2026-07-13 04:03:42,813 - 33132 - INFO - All patches applied successfully.
+2026-07-13 04:03:42,814 - 33132 - INFO - Patching end time: 2026-07-13 04:03:42
+2026-07-13 04:03:42,814 - 33132 - INFO - Patch Elapsed time: 0:03:39.111786
+2026-07-13 04:03:42,889 - 33132 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-13 04:03:42,889 - 33132 - INFO - Confirmed - services are stopped
+2026-07-13 04:03:48,497 - 33132 - INFO - Discovered TG map: {'i-0cbb0583822427ca8': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT/eea59a415d409625', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop-261/3418f933ca294211', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF-261/7ab215642279790b', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS-261/9c8a8245cf9cc9d3']}
+2026-07-13 04:03:48,745 - 33132 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT/eea59a415d409625
+2026-07-13 04:03:49,081 - 33132 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630
+2026-07-13 04:03:49,190 - 33132 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop-261/3418f933ca294211
+2026-07-13 04:03:49,300 - 33132 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF-261/7ab215642279790b
+2026-07-13 04:03:49,406 - 33132 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS-261/9c8a8245cf9cc9d3
+2026-07-13 04:03:49,517 - 33132 - INFO - Stopping EC2 instance: i-0cbb0583822427ca8 at 2026-07-13 04:03:49
+2026-07-13 04:07:22,999 - 33132 - INFO - Instance i-0cbb0583822427ca8 stopped successfully.
+2026-07-13 04:07:23,133 - 33132 - INFO - Stopped i-0cbb0583822427ca8 in 0:03:33.615462
+2026-07-13 04:07:23,133 - 33132 - INFO - Starting EC2 instance: i-0cbb0583822427ca8
+2026-07-13 04:07:39,169 - 33132 - INFO - Instance i-0cbb0583822427ca8 started successfully.
+2026-07-13 04:07:39,169 - 33132 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0cbb0583822427ca8...
+2026-07-13 04:09:19,217 - 33132 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT/eea59a415d409625
+2026-07-13 04:09:19,636 - 33132 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630
+2026-07-13 04:09:19,827 - 33132 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop-261/3418f933ca294211
+2026-07-13 04:09:20,019 - 33132 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF-261/7ab215642279790b
+2026-07-13 04:09:20,208 - 33132 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS-261/9c8a8245cf9cc9d3
+2026-07-13 04:19:54,605 - 33132 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 769e7aab-b19a-4710-9acf-5e7474257cbd)
+2026-07-13 04:20:24,763 - 33132 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 08:19:55.034404
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 158.9G | 81.0G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 158.9G | 81.0G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 158.9G | 81.0G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | bfguat_ftp, bfguat_billcb, bfguat_apick, bfguat_repl, bfguat_rplpu, bfguat_inbq, bfguat_jqgrid, bfguat_wld, bfguat_dwa, bfguat_rccl, bfguat_abchdis, bfguat_rpt, bfguat_event, bfguat_lbl, bfguat_harp, bfguat_sch, bfguat_invbt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6931 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+5574 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+12106 | bfgrfuat | jboss810eap | bfgrfuat_jb810e | 8084 | 172.22.130.46:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfuat/standalone
+24118 | bfgswpuat | jboss800eap | bfgswpuat_jb800 | 8085 | 172.22.130.46:8085 | Down | 000 | Disabled | /data/app/jboss800eap/softeon/bfgswpuat/standalone
+5143 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+8475 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 08:20:09.032255
+==============================================================================
+
+2026-07-13 04:20:24,763 - 33132 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-07-13 04:20:24,764 - 33132 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-AfterPatching-2026-07-13-04-20-24-764.log
+2026-07-13 04:20:24,818 - 33132 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-Validation-details-2026-07-13-04-20-24-764.html
+2026-07-13 04:20:25,347 - 33132 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-13 04:20:25,347 - 33132 - INFO - HTML validation report email sent for i-0cbb0583822427ca8
+2026-07-13 04:20:25,347 - 33132 - INFO - [Retry-1] Waiting 600s for i-0cbb0583822427ca8...
+2026-07-13 04:20:25,347 - 33132 - INFO - RED - Background retry thread started for i-0cbb0583822427ca8
+2026-07-13 04:20:25,502 - 33132 - INFO - Started i-0cbb0583822427ca8 in 0:13:02.369414
+2026-07-13 04:20:25,503 - 33132 - INFO - All instances processed.
+2026-07-13 04:20:25,508 - 33132 - INFO - Restart Total time: 0:16:42.491941
+2026-07-13 04:20:25,508 - 33132 - INFO - Auto-confirmed services are restarted
+2026-07-13 04:20:25,508 - 33132 - INFO - Confirmed - services are started
+2026-07-13 04:20:25,620 - 33132 - INFO - The following instances have failed the patch: []
+2026-07-13 04:20:25,620 - 33132 - INFO - No instances have failed the patch.
+2026-07-13 04:20:25,620 - 33132 - INFO - Total Patch Process time: 0:20:23.179993
+2026-07-13 04:21:26,098 - 33132 - INFO - Log file ./logs/patching_2026-07-13_BFG-UAT.log uploaded to s3://q3-2026-aws-security-patching/BFG-UAT_Patch/2026-07-13/patching_2026-07-13_BFG-UAT.log
+2026-07-13 04:30:25,930 - 33132 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 2bf529a4-89a7-44e7-8e92-d5882d96ba83)
+2026-07-13 04:30:56,139 - 33132 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 08:30:26.355576
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | bfguat_ftp, bfguat_billcb, bfguat_apick, bfguat_repl, bfguat_rplpu, bfguat_inbq, bfguat_jqgrid, bfguat_wld, bfguat_dwa, bfguat_rccl, bfguat_abchdis, bfguat_rpt, bfguat_event, bfguat_lbl, bfguat_harp, bfguat_sch, bfguat_invbt, bfguat_lpick
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+bfguat_lpick | /data/batchapp/softeon/bfguat/ptcdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6931 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+5574 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+12106 | bfgrfuat | jboss810eap | bfgrfuat_jb810e | 8084 | 172.22.130.46:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfuat/standalone
+24118 | bfgswpuat | jboss800eap | bfgswpuat_jb800 | 8085 | 172.22.130.46:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgswpuat/standalone
+5143 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+8475 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 08:30:28.053879
+==============================================================================
+
+2026-07-13 04:30:56,139 - 33132 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-07-13 04:30:56,140 - 33132 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-AfterPatching-Retry1-2026-07-13-04-30-56-140.log
+2026-07-13 04:30:56,196 - 33132 - INFO - [Retry-1] RED detected for BF-Global-Logistics UAT Application and Batch Server - 1 (172.22.130.46), retrying... (Total waited: 600s)
+2026-07-13 04:30:56,196 - 33132 - INFO - [Retry-2] Waiting 600s for i-0cbb0583822427ca8...
+2026-07-13 04:40:56,991 - 33132 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 1bef07df-36b7-4a82-8e8f-40a19a39a790)
+2026-07-13 04:41:27,139 - 33132 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 08:40:57.175341
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.9G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | bfguat_ftp, bfguat_billcb, bfguat_apick, bfguat_repl, bfguat_rplpu, bfguat_inbq, bfguat_jqgrid, bfguat_wld, bfguat_dwa, bfguat_rccl, bfguat_abchdis, bfguat_rpt, bfguat_event, bfguat_lbl, bfguat_harp, bfguat_sch, bfguat_invbt, bfguat_lpick, bfgconfig_bdd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+bfguat_lpick | /data/batchapp/softeon/bfguat/ptcdaemon
+bfgconfig_bdd | /data/batchapp/softeon/bfgconfiguat/bulkdatadaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6931 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+5574 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+12106 | bfgrfuat | jboss810eap | bfgrfuat_jb810e | 8084 | 172.22.130.46:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfuat/standalone
+24118 | bfgswpuat | jboss800eap | bfgswpuat_jb800 | 8085 | 172.22.130.46:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgswpuat/standalone
+5143 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+8475 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 08:40:58.310314
+==============================================================================
+
+2026-07-13 04:41:27,139 - 33132 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-07-13 04:41:27,141 - 33132 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-AfterPatching-Retry2-2026-07-13-04-41-27-140.log
+2026-07-13 04:41:27,194 - 33132 - INFO - [Retry-2] RED detected for BF-Global-Logistics UAT Application and Batch Server - 1 (172.22.130.46), retrying... (Total waited: 1200s)
+2026-07-13 04:41:27,194 - 33132 - INFO - [Retry-3] Waiting 600s for i-0cbb0583822427ca8...
+2026-07-13 04:51:27,809 - 33132 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 24d375d1-d45b-4ef1-a4c9-aaeeec36dea1)
+2026-07-13 04:51:57,984 - 33132 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-13 08:51:28.095149
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.8G | 66% | /data
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.8G | 66% | /data2
+/dev/nvme1n1p2 | 239.9G | 159.0G | 80.8G | 66% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | bfguat_ftp, bfguat_billcb, bfguat_apick, bfguat_repl, bfguat_rplpu, bfguat_inbq, bfguat_jqgrid, bfguat_wld, bfguat_dwa, bfguat_rccl, bfguat_abchdis, bfguat_rpt, bfguat_event, bfguat_lbl, bfguat_harp, bfguat_sch, bfguat_invbt, bfguat_lpick, bfgconfig_bdd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+bfguat_lpick | /data/batchapp/softeon/bfguat/ptcdaemon
+bfgconfig_bdd | /data/batchapp/softeon/bfgconfiguat/bulkdatadaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6931 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+5574 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+12106 | bfgrfuat | jboss810eap | bfgrfuat_jb810e | 8084 | 172.22.130.46:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfuat/standalone
+24118 | bfgswpuat | jboss800eap | bfgswpuat_jb800 | 8085 | 172.22.130.46:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgswpuat/standalone
+5143 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+8475 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-13 08:51:29.130277
+==============================================================================
+
+2026-07-13 04:51:57,984 - 33132 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-07-13 04:51:57,986 - 33132 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-13/BFG-UAT/172.22.130.46/172.22.130.46-AfterPatching-Retry3-2026-07-13-04-51-57-986.log
+2026-07-13 04:51:58,477 - 33132 - INFO - Health monitor crontab enabled on all instances
+2026-07-13 04:51:58,479 - 33132 - WARNING - [Retry] Timeout - auto cron enabled for i-0cbb0583822427ca8

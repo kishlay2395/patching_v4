@@ -1,0 +1,435 @@
+2026-05-10 02:00:03,837 - 591603 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-10 02:09:33,519 - 591603 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-10 02:09:33,699 - 591603 - INFO - Log file ./logs/backup_2026-05-10.log uploaded to s3://q3-2025-aws-security-patching/Midea-Prod-App_Patch_Backup/2026-05-10/backup_2026-05-10.log
+2026-05-10 06:00:03,163 - 600682 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-10 06:00:03,163 - 600682 - INFO - Script Start Time: 2026-05-10 06:00:03
+2026-05-10 06:00:03,770 - 600682 - INFO - Instance(s) selected for Patching: {'i-07fa11bf7769a2a62': '172.29.84.21', 'i-0441dafd1ae7252ad': '172.29.84.42'}
+2026-05-10 06:00:03,841 - 600682 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-10 06:00:03,841 - 600682 - INFO - Now patching instances at: 2026-05-10 06:00:03
+2026-05-10 06:00:03,943 - 600682 - INFO - Sending patch command to instance i-07fa11bf7769a2a62
+2026-05-10 06:00:04,213 - 600682 - INFO - Command sent successfully to instance i-07fa11bf7769a2a62. Command ID: a9529f41-61ab-4714-97f7-d2df38ac8e3b
+2026-05-10 06:00:04,489 - 600682 - INFO - Sending patch command to instance i-0441dafd1ae7252ad
+2026-05-10 06:00:04,652 - 600682 - INFO - Command sent successfully to instance i-0441dafd1ae7252ad. Command ID: a1791e69-e89f-44c7-840f-55cf19ed1c58
+2026-05-10 06:05:06,522 - 600682 - INFO - All patches applied successfully.
+2026-05-10 06:05:06,523 - 600682 - INFO - Patching end time: 2026-05-10 06:05:06
+2026-05-10 06:05:06,523 - 600682 - INFO - Patch Elapsed time: 0:05:02.681118
+2026-05-10 06:05:06,596 - 600682 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-10 06:05:06,596 - 600682 - INFO - Confirmed - services are stopped
+2026-05-10 06:05:26,698 - 600682 - INFO - Discovered TG map: {'i-07fa11bf7769a2a62': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c'], 'i-0441dafd1ae7252ad': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c']}
+2026-05-10 06:05:27,099 - 600682 - INFO - Sent app_validation.py to i-07fa11bf7769a2a62 (command_id: e881c60c-83d4-481f-a016-f7ef5d5544d5)
+2026-05-10 06:05:57,242 - 600682 - INFO - app_validation.py output for i-07fa11bf7769a2a62:
+
+==============================================================================
+Server Availability Check Started | 2026-05-10 10:05:27.421945
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.21
+Hostname | ip-172-29-84-21
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 22.4G | 217.5G | 9% | /data
+fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | 0B | 319.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 46
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2212841 | mideaprod | jboss730eap | mideaprod_jb730 | 8080 | 172.29.84.21:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideaprod/standalone
+2213236 | midearfprod | jboss730eap | midearfprod_jb7 | 8081 | 172.29.84.21:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfprod/standalone
+2213053 | mideawsprod | jboss730eap | mideawsprod_jb7 | 8082 | 172.29.84.21:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-10 10:05:27.820669
+==============================================================================
+
+2026-05-10 06:05:57,243 - 600682 - ERROR - app_validation.py errors for i-07fa11bf7769a2a62:
+
+2026-05-10 06:05:57,244 - 600682 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.21/172.29.84.21-BeforePatching-2026-05-10-06-05-57-244.log
+2026-05-10 06:05:57,244 - 600682 - INFO - Deregistering i-07fa11bf7769a2a62 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044
+2026-05-10 06:05:57,319 - 600682 - INFO - Deregistering i-07fa11bf7769a2a62 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed
+2026-05-10 06:05:57,367 - 600682 - INFO - Deregistering i-07fa11bf7769a2a62 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c
+2026-05-10 06:05:57,417 - 600682 - INFO - Stopping EC2 instance: i-07fa11bf7769a2a62 at 2026-05-10 06:05:57
+2026-05-10 06:07:43,977 - 600682 - INFO - Instance i-07fa11bf7769a2a62 stopped successfully.
+2026-05-10 06:07:44,215 - 600682 - INFO - Stopped i-07fa11bf7769a2a62 in 0:01:46.798359
+2026-05-10 06:07:44,216 - 600682 - INFO - Starting EC2 instance: i-07fa11bf7769a2a62
+2026-05-10 06:08:00,189 - 600682 - INFO - Instance i-07fa11bf7769a2a62 started successfully.
+2026-05-10 06:08:00,189 - 600682 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07fa11bf7769a2a62...
+2026-05-10 06:09:40,221 - 600682 - INFO - Registering i-07fa11bf7769a2a62 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044
+2026-05-10 06:09:40,393 - 600682 - INFO - Registering i-07fa11bf7769a2a62 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed
+2026-05-10 06:09:40,528 - 600682 - INFO - Registering i-07fa11bf7769a2a62 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c
+2026-05-10 06:11:11,267 - 600682 - INFO - Sent app_validation.py to i-07fa11bf7769a2a62 (command_id: e19a26c4-8284-4a6a-9ed9-72e7a45566ea)
+2026-05-10 06:11:41,334 - 600682 - INFO - app_validation.py output for i-07fa11bf7769a2a62:
+
+==============================================================================
+Server Availability Check Started | 2026-05-10 10:11:11.646640
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.21
+Hostname | ip-172-29-84-21
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 22.0G | 217.9G | 9% | /data
+fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | 0B | 319.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 46
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3818 | mideaprod | jboss730eap | mideaprod_jb730 | 8080 | 172.29.84.21:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideaprod/standalone
+3838 | midearfprod | jboss730eap | midearfprod_jb7 | 8081 | 172.29.84.21:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfprod/standalone
+3457 | mideawsprod | jboss730eap | mideawsprod_jb7 | 8082 | 172.29.84.21:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-10 10:11:12.792900
+==============================================================================
+
+2026-05-10 06:11:41,335 - 600682 - ERROR - app_validation.py errors for i-07fa11bf7769a2a62:
+
+2026-05-10 06:11:41,336 - 600682 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.21/172.29.84.21-AfterPatching-2026-05-10-06-11-41-336.log
+2026-05-10 06:11:41,388 - 600682 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.21/172.29.84.21-Validation-details-2026-05-10-06-11-41-336.html
+2026-05-10 06:11:41,646 - 600682 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-10 06:11:41,647 - 600682 - INFO - HTML validation report email sent for i-07fa11bf7769a2a62
+2026-05-10 06:11:41,893 - 600682 - INFO - Started i-07fa11bf7769a2a62 in 0:03:57.677100
+2026-05-10 06:11:41,893 - 600682 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-10 06:13:42,174 - 600682 - INFO - Sent app_validation.py to i-0441dafd1ae7252ad (command_id: d79a926a-5cf7-498a-8021-a2b997169e53)
+2026-05-10 06:14:12,291 - 600682 - INFO - app_validation.py output for i-0441dafd1ae7252ad:
+
+==============================================================================
+Server Availability Check Started | 2026-05-10 10:13:42.512635
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.42
+Hostname | ip-172-29-84-42
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 20.3G | 219.6G | 8% | /data
+fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | 0B | 319.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.42:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 46
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.42 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2168857 | mideaprod | jboss730eap | mideaprod_jb730 | 8080 | 172.29.84.42:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideaprod/standalone
+2169097 | midearfprod | jboss730eap | midearfprod_jb7 | 8081 | 172.29.84.42:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfprod/standalone
+2168926 | mideawsprod | jboss730eap | mideawsprod_jb7 | 8082 | 172.29.84.42:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-10 10:13:42.903572
+==============================================================================
+
+2026-05-10 06:14:12,292 - 600682 - ERROR - app_validation.py errors for i-0441dafd1ae7252ad:
+
+2026-05-10 06:14:12,294 - 600682 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.42/172.29.84.42-BeforePatching-2026-05-10-06-14-12-292.log
+2026-05-10 06:14:12,294 - 600682 - INFO - Deregistering i-0441dafd1ae7252ad from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044
+2026-05-10 06:14:12,371 - 600682 - INFO - Deregistering i-0441dafd1ae7252ad from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed
+2026-05-10 06:14:12,420 - 600682 - INFO - Deregistering i-0441dafd1ae7252ad from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c
+2026-05-10 06:14:12,472 - 600682 - INFO - Stopping EC2 instance: i-0441dafd1ae7252ad at 2026-05-10 06:14:12
+2026-05-10 06:15:58,695 - 600682 - INFO - Instance i-0441dafd1ae7252ad stopped successfully.
+2026-05-10 06:15:58,962 - 600682 - INFO - Stopped i-0441dafd1ae7252ad in 0:01:46.489729
+2026-05-10 06:15:58,962 - 600682 - INFO - Starting EC2 instance: i-0441dafd1ae7252ad
+2026-05-10 06:16:15,019 - 600682 - INFO - Instance i-0441dafd1ae7252ad started successfully.
+2026-05-10 06:16:15,019 - 600682 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0441dafd1ae7252ad...
+2026-05-10 06:17:55,021 - 600682 - INFO - Registering i-0441dafd1ae7252ad to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-RF/5acfb8e8879b8044
+2026-05-10 06:17:55,188 - 600682 - INFO - Registering i-0441dafd1ae7252ad to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-WS/4bfa2cb1227a74ed
+2026-05-10 06:17:55,320 - 600682 - INFO - Registering i-0441dafd1ae7252ad to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-Prod-Desktop/c9d32340d3e4b67c
+2026-05-10 06:18:55,978 - 600682 - INFO - Sent app_validation.py to i-0441dafd1ae7252ad (command_id: 4e25d71d-4a34-48ae-bd3c-9e4f5a986228)
+2026-05-10 06:19:26,063 - 600682 - INFO - app_validation.py output for i-0441dafd1ae7252ad:
+
+==============================================================================
+Server Availability Check Started | 2026-05-10 10:18:56.321903
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.42
+Hostname | ip-172-29-84-42
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 19.9G | 219.9G | 8% | /data
+fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | 0B | 319.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0614e26d028994661.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.42:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 46
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.42 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3845 | mideaprod | jboss730eap | mideaprod_jb730 | 8080 | 172.29.84.42:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideaprod/standalone
+3720 | midearfprod | jboss730eap | midearfprod_jb7 | 8081 | 172.29.84.42:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfprod/standalone
+3448 | mideawsprod | jboss730eap | mideawsprod_jb7 | 8082 | 172.29.84.42:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-10 10:18:57.681447
+==============================================================================
+
+2026-05-10 06:19:26,063 - 600682 - ERROR - app_validation.py errors for i-0441dafd1ae7252ad:
+
+2026-05-10 06:19:26,064 - 600682 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.42/172.29.84.42-AfterPatching-2026-05-10-06-19-26-064.log
+2026-05-10 06:19:26,118 - 600682 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-10/Midea-Prod-App/172.29.84.42/172.29.84.42-Validation-details-2026-05-10-06-19-26-064.html
+2026-05-10 06:19:26,367 - 600682 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-10 06:19:26,367 - 600682 - INFO - HTML validation report email sent for i-0441dafd1ae7252ad
+2026-05-10 06:19:26,613 - 600682 - INFO - Started i-0441dafd1ae7252ad in 0:03:27.650793
+2026-05-10 06:19:26,614 - 600682 - INFO - All instances processed.
+2026-05-10 06:19:26,619 - 600682 - INFO - Restart Total time: 0:14:19.788682
+2026-05-10 06:19:26,619 - 600682 - INFO - Auto-confirmed services are restarted
+2026-05-10 06:19:26,619 - 600682 - INFO - Confirmed - services are started
+2026-05-10 06:19:26,731 - 600682 - INFO - The following instances have failed the patch: []
+2026-05-10 06:19:26,732 - 600682 - INFO - No instances have failed the patch.
+2026-05-10 06:19:26,732 - 600682 - INFO - Total Patch Process time: 0:19:23.568249
+2026-05-10 06:20:27,308 - 600682 - INFO - Log file ./logs/patching_2026-05-10_Midea-Prod-App.log uploaded to s3://q2-2026-aws-security-patching/Midea-Prod-App_Patch/2026-05-10/patching_2026-05-10_Midea-Prod-App.log

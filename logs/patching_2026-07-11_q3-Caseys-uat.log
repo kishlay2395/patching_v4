@@ -1,0 +1,2076 @@
+2026-07-11 02:00:03,539 - 4113295 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 02:13:51,967 - 4113295 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 02:13:52,147 - 4113295 - INFO - Log file ./logs/backup_2026-07-11.log uploaded to s3://q3-2025-aws-security-patching/q3-Caseys-uat_Patch_Backup/2026-07-11/backup_2026-07-11.log
+2026-07-11 06:00:03,262 - 4122056 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-11 06:00:03,262 - 4122056 - INFO - Script Start Time: 2026-07-11 06:00:03
+2026-07-11 06:00:03,865 - 4122056 - INFO - Instance(s) selected for Patching: {'i-00b8693fee3c1ee13': '172.30.64.123', 'i-070855064a67a90ec': '172.30.64.15', 'i-0a90ff611587574ff': '172.30.64.9', 'i-0897a6852441bc494': '172.30.64.122'}
+2026-07-11 06:00:04,069 - 4122056 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 06:00:04,070 - 4122056 - INFO - Now patching instances at: 2026-07-11 06:00:04
+2026-07-11 06:00:09,410 - 4122056 - INFO - i-0897a6852441bc494: Cron was active = False
+2026-07-11 06:00:14,744 - 4122056 - INFO - i-0a90ff611587574ff: Cron was active = True
+2026-07-11 06:00:20,095 - 4122056 - INFO - i-00b8693fee3c1ee13: Cron was active = True
+2026-07-11 06:00:25,359 - 4122056 - INFO - i-070855064a67a90ec: Cron was active = True
+2026-07-11 06:00:25,586 - 4122056 - INFO - Health monitor crontab disabled on all instances
+2026-07-11 06:00:25,587 - 4122056 - INFO - Disabled cron for: ['i-0a90ff611587574ff', 'i-00b8693fee3c1ee13', 'i-070855064a67a90ec']
+2026-07-11 06:00:25,908 - 4122056 - INFO - Sent app_validation.py to i-0897a6852441bc494 (command_id: 51c91199-bf2a-4d60-87d2-1c9b847602dc)
+2026-07-11 06:00:55,983 - 4122056 - INFO - app_validation.py output for i-0897a6852441bc494:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:00:26.176815
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.122
+Hostname | ip-172-30-64-122.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 1.7G | 288.1G | 0% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.122:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 9
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.122 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | wcs_panda, wcs_inbound
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+wcs_panda | /data/batchapp/softeon/caseyswcsuat/plcdaemon_panda
+wcs_inbound | /data/batchapp/softeon/caseyswcsuat/mheinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:00:26.488374
+==============================================================================
+
+2026-07-11 06:00:55,983 - 4122056 - ERROR - app_validation.py errors for i-0897a6852441bc494:
+
+2026-07-11 06:00:55,985 - 4122056 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.122/172.30.64.122-BeforePatching-2026-07-11-06-00-55-984.log
+2026-07-11 06:00:56,212 - 4122056 - INFO - Sent app_validation.py to i-0a90ff611587574ff (command_id: e52914f5-b5c1-414b-a01b-0e9cf24db185)
+2026-07-11 06:01:26,292 - 4122056 - INFO - app_validation.py output for i-0a90ff611587574ff:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:00:56.589493
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.9
+Hostname | ip-172-30-64-9.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 41.5G | 198.4G | 17% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.9:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | thtwms_mheo, thtwms_vomobadm, thtwms_divla, thtwms_divm, thtwms_dwa, thtwms_event, thtwms_ict, thtwms_lbl, thtwms_otp, thtwms_apick, thtwms_repl, thtwms_rccl, thtwms_rplpu, thtwms_rpt, thtwms_1rpt, thtwms_rptex, thtwms_sch, thtwms_inbq, thtwms_wld, thtwms_lpick, thtwms_vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+thtwms_mheo | /data/batchapp/softeon/caseyswcsuat/mheoutbounddaemon
+thtwms_vomobadm | /data/batchapp/softeon/caseysthtuat/voiceadminserver
+thtwms_divla | /data/batchapp/softeon/caseysthtuat/divertlaneassignmentdaemon
+thtwms_divm | /data/batchapp/softeon/caseysthtuat/divertmessagedaemon
+thtwms_dwa | /data/batchapp/softeon/caseysthtuat/downloaddaemon
+thtwms_event | /data/batchapp/softeon/caseysthtuat/eventdaemon
+thtwms_ict | /data/batchapp/softeon/caseysthtuat/invcomputationbytaskdaemon
+thtwms_lbl | /data/batchapp/softeon/caseysthtuat/labeldaemon
+thtwms_otp | /data/batchapp/softeon/caseysthtuat/ordertruckplanning
+thtwms_apick | /data/batchapp/softeon/caseysthtuat/putwallpickconfirmationdaemon
+thtwms_repl | /data/batchapp/softeon/caseysthtuat/replenishmentdaemon
+thtwms_rccl | /data/batchapp/softeon/caseysthtuat/replenishmentpickloccanceldaemon
+thtwms_rplpu | /data/batchapp/softeon/caseysthtuat/replenishmentpriorityupdatedaemon
+thtwms_rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon
+thtwms_1rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon1
+thtwms_rptex | /data/batchapp/softeon/caseysthtuat/reportjqgridexportdaemon
+thtwms_sch | /data/batchapp/softeon/caseysthtuat/schedulardaemon
+thtwms_inbq | /data/batchapp/softeon/caseysthtuat/uploaddeamon
+thtwms_wld | /data/batchapp/softeon/caseysthtuat/wavelaunchdaemon
+thtwms_lpick | /data/batchapp/softeon/caseysthtuat/ptcdaemon
+thtwms_vomob | /data/batchapp/softeon/caseysthtuat/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+619906 | caseysthtrfuat | jboss730eap | caseysthtrf_jb7 | 8081 | 172.30.64.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfuat/standalone
+619721 | caseysthtuat | jboss730eap | caseystht_jb730 | 8080 | 172.30.64.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:00:59.092411
+==============================================================================
+
+2026-07-11 06:01:26,292 - 4122056 - ERROR - app_validation.py errors for i-0a90ff611587574ff:
+
+2026-07-11 06:01:26,294 - 4122056 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-BeforePatching-2026-07-11-06-01-26-294.log
+2026-07-11 06:01:26,578 - 4122056 - INFO - Sent app_validation.py to i-00b8693fee3c1ee13 (command_id: d1a3a003-1b0c-4d14-b128-e166861f21be)
+2026-07-11 06:01:56,645 - 4122056 - INFO - app_validation.py output for i-00b8693fee3c1ee13:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:01:26.908652
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.123
+Hostname | ip-172-30-64-123.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 43.7G | 196.1G | 18% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.123:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.123 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | casank_vomobadm, casank_dwa, casank_event, casank_lbl, casank_repl, casank_rccl, casank_rplpri, casank_rpt, casank_1rpt, casank_jqgrid, casank_sch, casank_inbq, casank_wld, casank_otp, casank_lpick, casank_vomob1, casank_nupai, casank_nupao, casank_apick, casank_ict, casank_mheo, casank_mhei, casank_csyconvi
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+casank_vomobadm | /data/batchapp/softeon/caseysankuat/voiceadminserver
+casank_dwa | /data/batchapp/softeon/caseysankuat/downloaddaemon
+casank_event | /data/batchapp/softeon/caseysankuat/eventdaemon
+casank_lbl | /data/batchapp/softeon/caseysankuat/labeldaemon
+casank_repl | /data/batchapp/softeon/caseysankuat/replenishmentdaemon
+casank_rccl | /data/batchapp/softeon/caseysankuat/replenishmentpickloccanceldaemon
+casank_rplpri | /data/batchapp/softeon/caseysankuat/replenishmentpriorityupdatedaemon
+casank_rpt | /data/batchapp/softeon/caseysankuat/reportdaemon
+casank_1rpt | /data/batchapp/softeon/caseysankuat/reportdaemon1
+casank_jqgrid | /data/batchapp/softeon/caseysankuat/reportjqgridexportdaemon
+casank_sch | /data/batchapp/softeon/caseysankuat/schedulardaemon
+casank_inbq | /data/batchapp/softeon/caseysankuat/uploaddeamon
+casank_wld | /data/batchapp/softeon/caseysankuat/wavelaunchdaemon
+casank_otp | /data/batchapp/softeon/caseysankuat/ordertruckplanning
+casank_lpick | /data/batchapp/softeon/caseysankuat/ptcdaemon
+casank_vomob1 | /data/batchapp/softeon/caseysankuat/voicemobiledaemon1
+casank_nupai | /data/batchapp/softeon/caseysankuat/numinainbounddaemon
+casank_nupao | /data/batchapp/softeon/caseysankuat/numinaoutbounddaemon
+casank_apick | /data/batchapp/softeon/caseysankuat/putwallpickconfirmationdaemon
+casank_ict | /data/batchapp/softeon/caseysankuat/ictdaemon
+casank_mheo | /data/batchapp/softeon/caseysankwcsuat/mheoutbounddaemon
+casank_mhei | /data/batchapp/softeon/caseysankwcsuat/mheinbounddaemon
+casank_csyconvi | /data/batchapp/softeon/caseysankwcsuat/conveyorinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2728776 | caseysankuat | jboss730eap | caseank_jb730p | 8080 | 172.30.64.123:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysankuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:01:27.784217
+==============================================================================
+
+2026-07-11 06:01:56,645 - 4122056 - ERROR - app_validation.py errors for i-00b8693fee3c1ee13:
+
+2026-07-11 06:01:56,647 - 4122056 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-BeforePatching-2026-07-11-06-01-56-646.log
+2026-07-11 06:01:56,854 - 4122056 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: 33f498a9-9c1a-4c16-a339-ce64b9902303)
+2026-07-11 06:02:26,924 - 4122056 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:01:57.285800
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 89.1G | 200.8G | 30% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | java, elastic_hsqldb, caseys_forto, elastic_feature_installer, caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+java | /data/data3/CASEYSPROD_HKP/CASEYSPROD_HKP_PROCESS
+elastic_hsqldb | /data/app/elastic-communicator/softeon/softwares/hsql/data
+caseys_forto | /data/batchapp/softeon/caseysuat/forteoutbounddaemon
+elastic_feature_installer | /data/app/elastic-communicator/softeon/softwares/release
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_wsq | /data/batchapp/softeon/caseysuat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4185286 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2768 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3127 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:02:04.246962
+==============================================================================
+
+2026-07-11 06:02:26,924 - 4122056 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-07-11 06:02:26,926 - 4122056 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-BeforePatching-2026-07-11-06-02-26-925.log
+2026-07-11 06:02:27,010 - 4122056 - INFO - Sending patch command to instance i-0897a6852441bc494
+2026-07-11 06:02:27,155 - 4122056 - INFO - Command sent successfully to instance i-0897a6852441bc494. Command ID: 7feb32e5-4927-47ea-a129-ecabab3dce9f
+2026-07-11 06:02:27,293 - 4122056 - INFO - Sending patch command to instance i-0a90ff611587574ff
+2026-07-11 06:02:27,399 - 4122056 - INFO - Command sent successfully to instance i-0a90ff611587574ff. Command ID: 2f7bc10d-3b6e-4a51-b71c-eb6dffb8f302
+2026-07-11 06:02:27,523 - 4122056 - INFO - Sending patch command to instance i-00b8693fee3c1ee13
+2026-07-11 06:02:27,611 - 4122056 - INFO - Command sent successfully to instance i-00b8693fee3c1ee13. Command ID: 2acd9054-2603-490b-85c6-9103564ebbe3
+2026-07-11 06:02:27,731 - 4122056 - INFO - Sending patch command to instance i-070855064a67a90ec
+2026-07-11 06:02:27,826 - 4122056 - INFO - Command sent successfully to instance i-070855064a67a90ec. Command ID: eab478dd-07b8-4894-8297-a75f1eb5bb55
+2026-07-11 06:22:02,526 - 4122056 - INFO - All patches applied successfully.
+2026-07-11 06:22:02,534 - 4122056 - INFO - Patching end time: 2026-07-11 06:22:02
+2026-07-11 06:22:02,534 - 4122056 - INFO - Patch Elapsed time: 0:21:58.463992
+2026-07-11 06:22:02,609 - 4122056 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 06:22:02,609 - 4122056 - INFO - Confirmed - services are stopped
+2026-07-11 06:22:10,160 - 4122056 - INFO - Discovered TG map: {'i-00b8693fee3c1ee13': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-ANK-UAT-WMS/8482fe87722d0fd9'], 'i-0a90ff611587574ff': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-RF-UAT-WMS/35bdf59a54979198', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-UAT-WMS/2394e0c3fbf79bfb'], 'i-070855064a67a90ec': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-JOP-UAT-EC/6a8986396e0c0225']}
+2026-07-11 06:22:10,412 - 4122056 - INFO - Stopping EC2 instance: i-0897a6852441bc494 at 2026-07-11 06:22:10
+2026-07-11 06:22:56,485 - 4122056 - INFO - Instance i-0897a6852441bc494 stopped successfully.
+2026-07-11 06:22:57,009 - 4122056 - INFO - Stopped i-0897a6852441bc494 in 0:00:46.597505
+2026-07-11 06:22:57,010 - 4122056 - INFO - Starting EC2 instance: i-0897a6852441bc494
+2026-07-11 06:23:12,957 - 4122056 - INFO - Instance i-0897a6852441bc494 started successfully.
+2026-07-11 06:23:12,958 - 4122056 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0897a6852441bc494...
+2026-07-11 06:24:53,326 - 4122056 - INFO - Sent app_validation.py to i-0897a6852441bc494 (command_id: 4b996b00-b401-4b0e-9874-3b969f325e1c)
+2026-07-11 06:25:23,418 - 4122056 - INFO - app_validation.py output for i-0897a6852441bc494:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:24:53.668808
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.122
+Hostname | ip-172-30-64-122.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 1.7G | 288.1G | 0% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.122 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 11
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | wcs_putwallb, wcs_putwalla, wcs_ptc, wcs_plcaind, wcs_plcind_b, wcs_label, wcs_csyconvi, wcs_csyconvo, wcs_cigarette, wcs_light_duty, wcs_sorter
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+wcs_putwallb | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_line_b
+wcs_putwalla | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_line_a
+wcs_ptc | /data/batchapp/softeon/caseyswcsuat/ptcdaemon
+wcs_plcaind | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexer_a
+wcs_plcind_b | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexer_b
+wcs_label | /data/batchapp/softeon/caseyswcsuat/labeldaemon
+wcs_csyconvi | /data/batchapp/softeon/caseyswcsuat/conveyorinbounddaemon
+wcs_csyconvo | /data/batchapp/softeon/caseyswcsuat/conveyoroutbounddaemon
+wcs_cigarette | /data/batchapp/softeon/caseyswcsuat/plcdaemon_cigarette
+wcs_light_duty | /data/batchapp/softeon/caseyswcsuat/plcdaemon_light_duty
+wcs_sorter | /data/batchapp/softeon/caseyswcsuat/plcdaemon_sorter
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:24:54.120807
+==============================================================================
+
+2026-07-11 06:25:23,418 - 4122056 - ERROR - app_validation.py errors for i-0897a6852441bc494:
+
+2026-07-11 06:25:23,420 - 4122056 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.122/172.30.64.122-AfterPatching-2026-07-11-06-25-23-419.log
+2026-07-11 06:25:23,472 - 4122056 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.122/172.30.64.122-Validation-details-2026-07-11-06-25-23-419.html
+2026-07-11 06:25:23,729 - 4122056 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 06:25:23,730 - 4122056 - INFO - HTML validation report email sent for i-0897a6852441bc494
+2026-07-11 06:25:23,730 - 4122056 - INFO - i-0897a6852441bc494: Cron was not active before patching - skipping retry thread.
+2026-07-11 06:25:24,249 - 4122056 - INFO - Started i-0897a6852441bc494 in 0:02:27.238756
+2026-07-11 06:25:24,249 - 4122056 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-11 06:27:24,323 - 4122056 - INFO - Deregistering i-0a90ff611587574ff from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-RF-UAT-WMS/35bdf59a54979198
+2026-07-11 06:27:24,435 - 4122056 - INFO - Deregistering i-0a90ff611587574ff from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-UAT-WMS/2394e0c3fbf79bfb
+2026-07-11 06:27:24,485 - 4122056 - INFO - Stopping EC2 instance: i-0a90ff611587574ff at 2026-07-11 06:27:24
+2026-07-11 06:29:41,336 - 4122056 - INFO - Instance i-0a90ff611587574ff stopped successfully.
+2026-07-11 06:29:41,835 - 4122056 - INFO - Stopped i-0a90ff611587574ff in 0:02:17.350387
+2026-07-11 06:29:41,836 - 4122056 - INFO - Starting EC2 instance: i-0a90ff611587574ff
+2026-07-11 06:29:57,709 - 4122056 - INFO - Instance i-0a90ff611587574ff started successfully.
+2026-07-11 06:29:57,709 - 4122056 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a90ff611587574ff...
+2026-07-11 06:31:37,721 - 4122056 - INFO - Registering i-0a90ff611587574ff to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-RF-UAT-WMS/35bdf59a54979198
+2026-07-11 06:31:37,919 - 4122056 - INFO - Registering i-0a90ff611587574ff to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-THT-UAT-WMS/2394e0c3fbf79bfb
+2026-07-11 06:34:08,773 - 4122056 - INFO - Sent app_validation.py to i-0a90ff611587574ff (command_id: 2807ee8c-3e05-441c-a999-7f8c88441b8e)
+2026-07-11 06:34:38,838 - 4122056 - INFO - app_validation.py output for i-0a90ff611587574ff:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:34:09.120441
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.9
+Hostname | ip-172-30-64-9.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 41.2G | 198.6G | 17% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | thtwcs_lpick, thtwms_divla, thtwms_putwall, thtwms_divm, thtwms_putwallb, thtwms_dwa, thtwms_plcinda, thtwms_event, thtwms_plcindb, thtwms_ict, thtwms_plrtrack, thtwms_lbl, thtwms_plreplen, thtwms_otp, thtwms_lbldn, thtwms_apick, thtwms_mhei, thtwms_repl, thtwms_mheo, thtwms_rccl, thtwms_rplpu, thtwms_rpt, thtwms_1rpt, thtwms_rptex, thtwms_sch, thtwms_inbq, thtwms_wld, thtwms_lpick
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+thtwcs_lpick | /data/batchapp/softeon/caseyswcsuat/ptcdaemon
+thtwms_divla | /data/batchapp/softeon/caseysthtuat/divertlaneassignmentdaemon
+thtwms_putwall | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_linea
+thtwms_divm | /data/batchapp/softeon/caseysthtuat/divertmessagedaemon
+thtwms_putwallb | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_lineb
+thtwms_dwa | /data/batchapp/softeon/caseysthtuat/downloaddaemon
+thtwms_plcinda | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexera
+thtwms_event | /data/batchapp/softeon/caseysthtuat/eventdaemon
+thtwms_plcindb | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexerb
+thtwms_ict | /data/batchapp/softeon/caseysthtuat/invcomputationbytaskdaemon
+thtwms_plrtrack | /data/batchapp/softeon/caseyswcsuat/plcdaemon_racetrack
+thtwms_lbl | /data/batchapp/softeon/caseysthtuat/labeldaemon
+thtwms_plreplen | /data/batchapp/softeon/caseyswcsuat/plcdaemon_replen
+thtwms_otp | /data/batchapp/softeon/caseysthtuat/ordertruckplanning
+thtwms_lbldn | /data/batchapp/softeon/caseyswcsuat/labeldaemon
+thtwms_apick | /data/batchapp/softeon/caseysthtuat/putwallpickconfirmationdaemon
+thtwms_mhei | /data/batchapp/softeon/caseyswcsuat/mheinbounddaemon
+thtwms_repl | /data/batchapp/softeon/caseysthtuat/replenishmentdaemon
+thtwms_mheo | /data/batchapp/softeon/caseyswcsuat/mheoutbounddaemon
+thtwms_rccl | /data/batchapp/softeon/caseysthtuat/replenishmentpickloccanceldaemon
+thtwms_rplpu | /data/batchapp/softeon/caseysthtuat/replenishmentpriorityupdatedaemon
+thtwms_rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon
+thtwms_1rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon1
+thtwms_rptex | /data/batchapp/softeon/caseysthtuat/reportjqgridexportdaemon
+thtwms_sch | /data/batchapp/softeon/caseysthtuat/schedulardaemon
+thtwms_inbq | /data/batchapp/softeon/caseysthtuat/uploaddeamon
+thtwms_wld | /data/batchapp/softeon/caseysthtuat/wavelaunchdaemon
+thtwms_lpick | /data/batchapp/softeon/caseysthtuat/ptcdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5012 | caseysthtrfuat | jboss730eap | caseysthtrf_jb7 | 8081 | 172.30.64.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfuat/standalone
+4816 | caseysthtuat | jboss730eap | caseystht_jb730 | 8080 | 172.30.64.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:34:11.740030
+==============================================================================
+
+2026-07-11 06:34:38,839 - 4122056 - ERROR - app_validation.py errors for i-0a90ff611587574ff:
+
+2026-07-11 06:34:38,840 - 4122056 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-AfterPatching-2026-07-11-06-34-38-840.log
+2026-07-11 06:34:38,895 - 4122056 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-Validation-details-2026-07-11-06-34-38-840.html
+2026-07-11 06:34:39,349 - 4122056 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 06:34:39,349 - 4122056 - INFO - HTML validation report email sent for i-0a90ff611587574ff
+2026-07-11 06:34:39,349 - 4122056 - INFO - [Retry-1] Waiting 600s for i-0a90ff611587574ff...
+2026-07-11 06:34:39,350 - 4122056 - INFO - RED - Background retry thread started for i-0a90ff611587574ff
+2026-07-11 06:34:39,873 - 4122056 - INFO - Started i-0a90ff611587574ff in 0:04:58.037037
+2026-07-11 06:34:39,874 - 4122056 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-11 06:36:39,974 - 4122056 - INFO - Deregistering i-00b8693fee3c1ee13 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-ANK-UAT-WMS/8482fe87722d0fd9
+2026-07-11 06:36:40,087 - 4122056 - INFO - Stopping EC2 instance: i-00b8693fee3c1ee13 at 2026-07-11 06:36:40
+2026-07-11 06:39:26,990 - 4122056 - INFO - Instance i-00b8693fee3c1ee13 stopped successfully.
+2026-07-11 06:39:27,488 - 4122056 - INFO - Stopped i-00b8693fee3c1ee13 in 0:02:47.400811
+2026-07-11 06:39:27,488 - 4122056 - INFO - Starting EC2 instance: i-00b8693fee3c1ee13
+2026-07-11 06:39:43,288 - 4122056 - INFO - Instance i-00b8693fee3c1ee13 started successfully.
+2026-07-11 06:39:43,288 - 4122056 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00b8693fee3c1ee13...
+2026-07-11 06:41:23,321 - 4122056 - INFO - Registering i-00b8693fee3c1ee13 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-ANK-UAT-WMS/8482fe87722d0fd9
+2026-07-11 06:41:53,873 - 4122056 - INFO - Sent app_validation.py to i-00b8693fee3c1ee13 (command_id: 4d8b6059-2a25-4dd8-b27b-0be195ec6dea)
+2026-07-11 06:42:23,968 - 4122056 - INFO - app_validation.py output for i-00b8693fee3c1ee13:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:41:54.223385
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.123
+Hostname | ip-172-30-64-123.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 43.8G | 196.1G | 18% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.123 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | casank_dwa, casank_event, casank_lbl, casank_repl, casank_rccl, casank_rplpri, casank_rpt, casank_1rpt, casank_jqgrid, casank_sch, casank_inbq, casank_wld, casank_otp, casank_lpick, casank_vomob1, casank_nupai, casank_apick, casank_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+casank_dwa | /data/batchapp/softeon/caseysankuat/downloaddaemon
+casank_event | /data/batchapp/softeon/caseysankuat/eventdaemon
+casank_lbl | /data/batchapp/softeon/caseysankuat/labeldaemon
+casank_repl | /data/batchapp/softeon/caseysankuat/replenishmentdaemon
+casank_rccl | /data/batchapp/softeon/caseysankuat/replenishmentpickloccanceldaemon
+casank_rplpri | /data/batchapp/softeon/caseysankuat/replenishmentpriorityupdatedaemon
+casank_rpt | /data/batchapp/softeon/caseysankuat/reportdaemon
+casank_1rpt | /data/batchapp/softeon/caseysankuat/reportdaemon1
+casank_jqgrid | /data/batchapp/softeon/caseysankuat/reportjqgridexportdaemon
+casank_sch | /data/batchapp/softeon/caseysankuat/schedulardaemon
+casank_inbq | /data/batchapp/softeon/caseysankuat/uploaddeamon
+casank_wld | /data/batchapp/softeon/caseysankuat/wavelaunchdaemon
+casank_otp | /data/batchapp/softeon/caseysankuat/ordertruckplanning
+casank_lpick | /data/batchapp/softeon/caseysankuat/ptcdaemon
+casank_vomob1 | /data/batchapp/softeon/caseysankuat/voicemobiledaemon1
+casank_nupai | /data/batchapp/softeon/caseysankuat/numinainbounddaemon
+casank_apick | /data/batchapp/softeon/caseysankuat/putwallpickconfirmationdaemon
+casank_ict | /data/batchapp/softeon/caseysankuat/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3616 | caseysankuat | jboss730eap | caseank_jb730p | 8080 | 172.30.64.123:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysankuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:41:55.867203
+==============================================================================
+
+2026-07-11 06:42:23,968 - 4122056 - ERROR - app_validation.py errors for i-00b8693fee3c1ee13:
+
+2026-07-11 06:42:23,970 - 4122056 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-AfterPatching-2026-07-11-06-42-23-970.log
+2026-07-11 06:42:24,024 - 4122056 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-Validation-details-2026-07-11-06-42-23-970.html
+2026-07-11 06:42:24,319 - 4122056 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 06:42:24,319 - 4122056 - INFO - HTML validation report email sent for i-00b8693fee3c1ee13
+2026-07-11 06:42:24,319 - 4122056 - INFO - [Retry-1] Waiting 600s for i-00b8693fee3c1ee13...
+2026-07-11 06:42:24,319 - 4122056 - INFO - RED - Background retry thread started for i-00b8693fee3c1ee13
+2026-07-11 06:42:24,807 - 4122056 - INFO - Started i-00b8693fee3c1ee13 in 0:02:57.318598
+2026-07-11 06:42:24,808 - 4122056 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-11 06:44:24,823 - 4122056 - INFO - Deregistering i-070855064a67a90ec from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2
+2026-07-11 06:44:24,944 - 4122056 - INFO - Deregistering i-070855064a67a90ec from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-JOP-UAT-EC/6a8986396e0c0225
+2026-07-11 06:44:24,997 - 4122056 - INFO - Stopping EC2 instance: i-070855064a67a90ec at 2026-07-11 06:44:24
+2026-07-11 06:44:39,781 - 4122056 - INFO - Sent app_validation.py to i-0a90ff611587574ff (command_id: 2cc54d13-5218-4d91-a36d-c41ffe11a091)
+2026-07-11 06:45:09,870 - 4122056 - INFO - app_validation.py output for i-0a90ff611587574ff:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:44:40.051786
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.9
+Hostname | ip-172-30-64-9.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 41.2G | 198.7G | 17% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 30
+Non-Standalone Java Processes | thtwcs_lpick, thtwms_divla, thtwms_putwall, thtwms_divm, thtwms_putwallb, thtwms_dwa, thtwms_plcinda, thtwms_event, thtwms_plcindb, thtwms_ict, thtwms_plrtrack, thtwms_lbl, thtwms_plreplen, thtwms_otp, thtwms_lbldn, thtwms_apick, thtwms_mhei, thtwms_repl, thtwms_mheo, thtwms_rccl, thtwms_rplpu, thtwms_rpt, thtwms_1rpt, thtwms_rptex, thtwms_sch, thtwms_inbq, thtwms_wld, thtwms_lpick, thtwms_vomob, thtwms_vomobadm
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 30
+Java-Name | Java-Path
+thtwcs_lpick | /data/batchapp/softeon/caseyswcsuat/ptcdaemon
+thtwms_divla | /data/batchapp/softeon/caseysthtuat/divertlaneassignmentdaemon
+thtwms_putwall | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_linea
+thtwms_divm | /data/batchapp/softeon/caseysthtuat/divertmessagedaemon
+thtwms_putwallb | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_lineb
+thtwms_dwa | /data/batchapp/softeon/caseysthtuat/downloaddaemon
+thtwms_plcinda | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexera
+thtwms_event | /data/batchapp/softeon/caseysthtuat/eventdaemon
+thtwms_plcindb | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexerb
+thtwms_ict | /data/batchapp/softeon/caseysthtuat/invcomputationbytaskdaemon
+thtwms_plrtrack | /data/batchapp/softeon/caseyswcsuat/plcdaemon_racetrack
+thtwms_lbl | /data/batchapp/softeon/caseysthtuat/labeldaemon
+thtwms_plreplen | /data/batchapp/softeon/caseyswcsuat/plcdaemon_replen
+thtwms_otp | /data/batchapp/softeon/caseysthtuat/ordertruckplanning
+thtwms_lbldn | /data/batchapp/softeon/caseyswcsuat/labeldaemon
+thtwms_apick | /data/batchapp/softeon/caseysthtuat/putwallpickconfirmationdaemon
+thtwms_mhei | /data/batchapp/softeon/caseyswcsuat/mheinbounddaemon
+thtwms_repl | /data/batchapp/softeon/caseysthtuat/replenishmentdaemon
+thtwms_mheo | /data/batchapp/softeon/caseyswcsuat/mheoutbounddaemon
+thtwms_rccl | /data/batchapp/softeon/caseysthtuat/replenishmentpickloccanceldaemon
+thtwms_rplpu | /data/batchapp/softeon/caseysthtuat/replenishmentpriorityupdatedaemon
+thtwms_rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon
+thtwms_1rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon1
+thtwms_rptex | /data/batchapp/softeon/caseysthtuat/reportjqgridexportdaemon
+thtwms_sch | /data/batchapp/softeon/caseysthtuat/schedulardaemon
+thtwms_inbq | /data/batchapp/softeon/caseysthtuat/uploaddeamon
+thtwms_wld | /data/batchapp/softeon/caseysthtuat/wavelaunchdaemon
+thtwms_lpick | /data/batchapp/softeon/caseysthtuat/ptcdaemon
+thtwms_vomob | /data/batchapp/softeon/caseysthtuat/voicemobiledaemon
+thtwms_vomobadm | /data/batchapp/softeon/caseysthtuat/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5012 | caseysthtrfuat | jboss730eap | caseysthtrf_jb7 | 8081 | 172.30.64.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfuat/standalone
+4816 | caseysthtuat | jboss730eap | caseystht_jb730 | 8080 | 172.30.64.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:44:40.915731
+==============================================================================
+
+2026-07-11 06:45:09,870 - 4122056 - ERROR - app_validation.py errors for i-0a90ff611587574ff:
+
+2026-07-11 06:45:09,872 - 4122056 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-AfterPatching-Retry1-2026-07-11-06-45-09-871.log
+2026-07-11 06:45:09,926 - 4122056 - INFO - [Retry-1] RED detected for Caseys THT UAT Application and Batch Server-1 (172.30.64.9), retrying... (Total waited: 600s)
+2026-07-11 06:45:09,926 - 4122056 - INFO - [Retry-2] Waiting 600s for i-0a90ff611587574ff...
+2026-07-11 06:45:56,354 - 4122056 - INFO - Instance i-070855064a67a90ec stopped successfully.
+2026-07-11 06:45:56,850 - 4122056 - INFO - Stopped i-070855064a67a90ec in 0:01:31.853157
+2026-07-11 06:45:56,851 - 4122056 - INFO - Starting EC2 instance: i-070855064a67a90ec
+2026-07-11 06:46:12,859 - 4122056 - INFO - Instance i-070855064a67a90ec started successfully.
+2026-07-11 06:46:12,860 - 4122056 - INFO - Waiting 100 seconds for SSM agent to be ready on i-070855064a67a90ec...
+2026-07-11 06:47:52,881 - 4122056 - INFO - Registering i-070855064a67a90ec to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2
+2026-07-11 06:47:53,114 - 4122056 - INFO - Registering i-070855064a67a90ec to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-JOP-UAT-EC/6a8986396e0c0225
+2026-07-11 06:51:54,232 - 4122056 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: 6ebc4e1c-e964-4033-afe8-f58e867d2857)
+2026-07-11 06:52:24,320 - 4122056 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:51:54.606943
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 88.7G | 201.1G | 30% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 25
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | elastic_feature_installer, elastic_hsqldb, caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+elastic_feature_installer | /data/app/elastic-communicator/softeon/softwares/release
+elastic_hsqldb | /data/app/elastic-communicator/softeon/softwares/hsql/data
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_wsq | /data/batchapp/softeon/caseysuat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2618 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2948 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3163 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:52:00.719041
+==============================================================================
+
+2026-07-11 06:52:24,320 - 4122056 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-07-11 06:52:24,322 - 4122056 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-AfterPatching-2026-07-11-06-52-24-321.log
+2026-07-11 06:52:24,375 - 4122056 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-Validation-details-2026-07-11-06-52-24-321.html
+2026-07-11 06:52:24,769 - 4122056 - INFO - Sent app_validation.py to i-00b8693fee3c1ee13 (command_id: 2e8f5c96-6a5d-47fe-910e-412c4ffdefb9)
+2026-07-11 06:52:24,819 - 4122056 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 06:52:24,819 - 4122056 - INFO - HTML validation report email sent for i-070855064a67a90ec
+2026-07-11 06:52:24,820 - 4122056 - INFO - [Retry-1] Waiting 600s for i-070855064a67a90ec...
+2026-07-11 06:52:24,820 - 4122056 - INFO - RED - Background retry thread started for i-070855064a67a90ec
+2026-07-11 06:52:25,305 - 4122056 - INFO - Started i-070855064a67a90ec in 0:06:28.454077
+2026-07-11 06:52:25,306 - 4122056 - INFO - All instances processed.
+2026-07-11 06:52:25,310 - 4122056 - INFO - Restart Total time: 0:30:22.456103
+2026-07-11 06:52:25,311 - 4122056 - INFO - Auto-confirmed services are restarted
+2026-07-11 06:52:25,311 - 4122056 - INFO - Confirmed - services are started
+2026-07-11 06:52:25,431 - 4122056 - INFO - The following instances have failed the patch: []
+2026-07-11 06:52:25,431 - 4122056 - INFO - No instances have failed the patch.
+2026-07-11 06:52:25,431 - 4122056 - INFO - Total Patch Process time: 0:52:22.168186
+2026-07-11 06:52:54,834 - 4122056 - INFO - app_validation.py output for i-00b8693fee3c1ee13:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:52:25.030479
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.123
+Hostname | ip-172-30-64-123.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 43.7G | 196.1G | 18% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.123 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | casank_dwa, casank_event, casank_lbl, casank_repl, casank_rccl, casank_rpt, casank_1rpt, casank_jqgrid, casank_sch, casank_inbq, casank_wld, casank_otp, casank_lpick, casank_vomob1, casank_nupai, casank_nupao, casank_apick, casank_ict, casank_panda, casank_csyconvo, casank_csyconvi, casank_mhei
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+casank_dwa | /data/batchapp/softeon/caseysankuat/downloaddaemon
+casank_event | /data/batchapp/softeon/caseysankuat/eventdaemon
+casank_lbl | /data/batchapp/softeon/caseysankuat/labeldaemon
+casank_repl | /data/batchapp/softeon/caseysankuat/replenishmentdaemon
+casank_rccl | /data/batchapp/softeon/caseysankuat/replenishmentpickloccanceldaemon
+casank_rpt | /data/batchapp/softeon/caseysankuat/reportdaemon
+casank_1rpt | /data/batchapp/softeon/caseysankuat/reportdaemon1
+casank_jqgrid | /data/batchapp/softeon/caseysankuat/reportjqgridexportdaemon
+casank_sch | /data/batchapp/softeon/caseysankuat/schedulardaemon
+casank_inbq | /data/batchapp/softeon/caseysankuat/uploaddeamon
+casank_wld | /data/batchapp/softeon/caseysankuat/wavelaunchdaemon
+casank_otp | /data/batchapp/softeon/caseysankuat/ordertruckplanning
+casank_lpick | /data/batchapp/softeon/caseysankuat/ptcdaemon
+casank_vomob1 | /data/batchapp/softeon/caseysankuat/voicemobiledaemon1
+casank_nupai | /data/batchapp/softeon/caseysankuat/numinainbounddaemon
+casank_nupao | /data/batchapp/softeon/caseysankuat/numinaoutbounddaemon
+casank_apick | /data/batchapp/softeon/caseysankuat/putwallpickconfirmationdaemon
+casank_ict | /data/batchapp/softeon/caseysankuat/ictdaemon
+casank_panda | /data/batchapp/softeon/caseysankwcsuat/plcdaemon_panda
+casank_csyconvo | /data/batchapp/softeon/caseysankwcsuat/conveyoroutbounddaemon
+casank_csyconvi | /data/batchapp/softeon/caseysankwcsuat/conveyorinbounddaemon
+casank_mhei | /data/batchapp/softeon/caseysankwcsuat/mheinbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3616 | caseysankuat | jboss730eap | caseank_jb730p | 8080 | 172.30.64.123:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysankuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:52:26.027820
+==============================================================================
+
+2026-07-11 06:52:54,835 - 4122056 - ERROR - app_validation.py errors for i-00b8693fee3c1ee13:
+
+2026-07-11 06:52:54,836 - 4122056 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-AfterPatching-Retry1-2026-07-11-06-52-54-836.log
+2026-07-11 06:52:54,890 - 4122056 - INFO - [Retry-1] RED detected for Caseys ANK UAT Application and Batch Server - 1 (172.30.64.123), retrying... (Total waited: 600s)
+2026-07-11 06:52:54,890 - 4122056 - INFO - [Retry-2] Waiting 600s for i-00b8693fee3c1ee13...
+2026-07-11 06:53:26,260 - 4122056 - INFO - Log file ./logs/patching_2026-07-11_q3-Caseys-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-Caseys-uat_Patch/2026-07-11/patching_2026-07-11_q3-Caseys-uat.log
+2026-07-11 06:55:10,164 - 4122056 - INFO - Sent app_validation.py to i-0a90ff611587574ff (command_id: 4ac773b9-c683-4908-876d-7a1c6feeb342)
+2026-07-11 06:55:40,227 - 4122056 - INFO - app_validation.py output for i-0a90ff611587574ff:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 10:55:10.424324
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.9
+Hostname | ip-172-30-64-9.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 41.2G | 198.7G | 17% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 30
+Non-Standalone Java Processes | thtwcs_lpick, thtwms_divla, thtwms_putwall, thtwms_divm, thtwms_putwallb, thtwms_dwa, thtwms_plcinda, thtwms_event, thtwms_plcindb, thtwms_ict, thtwms_plrtrack, thtwms_lbl, thtwms_plreplen, thtwms_otp, thtwms_lbldn, thtwms_apick, thtwms_mhei, thtwms_repl, thtwms_mheo, thtwms_rccl, thtwms_rplpu, thtwms_rpt, thtwms_1rpt, thtwms_rptex, thtwms_sch, thtwms_inbq, thtwms_wld, thtwms_lpick, thtwms_vomob, thtwms_vomobadm
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 30
+Java-Name | Java-Path
+thtwcs_lpick | /data/batchapp/softeon/caseyswcsuat/ptcdaemon
+thtwms_divla | /data/batchapp/softeon/caseysthtuat/divertlaneassignmentdaemon
+thtwms_putwall | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_linea
+thtwms_divm | /data/batchapp/softeon/caseysthtuat/divertmessagedaemon
+thtwms_putwallb | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_lineb
+thtwms_dwa | /data/batchapp/softeon/caseysthtuat/downloaddaemon
+thtwms_plcinda | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexera
+thtwms_event | /data/batchapp/softeon/caseysthtuat/eventdaemon
+thtwms_plcindb | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexerb
+thtwms_ict | /data/batchapp/softeon/caseysthtuat/invcomputationbytaskdaemon
+thtwms_plrtrack | /data/batchapp/softeon/caseyswcsuat/plcdaemon_racetrack
+thtwms_lbl | /data/batchapp/softeon/caseysthtuat/labeldaemon
+thtwms_plreplen | /data/batchapp/softeon/caseyswcsuat/plcdaemon_replen
+thtwms_otp | /data/batchapp/softeon/caseysthtuat/ordertruckplanning
+thtwms_lbldn | /data/batchapp/softeon/caseyswcsuat/labeldaemon
+thtwms_apick | /data/batchapp/softeon/caseysthtuat/putwallpickconfirmationdaemon
+thtwms_mhei | /data/batchapp/softeon/caseyswcsuat/mheinbounddaemon
+thtwms_repl | /data/batchapp/softeon/caseysthtuat/replenishmentdaemon
+thtwms_mheo | /data/batchapp/softeon/caseyswcsuat/mheoutbounddaemon
+thtwms_rccl | /data/batchapp/softeon/caseysthtuat/replenishmentpickloccanceldaemon
+thtwms_rplpu | /data/batchapp/softeon/caseysthtuat/replenishmentpriorityupdatedaemon
+thtwms_rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon
+thtwms_1rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon1
+thtwms_rptex | /data/batchapp/softeon/caseysthtuat/reportjqgridexportdaemon
+thtwms_sch | /data/batchapp/softeon/caseysthtuat/schedulardaemon
+thtwms_inbq | /data/batchapp/softeon/caseysthtuat/uploaddeamon
+thtwms_wld | /data/batchapp/softeon/caseysthtuat/wavelaunchdaemon
+thtwms_lpick | /data/batchapp/softeon/caseysthtuat/ptcdaemon
+thtwms_vomob | /data/batchapp/softeon/caseysthtuat/voicemobiledaemon
+thtwms_vomobadm | /data/batchapp/softeon/caseysthtuat/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5012 | caseysthtrfuat | jboss730eap | caseysthtrf_jb7 | 8081 | 172.30.64.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfuat/standalone
+4816 | caseysthtuat | jboss730eap | caseystht_jb730 | 8080 | 172.30.64.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 10:55:11.403455
+==============================================================================
+
+2026-07-11 06:55:40,227 - 4122056 - ERROR - app_validation.py errors for i-0a90ff611587574ff:
+
+2026-07-11 06:55:40,229 - 4122056 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-AfterPatching-Retry2-2026-07-11-06-55-40-228.log
+2026-07-11 06:55:40,285 - 4122056 - INFO - [Retry-2] RED detected for Caseys THT UAT Application and Batch Server-1 (172.30.64.9), retrying... (Total waited: 1200s)
+2026-07-11 06:55:40,286 - 4122056 - INFO - [Retry-3] Waiting 600s for i-0a90ff611587574ff...
+2026-07-11 07:02:25,133 - 4122056 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: 68999408-a716-4c81-b753-6e14c78f3b0e)
+2026-07-11 07:02:55,207 - 4122056 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:02:25.393792
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 88.7G | 201.2G | 30% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | elastic_feature_installer, elastic_hsqldb, caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_wsq, caseys_forto
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+elastic_feature_installer | /data/app/elastic-communicator/softeon/softwares/release
+elastic_hsqldb | /data/app/elastic-communicator/softeon/softwares/hsql/data
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_wsq | /data/batchapp/softeon/caseysuat/wsqdaemon
+caseys_forto | /data/batchapp/softeon/caseysuat/forteoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2618 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2948 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3163 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:02:26.494211
+==============================================================================
+
+2026-07-11 07:02:55,208 - 4122056 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-07-11 07:02:55,212 - 4122056 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-AfterPatching-Retry1-2026-07-11-07-02-55-212.log
+2026-07-11 07:02:55,240 - 4122056 - INFO - Sent app_validation.py to i-00b8693fee3c1ee13 (command_id: 58b0541e-5055-40a6-9af0-b325039d42a4)
+2026-07-11 07:02:55,268 - 4122056 - INFO - [Retry-1] RED detected for Caseys JOP UAT Application and Batch Server - 1 (172.30.64.15), retrying... (Total waited: 600s)
+2026-07-11 07:02:55,268 - 4122056 - INFO - [Retry-2] Waiting 600s for i-070855064a67a90ec...
+2026-07-11 07:03:25,331 - 4122056 - INFO - app_validation.py output for i-00b8693fee3c1ee13:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:02:55.491184
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.123
+Hostname | ip-172-30-64-123.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 43.8G | 196.1G | 18% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.123 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | casank_dwa, casank_event, casank_lbl, casank_repl, casank_rccl, casank_rpt, casank_1rpt, casank_jqgrid, casank_sch, casank_inbq, casank_wld, casank_otp, casank_lpick, casank_vomob1, casank_nupai, casank_nupao, casank_apick, casank_ict, casank_panda, casank_csyconvo, casank_csyconvi, casank_mhei, casank_mheo, casank_vomobadm, casank_rplpri
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+casank_dwa | /data/batchapp/softeon/caseysankuat/downloaddaemon
+casank_event | /data/batchapp/softeon/caseysankuat/eventdaemon
+casank_lbl | /data/batchapp/softeon/caseysankuat/labeldaemon
+casank_repl | /data/batchapp/softeon/caseysankuat/replenishmentdaemon
+casank_rccl | /data/batchapp/softeon/caseysankuat/replenishmentpickloccanceldaemon
+casank_rpt | /data/batchapp/softeon/caseysankuat/reportdaemon
+casank_1rpt | /data/batchapp/softeon/caseysankuat/reportdaemon1
+casank_jqgrid | /data/batchapp/softeon/caseysankuat/reportjqgridexportdaemon
+casank_sch | /data/batchapp/softeon/caseysankuat/schedulardaemon
+casank_inbq | /data/batchapp/softeon/caseysankuat/uploaddeamon
+casank_wld | /data/batchapp/softeon/caseysankuat/wavelaunchdaemon
+casank_otp | /data/batchapp/softeon/caseysankuat/ordertruckplanning
+casank_lpick | /data/batchapp/softeon/caseysankuat/ptcdaemon
+casank_vomob1 | /data/batchapp/softeon/caseysankuat/voicemobiledaemon1
+casank_nupai | /data/batchapp/softeon/caseysankuat/numinainbounddaemon
+casank_nupao | /data/batchapp/softeon/caseysankuat/numinaoutbounddaemon
+casank_apick | /data/batchapp/softeon/caseysankuat/putwallpickconfirmationdaemon
+casank_ict | /data/batchapp/softeon/caseysankuat/ictdaemon
+casank_panda | /data/batchapp/softeon/caseysankwcsuat/plcdaemon_panda
+casank_csyconvo | /data/batchapp/softeon/caseysankwcsuat/conveyoroutbounddaemon
+casank_csyconvi | /data/batchapp/softeon/caseysankwcsuat/conveyorinbounddaemon
+casank_mhei | /data/batchapp/softeon/caseysankwcsuat/mheinbounddaemon
+casank_mheo | /data/batchapp/softeon/caseysankwcsuat/mheoutbounddaemon
+casank_vomobadm | /data/batchapp/softeon/caseysankuat/voiceadminserver
+casank_rplpri | /data/batchapp/softeon/caseysankuat/replenishmentpriorityupdatedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3616 | caseysankuat | jboss730eap | caseank_jb730p | 8080 | 172.30.64.123:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysankuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:02:56.238601
+==============================================================================
+
+2026-07-11 07:03:25,331 - 4122056 - ERROR - app_validation.py errors for i-00b8693fee3c1ee13:
+
+2026-07-11 07:03:25,334 - 4122056 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-AfterPatching-Retry2-2026-07-11-07-03-25-333.log
+2026-07-11 07:03:25,387 - 4122056 - INFO - [Retry-2] RED detected for Caseys ANK UAT Application and Batch Server - 1 (172.30.64.123), retrying... (Total waited: 1200s)
+2026-07-11 07:03:25,387 - 4122056 - INFO - [Retry-3] Waiting 600s for i-00b8693fee3c1ee13...
+2026-07-11 07:05:40,557 - 4122056 - INFO - Sent app_validation.py to i-0a90ff611587574ff (command_id: e427a672-e055-4cbd-b850-0f59e6821177)
+2026-07-11 07:06:10,651 - 4122056 - INFO - app_validation.py output for i-0a90ff611587574ff:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:05:40.814811
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.9
+Hostname | ip-172-30-64-9.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 41.2G | 198.7G | 17% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.9 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 30
+Non-Standalone Java Processes | thtwcs_lpick, thtwms_divla, thtwms_putwall, thtwms_divm, thtwms_putwallb, thtwms_dwa, thtwms_plcinda, thtwms_event, thtwms_plcindb, thtwms_ict, thtwms_plrtrack, thtwms_lbl, thtwms_plreplen, thtwms_otp, thtwms_lbldn, thtwms_apick, thtwms_mhei, thtwms_repl, thtwms_mheo, thtwms_rccl, thtwms_rplpu, thtwms_rpt, thtwms_1rpt, thtwms_rptex, thtwms_sch, thtwms_inbq, thtwms_wld, thtwms_lpick, thtwms_vomob, thtwms_vomobadm
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 30
+Java-Name | Java-Path
+thtwcs_lpick | /data/batchapp/softeon/caseyswcsuat/ptcdaemon
+thtwms_divla | /data/batchapp/softeon/caseysthtuat/divertlaneassignmentdaemon
+thtwms_putwall | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_linea
+thtwms_divm | /data/batchapp/softeon/caseysthtuat/divertmessagedaemon
+thtwms_putwallb | /data/batchapp/softeon/caseyswcsuat/putwalldaemon_lineb
+thtwms_dwa | /data/batchapp/softeon/caseysthtuat/downloaddaemon
+thtwms_plcinda | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexera
+thtwms_event | /data/batchapp/softeon/caseysthtuat/eventdaemon
+thtwms_plcindb | /data/batchapp/softeon/caseyswcsuat/plcdaemon_indexerb
+thtwms_ict | /data/batchapp/softeon/caseysthtuat/invcomputationbytaskdaemon
+thtwms_plrtrack | /data/batchapp/softeon/caseyswcsuat/plcdaemon_racetrack
+thtwms_lbl | /data/batchapp/softeon/caseysthtuat/labeldaemon
+thtwms_plreplen | /data/batchapp/softeon/caseyswcsuat/plcdaemon_replen
+thtwms_otp | /data/batchapp/softeon/caseysthtuat/ordertruckplanning
+thtwms_lbldn | /data/batchapp/softeon/caseyswcsuat/labeldaemon
+thtwms_apick | /data/batchapp/softeon/caseysthtuat/putwallpickconfirmationdaemon
+thtwms_mhei | /data/batchapp/softeon/caseyswcsuat/mheinbounddaemon
+thtwms_repl | /data/batchapp/softeon/caseysthtuat/replenishmentdaemon
+thtwms_mheo | /data/batchapp/softeon/caseyswcsuat/mheoutbounddaemon
+thtwms_rccl | /data/batchapp/softeon/caseysthtuat/replenishmentpickloccanceldaemon
+thtwms_rplpu | /data/batchapp/softeon/caseysthtuat/replenishmentpriorityupdatedaemon
+thtwms_rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon
+thtwms_1rpt | /data/batchapp/softeon/caseysthtuat/reportdaemon1
+thtwms_rptex | /data/batchapp/softeon/caseysthtuat/reportjqgridexportdaemon
+thtwms_sch | /data/batchapp/softeon/caseysthtuat/schedulardaemon
+thtwms_inbq | /data/batchapp/softeon/caseysthtuat/uploaddeamon
+thtwms_wld | /data/batchapp/softeon/caseysthtuat/wavelaunchdaemon
+thtwms_lpick | /data/batchapp/softeon/caseysthtuat/ptcdaemon
+thtwms_vomob | /data/batchapp/softeon/caseysthtuat/voicemobiledaemon
+thtwms_vomobadm | /data/batchapp/softeon/caseysthtuat/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5012 | caseysthtrfuat | jboss730eap | caseysthtrf_jb7 | 8081 | 172.30.64.9:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfuat/standalone
+4816 | caseysthtuat | jboss730eap | caseystht_jb730 | 8080 | 172.30.64.9:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:05:41.679177
+==============================================================================
+
+2026-07-11 07:06:10,652 - 4122056 - ERROR - app_validation.py errors for i-0a90ff611587574ff:
+
+2026-07-11 07:06:10,653 - 4122056 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.9/172.30.64.9-AfterPatching-Retry3-2026-07-11-07-06-10-653.log
+2026-07-11 07:06:10,893 - 4122056 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 07:06:10,895 - 4122056 - WARNING - [Retry] Timeout - auto cron enabled for i-0a90ff611587574ff
+2026-07-11 07:12:55,689 - 4122056 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: 51488653-f06b-47cf-af0e-beb57117abc6)
+2026-07-11 07:13:25,702 - 4122056 - INFO - Sent app_validation.py to i-00b8693fee3c1ee13 (command_id: 8894747e-ce88-43ca-9581-eae69fbcc79d)
+2026-07-11 07:13:25,783 - 4122056 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:12:56.075618
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 88.5G | 201.3G | 30% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | elastic_feature_installer, elastic_hsqldb, caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_wsq, caseys_forto
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+elastic_feature_installer | /data/app/elastic-communicator/softeon/softwares/release
+elastic_hsqldb | /data/app/elastic-communicator/softeon/softwares/hsql/data
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_wsq | /data/batchapp/softeon/caseysuat/wsqdaemon
+caseys_forto | /data/batchapp/softeon/caseysuat/forteoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2618 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2948 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3163 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:12:58.552278
+==============================================================================
+
+2026-07-11 07:13:25,783 - 4122056 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-07-11 07:13:25,784 - 4122056 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-AfterPatching-Retry2-2026-07-11-07-13-25-784.log
+2026-07-11 07:13:25,837 - 4122056 - INFO - [Retry-2] RED detected for Caseys JOP UAT Application and Batch Server - 1 (172.30.64.15), retrying... (Total waited: 1200s)
+2026-07-11 07:13:25,838 - 4122056 - INFO - [Retry-3] Waiting 600s for i-070855064a67a90ec...
+2026-07-11 07:13:55,798 - 4122056 - INFO - app_validation.py output for i-00b8693fee3c1ee13:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:13:25.966965
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.123
+Hostname | ip-172-30-64-123.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 43.8G | 196.1G | 18% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.123:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.123 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 25
+Non-Standalone Java Processes | casank_dwa, casank_event, casank_lbl, casank_repl, casank_rccl, casank_rpt, casank_1rpt, casank_jqgrid, casank_sch, casank_inbq, casank_wld, casank_otp, casank_lpick, casank_vomob1, casank_nupai, casank_nupao, casank_apick, casank_ict, casank_panda, casank_csyconvo, casank_csyconvi, casank_mhei, casank_mheo, casank_vomobadm, casank_rplpri
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 25
+Java-Name | Java-Path
+casank_dwa | /data/batchapp/softeon/caseysankuat/downloaddaemon
+casank_event | /data/batchapp/softeon/caseysankuat/eventdaemon
+casank_lbl | /data/batchapp/softeon/caseysankuat/labeldaemon
+casank_repl | /data/batchapp/softeon/caseysankuat/replenishmentdaemon
+casank_rccl | /data/batchapp/softeon/caseysankuat/replenishmentpickloccanceldaemon
+casank_rpt | /data/batchapp/softeon/caseysankuat/reportdaemon
+casank_1rpt | /data/batchapp/softeon/caseysankuat/reportdaemon1
+casank_jqgrid | /data/batchapp/softeon/caseysankuat/reportjqgridexportdaemon
+casank_sch | /data/batchapp/softeon/caseysankuat/schedulardaemon
+casank_inbq | /data/batchapp/softeon/caseysankuat/uploaddeamon
+casank_wld | /data/batchapp/softeon/caseysankuat/wavelaunchdaemon
+casank_otp | /data/batchapp/softeon/caseysankuat/ordertruckplanning
+casank_lpick | /data/batchapp/softeon/caseysankuat/ptcdaemon
+casank_vomob1 | /data/batchapp/softeon/caseysankuat/voicemobiledaemon1
+casank_nupai | /data/batchapp/softeon/caseysankuat/numinainbounddaemon
+casank_nupao | /data/batchapp/softeon/caseysankuat/numinaoutbounddaemon
+casank_apick | /data/batchapp/softeon/caseysankuat/putwallpickconfirmationdaemon
+casank_ict | /data/batchapp/softeon/caseysankuat/ictdaemon
+casank_panda | /data/batchapp/softeon/caseysankwcsuat/plcdaemon_panda
+casank_csyconvo | /data/batchapp/softeon/caseysankwcsuat/conveyoroutbounddaemon
+casank_csyconvi | /data/batchapp/softeon/caseysankwcsuat/conveyorinbounddaemon
+casank_mhei | /data/batchapp/softeon/caseysankwcsuat/mheinbounddaemon
+casank_mheo | /data/batchapp/softeon/caseysankwcsuat/mheoutbounddaemon
+casank_vomobadm | /data/batchapp/softeon/caseysankuat/voiceadminserver
+casank_rplpri | /data/batchapp/softeon/caseysankuat/replenishmentpriorityupdatedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3616 | caseysankuat | jboss730eap | caseank_jb730p | 8080 | 172.30.64.123:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysankuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:13:26.711200
+==============================================================================
+
+2026-07-11 07:13:55,798 - 4122056 - ERROR - app_validation.py errors for i-00b8693fee3c1ee13:
+
+2026-07-11 07:13:55,800 - 4122056 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.123/172.30.64.123-AfterPatching-Retry3-2026-07-11-07-13-55-800.log
+2026-07-11 07:13:56,142 - 4122056 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 07:13:56,143 - 4122056 - WARNING - [Retry] Timeout - auto cron enabled for i-00b8693fee3c1ee13
+2026-07-11 07:23:26,179 - 4122056 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: b55080ec-abf8-4b54-b7a1-5603ea06e6a8)
+2026-07-11 07:23:56,273 - 4122056 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 11:23:26.451193
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 88.7G | 201.2G | 30% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 4.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | elastic_feature_installer, elastic_hsqldb, caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_wsq, caseys_forto
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+elastic_feature_installer | /data/app/elastic-communicator/softeon/softwares/release
+elastic_hsqldb | /data/app/elastic-communicator/softeon/softwares/hsql/data
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_wsq | /data/batchapp/softeon/caseysuat/wsqdaemon
+caseys_forto | /data/batchapp/softeon/caseysuat/forteoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2618 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2948 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3163 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 11:23:27.444765
+==============================================================================
+
+2026-07-11 07:23:56,273 - 4122056 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-07-11 07:23:56,274 - 4122056 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-11/q3-Caseys-uat/172.30.64.15/172.30.64.15-AfterPatching-Retry3-2026-07-11-07-23-56-274.log
+2026-07-11 07:23:56,542 - 4122056 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 07:23:56,543 - 4122056 - WARNING - [Retry] Timeout - auto cron enabled for i-070855064a67a90ec

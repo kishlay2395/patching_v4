@@ -1,0 +1,456 @@
+2026-05-06 02:00:03,172 - 369300 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-06 02:00:03,173 - 369300 - INFO - Script Start Time: 2026-05-06 02:00:03
+2026-05-06 02:00:04,050 - 369300 - INFO - Instance(s) selected for Patching: {'i-0cbabb49a625088ec': '10.0.10.6', 'i-0bfcee6a60bd9f0c8': '10.0.10.36'}
+2026-05-06 02:00:04,122 - 369300 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-06 02:00:04,123 - 369300 - INFO - Now patching instances at: 2026-05-06 02:00:04
+2026-05-06 02:00:04,240 - 369300 - INFO - Sending patch command to instance i-0bfcee6a60bd9f0c8
+2026-05-06 02:00:04,417 - 369300 - INFO - Command sent successfully to instance i-0bfcee6a60bd9f0c8. Command ID: 7cbf8dca-15f8-425c-8077-0c91b745b2f2
+2026-05-06 02:00:04,912 - 369300 - INFO - Sending patch command to instance i-0cbabb49a625088ec
+2026-05-06 02:00:05,043 - 369300 - INFO - Command sent successfully to instance i-0cbabb49a625088ec. Command ID: 324db17c-bc49-4d9d-b098-b47058af64f4
+2026-05-06 02:05:06,952 - 369300 - INFO - All patches applied successfully.
+2026-05-06 02:05:06,953 - 369300 - INFO - Patching end time: 2026-05-06 02:05:06
+2026-05-06 02:05:06,953 - 369300 - INFO - Patch Elapsed time: 0:05:02.830479
+2026-05-06 02:05:07,025 - 369300 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-06 02:05:07,025 - 369300 - INFO - Confirmed - services are stopped
+2026-05-06 02:05:26,757 - 369300 - INFO - Discovered TG map: {'i-0cbabb49a625088ec': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d'], 'i-0bfcee6a60bd9f0c8': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d']}
+2026-05-06 02:05:27,159 - 369300 - INFO - Sent app_validation.py to i-0bfcee6a60bd9f0c8 (command_id: 1ed7a04e-201d-40c6-bdc6-45ad6e76bbdb)
+2026-05-06 02:05:57,273 - 369300 - INFO - app_validation.py output for i-0bfcee6a60bd9f0c8:
+
+==============================================================================
+Server Availability Check Started | 2026-05-06 02:05:27.623437
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.36
+Hostname | ip-10-0-10-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 120.1G | 159.8G | 42% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 287.8G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 287.8G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1129
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+265236 | softeonportal | jboss62eap | sclw3plportal_jboss | 8083 | 10.0.10.36:8083 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonportal/standalone
+264977 | softeonprod | jboss62eap | sclw3plprod_jboss | 80 | 10.0.10.36:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonprod/standalone
+263038 | softeonprod | jboss62eap | scleprod_jboss | 8081 | 10.0.10.36:8081 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonprod/standalone
+265104 | softeonrfprod | jboss62eap | sclw3plrfprod_jboss | 8080 | 10.0.10.36:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonrfprod/standalone
+263171 | softeonrfprod | jboss62eap | sclerfprod_jboss | 8082 | 10.0.10.36:8082 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-06 02:05:28.438584
+==============================================================================
+
+2026-05-06 02:05:57,273 - 369300 - ERROR - app_validation.py errors for i-0bfcee6a60bd9f0c8:
+
+2026-05-06 02:05:57,275 - 369300 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.36/10.0.10.36-BeforePatching-2026-05-06-02-05-57-274.log
+2026-05-06 02:05:57,275 - 369300 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2026-05-06 02:05:57,349 - 369300 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8
+2026-05-06 02:05:57,393 - 369300 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2026-05-06 02:05:57,436 - 369300 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2026-05-06 02:05:57,477 - 369300 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2026-05-06 02:05:57,523 - 369300 - INFO - Stopping EC2 instance: i-0bfcee6a60bd9f0c8 at 2026-05-06 02:05:57
+2026-05-06 02:07:13,666 - 369300 - INFO - Instance i-0bfcee6a60bd9f0c8 stopped successfully.
+2026-05-06 02:07:13,924 - 369300 - INFO - Stopped i-0bfcee6a60bd9f0c8 in 0:01:16.401121
+2026-05-06 02:07:13,924 - 369300 - INFO - Starting EC2 instance: i-0bfcee6a60bd9f0c8
+2026-05-06 02:07:29,848 - 369300 - INFO - Instance i-0bfcee6a60bd9f0c8 started successfully.
+2026-05-06 02:07:29,848 - 369300 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0bfcee6a60bd9f0c8...
+2026-05-06 02:09:09,881 - 369300 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2026-05-06 02:09:10,041 - 369300 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8
+2026-05-06 02:09:10,324 - 369300 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2026-05-06 02:09:10,472 - 369300 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2026-05-06 02:09:10,610 - 369300 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2026-05-06 02:12:11,575 - 369300 - INFO - Sent app_validation.py to i-0bfcee6a60bd9f0c8 (command_id: ff4eb6df-308b-4903-b0f7-b76ed9357656)
+2026-05-06 02:12:41,715 - 369300 - INFO - app_validation.py output for i-0bfcee6a60bd9f0c8:
+
+==============================================================================
+Server Availability Check Started | 2026-05-06 02:12:11.927130
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.36
+Hostname | ip-10-0-10-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 119.9G | 160.0G | 42% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 287.8G | 0B | 0% | /data/softeon/shared1
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 287.8G | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1129
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3417 | softeonportal | jboss62eap | sclw3plportal_jboss | 8083 | 10.0.10.36:8083 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonportal/standalone
+3410 | softeonprod | jboss62eap | sclw3plprod_jboss | 80 | 10.0.10.36:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonprod/standalone
+3442 | softeonprod | jboss62eap | scleprod_jboss | 8081 | 10.0.10.36:8081 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonprod/standalone
+3397 | softeonrfprod | jboss62eap | sclw3plrfprod_jboss | 8080 | 10.0.10.36:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonrfprod/standalone
+3416 | softeonrfprod | jboss62eap | sclerfprod_jboss | 8082 | 10.0.10.36:8082 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-06 02:12:13.724796
+==============================================================================
+
+2026-05-06 02:12:41,715 - 369300 - ERROR - app_validation.py errors for i-0bfcee6a60bd9f0c8:
+
+2026-05-06 02:12:41,717 - 369300 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.36/10.0.10.36-AfterPatching-2026-05-06-02-12-41-717.log
+2026-05-06 02:12:41,778 - 369300 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.36/10.0.10.36-Validation-details-2026-05-06-02-12-41-717.html
+2026-05-06 02:12:42,048 - 369300 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-06 02:12:42,048 - 369300 - INFO - HTML validation report email sent for i-0bfcee6a60bd9f0c8
+2026-05-06 02:12:42,323 - 369300 - INFO - Started i-0bfcee6a60bd9f0c8 in 0:05:28.398665
+2026-05-06 02:12:42,323 - 369300 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-06 02:14:42,602 - 369300 - INFO - Sent app_validation.py to i-0cbabb49a625088ec (command_id: 7b40e464-02e8-4b60-bb28-923ac71dee6c)
+2026-05-06 02:15:12,731 - 369300 - INFO - app_validation.py output for i-0cbabb49a625088ec:
+
+==============================================================================
+Server Availability Check Started | 2026-05-06 02:14:42.998966
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.6
+Hostname | ip-10-0-10-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 188.2G | 91.6G | 67% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 287.8G | 0B | 0% | /data/softeon/shared1
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 287.8G | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1133
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+20161 | softeonportal | jboss62eap | scleportal_jboss | 8083 | 10.0.10.6:8083 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonportal/standalone
+21900 | softeonprod | jboss62eap | sclw3plprod_jboss | 80 | 10.0.10.6:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonprod/standalone
+19897 | softeonprod | jboss62eap | scleprod_jboss | 8081 | 10.0.10.6:8081 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonprod/standalone
+22027 | softeonrfprod | jboss62eap | sclw3plrfprod_jboss | 8080 | 10.0.10.6:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonrfprod/standalone
+20030 | softeonrfprod | jboss62eap | sclerfprod_jboss | 8082 | 10.0.10.6:8082 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-06 02:14:43.862223
+==============================================================================
+
+2026-05-06 02:15:12,731 - 369300 - ERROR - app_validation.py errors for i-0cbabb49a625088ec:
+
+2026-05-06 02:15:12,733 - 369300 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.6/10.0.10.6-BeforePatching-2026-05-06-02-15-12-732.log
+2026-05-06 02:15:12,733 - 369300 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b
+2026-05-06 02:15:12,807 - 369300 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2026-05-06 02:15:12,858 - 369300 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2026-05-06 02:15:12,905 - 369300 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2026-05-06 02:15:12,945 - 369300 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2026-05-06 02:15:12,990 - 369300 - INFO - Stopping EC2 instance: i-0cbabb49a625088ec at 2026-05-06 02:15:12
+2026-05-06 02:16:29,227 - 369300 - INFO - Instance i-0cbabb49a625088ec stopped successfully.
+2026-05-06 02:16:29,484 - 369300 - INFO - Stopped i-0cbabb49a625088ec in 0:01:16.493584
+2026-05-06 02:16:29,485 - 369300 - INFO - Starting EC2 instance: i-0cbabb49a625088ec
+2026-05-06 02:16:45,394 - 369300 - INFO - Instance i-0cbabb49a625088ec started successfully.
+2026-05-06 02:16:45,394 - 369300 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0cbabb49a625088ec...
+2026-05-06 02:18:25,482 - 369300 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b
+2026-05-06 02:18:25,648 - 369300 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2026-05-06 02:18:25,786 - 369300 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2026-05-06 02:18:25,929 - 369300 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2026-05-06 02:18:26,068 - 369300 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2026-05-06 02:21:27,000 - 369300 - INFO - Sent app_validation.py to i-0cbabb49a625088ec (command_id: 55d22d3e-9546-4f05-b092-3f08427409b2)
+2026-05-06 02:21:57,188 - 369300 - INFO - app_validation.py output for i-0cbabb49a625088ec:
+
+==============================================================================
+Server Availability Check Started | 2026-05-06 02:21:28.065131
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.6
+Hostname | ip-10-0-10-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 188.0G | 91.9G | 67% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 287.8G | 0B | 0% | /data/softeon/shared1
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 287.8G | 0B | 0% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1133
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3405 | softeonportal | jboss62eap | scleportal_jboss | 8083 | 10.0.10.6:8083 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonportal/standalone
+3401 | softeonprod | jboss62eap | sclw3plprod_jboss | 80 | 10.0.10.6:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonprod/standalone
+3439 | softeonprod | jboss62eap | scleprod_jboss | 8081 | 10.0.10.6:8081 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonprod/standalone
+3440 | softeonrfprod | jboss62eap | sclw3plrfprod_jboss | 8080 | 10.0.10.6:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclw3plprod/softeonrfprod/standalone
+3444 | softeonrfprod | jboss62eap | sclerfprod_jboss | 8082 | 10.0.10.6:8082 | UP | 200 | Disabled | /data/app/jboss62eap/scleprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-06 02:21:29.390976
+==============================================================================
+
+2026-05-06 02:21:57,188 - 369300 - ERROR - app_validation.py errors for i-0cbabb49a625088ec:
+
+2026-05-06 02:21:57,190 - 369300 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.6/10.0.10.6-AfterPatching-2026-05-06-02-21-57-189.log
+2026-05-06 02:21:57,241 - 369300 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-06/SaddleCreek-App/10.0.10.6/10.0.10.6-Validation-details-2026-05-06-02-21-57-189.html
+2026-05-06 02:21:57,509 - 369300 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-06 02:21:57,509 - 369300 - INFO - HTML validation report email sent for i-0cbabb49a625088ec
+2026-05-06 02:21:57,774 - 369300 - INFO - Started i-0cbabb49a625088ec in 0:05:28.289178
+2026-05-06 02:21:57,774 - 369300 - INFO - All instances processed.
+2026-05-06 02:21:57,779 - 369300 - INFO - Restart Total time: 0:16:50.545330
+2026-05-06 02:21:57,779 - 369300 - INFO - Auto-confirmed services are restarted
+2026-05-06 02:21:57,779 - 369300 - INFO - Confirmed - services are started
+2026-05-06 02:21:57,900 - 369300 - INFO - The following instances have failed the patch: []
+2026-05-06 02:21:57,900 - 369300 - INFO - No instances have failed the patch.
+2026-05-06 02:21:57,901 - 369300 - INFO - Total Patch Process time: 0:21:54.727241
+2026-05-06 02:22:58,576 - 369300 - INFO - Log file ./logs/patching_2026-05-06_SaddleCreek-App.log uploaded to s3://q2-2026-aws-security-patching/SaddleCreek-App_Patch/2026-05-06/patching_2026-05-06_SaddleCreek-App.log

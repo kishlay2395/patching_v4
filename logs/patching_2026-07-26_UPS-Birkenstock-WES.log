@@ -1,0 +1,1365 @@
+2026-07-26 00:10:03,268 - 351869 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-26 00:10:03,268 - 351869 - INFO - Script Start Time: 2026-07-26 00:10:03
+2026-07-26 00:10:03,663 - 351869 - INFO - Tag: UPS-Birkenstock-WES, IPs: ['172.29.61.133', '172.29.60.173'], Environment: prod
+2026-07-26 00:10:03,663 - 351869 - INFO - Instance(s) selected for Patching: {'i-044eccb080abcdba4': '172.29.61.133', 'i-0158b871933237cad': '172.29.60.173'}
+2026-07-26 00:10:03,739 - 351869 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-26 00:10:03,739 - 351869 - INFO - Now patching instances at: 2026-07-26 00:10:03
+2026-07-26 00:10:04,020 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 2b343945-ccea-451b-a926-94ecf2e2b51e)
+2026-07-26 00:10:34,129 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:10:04.423633
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 155.9G | 134.0G | 53% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.6T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_2inskm, upsatmn_inskm, upsatmn_3inskm, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4, upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_schnoti, upsatmn_gitem, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_priupd, upsatmn_pznmhe
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+626527 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:10:05.861038
+==============================================================================
+
+2026-07-26 00:10:34,129 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:10:34,132 - 351869 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-BeforePatching-2026-07-26-00-10-34-130.log
+2026-07-26 00:10:34,326 - 351869 - INFO - Sent app_validation.py to i-044eccb080abcdba4 (command_id: e39b9fa9-c59b-47d5-bab8-32ff550be4c5)
+2026-07-26 00:11:04,408 - 351869 - INFO - app_validation.py output for i-044eccb080abcdba4:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:10:34.609245
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.61.133
+Hostname | ip-172-29-61-133
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 189.9G | 36.0G | 153.9G | 18% | /data
+fs-65e68487.efs.us-east-1.amazonaws.com:/shared/softeon/upsbirkenstock | 0B | 6.3T | 0B | 0% | /data/data2/shared/softeon/upsbirkenstock
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-65e68487.efs.us-east-1.amazonaws.com:/shared/softeon/upsbirkenstock | /data/data2/shared/softeon/upsbirkenstock | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.61.133:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.61.133 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 4
+Non-Standalone Java Processes | upsbirk_BRE, upsbirk_CLU, upsbirk_WES_SCH, upsbrkuat_BRE
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 4
+Java-Name | Java-Path
+upsbirk_BRE | /data/app/java/jdk1.7.0_80/bin/upsbirk_BRE
+upsbirk_CLU | /data/app/java/jdk1.7.0_80/bin/upsbirk_CLU
+upsbirk_WES_SCH | /data/app/java/jdk1.7.0_80/bin/upsbirk_WES_SCH
+upsbrkuat_BRE | /data/app/java/jdk1.7.0_80/bin/upsbrkuat_BRE
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+182868 | birkuiwesprod | jboss720eap | birkuiwes_jb720 | 8081 | 172.29.61.133:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/birkuiwesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:10:35.038202
+==============================================================================
+
+2026-07-26 00:11:04,408 - 351869 - ERROR - app_validation.py errors for i-044eccb080abcdba4:
+
+2026-07-26 00:11:04,410 - 351869 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.61.133/172.29.61.133-BeforePatching-2026-07-26-00-11-04-409.log
+2026-07-26 00:11:09,677 - 351869 - INFO - i-0158b871933237cad: Cron was active = True
+2026-07-26 00:11:14,895 - 351869 - INFO - i-044eccb080abcdba4: Cron was active = True
+2026-07-26 00:11:15,090 - 351869 - INFO - Health monitor crontab disabled on all instances
+2026-07-26 00:11:15,091 - 351869 - INFO - Disabled cron for: ['i-0158b871933237cad', 'i-044eccb080abcdba4']
+2026-07-26 00:11:15,282 - 351869 - INFO - Sending patch command to instance i-0158b871933237cad
+2026-07-26 00:11:15,385 - 351869 - INFO - Command sent successfully to instance i-0158b871933237cad. Command ID: b9bfa9a8-ca81-4d1a-8efb-f50b1ce39e1b
+2026-07-26 00:11:15,527 - 351869 - INFO - Sending patch command to instance i-044eccb080abcdba4
+2026-07-26 00:11:15,613 - 351869 - INFO - Command sent successfully to instance i-044eccb080abcdba4. Command ID: 1e2e8d81-ac81-4729-b178-b786851a7794
+2026-07-26 00:21:48,064 - 351869 - INFO - All patches applied successfully.
+2026-07-26 00:21:48,064 - 351869 - INFO - Patching end time: 2026-07-26 00:21:48
+2026-07-26 00:21:48,064 - 351869 - INFO - Patch Elapsed time: 0:11:44.325241
+2026-07-26 00:21:48,136 - 351869 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-26 00:21:48,136 - 351869 - INFO - Confirmed - services are stopped
+2026-07-26 00:22:09,327 - 351869 - INFO - Discovered TG map: {'i-044eccb080abcdba4': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d']}
+2026-07-26 00:22:09,563 - 351869 - INFO - Stopping EC2 instance: i-0158b871933237cad at 2026-07-26 00:22:09
+2026-07-26 00:23:56,077 - 351869 - INFO - Instance i-0158b871933237cad stopped successfully.
+2026-07-26 00:23:56,321 - 351869 - INFO - Stopped i-0158b871933237cad in 0:01:46.758534
+2026-07-26 00:23:56,322 - 351869 - INFO - Starting EC2 instance: i-0158b871933237cad
+2026-07-26 00:24:12,690 - 351869 - INFO - Instance i-0158b871933237cad started successfully.
+2026-07-26 00:24:12,690 - 351869 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0158b871933237cad...
+2026-07-26 00:25:52,975 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 569574bd-e590-4431-80a5-6ff1ebbed546)
+2026-07-26 00:26:23,063 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:25:53.415036
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.2G | 137.6G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.6T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | Down | 404 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:25:54.366617
+==============================================================================
+
+2026-07-26 00:26:23,063 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:26:23,065 - 351869 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-2026-07-26-00-26-23-064.log
+2026-07-26 00:26:23,120 - 351869 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-Validation-details-2026-07-26-00-26-23-064.html
+2026-07-26 00:26:23,301 - 351869 - INFO - Daemon count - Pre: 32, Post: 0
+2026-07-26 00:26:23,301 - 351869 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-26 00:26:23,301 - 351869 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-26 00:26:23,302 - 351869 - INFO - Background: restarting daemons on i-0158b871933237cad
+2026-07-26 00:26:23,302 - 351869 - INFO - Background thread started for i-0158b871933237cad - daemon:True cups:False
+2026-07-26 00:26:23,708 - 351869 - INFO - Started i-0158b871933237cad in 0:02:27.386709
+2026-07-26 00:26:23,709 - 351869 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-26 00:26:53,700 - 351869 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: ups
+Checking folder: upsatmn
+/data/batchapp/softeon/upsatmn/startall-upsatmn-Daemon.sh
+Batch process is executed with user appadmin
+
+
+Starting downloaddaemon_geekcol
+Batch process is executed with user appadmin
+
+
+Starting downloaddaemon_geekskm
+Batch process is executed with user appadmin
+
+
+Starting geekinbounddaemon_skm
+Batch process is executed with user appadmin
+
+
+Starting geekoutbounddaemon_skm
+Batch process is executed with user appadmin
+
+
+Starting schedulerdaemon_geekcol
+Batch process is executed with user appadmin
+
+
+Starting schedulerdaemon_geekskm
+Batch process is executed with user appadmin
+
+
+Starting geekinbounddaemon_skm2
+Batch process is executed with user appadmin
+Batch process is executed with user appadmin
+Batch process is executed with user appadmin
+
+
+
+
+Starting schedulerdaemon_notification
+
+Starting downloaddaemon_geekitem
+
+Starting mhedaemon_kysp2
+Batch process is executed with user appadmin
+
+
+Starting mhedaemon_camrl2
+Batch process is executed with user appadmin
+
+
+Starting geekoutbounddaemon_skm2
+Batch process is executed with user appadmin
+
+
+Starting geekinbounddaemon_skm3
+Batch process is executed with user appadmin
+
+
+Starting geekpriorityupddaemon
+Checking folder: upswesprod
+/data/batchapp/softeon/upswesprod/startall-upswesproddaemon.sh
+
+2026-07-26 00:26:53,701 - 351869 - INFO - Waiting 100 sec for daemons to start on i-0158b871933237cad
+2026-07-26 00:28:23,811 - 351869 - INFO - Deregistering i-044eccb080abcdba4 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4
+2026-07-26 00:28:23,880 - 351869 - INFO - Deregistering i-044eccb080abcdba4 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d
+2026-07-26 00:28:23,924 - 351869 - INFO - Stopping EC2 instance: i-044eccb080abcdba4 at 2026-07-26 00:28:23
+2026-07-26 00:28:33,799 - 351869 - INFO - CUPS no action needed for i-0158b871933237cad - before:running after:running version:1.7.5
+2026-07-26 00:28:33,996 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: c17ccca8-b839-4d4e-bb76-f313ee329f1c)
+2026-07-26 00:29:04,100 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:28:34.264427
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.5G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:28:36.087364
+==============================================================================
+
+2026-07-26 00:29:04,100 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:29:04,236 - 351869 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-26 00:29:04,237 - 351869 - INFO - RED re-validation mail sent for i-0158b871933237cad
+2026-07-26 00:29:04,237 - 351869 - INFO - Still Red after restart - starting retry for i-0158b871933237cad
+2026-07-26 00:29:04,237 - 351869 - INFO - [Retry-1] Waiting 300s for i-0158b871933237cad...
+2026-07-26 00:29:40,108 - 351869 - INFO - Instance i-044eccb080abcdba4 stopped successfully.
+2026-07-26 00:29:40,377 - 351869 - INFO - Stopped i-044eccb080abcdba4 in 0:01:16.452854
+2026-07-26 00:29:40,377 - 351869 - INFO - Starting EC2 instance: i-044eccb080abcdba4
+2026-07-26 00:29:56,389 - 351869 - INFO - Instance i-044eccb080abcdba4 started successfully.
+2026-07-26 00:29:56,389 - 351869 - INFO - Waiting 100 seconds for SSM agent to be ready on i-044eccb080abcdba4...
+2026-07-26 00:31:36,465 - 351869 - INFO - Registering i-044eccb080abcdba4 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4
+2026-07-26 00:31:36,657 - 351869 - INFO - Registering i-044eccb080abcdba4 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-WES-New/f4531491352c652d
+2026-07-26 00:34:04,621 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 039963f4-a925-45be-8223-3ec5b87902fc)
+2026-07-26 00:34:34,700 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:34:04.878011
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.5G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:34:05.784399
+==============================================================================
+
+2026-07-26 00:34:34,701 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:34:34,702 - 351869 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry1-2026-07-26-00-34-34-702.log
+2026-07-26 00:34:34,759 - 351869 - INFO - [Retry-1] RED for UPS WES Production (172.29.60.173), retrying... (Total waited: 300s)
+2026-07-26 00:34:34,760 - 351869 - INFO - [Retry-2] Waiting 300s for i-0158b871933237cad...
+2026-07-26 00:39:34,943 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 9b5daa9d-d5c3-4538-9307-f726aaec4b96)
+2026-07-26 00:39:37,912 - 351869 - WARNING - i-044eccb080abcdba4 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Birkenstock-V8-UAT-WES/dc88ee9062accbd4 after timeout.
+2026-07-26 00:39:38,046 - 351869 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-26 00:39:38,047 - 351869 - ERROR - Aborting workflow: i-044eccb080abcdba4 is not healthy after restart.
+2026-07-26 00:39:38,053 - 351869 - INFO - Restart Total time: 0:17:49.725690
+2026-07-26 00:39:38,053 - 351869 - INFO - Auto-confirmed services are restarted
+2026-07-26 00:39:38,053 - 351869 - INFO - Confirmed - services are started
+2026-07-26 00:39:38,179 - 351869 - INFO - The following instances have failed the patch: []
+2026-07-26 00:39:38,179 - 351869 - INFO - No instances have failed the patch.
+2026-07-26 00:39:38,179 - 351869 - INFO - Total Patch Process time: 0:29:34.911161
+2026-07-26 00:40:05,022 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:39:35.192018
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.5G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:39:36.067170
+==============================================================================
+
+2026-07-26 00:40:05,023 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:40:05,024 - 351869 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry2-2026-07-26-00-40-05-024.log
+2026-07-26 00:40:05,083 - 351869 - INFO - [Retry-2] RED for UPS WES Production (172.29.60.173), retrying... (Total waited: 600s)
+2026-07-26 00:40:05,083 - 351869 - INFO - [Retry-3] Waiting 300s for i-0158b871933237cad...
+2026-07-26 00:40:38,661 - 351869 - INFO - Log file ./logs/patching_2026-07-26_UPS-Birkenstock-WES.log uploaded to s3://q3-2026-aws-security-patching/UPS-Birkenstock-WES_Patch/2026-07-26/patching_2026-07-26_UPS-Birkenstock-WES.log
+2026-07-26 00:45:05,458 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: b56de176-f79b-40dc-9071-300412facfc2)
+2026-07-26 00:45:35,562 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:45:05.720503
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.4G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:45:06.603301
+==============================================================================
+
+2026-07-26 00:45:35,562 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:45:35,563 - 351869 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry3-2026-07-26-00-45-35-563.log
+2026-07-26 00:45:35,622 - 351869 - INFO - [Retry-3] RED for UPS WES Production (172.29.60.173), retrying... (Total waited: 900s)
+2026-07-26 00:45:35,622 - 351869 - INFO - [Retry-4] Waiting 300s for i-0158b871933237cad...
+2026-07-26 00:50:35,905 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 5b32919c-d25d-4a09-90d2-58ba4a8fb6a2)
+2026-07-26 00:51:05,996 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:50:36.157138
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.4G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:50:37.044586
+==============================================================================
+
+2026-07-26 00:51:05,997 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:51:05,999 - 351869 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry4-2026-07-26-00-51-05-998.log
+2026-07-26 00:51:06,061 - 351869 - INFO - [Retry-4] RED for UPS WES Production (172.29.60.173), retrying... (Total waited: 1200s)
+2026-07-26 00:51:06,061 - 351869 - INFO - [Retry-5] Waiting 300s for i-0158b871933237cad...
+2026-07-26 00:56:06,462 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 9ba96c81-f91d-4420-af73-c9f5f58d88f3)
+2026-07-26 00:56:36,545 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 04:56:06.737682
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.4G | 137.4G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 04:56:07.611327
+==============================================================================
+
+2026-07-26 00:56:36,545 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 00:56:36,546 - 351869 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry5-2026-07-26-00-56-36-546.log
+2026-07-26 00:56:36,605 - 351869 - INFO - [Retry-5] RED for UPS WES Production (172.29.60.173), retrying... (Total waited: 1500s)
+2026-07-26 00:56:36,605 - 351869 - INFO - [Retry-6] Waiting 300s for i-0158b871933237cad...
+2026-07-26 01:01:36,928 - 351869 - INFO - Sent app_validation.py to i-0158b871933237cad (command_id: 3c095c12-a4be-4822-93ba-37fd89980601)
+2026-07-26 01:02:07,029 - 351869 - INFO - app_validation.py output for i-0158b871933237cad:
+
+==============================================================================
+Server Availability Check Started | 2026-07-26 05:01:37.196314
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.173
+Hostname | ip-172-29-60-173
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 152.5G | 137.4G | 52% | /data
+fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | 0B | 36.5T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-9aa41dd2.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.173:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.173 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | upsatmn_geekdwa, upsatmn_gskmdwa, upsatmn_inskm, upsatmn_outskm, upsatmn_geeksch, upsatmn_gskmsch, upsatmn_2inskm, upsatmn_schnoti, upsatmn_gitem, upsatmn_pznmhe, upsatmn_mhecl2, upsatmn_2outskm, upsatmn_3inskm, upsatmn_priupd, upsatmn_atxo, upsatmn_bre, upsatmpp_bre, upsatmn_ccd, upsatmn_gkdwn, upsatmn_3wsq, upsatmn_2wsq, ups_hamrl, upsatmn_locus, upsatmn_wessch, upsatmn_wsq, upsatmn_inwsq, upsatmn_lo2wsq, upsatmn_5wsq, upsatmn_tqwsqtp, upsatmn_wsqtp2, upsatmn_wsqtp3, upsatmn_wsqtp4
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+upsatmn_geekdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekcol
+upsatmn_gskmdwa | /data/batchapp/softeon/upsatmn/downloaddaemon_geekskm
+upsatmn_inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm
+upsatmn_outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm
+upsatmn_geeksch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekcol
+upsatmn_gskmsch | /data/batchapp/softeon/upsatmn/schedulerdaemon_geekskm
+upsatmn_2inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm2
+upsatmn_schnoti | /data/batchapp/softeon/upsatmn/schedulerdaemon_notification
+upsatmn_gitem | /data/batchapp/softeon/upsatmn/downloaddaemon_geekitem
+upsatmn_pznmhe | /data/batchapp/softeon/upsatmn/mhedaemon_kysp2
+upsatmn_mhecl2 | /data/batchapp/softeon/upsatmn/mhedaemon_camrl2
+upsatmn_2outskm | /data/batchapp/softeon/upsatmn/geekoutbounddaemon_skm2
+upsatmn_3inskm | /data/batchapp/softeon/upsatmn/geekinbounddaemon_skm3
+upsatmn_priupd | /data/batchapp/softeon/upsatmn/geekpriorityupddaemon
+upsatmn_atxo | /data/batchapp/softeon/upswesprod/atxoutbounddaemon
+upsatmn_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon
+upsatmpp_bre | /data/batchapp/softeon/upswesprod/breruleenginedaemon_upsatmpp
+upsatmn_ccd | /data/batchapp/softeon/upswesprod/clustercreationdaemon
+upsatmn_gkdwn | /data/batchapp/softeon/upswesprod/geekdownloaddaemon
+upsatmn_3wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusinohwtc
+upsatmn_2wsq | /data/batchapp/softeon/upswesprod/geekreprocessdaemon
+ups_hamrl | /data/batchapp/softeon/upswesprod/hardallocationdaemoncamrl
+upsatmn_locus | /data/batchapp/softeon/upswesprod/locusdaemon
+upsatmn_wessch | /data/batchapp/softeon/upswesprod/schedulerdaemon
+upsatmn_wsq | /data/batchapp/softeon/upswesprod/wsqdaemon
+upsatmn_inwsq | /data/batchapp/softeon/upswesprod/wsqdaemonin
+upsatmn_lo2wsq | /data/batchapp/softeon/upswesprod/wsqlocusout2daemon
+upsatmn_5wsq | /data/batchapp/softeon/upswesprod/wsqdaemonlocusincafan
+upsatmn_tqwsqtp | /data/batchapp/softeon/upswesprod/wsqtqdaemon
+upsatmn_wsqtp2 | /data/batchapp/softeon/upswesprod/wsqtp2daemon
+upsatmn_wsqtp3 | /data/batchapp/softeon/upswesprod/wsqtp3daemon
+upsatmn_wsqtp4 | /data/batchapp/softeon/upswesprod/wsqtp4daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3054 | upswesprod | jboss62eap | upswespd_jboss | 8080 | 172.29.60.173:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/upswesprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-26 05:01:38.113339
+==============================================================================
+
+2026-07-26 01:02:07,029 - 351869 - ERROR - app_validation.py errors for i-0158b871933237cad:
+
+2026-07-26 01:02:07,031 - 351869 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-26/UPS-Birkenstock-WES/172.29.60.173/172.29.60.173-AfterPatching-Retry6-2026-07-26-01-02-07-031.log
+2026-07-26 01:02:07,263 - 351869 - INFO - Health monitor crontab enabled on all instances
+2026-07-26 01:02:07,264 - 351869 - WARNING - [Retry] Timeout - auto cron enabled for i-0158b871933237cad

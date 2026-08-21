@@ -1,0 +1,97 @@
+2025-12-19 00:00:03,313 - INFO - Running backup for tag: Demo-2
+2025-12-19 00:00:03,825 - INFO - Creating backup for: i-06964f48f1a7c5e0f
+2025-12-19 00:00:04,013 - INFO - Backup Job ID: 822fa530-f08e-437a-80e0-25951d869321 started at 2025-12-19 00:00:04
+2025-12-19 00:00:04,014 - INFO - Creating backup for: i-060dd25e725b9dc6d
+2025-12-19 00:00:04,153 - INFO - Backup Job ID: 5636375b-779a-4652-83b4-6eefb267749e started at 2025-12-19 00:00:04
+2025-12-19 00:00:04,153 - INFO - Creating backup for: i-04a443c1f3af1675e
+2025-12-19 00:00:04,336 - INFO - Backup Job ID: 3826325d-5d07-4954-b443-4e81e9097adf started at 2025-12-19 00:00:04
+2025-12-19 00:00:04,337 - INFO - Creating backup for: i-0f5e72a889805011d
+2025-12-19 00:00:04,493 - INFO - Backup Job ID: 55ade82c-3fc2-41fc-97d6-444ac8b28036 started at 2025-12-19 00:00:04
+2025-12-19 00:00:04,493 - INFO - Creating backup for: i-07e9ae0b1a8f9f597
+2025-12-19 00:00:04,634 - INFO - Backup Job ID: 84d7550b-9853-4cd0-9078-2cb65995ee5b started at 2025-12-19 00:00:04
+2025-12-19 00:00:04,635 - INFO - Creating backup for: i-00a446e38646a1c80
+2025-12-19 00:00:04,796 - INFO - Backup Job ID: 05328e0b-5db0-449c-82d4-3aea97f37b08 started at 2025-12-19 00:00:04
+2025-12-19 00:00:05,202 - ERROR - Backup update failed: Object of type UniqueViolation is not JSON serializable
+Traceback (most recent call last):
+  File "/data/patching_v4/common/utils.py", line 90, in bulk_insert
+    result = cursor.executemany(insert_statement, records)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "patching_log_pkey"
+DETAIL:  Key (instance_id, command_id)=(i-04a443c1f3af1675e, Pending) already exists.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/patching_v4/patching_backup.py", line 111, in backup_instances
+    utils.bulk_insert(db_details, update_stmt, update_sql)
+  File "/data/patching_v4/common/utils.py", line 100, in bulk_insert
+    write_cw_logs(pid, log_level, message)
+  File "/data/patching_v4/common/utils.py", line 158, in write_cw_logs
+    json_message = json.dumps(cw_message)
+  File "/usr/lib64/python3.8/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib64/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UniqueViolation is not JSON serializable
+
+2025-12-19 21:30:01,682 - INFO - Running backup for tag: OIA-Prod
+2025-12-19 21:30:02,358 - INFO - Creating backup for: i-0323ad50e58dd0d0e
+2025-12-19 21:30:02,860 - INFO - Backup Job ID: 925c3766-349e-490d-8a03-896d210482ce started at 2025-12-19 21:30:02
+2025-12-19 21:30:02,860 - INFO - Creating backup for: i-087b41b657dd18b9d
+2025-12-19 21:30:03,170 - INFO - Backup Job ID: 328eb927-6994-4172-b93a-102e627917df started at 2025-12-19 21:30:03
+2025-12-19 21:32:16,484 - INFO - Backup completed: 925c3766-349e-490d-8a03-896d210482ce
+2025-12-19 21:38:17,729 - INFO - Backup completed: 328eb927-6994-4172-b93a-102e627917df
+2025-12-19 21:38:22,882 - INFO - Backup total time: 0:08:19.151181
+2025-12-19 21:38:22,974 - INFO - Completed backups: ['i-087b41b657dd18b9d', 'i-0323ad50e58dd0d0e']
+2025-12-19 22:30:03,688 - INFO - Running backup for tag: Caseys-ANK
+2025-12-19 22:30:04,118 - INFO - Creating backup for: i-003ad50abffe596af
+2025-12-19 22:30:04,304 - INFO - Backup Job ID: ddbcbec7-7ccf-4d78-bb4e-60146f830234 started at 2025-12-19 22:30:04
+2025-12-19 22:30:04,305 - INFO - Creating backup for: i-0e50d850cd873d2fb
+2025-12-19 22:30:04,509 - INFO - Backup Job ID: ee516892-2263-4dda-b207-e83dae466f4c started at 2025-12-19 22:30:04
+2025-12-19 22:30:04,509 - INFO - Creating backup for: i-021fc16cda6b12260
+2025-12-19 22:30:04,632 - INFO - Backup Job ID: 3d04cb20-3cfe-4397-b250-84210e6f9f6a started at 2025-12-19 22:30:04
+2025-12-19 22:30:04,632 - INFO - Creating backup for: i-0b2e2ad50ba35a3d6
+2025-12-19 22:30:04,733 - INFO - Backup Job ID: b948c2d4-335e-44b9-b5ff-39546440548c started at 2025-12-19 22:30:04
+2025-12-19 22:38:18,703 - INFO - Backup completed: 3d04cb20-3cfe-4397-b250-84210e6f9f6a
+2025-12-19 22:46:26,955 - INFO - Backup completed: b948c2d4-335e-44b9-b5ff-39546440548c
+2025-12-19 22:46:31,980 - INFO - Backup completed: ddbcbec7-7ccf-4d78-bb4e-60146f830234
+2025-12-19 22:46:37,007 - INFO - Backup completed: ee516892-2263-4dda-b207-e83dae466f4c
+2025-12-19 22:46:42,206 - INFO - Backup total time: 0:16:37.115836
+2025-12-19 22:46:42,314 - INFO - Completed backups: ['i-021fc16cda6b12260', 'i-0b2e2ad50ba35a3d6', 'i-0e50d850cd873d2fb', 'i-003ad50abffe596af']
+2025-12-19 23:00:03,128 - INFO - Running backup for tag: Caseys-JOP
+2025-12-19 23:00:03,674 - INFO - Creating backup for: i-0bf3d1bd53c0454c1
+2025-12-19 23:00:03,912 - INFO - Backup Job ID: 49ac8d0c-5a1b-46fe-8711-d46e95cf0d45 started at 2025-12-19 23:00:03
+2025-12-19 23:00:03,913 - INFO - Creating backup for: i-0b9bbf816fc27da89
+2025-12-19 23:00:04,062 - INFO - Backup Job ID: 11a02cd6-aaff-44c7-9c86-66425e085bd6 started at 2025-12-19 23:00:04
+2025-12-19 23:00:04,062 - INFO - Creating backup for: i-094ab73d3edbdb6f5
+2025-12-19 23:00:04,186 - INFO - Backup Job ID: 36884fc4-6184-4259-a81d-2729e28fec0b started at 2025-12-19 23:00:04
+2025-12-19 23:00:04,186 - INFO - Creating backup for: i-00c5ce5ff59e37b26
+2025-12-19 23:00:04,328 - INFO - Backup Job ID: 881443e4-28b5-4dba-bf4c-ae15c7716784 started at 2025-12-19 23:00:04
+2025-12-19 23:00:04,331 - INFO - Creating backup for: i-0f22131bbc55a66a0
+2025-12-19 23:00:04,438 - INFO - Backup Job ID: 13700d7e-e783-4956-acb6-e22e9bdb1956 started at 2025-12-19 23:00:04
+2025-12-19 23:07:48,182 - INFO - Backup completed: 36884fc4-6184-4259-a81d-2729e28fec0b
+2025-12-19 23:13:25,284 - INFO - Backup completed: 49ac8d0c-5a1b-46fe-8711-d46e95cf0d45
+2025-12-19 23:21:23,295 - INFO - Backup completed: 881443e4-28b5-4dba-bf4c-ae15c7716784
+2025-12-19 23:21:43,432 - INFO - Backup completed: 11a02cd6-aaff-44c7-9c86-66425e085bd6
+2025-12-19 23:30:03,526 - INFO - Running backup for tag: Caseys-THT
+2025-12-19 23:30:03,896 - INFO - Creating backup for: i-05cfeb855e5c57f60
+2025-12-19 23:30:04,071 - INFO - Backup Job ID: 4390d238-e1c6-42f5-b1d5-cb73a449f32a started at 2025-12-19 23:30:04
+2025-12-19 23:30:04,071 - INFO - Creating backup for: i-037713bd0a4a35c20
+2025-12-19 23:30:04,190 - INFO - Backup Job ID: 3c8e7c58-7817-4089-a553-633a36a16590 started at 2025-12-19 23:30:04
+2025-12-19 23:30:04,190 - INFO - Creating backup for: i-0e3b72abbce3a3304
+2025-12-19 23:30:04,325 - INFO - Backup Job ID: 5da16bb4-fba2-4203-96e1-99807dea2980 started at 2025-12-19 23:30:04
+2025-12-19 23:30:04,325 - INFO - Creating backup for: i-0f63cbbd53b20c862
+2025-12-19 23:30:04,476 - INFO - Backup Job ID: e755f30e-2817-4a94-aa68-38e8c57782ab started at 2025-12-19 23:30:04
+2025-12-19 23:31:57,275 - INFO - Backup completed: 13700d7e-e783-4956-acb6-e22e9bdb1956
+2025-12-19 23:32:02,598 - INFO - Backup total time: 0:31:57.392014
+2025-12-19 23:32:02,704 - INFO - Completed backups: ['i-00c5ce5ff59e37b26', 'i-0b9bbf816fc27da89', 'i-0bf3d1bd53c0454c1', 'i-094ab73d3edbdb6f5', 'i-0f22131bbc55a66a0']
+2025-12-19 23:38:18,101 - INFO - Backup completed: 5da16bb4-fba2-4203-96e1-99807dea2980
+2025-12-19 23:46:31,112 - INFO - Backup completed: 4390d238-e1c6-42f5-b1d5-cb73a449f32a
+2025-12-19 23:46:36,143 - INFO - Backup completed: 3c8e7c58-7817-4089-a553-633a36a16590
+2025-12-19 23:56:24,863 - INFO - Backup completed: e755f30e-2817-4a94-aa68-38e8c57782ab
+2025-12-19 23:56:30,025 - INFO - Backup total time: 0:26:25.179500
+2025-12-19 23:56:30,110 - INFO - Completed backups: ['i-037713bd0a4a35c20', 'i-0e3b72abbce3a3304', 'i-05cfeb855e5c57f60', 'i-0f63cbbd53b20c862']

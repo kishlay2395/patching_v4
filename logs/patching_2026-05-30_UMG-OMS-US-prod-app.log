@@ -1,0 +1,424 @@
+2026-05-30 00:15:02,848 - 1833406 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-30 00:15:02,848 - 1833406 - INFO - Script Start Time: 2026-05-30 00:15:02
+2026-05-30 00:15:03,089 - 1833406 - INFO - Instance(s) selected for Patching: {'i-03684ef6b42e9a39a': '172.29.10.62', 'i-09265c9250f91059c': '172.29.10.153'}
+2026-05-30 00:15:03,159 - 1833406 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 00:15:03,159 - 1833406 - INFO - Now patching instances at: 2026-05-30 00:15:03
+2026-05-30 00:15:03,254 - 1833406 - INFO - Sending patch command to instance i-09265c9250f91059c
+2026-05-30 00:15:03,377 - 1833406 - INFO - Command sent successfully to instance i-09265c9250f91059c. Command ID: 9a49d945-6c3d-4fad-96e4-c379fb73a1d3
+2026-05-30 00:15:03,545 - 1833406 - INFO - Sending patch command to instance i-03684ef6b42e9a39a
+2026-05-30 00:15:03,627 - 1833406 - INFO - Command sent successfully to instance i-03684ef6b42e9a39a. Command ID: 8481daad-b5d0-4ce2-90bf-845496a0745f
+2026-05-30 00:23:36,452 - 1833406 - INFO - All patches applied successfully.
+2026-05-30 00:23:36,453 - 1833406 - INFO - Patching end time: 2026-05-30 00:23:36
+2026-05-30 00:23:36,453 - 1833406 - INFO - Patch Elapsed time: 0:08:33.293728
+2026-05-30 00:23:36,537 - 1833406 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 00:23:36,537 - 1833406 - INFO - Confirmed - services are stopped
+2026-05-30 00:23:56,384 - 1833406 - INFO - Discovered TG map: {'i-03684ef6b42e9a39a': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5'], 'i-09265c9250f91059c': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5']}
+2026-05-30 00:23:56,808 - 1833406 - INFO - Sent app_validation.py to i-09265c9250f91059c (command_id: 0e5e446a-b288-4f91-b8df-b427db261eaf)
+2026-05-30 00:24:26,906 - 1833406 - INFO - app_validation.py output for i-09265c9250f91059c:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:23:57.057281
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.153
+Hostname | ip-172-29-10-153
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 11.5G | 228.3G | 4% | /data
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.153:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.153 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1835495 | umgomsusws | jboss730eap | umgomsusws_jb73 | 8081 | 172.29.10.153:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/umgomsusws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:23:57.303722
+==============================================================================
+
+2026-05-30 00:24:26,906 - 1833406 - ERROR - app_validation.py errors for i-09265c9250f91059c:
+
+2026-05-30 00:24:26,908 - 1833406 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.153/172.29.10.153-BeforePatching-2026-05-30-00-24-26-907.log
+2026-05-30 00:24:26,908 - 1833406 - INFO - Deregistering i-09265c9250f91059c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5
+2026-05-30 00:24:26,984 - 1833406 - INFO - Stopping EC2 instance: i-09265c9250f91059c at 2026-05-30 00:24:26
+2026-05-30 00:25:28,084 - 1833406 - INFO - Instance i-09265c9250f91059c stopped successfully.
+2026-05-30 00:25:28,329 - 1833406 - INFO - Stopped i-09265c9250f91059c in 0:01:01.345324
+2026-05-30 00:25:28,330 - 1833406 - INFO - Starting EC2 instance: i-09265c9250f91059c
+2026-05-30 00:25:44,394 - 1833406 - INFO - Instance i-09265c9250f91059c started successfully.
+2026-05-30 00:25:44,394 - 1833406 - INFO - Waiting 100 seconds for SSM agent to be ready on i-09265c9250f91059c...
+2026-05-30 00:27:24,401 - 1833406 - INFO - Registering i-09265c9250f91059c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5
+2026-05-30 00:27:54,912 - 1833406 - INFO - Sent app_validation.py to i-09265c9250f91059c (command_id: 15013d31-a1c7-4dc7-9c44-b7dd84c4aeff)
+2026-05-30 00:28:25,028 - 1833406 - INFO - app_validation.py output for i-09265c9250f91059c:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:27:55.184410
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.153
+Hostname | ip-172-29-10-153
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 11.5G | 228.3G | 4% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.153:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.153 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3074 | umgomsusws | jboss730eap | umgomsusws_jb73 | 8081 | 172.29.10.153:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/umgomsusws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:27:55.457433
+==============================================================================
+
+2026-05-30 00:28:25,028 - 1833406 - ERROR - app_validation.py errors for i-09265c9250f91059c:
+
+2026-05-30 00:28:25,030 - 1833406 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.153/172.29.10.153-AfterPatching-2026-05-30-00-28-25-029.log
+2026-05-30 00:28:25,095 - 1833406 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.153/172.29.10.153-Validation-details-2026-05-30-00-28-25-029.html
+2026-05-30 00:28:25,347 - 1833406 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-30 00:28:25,347 - 1833406 - INFO - HTML validation report email sent for i-09265c9250f91059c
+2026-05-30 00:28:25,598 - 1833406 - INFO - Started i-09265c9250f91059c in 0:02:57.267650
+2026-05-30 00:28:25,598 - 1833406 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-30 00:30:25,871 - 1833406 - INFO - Sent app_validation.py to i-03684ef6b42e9a39a (command_id: 4ef5f351-7d23-47c9-a761-52ab7cc9b499)
+2026-05-30 00:30:55,982 - 1833406 - INFO - app_validation.py output for i-03684ef6b42e9a39a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:30:26.146921
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.62
+Hostname | ip-172-29-10-62
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 12.0G | 227.8G | 5% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.62:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.62 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1941604 | umgomsusws | jboss730eap | umgomsusws_jb73 | 8081 | 172.29.10.62:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/umgomsusws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:30:26.409095
+==============================================================================
+
+2026-05-30 00:30:55,982 - 1833406 - ERROR - app_validation.py errors for i-03684ef6b42e9a39a:
+
+2026-05-30 00:30:55,984 - 1833406 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.62/172.29.10.62-BeforePatching-2026-05-30-00-30-55-983.log
+2026-05-30 00:30:55,984 - 1833406 - INFO - Deregistering i-03684ef6b42e9a39a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5
+2026-05-30 00:30:56,062 - 1833406 - INFO - Stopping EC2 instance: i-03684ef6b42e9a39a at 2026-05-30 00:30:56
+2026-05-30 00:31:57,072 - 1833406 - INFO - Instance i-03684ef6b42e9a39a stopped successfully.
+2026-05-30 00:31:57,319 - 1833406 - INFO - Stopped i-03684ef6b42e9a39a in 0:01:01.256813
+2026-05-30 00:31:57,320 - 1833406 - INFO - Starting EC2 instance: i-03684ef6b42e9a39a
+2026-05-30 00:32:13,369 - 1833406 - INFO - Instance i-03684ef6b42e9a39a started successfully.
+2026-05-30 00:32:13,369 - 1833406 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03684ef6b42e9a39a...
+2026-05-30 00:33:53,401 - 1833406 - INFO - Registering i-03684ef6b42e9a39a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-OMS-US-Prod-WebServices-Ext/d74d7ccc9c9f71d5
+2026-05-30 00:34:23,921 - 1833406 - INFO - Sent app_validation.py to i-03684ef6b42e9a39a (command_id: 2b5d883c-a3b3-4100-a056-b452873e565a)
+2026-05-30 00:34:54,004 - 1833406 - INFO - app_validation.py output for i-03684ef6b42e9a39a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 04:34:24.271106
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.62
+Hostname | ip-172-29-10-62
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 12.0G | 227.8G | 5% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 199.7G | 0B | 0% | /data4
+fs-f5d52441.efs.us-east-1.amazonaws.com:/ | 0B | 782.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-f5d52441.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.62:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.62 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3085 | umgomsusws | jboss730eap | umgomsusws_jb73 | 8081 | 172.29.10.62:8081 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/umgomsusws/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 04:34:24.649310
+==============================================================================
+
+2026-05-30 00:34:54,004 - 1833406 - ERROR - app_validation.py errors for i-03684ef6b42e9a39a:
+
+2026-05-30 00:34:54,006 - 1833406 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.62/172.29.10.62-AfterPatching-2026-05-30-00-34-54-006.log
+2026-05-30 00:34:54,058 - 1833406 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-30/UMG-OMS-US-prod-app/172.29.10.62/172.29.10.62-Validation-details-2026-05-30-00-34-54-006.html
+2026-05-30 00:34:54,316 - 1833406 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-30 00:34:54,317 - 1833406 - INFO - HTML validation report email sent for i-03684ef6b42e9a39a
+2026-05-30 00:34:54,574 - 1833406 - INFO - Started i-03684ef6b42e9a39a in 0:02:57.254332
+2026-05-30 00:34:54,575 - 1833406 - INFO - All instances processed.
+2026-05-30 00:34:54,580 - 1833406 - INFO - Restart Total time: 0:11:17.842136
+2026-05-30 00:34:54,580 - 1833406 - INFO - Auto-confirmed services are restarted
+2026-05-30 00:34:54,580 - 1833406 - INFO - Confirmed - services are started
+2026-05-30 00:34:54,693 - 1833406 - INFO - The following instances have failed the patch: []
+2026-05-30 00:34:54,694 - 1833406 - INFO - No instances have failed the patch.
+2026-05-30 00:34:54,694 - 1833406 - INFO - Total Patch Process time: 0:19:51.845068
+2026-05-30 00:35:55,332 - 1833406 - INFO - Log file ./logs/patching_2026-05-30_UMG-OMS-US-prod-app.log uploaded to s3://q2-2026-aws-security-patching/UMG-OMS-US-prod-app_Patch/2026-05-30/patching_2026-05-30_UMG-OMS-US-prod-app.log

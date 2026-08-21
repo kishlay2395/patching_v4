@@ -1,0 +1,457 @@
+2026-08-01 01:00:03,987 - 2247828 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 01:09:49,617 - 2247828 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 01:09:49,788 - 2247828 - INFO - Log file ./logs/backup_2026-08-01.log uploaded to s3://q3-2025-aws-security-patching/q3-durodyne-prod-app_Patch_Backup/2026-08-01/backup_2026-08-01.log
+2026-08-01 05:00:03,848 - 2322797 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-01 05:00:03,848 - 2322797 - INFO - Script Start Time: 2026-08-01 05:00:03
+2026-08-01 05:00:04,336 - 2322797 - INFO - Tag: q3-durodyne-prod-app, IPs: ['172.31.32.42', '172.31.32.4'], Environment: prod
+2026-08-01 05:00:04,336 - 2322797 - INFO - Instance(s) selected for Patching: {'i-0ca5df1a770e5ef25': '172.31.32.42', 'i-0391bdd1578394707': '172.31.32.4'}
+2026-08-01 05:00:04,418 - 2322797 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 05:00:04,419 - 2322797 - INFO - Now patching instances at: 2026-08-01 05:00:04
+2026-08-01 05:00:04,731 - 2322797 - INFO - Sent app_validation.py to i-0ca5df1a770e5ef25 (command_id: 814daa0d-5522-4d4c-8ee3-5dde6748db1a)
+2026-08-01 05:00:34,837 - 2322797 - INFO - SSM Command Status: Success
+2026-08-01 05:00:34,837 - 2322797 - INFO - app_validation.py output for i-0ca5df1a770e5ef25:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 09:00:05.059670
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.32.42
+Hostname | ip-172-31-32-42
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 15.7G | 224.2G | 6% | /data
+fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | 0B | 53.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.31.32.42:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 18
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.32.42 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3107444 | durodyneprod | jboss730eap | durodyneprod_jb | 8080 | 172.31.32.42:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodyneprod/standalone
+3107685 | durodynerfprod | jboss730eap | durodynerfpd_jb | 8081 | 172.31.32.42:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynerfprod/standalone
+3107892 | durodynewsprod | jboss730eap | durodynewspd_jb | 8082 | 172.31.32.42:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynewsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 09:00:05.420699
+==============================================================================
+
+2026-08-01 05:00:34,838 - 2322797 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.42/172.31.32.42-BeforePatching-2026-08-01-05-00-34-838.log
+2026-08-01 05:00:35,031 - 2322797 - INFO - Sent app_validation.py to i-0391bdd1578394707 (command_id: 8f347af0-decc-4993-839f-f469fdcaedf0)
+2026-08-01 05:01:05,106 - 2322797 - INFO - SSM Command Status: Success
+2026-08-01 05:01:05,106 - 2322797 - INFO - app_validation.py output for i-0391bdd1578394707:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 09:00:35.442627
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.32.4
+Hostname | ip-172-31-32-4
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.1G | 206.8G | 13% | /data
+fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | 0B | 53.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.31.32.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 18
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.32.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2989141 | durodyneprod | jboss730eap | durodyneprod_jb | 8080 | 172.31.32.4:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodyneprod/standalone
+2989411 | durodynerfprod | jboss730eap | durodynerfpd_jb | 8081 | 172.31.32.4:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynerfprod/standalone
+2989605 | durodynewsprod | jboss730eap | durodynewspd_jb | 8082 | 172.31.32.4:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynewsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 09:00:35.819026
+==============================================================================
+
+2026-08-01 05:01:05,107 - 2322797 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.4/172.31.32.4-BeforePatching-2026-08-01-05-01-05-107.log
+2026-08-01 05:01:10,391 - 2322797 - INFO - i-0ca5df1a770e5ef25: Cron was active = False
+2026-08-01 05:01:15,583 - 2322797 - INFO - i-0391bdd1578394707: Cron was active = False
+2026-08-01 05:01:15,584 - 2322797 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-01 05:01:15,670 - 2322797 - INFO - Sending patch command to instance i-0ca5df1a770e5ef25
+2026-08-01 05:01:15,777 - 2322797 - INFO - Command sent successfully to instance i-0ca5df1a770e5ef25. Command ID: 415f7ea5-bb00-4aaf-9d87-3b5de66ad35f
+2026-08-01 05:01:15,910 - 2322797 - INFO - Sending patch command to instance i-0391bdd1578394707
+2026-08-01 05:01:16,016 - 2322797 - INFO - Command sent successfully to instance i-0391bdd1578394707. Command ID: 511b1a96-f30f-4bb2-8bed-ffc214a0b69b
+2026-08-01 05:06:47,845 - 2322797 - INFO - All patches applied successfully.
+2026-08-01 05:06:47,846 - 2322797 - INFO - Patching end time: 2026-08-01 05:06:47
+2026-08-01 05:06:47,846 - 2322797 - INFO - Patch Elapsed time: 0:06:43.426369
+2026-08-01 05:06:47,935 - 2322797 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 05:06:47,935 - 2322797 - INFO - Confirmed - services are stopped
+2026-08-01 05:07:09,004 - 2322797 - INFO - Discovered TG map: {'i-0ca5df1a770e5ef25': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3'], 'i-0391bdd1578394707': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3']}
+2026-08-01 05:07:09,186 - 2322797 - INFO - Deregistering i-0ca5df1a770e5ef25 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf
+2026-08-01 05:07:09,253 - 2322797 - INFO - Deregistering i-0ca5df1a770e5ef25 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702
+2026-08-01 05:07:09,298 - 2322797 - INFO - Deregistering i-0ca5df1a770e5ef25 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3
+2026-08-01 05:07:09,348 - 2322797 - INFO - Stopping EC2 instance: i-0ca5df1a770e5ef25 at 2026-08-01 05:07:09
+2026-08-01 05:08:40,549 - 2322797 - INFO - Instance i-0ca5df1a770e5ef25 stopped successfully.
+2026-08-01 05:08:40,804 - 2322797 - INFO - Stopped i-0ca5df1a770e5ef25 in 0:01:31.455822
+2026-08-01 05:08:40,804 - 2322797 - INFO - Starting EC2 instance: i-0ca5df1a770e5ef25
+2026-08-01 05:08:56,745 - 2322797 - INFO - Instance i-0ca5df1a770e5ef25 started successfully.
+2026-08-01 05:08:56,746 - 2322797 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0ca5df1a770e5ef25...
+2026-08-01 05:10:36,839 - 2322797 - INFO - Registering i-0ca5df1a770e5ef25 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf
+2026-08-01 05:10:37,010 - 2322797 - INFO - Registering i-0ca5df1a770e5ef25 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702
+2026-08-01 05:10:37,133 - 2322797 - INFO - Registering i-0ca5df1a770e5ef25 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3
+2026-08-01 05:12:37,811 - 2322797 - INFO - Sent app_validation.py to i-0ca5df1a770e5ef25 (command_id: bb3d8ca7-1642-46aa-b775-29f49d0beff5)
+2026-08-01 05:13:07,898 - 2322797 - INFO - SSM Command Status: Success
+2026-08-01 05:13:07,898 - 2322797 - INFO - app_validation.py output for i-0ca5df1a770e5ef25:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 09:12:38.128571
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.32.42
+Hostname | ip-172-31-32-42
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 15.6G | 224.3G | 6% | /data
+fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | 0B | 53.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.31.32.42:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 18
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.32.42 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3773 | durodyneprod | jboss730eap | durodyneprod_jb | 8080 | 172.31.32.42:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodyneprod/standalone
+3779 | durodynerfprod | jboss730eap | durodynerfpd_jb | 8081 | 172.31.32.42:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynerfprod/standalone
+3737 | durodynewsprod | jboss730eap | durodynewspd_jb | 8082 | 172.31.32.42:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynewsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 09:12:39.619974
+==============================================================================
+
+2026-08-01 05:13:07,899 - 2322797 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.42/172.31.32.42-AfterPatching-2026-08-01-05-13-07-899.log
+2026-08-01 05:13:07,957 - 2322797 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.42/172.31.32.42-Validation-details-2026-08-01-05-13-07-899.html
+2026-08-01 05:13:08,135 - 2322797 - INFO - i-0ca5df1a770e5ef25: Cron was not active - skipping enable
+2026-08-01 05:13:08,209 - 2322797 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-01 05:13:08,209 - 2322797 - INFO - GREEN mail sent for i-0ca5df1a770e5ef25
+2026-08-01 05:13:08,573 - 2322797 - INFO - Started i-0ca5df1a770e5ef25 in 0:04:27.768830
+2026-08-01 05:13:08,574 - 2322797 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-08-01 05:15:08,670 - 2322797 - INFO - Deregistering i-0391bdd1578394707 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf
+2026-08-01 05:15:08,767 - 2322797 - INFO - Deregistering i-0391bdd1578394707 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702
+2026-08-01 05:15:08,813 - 2322797 - INFO - Deregistering i-0391bdd1578394707 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3
+2026-08-01 05:15:08,855 - 2322797 - INFO - Stopping EC2 instance: i-0391bdd1578394707 at 2026-08-01 05:15:08
+2026-08-01 05:16:40,082 - 2322797 - INFO - Instance i-0391bdd1578394707 stopped successfully.
+2026-08-01 05:16:40,551 - 2322797 - INFO - Stopped i-0391bdd1578394707 in 0:01:31.695729
+2026-08-01 05:16:40,551 - 2322797 - INFO - Starting EC2 instance: i-0391bdd1578394707
+2026-08-01 05:16:56,423 - 2322797 - INFO - Instance i-0391bdd1578394707 started successfully.
+2026-08-01 05:16:56,423 - 2322797 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0391bdd1578394707...
+2026-08-01 05:18:36,495 - 2322797 - INFO - Registering i-0391bdd1578394707 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-Desktop/8665c42bf6ebf4cf
+2026-08-01 05:18:36,652 - 2322797 - INFO - Registering i-0391bdd1578394707 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-RF/93f17e224db0f702
+2026-08-01 05:18:36,769 - 2322797 - INFO - Registering i-0391bdd1578394707 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-Prod-WS/56f681177dcfd9a3
+2026-08-01 05:20:37,533 - 2322797 - INFO - Sent app_validation.py to i-0391bdd1578394707 (command_id: b8ad8cac-5ae1-4df9-8974-06d78f95abad)
+2026-08-01 05:21:07,668 - 2322797 - INFO - SSM Command Status: Success
+2026-08-01 05:21:07,669 - 2322797 - INFO - app_validation.py output for i-0391bdd1578394707:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 09:20:37.912562
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.32.4
+Hostname | ip-172-31-32-4
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.0G | 206.9G | 13% | /data
+fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | 0B | 53.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0c535bebeb61badfa.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.31.32.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 18
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.32.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3763 | durodyneprod | jboss730eap | durodyneprod_jb | 8080 | 172.31.32.4:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodyneprod/standalone
+3801 | durodynerfprod | jboss730eap | durodynerfpd_jb | 8081 | 172.31.32.4:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynerfprod/standalone
+3765 | durodynewsprod | jboss730eap | durodynewspd_jb | 8082 | 172.31.32.4:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/durodynewsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 09:20:38.983974
+==============================================================================
+
+2026-08-01 05:21:07,671 - 2322797 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.4/172.31.32.4-AfterPatching-2026-08-01-05-21-07-671.log
+2026-08-01 05:21:07,732 - 2322797 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-01/q3-durodyne-prod-app/172.31.32.4/172.31.32.4-Validation-details-2026-08-01-05-21-07-671.html
+2026-08-01 05:21:07,903 - 2322797 - INFO - i-0391bdd1578394707: Cron was not active - skipping enable
+2026-08-01 05:21:07,978 - 2322797 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-01 05:21:07,978 - 2322797 - INFO - GREEN mail sent for i-0391bdd1578394707
+2026-08-01 05:21:08,233 - 2322797 - INFO - Started i-0391bdd1578394707 in 0:04:27.681779
+2026-08-01 05:21:08,234 - 2322797 - INFO - All instances processed.
+2026-08-01 05:21:08,239 - 2322797 - INFO - Restart Total time: 0:14:20.166058
+2026-08-01 05:21:08,240 - 2322797 - INFO - Auto-confirmed services are restarted
+2026-08-01 05:21:08,240 - 2322797 - INFO - Confirmed - services are started
+2026-08-01 05:21:08,360 - 2322797 - INFO - The following instances have failed the patch: []
+2026-08-01 05:21:08,361 - 2322797 - INFO - No instances have failed the patch.
+2026-08-01 05:21:08,361 - 2322797 - INFO - Total Patch Process time: 0:21:04.512171
+2026-08-01 05:22:08,851 - 2322797 - INFO - Log file ./logs/patching_2026-08-01_q3-durodyne-prod-app.log uploaded to s3://q3-2026-aws-security-patching/q3-durodyne-prod-app_Patch/2026-08-01/patching_2026-08-01_q3-durodyne-prod-app.log

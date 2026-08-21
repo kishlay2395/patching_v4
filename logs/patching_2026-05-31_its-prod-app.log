@@ -1,0 +1,444 @@
+2026-05-31 02:00:04,019 - 1894169 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-31 02:00:04,019 - 1894169 - INFO - Script Start Time: 2026-05-31 02:00:04
+2026-05-31 02:00:04,259 - 1894169 - INFO - Instance(s) selected for Patching: {'i-0bd7b814a6400587a': '172.25.20.15', 'i-06bf04220d91ed475': '172.25.20.48'}
+2026-05-31 02:00:04,347 - 1894169 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 02:00:04,348 - 1894169 - INFO - Now patching instances at: 2026-05-31 02:00:04
+2026-05-31 02:00:04,441 - 1894169 - INFO - Sending patch command to instance i-06bf04220d91ed475
+2026-05-31 02:00:04,795 - 1894169 - INFO - Command sent successfully to instance i-06bf04220d91ed475. Command ID: f8af4890-ecbd-4c5e-996a-f61c33fa5e15
+2026-05-31 02:00:04,972 - 1894169 - INFO - Sending patch command to instance i-0bd7b814a6400587a
+2026-05-31 02:00:05,117 - 1894169 - INFO - Command sent successfully to instance i-0bd7b814a6400587a. Command ID: c53d6137-0ac0-4dac-967d-8141e821e123
+2026-05-31 02:08:38,760 - 1894169 - INFO - All patches applied successfully.
+2026-05-31 02:08:38,760 - 1894169 - INFO - Patching end time: 2026-05-31 02:08:38
+2026-05-31 02:08:38,761 - 1894169 - INFO - Patch Elapsed time: 0:08:34.412769
+2026-05-31 02:08:38,836 - 1894169 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 02:08:38,837 - 1894169 - INFO - Confirmed - services are stopped
+2026-05-31 02:08:44,465 - 1894169 - INFO - Discovered TG map: {'i-0bd7b814a6400587a': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d'], 'i-06bf04220d91ed475': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d']}
+2026-05-31 02:08:45,213 - 1894169 - INFO - Sent app_validation.py to i-06bf04220d91ed475 (command_id: daa38aea-dc9b-4cc2-81a8-669221024f42)
+2026-05-31 02:09:15,359 - 1894169 - INFO - app_validation.py output for i-06bf04220d91ed475:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 06:08:45.516663
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.20.48
+Hostname | ip-172-25-20-48.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 93.3G | 146.6G | 38% | /data
+fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | 0B | 3.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.20.48:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 397
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.20.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2686375 | itsextprod | jboss740eap | itsextprod_jb74 | 8083 | 172.25.20.48:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsextprod/standalone
+2685938 | itsprod | jboss740eap | itsprod_jb740e | 8080 | 172.25.20.48:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsprod/standalone
+2686042 | itsrfprod | jboss740eap | itsrfprod_jb740 | 8081 | 172.25.20.48:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsrfprod/standalone
+2686130 | itswsprod | jboss740eap | itswsprod_jb740 | 8082 | 172.25.20.48:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 06:08:46.916731
+==============================================================================
+
+2026-05-31 02:09:15,360 - 1894169 - ERROR - app_validation.py errors for i-06bf04220d91ed475:
+
+2026-05-31 02:09:15,361 - 1894169 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.48/172.25.20.48-BeforePatching-2026-05-31-02-09-15-361.log
+2026-05-31 02:09:15,362 - 1894169 - INFO - Deregistering i-06bf04220d91ed475 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2
+2026-05-31 02:09:15,664 - 1894169 - INFO - Deregistering i-06bf04220d91ed475 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c
+2026-05-31 02:09:15,766 - 1894169 - INFO - Deregistering i-06bf04220d91ed475 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda
+2026-05-31 02:09:15,871 - 1894169 - INFO - Deregistering i-06bf04220d91ed475 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d
+2026-05-31 02:09:15,974 - 1894169 - INFO - Stopping EC2 instance: i-06bf04220d91ed475 at 2026-05-31 02:09:15
+2026-05-31 02:11:03,017 - 1894169 - INFO - Instance i-06bf04220d91ed475 stopped successfully.
+2026-05-31 02:11:03,318 - 1894169 - INFO - Stopped i-06bf04220d91ed475 in 0:01:47.343931
+2026-05-31 02:11:03,318 - 1894169 - INFO - Starting EC2 instance: i-06bf04220d91ed475
+2026-05-31 02:11:19,288 - 1894169 - INFO - Instance i-06bf04220d91ed475 started successfully.
+2026-05-31 02:11:19,288 - 1894169 - INFO - Waiting 100 seconds for SSM agent to be ready on i-06bf04220d91ed475...
+2026-05-31 02:12:59,381 - 1894169 - INFO - Registering i-06bf04220d91ed475 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2
+2026-05-31 02:12:59,797 - 1894169 - INFO - Registering i-06bf04220d91ed475 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c
+2026-05-31 02:12:59,987 - 1894169 - INFO - Registering i-06bf04220d91ed475 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda
+2026-05-31 02:13:00,209 - 1894169 - INFO - Registering i-06bf04220d91ed475 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d
+2026-05-31 02:14:31,650 - 1894169 - INFO - Sent app_validation.py to i-06bf04220d91ed475 (command_id: 9bc63dcf-2a4d-4c59-878f-2039b2222338)
+2026-05-31 02:15:01,888 - 1894169 - INFO - app_validation.py output for i-06bf04220d91ed475:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 06:14:31.902832
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.20.48
+Hostname | ip-172-25-20-48.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 93.1G | 146.8G | 38% | /data
+fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | 0B | 3.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.20.48:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 397
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.20.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5091 | itsextprod | jboss740eap | itsextprod_jb74 | 8083 | 172.25.20.48:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsextprod/standalone
+3476 | itsprod | jboss740eap | itsprod_jb740e | 8080 | 172.25.20.48:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsprod/standalone
+4020 | itsrfprod | jboss740eap | itsrfprod_jb740 | 8081 | 172.25.20.48:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsrfprod/standalone
+4568 | itswsprod | jboss740eap | itswsprod_jb740 | 8082 | 172.25.20.48:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 06:14:34.123400
+==============================================================================
+
+2026-05-31 02:15:01,888 - 1894169 - ERROR - app_validation.py errors for i-06bf04220d91ed475:
+
+2026-05-31 02:15:01,890 - 1894169 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.48/172.25.20.48-AfterPatching-2026-05-31-02-15-01-890.log
+2026-05-31 02:15:02,286 - 1894169 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.48/172.25.20.48-Validation-details-2026-05-31-02-15-01-890.html
+2026-05-31 02:15:03,339 - 1894169 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-31 02:15:03,339 - 1894169 - INFO - HTML validation report email sent for i-06bf04220d91ed475
+2026-05-31 02:15:03,672 - 1894169 - INFO - Started i-06bf04220d91ed475 in 0:04:00.353053
+2026-05-31 02:15:03,672 - 1894169 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-31 02:17:04,278 - 1894169 - INFO - Sent app_validation.py to i-0bd7b814a6400587a (command_id: a6bf667d-a86d-4888-a032-3ef940b8451e)
+2026-05-31 02:17:34,505 - 1894169 - INFO - app_validation.py output for i-0bd7b814a6400587a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 06:17:04.715227
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.20.15
+Hostname | ip-172-25-20-15.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 89.0G | 150.9G | 37% | /data
+fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | 0B | 3.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.20.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 397
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.20.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3444229 | itsextprod | jboss740eap | itsextprod_jb74 | 8083 | 172.25.20.15:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsextprod/standalone
+3443623 | itsprod | jboss740eap | itsprod_jb740e | 8080 | 172.25.20.15:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsprod/standalone
+3443870 | itsrfprod | jboss740eap | itsrfprod_jb740 | 8081 | 172.25.20.15:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsrfprod/standalone
+3443984 | itswsprod | jboss740eap | itswsprod_jb740 | 8082 | 172.25.20.15:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 06:17:05.679545
+==============================================================================
+
+2026-05-31 02:17:34,505 - 1894169 - ERROR - app_validation.py errors for i-0bd7b814a6400587a:
+
+2026-05-31 02:17:34,506 - 1894169 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.15/172.25.20.15-BeforePatching-2026-05-31-02-17-34-506.log
+2026-05-31 02:17:34,506 - 1894169 - INFO - Deregistering i-0bd7b814a6400587a from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2
+2026-05-31 02:17:34,822 - 1894169 - INFO - Deregistering i-0bd7b814a6400587a from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c
+2026-05-31 02:17:34,922 - 1894169 - INFO - Deregistering i-0bd7b814a6400587a from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda
+2026-05-31 02:17:35,021 - 1894169 - INFO - Deregistering i-0bd7b814a6400587a from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d
+2026-05-31 02:17:35,132 - 1894169 - INFO - Stopping EC2 instance: i-0bd7b814a6400587a at 2026-05-31 02:17:35
+2026-05-31 02:19:52,401 - 1894169 - INFO - Instance i-0bd7b814a6400587a stopped successfully.
+2026-05-31 02:19:52,659 - 1894169 - INFO - Stopped i-0bd7b814a6400587a in 0:02:17.527825
+2026-05-31 02:19:52,660 - 1894169 - INFO - Starting EC2 instance: i-0bd7b814a6400587a
+2026-05-31 02:20:08,631 - 1894169 - INFO - Instance i-0bd7b814a6400587a started successfully.
+2026-05-31 02:20:08,632 - 1894169 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0bd7b814a6400587a...
+2026-05-31 02:21:48,643 - 1894169 - INFO - Registering i-0bd7b814a6400587a to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-Desktop/3dbb1ccd3b0e1ae2
+2026-05-31 02:21:49,074 - 1894169 - INFO - Registering i-0bd7b814a6400587a to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-EXT/ccb8bed2a7a3792c
+2026-05-31 02:21:49,254 - 1894169 - INFO - Registering i-0bd7b814a6400587a to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-RF/0c88f9474c530cda
+2026-05-31 02:21:49,435 - 1894169 - INFO - Registering i-0bd7b814a6400587a to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/ITS-Logistics-PROD-WS/ca3efbe7091a0d3d
+2026-05-31 02:23:20,886 - 1894169 - INFO - Sent app_validation.py to i-0bd7b814a6400587a (command_id: 34730604-122e-47b9-bfcd-21acb65c0c5a)
+2026-05-31 02:23:51,012 - 1894169 - INFO - app_validation.py output for i-0bd7b814a6400587a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 06:23:21.143549
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.20.15
+Hostname | ip-172-25-20-15.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 88.9G | 151.0G | 37% | /data
+fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | 0B | 3.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0b51503ef4030514b.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.20.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 397
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.20.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5090 | itsextprod | jboss740eap | itsextprod_jb74 | 8083 | 172.25.20.15:8083 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsextprod/standalone
+3470 | itsprod | jboss740eap | itsprod_jb740e | 8080 | 172.25.20.15:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsprod/standalone
+4027 | itsrfprod | jboss740eap | itsrfprod_jb740 | 8081 | 172.25.20.15:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itsrfprod/standalone
+4570 | itswsprod | jboss740eap | itswsprod_jb740 | 8082 | 172.25.20.15:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/itswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 06:23:22.291239
+==============================================================================
+
+2026-05-31 02:23:51,012 - 1894169 - ERROR - app_validation.py errors for i-0bd7b814a6400587a:
+
+2026-05-31 02:23:51,013 - 1894169 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.15/172.25.20.15-AfterPatching-2026-05-31-02-23-51-013.log
+2026-05-31 02:23:51,066 - 1894169 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-31/its-prod-app/172.25.20.15/172.25.20.15-Validation-details-2026-05-31-02-23-51-013.html
+2026-05-31 02:23:51,697 - 1894169 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-31 02:23:51,697 - 1894169 - INFO - HTML validation report email sent for i-0bd7b814a6400587a
+2026-05-31 02:23:51,942 - 1894169 - INFO - Started i-0bd7b814a6400587a in 0:03:59.281912
+2026-05-31 02:23:51,942 - 1894169 - INFO - All instances processed.
+2026-05-31 02:23:51,946 - 1894169 - INFO - Restart Total time: 0:15:12.898372
+2026-05-31 02:23:51,947 - 1894169 - INFO - Auto-confirmed services are restarted
+2026-05-31 02:23:51,947 - 1894169 - INFO - Confirmed - services are started
+2026-05-31 02:23:52,065 - 1894169 - INFO - The following instances have failed the patch: []
+2026-05-31 02:23:52,066 - 1894169 - INFO - No instances have failed the patch.
+2026-05-31 02:23:52,066 - 1894169 - INFO - Total Patch Process time: 0:23:48.045912
+2026-05-31 02:24:52,527 - 1894169 - INFO - Log file ./logs/patching_2026-05-31_its-prod-app.log uploaded to s3://q2-2026-aws-security-patching/its-prod-app_Patch/2026-05-31/patching_2026-05-31_its-prod-app.log

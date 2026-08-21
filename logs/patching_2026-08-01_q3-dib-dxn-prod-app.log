@@ -1,0 +1,474 @@
+2026-08-01 00:05:03,260 - 2231147 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-01 00:05:03,260 - 2231147 - INFO - Script Start Time: 2026-08-01 00:05:03
+2026-08-01 00:05:03,554 - 2231147 - INFO - Tag: q3-dib-dxn-prod-app, IPs: ['10.64.12.27', '10.64.12.44'], Environment: prod
+2026-08-01 00:05:03,554 - 2231147 - INFO - Instance(s) selected for Patching: {'i-0bbbeab46fce778fc': '10.64.12.27', 'i-02a4339c33cf5d2d8': '10.64.12.44'}
+2026-08-01 00:05:03,637 - 2231147 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 00:05:03,637 - 2231147 - INFO - Now patching instances at: 2026-08-01 00:05:03
+2026-08-01 00:05:03,902 - 2231147 - INFO - Sent app_validation.py to i-0bbbeab46fce778fc (command_id: 7ad8f71b-a256-44e8-8f70-df02934a00e9)
+2026-08-01 00:05:33,996 - 2231147 - INFO - SSM Command Status: Success
+2026-08-01 00:05:33,996 - 2231147 - INFO - app_validation.py output for i-0bbbeab46fce778fc:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 04:05:04.244476
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.27
+Hostname | ip-10-64-12-27.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 94.2G | 145.7G | 39% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.27:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.27 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2148586 | dibdomsprod | jboss730eap | domsprod_jb730e | 8082 | 10.64.12.27:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibdomsprod/standalone
+2147964 | dibdomswsprod | jboss730eap | domswsprod_jb73 | 8084 | 10.64.12.27:8084 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/dibdomswsprod/standalone
+4084973 | dibssoprod | jboss730eap | ssoprod_jb730ea | 8083 | 10.64.12.27:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibssoprod/standalone
+4084535 | dibwmsprod | jboss730eap | wmsprod_jb730ea | 8080 | 10.64.12.27:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsprod/standalone
+4084798 | dibwmsrfprod | jboss730eap | wmsrfprod_jb730 | 8081 | 10.64.12.27:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 04:05:04.922387
+==============================================================================
+
+2026-08-01 00:05:33,998 - 2231147 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.27/10.64.12.27-BeforePatching-2026-08-01-00-05-33-997.log
+2026-08-01 00:05:34,245 - 2231147 - INFO - Sent app_validation.py to i-02a4339c33cf5d2d8 (command_id: ee38516d-1ace-4497-944b-c8333a4e6aba)
+2026-08-01 00:06:04,325 - 2231147 - INFO - SSM Command Status: Success
+2026-08-01 00:06:04,325 - 2231147 - INFO - app_validation.py output for i-02a4339c33cf5d2d8:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 04:05:34.594872
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.44
+Hostname | ip-10-64-12-44.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 96.9G | 142.9G | 40% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.44:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.44 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2593198 | dibdomsprod | jboss730eap | domsprod_jb730e | 8082 | 10.64.12.44:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibdomsprod/standalone
+2592555 | dibdomswsprod | jboss730eap | domswsprod_jb73 | 8084 | 10.64.12.44:8084 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/dibdomswsprod/standalone
+206610 | dibssoprod | jboss730eap | ssoprod_jb730ea | 8083 | 10.64.12.44:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibssoprod/standalone
+3214838 | dibstage | jboss730eap | dibstg_jb730eap | 8086 | 10.64.12.44:8086 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibstage/standalone
+206208 | dibwmsprod | jboss730eap | wmsprod_jb730ea | 8080 | 10.64.12.44:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsprod/standalone
+206425 | dibwmsrfprod | jboss730eap | wmsrfprod_jb730 | 8081 | 10.64.12.44:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 04:05:35.271573
+==============================================================================
+
+2026-08-01 00:06:04,328 - 2231147 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.44/10.64.12.44-BeforePatching-2026-08-01-00-06-04-326.log
+2026-08-01 00:06:09,666 - 2231147 - INFO - i-0bbbeab46fce778fc: Cron was active = False
+2026-08-01 00:06:14,919 - 2231147 - INFO - i-02a4339c33cf5d2d8: Cron was active = False
+2026-08-01 00:06:14,920 - 2231147 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-01 00:06:15,007 - 2231147 - INFO - Sending patch command to instance i-0bbbeab46fce778fc
+2026-08-01 00:06:15,160 - 2231147 - INFO - Command sent successfully to instance i-0bbbeab46fce778fc. Command ID: 627d6e13-f11b-4cd3-93e4-ccabe27e310c
+2026-08-01 00:06:15,298 - 2231147 - INFO - Sending patch command to instance i-02a4339c33cf5d2d8
+2026-08-01 00:06:15,395 - 2231147 - INFO - Command sent successfully to instance i-02a4339c33cf5d2d8. Command ID: 082ce18b-6e95-462a-8162-c00773a2f73c
+2026-08-01 00:13:47,478 - 2231147 - INFO - All patches applied successfully.
+2026-08-01 00:13:47,478 - 2231147 - INFO - Patching end time: 2026-08-01 00:13:47
+2026-08-01 00:13:47,478 - 2231147 - INFO - Patch Elapsed time: 0:08:43.841323
+2026-08-01 00:13:47,547 - 2231147 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-01 00:13:47,547 - 2231147 - INFO - Confirmed - services are stopped
+2026-08-01 00:13:53,880 - 2231147 - INFO - Discovered TG map: {'i-0bbbeab46fce778fc': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10'], 'i-02a4339c33cf5d2d8': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-Prod-Voice-Stage/60f6d2977c810fa2', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10']}
+2026-08-01 00:13:54,146 - 2231147 - INFO - Deregistering i-0bbbeab46fce778fc from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007
+2026-08-01 00:13:54,259 - 2231147 - INFO - Deregistering i-0bbbeab46fce778fc from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3
+2026-08-01 00:13:54,315 - 2231147 - INFO - Deregistering i-0bbbeab46fce778fc from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f
+2026-08-01 00:13:54,373 - 2231147 - INFO - Deregistering i-0bbbeab46fce778fc from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b
+2026-08-01 00:13:54,429 - 2231147 - INFO - Deregistering i-0bbbeab46fce778fc from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10
+2026-08-01 00:13:54,479 - 2231147 - INFO - Stopping EC2 instance: i-0bbbeab46fce778fc at 2026-08-01 00:13:54
+2026-08-01 00:15:25,874 - 2231147 - INFO - Instance i-0bbbeab46fce778fc stopped successfully.
+2026-08-01 00:15:26,135 - 2231147 - INFO - Stopped i-0bbbeab46fce778fc in 0:01:31.655900
+2026-08-01 00:15:26,136 - 2231147 - INFO - Starting EC2 instance: i-0bbbeab46fce778fc
+2026-08-01 00:15:42,109 - 2231147 - INFO - Instance i-0bbbeab46fce778fc started successfully.
+2026-08-01 00:15:42,110 - 2231147 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0bbbeab46fce778fc...
+2026-08-01 00:17:22,165 - 2231147 - INFO - Registering i-0bbbeab46fce778fc to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007
+2026-08-01 00:17:22,356 - 2231147 - INFO - Registering i-0bbbeab46fce778fc to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3
+2026-08-01 00:17:22,488 - 2231147 - INFO - Registering i-0bbbeab46fce778fc to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f
+2026-08-01 00:17:22,618 - 2231147 - INFO - Registering i-0bbbeab46fce778fc to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b
+2026-08-01 00:17:22,763 - 2231147 - INFO - Registering i-0bbbeab46fce778fc to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10
+2026-08-01 00:19:53,728 - 2231147 - INFO - Sent app_validation.py to i-0bbbeab46fce778fc (command_id: 4d4a0d86-5dbc-4ba2-9043-fc7f90d9fdb2)
+2026-08-01 00:20:23,803 - 2231147 - INFO - SSM Command Status: Success
+2026-08-01 00:20:23,803 - 2231147 - INFO - app_validation.py output for i-0bbbeab46fce778fc:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 04:19:54.031867
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.27
+Hostname | ip-10-64-12-27.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 93.9G | 146.0G | 39% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.27:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.27 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3502 | dibdomsprod | jboss730eap | domsprod_jb730e | 8082 | 10.64.12.27:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibdomsprod/standalone
+3620 | dibdomswsprod | jboss730eap | domswsprod_jb73 | 8084 | 10.64.12.27:8084 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/dibdomswsprod/standalone
+3557 | dibssoprod | jboss730eap | ssoprod_jb730ea | 8083 | 10.64.12.27:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibssoprod/standalone
+3038 | dibwmsprod | jboss730eap | wmsprod_jb730ea | 8080 | 10.64.12.27:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsprod/standalone
+3496 | dibwmsrfprod | jboss730eap | wmsrfprod_jb730 | 8081 | 10.64.12.27:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 04:19:56.401424
+==============================================================================
+
+2026-08-01 00:20:23,805 - 2231147 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.27/10.64.12.27-AfterPatching-2026-08-01-00-20-23-804.log
+2026-08-01 00:20:23,903 - 2231147 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.27/10.64.12.27-Validation-details-2026-08-01-00-20-23-804.html
+2026-08-01 00:20:24,229 - 2231147 - INFO - i-0bbbeab46fce778fc: Cron was not active - skipping enable
+2026-08-01 00:20:24,299 - 2231147 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-01 00:20:24,300 - 2231147 - INFO - GREEN mail sent for i-0bbbeab46fce778fc
+2026-08-01 00:20:24,551 - 2231147 - INFO - Started i-0bbbeab46fce778fc in 0:04:58.415123
+2026-08-01 00:20:24,551 - 2231147 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-08-01 00:22:24,560 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007
+2026-08-01 00:22:24,668 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3
+2026-08-01 00:22:24,720 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-Prod-Voice-Stage/60f6d2977c810fa2
+2026-08-01 00:22:24,771 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f
+2026-08-01 00:22:24,821 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b
+2026-08-01 00:22:24,873 - 2231147 - INFO - Deregistering i-02a4339c33cf5d2d8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10
+2026-08-01 00:22:24,928 - 2231147 - INFO - Stopping EC2 instance: i-02a4339c33cf5d2d8 at 2026-08-01 00:22:24
+2026-08-01 00:24:26,537 - 2231147 - INFO - Instance i-02a4339c33cf5d2d8 stopped successfully.
+2026-08-01 00:24:26,778 - 2231147 - INFO - Stopped i-02a4339c33cf5d2d8 in 0:02:01.850201
+2026-08-01 00:24:26,779 - 2231147 - INFO - Starting EC2 instance: i-02a4339c33cf5d2d8
+2026-08-01 00:24:42,766 - 2231147 - INFO - Instance i-02a4339c33cf5d2d8 started successfully.
+2026-08-01 00:24:42,766 - 2231147 - INFO - Waiting 100 seconds for SSM agent to be ready on i-02a4339c33cf5d2d8...
+2026-08-01 00:26:22,859 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-Prod/c66ac19d38ddc007
+2026-08-01 00:26:23,055 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-DOMS-WS-Prod/f05a1b0db77883c3
+2026-08-01 00:26:23,196 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-Prod-Voice-Stage/60f6d2977c810fa2
+2026-08-01 00:26:23,325 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-SSO-Prod/14f154ea11589b1f
+2026-08-01 00:26:23,459 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-Prod/554aa1957456943b
+2026-08-01 00:26:23,598 - 2231147 - INFO - Registering i-02a4339c33cf5d2d8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIB-WMS-RF-Prod/144ab7769690ed10
+2026-08-01 00:29:54,606 - 2231147 - INFO - Sent app_validation.py to i-02a4339c33cf5d2d8 (command_id: 65d39ad0-b5cf-4c13-a77e-7bc69156f1ec)
+2026-08-01 00:30:24,691 - 2231147 - INFO - SSM Command Status: Success
+2026-08-01 00:30:24,691 - 2231147 - INFO - app_validation.py output for i-02a4339c33cf5d2d8:
+
+==============================================================================
+Server Availability Check Started | 2026-08-01 04:29:54.928034
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.44
+Hostname | ip-10-64-12-44.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 96.9G | 143.0G | 40% | /data
+fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | 0B | 12.7T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-c14c83ba.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.12.44:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 44
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.44 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4075 | dibdomsprod | jboss730eap | domsprod_jb730e | 8082 | 10.64.12.44:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibdomsprod/standalone
+3686 | dibdomswsprod | jboss730eap | domswsprod_jb73 | 8084 | 10.64.12.44:8084 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/dibdomswsprod/standalone
+3924 | dibssoprod | jboss730eap | ssoprod_jb730ea | 8083 | 10.64.12.44:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibssoprod/standalone
+4635 | dibstage | jboss730eap | dibstg_jb730eap | 8086 | 10.64.12.44:8086 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibstage/standalone
+3759 | dibwmsprod | jboss730eap | wmsprod_jb730ea | 8080 | 10.64.12.44:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsprod/standalone
+3754 | dibwmsrfprod | jboss730eap | wmsrfprod_jb730 | 8081 | 10.64.12.44:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmsrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-01 04:29:55.685517
+==============================================================================
+
+2026-08-01 00:30:24,693 - 2231147 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.44/10.64.12.44-AfterPatching-2026-08-01-00-30-24-693.log
+2026-08-01 00:30:24,751 - 2231147 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-01/q3-dib-dxn-prod-app/10.64.12.44/10.64.12.44-Validation-details-2026-08-01-00-30-24-693.html
+2026-08-01 00:30:24,971 - 2231147 - INFO - i-02a4339c33cf5d2d8: Cron was not active - skipping enable
+2026-08-01 00:30:25,050 - 2231147 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-01 00:30:25,050 - 2231147 - INFO - GREEN mail sent for i-02a4339c33cf5d2d8
+2026-08-01 00:30:25,316 - 2231147 - INFO - Started i-02a4339c33cf5d2d8 in 0:05:58.537142
+2026-08-01 00:30:25,317 - 2231147 - INFO - All instances processed.
+2026-08-01 00:30:25,323 - 2231147 - INFO - Restart Total time: 0:16:37.645740
+2026-08-01 00:30:25,323 - 2231147 - INFO - Auto-confirmed services are restarted
+2026-08-01 00:30:25,323 - 2231147 - INFO - Confirmed - services are started
+2026-08-01 00:30:25,435 - 2231147 - INFO - The following instances have failed the patch: []
+2026-08-01 00:30:25,435 - 2231147 - INFO - No instances have failed the patch.
+2026-08-01 00:30:25,435 - 2231147 - INFO - Total Patch Process time: 0:25:22.174708
+2026-08-01 00:31:26,071 - 2231147 - INFO - Log file ./logs/patching_2026-08-01_q3-dib-dxn-prod-app.log uploaded to s3://q3-2026-aws-security-patching/q3-dib-dxn-prod-app_Patch/2026-08-01/patching_2026-08-01_q3-dib-dxn-prod-app.log

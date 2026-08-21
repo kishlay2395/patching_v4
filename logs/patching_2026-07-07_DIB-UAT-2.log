@@ -1,0 +1,1999 @@
+2026-07-07 00:20:02,668 - 3880158 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-07 00:20:02,668 - 3880158 - INFO - Script Start Time: 2026-07-07 00:20:02
+2026-07-07 00:20:02,982 - 3880158 - INFO - Instance(s) selected for Patching: {'i-07347549ed5dc615a': '10.64.12.14', 'i-00d7f255d0917e22c': '10.64.12.37', 'i-0061e0ca24620c596': '10.64.12.213', 'i-0d9ded21646d6e67a': '10.64.12.16'}
+2026-07-07 00:20:03,049 - 3880158 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-07 00:20:03,049 - 3880158 - INFO - Now patching instances at: 2026-07-07 00:20:03
+2026-07-07 00:20:08,312 - 3880158 - INFO - i-0d9ded21646d6e67a: Cron was active = True
+2026-07-07 00:20:13,583 - 3880158 - INFO - i-00d7f255d0917e22c: Cron was active = True
+2026-07-07 00:20:18,891 - 3880158 - INFO - i-07347549ed5dc615a: Cron was active = True
+2026-07-07 00:20:24,165 - 3880158 - INFO - i-0061e0ca24620c596: Cron was active = True
+2026-07-07 00:20:24,352 - 3880158 - INFO - Health monitor crontab disabled on all instances
+2026-07-07 00:20:24,353 - 3880158 - INFO - Disabled cron for: ['i-0d9ded21646d6e67a', 'i-00d7f255d0917e22c', 'i-07347549ed5dc615a', 'i-0061e0ca24620c596']
+2026-07-07 00:20:24,664 - 3880158 - INFO - Sent app_validation.py to i-0d9ded21646d6e67a (command_id: a07993ff-f120-4ea9-b9cc-3be8a4d6ab8e)
+2026-07-07 00:20:54,740 - 3880158 - INFO - app_validation.py output for i-0d9ded21646d6e67a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:20:24.982264
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.16
+Hostname | ip-10-64-12-16.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 192.3G | 47.5G | 80% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | 0B | 9.2T | 0B | 0% | /data/data2/shared/softeon/dibwms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | /data/data2/shared/softeon/dibwms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 50
+Batch/Daemon Java Processes | 49
+Non-Standalone Java Processes | dibmtg_abchdis, dibmtg_ccd, dibmtg_dwa, dibmtg_event, dibmtg_ftp, dibmtg_harp, dibmtg_lbl, dibmtg_repl, dibmtg_rccl, dibmtg_rpt, dibmtg_1rpt, dibmtg_jqgrid, dibmtg_sch, dibmtg_inbq, dibmtg_wld, wmslexuat_abd, wmslexuat_ccd, wmslexuat_dwa, wmslexuat_event, wmslexuat_ftp, wmslexuat_harp, wmslexuat_repl, wmslexuat_rplp, wmslexuat_rccl, wmslexuat_rpt, wmslexuat_1_rpt, wmslexuat_jqgrd, wmslexuat_sch, wmslexuat_inbq, wmslexuat_wld, wmslexuat_zplp, wmslexuat_vomob, wmswco_advom, dibhtp_abchdis, dibhtp_ccd, dibhtp_dwa, dibhtp_event, dibhtp_ftp, dibhtp_harp, dibhtp_repl, dibhtp_rccl, dibhtp_rpt, dibhtp_1rpt, dibhtp_jqgrid, dibhtp_sch, dibhtp_inbq, dibhtp_1vmhtp, dibhtp_wld, dibmtg_1vmmtg
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 49
+Java-Name | Java-Path
+dibmtg_abchdis | /data/batchapp/softeon/dibwmsmtguat/autobatchdistributiondaemon
+dibmtg_ccd | /data/batchapp/softeon/dibwmsmtguat/clustercreationdaemon
+dibmtg_dwa | /data/batchapp/softeon/dibwmsmtguat/downloaddaemon
+dibmtg_event | /data/batchapp/softeon/dibwmsmtguat/eventdaemon
+dibmtg_ftp | /data/batchapp/softeon/dibwmsmtguat/ftpdaemon
+dibmtg_harp | /data/batchapp/softeon/dibwmsmtguat/hardallocationdaemon
+dibmtg_lbl | /data/batchapp/softeon/dibwmsmtguat/labeldaemon
+dibmtg_repl | /data/batchapp/softeon/dibwmsmtguat/replenishmentdaemon
+dibmtg_rccl | /data/batchapp/softeon/dibwmsmtguat/replenishmentpickloccanceldaemon
+dibmtg_rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon
+dibmtg_1rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon1
+dibmtg_jqgrid | /data/batchapp/softeon/dibwmsmtguat/reportjqgridexportdaemon
+dibmtg_sch | /data/batchapp/softeon/dibwmsmtguat/schedulerdaemon
+dibmtg_inbq | /data/batchapp/softeon/dibwmsmtguat/uploaddaemon
+dibmtg_wld | /data/batchapp/softeon/dibwmsmtguat/wavelaunchdaemon
+wmslexuat_abd | /data/batchapp/softeon/dibwmslexuat/autobatchdistributiondaemon
+wmslexuat_ccd | /data/batchapp/softeon/dibwmslexuat/clustercreationdaemon
+wmslexuat_dwa | /data/batchapp/softeon/dibwmslexuat/downloaddaemon
+wmslexuat_event | /data/batchapp/softeon/dibwmslexuat/eventdaemon
+wmslexuat_ftp | /data/batchapp/softeon/dibwmslexuat/ftpdaemon
+wmslexuat_harp | /data/batchapp/softeon/dibwmslexuat/hardallocationdaemon
+wmslexuat_repl | /data/batchapp/softeon/dibwmslexuat/replenishmentdaemon
+wmslexuat_rplp | /data/batchapp/softeon/dibwmslexuat/replenishmentpriorityupdatedaemon
+wmslexuat_rccl | /data/batchapp/softeon/dibwmslexuat/replpickloccanceldaemon
+wmslexuat_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon
+wmslexuat_1_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon1
+wmslexuat_jqgrd | /data/batchapp/softeon/dibwmslexuat/reportjqgridexportdaemon
+wmslexuat_sch | /data/batchapp/softeon/dibwmslexuat/schedulardaemon
+wmslexuat_inbq | /data/batchapp/softeon/dibwmslexuat/uploaddaemon
+wmslexuat_wld | /data/batchapp/softeon/dibwmslexuat/wavelaunchdaemon
+wmslexuat_zplp | /data/batchapp/softeon/dibwmslexuat/zebraprintdaemon
+wmslexuat_vomob | /data/batchapp/softeon/dibwmslexuat/voicemobiledaemon
+wmswco_advom | /data/batchapp/softeon/dibwmslexuat/voiceadminserver
+dibhtp_abchdis | /data/batchapp/softeon/dibwmshtpuat/autobatchdistributiondaemon
+dibhtp_ccd | /data/batchapp/softeon/dibwmshtpuat/clustercreationdaemon
+dibhtp_dwa | /data/batchapp/softeon/dibwmshtpuat/downloaddaemon
+dibhtp_event | /data/batchapp/softeon/dibwmshtpuat/eventdaemon
+dibhtp_ftp | /data/batchapp/softeon/dibwmshtpuat/ftpdaemon
+dibhtp_harp | /data/batchapp/softeon/dibwmshtpuat/hardallocationdaemon
+dibhtp_repl | /data/batchapp/softeon/dibwmshtpuat/replenishmentdaemon
+dibhtp_rccl | /data/batchapp/softeon/dibwmshtpuat/replenishmentpickloccanceldaemon
+dibhtp_rpt | /data/batchapp/softeon/dibwmshtpuat/reportdaemon
+dibhtp_1rpt | /data/batchapp/softeon/dibwmshtpuat/reportdaemon1
+dibhtp_jqgrid | /data/batchapp/softeon/dibwmshtpuat/reportjqgridexportdaemon
+dibhtp_sch | /data/batchapp/softeon/dibwmshtpuat/schedulerdaemon
+dibhtp_inbq | /data/batchapp/softeon/dibwmshtpuat/uploaddaemon
+dibhtp_1vmhtp | /data/batchapp/softeon/dibwmshtpuat/voicemobiledaemon
+dibhtp_wld | /data/batchapp/softeon/dibwmshtpuat/wavelaunchdaemon
+dibmtg_1vmmtg | /data/batchapp/softeon/dibwmsmtguat/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+358021 | dibwmslexuat | jboss730eap | wmslex_jb730eap | 8087 | 10.64.12.16:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmslexuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:20:26.401716
+==============================================================================
+
+2026-07-07 00:20:54,740 - 3880158 - ERROR - app_validation.py errors for i-0d9ded21646d6e67a:
+
+2026-07-07 00:20:54,741 - 3880158 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-BeforePatching-2026-07-07-00-20-54-741.log
+2026-07-07 00:20:54,973 - 3880158 - INFO - Sent app_validation.py to i-00d7f255d0917e22c (command_id: 2053fb6d-9407-4b43-9046-d1c793623d86)
+2026-07-07 00:21:25,046 - 3880158 - INFO - app_validation.py output for i-00d7f255d0917e22c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 04:20:55.266739
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.37
+Hostname | ip-10-64-12-37.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.5G | 119.4G | 58% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.37:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 71
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.37 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 68
+Batch/Daemon Java Processes | 68
+Non-Standalone Java Processes | wmsph2uat_dwa, wmsph2uat_event, wmsph2uat_lbl, wmsph2uat_repl, wmsph2uat_rpt, wmsph2uat_1_rpt, wmsph2uat_jqgrd, wmsph2uat_sch, wmsph2uat_inbq, wmsph2uat_vomob, wmsph2uat_ccd, wmsph2uat_wld, wmsph2uat_rplp, wmsph2uat_abd, wmsph2uat_rccl, wmsph2uat_ftp, wmsph2uat_zplp, wmsph2uat_harp, dibssoph2_dwa, dibssoph2_sch, dibssoph_2vomob, wmssik_abchdis, wmssik_ccd, wmssik_dwa, wmssik_event, wmssik_harp, wmssik_lbl, wmssik_repl, wmssik_rccl, wmssik_rpt, wmssik_1rpt, wmssik_jqgrid, wmssik_sch, wmssik_inbq, wmssik_3vomob, wmssik_wld, wmsmbkuat_dwa, wmsmbkuat_event, wmsmbkuat_lbl, wmsmbkuat_repl, wmsmbkuat_rpt, wmsmbkuat_jqgrd, wmsmbkuat_sch, wmsmbkuat_inbq, wmsmbkuat_vomob, wmsmbkuat_wld, wmsmbkuat_rplp, wmsmbkuat_abd, wmsmbkuat_rccl, wmsmbkuat_ftp, wmsmbkuat_harp, wmsmbkuat_1rpt, wmsmbkuat_voadm, domph2uat_dwa, domph2uat_event, domph2uat_ftp, domph2uat_inbq, domph2uat_hld, domph2uat_omas, domph2uat_prls, domph2uat_sch, domph2uat_scfk, domph2uat_wmsrl, domph2uat_rpt, domph2uat_jqgrd, domph2uat_ord, domph2uat_gener, domph2uat_thsrc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 68
+Java-Name | Java-Path
+wmsph2uat_dwa | /data/batchapp/softeon/dibwmsph2uat/downloaddaemon
+wmsph2uat_event | /data/batchapp/softeon/dibwmsph2uat/eventdaemon
+wmsph2uat_lbl | /data/batchapp/softeon/dibwmsph2uat/labeldaemon
+wmsph2uat_repl | /data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon
+wmsph2uat_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon
+wmsph2uat_1_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon1
+wmsph2uat_jqgrd | /data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon
+wmsph2uat_sch | /data/batchapp/softeon/dibwmsph2uat/schedulardaemon
+wmsph2uat_inbq | /data/batchapp/softeon/dibwmsph2uat/uploaddaemon
+wmsph2uat_vomob | /data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon
+wmsph2uat_ccd | /data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon
+wmsph2uat_wld | /data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon
+wmsph2uat_rplp | /data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon
+wmsph2uat_abd | /data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon
+wmsph2uat_rccl | /data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon
+wmsph2uat_ftp | /data/batchapp/softeon/dibwmsph2uat/ftpdaemon
+wmsph2uat_zplp | /data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon
+wmsph2uat_harp | /data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon
+dibssoph2_dwa | /data/batchapp/softeon/dibssoph2uat/downloaddaemon
+dibssoph2_sch | /data/batchapp/softeon/dibssoph2uat/schedulardaemon
+dibssoph_2vomob | /data/batchapp/softeon/dibssoph2uat/voiceadminserver
+wmssik_abchdis | /data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon
+wmssik_ccd | /data/batchapp/softeon/dibwmssikuat/clustercreationdaemon
+wmssik_dwa | /data/batchapp/softeon/dibwmssikuat/downloaddaemon
+wmssik_event | /data/batchapp/softeon/dibwmssikuat/eventdaemon
+wmssik_harp | /data/batchapp/softeon/dibwmssikuat/hardallocationdaemon
+wmssik_lbl | /data/batchapp/softeon/dibwmssikuat/labeldaemon
+wmssik_repl | /data/batchapp/softeon/dibwmssikuat/replenishmentdaemon
+wmssik_rccl | /data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon
+wmssik_rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon
+wmssik_1rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon1
+wmssik_jqgrid | /data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon
+wmssik_sch | /data/batchapp/softeon/dibwmssikuat/schedulerdaemon
+wmssik_inbq | /data/batchapp/softeon/dibwmssikuat/uploaddaemon
+wmssik_3vomob | /data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3
+wmssik_wld | /data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon
+wmsmbkuat_dwa | /data/batchapp/softeon/dibwmsmbkuat/downloaddaemon
+wmsmbkuat_event | /data/batchapp/softeon/dibwmsmbkuat/eventdaemon
+wmsmbkuat_lbl | /data/batchapp/softeon/dibwmsmbkuat/labeldaemon
+wmsmbkuat_repl | /data/batchapp/softeon/dibwmsmbkuat/replenishmentdaemon
+wmsmbkuat_rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon
+wmsmbkuat_jqgrd | /data/batchapp/softeon/dibwmsmbkuat/reportjqgridexportdaemon
+wmsmbkuat_sch | /data/batchapp/softeon/dibwmsmbkuat/schedulardaemon
+wmsmbkuat_inbq | /data/batchapp/softeon/dibwmsmbkuat/uploaddaemon
+wmsmbkuat_vomob | /data/batchapp/softeon/dibwmsmbkuat/voicemobiledaemon
+wmsmbkuat_wld | /data/batchapp/softeon/dibwmsmbkuat/wavelaunchdaemon
+wmsmbkuat_rplp | /data/batchapp/softeon/dibwmsmbkuat/replenishmentpriorityupdatedaemon
+wmsmbkuat_abd | /data/batchapp/softeon/dibwmsmbkuat/autobatchdistributiondaemon
+wmsmbkuat_rccl | /data/batchapp/softeon/dibwmsmbkuat/replpickloccanceldaemon
+wmsmbkuat_ftp | /data/batchapp/softeon/dibwmsmbkuat/ftpdaemon
+wmsmbkuat_harp | /data/batchapp/softeon/dibwmsmbkuat/hardallocationdaemon
+wmsmbkuat_1rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon1
+wmsmbkuat_voadm | /data/batchapp/softeon/dibwmsmbkuat/voiceadmindaemon
+domph2uat_dwa | /data/batchapp/softeon/dibdomsph2uat/downloaddaemon
+domph2uat_event | /data/batchapp/softeon/dibdomsph2uat/eventdaemon
+domph2uat_ftp | /data/batchapp/softeon/dibdomsph2uat/ftpdaemon
+domph2uat_inbq | /data/batchapp/softeon/dibdomsph2uat/uploaddaemon
+domph2uat_hld | /data/batchapp/softeon/dibdomsph2uat/holddaemon
+domph2uat_omas | /data/batchapp/softeon/dibdomsph2uat/massupdatedaemon
+domph2uat_prls | /data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon
+domph2uat_sch | /data/batchapp/softeon/dibdomsph2uat/schedulardaemon
+domph2uat_scfk | /data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon
+domph2uat_wmsrl | /data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon
+domph2uat_rpt | /data/batchapp/softeon/dibdomsph2uat/reportdaemon
+domph2uat_jqgrd | /data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon
+domph2uat_ord | /data/batchapp/softeon/dibdomsph2uat/ordercreationdaemon
+domph2uat_gener | /data/batchapp/softeon/dibdomsph2uat/genericdaemon
+domph2uat_thsrc | /data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 04:20:56.787769
+==============================================================================
+
+2026-07-07 00:21:25,047 - 3880158 - ERROR - app_validation.py errors for i-00d7f255d0917e22c:
+
+2026-07-07 00:21:25,048 - 3880158 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-BeforePatching-2026-07-07-00-21-25-048.log
+2026-07-07 00:21:25,368 - 3880158 - INFO - Sent app_validation.py to i-07347549ed5dc615a (command_id: 2c3da8ab-ed9e-4f7c-807a-85f351d6e8d0)
+2026-07-07 00:21:55,499 - 3880158 - INFO - app_validation.py output for i-07347549ed5dc615a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:21:25.615236
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.14
+Hostname | ip-10-64-12-14.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 182.9G | 107.0G | 63% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.14:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 104
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.14 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 34
+Non-Standalone Java Processes | wmswcouat_abd, wmswcouat_ccd, wmswcouat_dwa, wmswcouat_event, wmswcouat_ftp, wmswcouat_harp, wmswcouat_lbl, wmswcouat_repl, wmswcouat_rplp, wmswcouat_rccl, wmswcouat_rpt, wmswcouat_1_rpt, wmswcouat_jqgrd, wmswcouat_sch, wmswcouat_inbq, wmswcouat_wld, wmswcouat_zplp, wmswco_VOMOB, msq_abchdis, msq_dwa, msq_event, msg_ftp, msq_harp, msq_lbl, msq_repl, msq_rccl, msq_rpt, msq_1rpt, msq_jqgrid, msq_sch, msq_inbq, msq_1vmmsq1, msq_wld, msq_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 34
+Java-Name | Java-Path
+wmswcouat_abd | /data/batchapp/softeon/dibwmswcouat/autobatchdistributiondaemon
+wmswcouat_ccd | /data/batchapp/softeon/dibwmswcouat/clustercreationdaemon
+wmswcouat_dwa | /data/batchapp/softeon/dibwmswcouat/downloaddaemon
+wmswcouat_event | /data/batchapp/softeon/dibwmswcouat/eventdaemon
+wmswcouat_ftp | /data/batchapp/softeon/dibwmswcouat/ftpdaemon
+wmswcouat_harp | /data/batchapp/softeon/dibwmswcouat/hardallocationdaemon
+wmswcouat_lbl | /data/batchapp/softeon/dibwmswcouat/labeldaemon
+wmswcouat_repl | /data/batchapp/softeon/dibwmswcouat/replenishmentdaemon
+wmswcouat_rplp | /data/batchapp/softeon/dibwmswcouat/replenishmentpriorityupdatedaemon
+wmswcouat_rccl | /data/batchapp/softeon/dibwmswcouat/replpickloccanceldaemon
+wmswcouat_rpt | /data/batchapp/softeon/dibwmswcouat/reportdaemon
+wmswcouat_1_rpt | /data/batchapp/softeon/dibwmswcouat/reportdaemon1
+wmswcouat_jqgrd | /data/batchapp/softeon/dibwmswcouat/reportjqgridexportdaemon
+wmswcouat_sch | /data/batchapp/softeon/dibwmswcouat/schedulardaemon
+wmswcouat_inbq | /data/batchapp/softeon/dibwmswcouat/uploaddaemon
+wmswcouat_wld | /data/batchapp/softeon/dibwmswcouat/wavelaunchdaemon
+wmswcouat_zplp | /data/batchapp/softeon/dibwmswcouat/zebraprintdaemon
+wmswco_VOMOB | /data/batchapp/softeon/dibwmswcouat/voicemobiledaemon
+msq_abchdis | /data/batchapp/softeon/dibwmsmsquat/autobatchdistributiondaemon
+msq_dwa | /data/batchapp/softeon/dibwmsmsquat/downloaddaemon
+msq_event | /data/batchapp/softeon/dibwmsmsquat/eventdaemon
+msg_ftp | /data/batchapp/softeon/dibwmsmsquat/ftpdaemon
+msq_harp | /data/batchapp/softeon/dibwmsmsquat/hardallocationdaemon
+msq_lbl | /data/batchapp/softeon/dibwmsmsquat/labeldaemon
+msq_repl | /data/batchapp/softeon/dibwmsmsquat/replenishmentdaemon
+msq_rccl | /data/batchapp/softeon/dibwmsmsquat/replenishmentpickloccanceldaemon
+msq_rpt | /data/batchapp/softeon/dibwmsmsquat/reportdaemon
+msq_1rpt | /data/batchapp/softeon/dibwmsmsquat/reportdaemon1
+msq_jqgrid | /data/batchapp/softeon/dibwmsmsquat/reportjqgridexportdaemon
+msq_sch | /data/batchapp/softeon/dibwmsmsquat/schedulerdaemon
+msq_inbq | /data/batchapp/softeon/dibwmsmsquat/uploaddaemon
+msq_1vmmsq1 | /data/batchapp/softeon/dibwmsmsquat/voicemobiledaemon1
+msq_wld | /data/batchapp/softeon/dibwmsmsquat/wavelaunchdaemon
+msq_ccd | /data/batchapp/softeon/dibwmsmsquat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:21:26.408947
+==============================================================================
+
+2026-07-07 00:21:55,500 - 3880158 - ERROR - app_validation.py errors for i-07347549ed5dc615a:
+
+2026-07-07 00:21:55,502 - 3880158 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.14/10.64.12.14-BeforePatching-2026-07-07-00-21-55-501.log
+2026-07-07 00:21:55,750 - 3880158 - INFO - Sent app_validation.py to i-0061e0ca24620c596 (command_id: 7fda0dd4-1cda-440d-846a-a26cfa907ad7)
+2026-07-07 00:22:25,819 - 3880158 - INFO - app_validation.py output for i-0061e0ca24620c596:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 04:21:56.025748
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.213
+Hostname | ip-10-64-12-213.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 197.9G | 91.9G | 68% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.213:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.213 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | dibwms_abchdis, dibwms_ccd, dibwms_dwa, dibwms_event, dibwms_ftp, dibwms_harp, dibwms_lbl, dibwms_repl, dibwms_rccl, dibwms_rpt, dibwms_1rpt, dibwms_jqgrid, dibwms_sch, dibwms_inbq, dibwms_4vomob, dibwms_wld, wbnwms_abchdis, wbnwms_ccd, wbnwms_dwa, wbnwms_event, wbnwms_ftp, wbnwms_harp, wbnwms_lbl, wbnwms_repl, wbnwms_rccl, wbnwms_rpt, wbnwms_jqgrid, wbnwms_sch, wbnwms_inbq, wbnwms_vmwbn1, wbnwms_wld, wbnwms_1rpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmsmdnuat/autobatchdistributiondaemon
+dibwms_ccd | /data/batchapp/softeon/dibwmsmdnuat/clustercreationdaemon
+dibwms_dwa | /data/batchapp/softeon/dibwmsmdnuat/downloaddaemon
+dibwms_event | /data/batchapp/softeon/dibwmsmdnuat/eventdaemon
+dibwms_ftp | /data/batchapp/softeon/dibwmsmdnuat/ftpdaemon
+dibwms_harp | /data/batchapp/softeon/dibwmsmdnuat/hardallocationdaemon
+dibwms_lbl | /data/batchapp/softeon/dibwmsmdnuat/labeldaemon
+dibwms_repl | /data/batchapp/softeon/dibwmsmdnuat/replenishmentdaemon
+dibwms_rccl | /data/batchapp/softeon/dibwmsmdnuat/replenishmentpickloccanceldaemon
+dibwms_rpt | /data/batchapp/softeon/dibwmsmdnuat/reportdaemon
+dibwms_1rpt | /data/batchapp/softeon/dibwmsmdnuat/reportdaemon1
+dibwms_jqgrid | /data/batchapp/softeon/dibwmsmdnuat/reportjqgridexportdaemon
+dibwms_sch | /data/batchapp/softeon/dibwmsmdnuat/schedulerdaemon
+dibwms_inbq | /data/batchapp/softeon/dibwmsmdnuat/uploaddaemon
+dibwms_4vomob | /data/batchapp/softeon/dibwmsmdnuat/voicemobiledaemon4
+dibwms_wld | /data/batchapp/softeon/dibwmsmdnuat/wavelaunchdaemon
+wbnwms_abchdis | /data/batchapp/softeon/dibwmswbnuat/autobatchdistributiondaemon
+wbnwms_ccd | /data/batchapp/softeon/dibwmswbnuat/clustercreationdaemon
+wbnwms_dwa | /data/batchapp/softeon/dibwmswbnuat/downloaddaemon
+wbnwms_event | /data/batchapp/softeon/dibwmswbnuat/eventdaemon
+wbnwms_ftp | /data/batchapp/softeon/dibwmswbnuat/ftpdaemon
+wbnwms_harp | /data/batchapp/softeon/dibwmswbnuat/hardallocationdaemon
+wbnwms_lbl | /data/batchapp/softeon/dibwmswbnuat/labeldaemon
+wbnwms_repl | /data/batchapp/softeon/dibwmswbnuat/replenishmentdaemon
+wbnwms_rccl | /data/batchapp/softeon/dibwmswbnuat/replenishmentpickloccanceldaemon
+wbnwms_rpt | /data/batchapp/softeon/dibwmswbnuat/reportdaemon
+wbnwms_jqgrid | /data/batchapp/softeon/dibwmswbnuat/reportjqgridexportdaemon
+wbnwms_sch | /data/batchapp/softeon/dibwmswbnuat/schedulerdaemon
+wbnwms_inbq | /data/batchapp/softeon/dibwmswbnuat/uploaddaemon
+wbnwms_vmwbn1 | /data/batchapp/softeon/dibwmswbnuat/voicemobiledaemon
+wbnwms_wld | /data/batchapp/softeon/dibwmswbnuat/wavelaunchdaemon
+wbnwms_1rpt | /data/batchapp/softeon/dibwmswbnuat/reportdaemon1
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 04:21:56.793224
+==============================================================================
+
+2026-07-07 00:22:25,819 - 3880158 - ERROR - app_validation.py errors for i-0061e0ca24620c596:
+
+2026-07-07 00:22:25,821 - 3880158 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.213/10.64.12.213-BeforePatching-2026-07-07-00-22-25-820.log
+2026-07-07 00:22:25,903 - 3880158 - INFO - Sending patch command to instance i-0d9ded21646d6e67a
+2026-07-07 00:22:26,050 - 3880158 - INFO - Command sent successfully to instance i-0d9ded21646d6e67a. Command ID: 778aedee-61f7-4df8-8321-ccedc93d48a2
+2026-07-07 00:22:26,195 - 3880158 - INFO - Sending patch command to instance i-00d7f255d0917e22c
+2026-07-07 00:22:26,275 - 3880158 - INFO - Command sent successfully to instance i-00d7f255d0917e22c. Command ID: d2e84414-65c0-4c12-9389-2c3ae721d3b5
+2026-07-07 00:22:26,397 - 3880158 - INFO - Sending patch command to instance i-07347549ed5dc615a
+2026-07-07 00:22:26,506 - 3880158 - INFO - Command sent successfully to instance i-07347549ed5dc615a. Command ID: 327a3316-20ed-4800-8fcb-10d7ac13f789
+2026-07-07 00:22:26,626 - 3880158 - INFO - Sending patch command to instance i-0061e0ca24620c596
+2026-07-07 00:22:26,727 - 3880158 - INFO - Command sent successfully to instance i-0061e0ca24620c596. Command ID: 89214202-6f71-4cda-bfd3-b5ab7aecf6c8
+2026-07-07 00:31:29,552 - 3880158 - INFO - All patches applied successfully.
+2026-07-07 00:31:29,553 - 3880158 - INFO - Patching end time: 2026-07-07 00:31:29
+2026-07-07 00:31:29,553 - 3880158 - INFO - Patch Elapsed time: 0:11:26.503552
+2026-07-07 00:31:29,618 - 3880158 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-07 00:31:29,618 - 3880158 - INFO - Confirmed - services are stopped
+2026-07-07 00:31:36,930 - 3880158 - INFO - Discovered TG map: {'i-0d9ded21646d6e67a': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIBUAT-LEX-Desktop/5b871e2a809a96b2']}
+2026-07-07 00:31:37,178 - 3880158 - INFO - Deregistering i-0d9ded21646d6e67a from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIBUAT-LEX-Desktop/5b871e2a809a96b2
+2026-07-07 00:31:37,291 - 3880158 - INFO - Stopping EC2 instance: i-0d9ded21646d6e67a at 2026-07-07 00:31:37
+2026-07-07 00:34:09,341 - 3880158 - INFO - Instance i-0d9ded21646d6e67a stopped successfully.
+2026-07-07 00:34:09,858 - 3880158 - INFO - Stopped i-0d9ded21646d6e67a in 0:02:32.566835
+2026-07-07 00:34:09,858 - 3880158 - INFO - Starting EC2 instance: i-0d9ded21646d6e67a
+2026-07-07 00:34:25,761 - 3880158 - INFO - Instance i-0d9ded21646d6e67a started successfully.
+2026-07-07 00:34:25,761 - 3880158 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0d9ded21646d6e67a...
+2026-07-07 00:36:05,861 - 3880158 - INFO - Registering i-0d9ded21646d6e67a to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/DIBUAT-LEX-Desktop/5b871e2a809a96b2
+2026-07-07 00:36:36,479 - 3880158 - INFO - Sent app_validation.py to i-0d9ded21646d6e67a (command_id: f947f0ee-57db-417d-8a4b-eda6e7b80c89)
+2026-07-07 00:37:06,551 - 3880158 - INFO - app_validation.py output for i-0d9ded21646d6e67a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:36:36.823772
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.16
+Hostname | ip-10-64-12-16.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 192.2G | 47.7G | 80% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | 0B | 9.2T | 0B | 0% | /data/data2/shared/softeon/dibwms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | /data/data2/shared/softeon/dibwms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | dibmtg_abchdis, dibmtg_ccd, dibmtg_dwa, dibmtg_event, dibmtg_ftp, dibmtg_harp, dibmtg_lbl, dibmtg_repl, dibmtg_rccl, dibmtg_rpt, dibmtg_1rpt, dibmtg_jqgrid, dibmtg_sch, dibmtg_inbq, dibmtg_wld, wmslexuat_abd, wmslexuat_ccd, wmslexuat_dwa, wmslexuat_event, wmslexuat_ftp, wmslexuat_harp, wmslexuat_repl, wmslexuat_rplp, wmslexuat_rccl, wmslexuat_rpt, wmslexuat_1_rpt, wmslexuat_jqgrd, wmslexuat_sch, wmslexuat_inbq, wmslexuat_wld, wmslexuat_zplp, wmslexuat_vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+dibmtg_abchdis | /data/batchapp/softeon/dibwmsmtguat/autobatchdistributiondaemon
+dibmtg_ccd | /data/batchapp/softeon/dibwmsmtguat/clustercreationdaemon
+dibmtg_dwa | /data/batchapp/softeon/dibwmsmtguat/downloaddaemon
+dibmtg_event | /data/batchapp/softeon/dibwmsmtguat/eventdaemon
+dibmtg_ftp | /data/batchapp/softeon/dibwmsmtguat/ftpdaemon
+dibmtg_harp | /data/batchapp/softeon/dibwmsmtguat/hardallocationdaemon
+dibmtg_lbl | /data/batchapp/softeon/dibwmsmtguat/labeldaemon
+dibmtg_repl | /data/batchapp/softeon/dibwmsmtguat/replenishmentdaemon
+dibmtg_rccl | /data/batchapp/softeon/dibwmsmtguat/replenishmentpickloccanceldaemon
+dibmtg_rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon
+dibmtg_1rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon1
+dibmtg_jqgrid | /data/batchapp/softeon/dibwmsmtguat/reportjqgridexportdaemon
+dibmtg_sch | /data/batchapp/softeon/dibwmsmtguat/schedulerdaemon
+dibmtg_inbq | /data/batchapp/softeon/dibwmsmtguat/uploaddaemon
+dibmtg_wld | /data/batchapp/softeon/dibwmsmtguat/wavelaunchdaemon
+wmslexuat_abd | /data/batchapp/softeon/dibwmslexuat/autobatchdistributiondaemon
+wmslexuat_ccd | /data/batchapp/softeon/dibwmslexuat/clustercreationdaemon
+wmslexuat_dwa | /data/batchapp/softeon/dibwmslexuat/downloaddaemon
+wmslexuat_event | /data/batchapp/softeon/dibwmslexuat/eventdaemon
+wmslexuat_ftp | /data/batchapp/softeon/dibwmslexuat/ftpdaemon
+wmslexuat_harp | /data/batchapp/softeon/dibwmslexuat/hardallocationdaemon
+wmslexuat_repl | /data/batchapp/softeon/dibwmslexuat/replenishmentdaemon
+wmslexuat_rplp | /data/batchapp/softeon/dibwmslexuat/replenishmentpriorityupdatedaemon
+wmslexuat_rccl | /data/batchapp/softeon/dibwmslexuat/replpickloccanceldaemon
+wmslexuat_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon
+wmslexuat_1_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon1
+wmslexuat_jqgrd | /data/batchapp/softeon/dibwmslexuat/reportjqgridexportdaemon
+wmslexuat_sch | /data/batchapp/softeon/dibwmslexuat/schedulardaemon
+wmslexuat_inbq | /data/batchapp/softeon/dibwmslexuat/uploaddaemon
+wmslexuat_wld | /data/batchapp/softeon/dibwmslexuat/wavelaunchdaemon
+wmslexuat_zplp | /data/batchapp/softeon/dibwmslexuat/zebraprintdaemon
+wmslexuat_vomob | /data/batchapp/softeon/dibwmslexuat/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5054 | dibwmslexuat | jboss730eap | wmslex_jb730eap | 8087 | 10.64.12.16:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmslexuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:36:38.735078
+==============================================================================
+
+2026-07-07 00:37:06,552 - 3880158 - ERROR - app_validation.py errors for i-0d9ded21646d6e67a:
+
+2026-07-07 00:37:06,553 - 3880158 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-AfterPatching-2026-07-07-00-37-06-553.log
+2026-07-07 00:37:06,605 - 3880158 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-Validation-details-2026-07-07-00-37-06-553.html
+2026-07-07 00:37:07,066 - 3880158 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-07 00:37:07,067 - 3880158 - INFO - HTML validation report email sent for i-0d9ded21646d6e67a
+2026-07-07 00:37:07,067 - 3880158 - INFO - [Retry-1] Waiting 600s for i-0d9ded21646d6e67a...
+2026-07-07 00:37:07,067 - 3880158 - INFO - RED - Background retry thread started for i-0d9ded21646d6e67a
+2026-07-07 00:37:07,580 - 3880158 - INFO - Started i-0d9ded21646d6e67a in 0:02:57.721385
+2026-07-07 00:37:07,580 - 3880158 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-07 00:39:07,673 - 3880158 - INFO - Stopping EC2 instance: i-00d7f255d0917e22c at 2026-07-07 00:39:07
+2026-07-07 00:41:54,498 - 3880158 - INFO - Instance i-00d7f255d0917e22c stopped successfully.
+2026-07-07 00:41:55,024 - 3880158 - INFO - Stopped i-00d7f255d0917e22c in 0:02:47.351594
+2026-07-07 00:41:55,025 - 3880158 - INFO - Starting EC2 instance: i-00d7f255d0917e22c
+2026-07-07 00:42:10,990 - 3880158 - INFO - Instance i-00d7f255d0917e22c started successfully.
+2026-07-07 00:42:10,990 - 3880158 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00d7f255d0917e22c...
+2026-07-07 00:43:51,293 - 3880158 - INFO - Sent app_validation.py to i-00d7f255d0917e22c (command_id: 53b7fc87-cc11-4b3e-85fe-bdbbc58a4ea2)
+2026-07-07 00:44:21,422 - 3880158 - INFO - app_validation.py output for i-00d7f255d0917e22c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 04:43:51.591507
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.37
+Hostname | ip-10-64-12-37.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.3G | 119.6G | 58% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.37:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 71
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.37 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 50
+Batch/Daemon Java Processes | 50
+Non-Standalone Java Processes | domph2uat_dwa, dibssoph2_dwa, domph2uat_event, dibssoph2_sch, domph2uat_ftp, domph2uat_inbq, wmssik_lbl, wmssik_sch, wmssik_1rpt, wmssik_rpt, wmssik_rccl, wmssik_inbq, wmssik_harp, domph2uat_hld, wmssik_dwa, wmssik_3vomob, wmssik_event, wmssik_ccd, wmssik_repl, wmssik_jqgrid, wmssik_abchdis, wmssik_ftp, domph2uat_omas, domph2uat_prls, domph2uat_sch, domph2uat_scfk, domph2uat_wmsrl, domph2uat_rpt, domph2uat_jqgrd, domph2uat_gener, domph2uat_thsrc, wmsph2uat_dwa, wmsph2uat_event, wmsph2uat_lbl, wmsph2uat_repl, wmsph2uat_rpt, wmsph2uat_1_rpt, wmsph2uat_jqgrd, wmsph2uat_sch, wmsph2uat_inbq, wmsph2uat_vomob, wmsph2uat_ccd, wmsph2uat_wld, wmsph2uat_rplp, wmssik_wld, wmsph2uat_abd, wmsph2uat_rccl, wmsph2uat_ftp, wmsph2uat_zplp, wmsph2uat_harp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 50
+Java-Name | Java-Path
+domph2uat_dwa | /data/batchapp/softeon/dibdomsph2uat/downloaddaemon
+dibssoph2_dwa | /data/batchapp/softeon/dibssoph2uat/downloaddaemon
+domph2uat_event | /data/batchapp/softeon/dibdomsph2uat/eventdaemon
+dibssoph2_sch | /data/batchapp/softeon/dibssoph2uat/schedulardaemon
+domph2uat_ftp | /data/batchapp/softeon/dibdomsph2uat/ftpdaemon
+domph2uat_inbq | /data/batchapp/softeon/dibdomsph2uat/uploaddaemon
+wmssik_lbl | /data/batchapp/softeon/dibwmssikuat/labeldaemon
+wmssik_sch | /data/batchapp/softeon/dibwmssikuat/schedulerdaemon
+wmssik_1rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon1
+wmssik_rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon
+wmssik_rccl | /data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon
+wmssik_inbq | /data/batchapp/softeon/dibwmssikuat/uploaddaemon
+wmssik_harp | /data/batchapp/softeon/dibwmssikuat/hardallocationdaemon
+domph2uat_hld | /data/batchapp/softeon/dibdomsph2uat/holddaemon
+wmssik_dwa | /data/batchapp/softeon/dibwmssikuat/downloaddaemon
+wmssik_3vomob | /data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3
+wmssik_event | /data/batchapp/softeon/dibwmssikuat/eventdaemon
+wmssik_ccd | /data/batchapp/softeon/dibwmssikuat/clustercreationdaemon
+wmssik_repl | /data/batchapp/softeon/dibwmssikuat/replenishmentdaemon
+wmssik_jqgrid | /data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon
+wmssik_abchdis | /data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon
+wmssik_ftp | /data/batchapp/softeon/dibwmssikuat/ftpdaemon
+domph2uat_omas | /data/batchapp/softeon/dibdomsph2uat/massupdatedaemon
+domph2uat_prls | /data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon
+domph2uat_sch | /data/batchapp/softeon/dibdomsph2uat/schedulardaemon
+domph2uat_scfk | /data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon
+domph2uat_wmsrl | /data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon
+domph2uat_rpt | /data/batchapp/softeon/dibdomsph2uat/reportdaemon
+domph2uat_jqgrd | /data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon
+domph2uat_gener | /data/batchapp/softeon/dibdomsph2uat/genericdaemon
+domph2uat_thsrc | /data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon
+wmsph2uat_dwa | /data/batchapp/softeon/dibwmsph2uat/downloaddaemon
+wmsph2uat_event | /data/batchapp/softeon/dibwmsph2uat/eventdaemon
+wmsph2uat_lbl | /data/batchapp/softeon/dibwmsph2uat/labeldaemon
+wmsph2uat_repl | /data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon
+wmsph2uat_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon
+wmsph2uat_1_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon1
+wmsph2uat_jqgrd | /data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon
+wmsph2uat_sch | /data/batchapp/softeon/dibwmsph2uat/schedulardaemon
+wmsph2uat_inbq | /data/batchapp/softeon/dibwmsph2uat/uploaddaemon
+wmsph2uat_vomob | /data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon
+wmsph2uat_ccd | /data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon
+wmsph2uat_wld | /data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon
+wmsph2uat_rplp | /data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon
+wmssik_wld | /data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon
+wmsph2uat_abd | /data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon
+wmsph2uat_rccl | /data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon
+wmsph2uat_ftp | /data/batchapp/softeon/dibwmsph2uat/ftpdaemon
+wmsph2uat_zplp | /data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon
+wmsph2uat_harp | /data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 04:43:52.694636
+==============================================================================
+
+2026-07-07 00:44:21,422 - 3880158 - ERROR - app_validation.py errors for i-00d7f255d0917e22c:
+
+2026-07-07 00:44:21,424 - 3880158 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-AfterPatching-2026-07-07-00-44-21-423.log
+2026-07-07 00:44:21,477 - 3880158 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-Validation-details-2026-07-07-00-44-21-423.html
+2026-07-07 00:44:21,907 - 3880158 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-07 00:44:21,907 - 3880158 - INFO - HTML validation report email sent for i-00d7f255d0917e22c
+2026-07-07 00:44:21,907 - 3880158 - INFO - [Retry-1] Waiting 600s for i-00d7f255d0917e22c...
+2026-07-07 00:44:21,907 - 3880158 - INFO - RED - Background retry thread started for i-00d7f255d0917e22c
+2026-07-07 00:44:22,385 - 3880158 - INFO - Started i-00d7f255d0917e22c in 0:02:27.360537
+2026-07-07 00:44:22,386 - 3880158 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-07 00:46:22,489 - 3880158 - INFO - Stopping EC2 instance: i-07347549ed5dc615a at 2026-07-07 00:46:22
+2026-07-07 00:47:07,353 - 3880158 - INFO - Sent app_validation.py to i-0d9ded21646d6e67a (command_id: 20a15122-0908-415f-94aa-14aed9a2de52)
+2026-07-07 00:47:23,650 - 3880158 - INFO - Instance i-07347549ed5dc615a stopped successfully.
+2026-07-07 00:47:24,142 - 3880158 - INFO - Stopped i-07347549ed5dc615a in 0:01:01.653278
+2026-07-07 00:47:24,143 - 3880158 - INFO - Starting EC2 instance: i-07347549ed5dc615a
+2026-07-07 00:47:37,438 - 3880158 - INFO - app_validation.py output for i-0d9ded21646d6e67a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:47:07.571252
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.16
+Hostname | ip-10-64-12-16.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 192.3G | 47.5G | 80% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | 0B | 9.2T | 0B | 0% | /data/data2/shared/softeon/dibwms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | /data/data2/shared/softeon/dibwms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | dibmtg_abchdis, dibmtg_ccd, dibmtg_dwa, dibmtg_event, dibmtg_ftp, dibmtg_harp, dibmtg_lbl, dibmtg_repl, dibmtg_rccl, dibmtg_rpt, dibmtg_1rpt, dibmtg_jqgrid, dibmtg_sch, dibmtg_inbq, dibmtg_wld, wmslexuat_abd, wmslexuat_ccd, wmslexuat_dwa, wmslexuat_event, wmslexuat_ftp, wmslexuat_harp, wmslexuat_repl, wmslexuat_rplp, wmslexuat_rccl, wmslexuat_rpt, wmslexuat_1_rpt, wmslexuat_jqgrd, wmslexuat_sch, wmslexuat_inbq, wmslexuat_wld, wmslexuat_zplp, wmslexuat_vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+dibmtg_abchdis | /data/batchapp/softeon/dibwmsmtguat/autobatchdistributiondaemon
+dibmtg_ccd | /data/batchapp/softeon/dibwmsmtguat/clustercreationdaemon
+dibmtg_dwa | /data/batchapp/softeon/dibwmsmtguat/downloaddaemon
+dibmtg_event | /data/batchapp/softeon/dibwmsmtguat/eventdaemon
+dibmtg_ftp | /data/batchapp/softeon/dibwmsmtguat/ftpdaemon
+dibmtg_harp | /data/batchapp/softeon/dibwmsmtguat/hardallocationdaemon
+dibmtg_lbl | /data/batchapp/softeon/dibwmsmtguat/labeldaemon
+dibmtg_repl | /data/batchapp/softeon/dibwmsmtguat/replenishmentdaemon
+dibmtg_rccl | /data/batchapp/softeon/dibwmsmtguat/replenishmentpickloccanceldaemon
+dibmtg_rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon
+dibmtg_1rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon1
+dibmtg_jqgrid | /data/batchapp/softeon/dibwmsmtguat/reportjqgridexportdaemon
+dibmtg_sch | /data/batchapp/softeon/dibwmsmtguat/schedulerdaemon
+dibmtg_inbq | /data/batchapp/softeon/dibwmsmtguat/uploaddaemon
+dibmtg_wld | /data/batchapp/softeon/dibwmsmtguat/wavelaunchdaemon
+wmslexuat_abd | /data/batchapp/softeon/dibwmslexuat/autobatchdistributiondaemon
+wmslexuat_ccd | /data/batchapp/softeon/dibwmslexuat/clustercreationdaemon
+wmslexuat_dwa | /data/batchapp/softeon/dibwmslexuat/downloaddaemon
+wmslexuat_event | /data/batchapp/softeon/dibwmslexuat/eventdaemon
+wmslexuat_ftp | /data/batchapp/softeon/dibwmslexuat/ftpdaemon
+wmslexuat_harp | /data/batchapp/softeon/dibwmslexuat/hardallocationdaemon
+wmslexuat_repl | /data/batchapp/softeon/dibwmslexuat/replenishmentdaemon
+wmslexuat_rplp | /data/batchapp/softeon/dibwmslexuat/replenishmentpriorityupdatedaemon
+wmslexuat_rccl | /data/batchapp/softeon/dibwmslexuat/replpickloccanceldaemon
+wmslexuat_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon
+wmslexuat_1_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon1
+wmslexuat_jqgrd | /data/batchapp/softeon/dibwmslexuat/reportjqgridexportdaemon
+wmslexuat_sch | /data/batchapp/softeon/dibwmslexuat/schedulardaemon
+wmslexuat_inbq | /data/batchapp/softeon/dibwmslexuat/uploaddaemon
+wmslexuat_wld | /data/batchapp/softeon/dibwmslexuat/wavelaunchdaemon
+wmslexuat_zplp | /data/batchapp/softeon/dibwmslexuat/zebraprintdaemon
+wmslexuat_vomob | /data/batchapp/softeon/dibwmslexuat/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5054 | dibwmslexuat | jboss730eap | wmslex_jb730eap | 8087 | 10.64.12.16:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmslexuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:47:08.619975
+==============================================================================
+
+2026-07-07 00:47:37,439 - 3880158 - ERROR - app_validation.py errors for i-0d9ded21646d6e67a:
+
+2026-07-07 00:47:37,440 - 3880158 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-AfterPatching-Retry1-2026-07-07-00-47-37-440.log
+2026-07-07 00:47:37,494 - 3880158 - INFO - [Retry-1] RED detected for DIB-SPMS (Lite) UAT App and Batch Server (10.64.12.16), retrying... (Total waited: 600s)
+2026-07-07 00:47:37,494 - 3880158 - INFO - [Retry-2] Waiting 600s for i-0d9ded21646d6e67a...
+2026-07-07 00:47:40,221 - 3880158 - INFO - Instance i-07347549ed5dc615a started successfully.
+2026-07-07 00:47:40,221 - 3880158 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07347549ed5dc615a...
+2026-07-07 00:49:20,574 - 3880158 - INFO - Sent app_validation.py to i-07347549ed5dc615a (command_id: 864b2428-9153-49aa-8af9-87eec997414f)
+2026-07-07 00:49:50,677 - 3880158 - INFO - app_validation.py output for i-07347549ed5dc615a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:49:20.909776
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.14
+Hostname | ip-10-64-12-14.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 183.0G | 106.9G | 63% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.14:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 104
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.14 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 34
+Non-Standalone Java Processes | wmswcouat_abd, wmswcouat_ccd, wmswcouat_dwa, wmswcouat_event, wmswcouat_ftp, wmswcouat_harp, wmswcouat_lbl, wmswcouat_repl, wmswcouat_rplp, wmswcouat_rccl, wmswcouat_rpt, wmswcouat_1_rpt, wmswcouat_jqgrd, wmswcouat_sch, wmswcouat_inbq, wmswcouat_wld, wmswcouat_zplp, wmswco_VOMOB, msq_abchdis, msq_ccd, msq_dwa, msq_event, msg_ftp, msq_harp, msq_lbl, msq_repl, msq_rccl, msq_rpt, msq_1rpt, msq_jqgrid, msq_sch, msq_inbq, msq_1vmmsq1, msq_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 34
+Java-Name | Java-Path
+wmswcouat_abd | /data/batchapp/softeon/dibwmswcouat/autobatchdistributiondaemon
+wmswcouat_ccd | /data/batchapp/softeon/dibwmswcouat/clustercreationdaemon
+wmswcouat_dwa | /data/batchapp/softeon/dibwmswcouat/downloaddaemon
+wmswcouat_event | /data/batchapp/softeon/dibwmswcouat/eventdaemon
+wmswcouat_ftp | /data/batchapp/softeon/dibwmswcouat/ftpdaemon
+wmswcouat_harp | /data/batchapp/softeon/dibwmswcouat/hardallocationdaemon
+wmswcouat_lbl | /data/batchapp/softeon/dibwmswcouat/labeldaemon
+wmswcouat_repl | /data/batchapp/softeon/dibwmswcouat/replenishmentdaemon
+wmswcouat_rplp | /data/batchapp/softeon/dibwmswcouat/replenishmentpriorityupdatedaemon
+wmswcouat_rccl | /data/batchapp/softeon/dibwmswcouat/replpickloccanceldaemon
+wmswcouat_rpt | /data/batchapp/softeon/dibwmswcouat/reportdaemon
+wmswcouat_1_rpt | /data/batchapp/softeon/dibwmswcouat/reportdaemon1
+wmswcouat_jqgrd | /data/batchapp/softeon/dibwmswcouat/reportjqgridexportdaemon
+wmswcouat_sch | /data/batchapp/softeon/dibwmswcouat/schedulardaemon
+wmswcouat_inbq | /data/batchapp/softeon/dibwmswcouat/uploaddaemon
+wmswcouat_wld | /data/batchapp/softeon/dibwmswcouat/wavelaunchdaemon
+wmswcouat_zplp | /data/batchapp/softeon/dibwmswcouat/zebraprintdaemon
+wmswco_VOMOB | /data/batchapp/softeon/dibwmswcouat/voicemobiledaemon
+msq_abchdis | /data/batchapp/softeon/dibwmsmsquat/autobatchdistributiondaemon
+msq_ccd | /data/batchapp/softeon/dibwmsmsquat/clustercreationdaemon
+msq_dwa | /data/batchapp/softeon/dibwmsmsquat/downloaddaemon
+msq_event | /data/batchapp/softeon/dibwmsmsquat/eventdaemon
+msg_ftp | /data/batchapp/softeon/dibwmsmsquat/ftpdaemon
+msq_harp | /data/batchapp/softeon/dibwmsmsquat/hardallocationdaemon
+msq_lbl | /data/batchapp/softeon/dibwmsmsquat/labeldaemon
+msq_repl | /data/batchapp/softeon/dibwmsmsquat/replenishmentdaemon
+msq_rccl | /data/batchapp/softeon/dibwmsmsquat/replenishmentpickloccanceldaemon
+msq_rpt | /data/batchapp/softeon/dibwmsmsquat/reportdaemon
+msq_1rpt | /data/batchapp/softeon/dibwmsmsquat/reportdaemon1
+msq_jqgrid | /data/batchapp/softeon/dibwmsmsquat/reportjqgridexportdaemon
+msq_sch | /data/batchapp/softeon/dibwmsmsquat/schedulerdaemon
+msq_inbq | /data/batchapp/softeon/dibwmsmsquat/uploaddaemon
+msq_1vmmsq1 | /data/batchapp/softeon/dibwmsmsquat/voicemobiledaemon1
+msq_wld | /data/batchapp/softeon/dibwmsmsquat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:49:21.848001
+==============================================================================
+
+2026-07-07 00:49:50,677 - 3880158 - ERROR - app_validation.py errors for i-07347549ed5dc615a:
+
+2026-07-07 00:49:50,679 - 3880158 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.14/10.64.12.14-AfterPatching-2026-07-07-00-49-50-679.log
+2026-07-07 00:49:50,731 - 3880158 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.14/10.64.12.14-Validation-details-2026-07-07-00-49-50-679.html
+2026-07-07 00:49:50,949 - 3880158 - INFO - Waiting for health monitor cron to be enabled on i-07347549ed5dc615a...
+2026-07-07 00:49:51,136 - 3880158 - INFO - Health monitor crontab enabled on all instances
+2026-07-07 00:49:51,137 - 3880158 - INFO - Health monitor cron enabled on i-07347549ed5dc615a.
+2026-07-07 00:49:51,216 - 3880158 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-07 00:49:51,216 - 3880158 - INFO - HTML validation report email sent for i-07347549ed5dc615a
+2026-07-07 00:49:51,704 - 3880158 - INFO - Started i-07347549ed5dc615a in 0:02:27.560724
+2026-07-07 00:49:51,704 - 3880158 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-07 00:51:51,763 - 3880158 - INFO - Stopping EC2 instance: i-0061e0ca24620c596 at 2026-07-07 00:51:51
+2026-07-07 00:53:08,180 - 3880158 - INFO - Instance i-0061e0ca24620c596 stopped successfully.
+2026-07-07 00:53:08,704 - 3880158 - INFO - Stopped i-0061e0ca24620c596 in 0:01:16.941133
+2026-07-07 00:53:08,704 - 3880158 - INFO - Starting EC2 instance: i-0061e0ca24620c596
+2026-07-07 00:53:24,801 - 3880158 - INFO - Instance i-0061e0ca24620c596 started successfully.
+2026-07-07 00:53:24,801 - 3880158 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0061e0ca24620c596...
+2026-07-07 00:54:22,338 - 3880158 - INFO - Sent app_validation.py to i-00d7f255d0917e22c (command_id: 10c43c15-556d-46b0-9235-28daa3acba54)
+2026-07-07 00:54:52,446 - 3880158 - INFO - app_validation.py output for i-00d7f255d0917e22c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 04:54:22.569103
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.37
+Hostname | ip-10-64-12-37.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.2G | 119.7G | 58% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.37:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 71
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.37 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 50
+Batch/Daemon Java Processes | 50
+Non-Standalone Java Processes | domph2uat_dwa, dibssoph2_dwa, domph2uat_event, dibssoph2_sch, domph2uat_ftp, domph2uat_inbq, wmssik_lbl, wmssik_sch, wmssik_1rpt, wmssik_rpt, wmssik_rccl, wmssik_inbq, wmssik_harp, domph2uat_hld, wmssik_dwa, wmssik_3vomob, wmssik_event, wmssik_ccd, wmssik_repl, wmssik_jqgrid, wmssik_abchdis, wmssik_ftp, domph2uat_omas, domph2uat_prls, domph2uat_sch, domph2uat_scfk, domph2uat_wmsrl, domph2uat_rpt, domph2uat_jqgrd, domph2uat_gener, domph2uat_thsrc, wmsph2uat_dwa, wmsph2uat_event, wmsph2uat_lbl, wmsph2uat_repl, wmsph2uat_rpt, wmsph2uat_1_rpt, wmsph2uat_jqgrd, wmsph2uat_sch, wmsph2uat_inbq, wmsph2uat_vomob, wmsph2uat_ccd, wmsph2uat_wld, wmsph2uat_rplp, wmssik_wld, wmsph2uat_abd, wmsph2uat_rccl, wmsph2uat_ftp, wmsph2uat_zplp, wmsph2uat_harp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 50
+Java-Name | Java-Path
+domph2uat_dwa | /data/batchapp/softeon/dibdomsph2uat/downloaddaemon
+dibssoph2_dwa | /data/batchapp/softeon/dibssoph2uat/downloaddaemon
+domph2uat_event | /data/batchapp/softeon/dibdomsph2uat/eventdaemon
+dibssoph2_sch | /data/batchapp/softeon/dibssoph2uat/schedulardaemon
+domph2uat_ftp | /data/batchapp/softeon/dibdomsph2uat/ftpdaemon
+domph2uat_inbq | /data/batchapp/softeon/dibdomsph2uat/uploaddaemon
+wmssik_lbl | /data/batchapp/softeon/dibwmssikuat/labeldaemon
+wmssik_sch | /data/batchapp/softeon/dibwmssikuat/schedulerdaemon
+wmssik_1rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon1
+wmssik_rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon
+wmssik_rccl | /data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon
+wmssik_inbq | /data/batchapp/softeon/dibwmssikuat/uploaddaemon
+wmssik_harp | /data/batchapp/softeon/dibwmssikuat/hardallocationdaemon
+domph2uat_hld | /data/batchapp/softeon/dibdomsph2uat/holddaemon
+wmssik_dwa | /data/batchapp/softeon/dibwmssikuat/downloaddaemon
+wmssik_3vomob | /data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3
+wmssik_event | /data/batchapp/softeon/dibwmssikuat/eventdaemon
+wmssik_ccd | /data/batchapp/softeon/dibwmssikuat/clustercreationdaemon
+wmssik_repl | /data/batchapp/softeon/dibwmssikuat/replenishmentdaemon
+wmssik_jqgrid | /data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon
+wmssik_abchdis | /data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon
+wmssik_ftp | /data/batchapp/softeon/dibwmssikuat/ftpdaemon
+domph2uat_omas | /data/batchapp/softeon/dibdomsph2uat/massupdatedaemon
+domph2uat_prls | /data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon
+domph2uat_sch | /data/batchapp/softeon/dibdomsph2uat/schedulardaemon
+domph2uat_scfk | /data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon
+domph2uat_wmsrl | /data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon
+domph2uat_rpt | /data/batchapp/softeon/dibdomsph2uat/reportdaemon
+domph2uat_jqgrd | /data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon
+domph2uat_gener | /data/batchapp/softeon/dibdomsph2uat/genericdaemon
+domph2uat_thsrc | /data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon
+wmsph2uat_dwa | /data/batchapp/softeon/dibwmsph2uat/downloaddaemon
+wmsph2uat_event | /data/batchapp/softeon/dibwmsph2uat/eventdaemon
+wmsph2uat_lbl | /data/batchapp/softeon/dibwmsph2uat/labeldaemon
+wmsph2uat_repl | /data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon
+wmsph2uat_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon
+wmsph2uat_1_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon1
+wmsph2uat_jqgrd | /data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon
+wmsph2uat_sch | /data/batchapp/softeon/dibwmsph2uat/schedulardaemon
+wmsph2uat_inbq | /data/batchapp/softeon/dibwmsph2uat/uploaddaemon
+wmsph2uat_vomob | /data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon
+wmsph2uat_ccd | /data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon
+wmsph2uat_wld | /data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon
+wmsph2uat_rplp | /data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon
+wmssik_wld | /data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon
+wmsph2uat_abd | /data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon
+wmsph2uat_rccl | /data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon
+wmsph2uat_ftp | /data/batchapp/softeon/dibwmsph2uat/ftpdaemon
+wmsph2uat_zplp | /data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon
+wmsph2uat_harp | /data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 04:54:23.617910
+==============================================================================
+
+2026-07-07 00:54:52,446 - 3880158 - ERROR - app_validation.py errors for i-00d7f255d0917e22c:
+
+2026-07-07 00:54:52,447 - 3880158 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-AfterPatching-Retry1-2026-07-07-00-54-52-447.log
+2026-07-07 00:54:52,501 - 3880158 - INFO - [Retry-1] RED detected for DIB UAT Batch Server - 2 (10.64.12.37), retrying... (Total waited: 600s)
+2026-07-07 00:54:52,501 - 3880158 - INFO - [Retry-2] Waiting 600s for i-00d7f255d0917e22c...
+2026-07-07 00:55:05,099 - 3880158 - INFO - Sent app_validation.py to i-0061e0ca24620c596 (command_id: 7f395a03-7ae6-4689-a788-e877e1595bdf)
+2026-07-07 00:55:35,194 - 3880158 - INFO - app_validation.py output for i-0061e0ca24620c596:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 04:55:05.420310
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.213
+Hostname | ip-10-64-12-213.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 197.9G | 91.9G | 68% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.213:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.213 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 32
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | dibwms_abchdis, wbnwms_abchdis, wbnwms_ccd, dibwms_ccd, wbnwms_dwa, dibwms_dwa, wbnwms_event, dibwms_event, wbnwms_ftp, dibwms_ftp, wbnwms_harp, dibwms_harp, wbnwms_lbl, dibwms_lbl, wbnwms_repl, dibwms_repl, wbnwms_rccl, dibwms_rccl, wbnwms_rpt, dibwms_rpt, wbnwms_jqgrid, dibwms_1rpt, wbnwms_sch, dibwms_jqgrid, wbnwms_inbq, dibwms_sch, wbnwms_vmwbn1, dibwms_inbq, wbnwms_wld, dibwms_4vomob, wbnwms_1rpt, dibwms_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+dibwms_abchdis | /data/batchapp/softeon/dibwmsmdnuat/autobatchdistributiondaemon
+wbnwms_abchdis | /data/batchapp/softeon/dibwmswbnuat/autobatchdistributiondaemon
+wbnwms_ccd | /data/batchapp/softeon/dibwmswbnuat/clustercreationdaemon
+dibwms_ccd | /data/batchapp/softeon/dibwmsmdnuat/clustercreationdaemon
+wbnwms_dwa | /data/batchapp/softeon/dibwmswbnuat/downloaddaemon
+dibwms_dwa | /data/batchapp/softeon/dibwmsmdnuat/downloaddaemon
+wbnwms_event | /data/batchapp/softeon/dibwmswbnuat/eventdaemon
+dibwms_event | /data/batchapp/softeon/dibwmsmdnuat/eventdaemon
+wbnwms_ftp | /data/batchapp/softeon/dibwmswbnuat/ftpdaemon
+dibwms_ftp | /data/batchapp/softeon/dibwmsmdnuat/ftpdaemon
+wbnwms_harp | /data/batchapp/softeon/dibwmswbnuat/hardallocationdaemon
+dibwms_harp | /data/batchapp/softeon/dibwmsmdnuat/hardallocationdaemon
+wbnwms_lbl | /data/batchapp/softeon/dibwmswbnuat/labeldaemon
+dibwms_lbl | /data/batchapp/softeon/dibwmsmdnuat/labeldaemon
+wbnwms_repl | /data/batchapp/softeon/dibwmswbnuat/replenishmentdaemon
+dibwms_repl | /data/batchapp/softeon/dibwmsmdnuat/replenishmentdaemon
+wbnwms_rccl | /data/batchapp/softeon/dibwmswbnuat/replenishmentpickloccanceldaemon
+dibwms_rccl | /data/batchapp/softeon/dibwmsmdnuat/replenishmentpickloccanceldaemon
+wbnwms_rpt | /data/batchapp/softeon/dibwmswbnuat/reportdaemon
+dibwms_rpt | /data/batchapp/softeon/dibwmsmdnuat/reportdaemon
+wbnwms_jqgrid | /data/batchapp/softeon/dibwmswbnuat/reportjqgridexportdaemon
+dibwms_1rpt | /data/batchapp/softeon/dibwmsmdnuat/reportdaemon1
+wbnwms_sch | /data/batchapp/softeon/dibwmswbnuat/schedulerdaemon
+dibwms_jqgrid | /data/batchapp/softeon/dibwmsmdnuat/reportjqgridexportdaemon
+wbnwms_inbq | /data/batchapp/softeon/dibwmswbnuat/uploaddaemon
+dibwms_sch | /data/batchapp/softeon/dibwmsmdnuat/schedulerdaemon
+wbnwms_vmwbn1 | /data/batchapp/softeon/dibwmswbnuat/voicemobiledaemon
+dibwms_inbq | /data/batchapp/softeon/dibwmsmdnuat/uploaddaemon
+wbnwms_wld | /data/batchapp/softeon/dibwmswbnuat/wavelaunchdaemon
+dibwms_4vomob | /data/batchapp/softeon/dibwmsmdnuat/voicemobiledaemon4
+wbnwms_1rpt | /data/batchapp/softeon/dibwmswbnuat/reportdaemon1
+dibwms_wld | /data/batchapp/softeon/dibwmsmdnuat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 04:55:06.367621
+==============================================================================
+
+2026-07-07 00:55:35,194 - 3880158 - ERROR - app_validation.py errors for i-0061e0ca24620c596:
+
+2026-07-07 00:55:35,196 - 3880158 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.213/10.64.12.213-AfterPatching-2026-07-07-00-55-35-196.log
+2026-07-07 00:55:35,249 - 3880158 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.213/10.64.12.213-Validation-details-2026-07-07-00-55-35-196.html
+2026-07-07 00:55:35,479 - 3880158 - INFO - Waiting for health monitor cron to be enabled on i-0061e0ca24620c596...
+2026-07-07 00:55:35,834 - 3880158 - INFO - Health monitor crontab enabled on all instances
+2026-07-07 00:55:35,836 - 3880158 - INFO - Health monitor cron enabled on i-0061e0ca24620c596.
+2026-07-07 00:55:35,928 - 3880158 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-07 00:55:35,928 - 3880158 - INFO - HTML validation report email sent for i-0061e0ca24620c596
+2026-07-07 00:55:36,427 - 3880158 - INFO - Started i-0061e0ca24620c596 in 0:02:27.722788
+2026-07-07 00:55:36,427 - 3880158 - INFO - All instances processed.
+2026-07-07 00:55:36,432 - 3880158 - INFO - Restart Total time: 0:24:06.669497
+2026-07-07 00:55:36,433 - 3880158 - INFO - Auto-confirmed services are restarted
+2026-07-07 00:55:36,433 - 3880158 - INFO - Confirmed - services are started
+2026-07-07 00:55:36,548 - 3880158 - INFO - The following instances have failed the patch: []
+2026-07-07 00:55:36,549 - 3880158 - INFO - No instances have failed the patch.
+2026-07-07 00:55:36,549 - 3880158 - INFO - Total Patch Process time: 0:35:33.879984
+2026-07-07 00:56:37,338 - 3880158 - INFO - Log file ./logs/patching_2026-07-07_DIB-UAT-2.log uploaded to s3://q3-2026-aws-security-patching/DIB-UAT-2_Patch/2026-07-07/patching_2026-07-07_DIB-UAT-2.log
+2026-07-07 00:57:37,948 - 3880158 - INFO - Sent app_validation.py to i-0d9ded21646d6e67a (command_id: 3b67da99-63c3-4acf-a492-41b20f5e4220)
+2026-07-07 00:58:08,032 - 3880158 - INFO - app_validation.py output for i-0d9ded21646d6e67a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 23:57:38.195374
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.16
+Hostname | ip-10-64-12-16.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 192.4G | 47.4G | 80% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | 0B | 9.2T | 0B | 0% | /data/data2/shared/softeon/dibwms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | /data/data2/shared/softeon/dibwms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 32
+Non-Standalone Java Processes | dibmtg_abchdis, dibmtg_ccd, dibmtg_dwa, dibmtg_event, dibmtg_ftp, dibmtg_harp, dibmtg_lbl, dibmtg_repl, dibmtg_rccl, dibmtg_rpt, dibmtg_1rpt, dibmtg_jqgrid, dibmtg_sch, dibmtg_inbq, dibmtg_wld, wmslexuat_abd, wmslexuat_ccd, wmslexuat_dwa, wmslexuat_event, wmslexuat_ftp, wmslexuat_harp, wmslexuat_repl, wmslexuat_rplp, wmslexuat_rccl, wmslexuat_rpt, wmslexuat_1_rpt, wmslexuat_jqgrd, wmslexuat_sch, wmslexuat_inbq, wmslexuat_wld, wmslexuat_zplp, wmslexuat_vomob
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 32
+Java-Name | Java-Path
+dibmtg_abchdis | /data/batchapp/softeon/dibwmsmtguat/autobatchdistributiondaemon
+dibmtg_ccd | /data/batchapp/softeon/dibwmsmtguat/clustercreationdaemon
+dibmtg_dwa | /data/batchapp/softeon/dibwmsmtguat/downloaddaemon
+dibmtg_event | /data/batchapp/softeon/dibwmsmtguat/eventdaemon
+dibmtg_ftp | /data/batchapp/softeon/dibwmsmtguat/ftpdaemon
+dibmtg_harp | /data/batchapp/softeon/dibwmsmtguat/hardallocationdaemon
+dibmtg_lbl | /data/batchapp/softeon/dibwmsmtguat/labeldaemon
+dibmtg_repl | /data/batchapp/softeon/dibwmsmtguat/replenishmentdaemon
+dibmtg_rccl | /data/batchapp/softeon/dibwmsmtguat/replenishmentpickloccanceldaemon
+dibmtg_rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon
+dibmtg_1rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon1
+dibmtg_jqgrid | /data/batchapp/softeon/dibwmsmtguat/reportjqgridexportdaemon
+dibmtg_sch | /data/batchapp/softeon/dibwmsmtguat/schedulerdaemon
+dibmtg_inbq | /data/batchapp/softeon/dibwmsmtguat/uploaddaemon
+dibmtg_wld | /data/batchapp/softeon/dibwmsmtguat/wavelaunchdaemon
+wmslexuat_abd | /data/batchapp/softeon/dibwmslexuat/autobatchdistributiondaemon
+wmslexuat_ccd | /data/batchapp/softeon/dibwmslexuat/clustercreationdaemon
+wmslexuat_dwa | /data/batchapp/softeon/dibwmslexuat/downloaddaemon
+wmslexuat_event | /data/batchapp/softeon/dibwmslexuat/eventdaemon
+wmslexuat_ftp | /data/batchapp/softeon/dibwmslexuat/ftpdaemon
+wmslexuat_harp | /data/batchapp/softeon/dibwmslexuat/hardallocationdaemon
+wmslexuat_repl | /data/batchapp/softeon/dibwmslexuat/replenishmentdaemon
+wmslexuat_rplp | /data/batchapp/softeon/dibwmslexuat/replenishmentpriorityupdatedaemon
+wmslexuat_rccl | /data/batchapp/softeon/dibwmslexuat/replpickloccanceldaemon
+wmslexuat_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon
+wmslexuat_1_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon1
+wmslexuat_jqgrd | /data/batchapp/softeon/dibwmslexuat/reportjqgridexportdaemon
+wmslexuat_sch | /data/batchapp/softeon/dibwmslexuat/schedulardaemon
+wmslexuat_inbq | /data/batchapp/softeon/dibwmslexuat/uploaddaemon
+wmslexuat_wld | /data/batchapp/softeon/dibwmslexuat/wavelaunchdaemon
+wmslexuat_zplp | /data/batchapp/softeon/dibwmslexuat/zebraprintdaemon
+wmslexuat_vomob | /data/batchapp/softeon/dibwmslexuat/voicemobiledaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5054 | dibwmslexuat | jboss730eap | wmslex_jb730eap | 8087 | 10.64.12.16:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmslexuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 23:57:39.097287
+==============================================================================
+
+2026-07-07 00:58:08,032 - 3880158 - ERROR - app_validation.py errors for i-0d9ded21646d6e67a:
+
+2026-07-07 00:58:08,034 - 3880158 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-AfterPatching-Retry2-2026-07-07-00-58-08-033.log
+2026-07-07 00:58:08,095 - 3880158 - INFO - [Retry-2] RED detected for DIB-SPMS (Lite) UAT App and Batch Server (10.64.12.16), retrying... (Total waited: 1200s)
+2026-07-07 00:58:08,095 - 3880158 - INFO - [Retry-3] Waiting 600s for i-0d9ded21646d6e67a...
+2026-07-07 01:04:52,779 - 3880158 - INFO - Sent app_validation.py to i-00d7f255d0917e22c (command_id: cc281597-8c5b-4082-9a4c-25166d5108f7)
+2026-07-07 01:05:22,907 - 3880158 - INFO - app_validation.py output for i-00d7f255d0917e22c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 05:04:53.019894
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.37
+Hostname | ip-10-64-12-37.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.5G | 119.3G | 58% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.37:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 71
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.37 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 68
+Batch/Daemon Java Processes | 67
+Non-Standalone Java Processes | domph2uat_dwa, dibssoph2_dwa, domph2uat_event, dibssoph2_sch, domph2uat_ftp, domph2uat_inbq, wmssik_lbl, wmssik_sch, wmssik_1rpt, wmssik_rpt, wmssik_rccl, wmssik_inbq, wmssik_harp, domph2uat_hld, wmssik_dwa, wmssik_3vomob, wmssik_event, wmssik_ccd, wmssik_repl, wmssik_jqgrid, wmssik_abchdis, wmssik_ftp, domph2uat_omas, domph2uat_prls, domph2uat_sch, domph2uat_scfk, domph2uat_wmsrl, domph2uat_rpt, domph2uat_jqgrd, domph2uat_gener, domph2uat_thsrc, wmsph2uat_dwa, wmsph2uat_event, wmsph2uat_lbl, wmsph2uat_repl, wmsph2uat_rpt, wmsph2uat_1_rpt, wmsph2uat_jqgrd, wmsph2uat_sch, wmsph2uat_inbq, wmsph2uat_vomob, wmsph2uat_ccd, wmsph2uat_wld, wmsph2uat_rplp, wmssik_wld, wmsph2uat_abd, wmsph2uat_rccl, wmsph2uat_ftp, wmsph2uat_zplp, wmsph2uat_harp, dibssoph_2vomob, wmsmbkuat_dwa, wmsmbkuat_event, wmsmbkuat_lbl, wmsmbkuat_repl, wmsmbkuat_rpt, wmsmbkuat_jqgrd, wmsmbkuat_sch, wmsmbkuat_inbq, wmsmbkuat_vomob, wmsmbkuat_wld, wmsmbkuat_rplp, wmsmbkuat_abd, wmsmbkuat_rccl, wmsmbkuat_ftp, wmsmbkuat_harp, wmsmbkuat_1rpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 67
+Java-Name | Java-Path
+domph2uat_dwa | /data/batchapp/softeon/dibdomsph2uat/downloaddaemon
+dibssoph2_dwa | /data/batchapp/softeon/dibssoph2uat/downloaddaemon
+domph2uat_event | /data/batchapp/softeon/dibdomsph2uat/eventdaemon
+dibssoph2_sch | /data/batchapp/softeon/dibssoph2uat/schedulardaemon
+domph2uat_ftp | /data/batchapp/softeon/dibdomsph2uat/ftpdaemon
+domph2uat_inbq | /data/batchapp/softeon/dibdomsph2uat/uploaddaemon
+wmssik_lbl | /data/batchapp/softeon/dibwmssikuat/labeldaemon
+wmssik_sch | /data/batchapp/softeon/dibwmssikuat/schedulerdaemon
+wmssik_1rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon1
+wmssik_rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon
+wmssik_rccl | /data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon
+wmssik_inbq | /data/batchapp/softeon/dibwmssikuat/uploaddaemon
+wmssik_harp | /data/batchapp/softeon/dibwmssikuat/hardallocationdaemon
+domph2uat_hld | /data/batchapp/softeon/dibdomsph2uat/holddaemon
+wmssik_dwa | /data/batchapp/softeon/dibwmssikuat/downloaddaemon
+wmssik_3vomob | /data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3
+wmssik_event | /data/batchapp/softeon/dibwmssikuat/eventdaemon
+wmssik_ccd | /data/batchapp/softeon/dibwmssikuat/clustercreationdaemon
+wmssik_repl | /data/batchapp/softeon/dibwmssikuat/replenishmentdaemon
+wmssik_jqgrid | /data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon
+wmssik_abchdis | /data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon
+wmssik_ftp | /data/batchapp/softeon/dibwmssikuat/ftpdaemon
+domph2uat_omas | /data/batchapp/softeon/dibdomsph2uat/massupdatedaemon
+domph2uat_prls | /data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon
+domph2uat_sch | /data/batchapp/softeon/dibdomsph2uat/schedulardaemon
+domph2uat_scfk | /data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon
+domph2uat_wmsrl | /data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon
+domph2uat_rpt | /data/batchapp/softeon/dibdomsph2uat/reportdaemon
+domph2uat_jqgrd | /data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon
+domph2uat_gener | /data/batchapp/softeon/dibdomsph2uat/genericdaemon
+domph2uat_thsrc | /data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon
+wmsph2uat_dwa | /data/batchapp/softeon/dibwmsph2uat/downloaddaemon
+wmsph2uat_event | /data/batchapp/softeon/dibwmsph2uat/eventdaemon
+wmsph2uat_lbl | /data/batchapp/softeon/dibwmsph2uat/labeldaemon
+wmsph2uat_repl | /data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon
+wmsph2uat_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon
+wmsph2uat_1_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon1
+wmsph2uat_jqgrd | /data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon
+wmsph2uat_sch | /data/batchapp/softeon/dibwmsph2uat/schedulardaemon
+wmsph2uat_inbq | /data/batchapp/softeon/dibwmsph2uat/uploaddaemon
+wmsph2uat_vomob | /data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon
+wmsph2uat_ccd | /data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon
+wmsph2uat_wld | /data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon
+wmsph2uat_rplp | /data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon
+wmssik_wld | /data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon
+wmsph2uat_abd | /data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon
+wmsph2uat_rccl | /data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon
+wmsph2uat_ftp | /data/batchapp/softeon/dibwmsph2uat/ftpdaemon
+wmsph2uat_zplp | /data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon
+wmsph2uat_harp | /data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon
+dibssoph_2vomob | /data/batchapp/softeon/dibssoph2uat/voiceadminserver
+wmsmbkuat_dwa | /data/batchapp/softeon/dibwmsmbkuat/downloaddaemon
+wmsmbkuat_event | /data/batchapp/softeon/dibwmsmbkuat/eventdaemon
+wmsmbkuat_lbl | /data/batchapp/softeon/dibwmsmbkuat/labeldaemon
+wmsmbkuat_repl | /data/batchapp/softeon/dibwmsmbkuat/replenishmentdaemon
+wmsmbkuat_rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon
+wmsmbkuat_jqgrd | /data/batchapp/softeon/dibwmsmbkuat/reportjqgridexportdaemon
+wmsmbkuat_sch | /data/batchapp/softeon/dibwmsmbkuat/schedulardaemon
+wmsmbkuat_inbq | /data/batchapp/softeon/dibwmsmbkuat/uploaddaemon
+wmsmbkuat_vomob | /data/batchapp/softeon/dibwmsmbkuat/voicemobiledaemon
+wmsmbkuat_wld | /data/batchapp/softeon/dibwmsmbkuat/wavelaunchdaemon
+wmsmbkuat_rplp | /data/batchapp/softeon/dibwmsmbkuat/replenishmentpriorityupdatedaemon
+wmsmbkuat_abd | /data/batchapp/softeon/dibwmsmbkuat/autobatchdistributiondaemon
+wmsmbkuat_rccl | /data/batchapp/softeon/dibwmsmbkuat/replpickloccanceldaemon
+wmsmbkuat_ftp | /data/batchapp/softeon/dibwmsmbkuat/ftpdaemon
+wmsmbkuat_harp | /data/batchapp/softeon/dibwmsmbkuat/hardallocationdaemon
+wmsmbkuat_1rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon1
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 05:04:54.385120
+==============================================================================
+
+2026-07-07 01:05:22,907 - 3880158 - ERROR - app_validation.py errors for i-00d7f255d0917e22c:
+
+2026-07-07 01:05:22,908 - 3880158 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-AfterPatching-Retry2-2026-07-07-01-05-22-908.log
+2026-07-07 01:05:22,962 - 3880158 - INFO - [Retry-2] RED detected for DIB UAT Batch Server - 2 (10.64.12.37), retrying... (Total waited: 1200s)
+2026-07-07 01:05:22,962 - 3880158 - INFO - [Retry-3] Waiting 600s for i-00d7f255d0917e22c...
+2026-07-07 01:08:08,386 - 3880158 - INFO - Sent app_validation.py to i-0d9ded21646d6e67a (command_id: 5b034290-d867-4efd-bcdb-826dd98ac8fc)
+2026-07-07 01:08:38,475 - 3880158 - INFO - app_validation.py output for i-0d9ded21646d6e67a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 00:08:08.636919
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.16
+Hostname | ip-10-64-12-16.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 192.3G | 47.6G | 80% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | 0B | 9.2T | 0B | 0% | /data/data2/shared/softeon/dibwms
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/shared/softeon/dibwms | /data/data2/shared/softeon/dibwms | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.16:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 125
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.16 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 33
+Non-Standalone Java Processes | dibmtg_abchdis, dibmtg_ccd, dibmtg_dwa, dibmtg_event, dibmtg_ftp, dibmtg_harp, dibmtg_lbl, dibmtg_repl, dibmtg_rccl, dibmtg_rpt, dibmtg_1rpt, dibmtg_jqgrid, dibmtg_sch, dibmtg_inbq, dibmtg_wld, wmslexuat_abd, wmslexuat_ccd, wmslexuat_dwa, wmslexuat_event, wmslexuat_ftp, wmslexuat_harp, wmslexuat_repl, wmslexuat_rplp, wmslexuat_rccl, wmslexuat_rpt, wmslexuat_1_rpt, wmslexuat_jqgrd, wmslexuat_sch, wmslexuat_inbq, wmslexuat_wld, wmslexuat_zplp, wmslexuat_vomob, lex_drivemontr
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 33
+Java-Name | Java-Path
+dibmtg_abchdis | /data/batchapp/softeon/dibwmsmtguat/autobatchdistributiondaemon
+dibmtg_ccd | /data/batchapp/softeon/dibwmsmtguat/clustercreationdaemon
+dibmtg_dwa | /data/batchapp/softeon/dibwmsmtguat/downloaddaemon
+dibmtg_event | /data/batchapp/softeon/dibwmsmtguat/eventdaemon
+dibmtg_ftp | /data/batchapp/softeon/dibwmsmtguat/ftpdaemon
+dibmtg_harp | /data/batchapp/softeon/dibwmsmtguat/hardallocationdaemon
+dibmtg_lbl | /data/batchapp/softeon/dibwmsmtguat/labeldaemon
+dibmtg_repl | /data/batchapp/softeon/dibwmsmtguat/replenishmentdaemon
+dibmtg_rccl | /data/batchapp/softeon/dibwmsmtguat/replenishmentpickloccanceldaemon
+dibmtg_rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon
+dibmtg_1rpt | /data/batchapp/softeon/dibwmsmtguat/reportdaemon1
+dibmtg_jqgrid | /data/batchapp/softeon/dibwmsmtguat/reportjqgridexportdaemon
+dibmtg_sch | /data/batchapp/softeon/dibwmsmtguat/schedulerdaemon
+dibmtg_inbq | /data/batchapp/softeon/dibwmsmtguat/uploaddaemon
+dibmtg_wld | /data/batchapp/softeon/dibwmsmtguat/wavelaunchdaemon
+wmslexuat_abd | /data/batchapp/softeon/dibwmslexuat/autobatchdistributiondaemon
+wmslexuat_ccd | /data/batchapp/softeon/dibwmslexuat/clustercreationdaemon
+wmslexuat_dwa | /data/batchapp/softeon/dibwmslexuat/downloaddaemon
+wmslexuat_event | /data/batchapp/softeon/dibwmslexuat/eventdaemon
+wmslexuat_ftp | /data/batchapp/softeon/dibwmslexuat/ftpdaemon
+wmslexuat_harp | /data/batchapp/softeon/dibwmslexuat/hardallocationdaemon
+wmslexuat_repl | /data/batchapp/softeon/dibwmslexuat/replenishmentdaemon
+wmslexuat_rplp | /data/batchapp/softeon/dibwmslexuat/replenishmentpriorityupdatedaemon
+wmslexuat_rccl | /data/batchapp/softeon/dibwmslexuat/replpickloccanceldaemon
+wmslexuat_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon
+wmslexuat_1_rpt | /data/batchapp/softeon/dibwmslexuat/reportdaemon1
+wmslexuat_jqgrd | /data/batchapp/softeon/dibwmslexuat/reportjqgridexportdaemon
+wmslexuat_sch | /data/batchapp/softeon/dibwmslexuat/schedulardaemon
+wmslexuat_inbq | /data/batchapp/softeon/dibwmslexuat/uploaddaemon
+wmslexuat_wld | /data/batchapp/softeon/dibwmslexuat/wavelaunchdaemon
+wmslexuat_zplp | /data/batchapp/softeon/dibwmslexuat/zebraprintdaemon
+wmslexuat_vomob | /data/batchapp/softeon/dibwmslexuat/voicemobiledaemon
+lex_drivemontr | /data/app/java/java-se-8u40-ri/bin/lex_drivemontr
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5054 | dibwmslexuat | jboss730eap | wmslex_jb730eap | 8087 | 10.64.12.16:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/dibwmslexuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 00:08:09.719953
+==============================================================================
+
+2026-07-07 01:08:38,475 - 3880158 - ERROR - app_validation.py errors for i-0d9ded21646d6e67a:
+
+2026-07-07 01:08:38,477 - 3880158 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.16/10.64.12.16-AfterPatching-Retry3-2026-07-07-01-08-38-477.log
+2026-07-07 01:08:38,853 - 3880158 - INFO - Health monitor crontab enabled on all instances
+2026-07-07 01:08:38,854 - 3880158 - WARNING - [Retry] Timeout - auto cron enabled for i-0d9ded21646d6e67a
+2026-07-07 01:15:23,257 - 3880158 - INFO - Sent app_validation.py to i-00d7f255d0917e22c (command_id: 9b31fce8-ccab-44ef-be4d-c9042daf4f78)
+2026-07-07 01:15:53,338 - 3880158 - INFO - app_validation.py output for i-00d7f255d0917e22c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-07 05:15:23.496366
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.12.37
+Hostname | ip-10-64-12-37.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.9G | 119.0G | 58% | /data
+fs-e9dec190.efs.us-east-2.amazonaws.com:/ | 0B | 9.2T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e9dec190.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.12.37:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 71
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.12.37 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 68
+Batch/Daemon Java Processes | 68
+Non-Standalone Java Processes | domph2uat_dwa, dibssoph2_dwa, domph2uat_event, dibssoph2_sch, domph2uat_ftp, domph2uat_inbq, wmssik_lbl, wmssik_sch, wmssik_1rpt, wmssik_rpt, wmssik_rccl, wmssik_inbq, wmssik_harp, domph2uat_hld, wmssik_dwa, wmssik_3vomob, wmssik_event, wmssik_ccd, wmssik_repl, wmssik_jqgrid, wmssik_abchdis, domph2uat_omas, domph2uat_prls, domph2uat_sch, domph2uat_scfk, domph2uat_wmsrl, domph2uat_rpt, domph2uat_jqgrd, domph2uat_gener, domph2uat_thsrc, wmsph2uat_dwa, wmsph2uat_event, wmsph2uat_lbl, wmsph2uat_repl, wmsph2uat_rpt, wmsph2uat_1_rpt, wmsph2uat_jqgrd, wmsph2uat_sch, wmsph2uat_inbq, wmsph2uat_vomob, wmsph2uat_ccd, wmsph2uat_wld, wmsph2uat_rplp, wmssik_wld, wmsph2uat_abd, wmsph2uat_rccl, wmsph2uat_ftp, wmsph2uat_zplp, wmsph2uat_harp, dibssoph_2vomob, wmsmbkuat_dwa, wmsmbkuat_event, wmsmbkuat_lbl, wmsmbkuat_repl, wmsmbkuat_rpt, wmsmbkuat_jqgrd, wmsmbkuat_sch, wmsmbkuat_inbq, wmsmbkuat_vomob, wmsmbkuat_wld, wmsmbkuat_rplp, wmsmbkuat_abd, wmsmbkuat_rccl, wmsmbkuat_ftp, wmsmbkuat_harp, wmsmbkuat_1rpt, domph2uat_ord, wmssik_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 68
+Java-Name | Java-Path
+domph2uat_dwa | /data/batchapp/softeon/dibdomsph2uat/downloaddaemon
+dibssoph2_dwa | /data/batchapp/softeon/dibssoph2uat/downloaddaemon
+domph2uat_event | /data/batchapp/softeon/dibdomsph2uat/eventdaemon
+dibssoph2_sch | /data/batchapp/softeon/dibssoph2uat/schedulardaemon
+domph2uat_ftp | /data/batchapp/softeon/dibdomsph2uat/ftpdaemon
+domph2uat_inbq | /data/batchapp/softeon/dibdomsph2uat/uploaddaemon
+wmssik_lbl | /data/batchapp/softeon/dibwmssikuat/labeldaemon
+wmssik_sch | /data/batchapp/softeon/dibwmssikuat/schedulerdaemon
+wmssik_1rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon1
+wmssik_rpt | /data/batchapp/softeon/dibwmssikuat/reportdaemon
+wmssik_rccl | /data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon
+wmssik_inbq | /data/batchapp/softeon/dibwmssikuat/uploaddaemon
+wmssik_harp | /data/batchapp/softeon/dibwmssikuat/hardallocationdaemon
+domph2uat_hld | /data/batchapp/softeon/dibdomsph2uat/holddaemon
+wmssik_dwa | /data/batchapp/softeon/dibwmssikuat/downloaddaemon
+wmssik_3vomob | /data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3
+wmssik_event | /data/batchapp/softeon/dibwmssikuat/eventdaemon
+wmssik_ccd | /data/batchapp/softeon/dibwmssikuat/clustercreationdaemon
+wmssik_repl | /data/batchapp/softeon/dibwmssikuat/replenishmentdaemon
+wmssik_jqgrid | /data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon
+wmssik_abchdis | /data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon
+domph2uat_omas | /data/batchapp/softeon/dibdomsph2uat/massupdatedaemon
+domph2uat_prls | /data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon
+domph2uat_sch | /data/batchapp/softeon/dibdomsph2uat/schedulardaemon
+domph2uat_scfk | /data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon
+domph2uat_wmsrl | /data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon
+domph2uat_rpt | /data/batchapp/softeon/dibdomsph2uat/reportdaemon
+domph2uat_jqgrd | /data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon
+domph2uat_gener | /data/batchapp/softeon/dibdomsph2uat/genericdaemon
+domph2uat_thsrc | /data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon
+wmsph2uat_dwa | /data/batchapp/softeon/dibwmsph2uat/downloaddaemon
+wmsph2uat_event | /data/batchapp/softeon/dibwmsph2uat/eventdaemon
+wmsph2uat_lbl | /data/batchapp/softeon/dibwmsph2uat/labeldaemon
+wmsph2uat_repl | /data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon
+wmsph2uat_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon
+wmsph2uat_1_rpt | /data/batchapp/softeon/dibwmsph2uat/reportdaemon1
+wmsph2uat_jqgrd | /data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon
+wmsph2uat_sch | /data/batchapp/softeon/dibwmsph2uat/schedulardaemon
+wmsph2uat_inbq | /data/batchapp/softeon/dibwmsph2uat/uploaddaemon
+wmsph2uat_vomob | /data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon
+wmsph2uat_ccd | /data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon
+wmsph2uat_wld | /data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon
+wmsph2uat_rplp | /data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon
+wmssik_wld | /data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon
+wmsph2uat_abd | /data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon
+wmsph2uat_rccl | /data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon
+wmsph2uat_ftp | /data/batchapp/softeon/dibwmsph2uat/ftpdaemon
+wmsph2uat_zplp | /data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon
+wmsph2uat_harp | /data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon
+dibssoph_2vomob | /data/batchapp/softeon/dibssoph2uat/voiceadminserver
+wmsmbkuat_dwa | /data/batchapp/softeon/dibwmsmbkuat/downloaddaemon
+wmsmbkuat_event | /data/batchapp/softeon/dibwmsmbkuat/eventdaemon
+wmsmbkuat_lbl | /data/batchapp/softeon/dibwmsmbkuat/labeldaemon
+wmsmbkuat_repl | /data/batchapp/softeon/dibwmsmbkuat/replenishmentdaemon
+wmsmbkuat_rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon
+wmsmbkuat_jqgrd | /data/batchapp/softeon/dibwmsmbkuat/reportjqgridexportdaemon
+wmsmbkuat_sch | /data/batchapp/softeon/dibwmsmbkuat/schedulardaemon
+wmsmbkuat_inbq | /data/batchapp/softeon/dibwmsmbkuat/uploaddaemon
+wmsmbkuat_vomob | /data/batchapp/softeon/dibwmsmbkuat/voicemobiledaemon
+wmsmbkuat_wld | /data/batchapp/softeon/dibwmsmbkuat/wavelaunchdaemon
+wmsmbkuat_rplp | /data/batchapp/softeon/dibwmsmbkuat/replenishmentpriorityupdatedaemon
+wmsmbkuat_abd | /data/batchapp/softeon/dibwmsmbkuat/autobatchdistributiondaemon
+wmsmbkuat_rccl | /data/batchapp/softeon/dibwmsmbkuat/replpickloccanceldaemon
+wmsmbkuat_ftp | /data/batchapp/softeon/dibwmsmbkuat/ftpdaemon
+wmsmbkuat_harp | /data/batchapp/softeon/dibwmsmbkuat/hardallocationdaemon
+wmsmbkuat_1rpt | /data/batchapp/softeon/dibwmsmbkuat/reportdaemon1
+domph2uat_ord | /data/batchapp/softeon/dibdomsph2uat/ordercreationdaemon
+wmssik_ftp | /data/batchapp/softeon/dibwmssikuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-07-07 05:15:24.892495
+==============================================================================
+
+2026-07-07 01:15:53,338 - 3880158 - ERROR - app_validation.py errors for i-00d7f255d0917e22c:
+
+2026-07-07 01:15:53,339 - 3880158 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-07/DIB-UAT-2/10.64.12.37/10.64.12.37-AfterPatching-Retry3-2026-07-07-01-15-53-339.log
+2026-07-07 01:15:53,708 - 3880158 - INFO - Health monitor crontab enabled on all instances
+2026-07-07 01:15:53,712 - 3880158 - WARNING - [Retry] Timeout - auto cron enabled for i-00d7f255d0917e22c

@@ -1,0 +1,614 @@
+2026-07-05 00:05:03,018 - 3773635 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 00:05:03,018 - 3773635 - INFO - Script Start Time: 2026-07-05 00:05:03
+2026-07-05 00:05:03,311 - 3773635 - INFO - Instance(s) selected for Patching: {'i-0ad717fcfefd6d159': '172.26.12.15'}
+2026-07-05 00:05:03,389 - 3773635 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:05:03,389 - 3773635 - INFO - Now patching instances at: 2026-07-05 00:05:03
+2026-07-05 00:05:09,751 - 3773635 - INFO - i-0ad717fcfefd6d159: Cron was active = True
+2026-07-05 00:05:10,701 - 3773635 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 00:05:10,702 - 3773635 - INFO - Disabled cron for: ['i-0ad717fcfefd6d159']
+2026-07-05 00:05:12,133 - 3773635 - INFO - Sent app_validation.py to i-0ad717fcfefd6d159 (command_id: 4dc59196-876e-4644-a2e0-6a18dc997023)
+2026-07-05 00:05:42,396 - 3773635 - INFO - app_validation.py output for i-0ad717fcfefd6d159:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:05:12.078794
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.12.15
+Hostname | ip-172-26-12-15.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data2
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.26.12.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.12.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | cdluat_hsqldb, cdluat_bdd, cdluat_lbl, cdluat_harp, cdluat_jqgrid, cdluat_rccl, cdluat_ftp, cdluat_inbq, cdluat_wld, cdluat_sch, cdluat_cbcdc, cdluat_rplpri, cdluat_event, cdluat_repl, cdluat_rpt, cdluat_dwa, cdluat_wsq, cdluat_slice, cdluat_finstaller
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+cdluat_hsqldb | /data/app/elastic-communicator-4.0.4/softeon/softwares/hsql/data
+cdluat_bdd | /data/batchapp/softeon/cooldriveconfiguat/bulkdatadaemon
+cdluat_lbl | /data/batchapp/softeon/cooldriveuat/labeldaemon
+cdluat_harp | /data/batchapp/softeon/cooldriveuat/hardallocationdaemon
+cdluat_jqgrid | /data/batchapp/softeon/cooldriveuat/reportjqgridexportdaemon
+cdluat_rccl | /data/batchapp/softeon/cooldriveuat/replenishmentpickloccanceldaemon
+cdluat_ftp | /data/batchapp/softeon/cooldriveuat/ftpdaemon
+cdluat_inbq | /data/batchapp/softeon/cooldriveuat/uploaddaemon
+cdluat_wld | /data/batchapp/softeon/cooldriveuat/wavelaunchdaemon
+cdluat_sch | /data/batchapp/softeon/cooldriveuat/schedulerdaemon
+cdluat_cbcdc | /data/batchapp/softeon/cooldriveuat/clusterbatchcarttypedaemon
+cdluat_rplpri | /data/batchapp/softeon/cooldriveuat/replenishmentpriorityupdatedaemon
+cdluat_event | /data/batchapp/softeon/cooldriveuat/eventdaemon
+cdluat_repl | /data/batchapp/softeon/cooldriveuat/replenishmentdaemon
+cdluat_rpt | /data/batchapp/softeon/cooldriveuat/reportdaemon
+cdluat_dwa | /data/batchapp/softeon/cooldriveuat/downloaddaemon
+cdluat_wsq | /data/batchapp/softeon/cooldriveuat/wsqdaemon
+cdluat_slice | /data/app/slice
+cdluat_finstaller | /data/app/elastic-communicator-4.0.4/softeon/softwares/release
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+912511 | cooldriveconfiguat | jboss740eap | cdluat_config | 8084 | 172.26.12.15:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/cooldriveconfiguat/standalone
+1450731 | cooldriverfuat | jboss810eap | cdluat_jb81rf | 8083 | 172.26.12.15:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriverfuat/standalone
+1450538 | cooldriveuat | jboss810eap | cdluat_jb81desk | 8082 | 172.26.12.15:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriveuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:05:12.965348
+==============================================================================
+
+2026-07-05 00:05:42,396 - 3773635 - ERROR - app_validation.py errors for i-0ad717fcfefd6d159:
+
+2026-07-05 00:05:42,398 - 3773635 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-BeforePatching-2026-07-05-00-05-42-397.log
+2026-07-05 00:05:42,483 - 3773635 - INFO - Sending patch command to instance i-0ad717fcfefd6d159
+2026-07-05 00:05:43,374 - 3773635 - INFO - Command sent successfully to instance i-0ad717fcfefd6d159. Command ID: 270dd483-8741-40c7-8c58-f44b280f169b
+2026-07-05 00:08:46,224 - 3773635 - INFO - All patches applied successfully.
+2026-07-05 00:08:46,224 - 3773635 - INFO - Patching end time: 2026-07-05 00:08:46
+2026-07-05 00:08:46,224 - 3773635 - INFO - Patch Elapsed time: 0:03:42.835268
+2026-07-05 00:08:46,291 - 3773635 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:08:46,292 - 3773635 - INFO - Confirmed - services are stopped
+2026-07-05 00:08:54,938 - 3773635 - INFO - Discovered TG map: {'i-0ad717fcfefd6d159': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/COOLDRIVE-UAT-EC/9dd9d4278f3d8bdc', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-Desktop/804356e0479e2718', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-RF/2062ba1c5a17369b', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-WS/b4bf488a0363ecd8', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Config/8d0b8899c9416365', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Slice/f565b00473136e1a']}
+2026-07-05 00:08:55,194 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/COOLDRIVE-UAT-EC/9dd9d4278f3d8bdc
+2026-07-05 00:08:56,047 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-Desktop/804356e0479e2718
+2026-07-05 00:08:56,294 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-RF/2062ba1c5a17369b
+2026-07-05 00:08:56,536 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-WS/b4bf488a0363ecd8
+2026-07-05 00:08:56,785 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Config/8d0b8899c9416365
+2026-07-05 00:08:57,028 - 3773635 - INFO - Deregistering i-0ad717fcfefd6d159 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Slice/f565b00473136e1a
+2026-07-05 00:08:57,272 - 3773635 - INFO - Stopping EC2 instance: i-0ad717fcfefd6d159 at 2026-07-05 00:08:57
+2026-07-05 00:11:47,202 - 3773635 - INFO - Instance i-0ad717fcfefd6d159 stopped successfully.
+2026-07-05 00:11:47,338 - 3773635 - INFO - Stopped i-0ad717fcfefd6d159 in 0:02:50.065436
+2026-07-05 00:11:47,338 - 3773635 - INFO - Starting EC2 instance: i-0ad717fcfefd6d159
+2026-07-05 00:12:03,777 - 3773635 - INFO - Instance i-0ad717fcfefd6d159 started successfully.
+2026-07-05 00:12:03,777 - 3773635 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0ad717fcfefd6d159...
+2026-07-05 00:13:43,791 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/COOLDRIVE-UAT-EC/9dd9d4278f3d8bdc
+2026-07-05 00:13:44,799 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-Desktop/804356e0479e2718
+2026-07-05 00:13:45,141 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-RF/2062ba1c5a17369b
+2026-07-05 00:13:45,486 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-261-WS/b4bf488a0363ecd8
+2026-07-05 00:13:45,892 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Config/8d0b8899c9416365
+2026-07-05 00:13:46,246 - 3773635 - INFO - Registering i-0ad717fcfefd6d159 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/CoolDrive-UAT-Slice/f565b00473136e1a
+2026-07-05 00:15:50,559 - 3773635 - INFO - Sent app_validation.py to i-0ad717fcfefd6d159 (command_id: 087e9ce9-0bbe-47b9-b4ec-db107f8760ae)
+2026-07-05 00:16:20,872 - 3773635 - INFO - app_validation.py output for i-0ad717fcfefd6d159:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:15:50.574389
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.12.15
+Hostname | ip-172-26-12-15.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data2
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.12.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.12.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | cdluat_finstaller, cdluat_hsqldb, cdluat_slice, cdluat_jqgrid, cdluat_ftp, cdluat_inbq, cdluat_wld, cdluat_rccl, cdluat_repl, cdluat_event, cdluat_dwa, cdluat_rplpri, cdluat_sch, cdluat_rpt, cdluat_lbl, cdluat_harp, cdluat_bdd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+cdluat_finstaller | /data/app/elastic-communicator-4.0.4/softeon/softwares/release
+cdluat_hsqldb | /data/app/elastic-communicator-4.0.4/softeon/softwares/hsql/data
+cdluat_slice | /data/app/slice
+cdluat_jqgrid | /data/batchapp/softeon/cooldriveuat/reportjqgridexportdaemon
+cdluat_ftp | /data/batchapp/softeon/cooldriveuat/ftpdaemon
+cdluat_inbq | /data/batchapp/softeon/cooldriveuat/uploaddaemon
+cdluat_wld | /data/batchapp/softeon/cooldriveuat/wavelaunchdaemon
+cdluat_rccl | /data/batchapp/softeon/cooldriveuat/replenishmentpickloccanceldaemon
+cdluat_repl | /data/batchapp/softeon/cooldriveuat/replenishmentdaemon
+cdluat_event | /data/batchapp/softeon/cooldriveuat/eventdaemon
+cdluat_dwa | /data/batchapp/softeon/cooldriveuat/downloaddaemon
+cdluat_rplpri | /data/batchapp/softeon/cooldriveuat/replenishmentpriorityupdatedaemon
+cdluat_sch | /data/batchapp/softeon/cooldriveuat/schedulerdaemon
+cdluat_rpt | /data/batchapp/softeon/cooldriveuat/reportdaemon
+cdluat_lbl | /data/batchapp/softeon/cooldriveuat/labeldaemon
+cdluat_harp | /data/batchapp/softeon/cooldriveuat/hardallocationdaemon
+cdluat_bdd | /data/batchapp/softeon/cooldriveconfiguat/bulkdatadaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4836 | cooldriveconfiguat | jboss740eap | cdluat_config | 8084 | 172.26.12.15:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/cooldriveconfiguat/standalone
+5247 | cooldriverfuat | jboss810eap | cdluat_jb81rf | 8083 | 172.26.12.15:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriverfuat/standalone
+5224 | cooldriveuat | jboss810eap | cdluat_jb81desk | 8082 | 172.26.12.15:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriveuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:15:52.387930
+==============================================================================
+
+2026-07-05 00:16:20,872 - 3773635 - ERROR - app_validation.py errors for i-0ad717fcfefd6d159:
+
+2026-07-05 00:16:20,873 - 3773635 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-AfterPatching-2026-07-05-00-16-20-873.log
+2026-07-05 00:16:20,935 - 3773635 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-Validation-details-2026-07-05-00-16-20-873.html
+2026-07-05 00:16:22,026 - 3773635 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 00:16:22,026 - 3773635 - INFO - HTML validation report email sent for i-0ad717fcfefd6d159
+2026-07-05 00:16:22,027 - 3773635 - INFO - [Retry-1] Waiting 600s for i-0ad717fcfefd6d159...
+2026-07-05 00:16:22,027 - 3773635 - INFO - RED - Background retry thread started for i-0ad717fcfefd6d159
+2026-07-05 00:16:22,166 - 3773635 - INFO - Started i-0ad717fcfefd6d159 in 0:04:34.827750
+2026-07-05 00:16:22,167 - 3773635 - INFO - All instances processed.
+2026-07-05 00:16:22,171 - 3773635 - INFO - Restart Total time: 0:07:35.757756
+2026-07-05 00:16:22,171 - 3773635 - INFO - Auto-confirmed services are restarted
+2026-07-05 00:16:22,171 - 3773635 - INFO - Confirmed - services are started
+2026-07-05 00:16:22,498 - 3773635 - INFO - The following instances have failed the patch: []
+2026-07-05 00:16:22,498 - 3773635 - INFO - No instances have failed the patch.
+2026-07-05 00:16:22,498 - 3773635 - INFO - Total Patch Process time: 0:11:19.479736
+2026-07-05 00:17:22,982 - 3773635 - INFO - Log file ./logs/patching_2026-07-05_q3-CoolDrive-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-CoolDrive-uat_Patch/2026-07-05/patching_2026-07-05_q3-CoolDrive-uat.log
+2026-07-05 00:26:23,441 - 3773635 - INFO - Sent app_validation.py to i-0ad717fcfefd6d159 (command_id: a502d096-3b30-458f-85af-74eca85abeb6)
+2026-07-05 00:26:53,787 - 3773635 - INFO - app_validation.py output for i-0ad717fcfefd6d159:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:26:23.358660
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.12.15
+Hostname | ip-172-26-12-15.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data2
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.3G | 43% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.12.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.12.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | cdluat_finstaller, cdluat_hsqldb, cdluat_slice, cdluat_jqgrid, cdluat_ftp, cdluat_inbq, cdluat_wld, cdluat_rccl, cdluat_repl, cdluat_event, cdluat_dwa, cdluat_rplpri, cdluat_sch, cdluat_rpt, cdluat_lbl, cdluat_harp, cdluat_bdd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+cdluat_finstaller | /data/app/elastic-communicator-4.0.4/softeon/softwares/release
+cdluat_hsqldb | /data/app/elastic-communicator-4.0.4/softeon/softwares/hsql/data
+cdluat_slice | /data/app/slice
+cdluat_jqgrid | /data/batchapp/softeon/cooldriveuat/reportjqgridexportdaemon
+cdluat_ftp | /data/batchapp/softeon/cooldriveuat/ftpdaemon
+cdluat_inbq | /data/batchapp/softeon/cooldriveuat/uploaddaemon
+cdluat_wld | /data/batchapp/softeon/cooldriveuat/wavelaunchdaemon
+cdluat_rccl | /data/batchapp/softeon/cooldriveuat/replenishmentpickloccanceldaemon
+cdluat_repl | /data/batchapp/softeon/cooldriveuat/replenishmentdaemon
+cdluat_event | /data/batchapp/softeon/cooldriveuat/eventdaemon
+cdluat_dwa | /data/batchapp/softeon/cooldriveuat/downloaddaemon
+cdluat_rplpri | /data/batchapp/softeon/cooldriveuat/replenishmentpriorityupdatedaemon
+cdluat_sch | /data/batchapp/softeon/cooldriveuat/schedulerdaemon
+cdluat_rpt | /data/batchapp/softeon/cooldriveuat/reportdaemon
+cdluat_lbl | /data/batchapp/softeon/cooldriveuat/labeldaemon
+cdluat_harp | /data/batchapp/softeon/cooldriveuat/hardallocationdaemon
+cdluat_bdd | /data/batchapp/softeon/cooldriveconfiguat/bulkdatadaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4836 | cooldriveconfiguat | jboss740eap | cdluat_config | 8084 | 172.26.12.15:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/cooldriveconfiguat/standalone
+5247 | cooldriverfuat | jboss810eap | cdluat_jb81rf | 8083 | 172.26.12.15:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriverfuat/standalone
+5224 | cooldriveuat | jboss810eap | cdluat_jb81desk | 8082 | 172.26.12.15:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriveuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:26:24.010445
+==============================================================================
+
+2026-07-05 00:26:53,787 - 3773635 - ERROR - app_validation.py errors for i-0ad717fcfefd6d159:
+
+2026-07-05 00:26:53,789 - 3773635 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-AfterPatching-Retry1-2026-07-05-00-26-53-788.log
+2026-07-05 00:26:53,848 - 3773635 - INFO - [Retry-1] RED detected for CoolDrive UAT Application and Batch Server (172.26.12.15), retrying... (Total waited: 600s)
+2026-07-05 00:26:53,848 - 3773635 - INFO - [Retry-2] Waiting 600s for i-0ad717fcfefd6d159...
+2026-07-05 00:36:55,362 - 3773635 - INFO - Sent app_validation.py to i-0ad717fcfefd6d159 (command_id: 29b1f1c7-58d3-4778-b262-108eb24623cf)
+2026-07-05 00:37:25,644 - 3773635 - INFO - app_validation.py output for i-0ad717fcfefd6d159:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:36:55.313629
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.12.15
+Hostname | ip-172-26-12-15.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data2
+/dev/nvme1n1p2 | 239.9G | 103.6G | 136.2G | 43% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.12.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.12.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | cdluat_finstaller, cdluat_hsqldb, cdluat_slice, cdluat_jqgrid, cdluat_ftp, cdluat_inbq, cdluat_wld, cdluat_rccl, cdluat_repl, cdluat_event, cdluat_dwa, cdluat_rplpri, cdluat_sch, cdluat_rpt, cdluat_lbl, cdluat_harp, cdluat_bdd, cdluat_cbcdc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+cdluat_finstaller | /data/app/elastic-communicator-4.0.4/softeon/softwares/release
+cdluat_hsqldb | /data/app/elastic-communicator-4.0.4/softeon/softwares/hsql/data
+cdluat_slice | /data/app/slice
+cdluat_jqgrid | /data/batchapp/softeon/cooldriveuat/reportjqgridexportdaemon
+cdluat_ftp | /data/batchapp/softeon/cooldriveuat/ftpdaemon
+cdluat_inbq | /data/batchapp/softeon/cooldriveuat/uploaddaemon
+cdluat_wld | /data/batchapp/softeon/cooldriveuat/wavelaunchdaemon
+cdluat_rccl | /data/batchapp/softeon/cooldriveuat/replenishmentpickloccanceldaemon
+cdluat_repl | /data/batchapp/softeon/cooldriveuat/replenishmentdaemon
+cdluat_event | /data/batchapp/softeon/cooldriveuat/eventdaemon
+cdluat_dwa | /data/batchapp/softeon/cooldriveuat/downloaddaemon
+cdluat_rplpri | /data/batchapp/softeon/cooldriveuat/replenishmentpriorityupdatedaemon
+cdluat_sch | /data/batchapp/softeon/cooldriveuat/schedulerdaemon
+cdluat_rpt | /data/batchapp/softeon/cooldriveuat/reportdaemon
+cdluat_lbl | /data/batchapp/softeon/cooldriveuat/labeldaemon
+cdluat_harp | /data/batchapp/softeon/cooldriveuat/hardallocationdaemon
+cdluat_bdd | /data/batchapp/softeon/cooldriveconfiguat/bulkdatadaemon
+cdluat_cbcdc | /data/batchapp/softeon/cooldriveuat/clusterbatchcarttypedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4836 | cooldriveconfiguat | jboss740eap | cdluat_config | 8084 | 172.26.12.15:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/cooldriveconfiguat/standalone
+5247 | cooldriverfuat | jboss810eap | cdluat_jb81rf | 8083 | 172.26.12.15:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriverfuat/standalone
+5224 | cooldriveuat | jboss810eap | cdluat_jb81desk | 8082 | 172.26.12.15:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriveuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:36:56.072850
+==============================================================================
+
+2026-07-05 00:37:25,644 - 3773635 - ERROR - app_validation.py errors for i-0ad717fcfefd6d159:
+
+2026-07-05 00:37:25,646 - 3773635 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-AfterPatching-Retry2-2026-07-05-00-37-25-645.log
+2026-07-05 00:37:25,699 - 3773635 - INFO - [Retry-2] RED detected for CoolDrive UAT Application and Batch Server (172.26.12.15), retrying... (Total waited: 1200s)
+2026-07-05 00:37:25,699 - 3773635 - INFO - [Retry-3] Waiting 600s for i-0ad717fcfefd6d159...
+2026-07-05 00:47:27,386 - 3773635 - INFO - Sent app_validation.py to i-0ad717fcfefd6d159 (command_id: cc1e37e5-4419-43ef-958f-3bb3d09e9275)
+2026-07-05 00:47:57,732 - 3773635 - INFO - app_validation.py output for i-0ad717fcfefd6d159:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:47:27.306965
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.12.15
+Hostname | ip-172-26-12-15.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 103.7G | 136.2G | 43% | /data
+/dev/nvme1n1p2 | 239.9G | 103.7G | 136.2G | 43% | /data2
+/dev/nvme1n1p2 | 239.9G | 103.7G | 136.2G | 43% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.aarch64
+CUPS IP URL (http://172.26.12.15:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.12.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | cdluat_finstaller, cdluat_hsqldb, cdluat_slice, cdluat_jqgrid, cdluat_ftp, cdluat_inbq, cdluat_wld, cdluat_rccl, cdluat_repl, cdluat_event, cdluat_dwa, cdluat_rplpri, cdluat_sch, cdluat_rpt, cdluat_lbl, cdluat_harp, cdluat_bdd, cdluat_cbcdc, cdluat_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+cdluat_finstaller | /data/app/elastic-communicator-4.0.4/softeon/softwares/release
+cdluat_hsqldb | /data/app/elastic-communicator-4.0.4/softeon/softwares/hsql/data
+cdluat_slice | /data/app/slice
+cdluat_jqgrid | /data/batchapp/softeon/cooldriveuat/reportjqgridexportdaemon
+cdluat_ftp | /data/batchapp/softeon/cooldriveuat/ftpdaemon
+cdluat_inbq | /data/batchapp/softeon/cooldriveuat/uploaddaemon
+cdluat_wld | /data/batchapp/softeon/cooldriveuat/wavelaunchdaemon
+cdluat_rccl | /data/batchapp/softeon/cooldriveuat/replenishmentpickloccanceldaemon
+cdluat_repl | /data/batchapp/softeon/cooldriveuat/replenishmentdaemon
+cdluat_event | /data/batchapp/softeon/cooldriveuat/eventdaemon
+cdluat_dwa | /data/batchapp/softeon/cooldriveuat/downloaddaemon
+cdluat_rplpri | /data/batchapp/softeon/cooldriveuat/replenishmentpriorityupdatedaemon
+cdluat_sch | /data/batchapp/softeon/cooldriveuat/schedulerdaemon
+cdluat_rpt | /data/batchapp/softeon/cooldriveuat/reportdaemon
+cdluat_lbl | /data/batchapp/softeon/cooldriveuat/labeldaemon
+cdluat_harp | /data/batchapp/softeon/cooldriveuat/hardallocationdaemon
+cdluat_bdd | /data/batchapp/softeon/cooldriveconfiguat/bulkdatadaemon
+cdluat_cbcdc | /data/batchapp/softeon/cooldriveuat/clusterbatchcarttypedaemon
+cdluat_wsq | /data/batchapp/softeon/cooldriveuat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4836 | cooldriveconfiguat | jboss740eap | cdluat_config | 8084 | 172.26.12.15:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/cooldriveconfiguat/standalone
+5247 | cooldriverfuat | jboss810eap | cdluat_jb81rf | 8083 | 172.26.12.15:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriverfuat/standalone
+5224 | cooldriveuat | jboss810eap | cdluat_jb81desk | 8082 | 172.26.12.15:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/cooldriveuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:47:28.025184
+==============================================================================
+
+2026-07-05 00:47:57,732 - 3773635 - ERROR - app_validation.py errors for i-0ad717fcfefd6d159:
+
+2026-07-05 00:47:57,734 - 3773635 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-05/q3-CoolDrive-uat/172.26.12.15/172.26.12.15-AfterPatching-Retry3-2026-07-05-00-47-57-733.log
+2026-07-05 00:47:58,792 - 3773635 - INFO - Health monitor crontab enabled on all instances
+2026-07-05 00:47:58,793 - 3773635 - WARNING - [Retry] Timeout - auto cron enabled for i-0ad717fcfefd6d159

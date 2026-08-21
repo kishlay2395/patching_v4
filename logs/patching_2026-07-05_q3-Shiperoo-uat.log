@@ -1,0 +1,157 @@
+2026-07-05 03:00:02,930 - 3780113 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 03:00:02,930 - 3780113 - INFO - Script Start Time: 2026-07-05 03:00:02
+2026-07-05 03:00:03,396 - 3780113 - INFO - Instance(s) selected for Patching: {'i-0f7b5fe724a125b6a': '172.26.14.4'}
+2026-07-05 03:00:03,531 - 3780113 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 03:00:03,535 - 3780113 - INFO - Now patching instances at: 2026-07-05 03:00:03
+2026-07-05 03:00:10,347 - 3780113 - INFO - i-0f7b5fe724a125b6a: Cron was active = True
+2026-07-05 03:00:11,355 - 3780113 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 03:00:11,356 - 3780113 - INFO - Disabled cron for: ['i-0f7b5fe724a125b6a']
+2026-07-05 03:00:12,806 - 3780113 - INFO - Sent app_validation.py to i-0f7b5fe724a125b6a (command_id: 2176be99-9055-4ca4-95e6-5b6b99aa6454)
+2026-07-05 03:00:43,098 - 3780113 - INFO - app_validation.py output for i-0f7b5fe724a125b6a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 07:00:12.845668
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.14.4
+Hostname | ip-172-26-14-4.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 56.9G | 183.0G | 23% | /data
+/dev/nvme1n1p2 | 239.9G | 56.9G | 183.0G | 23% | /data2
+/dev/nvme1n1p2 | 239.9G | 56.9G | 183.0G | 23% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.26.14.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.14.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | spruat_hsqldb, spruat_bdd, spruat_apick, spruat_dwa, spruat_event, spruat_ftp, spruat_harp, spruat_lbl, spruat_lpick, spruat_repl, spruat_rccl, spruat_rplpu, spruat_rpt, spruat_jqgrid, spruat_sch, spruat_inbq, spruat_wld, spruat_wsq, spruat_cbcdc, spruat_finstal, spruat_slice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+spruat_hsqldb | /data/app/elastic-communicator-4.0.5/softeon/softwares/hsql/data
+spruat_bdd | /data/batchapp/softeon/shiperooconfiguat/bulkdatadaemon
+spruat_apick | /data/batchapp/softeon/shiperoouat/autopicktooldaemon
+spruat_dwa | /data/batchapp/softeon/shiperoouat/downloaddaemon
+spruat_event | /data/batchapp/softeon/shiperoouat/eventdaemon
+spruat_ftp | /data/batchapp/softeon/shiperoouat/ftpdaemon
+spruat_harp | /data/batchapp/softeon/shiperoouat/hardallocationdaemon
+spruat_lbl | /data/batchapp/softeon/shiperoouat/labeldaemon
+spruat_lpick | /data/batchapp/softeon/shiperoouat/ptcdaemon
+spruat_repl | /data/batchapp/softeon/shiperoouat/replenishmentdaemon
+spruat_rccl | /data/batchapp/softeon/shiperoouat/replenishmentpickloccanceldaemon
+spruat_rplpu | /data/batchapp/softeon/shiperoouat/replenishmentpriorityupdatedaemon
+spruat_rpt | /data/batchapp/softeon/shiperoouat/reportdaemon
+spruat_jqgrid | /data/batchapp/softeon/shiperoouat/reportjqgridexportdaemon
+spruat_sch | /data/batchapp/softeon/shiperoouat/schedulardaemon
+spruat_inbq | /data/batchapp/softeon/shiperoouat/uploaddeamon
+spruat_wld | /data/batchapp/softeon/shiperoouat/wavelaunchdaemon
+spruat_wsq | /data/batchapp/softeon/shiperoouat/wsqdaemon
+spruat_cbcdc | /data/batchapp/softeon/shiperoouat/clusterbatchcarttypedaemon
+spruat_finstal | /data/app/elastic-communicator-4.0.5/softeon/softwares/release
+spruat_slice | /data/app/slice
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+48419 | shiperooconfiguat | jboss740eap | spruat_config | 8082 | 172.26.14.4:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/shiperooconfiguat/standalone
+343856 | shiperoorfuat | jboss810eap | spruat_rf | 8081 | 172.26.14.4:8081 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/shiperoorfuat/standalone
+343536 | shiperoouat | jboss810eap | spruat_desk | 8080 | 172.26.14.4:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/shiperoouat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 07:00:13.925775
+==============================================================================
+
+2026-07-05 03:00:43,099 - 3780113 - ERROR - app_validation.py errors for i-0f7b5fe724a125b6a:
+
+2026-07-05 03:00:43,100 - 3780113 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-Shiperoo-uat/172.26.14.4/172.26.14.4-BeforePatching-2026-07-05-03-00-43-100.log
+2026-07-05 03:00:43,184 - 3780113 - INFO - Sending patch command to instance i-0f7b5fe724a125b6a
+2026-07-05 03:00:44,133 - 3780113 - INFO - Command sent successfully to instance i-0f7b5fe724a125b6a. Command ID: 4b46b065-a9ad-446b-94e8-ef30908f2a68
+2026-07-05 03:04:17,348 - 3780113 - INFO - All patches applied successfully.
+2026-07-05 03:04:17,348 - 3780113 - INFO - Patching end time: 2026-07-05 03:04:17
+2026-07-05 03:04:17,349 - 3780113 - INFO - Patch Elapsed time: 0:04:13.813601
+2026-07-05 03:04:17,419 - 3780113 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 03:04:17,419 - 3780113 - INFO - Confirmed - services are stopped
+2026-07-05 03:04:26,453 - 3780113 - INFO - Discovered TG map: {'i-0f7b5fe724a125b6a': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Config/69105e2573c03732', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Desktop/0663dfc8886174af', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-EC/66b2b87787617b82', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-RF/115826f23b0cf0c7', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Slice/e65613a509e7a7c2']}
+2026-07-05 03:04:26,703 - 3780113 - INFO - Deregistering i-0f7b5fe724a125b6a from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Config/69105e2573c03732
+2026-07-05 03:04:27,614 - 3780113 - INFO - Deregistering i-0f7b5fe724a125b6a from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Desktop/0663dfc8886174af
+2026-07-05 03:04:27,867 - 3780113 - INFO - Deregistering i-0f7b5fe724a125b6a from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-EC/66b2b87787617b82
+2026-07-05 03:04:28,126 - 3780113 - INFO - Deregistering i-0f7b5fe724a125b6a from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-RF/115826f23b0cf0c7
+2026-07-05 03:04:28,383 - 3780113 - INFO - Deregistering i-0f7b5fe724a125b6a from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Slice/e65613a509e7a7c2
+2026-07-05 03:04:28,641 - 3780113 - INFO - Stopping EC2 instance: i-0f7b5fe724a125b6a at 2026-07-05 03:04:28
+2026-07-05 03:07:33,938 - 3780113 - INFO - Instance i-0f7b5fe724a125b6a stopped successfully.
+2026-07-05 03:07:34,074 - 3780113 - INFO - Stopped i-0f7b5fe724a125b6a in 0:03:05.432916
+2026-07-05 03:07:34,075 - 3780113 - INFO - Starting EC2 instance: i-0f7b5fe724a125b6a
+2026-07-05 03:07:50,488 - 3780113 - INFO - Instance i-0f7b5fe724a125b6a started successfully.
+2026-07-05 03:07:50,488 - 3780113 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0f7b5fe724a125b6a...
+2026-07-05 03:09:30,491 - 3780113 - INFO - Registering i-0f7b5fe724a125b6a to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Config/69105e2573c03732
+2026-07-05 03:09:31,516 - 3780113 - INFO - Registering i-0f7b5fe724a125b6a to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Desktop/0663dfc8886174af
+2026-07-05 03:09:31,878 - 3780113 - INFO - Registering i-0f7b5fe724a125b6a to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-EC/66b2b87787617b82
+2026-07-05 03:09:32,232 - 3780113 - INFO - Registering i-0f7b5fe724a125b6a to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-RF/115826f23b0cf0c7
+2026-07-05 03:09:32,597 - 3780113 - INFO - Registering i-0f7b5fe724a125b6a to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-Slice/e65613a509e7a7c2
+2026-07-05 03:15:07,103 - 3780113 - WARNING - i-0f7b5fe724a125b6a not healthy in arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/Shiperoo-UAT-EC/66b2b87787617b82 after timeout.
+2026-07-05 03:15:08,079 - 3780113 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 03:15:08,079 - 3780113 - ERROR - Aborting workflow: i-0f7b5fe724a125b6a is not healthy after restart.
+2026-07-05 03:15:08,082 - 3780113 - INFO - Restart Total time: 0:10:50.464258
+2026-07-05 03:15:08,082 - 3780113 - INFO - Auto-confirmed services are restarted
+2026-07-05 03:15:08,082 - 3780113 - INFO - Confirmed - services are started
+2026-07-05 03:15:08,219 - 3780113 - INFO - The following instances have failed the patch: []
+2026-07-05 03:15:08,219 - 3780113 - INFO - No instances have failed the patch.
+2026-07-05 03:15:08,219 - 3780113 - INFO - Total Patch Process time: 0:15:05.288644
+2026-07-05 03:16:08,587 - 3780113 - INFO - Log file ./logs/patching_2026-07-05_q3-Shiperoo-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-Shiperoo-uat_Patch/2026-07-05/patching_2026-07-05_q3-Shiperoo-uat.log

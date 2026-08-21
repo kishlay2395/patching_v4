@@ -1,0 +1,879 @@
+2026-07-11 03:00:03,491 - 4115483 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-11 03:00:03,492 - 4115483 - INFO - Script Start Time: 2026-07-11 03:00:03
+2026-07-11 03:00:04,058 - 4115483 - INFO - Instance(s) selected for Patching: {'i-0470afe7b1e5f392a': '172.29.10.11', 'i-07fdba81ab496dc88': '172.29.10.26', 'i-0e0c1a737d880c781': '172.29.10.57'}
+2026-07-11 03:00:04,158 - 4115483 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 03:00:04,158 - 4115483 - INFO - Now patching instances at: 2026-07-11 03:00:04
+2026-07-11 03:00:09,506 - 4115483 - INFO - i-0470afe7b1e5f392a: Cron was active = False
+2026-07-11 03:00:14,807 - 4115483 - INFO - i-0e0c1a737d880c781: Cron was active = True
+2026-07-11 03:00:20,130 - 4115483 - INFO - i-07fdba81ab496dc88: Cron was active = True
+2026-07-11 03:00:20,342 - 4115483 - INFO - Health monitor crontab disabled on all instances
+2026-07-11 03:00:20,343 - 4115483 - INFO - Disabled cron for: ['i-0e0c1a737d880c781', 'i-07fdba81ab496dc88']
+2026-07-11 03:00:20,539 - 4115483 - INFO - Sent app_validation.py to i-0470afe7b1e5f392a (command_id: 5e056e5b-01c5-4534-92b1-31f773866d23)
+2026-07-11 03:00:50,632 - 4115483 - INFO - app_validation.py output for i-0470afe7b1e5f392a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 08:00:21.040281
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.11
+Hostname | ip-172-29-10-11
+Current User | root
+Working Directory | /usr/bin
+Time Zone | BST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 279.9G | 100.1G | 179.8G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | No
+CUPS Running | No
+CUPS Version | Not Found
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | Not Found
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 15
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | umgp2fuat_downloaddaemon, umgp2fuat_eventdaemon, umgp2fuat_ftpdaemon, umgp2fuat_overnightprocessdaemon, umgp2fuat_uploaddaemon, umgp2fuat_inventorycomputationdaemon, umgp2fuat_dmdcp, umgp2fuat_cnpop, umgp2fuat_cnpom, umgp2fuat_1upload, umgp2fuat_forecastdaemon, umgp2fuat_schedulerdaemon, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+umgp2fuat_downloaddaemon | /data/batchapp/softeonuat/umgp2fuat/downloaddaemon
+umgp2fuat_eventdaemon | /data/batchapp/softeonuat/umgp2fuat/eventdaemon
+umgp2fuat_ftpdaemon | /data/batchapp/softeonuat/umgp2fuat/ftpdaemon
+umgp2fuat_overnightprocessdaemon | /data/batchapp/softeonuat/umgp2fuat/overnightprocessdaemon
+umgp2fuat_uploaddaemon | /data/batchapp/softeonuat/umgp2fuat/uploaddaemon
+umgp2fuat_inventorycomputationdaemon | /data/batchapp/softeonuat/umgp2fuat/inventorycomputationdaemon
+umgp2fuat_dmdcp | /data/batchapp/softeonuat/umgp2fuat/demandcomputationdaemon
+umgp2fuat_cnpop | /data/batchapp/softeonuat/umgp2fuat/canvasspopulationdaemon
+umgp2fuat_cnpom | /data/batchapp/softeonuat/umgp2fuat/canvasspopulationmusicdaemon
+umgp2fuat_1upload | /data/batchapp/softeonuat/umgp2fuat/uploaddaemon1
+umgp2fuat_forecastdaemon | /data/batchapp/softeonuat/umgp2fuat/forecastdaemon
+umgp2fuat_schedulerdaemon | /data/batchapp/softeonuat/umgp2fuat/schedulerdaemon
+sh | /bin/sh
+java | /data2/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2910172 | umgp2fuat | jboss62eap | umgp2fuat_jboss | 80 | 172.29.10.11:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeonuat/umgp2fuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 08:00:22.699388
+==============================================================================
+
+2026-07-11 03:00:50,632 - 4115483 - ERROR - app_validation.py errors for i-0470afe7b1e5f392a:
+
+2026-07-11 03:00:50,634 - 4115483 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.11/172.29.10.11-BeforePatching-2026-07-11-03-00-50-633.log
+2026-07-11 03:00:50,903 - 4115483 - INFO - Sent app_validation.py to i-0e0c1a737d880c781 (command_id: e96f696d-c9b4-4505-9db2-625da4221bde)
+2026-07-11 03:01:20,998 - 4115483 - INFO - app_validation.py output for i-0e0c1a737d880c781:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:00:51.199095
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.57
+Hostname | ip-172-29-10-57
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 39.4G | 250.5G | 13% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.57:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.57 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 9
+Batch/Daemon Java Processes | 8
+Non-Standalone Java Processes | p2fumgusd_dwa, p2fumgusd_event, p2fumgusd2_ftp, p2fumgusd_sch, p2fumgusd_upd, p2fumgusd_ovn, p2fumgusd_inc, p2fumgusd_fcst
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 8
+Java-Name | Java-Path
+p2fumgusd_dwa | /data/batchapp/softeon/p2fumgusd2cuat/downloaddaemon
+p2fumgusd_event | /data/batchapp/softeon/p2fumgusd2cuat/eventdaemon
+p2fumgusd2_ftp | /data/batchapp/softeon/p2fumgusd2cuat/ftpdaemon
+p2fumgusd_sch | /data/batchapp/softeon/p2fumgusd2cuat/schedulerdaemon
+p2fumgusd_upd | /data/batchapp/softeon/p2fumgusd2cuat/uploaddaemon
+p2fumgusd_ovn | /data/batchapp/softeon/p2fumgusd2cuat/overnightprocessdaemon
+p2fumgusd_inc | /data/batchapp/softeon/p2fumgusd2cuat/inventorycomputationdaemon
+p2fumgusd_fcst | /data/batchapp/softeon/p2fumgusd2cuat/forecastdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3674444 | p2fumgusd2cuat | jboss62eap | d2cuat_jboss | 8080 | 172.29.10.57:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/p2fumgusd2cuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:00:52.094996
+==============================================================================
+
+2026-07-11 03:01:20,998 - 4115483 - ERROR - app_validation.py errors for i-0e0c1a737d880c781:
+
+2026-07-11 03:01:21,000 - 4115483 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.57/172.29.10.57-BeforePatching-2026-07-11-03-01-20-999.log
+2026-07-11 03:01:21,188 - 4115483 - INFO - Sent app_validation.py to i-07fdba81ab496dc88 (command_id: 4f60020b-c0c7-407a-b126-4ba0359ab6c2)
+2026-07-11 03:01:51,318 - 4115483 - INFO - app_validation.py output for i-07fdba81ab496dc88:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:01:21.587122
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.26
+Hostname | ip-172-29-10-26
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 279.9G | 159.9G | 119.9G | 57% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.26:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.26 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 10
+Batch/Daemon Java Processes | 9
+Non-Standalone Java Processes | umgusp2fuat_downloaddaemon, umgusp2fuat_eventdaemon, umgusp2fuat_forecastdaemon, umgusp2fuat_ftpdaemon, umgusp2fuat_overnightprocessdaemon, umgusp2fuat_schedulerdaemon, umgusp2fuat_uploaddaemon, umgusp2fuat_inventorycomputationdaemon, umgusp2fuat_CanvassPopulationMusicDaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 9
+Java-Name | Java-Path
+umgusp2fuat_downloaddaemon | /data/batchapp/softeonuat/umgusp2fuat/downloaddaemon
+umgusp2fuat_eventdaemon | /data/batchapp/softeonuat/umgusp2fuat/eventdaemon
+umgusp2fuat_forecastdaemon | /data/batchapp/softeonuat/umgusp2fuat/forecastdaemon
+umgusp2fuat_ftpdaemon | /data/batchapp/softeonuat/umgusp2fuat/ftpdaemon
+umgusp2fuat_overnightprocessdaemon | /data/batchapp/softeonuat/umgusp2fuat/overnightprocessdaemon
+umgusp2fuat_schedulerdaemon | /data/batchapp/softeonuat/umgusp2fuat/schedulerdaemon
+umgusp2fuat_uploaddaemon | /data/batchapp/softeonuat/umgusp2fuat/uploaddaemon
+umgusp2fuat_inventorycomputationdaemon | /data/batchapp/softeonuat/umgusp2fuat/inventorycomputationdaemon
+umgusp2fuat_CanvassPopulationMusicDaemon | /data/batchapp/softeonuat/umgusp2fuat/CanvassPopulationMusicDaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2619216 | umgusp2fuat | jboss62eap | umgusp2fuat_jboss | 80 | 172.29.10.26:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeonuat/umgusp2fuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:01:23.039897
+==============================================================================
+
+2026-07-11 03:01:51,318 - 4115483 - ERROR - app_validation.py errors for i-07fdba81ab496dc88:
+
+2026-07-11 03:01:51,320 - 4115483 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.26/172.29.10.26-BeforePatching-2026-07-11-03-01-51-319.log
+2026-07-11 03:01:51,489 - 4115483 - INFO - Sending patch command to instance i-0470afe7b1e5f392a
+2026-07-11 03:01:51,618 - 4115483 - INFO - Command sent successfully to instance i-0470afe7b1e5f392a. Command ID: 03bd753b-3d06-4733-a3ec-8d47678d2134
+2026-07-11 03:01:51,780 - 4115483 - INFO - Sending patch command to instance i-0e0c1a737d880c781
+2026-07-11 03:01:51,871 - 4115483 - INFO - Command sent successfully to instance i-0e0c1a737d880c781. Command ID: a455aea4-8651-4b52-b1e6-453dbed6d1f4
+2026-07-11 03:01:52,003 - 4115483 - INFO - Sending patch command to instance i-07fdba81ab496dc88
+2026-07-11 03:01:52,096 - 4115483 - INFO - Command sent successfully to instance i-07fdba81ab496dc88. Command ID: 97e3f0d0-436b-4035-b4de-193eb3f12348
+2026-07-11 03:18:26,242 - 4115483 - INFO - All patches applied successfully.
+2026-07-11 03:18:26,243 - 4115483 - INFO - Patching end time: 2026-07-11 03:18:26
+2026-07-11 03:18:26,243 - 4115483 - INFO - Patch Elapsed time: 0:18:22.084951
+2026-07-11 03:18:26,309 - 4115483 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-11 03:18:26,310 - 4115483 - INFO - Confirmed - services are stopped
+2026-07-11 03:18:47,065 - 4115483 - INFO - Discovered TG map: {'i-0470afe7b1e5f392a': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-P2F-UAT-Ext/fd5f3b0f58dc91f3'], 'i-07fdba81ab496dc88': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-P2F-UAT-Ext/c1ca8b29744bb778'], 'i-0e0c1a737d880c781': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-Bravado-umgusd2c-Ext/de1b0454a7ca5401']}
+2026-07-11 03:18:47,243 - 4115483 - INFO - Deregistering i-0470afe7b1e5f392a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-P2F-UAT-Ext/fd5f3b0f58dc91f3
+2026-07-11 03:18:47,315 - 4115483 - INFO - Stopping EC2 instance: i-0470afe7b1e5f392a at 2026-07-11 03:18:47
+2026-07-11 03:21:04,029 - 4115483 - INFO - Instance i-0470afe7b1e5f392a stopped successfully.
+2026-07-11 03:21:04,454 - 4115483 - INFO - Stopped i-0470afe7b1e5f392a in 0:02:17.139168
+2026-07-11 03:21:04,455 - 4115483 - INFO - Starting EC2 instance: i-0470afe7b1e5f392a
+2026-07-11 03:21:35,616 - 4115483 - INFO - Instance i-0470afe7b1e5f392a started successfully.
+2026-07-11 03:21:35,616 - 4115483 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0470afe7b1e5f392a...
+2026-07-11 03:23:15,716 - 4115483 - INFO - Registering i-0470afe7b1e5f392a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-P2F-UAT-Ext/fd5f3b0f58dc91f3
+2026-07-11 03:23:46,167 - 4115483 - INFO - Sent app_validation.py to i-0470afe7b1e5f392a (command_id: 1dcb46b0-163b-487a-a732-637977a1bfa0)
+2026-07-11 03:24:16,236 - 4115483 - INFO - app_validation.py output for i-0470afe7b1e5f392a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 08:23:46.519260
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.11
+Hostname | ip-172-29-10-11
+Current User | root
+Working Directory | /usr/bin
+Time Zone | BST
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 279.9G | 100.2G | 179.7G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | No
+CUPS Running | No
+CUPS Version | Not Found
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | Not Found
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 12
+Non-Standalone Java Processes | umgp2fuat_downloaddaemon, umgp2fuat_eventdaemon, umgp2fuat_forecastdaemon, umgp2fuat_ftpdaemon, umgp2fuat_overnightprocessdaemon, umgp2fuat_schedulerdaemon, umgp2fuat_uploaddaemon, umgp2fuat_inventorycomputationdaemon, umgp2fuat_dmdcp, umgp2fuat_cnpop, umgp2fuat_cnpom, umgp2fuat_1upload
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 12
+Java-Name | Java-Path
+umgp2fuat_downloaddaemon | /data/batchapp/softeonuat/umgp2fuat/downloaddaemon
+umgp2fuat_eventdaemon | /data/batchapp/softeonuat/umgp2fuat/eventdaemon
+umgp2fuat_forecastdaemon | /data/batchapp/softeonuat/umgp2fuat/forecastdaemon
+umgp2fuat_ftpdaemon | /data/batchapp/softeonuat/umgp2fuat/ftpdaemon
+umgp2fuat_overnightprocessdaemon | /data/batchapp/softeonuat/umgp2fuat/overnightprocessdaemon
+umgp2fuat_schedulerdaemon | /data/batchapp/softeonuat/umgp2fuat/schedulerdaemon
+umgp2fuat_uploaddaemon | /data/batchapp/softeonuat/umgp2fuat/uploaddaemon
+umgp2fuat_inventorycomputationdaemon | /data/batchapp/softeonuat/umgp2fuat/inventorycomputationdaemon
+umgp2fuat_dmdcp | /data/batchapp/softeonuat/umgp2fuat/demandcomputationdaemon
+umgp2fuat_cnpop | /data/batchapp/softeonuat/umgp2fuat/canvasspopulationdaemon
+umgp2fuat_cnpom | /data/batchapp/softeonuat/umgp2fuat/canvasspopulationmusicdaemon
+umgp2fuat_1upload | /data/batchapp/softeonuat/umgp2fuat/uploaddaemon1
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3291 | umgp2fuat | jboss62eap | umgp2fuat_jboss | 80 | 172.29.10.11:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeonuat/umgp2fuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 08:23:48.699310
+==============================================================================
+
+2026-07-11 03:24:16,237 - 4115483 - ERROR - app_validation.py errors for i-0470afe7b1e5f392a:
+
+2026-07-11 03:24:16,238 - 4115483 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.11/172.29.10.11-AfterPatching-2026-07-11-03-24-16-238.log
+2026-07-11 03:24:16,290 - 4115483 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.11/172.29.10.11-Validation-details-2026-07-11-03-24-16-238.html
+2026-07-11 03:24:16,546 - 4115483 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 03:24:16,546 - 4115483 - INFO - HTML validation report email sent for i-0470afe7b1e5f392a
+2026-07-11 03:24:16,546 - 4115483 - INFO - i-0470afe7b1e5f392a: Cron was not active before patching - skipping retry thread.
+2026-07-11 03:24:16,940 - 4115483 - INFO - Started i-0470afe7b1e5f392a in 0:03:12.484931
+2026-07-11 03:24:16,940 - 4115483 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-11 03:26:16,943 - 4115483 - INFO - Deregistering i-0e0c1a737d880c781 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-Bravado-umgusd2c-Ext/de1b0454a7ca5401
+2026-07-11 03:26:17,014 - 4115483 - INFO - Stopping EC2 instance: i-0e0c1a737d880c781 at 2026-07-11 03:26:17
+2026-07-11 03:29:19,086 - 4115483 - INFO - Instance i-0e0c1a737d880c781 stopped successfully.
+2026-07-11 03:29:19,443 - 4115483 - INFO - Stopped i-0e0c1a737d880c781 in 0:03:02.429098
+2026-07-11 03:29:19,444 - 4115483 - INFO - Starting EC2 instance: i-0e0c1a737d880c781
+2026-07-11 03:29:35,426 - 4115483 - INFO - Instance i-0e0c1a737d880c781 started successfully.
+2026-07-11 03:29:35,426 - 4115483 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0e0c1a737d880c781...
+2026-07-11 03:31:15,431 - 4115483 - INFO - Registering i-0e0c1a737d880c781 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-UAT-Bravado-umgusd2c-Ext/de1b0454a7ca5401
+2026-07-11 03:31:45,990 - 4115483 - INFO - Sent app_validation.py to i-0e0c1a737d880c781 (command_id: 2ae554cc-1391-46f2-8d0d-6361c25bcc7e)
+2026-07-11 03:32:16,194 - 4115483 - INFO - app_validation.py output for i-0e0c1a737d880c781:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:31:46.348479
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.57
+Hostname | ip-172-29-10-57
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 39.3G | 250.5G | 13% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.57:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.57 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3047 | p2fumgusd2cuat | jboss62eap | d2cuat_jboss | 8080 | 172.29.10.57:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/p2fumgusd2cuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:31:47.626213
+==============================================================================
+
+2026-07-11 03:32:16,194 - 4115483 - ERROR - app_validation.py errors for i-0e0c1a737d880c781:
+
+2026-07-11 03:32:16,196 - 4115483 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.57/172.29.10.57-AfterPatching-2026-07-11-03-32-16-195.log
+2026-07-11 03:32:16,248 - 4115483 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.57/172.29.10.57-Validation-details-2026-07-11-03-32-16-195.html
+2026-07-11 03:32:16,508 - 4115483 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 03:32:16,509 - 4115483 - INFO - HTML validation report email sent for i-0e0c1a737d880c781
+2026-07-11 03:32:16,509 - 4115483 - INFO - [Retry-1] Waiting 600s for i-0e0c1a737d880c781...
+2026-07-11 03:32:16,509 - 4115483 - INFO - RED - Background retry thread started for i-0e0c1a737d880c781
+2026-07-11 03:32:16,887 - 4115483 - INFO - Started i-0e0c1a737d880c781 in 0:02:57.443599
+2026-07-11 03:32:16,888 - 4115483 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-11 03:34:16,909 - 4115483 - INFO - Deregistering i-07fdba81ab496dc88 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-P2F-UAT-Ext/c1ca8b29744bb778
+2026-07-11 03:34:16,981 - 4115483 - INFO - Stopping EC2 instance: i-07fdba81ab496dc88 at 2026-07-11 03:34:16
+2026-07-11 03:36:33,636 - 4115483 - INFO - Instance i-07fdba81ab496dc88 stopped successfully.
+2026-07-11 03:36:34,029 - 4115483 - INFO - Stopped i-07fdba81ab496dc88 in 0:02:17.048019
+2026-07-11 03:36:34,029 - 4115483 - INFO - Starting EC2 instance: i-07fdba81ab496dc88
+2026-07-11 03:37:05,299 - 4115483 - INFO - Instance i-07fdba81ab496dc88 started successfully.
+2026-07-11 03:37:05,299 - 4115483 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07fdba81ab496dc88...
+2026-07-11 03:38:45,328 - 4115483 - INFO - Registering i-07fdba81ab496dc88 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UMG-US-P2F-UAT-Ext/c1ca8b29744bb778
+2026-07-11 03:39:15,776 - 4115483 - INFO - Sent app_validation.py to i-07fdba81ab496dc88 (command_id: ed1fddd5-2dff-4e03-910a-be6126d454d3)
+2026-07-11 03:39:45,919 - 4115483 - INFO - app_validation.py output for i-07fdba81ab496dc88:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:39:16.738076
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.26
+Hostname | ip-172-29-10-26
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 279.9G | 160.0G | 119.9G | 57% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.26:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.26 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 9
+Non-Standalone Java Processes | umgusp2fuat_downloaddaemon, umgusp2fuat_eventdaemon, umgusp2fuat_forecastdaemon, umgusp2fuat_ftpdaemon, umgusp2fuat_overnightprocessdaemon, umgusp2fuat_schedulerdaemon, umgusp2fuat_uploaddaemon, umgusp2fuat_inventorycomputationdaemon, umgusp2fuat_CanvassPopulationMusicDaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 9
+Java-Name | Java-Path
+umgusp2fuat_downloaddaemon | /data/batchapp/softeonuat/umgusp2fuat/downloaddaemon
+umgusp2fuat_eventdaemon | /data/batchapp/softeonuat/umgusp2fuat/eventdaemon
+umgusp2fuat_forecastdaemon | /data/batchapp/softeonuat/umgusp2fuat/forecastdaemon
+umgusp2fuat_ftpdaemon | /data/batchapp/softeonuat/umgusp2fuat/ftpdaemon
+umgusp2fuat_overnightprocessdaemon | /data/batchapp/softeonuat/umgusp2fuat/overnightprocessdaemon
+umgusp2fuat_schedulerdaemon | /data/batchapp/softeonuat/umgusp2fuat/schedulerdaemon
+umgusp2fuat_uploaddaemon | /data/batchapp/softeonuat/umgusp2fuat/uploaddaemon
+umgusp2fuat_inventorycomputationdaemon | /data/batchapp/softeonuat/umgusp2fuat/inventorycomputationdaemon
+umgusp2fuat_CanvassPopulationMusicDaemon | /data/batchapp/softeonuat/umgusp2fuat/CanvassPopulationMusicDaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3226 | umgusp2fuat | jboss62eap | umgusp2fuat_jboss | 80 | 172.29.10.26:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeonuat/umgusp2fuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:39:22.185581
+==============================================================================
+
+2026-07-11 03:39:45,919 - 4115483 - ERROR - app_validation.py errors for i-07fdba81ab496dc88:
+
+2026-07-11 03:39:45,920 - 4115483 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.26/172.29.10.26-AfterPatching-2026-07-11-03-39-45-920.log
+2026-07-11 03:39:45,973 - 4115483 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.26/172.29.10.26-Validation-details-2026-07-11-03-39-45-920.html
+2026-07-11 03:39:46,359 - 4115483 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 03:39:46,359 - 4115483 - INFO - HTML validation report email sent for i-07fdba81ab496dc88
+2026-07-11 03:39:46,360 - 4115483 - INFO - [Retry-1] Waiting 600s for i-07fdba81ab496dc88...
+2026-07-11 03:39:46,360 - 4115483 - INFO - RED - Background retry thread started for i-07fdba81ab496dc88
+2026-07-11 03:39:46,727 - 4115483 - INFO - Started i-07fdba81ab496dc88 in 0:03:12.697325
+2026-07-11 03:39:46,727 - 4115483 - INFO - All instances processed.
+2026-07-11 03:39:46,732 - 4115483 - INFO - Restart Total time: 0:21:20.254210
+2026-07-11 03:39:46,733 - 4115483 - INFO - Auto-confirmed services are restarted
+2026-07-11 03:39:46,733 - 4115483 - INFO - Confirmed - services are started
+2026-07-11 03:39:46,845 - 4115483 - INFO - The following instances have failed the patch: []
+2026-07-11 03:39:46,845 - 4115483 - INFO - No instances have failed the patch.
+2026-07-11 03:39:46,845 - 4115483 - INFO - Total Patch Process time: 0:39:43.352926
+2026-07-11 03:40:47,435 - 4115483 - INFO - Log file ./logs/patching_2026-07-11_q3-UMG-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-UMG-uat_Patch/2026-07-11/patching_2026-07-11_q3-UMG-uat.log
+2026-07-11 03:42:16,917 - 4115483 - INFO - Sent app_validation.py to i-0e0c1a737d880c781 (command_id: 3fa24793-8836-4db2-92e0-37563b16e754)
+2026-07-11 03:42:46,994 - 4115483 - INFO - app_validation.py output for i-0e0c1a737d880c781:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:42:17.213993
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.57
+Hostname | ip-172-29-10-57
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 39.4G | 250.5G | 13% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.57:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.57 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 9
+Batch/Daemon Java Processes | 8
+Non-Standalone Java Processes | p2fumgusd_dwa, p2fumgusd_event, p2fumgusd2_ftp, p2fumgusd_sch, p2fumgusd_upd, p2fumgusd_ovn, p2fumgusd_inc, p2fumgusd_fcst
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 8
+Java-Name | Java-Path
+p2fumgusd_dwa | /data/batchapp/softeon/p2fumgusd2cuat/downloaddaemon
+p2fumgusd_event | /data/batchapp/softeon/p2fumgusd2cuat/eventdaemon
+p2fumgusd2_ftp | /data/batchapp/softeon/p2fumgusd2cuat/ftpdaemon
+p2fumgusd_sch | /data/batchapp/softeon/p2fumgusd2cuat/schedulerdaemon
+p2fumgusd_upd | /data/batchapp/softeon/p2fumgusd2cuat/uploaddaemon
+p2fumgusd_ovn | /data/batchapp/softeon/p2fumgusd2cuat/overnightprocessdaemon
+p2fumgusd_inc | /data/batchapp/softeon/p2fumgusd2cuat/inventorycomputationdaemon
+p2fumgusd_fcst | /data/batchapp/softeon/p2fumgusd2cuat/forecastdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3047 | p2fumgusd2cuat | jboss62eap | d2cuat_jboss | 8080 | 172.29.10.57:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/p2fumgusd2cuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:42:18.306565
+==============================================================================
+
+2026-07-11 03:42:46,994 - 4115483 - ERROR - app_validation.py errors for i-0e0c1a737d880c781:
+
+2026-07-11 03:42:46,995 - 4115483 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.57/172.29.10.57-AfterPatching-Retry1-2026-07-11-03-42-46-995.log
+2026-07-11 03:42:47,126 - 4115483 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 03:42:47,319 - 4115483 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 03:42:47,320 - 4115483 - INFO - [Retry] Green - cron enabled for i-0e0c1a737d880c781
+2026-07-11 03:49:46,598 - 4115483 - INFO - Sent app_validation.py to i-07fdba81ab496dc88 (command_id: 01183bb6-6a7b-41f0-a40d-5c9313d9877f)
+2026-07-11 03:50:16,687 - 4115483 - INFO - app_validation.py output for i-07fdba81ab496dc88:
+
+==============================================================================
+Server Availability Check Started | 2026-07-11 00:49:46.962287
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.26
+Hostname | ip-172-29-10-26
+Current User | root
+Working Directory | /usr/bin
+Time Zone | PDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 279.9G | 160.0G | 119.9G | 57% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.26:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.26 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 10
+Batch/Daemon Java Processes | 9
+Non-Standalone Java Processes | umgusp2fuat_downloaddaemon, umgusp2fuat_eventdaemon, umgusp2fuat_forecastdaemon, umgusp2fuat_ftpdaemon, umgusp2fuat_overnightprocessdaemon, umgusp2fuat_schedulerdaemon, umgusp2fuat_uploaddaemon, umgusp2fuat_inventorycomputationdaemon, umgusp2fuat_CanvassPopulationMusicDaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 9
+Java-Name | Java-Path
+umgusp2fuat_downloaddaemon | /data/batchapp/softeonuat/umgusp2fuat/downloaddaemon
+umgusp2fuat_eventdaemon | /data/batchapp/softeonuat/umgusp2fuat/eventdaemon
+umgusp2fuat_forecastdaemon | /data/batchapp/softeonuat/umgusp2fuat/forecastdaemon
+umgusp2fuat_ftpdaemon | /data/batchapp/softeonuat/umgusp2fuat/ftpdaemon
+umgusp2fuat_overnightprocessdaemon | /data/batchapp/softeonuat/umgusp2fuat/overnightprocessdaemon
+umgusp2fuat_schedulerdaemon | /data/batchapp/softeonuat/umgusp2fuat/schedulerdaemon
+umgusp2fuat_uploaddaemon | /data/batchapp/softeonuat/umgusp2fuat/uploaddaemon
+umgusp2fuat_inventorycomputationdaemon | /data/batchapp/softeonuat/umgusp2fuat/inventorycomputationdaemon
+umgusp2fuat_CanvassPopulationMusicDaemon | /data/batchapp/softeonuat/umgusp2fuat/CanvassPopulationMusicDaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3226 | umgusp2fuat | jboss62eap | umgusp2fuat_jboss | 80 | 172.29.10.26:80 | UP | 200 | Disabled | /data/app/jboss62eap/softeonuat/umgusp2fuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-11 00:49:49.716423
+==============================================================================
+
+2026-07-11 03:50:16,688 - 4115483 - ERROR - app_validation.py errors for i-07fdba81ab496dc88:
+
+2026-07-11 03:50:16,689 - 4115483 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-11/q3-UMG-uat/172.29.10.26/172.29.10.26-AfterPatching-Retry1-2026-07-11-03-50-16-689.log
+2026-07-11 03:50:16,819 - 4115483 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-11 03:50:17,130 - 4115483 - INFO - Health monitor crontab enabled on all instances
+2026-07-11 03:50:17,132 - 4115483 - INFO - [Retry] Green - cron enabled for i-07fdba81ab496dc88

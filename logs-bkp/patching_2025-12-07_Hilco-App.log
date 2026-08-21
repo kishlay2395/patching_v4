@@ -1,0 +1,471 @@
+2025-12-07 03:00:03,737 - 14828 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-07 03:07:48,327 - 14828 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-12-07 03:07:48,457 - 14828 - INFO - Log file ./logs/backup_2025-12-07.log uploaded to s3://q3-2025-aws-security-patching/Hilco-App_Patch_Backup/2025-12-07/backup_2025-12-07.log
+2025-12-07 07:00:03,430 - 30090 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-12-07 07:00:03,431 - 30090 - INFO - Script Start Time: 2025-12-07 07:00:03
+2025-12-07 07:00:03,782 - 30090 - INFO - Instance(s) selected for Patching: {'i-069ada2ac82c4e6b9': '172.30.136.22', 'i-00535ac12a64d48a8': '172.30.136.41'}
+2025-12-07 07:00:03,965 - 30090 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-07 07:00:03,965 - 30090 - INFO - Now patching instances at: 2025-12-07 07:00:03
+2025-12-07 07:00:04,181 - 30090 - INFO - Sending patch command to instance i-00535ac12a64d48a8
+2025-12-07 07:00:04,416 - 30090 - INFO - Command sent successfully to instance i-00535ac12a64d48a8. Command ID: 28b523b9-cb86-414a-9a3e-5272a9b1d86e
+2025-12-07 07:00:04,755 - 30090 - INFO - Sending patch command to instance i-069ada2ac82c4e6b9
+2025-12-07 07:00:04,893 - 30090 - INFO - Command sent successfully to instance i-069ada2ac82c4e6b9. Command ID: f9253ba1-2a11-41de-91a6-e9d42a2dc3f2
+2025-12-07 07:05:36,952 - 30090 - INFO - All patches applied successfully.
+2025-12-07 07:05:36,953 - 30090 - INFO - Patching end time: 2025-12-07 07:05:36
+2025-12-07 07:05:36,953 - 30090 - INFO - Patch Elapsed time: 0:05:32.987997
+2025-12-07 07:05:37,034 - 30090 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-07 07:05:37,034 - 30090 - INFO - Confirmed - services are stopped
+2025-12-07 07:05:45,310 - 30090 - INFO - Discovered TG map: {'i-069ada2ac82c4e6b9': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba'], 'i-00535ac12a64d48a8': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba']}
+2025-12-07 07:05:45,602 - 30090 - INFO - Sent app_validation.sh to i-00535ac12a64d48a8 (command_id: d2c80a15-ed22-42b5-bf44-aaaf1413537b)
+2025-12-07 07:06:15,657 - 30090 - INFO - app_validation.sh output for i-00535ac12a64d48a8:
+
+==============================================================================
+Server Availability Check Started at Sun Dec  7 12:05:45 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.136.41
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-136-41.us-east-2.compute.internal
+Uptime: up 12 weeks, 1 day, 4 hours, 34 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.136.41:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.136.41
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 9592 MB
+Free Physical Memory  = 6019 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 6 MB
+Free Swap Memory  = 10233 MB
+-------------------------------------
+Load Average: 0.51 0.87 0.44 3/611 2892201
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.8G   15G  29% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                      240G   25G  216G  11% /data
+fs-06ba9ac5621e5ed4d.efs.us-east-2.amazonaws.com:/  8.0E   62G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  728K  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.136.41 started on Sun Dec  7 12:05:45 UTC 2025
+
+Server IP: 172.30.136.41 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.136.41
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.136.41
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.136.41
+-------------------------------------
+
+Total number of Java process running on this host 172.30.136.41 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.136.41
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2659088, Process Name: 37:19
+Process ID: 2659269, Process Name: 25:25
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.136.41
+Port 8080:	hilcoprod_j	Running
+Port 8081:	hilcorf_jb7	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec  7 12:05:46 UTC 2025
+==============================================================================
+
+
+2025-12-07 07:06:15,657 - 30090 - ERROR - app_validation.sh errors for i-00535ac12a64d48a8:
+
+2025-12-07 07:06:15,659 - 30090 - INFO - Before patching validation saved to: output/validation-2025-12-07/172.30.136.41-BeforePatching-2025-12-07-07-06-15-658.log
+2025-12-07 07:06:15,659 - 30090 - INFO - Deregistering i-00535ac12a64d48a8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd
+2025-12-07 07:06:15,782 - 30090 - INFO - Deregistering i-00535ac12a64d48a8 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba
+2025-12-07 07:06:15,840 - 30090 - INFO - Stopping EC2 instance: i-00535ac12a64d48a8 at 2025-12-07 07:06:15
+2025-12-07 07:07:16,958 - 30090 - INFO - Instance i-00535ac12a64d48a8 stopped successfully.
+2025-12-07 07:07:17,188 - 30090 - INFO - Stopped i-00535ac12a64d48a8 in 0:01:01.348401
+2025-12-07 07:07:17,188 - 30090 - INFO - Starting EC2 instance: i-00535ac12a64d48a8
+2025-12-07 07:07:33,275 - 30090 - INFO - Instance i-00535ac12a64d48a8 started successfully.
+2025-12-07 07:07:33,275 - 30090 - INFO - Waiting 30 seconds for SSM agent to be ready on i-00535ac12a64d48a8...
+2025-12-07 07:08:03,295 - 30090 - INFO - Registering i-00535ac12a64d48a8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd
+2025-12-07 07:08:03,500 - 30090 - INFO - Registering i-00535ac12a64d48a8 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba
+2025-12-07 07:10:04,305 - 30090 - INFO - Sent app_validation.sh to i-00535ac12a64d48a8 (command_id: 1a4cccf1-7999-4ba7-a70e-270ebeff465a)
+2025-12-07 07:10:34,419 - 30090 - INFO - app_validation.sh output for i-00535ac12a64d48a8:
+
+==============================================================================
+Server Availability Check Started at Sun Dec  7 12:10:04 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.136.41
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-136-41.us-east-2.compute.internal
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.136.41:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.136.41
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 5842 MB
+Free Physical Memory  = 9769 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.01 0.96 0.37 2/683 4451
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.5G   15G  28% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                      240G   25G  216G  11% /data
+fs-06ba9ac5621e5ed4d.efs.us-east-2.amazonaws.com:/  8.0E   62G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  656K  3.1G   1% /run
+tmpfs                                               7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.136.41 started on Sun Dec  7 12:10:04 UTC 2025
+
+Server IP: 172.30.136.41 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.136.41
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.136.41
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.136.41
+-------------------------------------
+
+Total number of Java process running on this host 172.30.136.41 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.136.41
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3466, Process Name: 0:49
+Process ID: 3480, Process Name: 0:48
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.136.41
+Port 8080:	hilcoprod_jb73	Running
+Port 8081:	hilcorf_jb730	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec  7 12:10:06 UTC 2025
+==============================================================================
+
+
+2025-12-07 07:10:34,420 - 30090 - ERROR - app_validation.sh errors for i-00535ac12a64d48a8:
+
+2025-12-07 07:10:34,422 - 30090 - INFO - After patching validation saved to: output/validation-2025-12-07/172.30.136.41-AfterPatching-2025-12-07-07-10-34-421.log
+2025-12-07 07:10:34,495 - 30090 - INFO - Validation comparison report generated: output/validation-2025-12-07/172.30.136.41-Validation-details-2025-12-07-07-10-34-421.log
+2025-12-07 07:10:34,576 - 30090 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-07 07:10:34,577 - 30090 - INFO - HTML validation report email sent for i-00535ac12a64d48a8
+2025-12-07 07:10:34,817 - 30090 - INFO - Started i-00535ac12a64d48a8 in 0:03:17.628825
+2025-12-07 07:10:34,818 - 30090 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-12-07 07:12:35,099 - 30090 - INFO - Sent app_validation.sh to i-069ada2ac82c4e6b9 (command_id: f3f43a49-a1f6-4a2c-b5f6-4a8267434abd)
+2025-12-07 07:13:05,241 - 30090 - INFO - app_validation.sh output for i-069ada2ac82c4e6b9:
+
+==============================================================================
+Server Availability Check Started at Sun Dec  7 12:12:35 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.136.22
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-136-22.us-east-2.compute.internal
+Uptime: up 12 weeks, 1 day, 4 hours, 46 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.136.22:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.136.22
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 9205 MB
+Free Physical Memory  = 6406 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 3 MB
+Free Swap Memory  = 10236 MB
+-------------------------------------
+Load Average: 0.06 0.21 0.24 3/649 2734443
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.7G   15G  29% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                      240G   23G  218G  10% /data
+fs-06ba9ac5621e5ed4d.efs.us-east-2.amazonaws.com:/  8.0E   62G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  728K  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.136.22 started on Sun Dec  7 12:12:35 UTC 2025
+
+Server IP: 172.30.136.22 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.136.22
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.136.22
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.136.22
+-------------------------------------
+
+Total number of Java process running on this host 172.30.136.22 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.136.22
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2500900, Process Name: 28:34
+Process ID: 2501081, Process Name: 23:03
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.136.22
+Port 8080:	hilcoprod_j	Running
+Port 8081:	hilcorf_jb7	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec  7 12:12:36 UTC 2025
+==============================================================================
+
+
+2025-12-07 07:13:05,241 - 30090 - ERROR - app_validation.sh errors for i-069ada2ac82c4e6b9:
+
+2025-12-07 07:13:05,243 - 30090 - INFO - Before patching validation saved to: output/validation-2025-12-07/172.30.136.22-BeforePatching-2025-12-07-07-13-05-242.log
+2025-12-07 07:13:05,244 - 30090 - INFO - Deregistering i-069ada2ac82c4e6b9 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd
+2025-12-07 07:13:05,370 - 30090 - INFO - Deregistering i-069ada2ac82c4e6b9 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba
+2025-12-07 07:13:05,434 - 30090 - INFO - Stopping EC2 instance: i-069ada2ac82c4e6b9 at 2025-12-07 07:13:05
+2025-12-07 07:14:36,788 - 30090 - INFO - Instance i-069ada2ac82c4e6b9 stopped successfully.
+2025-12-07 07:14:37,058 - 30090 - INFO - Stopped i-069ada2ac82c4e6b9 in 0:01:31.623203
+2025-12-07 07:14:37,058 - 30090 - INFO - Starting EC2 instance: i-069ada2ac82c4e6b9
+2025-12-07 07:14:53,018 - 30090 - INFO - Instance i-069ada2ac82c4e6b9 started successfully.
+2025-12-07 07:14:53,018 - 30090 - INFO - Waiting 30 seconds for SSM agent to be ready on i-069ada2ac82c4e6b9...
+2025-12-07 07:15:23,048 - 30090 - INFO - Registering i-069ada2ac82c4e6b9 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-Desktop/093fe48707fefbfd
+2025-12-07 07:15:23,256 - 30090 - INFO - Registering i-069ada2ac82c4e6b9 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Hilco-Prod-RF/d4e3e77c55c6e7ba
+2025-12-07 07:17:23,975 - 30090 - INFO - Sent app_validation.sh to i-069ada2ac82c4e6b9 (command_id: 1a648551-9a4d-4482-a37a-5cd73399ef9a)
+2025-12-07 07:17:54,090 - 30090 - INFO - app_validation.sh output for i-069ada2ac82c4e6b9:
+
+==============================================================================
+Server Availability Check Started at Sun Dec  7 12:17:24 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.30.136.22
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-30-136-22.us-east-2.compute.internal
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.30.136.22:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.30.136.22
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 5364 MB
+Free Physical Memory  = 10247 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 1.75 0.90 0.35 5/687 4519
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.5G   15G  28% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                      240G   22G  218G  10% /data
+fs-06ba9ac5621e5ed4d.efs.us-east-2.amazonaws.com:/  8.0E   62G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                               7.7G     0  7.7G   0% /dev/shm
+tmpfs                                               3.1G  672K  3.1G   1% /run
+tmpfs                                               1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                               7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.30.136.22 started on Sun Dec  7 12:17:24 UTC 2025
+
+Server IP: 172.30.136.22 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.30.136.22
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.30.136.22
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.30.136.22
+-------------------------------------
+
+Total number of Java process running on this host 172.30.136.22 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.30.136.22
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3502, Process Name: 0:49
+Process ID: 3508, Process Name: 0:51
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.30.136.22
+Port 8080:	hilcoprod_jb73	Running
+Port 8081:	hilcorf_jb730	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec  7 12:17:25 UTC 2025
+==============================================================================
+
+
+2025-12-07 07:17:54,091 - 30090 - ERROR - app_validation.sh errors for i-069ada2ac82c4e6b9:
+
+2025-12-07 07:17:54,093 - 30090 - INFO - After patching validation saved to: output/validation-2025-12-07/172.30.136.22-AfterPatching-2025-12-07-07-17-54-092.log
+2025-12-07 07:17:54,131 - 30090 - INFO - Validation comparison report generated: output/validation-2025-12-07/172.30.136.22-Validation-details-2025-12-07-07-17-54-092.log
+2025-12-07 07:17:54,214 - 30090 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-07 07:17:54,214 - 30090 - INFO - HTML validation report email sent for i-069ada2ac82c4e6b9
+2025-12-07 07:17:54,464 - 30090 - INFO - Started i-069ada2ac82c4e6b9 in 0:03:17.405823
+2025-12-07 07:17:54,464 - 30090 - INFO - All instances processed.
+2025-12-07 07:17:54,468 - 30090 - INFO - Restart Total time: 0:12:17.307126
+2025-12-07 07:17:54,468 - 30090 - INFO - Auto-confirmed services are restarted
+2025-12-07 07:17:54,468 - 30090 - INFO - Confirmed - services are started
+2025-12-07 07:17:54,575 - 30090 - INFO - The following instances have failed the patch: []
+2025-12-07 07:17:54,575 - 30090 - INFO - No instances have failed the patch.
+2025-12-07 07:17:54,575 - 30090 - INFO - Total Patch Process time: 0:17:51.144148
+2025-12-07 07:17:54,866 - 30090 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-07 07:18:55,125 - 30090 - INFO - Log file ./logs/patching_2025-12-07_Hilco-App.log uploaded to s3://q4-2025-aws-security-patching/Hilco-App_Patch/2025-12-07/patching_2025-12-07_Hilco-App.log

@@ -1,0 +1,493 @@
+2025-12-14 01:00:03,926 - 10589 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-14 01:13:24,807 - 10589 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-12-14 01:13:24,914 - 10589 - INFO - Log file ./logs/backup_2025-12-14.log uploaded to s3://q3-2025-aws-security-patching/Touchstone-prod-app_Patch_Backup/2025-12-14/backup_2025-12-14.log
+2025-12-14 05:00:03,139 - 24573 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-12-14 05:00:03,142 - 24573 - INFO - Script Start Time: 2025-12-14 05:00:03
+2025-12-14 05:00:03,374 - 24573 - INFO - Instance(s) selected for Patching: {'i-007fa038b2a91c6bd': '172.31.22.12', 'i-0c65dd42ca07df430': '172.31.22.59'}
+2025-12-14 05:00:03,497 - 24573 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-14 05:00:03,497 - 24573 - INFO - Now patching instances at: 2025-12-14 05:00:03
+2025-12-14 05:00:03,653 - 24573 - INFO - Sending patch command to instance i-007fa038b2a91c6bd
+2025-12-14 05:00:03,870 - 24573 - INFO - Command sent successfully to instance i-007fa038b2a91c6bd. Command ID: d8aa602f-aaca-48a9-811d-f331ecaebb7c
+2025-12-14 05:00:04,130 - 24573 - INFO - Sending patch command to instance i-0c65dd42ca07df430
+2025-12-14 05:00:04,250 - 24573 - INFO - Command sent successfully to instance i-0c65dd42ca07df430. Command ID: 9470127a-d4b3-4609-af75-db4487ef5e3a
+2025-12-14 05:09:06,775 - 24573 - INFO - All patches applied successfully.
+2025-12-14 05:09:06,776 - 24573 - INFO - Patching end time: 2025-12-14 05:09:06
+2025-12-14 05:09:06,776 - 24573 - INFO - Patch Elapsed time: 0:09:03.278855
+2025-12-14 05:09:06,884 - 24573 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-14 05:09:06,884 - 24573 - INFO - Confirmed - services are stopped
+2025-12-14 05:09:25,821 - 24573 - INFO - Discovered TG map: {'i-0c65dd42ca07df430': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b'], 'i-007fa038b2a91c6bd': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b']}
+2025-12-14 05:09:26,093 - 24573 - INFO - Sent app_validation.sh to i-007fa038b2a91c6bd (command_id: 997c4baa-240f-43df-a092-6b576699b1ca)
+2025-12-14 05:09:56,202 - 24573 - INFO - app_validation.sh output for i-007fa038b2a91c6bd:
+
+==============================================================================
+Server Availability Check Started at Sun Dec 14 05:09:26 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.22.12
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-22-12
+Uptime: up 14 weeks, 1 day, 1 hour, 27 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.22.12:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.22.12
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15226 MB
+Used Physical Memory  = 8316 MB
+Free Physical Memory  = 6910 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 650 MB
+Free Swap Memory  = 19829 MB
+-------------------------------------
+Load Average: 0.58 1.37 0.92 6/364 342526
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/xvda1                          20G  5.8G   15G  29% /
+/dev/xvda128                        10M  1.3M  8.7M  13% /boot/efi
+/dev/xvdb2                         180G   25G  156G  14% /data
+172.31.22.59:/data/shared/softeon  280G  176G  105G  63% /data/shared/softeon
+devtmpfs                           4.0M     0  4.0M   0% /dev
+tmpfs                              7.5G     0  7.5G   0% /dev/shm
+tmpfs                              3.0G  532K  3.0G   1% /run
+tmpfs                              1.5G     0  1.5G   0% /run/user/1001
+tmpfs                              7.5G   21M  7.5G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.22.12 started on Sun Dec 14 05:09:26 EST 2025
+
+Server IP: 172.31.22.12 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.22.12
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.22.12
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.22.12
+-------------------------------------
+
+Total number of Java process running on this host 172.31.22.12 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.22.12
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3155, Process Name: 1116:09
+Process ID: 283379, Process Name: 11:17
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.22.12
+Port 80:	softeonprod_	Running
+Port 8080:	softeonrfprod_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec 14 05:09:27 EST 2025
+==============================================================================
+
+
+2025-12-14 05:09:56,202 - 24573 - ERROR - app_validation.sh errors for i-007fa038b2a91c6bd:
+
+2025-12-14 05:09:56,204 - 24573 - INFO - Before patching validation saved to: output/validation-2025-12-14/172.31.22.12-BeforePatching-2025-12-14-05-09-56-203.log
+2025-12-14 05:09:56,205 - 24573 - INFO - Deregistering i-007fa038b2a91c6bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1
+2025-12-14 05:09:56,278 - 24573 - INFO - Deregistering i-007fa038b2a91c6bd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b
+2025-12-14 05:09:56,329 - 24573 - INFO - Stopping EC2 instance: i-007fa038b2a91c6bd at 2025-12-14 05:09:56
+2025-12-14 05:12:43,021 - 24573 - INFO - Instance i-007fa038b2a91c6bd stopped successfully.
+2025-12-14 05:12:43,261 - 24573 - INFO - Stopped i-007fa038b2a91c6bd in 0:02:46.932714
+2025-12-14 05:12:43,262 - 24573 - INFO - Starting EC2 instance: i-007fa038b2a91c6bd
+2025-12-14 05:12:59,204 - 24573 - INFO - Instance i-007fa038b2a91c6bd started successfully.
+2025-12-14 05:12:59,204 - 24573 - INFO - Waiting 30 seconds for SSM agent to be ready on i-007fa038b2a91c6bd...
+2025-12-14 05:13:29,234 - 24573 - INFO - Registering i-007fa038b2a91c6bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1
+2025-12-14 05:13:29,385 - 24573 - INFO - Registering i-007fa038b2a91c6bd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b
+2025-12-14 05:16:30,137 - 24573 - INFO - Sent app_validation.sh to i-007fa038b2a91c6bd (command_id: 866bb80f-6fbb-47ef-a0af-7258841a0dca)
+2025-12-14 05:17:00,224 - 24573 - INFO - app_validation.sh output for i-007fa038b2a91c6bd:
+
+==============================================================================
+Server Availability Check Started at Sun Dec 14 05:16:30 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.22.12
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-22-12
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.22.12:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.22.12
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15238 MB
+Used Physical Memory  = 4595 MB
+Free Physical Memory  = 10643 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 2.44 1.63 0.67 7/335 3622
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/xvda1                          20G  5.5G   15G  28% /
+/dev/xvda128                        10M  1.3M  8.7M  13% /boot/efi
+/dev/xvdb2                         180G   25G  156G  14% /data
+172.31.22.59:/data/shared/softeon  280G  175G  106G  63% /data/shared/softeon
+devtmpfs                           4.0M     0  4.0M   0% /dev
+tmpfs                              7.5G     0  7.5G   0% /dev/shm
+tmpfs                              3.0G  496K  3.0G   1% /run
+tmpfs                              7.5G   21M  7.5G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.22.12 started on Sun Dec 14 05:16:30 EST 2025
+
+Server IP: 172.31.22.12 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.22.12
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.22.12
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.22.12
+-------------------------------------
+
+Total number of Java process running on this host 172.31.22.12 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.22.12
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3123, Process Name: 1:55
+Process ID: 3124, Process Name: 1:57
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.22.12
+Port 80:	softeonprod_jb	Running
+Port 8080:	softeonrfprod_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec 14 05:16:33 EST 2025
+==============================================================================
+
+
+2025-12-14 05:17:00,225 - 24573 - ERROR - app_validation.sh errors for i-007fa038b2a91c6bd:
+
+2025-12-14 05:17:00,227 - 24573 - INFO - After patching validation saved to: output/validation-2025-12-14/172.31.22.12-AfterPatching-2025-12-14-05-17-00-226.log
+2025-12-14 05:17:00,267 - 24573 - INFO - Validation comparison report generated: output/validation-2025-12-14/172.31.22.12-Validation-details-2025-12-14-05-17-00-226.log
+2025-12-14 05:17:00,347 - 24573 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-14 05:17:00,347 - 24573 - INFO - HTML validation report email sent for i-007fa038b2a91c6bd
+2025-12-14 05:17:00,577 - 24573 - INFO - Started i-007fa038b2a91c6bd in 0:04:17.315705
+2025-12-14 05:17:00,578 - 24573 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-12-14 05:19:00,809 - 24573 - INFO - Sent app_validation.sh to i-0c65dd42ca07df430 (command_id: 1c9eb301-2498-456c-ae81-affe410e72d9)
+2025-12-14 05:19:30,924 - 24573 - INFO - app_validation.sh output for i-0c65dd42ca07df430:
+
+==============================================================================
+Server Availability Check Started at Sun Dec 14 05:19:01 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.22.59
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-22-59
+Uptime: up 14 weeks, 1 day, 1 hour, 46 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.22.59:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.22.59
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 9812 MB
+Free Physical Memory  = 5799 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 833 MB
+Free Swap Memory  = 19646 MB
+-------------------------------------
+Load Average: 0.01 0.41 0.72 5/721 2204130
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.8G   15G  29% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    280G  175G  106G  63% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  736K  3.1G   1% /run
+tmpfs             1.6G     0  1.6G   0% /run/user/1001
+tmpfs             7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.22.59 started on Sun Dec 14 05:19:01 EST 2025
+
+Server IP: 172.31.22.59 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.22.59
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.22.59
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.22.59
+-------------------------------------
+
+Total number of Java process running on this host 172.31.22.59 is 18
+Total number of Daemon / Batch (java) application process available is 12
+
+Daemon Process id and name details are given below
+Process ID: 2133927, Process Name: 0:05
+Process ID: 2133707, Process Name: 0:04
+Process ID: 2133715, Process Name: 0:06
+Process ID: 2133875, Process Name: 0:04
+Process ID: 2133737, Process Name: 0:08
+Process ID: 2133748, Process Name: 0:04
+Process ID: 2133884, Process Name: 0:04
+Process ID: 2133893, Process Name: 0:07
+Process ID: 2133786, Process Name: 0:08
+Process ID: 2133811, Process Name: 0:08
+Process ID: 2133830, Process Name: 0:09
+Process ID: 2133847, Process Name: 0:06
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.22.59
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2203052, Process Name: 0:54
+Process ID: 2203614, Process Name: 0:51
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.22.59
+Port 80:	softeonprod	Running
+Port 8080:	softeonrfpr	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec 14 05:19:02 EST 2025
+==============================================================================
+
+
+2025-12-14 05:19:30,924 - 24573 - ERROR - app_validation.sh errors for i-0c65dd42ca07df430:
+
+2025-12-14 05:19:30,926 - 24573 - INFO - Before patching validation saved to: output/validation-2025-12-14/172.31.22.59-BeforePatching-2025-12-14-05-19-30-926.log
+2025-12-14 05:19:30,926 - 24573 - INFO - Deregistering i-0c65dd42ca07df430 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1
+2025-12-14 05:19:30,998 - 24573 - INFO - Deregistering i-0c65dd42ca07df430 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b
+2025-12-14 05:19:31,043 - 24573 - INFO - Stopping EC2 instance: i-0c65dd42ca07df430 at 2025-12-14 05:19:31
+2025-12-14 05:22:17,880 - 24573 - INFO - Instance i-0c65dd42ca07df430 stopped successfully.
+2025-12-14 05:22:18,108 - 24573 - INFO - Stopped i-0c65dd42ca07df430 in 0:02:47.065525
+2025-12-14 05:22:18,108 - 24573 - INFO - Starting EC2 instance: i-0c65dd42ca07df430
+2025-12-14 05:22:34,165 - 24573 - INFO - Instance i-0c65dd42ca07df430 started successfully.
+2025-12-14 05:22:34,166 - 24573 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0c65dd42ca07df430...
+2025-12-14 05:23:04,191 - 24573 - INFO - Registering i-0c65dd42ca07df430 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-Desktop/a589d85c8cda42c1
+2025-12-14 05:23:04,395 - 24573 - INFO - Registering i-0c65dd42ca07df430 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Touchstone-Production-RF/f29d4584e626501b
+2025-12-14 05:25:05,022 - 24573 - INFO - Sent app_validation.sh to i-0c65dd42ca07df430 (command_id: 541795c1-2655-435d-88ab-f9417c67f4f4)
+2025-12-14 05:25:35,102 - 24573 - INFO - app_validation.sh output for i-0c65dd42ca07df430:
+
+==============================================================================
+Server Availability Check Started at Sun Dec 14 05:25:05 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.31.22.59
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-31-22-59
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.31.22.59:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.31.22.59
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15623 MB
+Used Physical Memory  = 8495 MB
+Free Physical Memory  = 7128 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 1.92 1.20 0.48 1/640 4033
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.6G   15G  28% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    280G  175G  106G  63% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  696K  3.1G   1% /run
+tmpfs             1.6G     0  1.6G   0% /run/user/1001
+tmpfs             7.7G   21M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.31.22.59 started on Sun Dec 14 05:25:05 EST 2025
+
+Server IP: 172.31.22.59 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.31.22.59
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.31.22.59
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.31.22.59
+-------------------------------------
+
+Total number of Java process running on this host 172.31.22.59 is 14
+Total number of Daemon / Batch (java) application process available is 12
+
+Daemon Process id and name details are given below
+Process ID: 3086, Process Name: touch_putlmulticartpackingdaemon
+Process ID: 2879, Process Name: touchstone_downloaddaemon
+Process ID: 2885, Process Name: touchstone_eventdaemon
+Process ID: 2986, Process Name: touchstone_ftpdaemon
+Process ID: 2891, Process Name: touchstone_integritydaemon
+Process ID: 2900, Process Name: touchstone_labeldaemon
+Process ID: 3032, Process Name: touchstone_orderreleaseinstanceprocessdaemon
+Process ID: 3049, Process Name: touchstone_ptcdaemon
+Process ID: 2915, Process Name: touchstone_reportdaemon
+Process ID: 2928, Process Name: touchstone_reportjqgriddaemon
+Process ID: 2951, Process Name: touchstone_schedulerdaemon
+Process ID: 2963, Process Name: touchstone_uploaddaemon
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.31.22.59
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 3498, Process Name: 0:50
+Process ID: 3515, Process Name: 0:50
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.31.22.59
+Port 80:	softeonprod_jb	Running
+Port 8080:	softeonrfprod_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sun Dec 14 05:25:07 EST 2025
+==============================================================================
+
+
+2025-12-14 05:25:35,102 - 24573 - ERROR - app_validation.sh errors for i-0c65dd42ca07df430:
+
+2025-12-14 05:25:35,105 - 24573 - INFO - After patching validation saved to: output/validation-2025-12-14/172.31.22.59-AfterPatching-2025-12-14-05-25-35-104.log
+2025-12-14 05:25:35,142 - 24573 - INFO - Validation comparison report generated: output/validation-2025-12-14/172.31.22.59-Validation-details-2025-12-14-05-25-35-104.log
+2025-12-14 05:25:35,227 - 24573 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-14 05:25:35,227 - 24573 - INFO - HTML validation report email sent for i-0c65dd42ca07df430
+2025-12-14 05:25:35,467 - 24573 - INFO - Started i-0c65dd42ca07df430 in 0:03:17.358864
+2025-12-14 05:25:35,468 - 24573 - INFO - All instances processed.
+2025-12-14 05:25:35,472 - 24573 - INFO - Restart Total time: 0:16:28.465382
+2025-12-14 05:25:35,472 - 24573 - INFO - Auto-confirmed services are restarted
+2025-12-14 05:25:35,472 - 24573 - INFO - Confirmed - services are started
+2025-12-14 05:25:35,576 - 24573 - INFO - The following instances have failed the patch: []
+2025-12-14 05:25:35,576 - 24573 - INFO - No instances have failed the patch.
+2025-12-14 05:25:35,576 - 24573 - INFO - Total Patch Process time: 0:25:32.436897
+2025-12-14 05:25:35,866 - 24573 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-14 05:26:36,145 - 24573 - INFO - Log file ./logs/patching_2025-12-14_Touchstone-prod-app.log uploaded to s3://q4-2025-aws-security-patching/Touchstone-prod-app_Patch/2025-12-14/patching_2025-12-14_Touchstone-prod-app.log

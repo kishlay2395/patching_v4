@@ -1,0 +1,408 @@
+2026-04-01 02:20:02,463 - 4098859 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-01 02:20:02,463 - 4098859 - INFO - Script Start Time: 2026-04-01 02:20:02
+2026-04-01 02:20:02,688 - 4098859 - INFO - Instance(s) selected for Patching: {'i-05c3b6ea3d95c3570': '172.18.40.21', 'i-0d2623c2c6a4ee0b4': '172.18.40.108'}
+2026-04-01 02:20:02,763 - 4098859 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-01 02:20:02,763 - 4098859 - INFO - Now patching instances at: 2026-04-01 02:20:02
+2026-04-01 02:20:02,849 - 4098859 - INFO - Sending patch command to instance i-05c3b6ea3d95c3570
+2026-04-01 02:20:02,997 - 4098859 - INFO - Command sent successfully to instance i-05c3b6ea3d95c3570. Command ID: 39dfdd43-e41f-4219-8f83-72c645022d0b
+2026-04-01 02:20:03,152 - 4098859 - INFO - Sending patch command to instance i-0d2623c2c6a4ee0b4
+2026-04-01 02:20:03,355 - 4098859 - INFO - Command sent successfully to instance i-0d2623c2c6a4ee0b4. Command ID: 1de1e9f8-1db2-496e-8cb1-09daf0e27ffd
+2026-04-01 02:24:34,904 - 4098859 - INFO - All patches applied successfully.
+2026-04-01 02:24:34,905 - 4098859 - INFO - Patching end time: 2026-04-01 02:24:34
+2026-04-01 02:24:34,905 - 4098859 - INFO - Patch Elapsed time: 0:04:32.141298
+2026-04-01 02:24:34,971 - 4098859 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-01 02:24:34,971 - 4098859 - INFO - Confirmed - services are stopped
+2026-04-01 02:24:56,057 - 4098859 - INFO - Discovered TG map: {}
+2026-04-01 02:24:56,455 - 4098859 - INFO - Sent app_validation.py to i-05c3b6ea3d95c3570 (command_id: fcbe9b3b-feb2-4346-bbb9-9883c199701d)
+2026-04-01 02:25:26,599 - 4098859 - INFO - app_validation.py output for i-05c3b6ea3d95c3570:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 06:24:56.764020
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.21
+Hostname | ip-172-18-40-21
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 3.3G | 236.6G | 1% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | allenuat_hsqldb, allenuat_ec
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+allenuat_hsqldb | /data/app/workspace/wcs-lite-ad-2.0.0/attunedlabs/softwares/hsql/data
+allenuat_ec | /data/app/workspace/wcs-lite-ad-2.0.0/attunedlabs/softwares/release
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 06:24:56.977576
+==============================================================================
+
+2026-04-01 02:25:26,599 - 4098859 - ERROR - app_validation.py errors for i-05c3b6ea3d95c3570:
+
+2026-04-01 02:25:26,601 - 4098859 - INFO - Before patching validation saved to: output/validation-2026-04-01/172.18.40.21-BeforePatching-2026-04-01-02-25-26-601.log
+2026-04-01 02:25:26,601 - 4098859 - INFO - Stopping EC2 instance: i-05c3b6ea3d95c3570 at 2026-04-01 02:25:26
+2026-04-01 02:26:12,599 - 4098859 - INFO - Instance i-05c3b6ea3d95c3570 stopped successfully.
+2026-04-01 02:26:12,844 - 4098859 - INFO - Stopped i-05c3b6ea3d95c3570 in 0:00:46.242936
+2026-04-01 02:26:12,844 - 4098859 - INFO - Starting EC2 instance: i-05c3b6ea3d95c3570
+2026-04-01 02:26:28,725 - 4098859 - INFO - Instance i-05c3b6ea3d95c3570 started successfully.
+2026-04-01 02:26:28,725 - 4098859 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05c3b6ea3d95c3570...
+2026-04-01 02:28:09,058 - 4098859 - INFO - Sent app_validation.py to i-05c3b6ea3d95c3570 (command_id: d203eedf-17ee-4a36-9112-f8d2b8287bd8)
+2026-04-01 02:28:39,187 - 4098859 - INFO - app_validation.py output for i-05c3b6ea3d95c3570:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 06:28:09.395237
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.21
+Hostname | ip-172-18-40-21
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 3.3G | 236.6G | 1% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | allenuat_hsqldb, allenuat_ec
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+allenuat_hsqldb | /data/app/workspace/wcs-lite-ad-2.0.0/attunedlabs/softwares/hsql/data
+allenuat_ec | /data/app/workspace/wcs-lite-ad-2.0.0/attunedlabs/softwares/release
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 06:28:09.637816
+==============================================================================
+
+2026-04-01 02:28:39,188 - 4098859 - ERROR - app_validation.py errors for i-05c3b6ea3d95c3570:
+
+2026-04-01 02:28:39,189 - 4098859 - INFO - After patching validation saved to: output/validation-2026-04-01/172.18.40.21-AfterPatching-2026-04-01-02-28-39-189.log
+2026-04-01 02:28:39,239 - 4098859 - INFO - Validation comparison report generated: output/validation-2026-04-01/172.18.40.21-Validation-details-2026-04-01-02-28-39-189.html
+2026-04-01 02:28:39,312 - 4098859 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-01 02:28:39,312 - 4098859 - INFO - HTML validation report email sent for i-05c3b6ea3d95c3570
+2026-04-01 02:28:39,573 - 4098859 - INFO - Started i-05c3b6ea3d95c3570 in 0:02:26.728932
+2026-04-01 02:28:39,574 - 4098859 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-01 02:30:39,792 - 4098859 - INFO - Sent app_validation.py to i-0d2623c2c6a4ee0b4 (command_id: 89dfe7d4-9cbc-4e9b-a899-4112e7a574c1)
+2026-04-01 02:31:09,894 - 4098859 - INFO - app_validation.py output for i-0d2623c2c6a4ee0b4:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 06:30:40.075299
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.108
+Hostname | ip-172-18-40-108
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 120.2G | 119.6G | 50% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.108:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.108 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | wcs_lite, aduat_hsqldb
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+wcs_lite | /data/app/workspace/client_release/attunedlabs/softwares/release
+aduat_hsqldb | /data/app/workspace/client_release/attunedlabs/softwares/hsql/data
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 06:30:40.438634
+==============================================================================
+
+2026-04-01 02:31:09,894 - 4098859 - ERROR - app_validation.py errors for i-0d2623c2c6a4ee0b4:
+
+2026-04-01 02:31:09,896 - 4098859 - INFO - Before patching validation saved to: output/validation-2026-04-01/172.18.40.108-BeforePatching-2026-04-01-02-31-09-895.log
+2026-04-01 02:31:09,896 - 4098859 - INFO - Stopping EC2 instance: i-0d2623c2c6a4ee0b4 at 2026-04-01 02:31:09
+2026-04-01 02:32:11,004 - 4098859 - INFO - Instance i-0d2623c2c6a4ee0b4 stopped successfully.
+2026-04-01 02:32:11,240 - 4098859 - INFO - Stopped i-0d2623c2c6a4ee0b4 in 0:01:01.344647
+2026-04-01 02:32:11,241 - 4098859 - INFO - Starting EC2 instance: i-0d2623c2c6a4ee0b4
+2026-04-01 02:32:27,127 - 4098859 - INFO - Instance i-0d2623c2c6a4ee0b4 started successfully.
+2026-04-01 02:32:27,128 - 4098859 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0d2623c2c6a4ee0b4...
+2026-04-01 02:34:07,510 - 4098859 - INFO - Sent app_validation.py to i-0d2623c2c6a4ee0b4 (command_id: a8f6228b-44b6-4bc9-a4c2-11eaf540351c)
+2026-04-01 02:34:37,640 - 4098859 - INFO - app_validation.py output for i-0d2623c2c6a4ee0b4:
+
+==============================================================================
+Server Availability Check Started | 2026-04-01 06:34:07.882970
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.108
+Hostname | ip-172-18-40-108
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 120.2G | 119.6G | 50% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.108:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.108 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 2
+Non-Standalone Java Processes | wcs_lite, aduat_hsqldb
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 2
+Java-Name | Java-Path
+wcs_lite | /data/app/workspace/client_release/attunedlabs/softwares/release
+aduat_hsqldb | /data/app/workspace/client_release/attunedlabs/softwares/hsql/data
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-01 06:34:08.112200
+==============================================================================
+
+2026-04-01 02:34:37,640 - 4098859 - ERROR - app_validation.py errors for i-0d2623c2c6a4ee0b4:
+
+2026-04-01 02:34:37,642 - 4098859 - INFO - After patching validation saved to: output/validation-2026-04-01/172.18.40.108-AfterPatching-2026-04-01-02-34-37-642.log
+2026-04-01 02:34:37,692 - 4098859 - INFO - Validation comparison report generated: output/validation-2026-04-01/172.18.40.108-Validation-details-2026-04-01-02-34-37-642.html
+2026-04-01 02:34:37,771 - 4098859 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-01 02:34:37,771 - 4098859 - INFO - HTML validation report email sent for i-0d2623c2c6a4ee0b4
+2026-04-01 02:34:38,019 - 4098859 - INFO - Started i-0d2623c2c6a4ee0b4 in 0:02:26.777853
+2026-04-01 02:34:38,019 - 4098859 - INFO - All instances processed.
+2026-04-01 02:34:38,022 - 4098859 - INFO - Restart Total time: 0:10:02.840648
+2026-04-01 02:34:38,023 - 4098859 - INFO - Auto-confirmed services are restarted
+2026-04-01 02:34:38,023 - 4098859 - INFO - Confirmed - services are started
+2026-04-01 02:34:38,137 - 4098859 - INFO - The following instances have failed the patch: []
+2026-04-01 02:34:38,137 - 4098859 - INFO - No instances have failed the patch.
+2026-04-01 02:34:38,137 - 4098859 - INFO - Total Patch Process time: 0:14:35.673833
+2026-04-01 02:35:38,599 - 4098859 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-01_Allen-UAT-3.log to q2-2026-aws-security-patching/Allen-UAT-3_Patch/2026-04-01/patching_2026-04-01_Allen-UAT-3.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

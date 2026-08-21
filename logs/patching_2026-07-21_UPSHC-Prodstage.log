@@ -1,0 +1,3623 @@
+2026-07-21 00:45:02,265 - 493454 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-21 00:45:02,265 - 493454 - INFO - Script Start Time: 2026-07-21 00:45:02
+2026-07-21 00:45:02,743 - 493454 - INFO - Tag: UPSHC-Prodstage, IPs: ['172.28.24.238', '172.28.24.222', '172.28.24.235'], Environment: uat
+2026-07-21 00:45:02,743 - 493454 - INFO - Instance(s) selected for Patching: {'i-039e34b7b90680f92': '172.28.24.238', 'i-00547e7dc641fbc29': '172.28.24.222', 'i-0894052f74e1461ea': '172.28.24.235'}
+2026-07-21 00:45:02,829 - 493454 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:45:02,829 - 493454 - INFO - Now patching instances at: 2026-07-21 00:45:02
+2026-07-21 00:45:03,022 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 3c36b259-25b2-476e-91bc-608709a4e218)
+2026-07-21 00:45:33,112 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:45:03.430872
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.9G | 173.9G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshcstg_dremon, upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshcstg_dremon | Unknown
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1977005 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+1977227 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+1977419 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:45:06.055472
+==============================================================================
+
+2026-07-21 00:45:33,113 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 00:45:33,114 - 493454 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-BeforePatching-2026-07-21-00-45-33-114.log
+2026-07-21 00:45:33,274 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: d11e5282-bbfd-4d2a-906a-7d8f47bf46d4)
+2026-07-21 00:46:03,372 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:45:33.641944
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 188.5G | 51.3G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1344468 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+1344678 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+1344881 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:45:35.912835
+==============================================================================
+
+2026-07-21 00:46:03,372 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 00:46:03,373 - 493454 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-BeforePatching-2026-07-21-00-46-03-373.log
+2026-07-21 00:46:03,579 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 8b2c21dd-da59-4775-9c9f-f2f969371db8)
+2026-07-21 00:46:33,675 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:46:03.930752
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.5G | 39.4G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+596954 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+597838 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+598700 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:46:06.232812
+==============================================================================
+
+2026-07-21 00:46:33,675 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 00:46:33,677 - 493454 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-BeforePatching-2026-07-21-00-46-33-676.log
+2026-07-21 00:46:38,889 - 493454 - INFO - i-039e34b7b90680f92: Cron was active = False
+2026-07-21 00:46:44,123 - 493454 - INFO - i-0894052f74e1461ea: Cron was active = True
+2026-07-21 00:46:49,387 - 493454 - INFO - i-00547e7dc641fbc29: Cron was active = False
+2026-07-21 00:46:49,555 - 493454 - INFO - Health monitor crontab disabled on all instances
+2026-07-21 00:46:49,556 - 493454 - INFO - Disabled cron for: ['i-0894052f74e1461ea']
+2026-07-21 00:46:49,704 - 493454 - INFO - Sending patch command to instance i-039e34b7b90680f92
+2026-07-21 00:46:49,829 - 493454 - INFO - Command sent successfully to instance i-039e34b7b90680f92. Command ID: 373be5f8-7b4d-450d-9a09-ee4fbc0fe3be
+2026-07-21 00:46:49,967 - 493454 - INFO - Sending patch command to instance i-0894052f74e1461ea
+2026-07-21 00:46:50,070 - 493454 - INFO - Command sent successfully to instance i-0894052f74e1461ea. Command ID: 0b005360-c1a8-4b6a-8496-db1d9822419d
+2026-07-21 00:46:50,190 - 493454 - INFO - Sending patch command to instance i-00547e7dc641fbc29
+2026-07-21 00:46:50,280 - 493454 - INFO - Command sent successfully to instance i-00547e7dc641fbc29. Command ID: 07c90fe6-6851-494d-898d-35edeaabe81e
+2026-07-21 00:55:52,851 - 493454 - INFO - All patches applied successfully.
+2026-07-21 00:55:52,852 - 493454 - INFO - Patching end time: 2026-07-21 00:55:52
+2026-07-21 00:55:52,852 - 493454 - INFO - Patch Elapsed time: 0:10:50.023120
+2026-07-21 00:55:52,919 - 493454 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:55:52,919 - 493454 - INFO - Confirmed - services are stopped
+2026-07-21 00:56:13,679 - 493454 - INFO - Discovered TG map: {'i-039e34b7b90680f92': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-Desktop/738191712264c0d0', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-WS/622ec4f01c654192', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-RF/d1107f9f48b42958'], 'i-00547e7dc641fbc29': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-RF/22088859393db871', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-WS/13e82b6711e5f6df', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-Desktop/edc3977c6f86bece'], 'i-0894052f74e1461ea': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-RF/7c327ef2dee895c8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-Desktop/d33758bd2c06e417', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-WS/d74ba7771dbc14c5']}
+2026-07-21 00:56:14,110 - 493454 - INFO - Deregistering i-039e34b7b90680f92 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-Desktop/738191712264c0d0
+2026-07-21 00:56:14,154 - 493454 - INFO - Deregistering i-039e34b7b90680f92 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-WS/622ec4f01c654192
+2026-07-21 00:56:14,202 - 493454 - INFO - Deregistering i-039e34b7b90680f92 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-RF/d1107f9f48b42958
+2026-07-21 00:56:14,248 - 493454 - INFO - Stopping EC2 instance: i-039e34b7b90680f92 at 2026-07-21 00:56:14
+2026-07-21 00:58:00,677 - 493454 - INFO - Instance i-039e34b7b90680f92 stopped successfully.
+2026-07-21 00:58:01,044 - 493454 - INFO - Stopped i-039e34b7b90680f92 in 0:01:46.795526
+2026-07-21 00:58:01,044 - 493454 - INFO - Starting EC2 instance: i-039e34b7b90680f92
+2026-07-21 00:58:17,040 - 493454 - INFO - Instance i-039e34b7b90680f92 started successfully.
+2026-07-21 00:58:17,040 - 493454 - INFO - Waiting 100 seconds for SSM agent to be ready on i-039e34b7b90680f92...
+2026-07-21 00:59:57,121 - 493454 - INFO - Registering i-039e34b7b90680f92 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-Desktop/738191712264c0d0
+2026-07-21 00:59:57,288 - 493454 - INFO - Registering i-039e34b7b90680f92 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-WS/622ec4f01c654192
+2026-07-21 00:59:57,435 - 493454 - INFO - Registering i-039e34b7b90680f92 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-RF/d1107f9f48b42958
+2026-07-21 01:01:57,841 - 493454 - WARNING - i-039e34b7b90680f92 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-WS/622ec4f01c654192 after timeout.
+2026-07-21 01:01:57,843 - 493454 - WARNING - i-039e34b7b90680f92 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-Desktop/738191712264c0d0 after timeout.
+2026-07-21 01:01:57,874 - 493454 - WARNING - i-039e34b7b90680f92 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-EU-Prod-Stage-RF/d1107f9f48b42958 after timeout.
+2026-07-21 01:01:57,875 - 493454 - WARNING - i-039e34b7b90680f92: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 01:01:58,295 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 194d5ce8-53d3-4376-be3c-bf4c6ead66ab)
+2026-07-21 01:02:28,400 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:01:58.643100
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.0G | 174.9G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:01:59.102868
+==============================================================================
+
+2026-07-21 01:02:28,400 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:02:28,403 - 493454 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-2026-07-21-01-02-28-402.log
+2026-07-21 01:02:28,511 - 493454 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-Validation-details-2026-07-21-01-02-28-402.html
+2026-07-21 01:02:28,708 - 493454 - INFO - Daemon count - Pre: 21, Post: 0
+2026-07-21 01:02:28,708 - 493454 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-21 01:02:28,708 - 493454 - INFO - Manage_cron: False, daemon_action: True, cups_action: False
+2026-07-21 01:02:28,708 - 493454 - INFO - Background: restarting daemons on i-039e34b7b90680f92
+2026-07-21 01:02:28,708 - 493454 - INFO - Background thread started for i-039e34b7b90680f92 - daemon:True cups:False
+2026-07-21 01:02:29,216 - 493454 - INFO - Started i-039e34b7b90680f92 in 0:04:28.171286
+2026-07-21 01:02:29,216 - 493454 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-21 01:02:59,127 - 493454 - INFO - Daemon restart output: /data/batchapp/softeon/upshceuprodstage/startall-upshceuprodstage-daemon.sh
+
+
+Starting autobatchdistributiondaemon
+
+
+Starting breruledaemon
+
+
+Starting clustercreationdaemon
+
+
+Starting clustercreationdaemon2
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting hardallocationdaemon
+
+
+Starting invcomputationbytask
+
+
+Starting labeldaemon
+
+
+Starting mqconsumerdaemon
+
+
+Starting mqproducerdaemon
+
+
+Starting reportdaemon
+
+
+Starting reportjqgridexportdaemon
+
+
+Starting schedulerdaemon
+
+
+Starting taskinvallocationdaemon
+
+
+Starting uploadallocationdaemon
+
+
+Starting uploaddaemon
+
+
+Starting uploaddaemon1
+
+
+Starting uploaddaemon2
+
+
+Starting wavelaunchdaemon
+
+
+Starting wavelaunchdaemon2
+
+
+Starting wsqdaemon
+
+2026-07-21 01:02:59,128 - 493454 - INFO - Waiting 100 sec for daemons to start on i-039e34b7b90680f92
+2026-07-21 01:04:29,570 - 493454 - INFO - Deregistering i-0894052f74e1461ea from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-RF/7c327ef2dee895c8
+2026-07-21 01:04:29,614 - 493454 - INFO - Deregistering i-0894052f74e1461ea from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-Desktop/d33758bd2c06e417
+2026-07-21 01:04:29,664 - 493454 - INFO - Deregistering i-0894052f74e1461ea from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-WS/d74ba7771dbc14c5
+2026-07-21 01:04:29,708 - 493454 - INFO - Stopping EC2 instance: i-0894052f74e1461ea at 2026-07-21 01:04:29
+2026-07-21 01:04:39,181 - 493454 - INFO - CUPS no action needed for i-039e34b7b90680f92 - before:running after:running version:1.7.5
+2026-07-21 01:04:39,348 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: a762a75c-5150-4185-b93f-3c240b72fed5)
+2026-07-21 01:05:09,452 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:04:39.600783
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.3G | 174.6G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:04:40.230257
+==============================================================================
+
+2026-07-21 01:05:09,452 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:05:09,579 - 493454 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 01:05:09,579 - 493454 - INFO - RED re-validation mail sent for i-039e34b7b90680f92
+2026-07-21 01:05:09,579 - 493454 - INFO - Still Red after restart - starting retry for i-039e34b7b90680f92
+2026-07-21 01:05:09,579 - 493454 - INFO - [Retry-1] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:06:00,984 - 493454 - INFO - Instance i-0894052f74e1461ea stopped successfully.
+2026-07-21 01:06:01,666 - 493454 - INFO - Stopped i-0894052f74e1461ea in 0:01:31.957253
+2026-07-21 01:06:01,698 - 493454 - INFO - Starting EC2 instance: i-0894052f74e1461ea
+2026-07-21 01:06:17,762 - 493454 - INFO - Instance i-0894052f74e1461ea started successfully.
+2026-07-21 01:06:17,762 - 493454 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0894052f74e1461ea...
+2026-07-21 01:07:57,811 - 493454 - INFO - Registering i-0894052f74e1461ea to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-RF/7c327ef2dee895c8
+2026-07-21 01:07:58,135 - 493454 - INFO - Registering i-0894052f74e1461ea to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-Desktop/d33758bd2c06e417
+2026-07-21 01:07:58,279 - 493454 - INFO - Registering i-0894052f74e1461ea to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-WS/d74ba7771dbc14c5
+2026-07-21 01:09:58,649 - 493454 - WARNING - i-0894052f74e1461ea not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-RF/7c327ef2dee895c8 after timeout.
+2026-07-21 01:09:58,690 - 493454 - WARNING - i-0894052f74e1461ea not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-WS/d74ba7771dbc14c5 after timeout.
+2026-07-21 01:09:58,698 - 493454 - WARNING - i-0894052f74e1461ea not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-STG-Desktop/d33758bd2c06e417 after timeout.
+2026-07-21 01:09:58,699 - 493454 - WARNING - i-0894052f74e1461ea: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 01:09:59,116 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: 82f03ad0-bbc4-456e-821e-b9ac33b708d6)
+2026-07-21 01:10:09,977 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 8b679c52-f1f5-43aa-b376-e97a85076cf8)
+2026-07-21 01:10:29,304 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:09:59.477871
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 187.6G | 52.3G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:09:59.826210
+==============================================================================
+
+2026-07-21 01:10:29,304 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:10:29,309 - 493454 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-2026-07-21-01-10-29-309.log
+2026-07-21 01:10:29,364 - 493454 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-Validation-details-2026-07-21-01-10-29-309.html
+2026-07-21 01:10:29,540 - 493454 - INFO - Daemon count - Pre: 28, Post: 0
+2026-07-21 01:10:29,540 - 493454 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-21 01:10:29,540 - 493454 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-21 01:10:29,540 - 493454 - INFO - Background: restarting daemons on i-0894052f74e1461ea
+2026-07-21 01:10:29,541 - 493454 - INFO - Background thread started for i-0894052f74e1461ea - daemon:True cups:False
+2026-07-21 01:10:29,933 - 493454 - INFO - Started i-0894052f74e1461ea in 0:04:28.235627
+2026-07-21 01:10:29,934 - 493454 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-21 01:10:40,115 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:10:10.255162
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.3G | 174.6G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:10:10.876413
+==============================================================================
+
+2026-07-21 01:10:40,115 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:10:40,117 - 493454 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry1-2026-07-21-01-10-40-116.log
+2026-07-21 01:10:40,173 - 493454 - INFO - [Retry-1] RED for UPSHC Europe ProdStage Application and Batch Server (172.28.24.238), retrying... (Total waited: 300s)
+2026-07-21 01:10:40,173 - 493454 - INFO - [Retry-2] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:10:59,820 - 493454 - INFO - Daemon restart output: /data/batchapp/softeon/upshcvacprdstg/startall-upshcvacprdstg-daemon.sh
+
+
+Starting autorouteconversiondaemon
+
+
+Starting breruleenginedaemon
+
+
+Starting clustercreationdaemon1
+
+
+Starting clustercreationdaemon2
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting hardallocationdaemon
+
+
+Starting invcomputationbytask
+
+
+Starting labeldaemon
+
+
+Starting lucamqconsumerdaemon
+
+
+Starting mqconsumerdaemon
+
+
+Starting mqproducerdaemon
+
+
+Starting mqproducerdaemon2
+
+
+Starting mqproducerdaemon3
+
+
+Starting onepullrouteconversiondaemon
+
+
+Starting replenishmentdaemon
+
+
+Starting replenishmentpickloccanceldaemon
+
+
+Starting reportdaemon
+
+
+Starting reportjqgridexportdaemon
+
+
+Starting schedulardaemon_pacific
+
+
+Starting schedulerdaemon
+
+
+Starting taskinvallocationdaemon
+
+
+Starting uploadallocationdaemon
+
+
+Starting uploaddaemon
+
+
+Starting uploaddaemon1
+
+
+Starting uploaddaemon2
+
+
+Starting wavelaunchdaemon
+
+
+Starting wavelaunchdaemon2
+
+
+Starting wsqdaemon
+
+2026-07-21 01:10:59,822 - 493454 - INFO - Waiting 100 sec for daemons to start on i-0894052f74e1461ea
+2026-07-21 01:12:30,267 - 493454 - INFO - Deregistering i-00547e7dc641fbc29 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-RF/22088859393db871
+2026-07-21 01:12:30,314 - 493454 - INFO - Deregistering i-00547e7dc641fbc29 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-WS/13e82b6711e5f6df
+2026-07-21 01:12:30,364 - 493454 - INFO - Deregistering i-00547e7dc641fbc29 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-Desktop/edc3977c6f86bece
+2026-07-21 01:12:30,401 - 493454 - INFO - Stopping EC2 instance: i-00547e7dc641fbc29 at 2026-07-21 01:12:30
+2026-07-21 01:12:39,911 - 493454 - INFO - CUPS no action needed for i-0894052f74e1461ea - before:running after:running version:1.7.5
+2026-07-21 01:12:40,228 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: 009ec241-8c37-42aa-843c-85204c5fc702)
+2026-07-21 01:13:10,315 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:12:40.497422
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 188.1G | 51.8G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:12:41.240825
+==============================================================================
+
+2026-07-21 01:13:10,315 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:13:10,439 - 493454 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 01:13:10,439 - 493454 - INFO - RED re-validation mail sent for i-0894052f74e1461ea
+2026-07-21 01:13:10,439 - 493454 - INFO - Still Red after restart - starting retry for i-0894052f74e1461ea
+2026-07-21 01:13:10,439 - 493454 - INFO - [Retry-1] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:14:16,703 - 493454 - INFO - Instance i-00547e7dc641fbc29 stopped successfully.
+2026-07-21 01:14:17,067 - 493454 - INFO - Stopped i-00547e7dc641fbc29 in 0:01:46.666523
+2026-07-21 01:14:17,068 - 493454 - INFO - Starting EC2 instance: i-00547e7dc641fbc29
+2026-07-21 01:14:33,073 - 493454 - INFO - Instance i-00547e7dc641fbc29 started successfully.
+2026-07-21 01:14:33,073 - 493454 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00547e7dc641fbc29...
+2026-07-21 01:15:40,387 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: af2d8974-b85b-4df1-ba75-ddd62fcaacfd)
+2026-07-21 01:16:10,505 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:15:40.674433
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.0G | 173.9G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+7004 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+7673 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+8679 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:15:42.661320
+==============================================================================
+
+2026-07-21 01:16:10,505 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:16:10,507 - 493454 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry2-2026-07-21-01-16-10-506.log
+2026-07-21 01:16:10,562 - 493454 - INFO - [Retry-2] RED for UPSHC Europe ProdStage Application and Batch Server (172.28.24.238), retrying... (Total waited: 600s)
+2026-07-21 01:16:10,563 - 493454 - INFO - [Retry-3] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:16:13,128 - 493454 - INFO - Registering i-00547e7dc641fbc29 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-RF/22088859393db871
+2026-07-21 01:16:13,346 - 493454 - INFO - Registering i-00547e7dc641fbc29 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-WS/13e82b6711e5f6df
+2026-07-21 01:16:13,487 - 493454 - INFO - Registering i-00547e7dc641fbc29 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-Desktop/edc3977c6f86bece
+2026-07-21 01:18:10,826 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: 801692bf-37f1-4aca-8951-cb34ed75fc07)
+2026-07-21 01:18:13,871 - 493454 - WARNING - i-00547e7dc641fbc29 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-RF/22088859393db871 after timeout.
+2026-07-21 01:18:13,871 - 493454 - WARNING - i-00547e7dc641fbc29 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-WS/13e82b6711e5f6df after timeout.
+2026-07-21 01:18:13,873 - 493454 - WARNING - i-00547e7dc641fbc29 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Prodstage-Desktop/edc3977c6f86bece after timeout.
+2026-07-21 01:18:13,873 - 493454 - WARNING - i-00547e7dc641fbc29: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 01:18:14,286 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 7f4f833c-fb09-45b3-9ae7-cd8d75c270b1)
+2026-07-21 01:18:40,937 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:18:11.430714
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 188.8G | 51.1G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:18:18.943547
+==============================================================================
+
+2026-07-21 01:18:40,937 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:18:40,939 - 493454 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry1-2026-07-21-01-18-40-939.log
+2026-07-21 01:18:40,996 - 493454 - INFO - [Retry-1] RED for UPSHC-VAC ProdStage Application Server and  Batch Server - 1 (172.28.24.235), retrying... (Total waited: 300s)
+2026-07-21 01:18:40,996 - 493454 - INFO - [Retry-2] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:18:44,360 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:18:14.623247
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.5G | 39.3G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:18:15.812032
+==============================================================================
+
+2026-07-21 01:18:44,361 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:18:44,363 - 493454 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-2026-07-21-01-18-44-363.log
+2026-07-21 01:18:44,418 - 493454 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-Validation-details-2026-07-21-01-18-44-363.html
+2026-07-21 01:18:44,602 - 493454 - INFO - Daemon count - Pre: 23, Post: 0
+2026-07-21 01:18:44,602 - 493454 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-21 01:18:44,602 - 493454 - INFO - Manage_cron: False, daemon_action: True, cups_action: False
+2026-07-21 01:18:44,603 - 493454 - INFO - Background: restarting daemons on i-00547e7dc641fbc29
+2026-07-21 01:18:44,603 - 493454 - INFO - Background thread started for i-00547e7dc641fbc29 - daemon:True cups:False
+2026-07-21 01:18:45,139 - 493454 - INFO - Started i-00547e7dc641fbc29 in 0:04:28.070716
+2026-07-21 01:18:45,139 - 493454 - INFO - All instances processed.
+2026-07-21 01:18:45,144 - 493454 - INFO - Restart Total time: 0:22:52.090745
+2026-07-21 01:18:45,145 - 493454 - INFO - Auto-confirmed services are restarted
+2026-07-21 01:18:45,145 - 493454 - INFO - Confirmed - services are started
+2026-07-21 01:18:45,260 - 493454 - INFO - The following instances have failed the patch: []
+2026-07-21 01:18:45,261 - 493454 - INFO - No instances have failed the patch.
+2026-07-21 01:18:45,261 - 493454 - INFO - Total Patch Process time: 0:33:42.995234
+2026-07-21 01:19:15,018 - 493454 - INFO - Daemon restart output: /data/batchapp/softeon/upshchabprodstage/startall-upshchabprodstage-daemon.sh
+
+
+Starting breruleenginedaemon
+
+
+Starting clustercreationdaemon1
+
+
+Starting clustercreationdaemon2
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting hardallocationdaemon
+
+
+Starting invcomputationbytask
+
+
+Starting labeldaemon
+
+
+Starting mqconsumerdaemon
+
+
+Starting mqproducerdaemon
+
+
+Starting replenishmentdaemon
+
+
+Starting replenishmentpickloccanceldaemon
+
+
+Starting reportdaemon
+
+
+Starting reportjqgridexportdaemon
+
+
+Starting schedulerdaemon
+
+
+Starting taskinvallocationdaemon
+
+
+Starting uploadallocationdaemon
+
+
+Starting uploaddaemon
+
+
+Starting uploaddaemon1
+
+
+Starting uploaddaemon2
+
+
+Starting wavelaunchdaemon
+
+
+Starting wavelaunchdaemon2
+
+
+Starting wsqdaemon
+
+2026-07-21 01:19:15,019 - 493454 - INFO - Waiting 100 sec for daemons to start on i-00547e7dc641fbc29
+2026-07-21 01:19:45,915 - 493454 - INFO - Log file ./logs/patching_2026-07-21_UPSHC-Prodstage.log uploaded to s3://q3-2026-aws-security-patching/UPSHC-Prodstage_Patch/2026-07-21/patching_2026-07-21_UPSHC-Prodstage.log
+2026-07-21 01:20:55,101 - 493454 - INFO - CUPS no action needed for i-00547e7dc641fbc29 - before:running after:running version:1.7.5
+2026-07-21 01:20:55,391 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 89613e22-610c-4f1b-ad8d-4a9d679a6cdd)
+2026-07-21 01:21:10,831 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: b1e605ff-b1ee-4cc9-b3c4-915f1f06c29c)
+2026-07-21 01:21:25,465 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:20:55.719515
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.8G | 39.1G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:20:56.746846
+==============================================================================
+
+2026-07-21 01:21:25,465 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:21:25,609 - 493454 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 01:21:25,609 - 493454 - INFO - RED re-validation mail sent for i-00547e7dc641fbc29
+2026-07-21 01:21:25,609 - 493454 - INFO - Still Red after restart - starting retry for i-00547e7dc641fbc29
+2026-07-21 01:21:25,609 - 493454 - INFO - [Retry-1] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:21:40,969 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:21:11.134354
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.0G | 173.9G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+7004 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+7673 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+8679 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:21:12.141181
+==============================================================================
+
+2026-07-21 01:21:40,969 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:21:40,972 - 493454 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry3-2026-07-21-01-21-40-971.log
+2026-07-21 01:21:41,028 - 493454 - INFO - [Retry-3] RED for UPSHC Europe ProdStage Application and Batch Server (172.28.24.238), retrying... (Total waited: 900s)
+2026-07-21 01:21:41,028 - 493454 - INFO - [Retry-4] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:23:41,245 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: d4fa1913-3281-4a66-ac80-01adc756a0ee)
+2026-07-21 01:24:11,312 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:23:41.745837
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 188.8G | 51.1G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:23:43.077001
+==============================================================================
+
+2026-07-21 01:24:11,312 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:24:11,313 - 493454 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry2-2026-07-21-01-24-11-313.log
+2026-07-21 01:24:11,370 - 493454 - INFO - [Retry-2] RED for UPSHC-VAC ProdStage Application Server and  Batch Server - 1 (172.28.24.235), retrying... (Total waited: 600s)
+2026-07-21 01:24:11,370 - 493454 - INFO - [Retry-3] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:26:25,999 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: f8adef3e-59c7-4428-a79c-7c5dd4e82feb)
+2026-07-21 01:26:41,277 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 72793a55-6339-4cd7-b8e6-eac39f4f7b84)
+2026-07-21 01:26:56,092 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:26:26.246758
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.8G | 39.1G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:26:27.276321
+==============================================================================
+
+2026-07-21 01:26:56,092 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:26:56,093 - 493454 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry1-2026-07-21-01-26-56-093.log
+2026-07-21 01:26:56,150 - 493454 - INFO - [Retry-1] RED for UPSHC-HAB ProdStage Application Server and  Batch Server - 1 (172.28.24.222), retrying... (Total waited: 300s)
+2026-07-21 01:26:56,150 - 493454 - INFO - [Retry-2] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:27:11,378 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:26:41.541755
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.0G | 173.8G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+7004 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+7673 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+8679 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:26:42.691726
+==============================================================================
+
+2026-07-21 01:27:11,379 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:27:11,381 - 493454 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry4-2026-07-21-01-27-11-380.log
+2026-07-21 01:27:11,437 - 493454 - INFO - [Retry-4] RED for UPSHC Europe ProdStage Application and Batch Server (172.28.24.238), retrying... (Total waited: 1200s)
+2026-07-21 01:27:11,437 - 493454 - INFO - [Retry-5] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:29:11,622 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: 75e1331b-3c8b-4ea3-ab93-4771555eb211)
+2026-07-21 01:29:41,711 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:29:11.919248
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 188.9G | 51.0G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:29:13.155533
+==============================================================================
+
+2026-07-21 01:29:41,711 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:29:41,713 - 493454 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry3-2026-07-21-01-29-41-712.log
+2026-07-21 01:29:41,770 - 493454 - INFO - [Retry-3] RED for UPSHC-VAC ProdStage Application Server and  Batch Server - 1 (172.28.24.235), retrying... (Total waited: 900s)
+2026-07-21 01:29:41,770 - 493454 - INFO - [Retry-4] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:31:56,544 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 30c99d45-690b-40bf-948a-a1d9d93c538a)
+2026-07-21 01:32:11,698 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 236f5540-4484-4b27-bdf9-1697f4b4d9bc)
+2026-07-21 01:32:26,636 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:31:56.808007
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.9G | 39.0G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:31:57.821034
+==============================================================================
+
+2026-07-21 01:32:26,636 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:32:26,638 - 493454 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry2-2026-07-21-01-32-26-638.log
+2026-07-21 01:32:26,693 - 493454 - INFO - [Retry-2] RED for UPSHC-HAB ProdStage Application Server and  Batch Server - 1 (172.28.24.222), retrying... (Total waited: 600s)
+2026-07-21 01:32:26,694 - 493454 - INFO - [Retry-3] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:32:41,809 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:32:11.994732
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.1G | 173.8G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+7004 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+7673 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+8679 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:32:12.917138
+==============================================================================
+
+2026-07-21 01:32:41,809 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:32:41,811 - 493454 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry5-2026-07-21-01-32-41-811.log
+2026-07-21 01:32:41,867 - 493454 - INFO - [Retry-5] RED for UPSHC Europe ProdStage Application and Batch Server (172.28.24.238), retrying... (Total waited: 1500s)
+2026-07-21 01:32:41,868 - 493454 - INFO - [Retry-6] Waiting 300s for i-039e34b7b90680f92...
+2026-07-21 01:34:42,063 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: d86a32df-5632-4d91-9566-65c32e64188d)
+2026-07-21 01:35:12,155 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:34:42.673584
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 189.0G | 50.9G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:34:44.041574
+==============================================================================
+
+2026-07-21 01:35:12,156 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:35:12,157 - 493454 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry4-2026-07-21-01-35-12-157.log
+2026-07-21 01:35:12,213 - 493454 - INFO - [Retry-4] RED for UPSHC-VAC ProdStage Application Server and  Batch Server - 1 (172.28.24.235), retrying... (Total waited: 1200s)
+2026-07-21 01:35:12,213 - 493454 - INFO - [Retry-5] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:37:26,939 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 808260a0-55b7-4212-8f4c-595575fb3f7b)
+2026-07-21 01:37:42,137 - 493454 - INFO - Sent app_validation.py to i-039e34b7b90680f92 (command_id: 3e092a08-0a4a-4fb6-a0de-be785605fc86)
+2026-07-21 01:37:57,026 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:37:27.194744
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 200.9G | 38.9G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:37:28.250566
+==============================================================================
+
+2026-07-21 01:37:57,026 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:37:57,027 - 493454 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry3-2026-07-21-01-37-57-027.log
+2026-07-21 01:37:57,083 - 493454 - INFO - [Retry-3] RED for UPSHC-HAB ProdStage Application Server and  Batch Server - 1 (172.28.24.222), retrying... (Total waited: 900s)
+2026-07-21 01:37:57,083 - 493454 - INFO - [Retry-4] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:38:12,222 - 493454 - INFO - app_validation.py output for i-039e34b7b90680f92:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:37:42.424562
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.238
+Hostname | ip-172-28-24-238
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 66.1G | 173.8G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.238:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.238 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | upshc_abchdis, upshc_bre, upshc_ccd2, upshc_dwa, upshc_event, upshc_ftp, upshc_harp, upshc_ict, upshc_lbl, upshc_mqconsume, upshc_mqproduce, upshc_rpt, upshc_jqgrid, upshc_sch, upshc_tiad, upshc_inbq, upshc_1_inbq, upshc_2_inbq, upshc_wld, upshc_2_wld, upshc_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+upshc_abchdis | /data/batchapp/softeon/upshceuprodstage/autobatchdistributiondaemon
+upshc_bre | /data/batchapp/softeon/upshceuprodstage/breruledaemon
+upshc_ccd2 | /data/batchapp/softeon/upshceuprodstage/clustercreationdaemon2
+upshc_dwa | /data/batchapp/softeon/upshceuprodstage/downloaddaemon
+upshc_event | /data/batchapp/softeon/upshceuprodstage/eventdaemon
+upshc_ftp | /data/batchapp/softeon/upshceuprodstage/ftpdaemon
+upshc_harp | /data/batchapp/softeon/upshceuprodstage/hardallocationdaemon
+upshc_ict | /data/batchapp/softeon/upshceuprodstage/invcomputationbytask
+upshc_lbl | /data/batchapp/softeon/upshceuprodstage/labeldaemon
+upshc_mqconsume | /data/batchapp/softeon/upshceuprodstage/mqconsumerdaemon
+upshc_mqproduce | /data/batchapp/softeon/upshceuprodstage/mqproducerdaemon
+upshc_rpt | /data/batchapp/softeon/upshceuprodstage/reportdaemon
+upshc_jqgrid | /data/batchapp/softeon/upshceuprodstage/reportjqgridexportdaemon
+upshc_sch | /data/batchapp/softeon/upshceuprodstage/schedulerdaemon
+upshc_tiad | /data/batchapp/softeon/upshceuprodstage/taskinvallocationdaemon
+upshc_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon
+upshc_1_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon1
+upshc_2_inbq | /data/batchapp/softeon/upshceuprodstage/uploaddaemon2
+upshc_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon
+upshc_2_wld | /data/batchapp/softeon/upshceuprodstage/wavelaunchdaemon2
+upshc_wsq | /data/batchapp/softeon/upshceuprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+7004 | upshceuprodstage | jboss730eap | upshceustg_jb73 | 8080 | 172.28.24.238:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuprodstage/standalone
+7673 | upshceurfprodstage | jboss730eap | upceurfstg_jb73 | 8081 | 172.28.24.238:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceurfprodstage/standalone
+8679 | upshceuwsprodstage | jboss730eap | upceuwsstg_jb73 | 8082 | 172.28.24.238:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshceuwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:37:43.505607
+==============================================================================
+
+2026-07-21 01:38:12,222 - 493454 - ERROR - app_validation.py errors for i-039e34b7b90680f92:
+
+2026-07-21 01:38:12,225 - 493454 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.238/172.28.24.238-AfterPatching-Retry6-2026-07-21-01-38-12-224.log
+2026-07-21 01:38:12,281 - 493454 - WARNING - i-039e34b7b90680f92: Timeout - cron was not active, skipping enable
+2026-07-21 01:40:12,526 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: c9744a3c-8acc-4a9c-ab5c-18e67d9bda85)
+2026-07-21 01:40:42,627 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:40:12.824796
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 189.0G | 50.9G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 33
+Batch/Daemon Java Processes | 28
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 28
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:40:14.185861
+==============================================================================
+
+2026-07-21 01:40:42,627 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:40:42,629 - 493454 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry5-2026-07-21-01-40-42-628.log
+2026-07-21 01:40:42,686 - 493454 - INFO - [Retry-5] RED for UPSHC-VAC ProdStage Application Server and  Batch Server - 1 (172.28.24.235), retrying... (Total waited: 1500s)
+2026-07-21 01:40:42,686 - 493454 - INFO - [Retry-6] Waiting 300s for i-0894052f74e1461ea...
+2026-07-21 01:42:57,311 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: 8329a6bb-eebe-4863-b568-56f04c53a939)
+2026-07-21 01:43:27,452 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:42:57.578643
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 201.0G | 38.9G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:42:58.695481
+==============================================================================
+
+2026-07-21 01:43:27,452 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:43:27,454 - 493454 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry4-2026-07-21-01-43-27-453.log
+2026-07-21 01:43:27,509 - 493454 - INFO - [Retry-4] RED for UPSHC-HAB ProdStage Application Server and  Batch Server - 1 (172.28.24.222), retrying... (Total waited: 1200s)
+2026-07-21 01:43:27,509 - 493454 - INFO - [Retry-5] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:45:42,961 - 493454 - INFO - Sent app_validation.py to i-0894052f74e1461ea (command_id: c36024d7-c40e-438e-b55f-c650c06ba381)
+2026-07-21 01:46:13,044 - 493454 - INFO - app_validation.py output for i-0894052f74e1461ea:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:45:43.476699
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.235
+Hostname | ip-172-28-24-235
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 189.1G | 50.8G | 78% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.235:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.235 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 29
+Non-Standalone Java Processes | upshcvac_arcd, upshcvac_bre, upshcvac_1ccd, upshcvac_2ccd, upshcvac_dwa, upshcvac_event, upshcvac_ftp, upshcvac_harp, upshcvac_ict, upshcvac_lbl, upshcvac_luca, upshcvac_mqc, upshcvac_mqp, upshcvac_2mqp, upshcvac_3mqp, upshcvac_lrcd, upshcvac_rccl, upshcvac_rpt, upshcvac_jqgrid, upshcvac_pacsch, upshcvac_sch, upshcvac_tiad, upshcvac_ialloc, upshcvac_inbq, upshcvac_1inbq, upshcvac_2inbq, upshcvac_wld, upshcvac_wsq, upshcvac_monit
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 29
+Java-Name | Java-Path
+upshcvac_arcd | /data/batchapp/softeon/upshcvacprdstg/autorouteconversiondaemon
+upshcvac_bre | /data/batchapp/softeon/upshcvacprdstg/breruleenginedaemon
+upshcvac_1ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon1
+upshcvac_2ccd | /data/batchapp/softeon/upshcvacprdstg/clustercreationdaemon2
+upshcvac_dwa | /data/batchapp/softeon/upshcvacprdstg/downloaddaemon
+upshcvac_event | /data/batchapp/softeon/upshcvacprdstg/eventdaemon
+upshcvac_ftp | /data/batchapp/softeon/upshcvacprdstg/ftpdaemon
+upshcvac_harp | /data/batchapp/softeon/upshcvacprdstg/hardallocationdaemon
+upshcvac_ict | /data/batchapp/softeon/upshcvacprdstg/invcomputationbytask
+upshcvac_lbl | /data/batchapp/softeon/upshcvacprdstg/labeldaemon
+upshcvac_luca | /data/batchapp/softeon/upshcvacprdstg/lucamqconsumerdaemon
+upshcvac_mqc | /data/batchapp/softeon/upshcvacprdstg/mqconsumerdaemon
+upshcvac_mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon
+upshcvac_2mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon2
+upshcvac_3mqp | /data/batchapp/softeon/upshcvacprdstg/mqproducerdaemon3
+upshcvac_lrcd | /data/batchapp/softeon/upshcvacprdstg/onepullrouteconversiondaemon
+upshcvac_rccl | /data/batchapp/softeon/upshcvacprdstg/replenishmentpickloccanceldaemon
+upshcvac_rpt | /data/batchapp/softeon/upshcvacprdstg/reportdaemon
+upshcvac_jqgrid | /data/batchapp/softeon/upshcvacprdstg/reportjqgridexportdaemon
+upshcvac_pacsch | /data/batchapp/softeon/upshcvacprdstg/schedulardaemon_pacific
+upshcvac_sch | /data/batchapp/softeon/upshcvacprdstg/schedulerdaemon
+upshcvac_tiad | /data/batchapp/softeon/upshcvacprdstg/taskinvallocationdaemon
+upshcvac_ialloc | /data/batchapp/softeon/upshcvacprdstg/uploadallocationdaemon
+upshcvac_inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon
+upshcvac_1inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon1
+upshcvac_2inbq | /data/batchapp/softeon/upshcvacprdstg/uploaddaemon2
+upshcvac_wld | /data/batchapp/softeon/upshcvacprdstg/wavelaunchdaemon
+upshcvac_wsq | /data/batchapp/softeon/upshcvacprdstg/wsqdaemon
+upshcvac_monit | /data/batchapp/softeon/upshcvacprdstg/drivespacemonitor
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5887 | upshcvacprdstg | jboss730eap | upshcvac_jb730 | 8080 | 172.28.24.235:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacprdstg/standalone
+6570 | upshcvacrfprdstg | jboss730eap | upshcvacrf_jb73 | 8081 | 172.28.24.235:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacrfprdstg/standalone
+7320 | upshcvacwsprdstg | jboss730eap | upshcvacws_jb73 | 8082 | 172.28.24.235:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcvacwsprdstg/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:45:45.229510
+==============================================================================
+
+2026-07-21 01:46:13,045 - 493454 - ERROR - app_validation.py errors for i-0894052f74e1461ea:
+
+2026-07-21 01:46:13,046 - 493454 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.235/172.28.24.235-AfterPatching-Retry6-2026-07-21-01-46-13-046.log
+2026-07-21 01:46:13,429 - 493454 - INFO - Health monitor crontab enabled on all instances
+2026-07-21 01:46:13,430 - 493454 - WARNING - [Retry] Timeout - auto cron enabled for i-0894052f74e1461ea
+2026-07-21 01:48:27,681 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: a18cd62e-7cc4-48ca-b999-22dead433b3f)
+2026-07-21 01:48:57,822 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:48:27.930039
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 201.0G | 38.8G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:48:29.080446
+==============================================================================
+
+2026-07-21 01:48:57,822 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:48:57,824 - 493454 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry5-2026-07-21-01-48-57-824.log
+2026-07-21 01:48:57,881 - 493454 - INFO - [Retry-5] RED for UPSHC-HAB ProdStage Application Server and  Batch Server - 1 (172.28.24.222), retrying... (Total waited: 1500s)
+2026-07-21 01:48:57,881 - 493454 - INFO - [Retry-6] Waiting 300s for i-00547e7dc641fbc29...
+2026-07-21 01:53:58,154 - 493454 - INFO - Sent app_validation.py to i-00547e7dc641fbc29 (command_id: e3f8eb30-f802-40cc-800d-5eaed250d630)
+2026-07-21 01:54:28,247 - 493454 - INFO - app_validation.py output for i-00547e7dc641fbc29:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 05:53:58.405957
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.222
+Hostname | ip-172-28-24-222
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 201.1G | 38.8G | 83% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.222:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.222 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | upshchab_bre, upshchab_1ccd, upshchab_2ccd, upshchab_dwa, upshchab_event, upshchab_ftp, upshchab_harp, upshchab_ict, upshchab_lbl, upshchab_mqc, upshchab_mqp, upshchab_rccl, upshchab_rpt, upshchab_jqgrid, upshchab_sch, upshchab_tiad, upshchab_ialloc, upshchab_inbq, upshchab_1inbq, upshchab_2inbq, upshchab_wld, upshchab_2wld, upshchab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+upshchab_bre | /data/batchapp/softeon/upshchabprodstage/breruleenginedaemon
+upshchab_1ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon1
+upshchab_2ccd | /data/batchapp/softeon/upshchabprodstage/clustercreationdaemon2
+upshchab_dwa | /data/batchapp/softeon/upshchabprodstage/downloaddaemon
+upshchab_event | /data/batchapp/softeon/upshchabprodstage/eventdaemon
+upshchab_ftp | /data/batchapp/softeon/upshchabprodstage/ftpdaemon
+upshchab_harp | /data/batchapp/softeon/upshchabprodstage/hardallocationdaemon
+upshchab_ict | /data/batchapp/softeon/upshchabprodstage/invcomputationbytask
+upshchab_lbl | /data/batchapp/softeon/upshchabprodstage/labeldaemon
+upshchab_mqc | /data/batchapp/softeon/upshchabprodstage/mqconsumerdaemon
+upshchab_mqp | /data/batchapp/softeon/upshchabprodstage/mqproducerdaemon
+upshchab_rccl | /data/batchapp/softeon/upshchabprodstage/replenishmentpickloccanceldaemon
+upshchab_rpt | /data/batchapp/softeon/upshchabprodstage/reportdaemon
+upshchab_jqgrid | /data/batchapp/softeon/upshchabprodstage/reportjqgridexportdaemon
+upshchab_sch | /data/batchapp/softeon/upshchabprodstage/schedulerdaemon
+upshchab_tiad | /data/batchapp/softeon/upshchabprodstage/taskinvallocationdaemon
+upshchab_ialloc | /data/batchapp/softeon/upshchabprodstage/uploadallocationdaemon
+upshchab_inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon
+upshchab_1inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon1
+upshchab_2inbq | /data/batchapp/softeon/upshchabprodstage/uploaddaemon2
+upshchab_wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon
+upshchab_2wld | /data/batchapp/softeon/upshchabprodstage/wavelaunchdaemon2
+upshchab_wsq | /data/batchapp/softeon/upshchabprodstage/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4404 | upshchabprodstage | jboss730eap | upshcstage_jb73 | 8080 | 172.28.24.222:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabprodstage/standalone
+4028 | upshchabrfprodstage | jboss730eap | uphcrfstage_j73 | 8081 | 172.28.24.222:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabrfprodstage/standalone
+4312 | upshchabwsprodstage | jboss730eap | uphcwsstage_j73 | 8082 | 172.28.24.222:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabwsprodstage/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 05:53:59.588681
+==============================================================================
+
+2026-07-21 01:54:28,247 - 493454 - ERROR - app_validation.py errors for i-00547e7dc641fbc29:
+
+2026-07-21 01:54:28,249 - 493454 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-Prodstage/172.28.24.222/172.28.24.222-AfterPatching-Retry6-2026-07-21-01-54-28-249.log
+2026-07-21 01:54:28,335 - 493454 - WARNING - i-00547e7dc641fbc29: Timeout - cron was not active, skipping enable

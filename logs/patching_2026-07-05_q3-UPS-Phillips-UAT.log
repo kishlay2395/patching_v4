@@ -1,0 +1,536 @@
+2026-07-05 00:05:02,955 - 3773636 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 00:05:02,955 - 3773636 - INFO - Script Start Time: 2026-07-05 00:05:02
+2026-07-05 00:05:03,297 - 3773636 - INFO - Instance(s) selected for Patching: {'i-0fbfb37de825ca2ab': '172.29.60.143'}
+2026-07-05 00:05:03,390 - 3773636 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:05:03,390 - 3773636 - INFO - Now patching instances at: 2026-07-05 00:05:03
+2026-07-05 00:05:08,685 - 3773636 - INFO - i-0fbfb37de825ca2ab: Cron was active = True
+2026-07-05 00:05:08,849 - 3773636 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 00:05:08,850 - 3773636 - INFO - Disabled cron for: ['i-0fbfb37de825ca2ab']
+2026-07-05 00:05:09,100 - 3773636 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 58e8791a-f42c-4692-8cf9-cd229e13f94e)
+2026-07-05 00:05:39,311 - 3773636 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:05:09.423512
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.5G | 167.4G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 161.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 31
+Batch/Daemon Java Processes | 27
+Non-Standalone Java Processes | philip_download, philip_event, philip_label, philip_replnsmt, philip_report, philip_rptjqgrd, philip_schedler, philip_upload, philip_wavlauch, phapac_download, phapac_event, phapac_label, phapac_replnsmt, phapac_report, phapac_rptjqgrd, phapac_schedler, phapac_upload, phapac_wavlauch, phapa_ftpdaemon, phemea_download, phemea_event, phemea_label, phemea_report, phemea_rptjqgrd, phemea_schedler, phemea_upload, phemea_wavlauch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 27
+Java-Name | Java-Path
+philip_download | /data/batchapp/softeonuat/upsphilipsuat/downloaddaemon
+philip_event | /data/batchapp/softeonuat/upsphilipsuat/eventdaemon
+philip_label | /data/batchapp/softeonuat/upsphilipsuat/labeldaemon
+philip_replnsmt | /data/batchapp/softeonuat/upsphilipsuat/replenishmentdaemon
+philip_report | /data/batchapp/softeonuat/upsphilipsuat/reportdaemon
+philip_rptjqgrd | /data/batchapp/softeonuat/upsphilipsuat/reportjqgridexportdaemon
+philip_schedler | /data/batchapp/softeonuat/upsphilipsuat/schedulerdaemon
+philip_upload | /data/batchapp/softeonuat/upsphilipsuat/uploaddaemon
+philip_wavlauch | /data/batchapp/softeonuat/upsphilipsuat/wavelaunchdaemon
+phapac_download | /data/batchapp/softeonuat/upsphapac/downloaddaemon
+phapac_event | /data/batchapp/softeonuat/upsphapac/eventdaemon
+phapac_label | /data/batchapp/softeonuat/upsphapac/labeldaemon
+phapac_replnsmt | /data/batchapp/softeonuat/upsphapac/replenishmentdaemon
+phapac_report | /data/batchapp/softeonuat/upsphapac/reportdaemon
+phapac_rptjqgrd | /data/batchapp/softeonuat/upsphapac/reportjqgridexportdaemon
+phapac_schedler | /data/batchapp/softeonuat/upsphapac/schedulerdaemon
+phapac_upload | /data/batchapp/softeonuat/upsphapac/uploaddaemon
+phapac_wavlauch | /data/batchapp/softeonuat/upsphapac/wavelaunchdaemon
+phapa_ftpdaemon | /data/batchapp/softeonuat/upsphapac/ftpdaemon
+phemea_download | /data/batchapp/softeonuat/upsphemea/downloaddaemon
+phemea_event | /data/batchapp/softeonuat/upsphemea/eventdaemon
+phemea_label | /data/batchapp/softeonuat/upsphemea/labeldaemon
+phemea_report | /data/batchapp/softeonuat/upsphemea/reportdaemon
+phemea_rptjqgrd | /data/batchapp/softeonuat/upsphemea/reportjqgridexportdaemon
+phemea_schedler | /data/batchapp/softeonuat/upsphemea/schedulerdaemon
+phemea_upload | /data/batchapp/softeonuat/upsphemea/uploaddaemon
+phemea_wavlauch | /data/batchapp/softeonuat/upsphemea/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1432522 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+1432712 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:05:10.535423
+==============================================================================
+
+2026-07-05 00:05:39,311 - 3773636 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-07-05 00:05:39,313 - 3773636 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-BeforePatching-2026-07-05-00-05-39-313.log
+2026-07-05 00:05:39,398 - 3773636 - INFO - Sending patch command to instance i-0fbfb37de825ca2ab
+2026-07-05 00:05:39,511 - 3773636 - INFO - Command sent successfully to instance i-0fbfb37de825ca2ab. Command ID: d419c351-d573-4ef9-a672-80cfab942159
+2026-07-05 00:14:41,755 - 3773636 - INFO - All patches applied successfully.
+2026-07-05 00:14:41,756 - 3773636 - INFO - Patching end time: 2026-07-05 00:14:41
+2026-07-05 00:14:41,756 - 3773636 - INFO - Patch Elapsed time: 0:09:38.366570
+2026-07-05 00:14:41,826 - 3773636 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:14:41,826 - 3773636 - INFO - Confirmed - services are stopped
+2026-07-05 00:15:02,442 - 3773636 - INFO - Discovered TG map: {'i-0fbfb37de825ca2ab': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f']}
+2026-07-05 00:15:03,212 - 3773636 - INFO - Deregistering i-0fbfb37de825ca2ab from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f
+2026-07-05 00:15:03,298 - 3773636 - INFO - Stopping EC2 instance: i-0fbfb37de825ca2ab at 2026-07-05 00:15:03
+2026-07-05 00:17:19,925 - 3773636 - INFO - Instance i-0fbfb37de825ca2ab stopped successfully.
+2026-07-05 00:17:20,060 - 3773636 - INFO - Stopped i-0fbfb37de825ca2ab in 0:02:16.761654
+2026-07-05 00:17:20,061 - 3773636 - INFO - Starting EC2 instance: i-0fbfb37de825ca2ab
+2026-07-05 00:17:36,384 - 3773636 - INFO - Instance i-0fbfb37de825ca2ab started successfully.
+2026-07-05 00:17:36,384 - 3773636 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0fbfb37de825ca2ab...
+2026-07-05 00:19:16,412 - 3773636 - INFO - Registering i-0fbfb37de825ca2ab to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Philips-UAT-NLB/3be406809be28e0f
+2026-07-05 00:20:16,959 - 3773636 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 27a5efd4-74b2-41bb-a835-1bfef1ba53ba)
+2026-07-05 00:20:47,063 - 3773636 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:20:17.238669
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.5G | 167.4G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 161.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3654 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+3647 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:20:18.190797
+==============================================================================
+
+2026-07-05 00:20:47,063 - 3773636 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-07-05 00:20:47,064 - 3773636 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-AfterPatching-2026-07-05-00-20-47-064.log
+2026-07-05 00:20:47,119 - 3773636 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-Validation-details-2026-07-05-00-20-47-064.html
+2026-07-05 00:20:47,377 - 3773636 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 00:20:47,377 - 3773636 - INFO - HTML validation report email sent for i-0fbfb37de825ca2ab
+2026-07-05 00:20:47,377 - 3773636 - INFO - [Retry-1] Waiting 600s for i-0fbfb37de825ca2ab...
+2026-07-05 00:20:47,377 - 3773636 - INFO - RED - Background retry thread started for i-0fbfb37de825ca2ab
+2026-07-05 00:20:47,604 - 3773636 - INFO - Started i-0fbfb37de825ca2ab in 0:03:27.543342
+2026-07-05 00:20:47,605 - 3773636 - INFO - All instances processed.
+2026-07-05 00:20:47,609 - 3773636 - INFO - Restart Total time: 0:06:05.644760
+2026-07-05 00:20:47,609 - 3773636 - INFO - Auto-confirmed services are restarted
+2026-07-05 00:20:47,609 - 3773636 - INFO - Confirmed - services are started
+2026-07-05 00:20:47,727 - 3773636 - INFO - The following instances have failed the patch: []
+2026-07-05 00:20:47,727 - 3773636 - INFO - No instances have failed the patch.
+2026-07-05 00:20:47,727 - 3773636 - INFO - Total Patch Process time: 0:15:44.771179
+2026-07-05 00:21:48,080 - 3773636 - INFO - Log file ./logs/patching_2026-07-05_q3-UPS-Phillips-UAT.log uploaded to s3://q3-2026-aws-security-patching/q3-UPS-Phillips-UAT_Patch/2026-07-05/patching_2026-07-05_q3-UPS-Phillips-UAT.log
+2026-07-05 00:30:47,600 - 3773636 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 003d73ed-bca3-4ca8-a12b-4a55bb37dd57)
+2026-07-05 00:31:17,693 - 3773636 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:30:47.866863
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.5G | 167.4G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 161.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3654 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+3647 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:30:48.198769
+==============================================================================
+
+2026-07-05 00:31:17,694 - 3773636 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-07-05 00:31:17,695 - 3773636 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-AfterPatching-Retry1-2026-07-05-00-31-17-695.log
+2026-07-05 00:31:17,750 - 3773636 - INFO - [Retry-1] RED detected for UPS Phillips UAT 2 (172.29.60.143), retrying... (Total waited: 600s)
+2026-07-05 00:31:17,751 - 3773636 - INFO - [Retry-2] Waiting 600s for i-0fbfb37de825ca2ab...
+2026-07-05 00:41:18,220 - 3773636 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: 360129c2-6e87-450b-ad6f-e5bbfc32fb55)
+2026-07-05 00:41:48,340 - 3773636 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:41:18.475419
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.5G | 167.4G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 161.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3654 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+3647 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:41:18.808447
+==============================================================================
+
+2026-07-05 00:41:48,341 - 3773636 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-07-05 00:41:48,342 - 3773636 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-AfterPatching-Retry2-2026-07-05-00-41-48-342.log
+2026-07-05 00:41:48,397 - 3773636 - INFO - [Retry-2] RED detected for UPS Phillips UAT 2 (172.29.60.143), retrying... (Total waited: 1200s)
+2026-07-05 00:41:48,397 - 3773636 - INFO - [Retry-3] Waiting 600s for i-0fbfb37de825ca2ab...
+2026-07-05 00:51:48,607 - 3773636 - INFO - Sent app_validation.py to i-0fbfb37de825ca2ab (command_id: a9458336-e791-4257-8092-e9b99b681af4)
+2026-07-05 00:52:18,703 - 3773636 - INFO - app_validation.py output for i-0fbfb37de825ca2ab:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:51:48.953304
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.143
+Hostname | ip-172-29-60-143
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 62.5G | 167.4G | 27% | /data
+fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | 0B | 161.7G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-72d0cf3a.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.143:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 69
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.143 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3654 | upsphilipsrfv8uat | jboss730eap | philipsrfv8_jb7 | 8083 | 172.29.60.143:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsrfv8uat/standalone
+3647 | upsphilipsv8uat | jboss730eap | philipsv8_jb730 | 8082 | 172.29.60.143:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsphilipsv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:51:49.308788
+==============================================================================
+
+2026-07-05 00:52:18,704 - 3773636 - ERROR - app_validation.py errors for i-0fbfb37de825ca2ab:
+
+2026-07-05 00:52:18,705 - 3773636 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-05/q3-UPS-Phillips-UAT/172.29.60.143/172.29.60.143-AfterPatching-Retry3-2026-07-05-00-52-18-705.log
+2026-07-05 00:52:19,039 - 3773636 - INFO - Health monitor crontab enabled on all instances
+2026-07-05 00:52:19,040 - 3773636 - WARNING - [Retry] Timeout - auto cron enabled for i-0fbfb37de825ca2ab

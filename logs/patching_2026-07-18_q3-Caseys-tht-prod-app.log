@@ -1,0 +1,454 @@
+2026-07-18 02:00:02,272 - 310829 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-18 02:00:02,272 - 310829 - INFO - Script Start Time: 2026-07-18 02:00:02
+2026-07-18 02:00:02,673 - 310829 - INFO - Tag: q3-Caseys-tht-prod-app, IPs: ['172.30.64.215', '172.30.64.231'], Environment: prod
+2026-07-18 02:00:02,673 - 310829 - INFO - Instance(s) selected for Patching: {'i-05cfeb855e5c57f60': '172.30.64.215', 'i-0e3b72abbce3a3304': '172.30.64.231'}
+2026-07-18 02:00:02,752 - 310829 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-18 02:00:02,753 - 310829 - INFO - Now patching instances at: 2026-07-18 02:00:02
+2026-07-18 02:00:03,026 - 310829 - INFO - Sent app_validation.py to i-0e3b72abbce3a3304 (command_id: de202213-aa8e-4305-b2fa-3f136b4ca09d)
+2026-07-18 02:00:33,141 - 310829 - INFO - app_validation.py output for i-0e3b72abbce3a3304:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:00:03.382562
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.231
+Hostname | ip-172-30-64-231.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 32.5G | 207.3G | 13% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.231:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.231 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3944172 | caseysthtprod | jboss730eap | casethtprd_jb73 | 8080 | 172.30.64.231:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtprod/standalone
+3945201 | caseysthtrfprod | jboss730eap | thtrfprd_jb730 | 8081 | 172.30.64.231:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfprod/standalone
+2505954 | caseysthtstageprod | jboss730eap | casethtstg_jb73 | 8082 | 172.30.64.231:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtstageprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-18 02:00:33,141 - 310829 - ERROR - app_validation.py errors for i-0e3b72abbce3a3304:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-18 02:00:33,142 - 310829 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.231/172.30.64.231-BeforePatching-2026-07-18-02-00-33-142.log
+2026-07-18 02:00:33,398 - 310829 - INFO - Sent app_validation.py to i-05cfeb855e5c57f60 (command_id: fca05524-352d-41a5-8ca3-55d67a873564)
+2026-07-18 02:01:03,520 - 310829 - INFO - app_validation.py output for i-05cfeb855e5c57f60:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:00:33.692637
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.215
+Hostname | ip-172-30-64-215.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 34.5G | 205.4G | 14% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.215:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.215 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4067004 | caseysthtprod | jboss730eap | casethtprd_jb73 | 8080 | 172.30.64.215:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtprod/standalone
+4072801 | caseysthtrfprod | jboss730eap | thtrfprd_jb730 | 8081 | 172.30.64.215:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-18 02:01:03,520 - 310829 - ERROR - app_validation.py errors for i-05cfeb855e5c57f60:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-18 02:01:03,521 - 310829 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.215/172.30.64.215-BeforePatching-2026-07-18-02-01-03-521.log
+2026-07-18 02:01:08,806 - 310829 - INFO - i-0e3b72abbce3a3304: Cron was active = False
+2026-07-18 02:01:14,020 - 310829 - INFO - i-05cfeb855e5c57f60: Cron was active = False
+2026-07-18 02:01:14,020 - 310829 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-18 02:01:14,103 - 310829 - INFO - Sending patch command to instance i-0e3b72abbce3a3304
+2026-07-18 02:01:14,255 - 310829 - INFO - Command sent successfully to instance i-0e3b72abbce3a3304. Command ID: 6cfbe53f-80f9-4ae1-bfca-cc8dbc26b350
+2026-07-18 02:01:14,385 - 310829 - INFO - Sending patch command to instance i-05cfeb855e5c57f60
+2026-07-18 02:01:14,504 - 310829 - INFO - Command sent successfully to instance i-05cfeb855e5c57f60. Command ID: aa2276cf-402a-408f-acf3-08920690aa98
+2026-07-18 02:07:46,292 - 310829 - INFO - All patches applied successfully.
+2026-07-18 02:07:46,293 - 310829 - INFO - Patching end time: 2026-07-18 02:07:46
+2026-07-18 02:07:46,293 - 310829 - INFO - Patch Elapsed time: 0:07:43.539983
+2026-07-18 02:07:46,376 - 310829 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-18 02:07:46,376 - 310829 - INFO - Confirmed - services are stopped
+2026-07-18 02:07:53,311 - 310829 - INFO - Discovered TG map: {'i-0e3b72abbce3a3304': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-STAGE/549bae77095d7562'], 'i-05cfeb855e5c57f60': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16']}
+2026-07-18 02:07:53,534 - 310829 - INFO - Deregistering i-0e3b72abbce3a3304 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c
+2026-07-18 02:07:53,641 - 310829 - INFO - Deregistering i-0e3b72abbce3a3304 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16
+2026-07-18 02:07:53,699 - 310829 - INFO - Deregistering i-0e3b72abbce3a3304 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-STAGE/549bae77095d7562
+2026-07-18 02:07:53,750 - 310829 - INFO - Stopping EC2 instance: i-0e3b72abbce3a3304 at 2026-07-18 02:07:53
+2026-07-18 02:10:10,373 - 310829 - INFO - Instance i-0e3b72abbce3a3304 stopped successfully.
+2026-07-18 02:10:10,624 - 310829 - INFO - Stopped i-0e3b72abbce3a3304 in 0:02:16.874659
+2026-07-18 02:10:10,625 - 310829 - INFO - Starting EC2 instance: i-0e3b72abbce3a3304
+2026-07-18 02:10:26,505 - 310829 - INFO - Instance i-0e3b72abbce3a3304 started successfully.
+2026-07-18 02:10:26,505 - 310829 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0e3b72abbce3a3304...
+2026-07-18 02:12:06,552 - 310829 - INFO - Registering i-0e3b72abbce3a3304 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c
+2026-07-18 02:12:06,747 - 310829 - INFO - Registering i-0e3b72abbce3a3304 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16
+2026-07-18 02:12:06,892 - 310829 - INFO - Registering i-0e3b72abbce3a3304 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-STAGE/549bae77095d7562
+2026-07-18 02:14:07,731 - 310829 - INFO - Sent app_validation.py to i-0e3b72abbce3a3304 (command_id: f9e8631a-1041-4a78-9e03-8cbf1edcc431)
+2026-07-18 02:14:37,811 - 310829 - INFO - app_validation.py output for i-0e3b72abbce3a3304:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:14:08.046216
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.231
+Hostname | ip-172-30-64-231.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 32.5G | 207.4G | 13% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.231:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.231 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4007 | caseysthtprod | jboss730eap | casethtprd_jb73 | 8080 | 172.30.64.231:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtprod/standalone
+4202 | caseysthtrfprod | jboss730eap | thtrfprd_jb730 | 8081 | 172.30.64.231:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfprod/standalone
+3998 | caseysthtstageprod | jboss730eap | casethtstg_jb73 | 8082 | 172.30.64.231:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtstageprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-18 02:14:37,812 - 310829 - ERROR - app_validation.py errors for i-0e3b72abbce3a3304:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-18 02:14:37,813 - 310829 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.231/172.30.64.231-AfterPatching-2026-07-18-02-14-37-813.log
+2026-07-18 02:14:37,876 - 310829 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.231/172.30.64.231-Validation-details-2026-07-18-02-14-37-813.html
+2026-07-18 02:14:38,089 - 310829 - INFO - i-0e3b72abbce3a3304: Cron was not active - skipping enable
+2026-07-18 02:14:38,180 - 310829 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-18 02:14:38,180 - 310829 - INFO - GREEN mail sent for i-0e3b72abbce3a3304
+2026-07-18 02:14:38,419 - 310829 - INFO - Started i-0e3b72abbce3a3304 in 0:04:27.794522
+2026-07-18 02:14:38,420 - 310829 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-18 02:16:38,482 - 310829 - INFO - Deregistering i-05cfeb855e5c57f60 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c
+2026-07-18 02:16:38,590 - 310829 - INFO - Deregistering i-05cfeb855e5c57f60 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16
+2026-07-18 02:16:38,644 - 310829 - INFO - Stopping EC2 instance: i-05cfeb855e5c57f60 at 2026-07-18 02:16:38
+2026-07-18 02:17:54,884 - 310829 - INFO - Instance i-05cfeb855e5c57f60 stopped successfully.
+2026-07-18 02:17:55,128 - 310829 - INFO - Stopped i-05cfeb855e5c57f60 in 0:01:16.483549
+2026-07-18 02:17:55,128 - 310829 - INFO - Starting EC2 instance: i-05cfeb855e5c57f60
+2026-07-18 02:18:10,981 - 310829 - INFO - Instance i-05cfeb855e5c57f60 started successfully.
+2026-07-18 02:18:10,982 - 310829 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05cfeb855e5c57f60...
+2026-07-18 02:19:51,051 - 310829 - INFO - Registering i-05cfeb855e5c57f60 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-Desktop/eb4cdde0a78e662c
+2026-07-18 02:19:51,300 - 310829 - INFO - Registering i-05cfeb855e5c57f60 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Caseys-THT-Prod-RF/627dd22caf32ef16
+2026-07-18 02:20:51,938 - 310829 - INFO - Sent app_validation.py to i-05cfeb855e5c57f60 (command_id: 7617d4eb-0323-40f0-b506-3bf565a251cc)
+2026-07-18 02:21:22,052 - 310829 - INFO - app_validation.py output for i-05cfeb855e5c57f60:
+
+==============================================================================
+Server Availability Check Started | 2026-07-18 06:20:52.172099
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.215
+Hostname | ip-172-30-64-215.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 34.4G | 205.5G | 14% | /data
+fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | 0B | 6.8T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0d6ee544f84f0a42a.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.64.215:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 15
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.215 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3786 | caseysthtprod | jboss730eap | casethtprd_jb73 | 8080 | 172.30.64.215:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtprod/standalone
+3785 | caseysthtrfprod | jboss730eap | thtrfprd_jb730 | 8081 | 172.30.64.215:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysthtrfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-18 02:21:22,052 - 310829 - ERROR - app_validation.py errors for i-05cfeb855e5c57f60:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-18 02:21:22,054 - 310829 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.215/172.30.64.215-AfterPatching-2026-07-18-02-21-22-054.log
+2026-07-18 02:21:22,109 - 310829 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-18/q3-Caseys-tht-prod-app/172.30.64.215/172.30.64.215-Validation-details-2026-07-18-02-21-22-054.html
+2026-07-18 02:21:22,316 - 310829 - INFO - i-05cfeb855e5c57f60: Cron was not active - skipping enable
+2026-07-18 02:21:22,389 - 310829 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-18 02:21:22,390 - 310829 - INFO - GREEN mail sent for i-05cfeb855e5c57f60
+2026-07-18 02:21:22,637 - 310829 - INFO - Started i-05cfeb855e5c57f60 in 0:03:27.509315
+2026-07-18 02:21:22,638 - 310829 - INFO - All instances processed.
+2026-07-18 02:21:22,643 - 310829 - INFO - Restart Total time: 0:13:36.096816
+2026-07-18 02:21:22,643 - 310829 - INFO - Auto-confirmed services are restarted
+2026-07-18 02:21:22,643 - 310829 - INFO - Confirmed - services are started
+2026-07-18 02:21:22,756 - 310829 - INFO - The following instances have failed the patch: []
+2026-07-18 02:21:22,757 - 310829 - INFO - No instances have failed the patch.
+2026-07-18 02:21:22,757 - 310829 - INFO - Total Patch Process time: 0:21:20.484274
+2026-07-18 02:22:23,293 - 310829 - INFO - Log file ./logs/patching_2026-07-18_q3-Caseys-tht-prod-app.log uploaded to s3://q3-2026-aws-security-patching/q3-Caseys-tht-prod-app_Patch/2026-07-18/patching_2026-07-18_q3-Caseys-tht-prod-app.log

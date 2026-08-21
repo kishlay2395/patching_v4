@@ -1,0 +1,149 @@
+2026-04-11 01:00:03,450 - 459139 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-11 01:00:03,450 - 459139 - INFO - Script Start Time: 2026-04-11 01:00:03
+2026-04-11 01:00:04,008 - 459139 - INFO - Instance(s) selected for Patching: {'i-02703e160c186ce79': '172.26.10.21'}
+2026-04-11 01:00:04,093 - 459139 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-11 01:00:04,093 - 459139 - INFO - Now patching instances at: 2026-04-11 01:00:04
+2026-04-11 01:00:04,244 - 459139 - INFO - Sending patch command to instance i-02703e160c186ce79
+2026-04-11 01:00:05,190 - 459139 - INFO - Command sent successfully to instance i-02703e160c186ce79. Command ID: 7202bdc7-56f2-480e-9765-3f8940f2990b
+2026-04-11 01:02:37,969 - 459139 - INFO - All patches applied successfully.
+2026-04-11 01:02:37,970 - 459139 - INFO - Patching end time: 2026-04-11 01:02:37
+2026-04-11 01:02:37,970 - 459139 - INFO - Patch Elapsed time: 0:02:33.876396
+2026-04-11 01:02:38,063 - 459139 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-11 01:02:38,063 - 459139 - INFO - Confirmed - services are stopped
+2026-04-11 01:02:42,271 - 459139 - INFO - Discovered TG map: {'i-02703e160c186ce79': ['arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF/00978267fe4f26a5', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b', 'arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6']}
+2026-04-11 01:02:43,864 - 459139 - INFO - Sent app_validation.py to i-02703e160c186ce79 (command_id: a5efc538-4626-497d-9e57-5dc8a22b9478)
+2026-04-11 01:03:14,175 - 459139 - INFO - app_validation.py output for i-02703e160c186ce79:
+
+==============================================================================
+Server Availability Check Started | 2026-04-11 05:02:43.829062
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.26.10.21
+Hostname | ip-172-26-10-21.ap-southeast-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 32.2G | 207.7G | 13% | /data
+/dev/nvme1n1p2 | 239.9G | 32.2G | 207.7G | 13% | /data2
+/dev/nvme1n1p2 | 239.9G | 32.2G | 207.7G | 13% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.26.10.21:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.26.10.21 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bdluat_ict, bdluat_event, bdluat_repl, bdluat_wld, bdluat_sch, bdluat_rccl, bdluat_lbl, bdluat_bisd, bdluat_invbt, bdluat_dwa, bdluat_mpcpt, bdluat_chgdae, bdluat_inbq, bdluat_jqgrid, bdluat_rpt, bdluat_apick
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bdluat_ict | /data/batchapp/softeon/bdluat/inventorycomputationbytaskdaemon
+bdluat_event | /data/batchapp/softeon/bdluat/eventdaemon
+bdluat_repl | /data/batchapp/softeon/bdluat/replenishmentdaemon
+bdluat_wld | /data/batchapp/softeon/bdluat/wavelaunchdaemon
+bdluat_sch | /data/batchapp/softeon/bdluat/schedulerdaemon
+bdluat_rccl | /data/batchapp/softeon/bdluat/replenishmentpickloccanceldaemon
+bdluat_lbl | /data/batchapp/softeon/bdluat/labeldaemon
+bdluat_bisd | /data/batchapp/softeon/bdluat/billinginvsnapshotdaemon
+bdluat_invbt | /data/batchapp/softeon/bdluat/billinginvoicebatchdaemon
+bdluat_dwa | /data/batchapp/softeon/bdluat/downloaddaemon
+bdluat_mpcpt | /data/batchapp/softeon/bdluat/picktooldaemon
+bdluat_chgdae | /data/batchapp/softeon/bdluat/billingchargesbatchdaemon
+bdluat_inbq | /data/batchapp/softeon/bdluat/uploaddaemon
+bdluat_jqgrid | /data/batchapp/softeon/bdluat/reportjqgridexportdaemon
+bdluat_rpt | /data/batchapp/softeon/bdluat/reportdaemon
+bdluat_apick | /data/batchapp/softeon/bdluat/autopicktooldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+655747 | bdlrfuat | jboss800eap | bdlrfuat_jb800e | 8081 | 172.26.10.21:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlrfuat/standalone
+2369789 | bdlswpuat | jboss800eap | bdlswpuat_jb800 | 8082 | 172.26.10.21:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdlswpuat/standalone
+653249 | bdluat | jboss800eap | bdluat_jb800eap | 8080 | 172.26.10.21:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bdluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-11 05:02:44.819826
+==============================================================================
+
+2026-04-11 01:03:14,176 - 459139 - ERROR - app_validation.py errors for i-02703e160c186ce79:
+
+2026-04-11 01:03:14,177 - 459139 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-11/BDL-UAT-q2-26/172.26.10.21/172.26.10.21-BeforePatching-2026-04-11-01-03-14-177.log
+2026-04-11 01:03:14,177 - 459139 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a
+2026-04-11 01:03:15,044 - 459139 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a
+2026-04-11 01:03:15,299 - 459139 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF/00978267fe4f26a5
+2026-04-11 01:03:15,556 - 459139 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b
+2026-04-11 01:03:15,796 - 459139 - INFO - Deregistering i-02703e160c186ce79 from TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6
+2026-04-11 01:03:16,043 - 459139 - INFO - Stopping EC2 instance: i-02703e160c186ce79 at 2026-04-11 01:03:16
+2026-04-11 01:05:04,642 - 459139 - INFO - Instance i-02703e160c186ce79 stopped successfully.
+2026-04-11 01:05:04,782 - 459139 - INFO - Stopped i-02703e160c186ce79 in 0:01:48.738687
+2026-04-11 01:05:04,783 - 459139 - INFO - Starting EC2 instance: i-02703e160c186ce79
+2026-04-11 01:05:21,244 - 459139 - INFO - Instance i-02703e160c186ce79 started successfully.
+2026-04-11 01:05:21,244 - 459139 - INFO - Waiting 50 seconds for SSM agent to be ready on i-02703e160c186ce79...
+2026-04-11 01:06:11,294 - 459139 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a
+2026-04-11 01:06:12,259 - 459139 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop-Int/644a7e6ef497607a
+2026-04-11 01:06:12,598 - 459139 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF/00978267fe4f26a5
+2026-04-11 01:06:12,962 - 459139 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-RF-Int/eb4a0b8cad556d8b
+2026-04-11 01:06:13,281 - 459139 - INFO - Registering i-02703e160c186ce79 to TG arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-SWP/fd0ebb270715ffb6
+2026-04-11 01:11:16,936 - 459139 - WARNING - i-02703e160c186ce79 not healthy in arn:aws:elasticloadbalancing:ap-southeast-2:835314132208:targetgroup/BDL-UAT-Desktop/3b82bb388e4dd62a after timeout.
+2026-04-11 01:12:48,730 - 459139 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-11 01:12:48,731 - 459139 - ERROR - Aborting workflow: i-02703e160c186ce79 is not healthy after restart.
+2026-04-11 01:12:48,733 - 459139 - INFO - Restart Total time: 0:10:10.551666
+2026-04-11 01:12:48,733 - 459139 - INFO - Auto-confirmed services are restarted
+2026-04-11 01:12:48,733 - 459139 - INFO - Confirmed - services are started
+2026-04-11 01:12:48,857 - 459139 - INFO - The following instances have failed the patch: []
+2026-04-11 01:12:48,857 - 459139 - INFO - No instances have failed the patch.
+2026-04-11 01:12:48,857 - 459139 - INFO - Total Patch Process time: 0:12:45.406403
+2026-04-11 01:13:49,185 - 459139 - INFO - Log file ./logs/patching_2026-04-11_BDL-UAT-q2-26.log uploaded to s3://q2-2026-aws-security-patching/BDL-UAT-q2-26_Patch/2026-04-11/patching_2026-04-11_BDL-UAT-q2-26.log

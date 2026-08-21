@@ -1,0 +1,135 @@
+2026-05-31 01:15:03,301 - 1892507 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-31 01:15:03,301 - 1892507 - INFO - Script Start Time: 2026-05-31 01:15:03
+2026-05-31 01:15:03,604 - 1892507 - INFO - Instance(s) selected for Patching: {'i-0b6626698c865b22b': '172.31.10.141', 'i-0977a2a8c911b5f45': '172.31.10.209'}
+2026-05-31 01:15:03,676 - 1892507 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 01:15:03,676 - 1892507 - INFO - Now patching instances at: 2026-05-31 01:15:03
+2026-05-31 01:15:03,768 - 1892507 - INFO - Sending patch command to instance i-0977a2a8c911b5f45
+2026-05-31 01:15:03,912 - 1892507 - INFO - Command sent successfully to instance i-0977a2a8c911b5f45. Command ID: 65a0a217-e0f9-4c80-a8c1-a51594359bc9
+2026-05-31 01:15:04,064 - 1892507 - INFO - Sending patch command to instance i-0b6626698c865b22b
+2026-05-31 01:15:04,170 - 1892507 - INFO - Command sent successfully to instance i-0b6626698c865b22b. Command ID: 4e9a2a30-618f-462a-9105-ec002a04d431
+2026-05-31 01:23:06,476 - 1892507 - INFO - All patches applied successfully.
+2026-05-31 01:23:06,476 - 1892507 - INFO - Patching end time: 2026-05-31 01:23:06
+2026-05-31 01:23:06,476 - 1892507 - INFO - Patch Elapsed time: 0:08:02.799981
+2026-05-31 01:23:06,556 - 1892507 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-31 01:23:06,556 - 1892507 - INFO - Confirmed - services are stopped
+2026-05-31 01:23:26,224 - 1892507 - INFO - Discovered TG map: {'i-0977a2a8c911b5f45': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Production/9ce618f531c2ad67', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-SWP-Stage/d75db038759d2e77', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Stage-Production/b74a2478909f1876'], 'i-0b6626698c865b22b': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Production/9ce618f531c2ad67']}
+2026-05-31 01:23:26,625 - 1892507 - INFO - Sent app_validation.py to i-0977a2a8c911b5f45 (command_id: fe545997-b8ed-431a-94ec-9b51372c08bc)
+2026-05-31 01:23:56,732 - 1892507 - INFO - app_validation.py output for i-0977a2a8c911b5f45:
+
+==============================================================================
+Server Availability Check Started | 2026-05-31 01:23:26.905573
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.10.209
+Hostname | ip-172-31-10-209
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme2n1p1 | 100.0G | 582.0M | 99.4G | 0% | /data2
+/dev/nvme1n1p2 | 189.9G | 154.1G | 35.8G | 81% | /data
+fs-a9caac1d.efs.us-east-1.amazonaws.com:/FILEATTACHMENTS | 0B | 292.3G | 0B | 0% | /data2/softeon/ptsprod/jboss72/FILEATTACHMENTS
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-a9caac1d.efs.us-east-1.amazonaws.com:/FILEATTACHMENTS | /data2/softeon/ptsprod/jboss72/FILEATTACHMENTS | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.10.209:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.10.209 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 1
+Non-Standalone Java Processes | pts-scheduler-ms
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 1
+Java-Name | Java-Path
+pts-scheduler-ms | /data/softeon/batchapps/ptsprod_jboss72/Scheduler-MicroService-J17
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3537 | ptsdashboard | app | ptsdashboard_jboss | 8081 | 172.31.10.209:8081 | UP | 200 | Disabled | /data/app/jboss72/ptsdashboard/standalone
+1628815 | ptsprod | app | pts-prod-jboss | 8001 | 172.31.10.209:8001 | UP | 200 | Disabled | /data/app/jboss72/ptsprod/standalone
+1627090 | ptsprod-stage | app | ptsprod_stage_jboss | 8082 | 172.31.10.209:8082 | UP | 200 | Disabled | /data/app/jboss72/ptsprod-stage/standalone
+4220 | swpptsnvstage | jboss800eap | sptsnvsta_jb800 | 8084 | 172.31.10.209:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swpptsnvstage/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-31 01:23:29.148103
+==============================================================================
+
+2026-05-31 01:23:56,732 - 1892507 - ERROR - app_validation.py errors for i-0977a2a8c911b5f45:
+
+2026-05-31 01:23:56,734 - 1892507 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-31/PTS-PROD-APP/172.31.10.209/172.31.10.209-BeforePatching-2026-05-31-01-23-56-733.log
+2026-05-31 01:23:56,734 - 1892507 - INFO - Deregistering i-0977a2a8c911b5f45 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Production/9ce618f531c2ad67
+2026-05-31 01:23:56,800 - 1892507 - INFO - Deregistering i-0977a2a8c911b5f45 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-SWP-Stage/d75db038759d2e77
+2026-05-31 01:23:56,845 - 1892507 - INFO - Deregistering i-0977a2a8c911b5f45 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Stage-Production/b74a2478909f1876
+2026-05-31 01:23:56,896 - 1892507 - INFO - Stopping EC2 instance: i-0977a2a8c911b5f45 at 2026-05-31 01:23:56
+2026-05-31 01:26:28,541 - 1892507 - INFO - Instance i-0977a2a8c911b5f45 stopped successfully.
+2026-05-31 01:26:28,808 - 1892507 - INFO - Stopped i-0977a2a8c911b5f45 in 0:02:31.912220
+2026-05-31 01:26:28,809 - 1892507 - INFO - Starting EC2 instance: i-0977a2a8c911b5f45
+2026-05-31 01:26:44,873 - 1892507 - INFO - Instance i-0977a2a8c911b5f45 started successfully.
+2026-05-31 01:26:44,874 - 1892507 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0977a2a8c911b5f45...
+2026-05-31 01:28:24,901 - 1892507 - INFO - Registering i-0977a2a8c911b5f45 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Production/9ce618f531c2ad67
+2026-05-31 01:28:25,052 - 1892507 - INFO - Registering i-0977a2a8c911b5f45 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-SWP-Stage/d75db038759d2e77
+2026-05-31 01:28:25,189 - 1892507 - INFO - Registering i-0977a2a8c911b5f45 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Stage-Production/b74a2478909f1876
+2026-05-31 01:33:56,023 - 1892507 - WARNING - i-0977a2a8c911b5f45 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-SWP-Stage/d75db038759d2e77 after timeout.
+2026-05-31 01:38:56,681 - 1892507 - WARNING - i-0977a2a8c911b5f45 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/PTS-Stage-Production/b74a2478909f1876 after timeout.
+2026-05-31 01:38:56,876 - 1892507 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-05-31 01:38:56,876 - 1892507 - ERROR - Aborting workflow: i-0977a2a8c911b5f45 is not healthy after restart.
+2026-05-31 01:38:56,879 - 1892507 - INFO - Restart Total time: 0:15:50.138100
+2026-05-31 01:38:56,880 - 1892507 - INFO - Auto-confirmed services are restarted
+2026-05-31 01:38:56,880 - 1892507 - INFO - Confirmed - services are started
+2026-05-31 01:38:57,013 - 1892507 - INFO - The following instances have failed the patch: []
+2026-05-31 01:38:57,013 - 1892507 - INFO - No instances have failed the patch.
+2026-05-31 01:38:57,013 - 1892507 - INFO - Total Patch Process time: 0:23:53.711628
+2026-05-31 01:39:57,592 - 1892507 - INFO - Log file ./logs/patching_2026-05-31_PTS-PROD-APP.log uploaded to s3://q2-2026-aws-security-patching/PTS-PROD-APP_Patch/2026-05-31/patching_2026-05-31_PTS-PROD-APP.log

@@ -1,0 +1,283 @@
+2026-05-08 03:30:03,196 - 485775 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-08 03:30:03,196 - 485775 - INFO - Script Start Time: 2026-05-08 03:30:03
+2026-05-08 03:30:03,795 - 485775 - INFO - Instance(s) selected for Patching: {'i-00206421d09489365': '10.0.10.133'}
+2026-05-08 03:30:03,869 - 485775 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-08 03:30:03,870 - 485775 - INFO - Now patching instances at: 2026-05-08 03:30:03
+2026-05-08 03:30:03,967 - 485775 - INFO - Sending patch command to instance i-00206421d09489365
+2026-05-08 03:30:04,173 - 485775 - INFO - Command sent successfully to instance i-00206421d09489365. Command ID: 6c0be31c-bdcf-4ff5-8b48-c98758ff6c58
+2026-05-08 03:37:36,143 - 485775 - INFO - All patches applied successfully.
+2026-05-08 03:37:36,144 - 485775 - INFO - Patching end time: 2026-05-08 03:37:36
+2026-05-08 03:37:36,144 - 485775 - INFO - Patch Elapsed time: 0:07:32.274536
+2026-05-08 03:37:36,209 - 485775 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-08 03:37:36,209 - 485775 - INFO - Confirmed - services are stopped
+2026-05-08 03:37:56,462 - 485775 - INFO - Discovered TG map: {}
+2026-05-08 03:37:56,881 - 485775 - INFO - Sent app_validation.py to i-00206421d09489365 (command_id: 5d068c8c-37fa-4d6d-9ae7-dadcf04c3edd)
+2026-05-08 03:38:26,979 - 485775 - INFO - app_validation.py output for i-00206421d09489365:
+
+==============================================================================
+Server Availability Check Started | 2026-05-08 03:37:57.285469
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.133
+Hostname | ip-10-0-10-133
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 178.2G | 51.7G | 77% | /data
+fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | 0B | 3.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared/	10.0.10.158(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/	10.0.10.48(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.133:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.133 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 34
+Non-Standalone Java Processes | sclprod_downloaddaemon, scle_calzo, sclprod_autospnclosedaemon, sclprod_replpickloccanceldaemon, scle_cali, sclprod_labeldaemon, sclprod_jqgridreportdaemon, scle_o_calo, sclprod_ftppollerdaemon, sclprod_eventdaemon, rrsprod_hardallocationdaemon, rrsprod_in_eptinbounddaemon, sclprod_reportdaemon, rrsprod_eptoutbounddaemon, sclprod_uploaddaemon, sclprod_schedulerdaemon, sclprod_wavelaunchdaemon, sclprod_ftpdaemon, sclprod_invcomputationbytask, rrsfs1_wld, rrsfs1_hrdal, rrsfs1_ict, rrsfs1_lbl, rrsfs1_event, rrsfs1_inbq, rrsfs1_jqgrid, rrsfs1_sch, rrsfs1_rpt, rrsfs1_clspn, rrsfs1_ftp, rrsfs1_dwa, rrsfs1_repl, rrsfs1_pftp, rrsfs1_rccl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 34
+Java-Name | Java-Path
+sclprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_downloaddaemon
+scle_calzo | /data/app/java/jdk1.7.0_80/bin/scle_calzo
+sclprod_autospnclosedaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_autospnclosedaemon
+sclprod_replpickloccanceldaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_replpickloccanceldaemon
+scle_cali | /data/app/java/jdk1.7.0_80/bin/scle_cali
+sclprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_labeldaemon
+sclprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_jqgridreportdaemon
+scle_o_calo | /data/app/java/jdk1.7.0_80/bin/scle_o_calo
+sclprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_ftppollerdaemon
+sclprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_eventdaemon
+rrsprod_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_hardallocationdaemon
+rrsprod_in_eptinbounddaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_in_eptinbounddaemon
+sclprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_reportdaemon
+rrsprod_eptoutbounddaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_eptoutbounddaemon
+sclprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_uploaddaemon
+sclprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_schedulerdaemon
+sclprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_wavelaunchdaemon
+sclprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_ftpdaemon
+sclprod_invcomputationbytask | /data/app/java/jdk1.7.0_80/bin/sclprod_invcomputationbytask
+rrsfs1_wld | /data/batchapp/softeon/rrsfs1prod/wavelaunchdaemon
+rrsfs1_hrdal | /data/batchapp/softeon/rrsfs1prod/containerhardallocationdaemon
+rrsfs1_ict | /data/batchapp/softeon/rrsfs1prod/inventorycomputationdaemon
+rrsfs1_lbl | /data/batchapp/softeon/rrsfs1prod/labeldaemon
+rrsfs1_event | /data/batchapp/softeon/rrsfs1prod/eventdaemon
+rrsfs1_inbq | /data/batchapp/softeon/rrsfs1prod/uploaddeamon
+rrsfs1_jqgrid | /data/batchapp/softeon/rrsfs1prod/reportjqgridexportdaemon
+rrsfs1_sch | /data/batchapp/softeon/rrsfs1prod/schedulardaemon
+rrsfs1_rpt | /data/batchapp/softeon/rrsfs1prod/reportdaemon
+rrsfs1_clspn | /data/batchapp/softeon/rrsfs1prod/spnclosedaemon
+rrsfs1_ftp | /data/batchapp/softeon/rrsfs1prod/ftpdaemon
+rrsfs1_dwa | /data/batchapp/softeon/rrsfs1prod/downloaddaemon
+rrsfs1_repl | /data/batchapp/softeon/rrsfs1prod/replenishmentdaemon
+rrsfs1_pftp | /data/batchapp/softeon/rrsfs1prod/ftppollerdaemon
+rrsfs1_rccl | /data/batchapp/softeon/rrsfs1prod/replenishmentpickloccanceldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-08 03:37:57.897912
+==============================================================================
+
+2026-05-08 03:38:26,979 - 485775 - ERROR - app_validation.py errors for i-00206421d09489365:
+
+2026-05-08 03:38:26,981 - 485775 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-Batch/10.0.10.133/10.0.10.133-BeforePatching-2026-05-08-03-38-26-980.log
+2026-05-08 03:38:26,981 - 485775 - INFO - Stopping EC2 instance: i-00206421d09489365 at 2026-05-08 03:38:26
+2026-05-08 03:39:58,694 - 485775 - INFO - Instance i-00206421d09489365 stopped successfully.
+2026-05-08 03:39:58,836 - 485775 - INFO - Stopped i-00206421d09489365 in 0:01:31.854852
+2026-05-08 03:39:58,836 - 485775 - INFO - Starting EC2 instance: i-00206421d09489365
+2026-05-08 03:40:14,863 - 485775 - INFO - Instance i-00206421d09489365 started successfully.
+2026-05-08 03:40:14,863 - 485775 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00206421d09489365...
+2026-05-08 03:41:55,222 - 485775 - INFO - Sent app_validation.py to i-00206421d09489365 (command_id: 286badb0-9ad9-4d2b-88ff-73812ffacaef)
+2026-05-08 03:42:25,314 - 485775 - INFO - app_validation.py output for i-00206421d09489365:
+
+==============================================================================
+Server Availability Check Started | 2026-05-08 03:41:56.467360
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.133
+Hostname | ip-10-0-10-133
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 178.1G | 51.7G | 77% | /data
+fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | 0B | 3.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/shared/	10.0.10.158(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/	10.0.10.48(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.133 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 34
+Batch/Daemon Java Processes | 34
+Non-Standalone Java Processes | rrsfs1_repl, sclprod_jqgridreportdaemon, rrsprod_hardallocationdaemon, sclprod_reportdaemon, rrsfs1_wld, rrsfs1_rpt, rrsfs1_event, rrsfs1_inbq, rrsfs1_clspn, rrsfs1_dwa, rrsfs1_sch, rrsfs1_hrdal, rrsfs1_lbl, rrsfs1_ftp, rrsfs1_jqgrid, rrsfs1_rccl, rrsfs1_ict, sclprod_labeldaemon, sclprod_ftppollerdaemon, sclprod_downloaddaemon, sclprod_autospnclosedaemon, rrsprod_in_eptinbounddaemon, sclprod_wavelaunchdaemon, sclprod_ftpdaemon, sclprod_uploaddaemon, sclprod_eventdaemon, scle_o_calo, scle_calzo, sclprod_invcomputationbytask, sclprod_replpickloccanceldaemon, rrsprod_eptoutbounddaemon, rrsfs1_pftp, scle_cali, sclprod_schedulerdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 34
+Java-Name | Java-Path
+rrsfs1_repl | /data/batchapp/softeon/rrsfs1prod/replenishmentdaemon
+sclprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_jqgridreportdaemon
+rrsprod_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_hardallocationdaemon
+sclprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_reportdaemon
+rrsfs1_wld | /data/batchapp/softeon/rrsfs1prod/wavelaunchdaemon
+rrsfs1_rpt | /data/batchapp/softeon/rrsfs1prod/reportdaemon
+rrsfs1_event | /data/batchapp/softeon/rrsfs1prod/eventdaemon
+rrsfs1_inbq | /data/batchapp/softeon/rrsfs1prod/uploaddeamon
+rrsfs1_clspn | /data/batchapp/softeon/rrsfs1prod/spnclosedaemon
+rrsfs1_dwa | /data/batchapp/softeon/rrsfs1prod/downloaddaemon
+rrsfs1_sch | /data/batchapp/softeon/rrsfs1prod/schedulardaemon
+rrsfs1_hrdal | /data/batchapp/softeon/rrsfs1prod/containerhardallocationdaemon
+rrsfs1_lbl | /data/batchapp/softeon/rrsfs1prod/labeldaemon
+rrsfs1_ftp | /data/batchapp/softeon/rrsfs1prod/ftpdaemon
+rrsfs1_jqgrid | /data/batchapp/softeon/rrsfs1prod/reportjqgridexportdaemon
+rrsfs1_rccl | /data/batchapp/softeon/rrsfs1prod/replenishmentpickloccanceldaemon
+rrsfs1_ict | /data/batchapp/softeon/rrsfs1prod/inventorycomputationdaemon
+sclprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_labeldaemon
+sclprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_ftppollerdaemon
+sclprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_downloaddaemon
+sclprod_autospnclosedaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_autospnclosedaemon
+rrsprod_in_eptinbounddaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_in_eptinbounddaemon
+sclprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_wavelaunchdaemon
+sclprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_ftpdaemon
+sclprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_uploaddaemon
+sclprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_eventdaemon
+scle_o_calo | /data/app/java/jdk1.7.0_80/bin/scle_o_calo
+scle_calzo | /data/app/java/jdk1.7.0_80/bin/scle_calzo
+sclprod_invcomputationbytask | /data/app/java/jdk1.7.0_80/bin/sclprod_invcomputationbytask
+sclprod_replpickloccanceldaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_replpickloccanceldaemon
+rrsprod_eptoutbounddaemon | /data/app/java/jdk1.7.0_80/bin/rrsprod_eptoutbounddaemon
+rrsfs1_pftp | /data/batchapp/softeon/rrsfs1prod/ftppollerdaemon
+scle_cali | /data/app/java/jdk1.7.0_80/bin/scle_cali
+sclprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclprod_schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-08 03:42:01.119605
+==============================================================================
+
+2026-05-08 03:42:25,314 - 485775 - ERROR - app_validation.py errors for i-00206421d09489365:
+
+2026-05-08 03:42:25,316 - 485775 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-Batch/10.0.10.133/10.0.10.133-AfterPatching-2026-05-08-03-42-25-315.log
+2026-05-08 03:42:25,377 - 485775 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-Batch/10.0.10.133/10.0.10.133-Validation-details-2026-05-08-03-42-25-315.html
+2026-05-08 03:42:25,589 - 485775 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-08 03:42:25,589 - 485775 - INFO - HTML validation report email sent for i-00206421d09489365
+2026-05-08 03:42:25,729 - 485775 - INFO - Started i-00206421d09489365 in 0:02:26.892409
+2026-05-08 03:42:25,729 - 485775 - INFO - All instances processed.
+2026-05-08 03:42:25,732 - 485775 - INFO - Restart Total time: 0:04:49.396282
+2026-05-08 03:42:25,733 - 485775 - INFO - Auto-confirmed services are restarted
+2026-05-08 03:42:25,733 - 485775 - INFO - Confirmed - services are started
+2026-05-08 03:42:25,847 - 485775 - INFO - The following instances have failed the patch: []
+2026-05-08 03:42:25,847 - 485775 - INFO - No instances have failed the patch.
+2026-05-08 03:42:25,847 - 485775 - INFO - Total Patch Process time: 0:12:22.651081
+2026-05-08 03:43:26,205 - 485775 - INFO - Log file ./logs/patching_2026-05-08_SaddleCreek-RRS-Batch.log uploaded to s3://q2-2026-aws-security-patching/SaddleCreek-RRS-Batch_Patch/2026-05-08/patching_2026-05-08_SaddleCreek-RRS-Batch.log

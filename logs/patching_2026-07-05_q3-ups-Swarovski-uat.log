@@ -1,0 +1,537 @@
+2026-07-05 01:30:03,567 - 3776743 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 01:30:03,567 - 3776743 - INFO - Script Start Time: 2026-07-05 01:30:03
+2026-07-05 01:30:04,214 - 3776743 - INFO - Instance(s) selected for Patching: {'i-0fc40ca6203f3eb1f': '172.29.60.221'}
+2026-07-05 01:30:04,279 - 3776743 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 01:30:04,279 - 3776743 - INFO - Now patching instances at: 2026-07-05 01:30:04
+2026-07-05 01:30:09,487 - 3776743 - INFO - i-0fc40ca6203f3eb1f: Cron was active = True
+2026-07-05 01:30:09,656 - 3776743 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 01:30:09,657 - 3776743 - INFO - Disabled cron for: ['i-0fc40ca6203f3eb1f']
+2026-07-05 01:30:09,901 - 3776743 - INFO - Sent app_validation.py to i-0fc40ca6203f3eb1f (command_id: 779b2f1e-f2c4-4d12-9fd0-5e8fa80cb329)
+2026-07-05 01:30:39,982 - 3776743 - INFO - app_validation.py output for i-0fc40ca6203f3eb1f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 05:30:10.175370
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.221
+Hostname | ip-172-29-60-221
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 107.9G | 182.0G | 37% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.221:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 36
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.221 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | swarouat_dwa, swarouat_event, swarouat_ftp, swarouat_harp, swarouat_lbl, swarouat_repl, swarouat_rpt, swarouat_rpex, swarouat_sch, swarouat_wave, swarouat_inbq, swarouat_oefs, swarouat_vas, swarouat_wsq, swarouat_locus, swarouat_bre, swarouat_ccd, swarouat_bulkp, swarouat_2wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+swarouat_dwa | /data/batchapp/softeon/upsswskuat/downloaddaemon
+swarouat_event | /data/batchapp/softeon/upsswskuat/eventdaemon
+swarouat_ftp | /data/batchapp/softeon/upsswskuat/ftpdaemon
+swarouat_harp | /data/batchapp/softeon/upsswskuat/hardallocationdaemon
+swarouat_lbl | /data/batchapp/softeon/upsswskuat/labeldaemon
+swarouat_repl | /data/batchapp/softeon/upsswskuat/replenishmentdaemon
+swarouat_rpt | /data/batchapp/softeon/upsswskuat/reportdaemon
+swarouat_rpex | /data/batchapp/softeon/upsswskuat/reportjqgridexportdaemon
+swarouat_sch | /data/batchapp/softeon/upsswskuat/schedulerdaemon
+swarouat_wave | /data/batchapp/softeon/upsswskuat/wavelaunchdaemon
+swarouat_inbq | /data/batchapp/softeon/upsswskuat/uploaddaemon
+swarouat_oefs | /data/batchapp/softeon/upsswskuat/ordextfilesearchdaemon
+swarouat_vas | /data/batchapp/softeon/upsswskuat/vasrmidaemon
+swarouat_wsq | /data/batchapp/softeon/upsswskuat/wsqdaemon
+swarouat_locus | /data/batchapp/softeon/upsswskuat/locusdaemon
+swarouat_bre | /data/batchapp/softeon/upsswskuat/breruledaemon
+swarouat_ccd | /data/batchapp/softeon/upsswskuat/clustercreationdaemon
+swarouat_bulkp | /data/batchapp/softeon/upsswskuat/bulkpdaemon
+swarouat_2wsq | /data/batchapp/softeon/upsswskuat/wsq2daemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3384721 | swkuiwesuat | jboss730eap | swkuiwest_jb730 | 8082 | 172.29.60.221:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/swkuiwesuat/standalone
+1807702 | upsswskv8rfuat | jboss730eap | upsswskv8rf_j73 | 8084 | 172.29.60.221:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8rfuat/standalone
+1807734 | upsswskv8uat | jboss730eap | upsswskv8_jb73 | 8083 | 172.29.60.221:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 05:30:11.294844
+==============================================================================
+
+2026-07-05 01:30:39,982 - 3776743 - ERROR - app_validation.py errors for i-0fc40ca6203f3eb1f:
+
+2026-07-05 01:30:39,984 - 3776743 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-BeforePatching-2026-07-05-01-30-39-983.log
+2026-07-05 01:30:40,068 - 3776743 - INFO - Sending patch command to instance i-0fc40ca6203f3eb1f
+2026-07-05 01:30:40,178 - 3776743 - INFO - Command sent successfully to instance i-0fc40ca6203f3eb1f. Command ID: 3bbf8eba-26f1-4930-b641-c82e4c55a01d
+2026-07-05 01:39:42,289 - 3776743 - INFO - All patches applied successfully.
+2026-07-05 01:39:42,291 - 3776743 - INFO - Patching end time: 2026-07-05 01:39:42
+2026-07-05 01:39:42,291 - 3776743 - INFO - Patch Elapsed time: 0:09:38.011706
+2026-07-05 01:39:42,386 - 3776743 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 01:39:42,387 - 3776743 - INFO - Confirmed - services are stopped
+2026-07-05 01:40:02,934 - 3776743 - INFO - Discovered TG map: {'i-0fc40ca6203f3eb1f': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-WES/1ef7103f52604352', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-Desktop/d0c4b749284734fa', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-RF/bc5c4132f79dc1ed']}
+2026-07-05 01:40:03,381 - 3776743 - INFO - Deregistering i-0fc40ca6203f3eb1f from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-WES/1ef7103f52604352
+2026-07-05 01:40:03,455 - 3776743 - INFO - Deregistering i-0fc40ca6203f3eb1f from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-Desktop/d0c4b749284734fa
+2026-07-05 01:40:03,507 - 3776743 - INFO - Deregistering i-0fc40ca6203f3eb1f from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-RF/bc5c4132f79dc1ed
+2026-07-05 01:40:03,549 - 3776743 - INFO - Stopping EC2 instance: i-0fc40ca6203f3eb1f at 2026-07-05 01:40:03
+2026-07-05 01:41:19,716 - 3776743 - INFO - Instance i-0fc40ca6203f3eb1f stopped successfully.
+2026-07-05 01:41:19,858 - 3776743 - INFO - Stopped i-0fc40ca6203f3eb1f in 0:01:16.309714
+2026-07-05 01:41:19,859 - 3776743 - INFO - Starting EC2 instance: i-0fc40ca6203f3eb1f
+2026-07-05 01:41:36,232 - 3776743 - INFO - Instance i-0fc40ca6203f3eb1f started successfully.
+2026-07-05 01:41:36,232 - 3776743 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0fc40ca6203f3eb1f...
+2026-07-05 01:43:16,301 - 3776743 - INFO - Registering i-0fc40ca6203f3eb1f to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-WES/1ef7103f52604352
+2026-07-05 01:43:16,465 - 3776743 - INFO - Registering i-0fc40ca6203f3eb1f to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-Desktop/d0c4b749284734fa
+2026-07-05 01:43:16,600 - 3776743 - INFO - Registering i-0fc40ca6203f3eb1f to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-Swarovski-UAT-RF/bc5c4132f79dc1ed
+2026-07-05 01:44:47,195 - 3776743 - INFO - Sent app_validation.py to i-0fc40ca6203f3eb1f (command_id: 3faa3507-f04a-43ed-b555-8ceed9f2db4f)
+2026-07-05 01:45:17,308 - 3776743 - INFO - app_validation.py output for i-0fc40ca6203f3eb1f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 05:44:47.513694
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.221
+Hostname | ip-172-29-60-221
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 107.6G | 182.2G | 37% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.221:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 36
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.221 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2897 | swkuiwesuat | jboss730eap | swkuiwest_jb730 | 8082 | 172.29.60.221:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/swkuiwesuat/standalone
+3799 | upsswskv8rfuat | jboss730eap | upsswskv8rf_j73 | 8084 | 172.29.60.221:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8rfuat/standalone
+3997 | upsswskv8uat | jboss730eap | upsswskv8_jb73 | 8083 | 172.29.60.221:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 05:44:48.728313
+==============================================================================
+
+2026-07-05 01:45:17,308 - 3776743 - ERROR - app_validation.py errors for i-0fc40ca6203f3eb1f:
+
+2026-07-05 01:45:17,311 - 3776743 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-AfterPatching-2026-07-05-01-45-17-310.log
+2026-07-05 01:45:17,387 - 3776743 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-Validation-details-2026-07-05-01-45-17-310.html
+2026-07-05 01:45:17,686 - 3776743 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 01:45:17,687 - 3776743 - INFO - HTML validation report email sent for i-0fc40ca6203f3eb1f
+2026-07-05 01:45:17,687 - 3776743 - INFO - [Retry-1] Waiting 600s for i-0fc40ca6203f3eb1f...
+2026-07-05 01:45:17,687 - 3776743 - INFO - RED - Background retry thread started for i-0fc40ca6203f3eb1f
+2026-07-05 01:45:17,888 - 3776743 - INFO - Started i-0fc40ca6203f3eb1f in 0:03:58.029166
+2026-07-05 01:45:17,889 - 3776743 - INFO - All instances processed.
+2026-07-05 01:45:17,893 - 3776743 - INFO - Restart Total time: 0:05:35.382465
+2026-07-05 01:45:17,894 - 3776743 - INFO - Auto-confirmed services are restarted
+2026-07-05 01:45:17,894 - 3776743 - INFO - Confirmed - services are started
+2026-07-05 01:45:18,003 - 3776743 - INFO - The following instances have failed the patch: []
+2026-07-05 01:45:18,003 - 3776743 - INFO - No instances have failed the patch.
+2026-07-05 01:45:18,003 - 3776743 - INFO - Total Patch Process time: 0:15:14.435689
+2026-07-05 01:46:18,321 - 3776743 - INFO - Log file ./logs/patching_2026-07-05_q3-ups-Swarovski-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-ups-Swarovski-uat_Patch/2026-07-05/patching_2026-07-05_q3-ups-Swarovski-uat.log
+2026-07-05 01:55:17,875 - 3776743 - INFO - Sent app_validation.py to i-0fc40ca6203f3eb1f (command_id: 7e79752f-253b-4f80-ae7e-1b5ad95e84e0)
+2026-07-05 01:55:47,932 - 3776743 - INFO - app_validation.py output for i-0fc40ca6203f3eb1f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 05:55:18.122015
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.221
+Hostname | ip-172-29-60-221
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 107.6G | 182.2G | 37% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.221:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 36
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.221 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2897 | swkuiwesuat | jboss730eap | swkuiwest_jb730 | 8082 | 172.29.60.221:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/swkuiwesuat/standalone
+3799 | upsswskv8rfuat | jboss730eap | upsswskv8rf_j73 | 8084 | 172.29.60.221:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8rfuat/standalone
+3997 | upsswskv8uat | jboss730eap | upsswskv8_jb73 | 8083 | 172.29.60.221:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 05:55:18.521236
+==============================================================================
+
+2026-07-05 01:55:47,933 - 3776743 - ERROR - app_validation.py errors for i-0fc40ca6203f3eb1f:
+
+2026-07-05 01:55:47,934 - 3776743 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-AfterPatching-Retry1-2026-07-05-01-55-47-934.log
+2026-07-05 01:55:47,989 - 3776743 - INFO - [Retry-1] RED detected for UPS Swarovski UAT Application and Batch Server (172.29.60.221), retrying... (Total waited: 600s)
+2026-07-05 01:55:47,989 - 3776743 - INFO - [Retry-2] Waiting 600s for i-0fc40ca6203f3eb1f...
+2026-07-05 02:05:48,300 - 3776743 - INFO - Sent app_validation.py to i-0fc40ca6203f3eb1f (command_id: 27e0dbd9-f224-4bc6-8ae8-3abf9bbe3934)
+2026-07-05 02:06:18,392 - 3776743 - INFO - app_validation.py output for i-0fc40ca6203f3eb1f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:05:48.556762
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.221
+Hostname | ip-172-29-60-221
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 107.7G | 182.2G | 37% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.221:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 36
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.221 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2897 | swkuiwesuat | jboss730eap | swkuiwest_jb730 | 8082 | 172.29.60.221:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/swkuiwesuat/standalone
+3799 | upsswskv8rfuat | jboss730eap | upsswskv8rf_j73 | 8084 | 172.29.60.221:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8rfuat/standalone
+3997 | upsswskv8uat | jboss730eap | upsswskv8_jb73 | 8083 | 172.29.60.221:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:05:48.948994
+==============================================================================
+
+2026-07-05 02:06:18,392 - 3776743 - ERROR - app_validation.py errors for i-0fc40ca6203f3eb1f:
+
+2026-07-05 02:06:18,394 - 3776743 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-AfterPatching-Retry2-2026-07-05-02-06-18-393.log
+2026-07-05 02:06:18,447 - 3776743 - INFO - [Retry-2] RED detected for UPS Swarovski UAT Application and Batch Server (172.29.60.221), retrying... (Total waited: 1200s)
+2026-07-05 02:06:18,448 - 3776743 - INFO - [Retry-3] Waiting 600s for i-0fc40ca6203f3eb1f...
+2026-07-05 02:16:18,688 - 3776743 - INFO - Sent app_validation.py to i-0fc40ca6203f3eb1f (command_id: 47968433-0638-465a-9682-1329118f1e87)
+2026-07-05 02:16:48,761 - 3776743 - INFO - app_validation.py output for i-0fc40ca6203f3eb1f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 06:16:18.959468
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.60.221
+Hostname | ip-172-29-60-221
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 107.7G | 182.2G | 37% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.60.221:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 36
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.60.221 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2897 | swkuiwesuat | jboss730eap | swkuiwest_jb730 | 8082 | 172.29.60.221:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/swkuiwesuat/standalone
+3799 | upsswskv8rfuat | jboss730eap | upsswskv8rf_j73 | 8084 | 172.29.60.221:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8rfuat/standalone
+3997 | upsswskv8uat | jboss730eap | upsswskv8_jb73 | 8083 | 172.29.60.221:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upsswskv8uat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 06:16:19.357010
+==============================================================================
+
+2026-07-05 02:16:48,761 - 3776743 - ERROR - app_validation.py errors for i-0fc40ca6203f3eb1f:
+
+2026-07-05 02:16:48,763 - 3776743 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-05/q3-ups-Swarovski-uat/172.29.60.221/172.29.60.221-AfterPatching-Retry3-2026-07-05-02-16-48-762.log
+2026-07-05 02:16:49,117 - 3776743 - INFO - Health monitor crontab enabled on all instances
+2026-07-05 02:16:49,118 - 3776743 - WARNING - [Retry] Timeout - auto cron enabled for i-0fc40ca6203f3eb1f

@@ -1,0 +1,427 @@
+2026-08-08 00:10:03,410 - 1346809 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 00:36:28,719 - 1346809 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 00:36:28,895 - 1346809 - INFO - Log file ./logs/backup_2026-08-08.log uploaded to s3://q3-2025-aws-security-patching/q3-dib-lex-batch-prod_Patch_Backup/2026-08-08/backup_2026-08-08.log
+2026-08-08 04:10:03,050 - 1422887 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-08 04:10:03,050 - 1422887 - INFO - Script Start Time: 2026-08-08 04:10:03
+2026-08-08 04:10:03,337 - 1422887 - INFO - Tag: q3-dib-lex-batch-prod, IPs: ['10.64.24.18'], Environment: prod
+2026-08-08 04:10:03,337 - 1422887 - INFO - Instance(s) selected for Patching: {'i-06f968d5a26cb1e78': '10.64.24.18'}
+2026-08-08 04:10:03,409 - 1422887 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 04:10:03,409 - 1422887 - INFO - Now patching instances at: 2026-08-08 04:10:03
+2026-08-08 04:10:03,615 - 1422887 - INFO - Sent app_validation.py to i-06f968d5a26cb1e78 (command_id: 928a3d38-6961-4289-9f29-12806c9e9555)
+2026-08-08 04:10:33,695 - 1422887 - INFO - SSM Command Status: Success
+2026-08-08 04:10:33,695 - 1422887 - INFO - app_validation.py output for i-06f968d5a26cb1e78:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:10:03.964685
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.18
+Hostname | ip-10-64-24-18
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 85.3G | 204.5G | 29% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.24.18:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 62
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.18 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | lex_abchdis, lex_ccd, lex_dwa, lex_event, lex_ftp, lex_harp, lex_lbl, lex_repl, lex_rccl, lex_rpt, lex_1rpt, lex_jqgrid, lex_sch, lex_inbq, lex_wld, lex_zplp, lex_2vmlex, lex_vmlex
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+lex_abchdis | /data/batchapp/softeon/dibwmslexprod/autobatchdistributiondaemon
+lex_ccd | /data/batchapp/softeon/dibwmslexprod/clustercreationdaemon
+lex_dwa | /data/batchapp/softeon/dibwmslexprod/downloaddaemon
+lex_event | /data/batchapp/softeon/dibwmslexprod/eventdaemon
+lex_ftp | /data/batchapp/softeon/dibwmslexprod/ftpdaemon
+lex_harp | /data/batchapp/softeon/dibwmslexprod/hardallocationdaemon
+lex_lbl | /data/batchapp/softeon/dibwmslexprod/labeldaemon
+lex_repl | /data/batchapp/softeon/dibwmslexprod/replenishmentdaemon
+lex_rccl | /data/batchapp/softeon/dibwmslexprod/replenishmentpickloccanceldaemon
+lex_rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon
+lex_1rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon1
+lex_jqgrid | /data/batchapp/softeon/dibwmslexprod/reportjqgridexportdaemon
+lex_sch | /data/batchapp/softeon/dibwmslexprod/schedulerdaemon
+lex_inbq | /data/batchapp/softeon/dibwmslexprod/uploaddaemon
+lex_wld | /data/batchapp/softeon/dibwmslexprod/wavelaunchdaemon
+lex_zplp | /data/batchapp/softeon/dibwmslexprod/zebraprintdaemon
+lex_2vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelex2daemon
+lex_vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelexdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:10:05.054483
+==============================================================================
+
+2026-08-08 04:10:33,697 - 1422887 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-08/q3-dib-lex-batch-prod/10.64.24.18/10.64.24.18-BeforePatching-2026-08-08-04-10-33-696.log
+2026-08-08 04:10:38,950 - 1422887 - INFO - i-06f968d5a26cb1e78: Cron was active = True
+2026-08-08 04:10:39,189 - 1422887 - INFO - Health monitor crontab disabled on all instances
+2026-08-08 04:10:39,190 - 1422887 - INFO - Disabled cron for: ['i-06f968d5a26cb1e78']
+2026-08-08 04:10:39,277 - 1422887 - INFO - Sending patch command to instance i-06f968d5a26cb1e78
+2026-08-08 04:10:39,378 - 1422887 - INFO - Command sent successfully to instance i-06f968d5a26cb1e78. Command ID: 7b14f975-bd36-44c9-b6ff-d77037c970f4
+2026-08-08 04:15:10,603 - 1422887 - INFO - All patches applied successfully.
+2026-08-08 04:15:10,604 - 1422887 - INFO - Patching end time: 2026-08-08 04:15:10
+2026-08-08 04:15:10,604 - 1422887 - INFO - Patch Elapsed time: 0:05:07.194575
+2026-08-08 04:15:10,686 - 1422887 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-08 04:15:10,686 - 1422887 - INFO - Confirmed - services are stopped
+2026-08-08 04:15:31,505 - 1422887 - INFO - Discovered TG map: {}
+2026-08-08 04:15:31,741 - 1422887 - INFO - Stopping EC2 instance: i-06f968d5a26cb1e78 at 2026-08-08 04:15:31
+2026-08-08 04:17:48,209 - 1422887 - INFO - Instance i-06f968d5a26cb1e78 stopped successfully.
+2026-08-08 04:17:48,338 - 1422887 - INFO - Stopped i-06f968d5a26cb1e78 in 0:02:16.596330
+2026-08-08 04:17:48,338 - 1422887 - INFO - Starting EC2 instance: i-06f968d5a26cb1e78
+2026-08-08 04:18:04,543 - 1422887 - INFO - Instance i-06f968d5a26cb1e78 started successfully.
+2026-08-08 04:18:04,543 - 1422887 - INFO - Waiting 100 seconds for SSM agent to be ready on i-06f968d5a26cb1e78...
+2026-08-08 04:19:44,825 - 1422887 - INFO - Sent app_validation.py to i-06f968d5a26cb1e78 (command_id: 239fda3e-b2f2-4157-a650-5907286ce219)
+2026-08-08 04:20:14,900 - 1422887 - INFO - SSM Command Status: Success
+2026-08-08 04:20:14,901 - 1422887 - INFO - app_validation.py output for i-06f968d5a26cb1e78:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:19:45.159797
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.18
+Hostname | ip-10-64-24-18
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 85.2G | 204.7G | 29% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.24.18:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 62
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.18 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 11
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | lex_repl, lex_rccl, lex_rpt, lex_1rpt, lex_jqgrid, lex_sch, lex_inbq, lex_2vmlex, lex_vmlex, lex_wld, lex_zplp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+lex_repl | /data/batchapp/softeon/dibwmslexprod/replenishmentdaemon
+lex_rccl | /data/batchapp/softeon/dibwmslexprod/replenishmentpickloccanceldaemon
+lex_rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon
+lex_1rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon1
+lex_jqgrid | /data/batchapp/softeon/dibwmslexprod/reportjqgridexportdaemon
+lex_sch | /data/batchapp/softeon/dibwmslexprod/schedulerdaemon
+lex_inbq | /data/batchapp/softeon/dibwmslexprod/uploaddaemon
+lex_2vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelex2daemon
+lex_vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelexdaemon
+lex_wld | /data/batchapp/softeon/dibwmslexprod/wavelaunchdaemon
+lex_zplp | /data/batchapp/softeon/dibwmslexprod/zebraprintdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:19:45.930925
+==============================================================================
+
+2026-08-08 04:20:14,902 - 1422887 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-08/q3-dib-lex-batch-prod/10.64.24.18/10.64.24.18-AfterPatching-2026-08-08-04-20-14-902.log
+2026-08-08 04:20:14,958 - 1422887 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-08/q3-dib-lex-batch-prod/10.64.24.18/10.64.24.18-Validation-details-2026-08-08-04-20-14-902.html
+2026-08-08 04:20:15,132 - 1422887 - INFO - Daemon count - Pre: 18, Post: 11
+2026-08-08 04:20:15,132 - 1422887 - INFO - CUPS: before=running after=running version=cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-08-08 04:20:15,132 - 1422887 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-08 04:20:15,132 - 1422887 - INFO - Background: restarting daemons on i-06f968d5a26cb1e78
+2026-08-08 04:20:15,132 - 1422887 - INFO - Background thread started for i-06f968d5a26cb1e78 - daemon:True cups:False
+2026-08-08 04:20:15,402 - 1422887 - INFO - Started i-06f968d5a26cb1e78 in 0:02:27.063818
+2026-08-08 04:20:15,403 - 1422887 - INFO - All instances processed.
+2026-08-08 04:20:15,406 - 1422887 - INFO - Restart Total time: 0:05:04.585680
+2026-08-08 04:20:15,407 - 1422887 - INFO - Auto-confirmed services are restarted
+2026-08-08 04:20:15,408 - 1422887 - INFO - Confirmed - services are started
+2026-08-08 04:20:15,523 - 1422887 - INFO - The following instances have failed the patch: []
+2026-08-08 04:20:15,523 - 1422887 - INFO - No instances have failed the patch.
+2026-08-08 04:20:15,523 - 1422887 - INFO - Total Patch Process time: 0:10:12.472926
+2026-08-08 04:20:45,490 - 1422887 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: dibwmslexprod
+/data/batchapp/softeon/dibwmslexprod/startall-dibwmslexprod-Daemon.sh
+
+
+Starting autobatchdistributiondaemon
+
+
+Starting clustercreationdaemon
+
+
+Starting downloaddaemon
+
+
+Starting eventdaemon
+
+
+Starting ftpdaemon
+
+
+Starting hardallocationdaemon
+
+
+Starting labeldaemon
+
+Current Batch  Application process already running with Process id: 4081
+
+Current Batch  Application process already running with Process id: 4128
+
+Current Batch  Application process already running with Process id: 4175
+
+Current Batch  Application process already running with Process id: 4227
+
+Current Batch  Application process already running with Process id: 4276
+
+Current Batch  Application process already running with Process id: 4326
+
+Current Batch  Application process already running with Process id: 4373
+
+Current Batch  Application process already running with Process id: 4421
+
+Current Batch  Application process already running with Process id: 4468
+
+Current Batch  Application process already running with Process id: 4515
+
+Current Batch  Application process already running with Process id: 4562
+Checking folder: dibwmslexstage
+/data/batchapp/softeon/dibwmslexstage/startall-dibwmslexstage-Daemon.sh
+
+2026-08-08 04:20:45,491 - 1422887 - INFO - Waiting 100 sec for daemons to start on i-06f968d5a26cb1e78
+2026-08-08 04:21:15,845 - 1422887 - INFO - Log file ./logs/patching_2026-08-08_q3-dib-lex-batch-prod.log uploaded to s3://q3-2026-aws-security-patching/q3-dib-lex-batch-prod_Patch/2026-08-08/patching_2026-08-08_q3-dib-lex-batch-prod.log
+2026-08-08 04:22:25,519 - 1422887 - INFO - CUPS no action needed for i-06f968d5a26cb1e78 - before:running after:running version:cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-08-08 04:22:25,838 - 1422887 - INFO - Sent app_validation.py to i-06f968d5a26cb1e78 (command_id: 4b3c8004-2f29-4ece-a124-17cf60c0a5e8)
+2026-08-08 04:22:55,917 - 1422887 - INFO - SSM Command Status: Success
+2026-08-08 04:22:55,917 - 1422887 - INFO - app_validation.py output for i-06f968d5a26cb1e78:
+
+==============================================================================
+Server Availability Check Started | 2026-08-08 08:22:26.180727
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.24.18
+Hostname | ip-10-64-24-18
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 85.4G | 204.5G | 29% | /data
+fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | 0B | 3.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0906c1292ccb7b576.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://10.64.24.18:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 62
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.24.18 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 18
+Non-Standalone Java Processes | lex_repl, lex_rccl, lex_rpt, lex_1rpt, lex_jqgrid, lex_sch, lex_inbq, lex_2vmlex, lex_vmlex, lex_wld, lex_zplp, lex_abchdis, lex_ccd, lex_dwa, lex_event, lex_ftp, lex_harp, lex_lbl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 18
+Java-Name | Java-Path
+lex_repl | /data/batchapp/softeon/dibwmslexprod/replenishmentdaemon
+lex_rccl | /data/batchapp/softeon/dibwmslexprod/replenishmentpickloccanceldaemon
+lex_rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon
+lex_1rpt | /data/batchapp/softeon/dibwmslexprod/reportdaemon1
+lex_jqgrid | /data/batchapp/softeon/dibwmslexprod/reportjqgridexportdaemon
+lex_sch | /data/batchapp/softeon/dibwmslexprod/schedulerdaemon
+lex_inbq | /data/batchapp/softeon/dibwmslexprod/uploaddaemon
+lex_2vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelex2daemon
+lex_vmlex | /data/batchapp/softeon/dibwmslexprod/voicemobilelexdaemon
+lex_wld | /data/batchapp/softeon/dibwmslexprod/wavelaunchdaemon
+lex_zplp | /data/batchapp/softeon/dibwmslexprod/zebraprintdaemon
+lex_abchdis | /data/batchapp/softeon/dibwmslexprod/autobatchdistributiondaemon
+lex_ccd | /data/batchapp/softeon/dibwmslexprod/clustercreationdaemon
+lex_dwa | /data/batchapp/softeon/dibwmslexprod/downloaddaemon
+lex_event | /data/batchapp/softeon/dibwmslexprod/eventdaemon
+lex_ftp | /data/batchapp/softeon/dibwmslexprod/ftpdaemon
+lex_harp | /data/batchapp/softeon/dibwmslexprod/hardallocationdaemon
+lex_lbl | /data/batchapp/softeon/dibwmslexprod/labeldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-08 08:22:27.237186
+==============================================================================
+
+2026-08-08 04:22:56,150 - 1422887 - INFO - Health monitor crontab enabled on all instances
+2026-08-08 04:22:56,151 - 1422887 - INFO - Green after restart - cron enabled for i-06f968d5a26cb1e78
+2026-08-08 04:22:56,227 - 1422887 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-08 04:22:56,227 - 1422887 - INFO - GREEN re-validation mail sent for i-06f968d5a26cb1e78

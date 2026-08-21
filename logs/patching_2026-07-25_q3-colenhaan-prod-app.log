@@ -1,0 +1,461 @@
+2026-07-25 00:00:05,659 - 265522 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 00:13:56,819 - 265522 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 00:13:57,023 - 265522 - INFO - Log file ./logs/backup_2026-07-25.log uploaded to s3://q3-2025-aws-security-patching/q3-colenhaan-prod-app_Patch_Backup/2026-07-25/backup_2026-07-25.log
+2026-07-25 04:00:04,318 - 278313 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-25 04:00:04,319 - 278313 - INFO - Script Start Time: 2026-07-25 04:00:04
+2026-07-25 04:00:04,802 - 278313 - INFO - Tag: q3-colenhaan-prod-app, IPs: ['172.29.72.29', '172.29.72.113'], Environment: prod
+2026-07-25 04:00:04,804 - 278313 - INFO - Instance(s) selected for Patching: {'i-0998c8fbac87af527': '172.29.72.29', 'i-0adbb183151ed69ec': '172.29.72.113'}
+2026-07-25 04:00:04,911 - 278313 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 04:00:04,911 - 278313 - INFO - Now patching instances at: 2026-07-25 04:00:04
+2026-07-25 04:00:05,180 - 278313 - INFO - Sent app_validation.py to i-0998c8fbac87af527 (command_id: 2fc28732-5d46-432b-8c9b-02c41c513187)
+2026-07-25 04:00:35,299 - 278313 - INFO - app_validation.py output for i-0998c8fbac87af527:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 08:00:05.519589
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.29
+Hostname | ip-172-29-72-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 58.4G | 181.5G | 24% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 525.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://172.29.72.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2964039 | colehaanprod | jboss740eap | colhanprd_jb740 | 8080 | 172.29.72.29:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanprod/standalone
+2964023 | colehaanrfprod | jboss740eap | clhnrf_jb740 | 8081 | 172.29.72.29:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanrfprod/standalone
+2963494 | colehaanwsprod | jboss740eap | colhanws_jb740 | 8082 | 172.29.72.29:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-25 04:00:35,299 - 278313 - ERROR - app_validation.py errors for i-0998c8fbac87af527:
+Traceback (most recent call last):
+  File "<stdin>", line 895, in <module>
+  File "<stdin>", line 886, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-25 04:00:35,304 - 278313 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.29/172.29.72.29-BeforePatching-2026-07-25-04-00-35-300.log
+2026-07-25 04:00:35,530 - 278313 - INFO - Sent app_validation.py to i-0adbb183151ed69ec (command_id: 336e7625-c747-437a-a085-148df175cb2f)
+2026-07-25 04:01:05,630 - 278313 - INFO - app_validation.py output for i-0adbb183151ed69ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 08:00:35.887272
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.113
+Hostname | ip-172-29-72-113
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 56.6G | 183.3G | 23% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 525.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://172.29.72.113:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.113 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+592556 | colehaanprod | jboss740eap | colhanprd_jb740 | 8080 | 172.29.72.113:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanprod/standalone
+592581 | colehaanrfprod | jboss740eap | clhnrf_jb740 | 8081 | 172.29.72.113:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanrfprod/standalone
+592489 | colehaanwsprod | jboss740eap | colhanws_jb740 | 8082 | 172.29.72.113:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-25 04:01:05,630 - 278313 - ERROR - app_validation.py errors for i-0adbb183151ed69ec:
+Traceback (most recent call last):
+  File "<stdin>", line 895, in <module>
+  File "<stdin>", line 886, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-25 04:01:05,633 - 278313 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.113/172.29.72.113-BeforePatching-2026-07-25-04-01-05-631.log
+2026-07-25 04:01:10,898 - 278313 - INFO - i-0998c8fbac87af527: Cron was active = False
+2026-07-25 04:01:16,091 - 278313 - INFO - i-0adbb183151ed69ec: Cron was active = False
+2026-07-25 04:01:16,091 - 278313 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-25 04:01:16,190 - 278313 - INFO - Sending patch command to instance i-0998c8fbac87af527
+2026-07-25 04:01:16,295 - 278313 - INFO - Command sent successfully to instance i-0998c8fbac87af527. Command ID: 7838a9d2-ece8-4668-b7ab-9dd2a99e6a56
+2026-07-25 04:01:16,435 - 278313 - INFO - Sending patch command to instance i-0adbb183151ed69ec
+2026-07-25 04:01:16,532 - 278313 - INFO - Command sent successfully to instance i-0adbb183151ed69ec. Command ID: c8bd5b3d-8f4f-4f77-b2e7-5b54a4b71283
+2026-07-25 04:12:49,272 - 278313 - INFO - All patches applied successfully.
+2026-07-25 04:12:49,272 - 278313 - INFO - Patching end time: 2026-07-25 04:12:49
+2026-07-25 04:12:49,272 - 278313 - INFO - Patch Elapsed time: 0:12:44.361331
+2026-07-25 04:12:49,346 - 278313 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-25 04:12:49,347 - 278313 - INFO - Confirmed - services are stopped
+2026-07-25 04:13:10,626 - 278313 - INFO - Discovered TG map: {'i-0998c8fbac87af527': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844'], 'i-0adbb183151ed69ec': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844']}
+2026-07-25 04:13:10,803 - 278313 - INFO - Deregistering i-0998c8fbac87af527 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207
+2026-07-25 04:13:10,873 - 278313 - INFO - Deregistering i-0998c8fbac87af527 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea
+2026-07-25 04:13:10,918 - 278313 - INFO - Deregistering i-0998c8fbac87af527 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844
+2026-07-25 04:13:10,967 - 278313 - INFO - Stopping EC2 instance: i-0998c8fbac87af527 at 2026-07-25 04:13:10
+2026-07-25 04:15:27,611 - 278313 - INFO - Instance i-0998c8fbac87af527 stopped successfully.
+2026-07-25 04:15:27,867 - 278313 - INFO - Stopped i-0998c8fbac87af527 in 0:02:16.900049
+2026-07-25 04:15:27,868 - 278313 - INFO - Starting EC2 instance: i-0998c8fbac87af527
+2026-07-25 04:15:43,750 - 278313 - INFO - Instance i-0998c8fbac87af527 started successfully.
+2026-07-25 04:15:43,750 - 278313 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0998c8fbac87af527...
+2026-07-25 04:17:23,836 - 278313 - INFO - Registering i-0998c8fbac87af527 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207
+2026-07-25 04:17:24,013 - 278313 - INFO - Registering i-0998c8fbac87af527 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea
+2026-07-25 04:17:24,147 - 278313 - INFO - Registering i-0998c8fbac87af527 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844
+2026-07-25 04:19:24,870 - 278313 - INFO - Sent app_validation.py to i-0998c8fbac87af527 (command_id: 9ef3eb51-110b-455d-97ff-fdb8968ad423)
+2026-07-25 04:19:54,997 - 278313 - INFO - app_validation.py output for i-0998c8fbac87af527:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 08:19:25.241359
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.29
+Hostname | ip-172-29-72-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 58.3G | 181.6G | 24% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3810 | colehaanprod | jboss740eap | colhanprd_jb740 | 8080 | 172.29.72.29:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanprod/standalone
+3859 | colehaanrfprod | jboss740eap | clhnrf_jb740 | 8081 | 172.29.72.29:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanrfprod/standalone
+3524 | colehaanwsprod | jboss740eap | colhanws_jb740 | 8082 | 172.29.72.29:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-25 04:19:54,998 - 278313 - ERROR - app_validation.py errors for i-0998c8fbac87af527:
+Traceback (most recent call last):
+  File "<stdin>", line 895, in <module>
+  File "<stdin>", line 886, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-25 04:19:54,999 - 278313 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.29/172.29.72.29-AfterPatching-2026-07-25-04-19-54-999.log
+2026-07-25 04:19:55,070 - 278313 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.29/172.29.72.29-Validation-details-2026-07-25-04-19-54-999.html
+2026-07-25 04:19:55,254 - 278313 - INFO - i-0998c8fbac87af527: Cron was not active - skipping enable
+2026-07-25 04:19:55,329 - 278313 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-25 04:19:55,329 - 278313 - INFO - GREEN mail sent for i-0998c8fbac87af527
+2026-07-25 04:19:55,581 - 278313 - INFO - Started i-0998c8fbac87af527 in 0:04:27.712746
+2026-07-25 04:19:55,581 - 278313 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-25 04:21:55,660 - 278313 - INFO - Deregistering i-0adbb183151ed69ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207
+2026-07-25 04:21:55,739 - 278313 - INFO - Deregistering i-0adbb183151ed69ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea
+2026-07-25 04:21:55,779 - 278313 - INFO - Deregistering i-0adbb183151ed69ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844
+2026-07-25 04:21:55,826 - 278313 - INFO - Stopping EC2 instance: i-0adbb183151ed69ec at 2026-07-25 04:21:55
+2026-07-25 04:23:57,164 - 278313 - INFO - Instance i-0adbb183151ed69ec stopped successfully.
+2026-07-25 04:23:57,520 - 278313 - INFO - Stopped i-0adbb183151ed69ec in 0:02:01.694253
+2026-07-25 04:23:57,520 - 278313 - INFO - Starting EC2 instance: i-0adbb183151ed69ec
+2026-07-25 04:24:13,466 - 278313 - INFO - Instance i-0adbb183151ed69ec started successfully.
+2026-07-25 04:24:13,467 - 278313 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0adbb183151ed69ec...
+2026-07-25 04:25:53,567 - 278313 - INFO - Registering i-0adbb183151ed69ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-Desktop/778b2b3e1cb14207
+2026-07-25 04:25:53,773 - 278313 - INFO - Registering i-0adbb183151ed69ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-Prod-WS/a7ba82d97dafddea
+2026-07-25 04:25:53,903 - 278313 - INFO - Registering i-0adbb183151ed69ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Cole-Haan-PROD-RF/e1b730ab80aef844
+2026-07-25 04:27:54,633 - 278313 - INFO - Sent app_validation.py to i-0adbb183151ed69ec (command_id: 61acf67c-36ad-4670-8278-006528322e16)
+2026-07-25 04:28:24,783 - 278313 - INFO - app_validation.py output for i-0adbb183151ed69ec:
+
+==============================================================================
+Server Availability Check Started | 2026-07-25 08:27:55.024347
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.72.113
+Hostname | ip-172-29-72-113
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 56.4G | 183.4G | 23% | /data
+fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | 0B | 523.5G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-056f71d66782c1bfc.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.29.72.113:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 198
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.72.113 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3845 | colehaanprod | jboss740eap | colhanprd_jb740 | 8080 | 172.29.72.113:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanprod/standalone
+3785 | colehaanrfprod | jboss740eap | clhnrf_jb740 | 8081 | 172.29.72.113:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanrfprod/standalone
+3278 | colehaanwsprod | jboss740eap | colhanws_jb740 | 8082 | 172.29.72.113:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/colehaanwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-25 04:28:24,783 - 278313 - ERROR - app_validation.py errors for i-0adbb183151ed69ec:
+Traceback (most recent call last):
+  File "<stdin>", line 895, in <module>
+  File "<stdin>", line 886, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-25 04:28:24,785 - 278313 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.113/172.29.72.113-AfterPatching-2026-07-25-04-28-24-784.log
+2026-07-25 04:28:24,841 - 278313 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-25/q3-colenhaan-prod-app/172.29.72.113/172.29.72.113-Validation-details-2026-07-25-04-28-24-784.html
+2026-07-25 04:28:25,071 - 278313 - INFO - i-0adbb183151ed69ec: Cron was not active - skipping enable
+2026-07-25 04:28:25,139 - 278313 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-25 04:28:25,139 - 278313 - INFO - GREEN mail sent for i-0adbb183151ed69ec
+2026-07-25 04:28:25,406 - 278313 - INFO - Started i-0adbb183151ed69ec in 0:04:27.885792
+2026-07-25 04:28:25,407 - 278313 - INFO - All instances processed.
+2026-07-25 04:28:25,412 - 278313 - INFO - Restart Total time: 0:15:35.934298
+2026-07-25 04:28:25,412 - 278313 - INFO - Auto-confirmed services are restarted
+2026-07-25 04:28:25,412 - 278313 - INFO - Confirmed - services are started
+2026-07-25 04:28:25,527 - 278313 - INFO - The following instances have failed the patch: []
+2026-07-25 04:28:25,527 - 278313 - INFO - No instances have failed the patch.
+2026-07-25 04:28:25,527 - 278313 - INFO - Total Patch Process time: 0:28:21.208583
+2026-07-25 04:29:26,016 - 278313 - INFO - Log file ./logs/patching_2026-07-25_q3-colenhaan-prod-app.log uploaded to s3://q3-2026-aws-security-patching/q3-colenhaan-prod-app_Patch/2026-07-25/patching_2026-07-25_q3-colenhaan-prod-app.log

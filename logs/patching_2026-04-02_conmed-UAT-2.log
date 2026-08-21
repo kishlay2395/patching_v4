@@ -1,0 +1,148 @@
+2026-04-02 00:10:03,392 - 4148963 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-02 00:26:29,093 - 4148963 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-02 00:26:29,449 - 4148963 - INFO - Log file ./logs/backup_2026-04-02.log uploaded to s3://q3-2025-aws-security-patching/conmed-UAT-2_Patch_Backup/2026-04-02/backup_2026-04-02.log
+2026-04-02 04:10:02,581 - 4158339 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-02 04:10:02,581 - 4158339 - INFO - Script Start Time: 2026-04-02 04:10:02
+2026-04-02 04:10:03,390 - 4158339 - INFO - Instance(s) selected for Patching: {'i-01afa5fce47f8ae1c': '10.0.24.188'}
+2026-04-02 04:10:03,461 - 4158339 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 04:10:03,461 - 4158339 - INFO - Now patching instances at: 2026-04-02 04:10:03
+2026-04-02 04:10:03,546 - 4158339 - INFO - Sending patch command to instance i-01afa5fce47f8ae1c
+2026-04-02 04:10:03,723 - 4158339 - INFO - Command sent successfully to instance i-01afa5fce47f8ae1c. Command ID: d3bb5c0c-38fe-4854-8277-6a418e4e59e6
+2026-04-02 04:15:35,417 - 4158339 - INFO - All patches applied successfully.
+2026-04-02 04:15:35,418 - 4158339 - INFO - Patching end time: 2026-04-02 04:15:35
+2026-04-02 04:15:35,418 - 4158339 - INFO - Patch Elapsed time: 0:05:31.956396
+2026-04-02 04:15:35,481 - 4158339 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 04:15:35,481 - 4158339 - INFO - Confirmed - services are stopped
+2026-04-02 04:15:56,839 - 4158339 - INFO - Discovered TG map: {'i-01afa5fce47f8ae1c': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c']}
+2026-04-02 04:15:57,248 - 4158339 - INFO - Sent app_validation.py to i-01afa5fce47f8ae1c (command_id: bbe803fa-0658-4d66-b0e2-6f9cd2ef4c88)
+2026-04-02 04:16:27,344 - 4158339 - INFO - app_validation.py output for i-01afa5fce47f8ae1c:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 08:15:57.525458
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.188
+Hostname | ip-10-0-24-188
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 101.3G | 188.6G | 34% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.188:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.188 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | wmsuat_dwa, wmsuat_event, wmsuat_ftp, wmsuat_lbl, wmsuat_repl, wmsuat_rccl, wmsuat_rplpri, wmsuat_rpt, wmsuat_jqgrid, wmsuat_sch, wmsuat_inbq, wmsuat_wld, wmsuat_ict, lmsuat_rpt, lmsuat_sch, lmsuat_jqgrid
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+wmsuat_dwa | /data/batchapp/softeon/wmsuat/downloaddaemon
+wmsuat_event | /data/batchapp/softeon/wmsuat/eventdaemon
+wmsuat_ftp | /data/batchapp/softeon/wmsuat/ftpdaemon
+wmsuat_lbl | /data/batchapp/softeon/wmsuat/labeldaemon
+wmsuat_repl | /data/batchapp/softeon/wmsuat/replenishmentdaemon
+wmsuat_rccl | /data/batchapp/softeon/wmsuat/replenishmentpickloccanceldaemon
+wmsuat_rplpri | /data/batchapp/softeon/wmsuat/replenishmentpriorityupdatedaemon
+wmsuat_rpt | /data/batchapp/softeon/wmsuat/reportdaemon
+wmsuat_jqgrid | /data/batchapp/softeon/wmsuat/reportjqgridexportdaemon
+wmsuat_sch | /data/batchapp/softeon/wmsuat/schedulardaemon
+wmsuat_inbq | /data/batchapp/softeon/wmsuat/uploaddeamon
+wmsuat_wld | /data/batchapp/softeon/wmsuat/wavelaunchdaemon
+wmsuat_ict | /data/batchapp/softeon/wmsuat/ictdaemon
+lmsuat_rpt | /data/batchapp/softeon/lmsconmeduat/reportdaemon
+lmsuat_sch | /data/batchapp/softeon/lmsconmeduat/schedulardaemon
+lmsuat_jqgrid | /data/batchapp/softeon/lmsconmeduat/reportjqgridexportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2317241 | lmsconmeduat | jboss800eap | lmsconmed_jb800 | 8082 | 10.0.24.188:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/lmsconmeduat/standalone
+158928 | wmsrfuat | jboss730eap | wmsrf_jb73eap | 8081 | 10.0.24.188:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsrfuat/standalone
+158716 | wmsuat | jboss730eap | wmsuat_jb730eap | 8080 | 10.0.24.188:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 08:15:58.220541
+==============================================================================
+
+2026-04-02 04:16:27,345 - 4158339 - ERROR - app_validation.py errors for i-01afa5fce47f8ae1c:
+
+2026-04-02 04:16:27,346 - 4158339 - INFO - Before patching validation saved to: output/validation-2026-04-02/10.0.24.188-BeforePatching-2026-04-02-04-16-27-346.log
+2026-04-02 04:16:27,346 - 4158339 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c
+2026-04-02 04:16:27,417 - 4158339 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9
+2026-04-02 04:16:27,473 - 4158339 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c
+2026-04-02 04:16:27,519 - 4158339 - INFO - Stopping EC2 instance: i-01afa5fce47f8ae1c at 2026-04-02 04:16:27
+2026-04-02 04:18:59,134 - 4158339 - INFO - Instance i-01afa5fce47f8ae1c stopped successfully.
+2026-04-02 04:18:59,275 - 4158339 - INFO - Stopped i-01afa5fce47f8ae1c in 0:02:31.755759
+2026-04-02 04:18:59,276 - 4158339 - INFO - Starting EC2 instance: i-01afa5fce47f8ae1c
+2026-04-02 04:19:15,284 - 4158339 - INFO - Instance i-01afa5fce47f8ae1c started successfully.
+2026-04-02 04:19:15,284 - 4158339 - INFO - Waiting 100 seconds for SSM agent to be ready on i-01afa5fce47f8ae1c...
+2026-04-02 04:20:55,366 - 4158339 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c
+2026-04-02 04:20:55,595 - 4158339 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9
+2026-04-02 04:20:55,743 - 4158339 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c
+2026-04-02 04:25:56,556 - 4158339 - WARNING - i-01afa5fce47f8ae1c not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c after timeout.
+2026-04-02 04:25:56,713 - 4158339 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-02 04:25:56,713 - 4158339 - ERROR - Aborting workflow: i-01afa5fce47f8ae1c is not healthy after restart.
+2026-04-02 04:25:56,716 - 4158339 - INFO - Restart Total time: 0:10:21.091132
+2026-04-02 04:25:56,716 - 4158339 - INFO - Auto-confirmed services are restarted
+2026-04-02 04:25:56,716 - 4158339 - INFO - Confirmed - services are started
+2026-04-02 04:25:56,852 - 4158339 - INFO - The following instances have failed the patch: []
+2026-04-02 04:25:56,853 - 4158339 - INFO - No instances have failed the patch.
+2026-04-02 04:25:56,853 - 4158339 - INFO - Total Patch Process time: 0:15:54.271211
+2026-04-02 04:26:57,286 - 4158339 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-02_conmed-UAT-2.log to q2-2026-aws-security-patching/conmed-UAT-2_Patch/2026-04-02/patching_2026-04-02_conmed-UAT-2.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

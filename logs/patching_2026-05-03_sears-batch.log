@@ -1,0 +1,438 @@
+2026-05-03 02:15:02,672 - 209054 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-03 02:15:02,672 - 209054 - INFO - Script Start Time: 2026-05-03 02:15:02
+2026-05-03 02:15:02,946 - 209054 - INFO - Instance(s) selected for Patching: {'i-07d150df1638b2316': '172.30.101.19', 'i-0aeede70ef55ce751': '172.30.101.50'}
+2026-05-03 02:15:03,027 - 209054 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-03 02:15:03,027 - 209054 - INFO - Now patching instances at: 2026-05-03 02:15:03
+2026-05-03 02:15:03,113 - 209054 - INFO - Sending patch command to instance i-07d150df1638b2316
+2026-05-03 02:15:03,290 - 209054 - INFO - Command sent successfully to instance i-07d150df1638b2316. Command ID: 0a3f454c-68c6-432d-bd49-594c22eeacaa
+2026-05-03 02:15:03,423 - 209054 - INFO - Sending patch command to instance i-0aeede70ef55ce751
+2026-05-03 02:15:03,546 - 209054 - INFO - Command sent successfully to instance i-0aeede70ef55ce751. Command ID: 7655a4a2-e119-4842-a0e8-8fae2cedc2bf
+2026-05-03 02:21:05,676 - 209054 - INFO - All patches applied successfully.
+2026-05-03 02:21:05,677 - 209054 - INFO - Patching end time: 2026-05-03 02:21:05
+2026-05-03 02:21:05,677 - 209054 - INFO - Patch Elapsed time: 0:06:02.649530
+2026-05-03 02:21:05,749 - 209054 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-03 02:21:05,749 - 209054 - INFO - Confirmed - services are stopped
+2026-05-03 02:21:13,730 - 209054 - INFO - Discovered TG map: {}
+2026-05-03 02:21:14,218 - 209054 - INFO - Sent app_validation.py to i-07d150df1638b2316 (command_id: e2c02492-4378-4c0c-ae15-e8ce02a9b807)
+2026-05-03 02:21:44,360 - 209054 - INFO - app_validation.py output for i-07d150df1638b2316:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 02:21:14.459373
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.101.19
+Hostname | ip-172-30-101-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 28.2G | 261.7G | 9% | /data
+fs-6051ea18.efs.us-east-2.amazonaws.com:/ | 0B | 1.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-6051ea18.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.101.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.101.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 3
+Non-Standalone Java Processes | wms_RMI, wes_brerule, pdcwesprod_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 3
+Java-Name | Java-Path
+wms_RMI | /data/batchapp/softeon/aimsso/wsrmidaemon
+wes_brerule | /data/batchapp/softeon/searswes/breruleenginedaemon
+pdcwesprod_sch | /data/batchapp/softeon/searswes/schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 02:21:14.730804
+==============================================================================
+
+2026-05-03 02:21:44,360 - 209054 - ERROR - app_validation.py errors for i-07d150df1638b2316:
+
+2026-05-03 02:21:44,362 - 209054 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.19/172.30.101.19-BeforePatching-2026-05-03-02-21-44-361.log
+2026-05-03 02:21:44,362 - 209054 - INFO - Stopping EC2 instance: i-07d150df1638b2316 at 2026-05-03 02:21:44
+2026-05-03 02:24:01,153 - 209054 - INFO - Instance i-07d150df1638b2316 stopped successfully.
+2026-05-03 02:24:01,778 - 209054 - INFO - Stopped i-07d150df1638b2316 in 0:02:17.416039
+2026-05-03 02:24:01,778 - 209054 - INFO - Starting EC2 instance: i-07d150df1638b2316
+2026-05-03 02:24:17,897 - 209054 - INFO - Instance i-07d150df1638b2316 started successfully.
+2026-05-03 02:24:17,897 - 209054 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07d150df1638b2316...
+2026-05-03 02:25:58,211 - 209054 - INFO - Sent app_validation.py to i-07d150df1638b2316 (command_id: ab654689-85d0-4c30-bb0d-dcedf630cce1)
+2026-05-03 02:26:28,322 - 209054 - INFO - app_validation.py output for i-07d150df1638b2316:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 02:25:58.505409
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.101.19
+Hostname | ip-172-30-101-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 28.2G | 261.7G | 9% | /data
+fs-6051ea18.efs.us-east-2.amazonaws.com:/ | 0B | 1.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-6051ea18.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.101.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | wms_RMI, 8958_event, 8958_ogd, 8958_1_ogd1, 8958_repd, 8958_sch, 8958_INBQ, 8964_event, 8964_repd, 8964_sch, 8964_upload, 8976_event, 8976_lbl, 8976_ogd, 8976_1_ogd1, 8976_sch, 8976_upload, 8998_lbl, 8998_ogd, 8998_1_ogd1, 8998_sch, 8998_upload
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+wms_RMI | /data/batchapp/softeon/aimsso/wsrmidaemon
+8958_event | /data/app/java/jdk1.7.0_80/bin/8958_event
+8958_ogd | /data/app/java/jdk1.7.0_80/bin/8958_ogd
+8958_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8958_1_ogd1
+8958_repd | /data/app/java/jdk1.7.0_80/bin/8958_repd
+8958_sch | /data/app/java/jdk1.7.0_80/bin/8958_sch
+8958_INBQ | /data/app/java/jdk1.7.0_80/bin/8958_INBQ
+8964_event | /data/app/java/jdk1.7.0_80/bin/8964_event
+8964_repd | /data/app/java/jdk1.7.0_80/bin/8964_repd
+8964_sch | /data/app/java/jdk1.7.0_80/bin/8964_sch
+8964_upload | /data/app/java/jdk1.7.0_80/bin/8964_upload
+8976_event | /data/app/java/jdk1.7.0_80/bin/8976_event
+8976_lbl | /data/app/java/jdk1.7.0_80/bin/8976_lbl
+8976_ogd | /data/app/java/jdk1.7.0_80/bin/8976_ogd
+8976_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8976_1_ogd1
+8976_sch | /data/app/java/jdk1.7.0_80/bin/8976_sch
+8976_upload | /data/app/java/jdk1.7.0_80/bin/8976_upload
+8998_lbl | /data/app/java/jdk1.7.0_80/bin/8998_lbl
+8998_ogd | /data/app/java/jdk1.7.0_80/bin/8998_ogd
+8998_1_ogd1 | /data/app/java/jdk1.7.0_80/bin/8998_1_ogd1
+8998_sch | /data/app/java/jdk1.7.0_80/bin/8998_sch
+8998_upload | /data/app/java/jdk1.7.0_80/bin/8998_upload
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 02:25:58.911001
+==============================================================================
+
+2026-05-03 02:26:28,323 - 209054 - ERROR - app_validation.py errors for i-07d150df1638b2316:
+
+2026-05-03 02:26:28,324 - 209054 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.19/172.30.101.19-AfterPatching-2026-05-03-02-26-28-324.log
+2026-05-03 02:26:28,376 - 209054 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.19/172.30.101.19-Validation-details-2026-05-03-02-26-28-324.html
+2026-05-03 02:26:28,749 - 209054 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-03 02:26:28,749 - 209054 - INFO - HTML validation report email sent for i-07d150df1638b2316
+2026-05-03 02:26:28,997 - 209054 - INFO - Started i-07d150df1638b2316 in 0:02:27.219143
+2026-05-03 02:26:28,998 - 209054 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-03 02:28:29,213 - 209054 - INFO - Sent app_validation.py to i-0aeede70ef55ce751 (command_id: e22834ee-a71a-4bf3-93c1-812914d05f40)
+2026-05-03 02:28:59,328 - 209054 - INFO - app_validation.py output for i-0aeede70ef55ce751:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 02:28:29.453650
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.101.50
+Hostname | ip-172-30-101-50.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 61.0G | 228.8G | 21% | /data
+fs-6051ea18.efs.us-east-2.amazonaws.com:/ | 0B | 1.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-6051ea18.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.101.50:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.101.50 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 1
+Non-Standalone Java Processes | searsdom_FR
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 1
+Java-Name | Java-Path
+searsdom_FR | /data/batchapp/softeon/aimdom/filereplicationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 02:28:29.683770
+==============================================================================
+
+2026-05-03 02:28:59,328 - 209054 - ERROR - app_validation.py errors for i-0aeede70ef55ce751:
+
+2026-05-03 02:28:59,329 - 209054 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.50/172.30.101.50-BeforePatching-2026-05-03-02-28-59-329.log
+2026-05-03 02:28:59,330 - 209054 - INFO - Stopping EC2 instance: i-0aeede70ef55ce751 at 2026-05-03 02:28:59
+2026-05-03 02:30:00,646 - 209054 - INFO - Instance i-0aeede70ef55ce751 stopped successfully.
+2026-05-03 02:30:00,900 - 209054 - INFO - Stopped i-0aeede70ef55ce751 in 0:01:01.570815
+2026-05-03 02:30:00,901 - 209054 - INFO - Starting EC2 instance: i-0aeede70ef55ce751
+2026-05-03 02:30:16,978 - 209054 - INFO - Instance i-0aeede70ef55ce751 started successfully.
+2026-05-03 02:30:16,978 - 209054 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0aeede70ef55ce751...
+2026-05-03 02:31:57,309 - 209054 - INFO - Sent app_validation.py to i-0aeede70ef55ce751 (command_id: bc44ea50-708f-47ed-a5b6-363ddd205e6a)
+2026-05-03 02:32:27,442 - 209054 - INFO - app_validation.py output for i-0aeede70ef55ce751:
+
+==============================================================================
+Server Availability Check Started | 2026-05-03 02:31:57.570074
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.101.50
+Hostname | ip-172-30-101-50.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 61.0G | 228.8G | 21% | /data
+fs-6051ea18.efs.us-east-2.amazonaws.com:/ | 0B | 1.0T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-6051ea18.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.101.50 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-05-03 02:31:57.756855
+==============================================================================
+
+2026-05-03 02:32:27,442 - 209054 - ERROR - app_validation.py errors for i-0aeede70ef55ce751:
+
+2026-05-03 02:32:27,447 - 209054 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.50/172.30.101.50-AfterPatching-2026-05-03-02-32-27-446.log
+2026-05-03 02:32:27,498 - 209054 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-03/sears-batch/172.30.101.50/172.30.101.50-Validation-details-2026-05-03-02-32-27-446.html
+2026-05-03 02:32:27,798 - 209054 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-03 02:32:27,798 - 209054 - INFO - HTML validation report email sent for i-0aeede70ef55ce751
+2026-05-03 02:32:28,054 - 209054 - INFO - Started i-0aeede70ef55ce751 in 0:02:27.153369
+2026-05-03 02:32:28,055 - 209054 - INFO - All instances processed.
+2026-05-03 02:32:28,058 - 209054 - INFO - Restart Total time: 0:11:22.107533
+2026-05-03 02:32:28,058 - 209054 - INFO - Auto-confirmed services are restarted
+2026-05-03 02:32:28,058 - 209054 - INFO - Confirmed - services are started
+2026-05-03 02:32:28,178 - 209054 - INFO - The following instances have failed the patch: []
+2026-05-03 02:32:28,178 - 209054 - INFO - No instances have failed the patch.
+2026-05-03 02:32:28,178 - 209054 - INFO - Total Patch Process time: 0:17:25.505555
+2026-05-03 02:33:28,628 - 209054 - INFO - Log file ./logs/patching_2026-05-03_sears-batch.log uploaded to s3://q2-2026-aws-security-patching/sears-batch_Patch/2026-05-03/patching_2026-05-03_sears-batch.log

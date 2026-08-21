@@ -1,0 +1,497 @@
+2026-07-08 01:00:03,222 - 3941225 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-08 01:00:03,222 - 3941225 - INFO - Script Start Time: 2026-07-08 01:00:03
+2026-07-08 01:00:04,036 - 3941225 - INFO - Instance(s) selected for Patching: {'i-05bdf44bd87bc0e71': '172.29.84.7'}
+2026-07-08 01:00:04,589 - 3941225 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 01:00:04,590 - 3941225 - INFO - Now patching instances at: 2026-07-08 01:00:04
+2026-07-08 01:00:10,129 - 3941225 - INFO - i-05bdf44bd87bc0e71: Cron was active = True
+2026-07-08 01:00:10,363 - 3941225 - INFO - Health monitor crontab disabled on all instances
+2026-07-08 01:00:10,367 - 3941225 - INFO - Disabled cron for: ['i-05bdf44bd87bc0e71']
+2026-07-08 01:00:10,668 - 3941225 - INFO - Sent app_validation.py to i-05bdf44bd87bc0e71 (command_id: c8e6dc5a-2ad7-463a-8c09-e3cf53bdafa7)
+2026-07-08 01:00:40,800 - 3941225 - INFO - app_validation.py output for i-05bdf44bd87bc0e71:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 05:00:11.055707
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.7
+Hostname | ip-172-29-84-7
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 151.2G | 138.6G | 52% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | midea_dwa, midea_event, midea_ftp, midea_lbl, midea_repl, midea_rpt, midea_1rpt, midea_jqgrid, midea_censch, midea_eassch, midea_inbq, midea_cawld, midea_gawld, midea_2gfagawld, midea_ilwld, midea_wldpamac, midea_pmacrwld, midea_wldtxuns, midea_gfagawld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+midea_dwa | /data/batchapp/softeon/mideauat/downloaddaemon
+midea_event | /data/batchapp/softeon/mideauat/eventdaemon
+midea_ftp | /data/batchapp/softeon/mideauat/ftpdaemon
+midea_lbl | /data/batchapp/softeon/mideauat/labeldaemon
+midea_repl | /data/batchapp/softeon/mideauat/replenishmentdaemon
+midea_rpt | /data/batchapp/softeon/mideauat/reportdaemon
+midea_1rpt | /data/batchapp/softeon/mideauat/reportdaemon1
+midea_jqgrid | /data/batchapp/softeon/mideauat/reportjqgridexportdaemon
+midea_censch | /data/batchapp/softeon/mideauat/schedulerdaemon_central
+midea_eassch | /data/batchapp/softeon/mideauat/schedulerdaemon_eastern
+midea_inbq | /data/batchapp/softeon/mideauat/uploaddeamon
+midea_cawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ca
+midea_gawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga
+midea_2gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga2_gfa
+midea_ilwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_il
+midea_wldpamac | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_mac
+midea_pmacrwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_macr
+midea_wldtxuns | /data/batchapp/softeon/mideauat/wavelaunchdaemon_tx_unis
+midea_gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga_gfa
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3823011 | midearfuat | jboss730eap | midearf_jb730ep | 8081 | 172.29.84.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfuat/standalone
+3822420 | mideauat | jboss730eap | midea_jb730eap | 8080 | 172.29.84.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideauat/standalone
+3823338 | mideawsuat | jboss730eap | mideaws_jb730e | 8082 | 172.29.84.7:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 05:00:12.144892
+==============================================================================
+
+2026-07-08 01:00:40,800 - 3941225 - ERROR - app_validation.py errors for i-05bdf44bd87bc0e71:
+
+2026-07-08 01:00:40,802 - 3941225 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-08/q3-midea-uat/172.29.84.7/172.29.84.7-BeforePatching-2026-07-08-01-00-40-801.log
+2026-07-08 01:00:40,885 - 3941225 - INFO - Sending patch command to instance i-05bdf44bd87bc0e71
+2026-07-08 01:00:41,001 - 3941225 - INFO - Command sent successfully to instance i-05bdf44bd87bc0e71. Command ID: 6745eff9-2702-4667-af04-6e4a5af38af9
+2026-07-08 01:09:13,118 - 3941225 - INFO - All patches applied successfully.
+2026-07-08 01:09:13,118 - 3941225 - INFO - Patching end time: 2026-07-08 01:09:13
+2026-07-08 01:09:13,118 - 3941225 - INFO - Patch Elapsed time: 0:09:08.528547
+2026-07-08 01:09:13,188 - 3941225 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 01:09:13,188 - 3941225 - INFO - Confirmed - services are stopped
+2026-07-08 01:09:33,496 - 3941225 - INFO - Discovered TG map: {'i-05bdf44bd87bc0e71': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-RF/1077a0639b9dd324', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-Desktop/cbb530cee98a4b5a']}
+2026-07-08 01:09:33,730 - 3941225 - INFO - Deregistering i-05bdf44bd87bc0e71 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-RF/1077a0639b9dd324
+2026-07-08 01:09:33,802 - 3941225 - INFO - Deregistering i-05bdf44bd87bc0e71 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-Desktop/cbb530cee98a4b5a
+2026-07-08 01:09:33,875 - 3941225 - INFO - Stopping EC2 instance: i-05bdf44bd87bc0e71 at 2026-07-08 01:09:33
+2026-07-08 01:12:20,730 - 3941225 - INFO - Instance i-05bdf44bd87bc0e71 stopped successfully.
+2026-07-08 01:12:20,874 - 3941225 - INFO - Stopped i-05bdf44bd87bc0e71 in 0:02:46.999424
+2026-07-08 01:12:20,875 - 3941225 - INFO - Starting EC2 instance: i-05bdf44bd87bc0e71
+2026-07-08 01:12:36,980 - 3941225 - INFO - Instance i-05bdf44bd87bc0e71 started successfully.
+2026-07-08 01:12:36,980 - 3941225 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05bdf44bd87bc0e71...
+2026-07-08 01:14:16,982 - 3941225 - INFO - Registering i-05bdf44bd87bc0e71 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-RF/1077a0639b9dd324
+2026-07-08 01:14:17,207 - 3941225 - INFO - Registering i-05bdf44bd87bc0e71 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Midea-UAT-Desktop/cbb530cee98a4b5a
+2026-07-08 01:15:47,769 - 3941225 - INFO - Sent app_validation.py to i-05bdf44bd87bc0e71 (command_id: 4b0202b5-1262-4617-bf22-3843d33da3ca)
+2026-07-08 01:16:17,864 - 3941225 - INFO - app_validation.py output for i-05bdf44bd87bc0e71:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 05:15:48.058719
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.7
+Hostname | ip-172-29-84-7
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 151.2G | 138.7G | 52% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | midea_cawld, midea_rpt, midea_wldpamac, midea_ilwld, midea_gfagawld, midea_lbl, midea_event, midea_ftp, midea_repl, midea_censch, midea_inbq, midea_2gfagawld, midea_eassch, midea_pmacrwld, midea_gawld, midea_jqgrid, midea_1rpt, midea_dwa, midea_wldtxuns
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+midea_cawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ca
+midea_rpt | /data/batchapp/softeon/mideauat/reportdaemon
+midea_wldpamac | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_mac
+midea_ilwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_il
+midea_gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga_gfa
+midea_lbl | /data/batchapp/softeon/mideauat/labeldaemon
+midea_event | /data/batchapp/softeon/mideauat/eventdaemon
+midea_ftp | /data/batchapp/softeon/mideauat/ftpdaemon
+midea_repl | /data/batchapp/softeon/mideauat/replenishmentdaemon
+midea_censch | /data/batchapp/softeon/mideauat/schedulerdaemon_central
+midea_inbq | /data/batchapp/softeon/mideauat/uploaddeamon
+midea_2gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga2_gfa
+midea_eassch | /data/batchapp/softeon/mideauat/schedulerdaemon_eastern
+midea_pmacrwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_macr
+midea_gawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga
+midea_jqgrid | /data/batchapp/softeon/mideauat/reportjqgridexportdaemon
+midea_1rpt | /data/batchapp/softeon/mideauat/reportdaemon1
+midea_dwa | /data/batchapp/softeon/mideauat/downloaddaemon
+midea_wldtxuns | /data/batchapp/softeon/mideauat/wavelaunchdaemon_tx_unis
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4527 | midearfuat | jboss730eap | midearf_jb730ep | 8081 | 172.29.84.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfuat/standalone
+4491 | mideauat | jboss730eap | midea_jb730eap | 8080 | 172.29.84.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideauat/standalone
+4462 | mideawsuat | jboss730eap | mideaws_jb730e | 8082 | 172.29.84.7:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 05:15:49.817962
+==============================================================================
+
+2026-07-08 01:16:17,865 - 3941225 - ERROR - app_validation.py errors for i-05bdf44bd87bc0e71:
+
+2026-07-08 01:16:17,866 - 3941225 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-08/q3-midea-uat/172.29.84.7/172.29.84.7-AfterPatching-2026-07-08-01-16-17-866.log
+2026-07-08 01:16:17,919 - 3941225 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-08/q3-midea-uat/172.29.84.7/172.29.84.7-Validation-details-2026-07-08-01-16-17-866.html
+2026-07-08 01:16:18,145 - 3941225 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-08 01:16:18,146 - 3941225 - INFO - HTML validation report email sent for i-05bdf44bd87bc0e71
+2026-07-08 01:16:18,146 - 3941225 - INFO - [Retry-1] Waiting 600s for i-05bdf44bd87bc0e71...
+2026-07-08 01:16:18,146 - 3941225 - INFO - RED - Background retry thread started for i-05bdf44bd87bc0e71
+2026-07-08 01:16:18,370 - 3941225 - INFO - Started i-05bdf44bd87bc0e71 in 0:03:57.495456
+2026-07-08 01:16:18,371 - 3941225 - INFO - All instances processed.
+2026-07-08 01:16:18,375 - 3941225 - INFO - Restart Total time: 0:07:05.054262
+2026-07-08 01:16:18,376 - 3941225 - INFO - Auto-confirmed services are restarted
+2026-07-08 01:16:18,376 - 3941225 - INFO - Confirmed - services are started
+2026-07-08 01:16:18,488 - 3941225 - INFO - The following instances have failed the patch: []
+2026-07-08 01:16:18,488 - 3941225 - INFO - No instances have failed the patch.
+2026-07-08 01:16:18,489 - 3941225 - INFO - Total Patch Process time: 0:16:15.266250
+2026-07-08 01:17:18,825 - 3941225 - INFO - Log file ./logs/patching_2026-07-08_q3-midea-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-midea-uat_Patch/2026-07-08/patching_2026-07-08_q3-midea-uat.log
+2026-07-08 01:26:18,348 - 3941225 - INFO - Sent app_validation.py to i-05bdf44bd87bc0e71 (command_id: b4cf8416-beae-4b0b-b06b-9e518612de68)
+2026-07-08 01:26:48,462 - 3941225 - INFO - app_validation.py output for i-05bdf44bd87bc0e71:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 05:26:18.620037
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.7
+Hostname | ip-172-29-84-7
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 151.2G | 138.6G | 52% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | midea_cawld, midea_rpt, midea_wldpamac, midea_ilwld, midea_gfagawld, midea_lbl, midea_event, midea_ftp, midea_repl, midea_censch, midea_inbq, midea_2gfagawld, midea_eassch, midea_pmacrwld, midea_gawld, midea_jqgrid, midea_1rpt, midea_dwa, midea_wldtxuns
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+midea_cawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ca
+midea_rpt | /data/batchapp/softeon/mideauat/reportdaemon
+midea_wldpamac | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_mac
+midea_ilwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_il
+midea_gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga_gfa
+midea_lbl | /data/batchapp/softeon/mideauat/labeldaemon
+midea_event | /data/batchapp/softeon/mideauat/eventdaemon
+midea_ftp | /data/batchapp/softeon/mideauat/ftpdaemon
+midea_repl | /data/batchapp/softeon/mideauat/replenishmentdaemon
+midea_censch | /data/batchapp/softeon/mideauat/schedulerdaemon_central
+midea_inbq | /data/batchapp/softeon/mideauat/uploaddeamon
+midea_2gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga2_gfa
+midea_eassch | /data/batchapp/softeon/mideauat/schedulerdaemon_eastern
+midea_pmacrwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_macr
+midea_gawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga
+midea_jqgrid | /data/batchapp/softeon/mideauat/reportjqgridexportdaemon
+midea_1rpt | /data/batchapp/softeon/mideauat/reportdaemon1
+midea_dwa | /data/batchapp/softeon/mideauat/downloaddaemon
+midea_wldtxuns | /data/batchapp/softeon/mideauat/wavelaunchdaemon_tx_unis
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4527 | midearfuat | jboss730eap | midearf_jb730ep | 8081 | 172.29.84.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfuat/standalone
+4491 | mideauat | jboss730eap | midea_jb730eap | 8080 | 172.29.84.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideauat/standalone
+4462 | mideawsuat | jboss730eap | mideaws_jb730e | 8082 | 172.29.84.7:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 05:26:19.387422
+==============================================================================
+
+2026-07-08 01:26:48,462 - 3941225 - ERROR - app_validation.py errors for i-05bdf44bd87bc0e71:
+
+2026-07-08 01:26:48,464 - 3941225 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-08/q3-midea-uat/172.29.84.7/172.29.84.7-AfterPatching-Retry1-2026-07-08-01-26-48-464.log
+2026-07-08 01:26:48,517 - 3941225 - INFO - [Retry-1] RED detected for Midea UAT Application and Batch Server (172.29.84.7), retrying... (Total waited: 600s)
+2026-07-08 01:26:48,518 - 3941225 - INFO - [Retry-2] Waiting 600s for i-05bdf44bd87bc0e71...
+2026-07-08 01:36:48,890 - 3941225 - INFO - Sent app_validation.py to i-05bdf44bd87bc0e71 (command_id: 9a24baeb-1b04-48a2-a962-4b223762abac)
+2026-07-08 01:37:18,944 - 3941225 - INFO - app_validation.py output for i-05bdf44bd87bc0e71:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 05:36:49.184120
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.84.7
+Hostname | ip-172-29-84-7
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 151.3G | 138.5G | 52% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.84.7:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.84.7 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | midea_cawld, midea_rpt, midea_wldpamac, midea_ilwld, midea_gfagawld, midea_lbl, midea_event, midea_ftp, midea_repl, midea_censch, midea_inbq, midea_2gfagawld, midea_eassch, midea_pmacrwld, midea_gawld, midea_jqgrid, midea_1rpt, midea_dwa, midea_wldtxuns
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+midea_cawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ca
+midea_rpt | /data/batchapp/softeon/mideauat/reportdaemon
+midea_wldpamac | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_mac
+midea_ilwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_il
+midea_gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga_gfa
+midea_lbl | /data/batchapp/softeon/mideauat/labeldaemon
+midea_event | /data/batchapp/softeon/mideauat/eventdaemon
+midea_ftp | /data/batchapp/softeon/mideauat/ftpdaemon
+midea_repl | /data/batchapp/softeon/mideauat/replenishmentdaemon
+midea_censch | /data/batchapp/softeon/mideauat/schedulerdaemon_central
+midea_inbq | /data/batchapp/softeon/mideauat/uploaddeamon
+midea_2gfagawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga2_gfa
+midea_eassch | /data/batchapp/softeon/mideauat/schedulerdaemon_eastern
+midea_pmacrwld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_pa_macr
+midea_gawld | /data/batchapp/softeon/mideauat/wavelaunchdaemon_ga
+midea_jqgrid | /data/batchapp/softeon/mideauat/reportjqgridexportdaemon
+midea_1rpt | /data/batchapp/softeon/mideauat/reportdaemon1
+midea_dwa | /data/batchapp/softeon/mideauat/downloaddaemon
+midea_wldtxuns | /data/batchapp/softeon/mideauat/wavelaunchdaemon_tx_unis
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4527 | midearfuat | jboss730eap | midearf_jb730ep | 8081 | 172.29.84.7:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/midearfuat/standalone
+4491 | mideauat | jboss730eap | midea_jb730eap | 8080 | 172.29.84.7:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/mideauat/standalone
+4462 | mideawsuat | jboss730eap | mideaws_jb730e | 8082 | 172.29.84.7:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/mideawsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 05:36:50.000057
+==============================================================================
+
+2026-07-08 01:37:18,944 - 3941225 - ERROR - app_validation.py errors for i-05bdf44bd87bc0e71:
+
+2026-07-08 01:37:18,946 - 3941225 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-08/q3-midea-uat/172.29.84.7/172.29.84.7-AfterPatching-Retry2-2026-07-08-01-37-18-945.log
+2026-07-08 01:37:19,078 - 3941225 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-08 01:37:19,286 - 3941225 - INFO - Health monitor crontab enabled on all instances
+2026-07-08 01:37:19,288 - 3941225 - INFO - [Retry] Green - cron enabled for i-05bdf44bd87bc0e71

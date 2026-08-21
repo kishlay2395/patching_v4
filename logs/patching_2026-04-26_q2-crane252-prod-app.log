@@ -1,0 +1,143 @@
+2026-04-26 01:20:03,452 - 1268491 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-26 01:28:28,002 - 1268491 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-26 01:28:28,186 - 1268491 - INFO - Log file ./logs/backup_2026-04-26.log uploaded to s3://q3-2025-aws-security-patching/q2-crane252-prod-app_Patch_Backup/2026-04-26/backup_2026-04-26.log
+2026-04-26 05:20:02,927 - 1278698 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-26 05:20:02,927 - 1278698 - INFO - Script Start Time: 2026-04-26 05:20:02
+2026-04-26 05:20:03,389 - 1278698 - INFO - Instance(s) selected for Patching: {'i-060618a5e572c4069': '172.31.30.26', 'i-0ad455e726a353339': '172.31.30.62'}
+2026-04-26 05:20:03,463 - 1278698 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 05:20:03,463 - 1278698 - INFO - Now patching instances at: 2026-04-26 05:20:03
+2026-04-26 05:20:03,552 - 1278698 - INFO - Sending patch command to instance i-0ad455e726a353339
+2026-04-26 05:20:03,734 - 1278698 - INFO - Command sent successfully to instance i-0ad455e726a353339. Command ID: 667c3c94-3c3c-4f96-b7ce-7cf0bf333792
+2026-04-26 05:20:03,941 - 1278698 - INFO - Sending patch command to instance i-060618a5e572c4069
+2026-04-26 05:20:04,122 - 1278698 - INFO - Command sent successfully to instance i-060618a5e572c4069. Command ID: b9e30e47-2af9-497d-a93d-872ba6723a7d
+2026-04-26 05:24:05,661 - 1278698 - INFO - All patches applied successfully.
+2026-04-26 05:24:05,661 - 1278698 - INFO - Patching end time: 2026-04-26 05:24:05
+2026-04-26 05:24:05,661 - 1278698 - INFO - Patch Elapsed time: 0:04:02.198285
+2026-04-26 05:24:05,732 - 1278698 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 05:24:05,732 - 1278698 - INFO - Confirmed - services are stopped
+2026-04-26 05:24:25,054 - 1278698 - INFO - Discovered TG map: {'i-0ad455e726a353339': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Portal-252/93a893ce0d25981f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-RF-252/ae1e3e16cdd44930', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Config-252/ce379ed89a738db8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Desktop-252/b81140383d35ddc9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-WS-252/ccbf529e570e642f'], 'i-060618a5e572c4069': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Portal-252/93a893ce0d25981f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-RF-252/ae1e3e16cdd44930', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Config-252/ce379ed89a738db8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Desktop-252/b81140383d35ddc9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-WS-252/ccbf529e570e642f']}
+2026-04-26 05:24:25,454 - 1278698 - INFO - Sent app_validation.py to i-0ad455e726a353339 (command_id: 19e5310c-2f46-456b-8bb0-ed02f3d05fdf)
+2026-04-26 05:24:55,553 - 1278698 - INFO - app_validation.py output for i-0ad455e726a353339:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 09:24:25.895456
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.30.62
+Hostname | ip-172-31-30-62
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 13.7G | 226.2G | 5% | /data
+fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | 0B | 5.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02092dac60e809a9c.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.31.30.62:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.30.62 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+953033 | crane252portalprod | jboss800eap | craneport_jb800 | 8083 | 172.31.30.62:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/crane252portalprod/standalone
+1449596 | crane252prod | jboss800eap | craneprod_jb800 | 8080 | 172.31.30.62:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/crane252prod/standalone
+1449930 | crane252rfprod | jboss800eap | cranerf_jb800 | 8081 | 172.31.30.62:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/crane252rfprod/standalone
+1450204 | crane252wsprod | jboss800eap | cranews_jb800 | 8082 | 172.31.30.62:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/crane252wsprod/standalone
+1035873 | craneconfig252prod | jboss740eap | crnconf252_jb74 | 8084 | 172.31.30.62:8084 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/craneconfig252prod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 09:24:30.401711
+==============================================================================
+
+2026-04-26 05:24:55,553 - 1278698 - ERROR - app_validation.py errors for i-0ad455e726a353339:
+
+2026-04-26 05:24:55,555 - 1278698 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-26/q2-crane252-prod-app/172.31.30.62/172.31.30.62-BeforePatching-2026-04-26-05-24-55-554.log
+2026-04-26 05:24:55,555 - 1278698 - INFO - Deregistering i-0ad455e726a353339 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Portal-252/93a893ce0d25981f
+2026-04-26 05:24:55,629 - 1278698 - INFO - Deregistering i-0ad455e726a353339 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-RF-252/ae1e3e16cdd44930
+2026-04-26 05:24:55,674 - 1278698 - INFO - Deregistering i-0ad455e726a353339 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Config-252/ce379ed89a738db8
+2026-04-26 05:24:55,718 - 1278698 - INFO - Deregistering i-0ad455e726a353339 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Desktop-252/b81140383d35ddc9
+2026-04-26 05:24:55,756 - 1278698 - INFO - Deregistering i-0ad455e726a353339 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-WS-252/ccbf529e570e642f
+2026-04-26 05:24:55,802 - 1278698 - INFO - Stopping EC2 instance: i-0ad455e726a353339 at 2026-04-26 05:24:55
+2026-04-26 05:26:42,061 - 1278698 - INFO - Instance i-0ad455e726a353339 stopped successfully.
+2026-04-26 05:26:42,322 - 1278698 - INFO - Stopped i-0ad455e726a353339 in 0:01:46.519647
+2026-04-26 05:26:42,322 - 1278698 - INFO - Starting EC2 instance: i-0ad455e726a353339
+2026-04-26 05:26:58,320 - 1278698 - INFO - Instance i-0ad455e726a353339 started successfully.
+2026-04-26 05:26:58,320 - 1278698 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0ad455e726a353339...
+2026-04-26 05:27:48,359 - 1278698 - INFO - Registering i-0ad455e726a353339 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Portal-252/93a893ce0d25981f
+2026-04-26 05:27:48,514 - 1278698 - INFO - Registering i-0ad455e726a353339 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-RF-252/ae1e3e16cdd44930
+2026-04-26 05:27:48,650 - 1278698 - INFO - Registering i-0ad455e726a353339 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Config-252/ce379ed89a738db8
+2026-04-26 05:27:48,795 - 1278698 - INFO - Registering i-0ad455e726a353339 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Desktop-252/b81140383d35ddc9
+2026-04-26 05:27:48,929 - 1278698 - INFO - Registering i-0ad455e726a353339 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-WS-252/ccbf529e570e642f
+2026-04-26 05:32:49,726 - 1278698 - WARNING - i-0ad455e726a353339 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Portal-252/93a893ce0d25981f after timeout.
+2026-04-26 05:37:50,432 - 1278698 - WARNING - i-0ad455e726a353339 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-RF-252/ae1e3e16cdd44930 after timeout.
+2026-04-26 05:42:51,105 - 1278698 - WARNING - i-0ad455e726a353339 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Config-252/ce379ed89a738db8 after timeout.
+2026-04-26 05:47:51,769 - 1278698 - WARNING - i-0ad455e726a353339 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CraneLogistics-Prod-Desktop-252/b81140383d35ddc9 after timeout.
+2026-04-26 05:47:51,881 - 1278698 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-26 05:47:51,882 - 1278698 - ERROR - Aborting workflow: i-0ad455e726a353339 is not healthy after restart.
+2026-04-26 05:47:51,884 - 1278698 - INFO - Restart Total time: 0:23:45.956108
+2026-04-26 05:47:51,884 - 1278698 - INFO - Auto-confirmed services are restarted
+2026-04-26 05:47:51,884 - 1278698 - INFO - Confirmed - services are started
+2026-04-26 05:47:52,035 - 1278698 - INFO - The following instances have failed the patch: []
+2026-04-26 05:47:52,035 - 1278698 - INFO - No instances have failed the patch.
+2026-04-26 05:47:52,035 - 1278698 - INFO - Total Patch Process time: 0:27:49.107271
+2026-04-26 05:48:52,576 - 1278698 - INFO - Log file ./logs/patching_2026-04-26_q2-crane252-prod-app.log uploaded to s3://q2-2026-aws-security-patching/q2-crane252-prod-app_Patch/2026-04-26/patching_2026-04-26_q2-crane252-prod-app.log

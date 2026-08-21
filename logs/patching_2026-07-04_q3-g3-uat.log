@@ -1,0 +1,253 @@
+2026-07-04 03:00:03,796 - 3728063 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-04 03:00:03,797 - 3728063 - INFO - Script Start Time: 2026-07-04 03:00:03
+2026-07-04 03:00:04,324 - 3728063 - INFO - Instance(s) selected for Patching: {'i-0b955e604e1a37da9': '192.168.161.23'}
+2026-07-04 03:00:04,487 - 3728063 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-04 03:00:04,487 - 3728063 - INFO - Now patching instances at: 2026-07-04 03:00:04
+2026-07-04 03:00:10,341 - 3728063 - INFO - i-0b955e604e1a37da9: Cron was active = True
+2026-07-04 03:00:10,774 - 3728063 - INFO - Health monitor crontab disabled on all instances
+2026-07-04 03:00:10,775 - 3728063 - INFO - Disabled cron for: ['i-0b955e604e1a37da9']
+2026-07-04 03:00:11,391 - 3728063 - INFO - Sent app_validation.py to i-0b955e604e1a37da9 (command_id: aace309b-3d17-4ff5-95f4-9728acac3631)
+2026-07-04 03:00:41,536 - 3728063 - INFO - app_validation.py output for i-0b955e604e1a37da9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-04 07:00:11.722757
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.23
+Hostname | ip-192-168-161-23.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 146.0G | 143.8G | 50% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://192.168.161.23:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 21
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.23 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | g3uat_DWA, g3uat_evt, g3uat_ftp, g3uat_LBL, g3uat_REPL, g3uat_REPCAN, g3uat_RPT, g3uat_RPTEX, g3uat_SCH, g3uat_WLD, g3uat_UPD
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+g3uat_DWA | /data/batchapp/softeon/g3uat/downloaddaemon
+g3uat_evt | /data/batchapp/softeon/g3uat/eventdaemon
+g3uat_ftp | /data/batchapp/softeon/g3uat/ftpdaemon
+g3uat_LBL | /data/batchapp/softeon/g3uat/labeldaemon
+g3uat_REPL | /data/batchapp/softeon/g3uat/replenishmentdaemon
+g3uat_REPCAN | /data/batchapp/softeon/g3uat/replenishmentpickloccanceldaemon
+g3uat_RPT | /data/batchapp/softeon/g3uat/reportdaemon
+g3uat_RPTEX | /data/batchapp/softeon/g3uat/reportjqgridexportdaemon
+g3uat_SCH | /data/batchapp/softeon/g3uat/schedulardaemon
+g3uat_WLD | /data/batchapp/softeon/g3uat/wavelaunchdaemon
+g3uat_UPD | /data/batchapp/softeon/g3uat/uploaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+365479 | g3rfuatnew | jboss730eap | g3rfuatnew_jb73 | 8091 | 192.168.161.23:8091 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3rfuatnew/standalone
+887121 | g3uatnew | jboss730eap | g3uatnew_jb73 | 8090 | 192.168.161.23:8090 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3uatnew/standalone
+365499 | g3wsuatnew | jboss730eap | g3wsuatnew_jb73 | 8092 | 192.168.161.23:8092 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3wsuatnew/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-04 07:00:12.712225
+==============================================================================
+
+2026-07-04 03:00:41,536 - 3728063 - ERROR - app_validation.py errors for i-0b955e604e1a37da9:
+
+2026-07-04 03:00:41,538 - 3728063 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-04/q3-g3-uat/192.168.161.23/192.168.161.23-BeforePatching-2026-07-04-03-00-41-537.log
+2026-07-04 03:00:41,622 - 3728063 - INFO - Sending patch command to instance i-0b955e604e1a37da9
+2026-07-04 03:00:41,986 - 3728063 - INFO - Command sent successfully to instance i-0b955e604e1a37da9. Command ID: 05aace9e-1368-42fb-9b67-fc60a909f3a9
+2026-07-04 03:11:46,266 - 3728063 - INFO - All patches applied successfully.
+2026-07-04 03:11:46,266 - 3728063 - INFO - Patching end time: 2026-07-04 03:11:46
+2026-07-04 03:11:46,266 - 3728063 - INFO - Patch Elapsed time: 0:11:41.779424
+2026-07-04 03:11:46,339 - 3728063 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-04 03:11:46,340 - 3728063 - INFO - Confirmed - services are stopped
+2026-07-04 03:11:51,781 - 3728063 - INFO - Discovered TG map: {'i-0b955e604e1a37da9': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Desktop-App/ccfeb68e58e4d204', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-RF-App/3b355c92dbdb3c9f', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Webservices/65dec31d06ed07f8']}
+2026-07-04 03:11:52,027 - 3728063 - INFO - Deregistering i-0b955e604e1a37da9 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Desktop-App/ccfeb68e58e4d204
+2026-07-04 03:11:52,347 - 3728063 - INFO - Deregistering i-0b955e604e1a37da9 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-RF-App/3b355c92dbdb3c9f
+2026-07-04 03:11:52,449 - 3728063 - INFO - Deregistering i-0b955e604e1a37da9 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Webservices/65dec31d06ed07f8
+2026-07-04 03:11:52,552 - 3728063 - INFO - Stopping EC2 instance: i-0b955e604e1a37da9 at 2026-07-04 03:11:52
+2026-07-04 03:13:24,481 - 3728063 - INFO - Instance i-0b955e604e1a37da9 stopped successfully.
+2026-07-04 03:13:24,615 - 3728063 - INFO - Stopped i-0b955e604e1a37da9 in 0:01:32.062983
+2026-07-04 03:13:24,616 - 3728063 - INFO - Starting EC2 instance: i-0b955e604e1a37da9
+2026-07-04 03:13:40,753 - 3728063 - INFO - Instance i-0b955e604e1a37da9 started successfully.
+2026-07-04 03:13:40,753 - 3728063 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0b955e604e1a37da9...
+2026-07-04 03:15:20,791 - 3728063 - INFO - Registering i-0b955e604e1a37da9 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Desktop-App/ccfeb68e58e4d204
+2026-07-04 03:15:21,212 - 3728063 - INFO - Registering i-0b955e604e1a37da9 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-RF-App/3b355c92dbdb3c9f
+2026-07-04 03:15:21,405 - 3728063 - INFO - Registering i-0b955e604e1a37da9 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/G3-UAT-Webservices/65dec31d06ed07f8
+2026-07-04 03:19:23,426 - 3728063 - INFO - Sent app_validation.py to i-0b955e604e1a37da9 (command_id: c1bf7a98-36b3-4823-84fa-9c6ded495c7c)
+2026-07-04 03:19:53,575 - 3728063 - INFO - app_validation.py output for i-0b955e604e1a37da9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-04 07:19:23.732953
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 192.168.161.23
+Hostname | ip-192-168-161-23.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 146.1G | 143.7G | 50% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://192.168.161.23:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 21
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 192.168.161.23 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 11
+Non-Standalone Java Processes | g3uat_DWA, g3uat_evt, g3uat_ftp, g3uat_LBL, g3uat_REPL, g3uat_REPCAN, g3uat_RPT, g3uat_RPTEX, g3uat_SCH, g3uat_UPD, g3uat_WLD
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 11
+Java-Name | Java-Path
+g3uat_DWA | /data/batchapp/softeon/g3uat/downloaddaemon
+g3uat_evt | /data/batchapp/softeon/g3uat/eventdaemon
+g3uat_ftp | /data/batchapp/softeon/g3uat/ftpdaemon
+g3uat_LBL | /data/batchapp/softeon/g3uat/labeldaemon
+g3uat_REPL | /data/batchapp/softeon/g3uat/replenishmentdaemon
+g3uat_REPCAN | /data/batchapp/softeon/g3uat/replenishmentpickloccanceldaemon
+g3uat_RPT | /data/batchapp/softeon/g3uat/reportdaemon
+g3uat_RPTEX | /data/batchapp/softeon/g3uat/reportjqgridexportdaemon
+g3uat_SCH | /data/batchapp/softeon/g3uat/schedulardaemon
+g3uat_UPD | /data/batchapp/softeon/g3uat/uploaddaemon
+g3uat_WLD | /data/batchapp/softeon/g3uat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3626 | g3rfuatnew | jboss730eap | g3rfuatnew_jb73 | 8091 | 192.168.161.23:8091 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3rfuatnew/standalone
+3385 | g3uatnew | jboss730eap | g3uatnew_jb73 | 8090 | 192.168.161.23:8090 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3uatnew/standalone
+3796 | g3wsuatnew | jboss730eap | g3wsuatnew_jb73 | 8092 | 192.168.161.23:8092 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/g3wsuatnew/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-04 07:19:26.522753
+==============================================================================
+
+2026-07-04 03:19:53,576 - 3728063 - ERROR - app_validation.py errors for i-0b955e604e1a37da9:
+
+2026-07-04 03:19:53,577 - 3728063 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-04/q3-g3-uat/192.168.161.23/192.168.161.23-AfterPatching-2026-07-04-03-19-53-577.log
+2026-07-04 03:19:53,629 - 3728063 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-04/q3-g3-uat/192.168.161.23/192.168.161.23-Validation-details-2026-07-04-03-19-53-577.html
+2026-07-04 03:19:54,060 - 3728063 - INFO - Waiting for health monitor cron to be enabled on i-0b955e604e1a37da9...
+2026-07-04 03:19:54,562 - 3728063 - INFO - Health monitor crontab enabled on all instances
+2026-07-04 03:19:54,563 - 3728063 - INFO - Health monitor cron enabled on i-0b955e604e1a37da9.
+2026-07-04 03:19:54,639 - 3728063 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-04 03:19:54,639 - 3728063 - INFO - HTML validation report email sent for i-0b955e604e1a37da9
+2026-07-04 03:19:54,766 - 3728063 - INFO - Started i-0b955e604e1a37da9 in 0:06:30.150432
+2026-07-04 03:19:54,767 - 3728063 - INFO - All instances processed.
+2026-07-04 03:19:54,770 - 3728063 - INFO - Restart Total time: 0:08:08.303541
+2026-07-04 03:19:54,771 - 3728063 - INFO - Auto-confirmed services are restarted
+2026-07-04 03:19:54,771 - 3728063 - INFO - Confirmed - services are started
+2026-07-04 03:19:54,882 - 3728063 - INFO - The following instances have failed the patch: []
+2026-07-04 03:19:54,882 - 3728063 - INFO - No instances have failed the patch.
+2026-07-04 03:19:54,882 - 3728063 - INFO - Total Patch Process time: 0:19:51.085599
+2026-07-04 03:20:55,229 - 3728063 - INFO - Log file ./logs/patching_2026-07-04_q3-g3-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-g3-uat_Patch/2026-07-04/patching_2026-07-04_q3-g3-uat.log

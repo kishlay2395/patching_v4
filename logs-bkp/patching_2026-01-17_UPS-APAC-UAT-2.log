@@ -1,0 +1,248 @@
+2026-01-17 00:15:02,522 - 26839 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-01-17 00:15:02,523 - 26839 - INFO - Script Start Time: 2026-01-17 00:15:02
+2026-01-17 00:15:02,743 - 26839 - INFO - Instance(s) selected for Patching: {'i-01e4f216ed1583097': '172.29.60.81'}
+2026-01-17 00:15:02,834 - 26839 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-01-17 00:15:02,835 - 26839 - INFO - Now patching instances at: 2026-01-17 00:15:02
+2026-01-17 00:15:02,894 - 26839 - INFO - Sending patch command to instance i-01e4f216ed1583097
+2026-01-17 00:15:03,051 - 26839 - INFO - Command sent successfully to instance i-01e4f216ed1583097. Command ID: ec1c711c-332f-44ec-a66d-10c6e2b1e601
+2026-01-17 00:22:34,866 - 26839 - INFO - All patches applied successfully.
+2026-01-17 00:22:34,866 - 26839 - INFO - Patching end time: 2026-01-17 00:22:34
+2026-01-17 00:22:34,867 - 26839 - INFO - Patch Elapsed time: 0:07:32.031720
+2026-01-17 00:22:34,944 - 26839 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-01-17 00:22:34,944 - 26839 - INFO - Confirmed - services are stopped
+2026-01-17 00:22:54,476 - 26839 - INFO - Discovered TG map: {'i-01e4f216ed1583097': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-Desktop/af9256449e06fb73', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-RF/a7fd1640ff530010']}
+2026-01-17 00:22:54,760 - 26839 - INFO - Sent app_validation.sh to i-01e4f216ed1583097 (command_id: c6d59db3-39a3-4b4b-ae33-b4232f22f315)
+2026-01-17 00:23:24,870 - 26839 - INFO - app_validation.sh output for i-01e4f216ed1583097:
+
+==============================================================================
+Server Availability Check Started at Sat Jan 17 05:22:54 UTC 2026
+==============================================================================
+
+-------------------------------------
+Server IP : 172.29.60.81
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-29-60-81
+Uptime: up 25 weeks, 6 days, 18 hours, 43 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.29.60.81:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.29.60.81
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 9803 MB
+Free Physical Memory  = 5808 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.70 1.23 0.72 1/557 2242982
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.8G   15G  29% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             180G   11G  170G   6% /data
+172.29.60.118:/data/shared/softeon         180G   83G   98G  46% /data/shared/softeon
+fs-2172dc69.efs.us-east-1.amazonaws.com:/  8.0E  496G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  688K  3.1G   1% /run
+tmpfs                                      1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                      7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.29.60.81 started on Sat Jan 17 05:22:55 UTC 2026
+
+Server IP: 172.29.60.81 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.29.60.81
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.29.60.81
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.29.60.81
+-------------------------------------
+
+Total number of Java process running on this host 172.29.60.81 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.29.60.81
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2889, Process Name: 12964:00
+Process ID: 3048, Process Name: 13050:08
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.29.60.81
+Port 80:	upsapacuat_jbo	Running
+Port 443:	upsapacuat_jbo	Not Running
+Port 8080:	upsapacrfuat_j	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Jan 17 05:22:55 UTC 2026
+==============================================================================
+
+
+2026-01-17 00:23:24,870 - 26839 - ERROR - app_validation.sh errors for i-01e4f216ed1583097:
+
+2026-01-17 00:23:24,872 - 26839 - INFO - Before patching validation saved to: output/validation-2026-01-17/172.29.60.81-BeforePatching-2026-01-17-00-23-24-871.log
+2026-01-17 00:23:24,872 - 26839 - INFO - Deregistering i-01e4f216ed1583097 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-Desktop/af9256449e06fb73
+2026-01-17 00:23:24,951 - 26839 - INFO - Deregistering i-01e4f216ed1583097 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-RF/a7fd1640ff530010
+2026-01-17 00:23:25,000 - 26839 - INFO - Stopping EC2 instance: i-01e4f216ed1583097 at 2026-01-17 00:23:25
+2026-01-17 00:25:11,568 - 26839 - INFO - Instance i-01e4f216ed1583097 stopped successfully.
+2026-01-17 00:25:11,692 - 26839 - INFO - Stopped i-01e4f216ed1583097 in 0:01:46.692385
+2026-01-17 00:25:11,693 - 26839 - INFO - Starting EC2 instance: i-01e4f216ed1583097
+2026-01-17 00:25:27,765 - 26839 - INFO - Instance i-01e4f216ed1583097 started successfully.
+2026-01-17 00:25:27,766 - 26839 - INFO - Waiting 30 seconds for SSM agent to be ready on i-01e4f216ed1583097...
+2026-01-17 00:25:57,783 - 26839 - INFO - Registering i-01e4f216ed1583097 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-Desktop/af9256449e06fb73
+2026-01-17 00:25:57,956 - 26839 - INFO - Registering i-01e4f216ed1583097 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPS-APAC-UAT-ALB-RF/a7fd1640ff530010
+2026-01-17 00:28:28,634 - 26839 - INFO - Sent app_validation.sh to i-01e4f216ed1583097 (command_id: ac78a8f2-8279-4019-a60c-bebc60532fc0)
+2026-01-17 00:28:58,710 - 26839 - INFO - app_validation.sh output for i-01e4f216ed1583097:
+
+==============================================================================
+Server Availability Check Started at Sat Jan 17 05:28:28 UTC 2026
+==============================================================================
+
+-------------------------------------
+Server IP : 172.29.60.81
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-29-60-81
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.29.60.81:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.29.60.81
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15623 MB
+Used Physical Memory  = 7024 MB
+Free Physical Memory  = 8599 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.38 0.65 0.30 1/353 3452
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                              20G  5.5G   15G  28% /
+/dev/nvme0n1p128                            10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                             180G   11G  170G   6% /data
+172.29.60.118:/data/shared/softeon         180G   83G   98G  46% /data/shared/softeon
+fs-2172dc69.efs.us-east-1.amazonaws.com:/  8.0E  496G  8.0E   1% /data2
+devtmpfs                                   4.0M     0  4.0M   0% /dev
+tmpfs                                      7.7G     0  7.7G   0% /dev/shm
+tmpfs                                      3.1G  680K  3.1G   1% /run
+tmpfs                                      1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                      7.7G   64K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.29.60.81 started on Sat Jan 17 05:28:28 UTC 2026
+
+Server IP: 172.29.60.81 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.29.60.81
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.29.60.81
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.29.60.81
+-------------------------------------
+
+Total number of Java process running on this host 172.29.60.81 is 2
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.29.60.81
+Total number of App java process available is 2
+-------------------------------------
+App Process details:
+Process ID: 2894, Process Name: 0:41
+Process ID: 3030, Process Name: 0:40
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.29.60.81
+Port 80:	upsapacuat_jbo	Running
+Port 443:	upsapacuat_jbo	Not Running
+Port 8080:	upsapacrfuat_j	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Jan 17 05:28:30 UTC 2026
+==============================================================================
+
+
+2026-01-17 00:28:58,710 - 26839 - ERROR - app_validation.sh errors for i-01e4f216ed1583097:
+
+2026-01-17 00:28:58,712 - 26839 - INFO - After patching validation saved to: output/validation-2026-01-17/172.29.60.81-AfterPatching-2026-01-17-00-28-58-712.log
+2026-01-17 00:28:58,751 - 26839 - INFO - Validation comparison report generated: output/validation-2026-01-17/172.29.60.81-Validation-details-2026-01-17-00-28-58-712.log
+2026-01-17 00:28:58,835 - 26839 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-01-17 00:28:58,835 - 26839 - INFO - HTML validation report email sent for i-01e4f216ed1583097
+2026-01-17 00:28:58,985 - 26839 - INFO - Started i-01e4f216ed1583097 in 0:03:47.292248
+2026-01-17 00:28:58,985 - 26839 - INFO - All instances processed.
+2026-01-17 00:28:58,989 - 26839 - INFO - Restart Total time: 0:06:23.869234
+2026-01-17 00:28:58,989 - 26839 - INFO - Auto-confirmed services are restarted
+2026-01-17 00:28:58,990 - 26839 - INFO - Confirmed - services are started
+2026-01-17 00:28:59,092 - 26839 - INFO - The following instances have failed the patch: []
+2026-01-17 00:28:59,093 - 26839 - INFO - No instances have failed the patch.
+2026-01-17 00:28:59,093 - 26839 - INFO - Total Patch Process time: 0:13:56.569654
+2026-01-17 00:28:59,269 - 26839 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-01-17 00:29:59,441 - 26839 - INFO - Log file ./logs/patching_2026-01-17_UPS-APAC-UAT-2.log uploaded to s3://q1-2026-aws-security-patching/UPS-APAC-UAT-2_Patch/2026-01-17/patching_2026-01-17_UPS-APAC-UAT-2.log

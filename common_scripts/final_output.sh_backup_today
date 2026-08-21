@@ -1,0 +1,805 @@
+#!/bin/bash
+
+# Input files
+Input_File1="$1"
+Input_File2="$2"
+
+# Check if the input files exist
+if [[ ! -f "$Input_File1" ]]; then
+    echo "Input file not found: $Input_File1"
+    exit 1
+fi
+
+if [[ ! -f "$Input_File2" ]]; then
+    echo "Input file not found: $Input_File2"
+    exit 1
+fi
+
+# Function to compare values between two files
+
+print_section_values() {
+    local title="$1"
+    local pattern="$2"
+    
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk -F ':|=' '{print $2}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk -F ':|=' '{print $2}' | xargs)
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	if [[ "$value1" == "$value2" ]]; 
+	then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+
+print_section_memory() {
+    local title="$1"
+    local pattern="$2"
+    
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk -F ':|=' '{print $2}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk -F ':|=' '{print $2}' | xargs)
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	if [[ "$value1" == "$value2" ]]; 
+	then
+		status="Validated"
+	else	
+		status="Need Attention ($value1 / $value2)"
+	fi
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+print_section() {
+    local title="$1"
+    local pattern="$2"
+    
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk -F ':|=' '{print $2}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk -F ':|=' '{print $2}' | xargs)
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	if [[ "$value1" == "$value2" ]]; 
+	then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+# Function to extract system information from two files
+print_sys_section() {
+    local title="$1"
+    local pattern="$2"
+
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk '{$1=""; print $0}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk '{$1=""; print $0}' | xargs)
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	if [[ "$value1" == "$value2" ]]; 
+	then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+print_storage_section() {
+    local title="$1"
+    local pattern="$2"
+    local value=""
+
+    if [[ "$pattern" == "/data" ]]; then
+        local value1=$(awk '/Filesystem\s+Size\s+Used\s+Avail\s+Use%/ {found=1} found; found && /^-+$/ {found=0}' "$Input_File1" \
+            | grep "$pattern" | awk '{$1=""; print $NF}' | xargs)
+			
+		local value2=$(awk '/Filesystem\s+Size\s+Used\s+Avail\s+Use%/ {found=1} found; found && /^-+$/ {found=0}' "$Input_File1" \
+            | grep "$pattern" | awk '{$1=""; print $NF}' | xargs)
+			
+    elif [[ "$pattern" == "Details of active (valid) symbolic links:" ]]; then 
+        local value1=$(awk '/Details of active \(valid\) symbolic links:/ {found=1} found; found && /^-+$/ {found=0}'  "$Input_File2" \
+            | grep "/data" | sort -u | awk '{$1=""; print $NF}' | xargs )  
+			
+        local value2=$(awk '/Details of active \(valid\) symbolic links:/ {found=1} found; found && /^-+$/ {found=0}'  "$Input_File2" \
+            | grep "/data" | sort -u | awk '{$1=""; print $NF}' | xargs ) 			
+    fi 
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+	
+	if [[ "$value1" == "$value2" ]]; 
+	then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+print_service_section() {
+    local title="$1"
+    local pattern="$2"
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk '{$1=""; print $NF}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk '{$1=""; print $NF}' | xargs)
+
+    if [[ -n "$value1" && $value1 != No* ]]; then
+		if [[ -n "$value2" && $value2 != No* ]]; then
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi					
+			printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+		else
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi
+			printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "Not Found/Not Running" "$status"
+		fi
+    elif [[ -n "$value2" && $value2 != No* ]]; then
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi
+        printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Not Found/Not Running" "$value2" "$status"
+	else
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi		
+		printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Not Found/Not Running" "Not Found/Not Running" "$status"
+    fi
+
+#        printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "Not Found/Not Running"
+#    fi
+}
+
+print_service_section1() {
+    local title="$1"
+    local pattern="$2"
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk '{$1=""; print $NF}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk '{$1=""; print $NF}' | xargs)
+    # Handle missing values and "No*" conditions
+    [[ -z "$value1" || "$value1" == No* ]] && value1="Not Found/Not Running"
+    [[ -z "$value2" || "$value2" == No* ]] && value2="Not Found/Not Running"
+
+    # Print the result in a structured format
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2"
+}
+
+
+
+
+#print_cron_section() {
+#    local title="$1"
+#    local pattern="$2"
+#    local value1=$(grep -m 1 "$pattern" -A 1 "$Input_File1" | awk 'NR==2 {print $1}' | xargs)
+#    local value2=$(grep -m 1 "$pattern" -A 1 "$Input_File2" | awk 'NR==2 {print $1}' | xargs)
+#    [[ -z "$value1" ]] && value1="Not Found"
+#    [[ -z "$value2" ]] && value2="Not Found"
+#
+#    printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+#}
+
+print_cron_section() {
+    local title="$1"
+    local pattern="$2"
+    
+    # Search in the first input file
+    local value1=$(grep -m 1 "$pattern" -A 1 "$Input_File1" | awk 'NR==2 {print $1}' | xargs)
+    
+    # Search in the second input file
+    local value2=$(grep -m 1 "$pattern" -A 1 "$Input_File2" | awk 'NR==2 {print $1}' | xargs)
+
+    # Check the first value
+    if [[ -n "$value1" && $value1 != No* ]]; then
+		if [[ -n "$value2" && $value2 != No* ]]; then
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi		
+			printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Cron Entries Found" "Cron Entries Found" "$status"
+		else
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi				
+			printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Cron Entries Found" "Cron Entries Not Found" "$status"
+		fi
+    elif [[ -n "$value2" && $value2 != No* ]]; then
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi			
+        printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Cron Entries Not Found" "Cron Entries Found" "$status"
+	else
+			if [[ "$value1" == "$value2" ]]; then
+				status="Validated"
+			else	
+				status="Need Attention"
+			fi			
+		printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "Cron Entries Not Found" "Cron Entries Not Found" "$status"
+    fi
+}
+
+
+print_printer_section() {
+    local title="$1"
+    local pattern="$2"
+
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk '{print $1}' | xargs)
+    local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk '{print $1}' | xargs)
+
+    [[ -z "$value1" ]] && value1="Not Found"
+    [[ -z "$value2" ]] && value2="Not Found"
+	if [[ "$value1" == "$value2" ]]; then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi			
+
+    printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+print_batch_process_details() {
+    local title="Batch Process Details"
+
+    # Print header
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "File 1" "File 2" "Status"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+
+    # Extract values from both input files
+    local value1=$(awk '
+        /Daemon Process id and name details are given below/ { found=1; next }  
+        found && NF { print $2}  
+        found && /^-+$/ { exit }  
+    ' "$Input_File1")
+
+    local value2=$(awk '
+        /Daemon Process id and name details are given below/ { found=1; next }  
+        found && NF { print $2}  
+        found && /^-+$/ { exit }  
+    ' "$Input_File2")
+
+    # Convert values into arrays for multi-line handling
+    IFS=$'\n' read -d '' -r -a arr1 <<< "$value1"
+    IFS=$'\n' read -d '' -r -a arr2 <<< "$value2"
+
+    # Combine both arrays for comparison
+    declare -A seen
+    for item in "${arr1[@]}"; do seen["$item"]=1; done
+    for item in "${arr2[@]}"; do seen["$item"]=$(( seen["$item"] + 2 )); done
+
+    # Print process details with status comparison
+    for key in "${!seen[@]}"; do
+        case ${seen[$key]} in
+            1) printf "%-40s | %-40s | %-40s | %-20s\n" "Batch Process Name" "$key" "Not Found" "Missing After Patching" ;;
+            2) printf "%-40s | %-40s | %-40s | %-20s\n" "Batch Process Name" "Not Found" "$key" "Missing Before Patching" ;;
+            3) printf "%-40s | %-40s | %-40s | %-20s\n" "Batch Process Name" "$key" "$key" "Validated" ;;
+        esac
+    done
+	
+	# Extract app process count from both files
+    local app_count1=$(awk '/Total number of Batch application process available is/ {print $NF}' "$Input_File1" | xargs)
+    local app_count2=$(awk '/Total number of Batch application process available is/ {print $NF}' "$Input_File2" | xargs)
+
+    # Handle missing values
+    [[ -z "$app_count1" ]] && app_count1="Not Found"
+    [[ -z "$app_count2" ]] && app_count2="Not Found"
+	
+	if [[ "$app_count1" == "$app_count2" ]]; then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi			
+	
+
+    # Print app process count
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "BatchApp Processes Running" "$app_count1" "$app_count2" "$status"
+	
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+}
+
+print_app_process_details() {
+    local title="Application Process Details"
+	# Print header
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "File 1" "File 2" "Status"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+
+    local value1=$(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { 
+            if (found) exit;  
+            found=1;
+            next;
+        }
+        found { print $4}
+    ' "$Input_File1")
+
+    local value2=$(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { 
+            if (found) exit;  
+            found=1;
+            next;
+        }
+        found { print $4}
+    ' "$Input_File2")
+
+    # Convert values into arrays for multi-line handling
+    IFS=$'\n' read -d '' -r -a arr1 <<< "$value1"
+    IFS=$'\n' read -d '' -r -a arr2 <<< "$value2"
+
+    # Combine both arrays for comparison
+    declare -A seen
+    for item in "${arr1[@]}"; do seen["$item"]=1; done
+    for item in "${arr2[@]}"; do seen["$item"]=$(( seen["$item"] + 2 )); done
+
+    # Print process details with status comparison
+    for key in "${!seen[@]}"; do
+        case ${seen[$key]} in
+            1) printf "%-40s | %-40s | %-40s | %-20s\n" "App Process Name" "$key" "Not Found" "Missing After Patching" ;;
+            2) printf "%-40s | %-40s | %-40s | %-20s\n" "App Process Name" "Not Found" "$key" "Missing Before Patching" ;;
+            3) printf "%-40s | %-40s | %-40s | %-20s\n" "App Process Name" "$key" "$key" "Validated" ;;
+        esac
+    done
+	
+	# Extract app process count from both files
+    local app_count1=$(awk '/Total number of App processes on/ {print $NF}' "$Input_File1" | xargs)
+    local app_count2=$(awk '/Total number of App processes on/ {print $NF}' "$Input_File2" | xargs)
+
+    # Handle missing values
+    [[ -z "$app_count1" ]] && app_count1="Not Found"
+    [[ -z "$app_count2" ]] && app_count2="Not Found"
+	
+	
+	if [[ "$app_count1" == "$app_count2" ]]; then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi	
+
+    # Print app process count
+    printf "%-40s | %-40s | %-40s | %-20s\n" "App Processes Running" "$app_count1" "$app_count2" "$status"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+}
+
+
+print_app_status_details() {
+    local title="Application Process Details"
+
+    # Header
+    printf "\n%-40s | %-12s | %-12s | %-10s | %-12s | %-12s | %-10s\n" \
+        "URL Address" "Pre-Status" "Post-Status" "Status" "Pre_HttpCode" "Post_HttpCode" "Status"
+    printf "%-40s | %-12s | %-12s | %-10s | %-12s | %-12s | %-10s\n" \
+        "----------------------------------------" "-----------" "-----------" "----------" "----------" "----------"
+
+    declare -A file1_status file2_status file1_code file2_code
+
+    # Parse Input_File1 (Pre-check)
+    while read -r url status code; do
+        file1_status["$url"]="$status"
+        file1_code["$url"]="$code"
+    done < <(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { if (found) exit; found=1; next }
+        found { print $6, $7, $8 }
+    ' "$Input_File1")
+
+    # Parse Input_File2 (Post-check)
+    while read -r url status code; do
+        file2_status["$url"]="$status"
+        file2_code["$url"]="$code"
+    done < <(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { if (found) exit; found=1; next }
+        found { print $6, $7, $8 }
+    ' "$Input_File2")
+
+    # Compare and display results
+    for url in "${!file1_status[@]}"; do
+        status1="${file1_status[$url]}"
+        status2="${file2_status[$url]}"
+        code1="${file1_code[$url]}"
+        code2="${file2_code[$url]}"
+
+        status_cmp="Validated"
+        [[ "$status1" != "$status2" ]] && status_cmp="Need Attention"
+
+        http_cmp="Validated"
+        [[ "$code1" != "$code2" ]] && http_cmp="Need Attention"		
+
+        printf "%-40s | %-12s | %-12s | %-10s | %-12s | %-12s | %-10s\n" \
+            "$url" "$status1" "$status2" "$status_cmp" "$code1" "$code2" "$http_cmp"
+    done
+}
+
+
+print_app_process_details_new() {
+    local title="Application Process Details"
+
+	# Print header
+	printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "File 1" "File 2" "Status"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+
+    declare -A file1_status file2_status 
+
+    # Parse Input_File1 (Pre-check)
+    while read -r java_name url; do
+        file1_status["$url"]="$java_name"
+        #file1_code["$url"]="$code"
+    done < <(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { if (found) exit; found=1; next }
+        found { print $4, $6 }
+    ' "$Input_File1")
+
+    # Parse Input_File2 (Post-check)
+    while read -r java_name url; do
+        file2_status["$url"]="$java_name"
+        #file2_code["$url"]="$code"
+    done < <(awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { if (found) exit; found=1; next }
+        found { print $4, $6 }
+    ' "$Input_File2")
+
+    # Compare and display results
+    for url in "${!file1_status[@]}"; do
+        status1="${file1_status[$url]}"
+        status2="${file2_status[$url]}"
+        #code1="${file1_code[$url]}"
+        #code2="${file2_code[$url]}"
+
+        status_cmp="Validated"
+        [[ "$status1" != "$status2" ]] && status_cmp="Need Attention"
+
+        #printf "%-40s | %-20s | %-20s | %-20s | %-20s | %-20s\n" \
+        #    "$url" "$status1" "$status2" "$status_cmp" "$code1" "$code2"
+			
+		# Print app process count
+		printf "%-40s | %-40s | %-40s | %-20s\n" "$url" "$status1" "$status2" "$status_cmp"
+		#printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"	
+    done
+}
+
+
+print_app_status_details_old() {
+    local title="Application Process Details"
+
+    # Header
+	printf "\n%-40s | %-20s | %-20s | %-20s | %-20s | %-20s\n" \
+    "URL Address" "Pre-Check-Status" "Post-Check-Status" "StatusCmp" "Pre_Http_Code" "Post_Http_Code"
+
+	# Print a separator line
+	printf "%-40s | %-20s | %-20s | %-20s | %-20s | %-20s\n" \
+    "----------------------------------------" "--------------------" "--------------------" "--------------------" "--------------------" "--------------------"
+
+    # Declare associative arrays
+    declare -A file1_status file2_status file1_code file2_code
+
+    # Parse File 1
+    awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { 
+            if (found) exit;  
+            found=1;
+            next;
+        }
+        found { print $4}
+    ' "$Input_File2" | while read -r field6 field7 field8; 
+	do
+        file1_status["$field6"]="$field7"
+        file1_code["$field6"]="$field8"
+    done
+
+    # Parse File 2
+	awk '
+        /^PID/ { found_header=1; next }
+        /^-+/ && found_header { 
+            if (found) exit;  
+            found=1;
+            next;
+        }
+        found { print $4}
+    ' "$Input_File2" | while read -r field6 field7 field8; 
+	do
+        file1_status["$field6"]="$field7"
+        file1_code["$field6"]="$field8"
+    done
+
+
+    # Compare and display results
+    for key in "${!file1_status[@]}"; do
+        status1="${file1_status[$key]}"
+        status2="${file2_status[$key]}"
+        code1="${file1_code[$key]}"
+        code2="${file2_code[$key]}"
+
+        status_cmp="MATCH"
+        [[ "$status1" != "$status2" ]] && status_cmp="MISMATCH"
+
+        code_cmp="match"
+        [[ "$code1" != "$code2" ]] && code_cmp="mismatch"
+
+        printf "%-40s | %-20s | %-20s | %-20s | %-20s | %-20s\n" \
+            "$key" "$status1" "$status2" "$status_cmp" "$code1" "$code2"
+    done
+}
+
+print_section_aviable() {
+    local title="$1"
+    local pattern1="$2"
+	local pattern2="$3"
+
+    # Extract values from both input files
+	if grep -q -m 1 "$pattern1" "$Input_File1" ; then 	
+		value1="Service Available"
+	elif grep -q -m 1 "$pattern2" "$Input_File1" ; then
+		value1="Service is Unavailable."
+	else
+		value1="Status not found in log."
+	fi
+	
+    # Assign default values based on conditions for value2
+    # Extract values from both input files
+    if grep -q -m 1 "$pattern1" "$Input_File2" ; then 	
+		value2="Service Available"
+	elif grep -q -m 1 "$pattern2" "$Input_File2" ; then
+		value2="Service is UnAvailable"
+	else
+		value2="Status not found in log."
+	fi
+	
+	if [[ "$app_count1" == "$app_count2" ]]; then
+		status="Validated"
+	else	
+		status="Need Attention"
+	fi	
+
+    # Print formatted output
+    #printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+	printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "$value1" "$value2" "$status"
+}
+
+
+
+
+
+
+print_crystal_section() {
+    local title="$1"
+    local pattern="$2"
+
+    # Extract values from both input files
+    local value1=$(grep -m 1 "$pattern" "$Input_File1" | awk '{$1=""; print $(NF-2), $(NF-1), $NF}' | xargs)
+	
+    # Assign default values based on conditions for value1
+    if [[ "$value1" == "does not exist." ]]; then
+        value1="Does not exist"
+    else
+        if [[ "$title" == "pref.xml system level directory" ]]; then
+            if grep -wq ".systemPrefs/com/inet/report/config/cc/Default/prefs.xml" "$Input_File1"; then
+                value1="System level folder & file found"
+            fi
+        elif [[ "$title" == "pref.xml user level directory" ]]; then
+            if grep -wq ".java/.userPrefs/com/inet/report/config/cc/Default/prefs.xml" "$Input_File1"; then
+                value1="$title Folder/File Found"
+            fi
+        else
+            value1="$title Folder Found"
+        fi
+    fi
+	
+	local value2=$(grep -m 1 "$pattern" "$Input_File2" | awk '{$1=""; print $(NF-2), $(NF-1), $NF}' | xargs)
+	
+    # Assign default values based on conditions for value2
+    if [[ "$value2" == "does not exist." ]]; then
+        value2="Does not exist"
+    else
+        if [[ "$title" == "pref.xml system level directory" ]]; then
+            if grep -wq ".systemPrefs/com/inet/report/config/cc/Default/prefs.xml" "$Input_File2"; then
+                value2="System level folder & file found"
+            fi
+        elif [[ "$title" == "pref.xml user level directory" ]]; then
+            if grep -wq ".java/.userPrefs/com/inet/report/config/cc/Default/prefs.xml" "$Input_File2"; then
+                value2="$title Folder/File Found"
+            fi
+        else
+            value2="$title Folder Found"
+        fi
+    fi
+
+    # Print formatted output
+    printf "%-40s | %-40s | %-40s\n" "$title" "$value1" "$value2"
+}
+
+print_homedir_section() {
+    local title="$1"
+    local pattern="$2"
+    
+    # Search in the first input file
+    local value1=$(awk '/Backed up \/home\// {print $3}' "$Input_File1")
+    
+    # Search in the second input file
+    local value2=$(awk '/Backed up \/home\// {print $3}' "$Input_File2")
+	
+    # Convert values into arrays for multi-line handling
+    IFS=$'\n' read -d '' -r -a arr1 <<< "$value1"
+    IFS=$'\n' read -d '' -r -a arr2 <<< "$value2"
+
+    # Combine both arrays for comparison
+    declare -A seen
+    for item in "${arr1[@]}"; do seen["$item"]=1; done
+    for item in "${arr2[@]}"; do seen["$item"]=$(( seen["$item"] + 2 )); done
+
+    # Print process details with status comparison
+    for key in "${!seen[@]}"; do
+        case ${seen[$key]} in
+            1) printf "%-40s | %-40s | %-40s | %-20s\n" "Name of the Directory" "$key" "Not Found" "Missing in File 2" ;;
+            2) printf "%-40s | %-40s | %-40s | %-20s\n" "Name of the Directory" "Not Found" "$key" "Missing in File 1" ;;
+            3) printf "%-40s | %-40s | %-40s | %-20s\n" "Name of the Directory" "$key" "$key" "Match" ;;
+        esac
+    done
+printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+}
+
+print_bashprofile_section() {
+    local title="$1"
+
+    # Get home directories from both input files
+    home_dirs1=($(awk '/Backed up \/home\// {print $3}' "$Input_File1"))
+    home_dirs2=($(awk '/Backed up \/home\// {print $3}' "$Input_File2"))
+
+    # Count number of home directories found
+    local count1=${#home_dirs1[@]}
+    local count2=${#home_dirs2[@]}
+
+    # Print total home directories found
+    printf "%-40s | %-40s | %-40s | %-20s\n" "$title" "File 1" "File 2" "Status"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+    printf "%-40s | %-40s | %-40s | %-20s\n" "Total /home/ directories found" "$count1" "$count2" "---"
+
+    # Declare associative arrays to store results
+    declare -A status1 status2
+
+    # Iterate over home directories to check for .bash_profile existence in File 1
+    for dir in "${home_dirs1[@]}"; do
+        local found=$(awk -v home="$dir" '
+            $0 ~ "Backed up " home {start=1; next} 
+            start && /Backed up \/home\// {exit} 
+            start && /\.bash_profile/ {print "Found"; exit}
+            END {if (!found) print "Not Found"}
+        ' "$Input_File1")
+        status1["$dir"]=$found
+    done
+
+    # Iterate over home directories to check for .bash_profile existence in File 2
+    for dir in "${home_dirs2[@]}"; do
+        local found=$(awk -v home="$dir" '
+            $0 ~ "Backed up " home {start=1; next} 
+            start && /Backed up \/home\// {exit} 
+            start && /\.bash_profile/ {print "Found"; exit}
+            END {if (!found) print "Not Found"}
+        ' "$Input_File2")
+        status2["$dir"]=$found
+    done
+
+    # Combine both arrays for comparison
+    declare -A seen
+    for dir in "${!status1[@]}"; do seen["$dir"]=1; done
+    for dir in "${!status2[@]}"; do seen["$dir"]=$(( seen["$dir"] + 2 )); done
+
+    # Print process details with status comparison
+    for key in "${!seen[@]}"; do
+        case ${seen[$key]} in
+            1) printf "%-40s | %-40s | %-40s | %-20s\n" "$key/.bashprofile" "$key" "Not Found" "Missing in File 2" ;;
+            2) printf "%-40s | %-40s | %-40s | %-20s\n" "$key/.bashprofile" "Not Found" "$key" "Missing in File 1" ;;
+            3) printf "%-40s | %-40s | %-40s | %-20s\n" "$key/.bashprofile" "$key" "$key" "Match" ;;
+        esac
+    done
+}
+
+
+# Print Header
+printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+printf "%-40s | %-40s | %-40s | %-20s\n" "Section" "File1" "File2" "Status"
+#echo "-------------------------------------------------------------------------------------------------"
+printf "%-40s | %-40s | %-40s | %-20s\n" "----------------------------------------" "----------------------------------------" "----------------------------------------" "--------------------"
+
+
+
+#print_cron_section "Cron Entries (appadmin)" "Checking cron entries for user: appadmin"
+#print_cron_section "Cron Entries (oracle)" "Checking cron entries for user: oracle"
+#print_cron_section "Cron Entries (root)" "Checking cron entries for user: root"
+
+#all the function for different sections
+print_section_values "Server IP" "Server IP"
+print_section_memory "Total Physical Memory" "Total Physical Memory"
+print_section_memory "Used Physical Memory" "Used Physical Memory"
+print_section_memory "Free Physical Memory" "Free Physical Memory"
+print_section_memory "Total Swap Memory" "Total Swap Memory"
+print_section_memory "Time Zone Information" "Time Zone Information"
+
+#print_section "Crystal Clear Version" "Crystal_clear_version="
+#print_crystal_section "pref.xml system level directory" "Directory /etc/.java does not exist."
+#print_crystal_section "pref.xml user level directory" "Directory /home/appadmin/.java does not exist."
+#
+#print_homedir_section "Bash profile file for users" "Backed up /home/"
+#print_bashprofile_section "Bash profile file for users" "Backed up /home/"
+#
+print_storage_section "Mounted on (data*)" "/data" "Mounted on (data*)" "/data"
+print_storage_section "Symbolic links" "Details of active (valid) symbolic links:" "Symbolic links" "Details of active (valid) symbolic links:"
+#
+print_service_section "NFS Server Package Availability" "nfs-server.service"
+print_service_section "NFS Server Status" "The nfs-server.service service is running"
+print_service_section "NFS Client Target Package Availability" "nfs-client.target"
+print_service_section "NFS Client Target Status" "The nfs-client.target service is running"
+#
+#print_cron_section "Cron Entries (appadmin)" "Checking cron entries for user: appadmin"
+#print_cron_section "Cron Entries (oracle)" "Checking cron entries for user: oracle"
+#print_cron_section "Cron Entries (root)" "Checking cron entries for user: root"
+#
+#print_section "CUPS Status" "CUPS is"
+#print_sys_section "CUPS Version" "CUPS Version:"
+#print_sys_section "CUPS Service" "CUPS service is"
+#print_printer_section "Printer Drivers Configured" "printer drivers found in /etc/cups/printers.conf."
+#print_section "Number of Printers" "Number of printers configured:"
+#
+
+print_section_aviable "FTP Service status" "FTP Service (Port:21) is available in Server IP" "FTP Service (Port:21) is not available in Server IP"
+
+print_section_aviable "CUPS Service status" "CUPS Service (Port:631) is available in Server IP" "CUPS Service (Port:631) is not available in Server IP"
+
+print_service_section "Number of Printers" "Total Number of printers availabe in this Server IP:"
+
+#print_section_aviable "FTP Service status" "FTP Service (Port: 21) is available in Server IP" "FTP Service (Port: 21) is not available in Server IP"
+
+print_service_section "Total Number of Java Processes Running" "Total number of Java process running on this host"
+print_service_section "Daemon / Batch App Processes" "Total number of Batch application process available is"
+print_service_section "App Processes Running" "Total number of App processes on host"
+##print_process_details "Process details for your review" "Daemon Process id and name details are given below" 
+print_batch_process_details
+print_app_process_details
+print_app_status_details
+print_app_process_details_new
+
+#print_app_status_details
+#
+#print_section "SFTP Status" "SFTP Status="
+#print_section "Ora_client_Status" "SFTP Status="
+#
+
+echo "-------------------------------------------------------------------------------------------------"

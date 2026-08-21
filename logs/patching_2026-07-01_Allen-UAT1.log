@@ -1,0 +1,382 @@
+2026-07-01 02:00:03,503 - 3559391 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-01 02:00:03,503 - 3559391 - INFO - Script Start Time: 2026-07-01 02:00:03
+2026-07-01 02:00:04,078 - 3559391 - INFO - Instance(s) selected for Patching: {'i-0b533bf915dbd6475': '172.18.40.28', 'i-08db7328c1263ecc9': '172.18.40.11', 'i-0f039080c1f1a323f': '172.18.40.109'}
+2026-07-01 02:00:04,191 - 3559391 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-01 02:00:04,191 - 3559391 - INFO - Now patching instances at: 2026-07-01 02:00:04
+2026-07-01 02:00:04,781 - 3559391 - INFO - Sent app_validation.py to i-08db7328c1263ecc9 (command_id: c056298e-8cb5-4aac-a3df-13ead92f889b)
+2026-07-01 02:00:34,841 - 3559391 - INFO - app_validation.py output for i-08db7328c1263ecc9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-01 06:00:05.205161
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.11
+Hostname | ip-172-18-40-11
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 172.6G | 67.3G | 71% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/data2  172.18.40.109 (rw,sync,no_root_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.11:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 171
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.11 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 30
+Batch/Daemon Java Processes | 23
+Non-Standalone Java Processes | aduat_cgclbt, aduat_invbt, aduat_billsch, aduat_dwa, aduat_event, aduat_ftp, aduat_lbl, aduat_repl, aduat_rpt, aduat_jqgrid, aduat_inbq, aduat_wld, aduat_wsq, aduat_1vomob, aduat_71_rccl, aduat_tei, aduat_voadm, aduat_2voadm, aduat_mqconsume, aduat_1rpt, aduat_sch, adconfuat_bcopy, drivemonitor
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 23
+Java-Name | Java-Path
+aduat_cgclbt | /data/batchapp/softeon/aduat/billingchargescanceldaemon
+aduat_invbt | /data/batchapp/softeon/aduat/billinginvoicedaemon
+aduat_billsch | /data/batchapp/softeon/aduat/billingschedulerdaemon
+aduat_dwa | /data/batchapp/softeon/aduat/downloaddaemon
+aduat_event | /data/batchapp/softeon/aduat/eventdaemon
+aduat_ftp | /data/batchapp/softeon/aduat/ftpdaemon
+aduat_lbl | /data/batchapp/softeon/aduat/labeldaemon
+aduat_repl | /data/batchapp/softeon/aduat/replenishmentdaemon
+aduat_rpt | /data/batchapp/softeon/aduat/reportdaemon
+aduat_jqgrid | /data/batchapp/softeon/aduat/reportjqgridexportdaemon
+aduat_inbq | /data/batchapp/softeon/aduat/uploaddaemon
+aduat_wld | /data/batchapp/softeon/aduat/wavelaunchdaemon
+aduat_wsq | /data/batchapp/softeon/aduat/wsqdaemon
+aduat_1vomob | /data/batchapp/softeon/aduat/voicemobiledaemon
+aduat_71_rccl | /data/batchapp/softeon/aduat/replenishmentpickloccanceldaemon_71
+aduat_tei | /data/batchapp/softeon/aduat/taskescalationandinterleavingdaemon
+aduat_voadm | /data/batchapp/softeon/aduat/voiceadminserver
+aduat_2voadm | /data/batchapp/softeon/aduat/voiceadminserver2
+aduat_mqconsume | /data/batchapp/softeon/aduat/lucamqconsumerdaemon
+aduat_1rpt | /data/batchapp/softeon/aduat/shippingdocsreportdeamon
+aduat_sch | /data/batchapp/softeon/aduat/schedulerdaemon
+adconfuat_bcopy | /data/batchapp/softeon/adconfiguat/bulkdatacopydaemon
+drivemonitor | Unknown
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3031599 | adconfiguat | jboss740eap | adconfg_jb80eap | 8082 | 172.18.40.11:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/adconfiguat/standalone
+2782224 | adportaluat | jboss800eap | adwmsprtl_jb800 | 8084 | 172.18.40.11:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adportaluat/standalone
+2781970 | adrfuat | jboss800eap | adrfuat_jb800e | 8081 | 172.18.40.11:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adrfuat/standalone
+2840820 | adswpuat | jboss800eap | adswpuat_jb800 | 8083 | 172.18.40.11:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adswpuat/standalone
+2781682 | aduat | jboss800eap | aduat_jb800eap | 8080 | 172.18.40.11:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/aduat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-01 06:00:14.697182
+==============================================================================
+
+2026-07-01 02:00:34,842 - 3559391 - ERROR - app_validation.py errors for i-08db7328c1263ecc9:
+
+2026-07-01 02:00:34,843 - 3559391 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-01/Allen-UAT1/172.18.40.11/172.18.40.11-BeforePatching-2026-07-01-02-00-34-843.log
+2026-07-01 02:00:35,030 - 3559391 - INFO - Sent app_validation.py to i-0b533bf915dbd6475 (command_id: 8430853a-a78a-4527-9822-0208d2da3270)
+2026-07-01 02:01:05,116 - 3559391 - INFO - app_validation.py output for i-0b533bf915dbd6475:
+
+==============================================================================
+Server Availability Check Started | 2026-07-01 06:00:35.384157
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.28
+Hostname | ip-172-18-40-28
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 185.0G | 104.9G | 63% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.28:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 217
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.28 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 29
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | aduat_vmad1, aduat_wld, aduat_wsq, aduat_2billv, aduat_dwa, aduat_event, aduat_ftp, aduat_lbl, aduat_repl, aduat_rccl, aduat_rpt, aduat_jqgrid, aduat_sch, aduat_inbq, aduat_billcb, aduat_BILSCH, aduat_inluc, aduat_rplpu, aduat_19rccl, aduat_18rccl, aduat_3rccl, aduat_2vomobadm, aduat_vomobadm, aduat_1billv
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+aduat_vmad1 | /data/batchapp/softeon/aduat/voicemobiledaemon1
+aduat_wld | /data/batchapp/softeon/aduat/wavelaunchdaemon
+aduat_wsq | /data/batchapp/softeon/aduat/wsqdaemon
+aduat_2billv | /data/batchapp/softeon/aduat/billinginvoicebatchdaemon_bldg2
+aduat_dwa | /data/batchapp/softeon/aduat/downloaddaemon
+aduat_event | /data/batchapp/softeon/aduat/eventdaemon
+aduat_ftp | /data/batchapp/softeon/aduat/ftpdaemon
+aduat_lbl | /data/batchapp/softeon/aduat/labeldaemon
+aduat_repl | /data/batchapp/softeon/aduat/replenishmentdaemon
+aduat_rccl | /data/batchapp/softeon/aduat/replenishmentpickloccanceldaemon
+aduat_rpt | /data/batchapp/softeon/aduat/reportdaemon
+aduat_jqgrid | /data/batchapp/softeon/aduat/reportjqgridexportdaemon
+aduat_sch | /data/batchapp/softeon/aduat/schedulardaemon
+aduat_inbq | /data/batchapp/softeon/aduat/uploaddeamon
+aduat_billcb | /data/batchapp/softeon/aduat/billingchargebatchdaemon
+aduat_BILSCH | /data/batchapp/softeon/aduat/billingschedulerdaemon
+aduat_inluc | /data/batchapp/softeon/aduat/lucainbounddaemon
+aduat_rplpu | /data/batchapp/softeon/aduat/replenishmentpriorityupdatedaemon
+aduat_19rccl | /data/batchapp/softeon/aduat/replpickloccanceldaemon_19
+aduat_18rccl | /data/batchapp/softeon/aduat/replpickloccanceldaemon_18
+aduat_3rccl | /data/batchapp/softeon/aduat/replpickloccanceldaemon_3
+aduat_2vomobadm | /data/batchapp/softeon/aduat/voiceadminserver2
+aduat_vomobadm | /data/batchapp/softeon/aduat/voiceadminserver
+aduat_1billv | /data/batchapp/softeon/aduat/billinginvoicebatchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4081191 | adportaluat | jboss720eap | adport_jb72eap | 8082 | 172.18.40.28:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/adportaluat/standalone
+4080649 | adrfuat | jboss720eap | adrfuat_jb72eap | 8081 | 172.18.40.28:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/adrfuat/standalone
+4080179 | aduat | jboss720eap | aduat_jb720eap | 8080 | 172.18.40.28:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/aduat/standalone
+4081669 | adwsuat | jboss720eap | adwsuat_jb72eap | 8084 | 172.18.40.28:8084 | Down | 000 | Disabled | /data/app/jboss720eap/softeon/adwsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-01 06:00:42.288382
+==============================================================================
+
+2026-07-01 02:01:05,117 - 3559391 - ERROR - app_validation.py errors for i-0b533bf915dbd6475:
+
+2026-07-01 02:01:05,118 - 3559391 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-01/Allen-UAT1/172.18.40.28/172.18.40.28-BeforePatching-2026-07-01-02-01-05-118.log
+2026-07-01 02:01:05,385 - 3559391 - INFO - Sent app_validation.py to i-0f039080c1f1a323f (command_id: 28bdb2cd-8eab-41cd-aa4e-7827ad0a956b)
+2026-07-01 02:01:35,541 - 3559391 - INFO - app_validation.py output for i-0f039080c1f1a323f:
+
+==============================================================================
+Server Availability Check Started | 2026-07-01 06:01:05.727369
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.109
+Hostname | ip-172-18-40-109
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 172.1G | 67.8G | 71% | /data
+172.18.40.11:/data/data2 | 239.9G | 172.6G | 67.3G | 71% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | 172.18.40.11:/data/data2 | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.109:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 171
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.109 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2092162 | adportaluat | jboss800eap | adwmsprtl_jb800 | 8084 | 172.18.40.109:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adportaluat/standalone
+2092052 | adrfuat | jboss800eap | adrfuat_jb800e | 8081 | 172.18.40.109:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adrfuat/standalone
+1386439 | adswpuat | jboss800eap | adswpuat_jb800 | 8083 | 172.18.40.109:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adswpuat/standalone
+2091681 | aduat | jboss800eap | aduat_jb800eap | 8080 | 172.18.40.109:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/aduat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-01 06:01:06.556746
+==============================================================================
+
+2026-07-01 02:01:35,541 - 3559391 - ERROR - app_validation.py errors for i-0f039080c1f1a323f:
+
+2026-07-01 02:01:35,543 - 3559391 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-01/Allen-UAT1/172.18.40.109/172.18.40.109-BeforePatching-2026-07-01-02-01-35-542.log
+2026-07-01 02:01:35,627 - 3559391 - INFO - Sending patch command to instance i-08db7328c1263ecc9
+2026-07-01 02:01:35,755 - 3559391 - INFO - Command sent successfully to instance i-08db7328c1263ecc9. Command ID: a4f1af84-9d08-418a-b464-5919d4fdbf16
+2026-07-01 02:01:35,898 - 3559391 - INFO - Sending patch command to instance i-0b533bf915dbd6475
+2026-07-01 02:01:35,994 - 3559391 - INFO - Command sent successfully to instance i-0b533bf915dbd6475. Command ID: 4bfda734-13dd-49c1-8bb4-5687f5cddd1a
+2026-07-01 02:01:36,113 - 3559391 - INFO - Sending patch command to instance i-0f039080c1f1a323f
+2026-07-01 02:01:36,224 - 3559391 - INFO - Command sent successfully to instance i-0f039080c1f1a323f. Command ID: 4eda50c3-a345-4237-993c-020cf5c6983d
+2026-07-01 02:08:38,816 - 3559391 - INFO - All patches applied successfully.
+2026-07-01 02:08:38,817 - 3559391 - INFO - Patching end time: 2026-07-01 02:08:38
+2026-07-01 02:08:38,817 - 3559391 - INFO - Patch Elapsed time: 0:08:34.625795
+2026-07-01 02:08:38,900 - 3559391 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-01 02:08:38,900 - 3559391 - INFO - Confirmed - services are stopped
+2026-07-01 02:08:59,369 - 3559391 - INFO - Discovered TG map: {'i-0b533bf915dbd6475': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-Portal-Ext/84d67f7a7858b4bb', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-WS-New/2ebad1bb3d368aa8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-Desktop/be913ffdd58fa57c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-RF/d13d9ae941d72aed'], 'i-0f039080c1f1a323f': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-SWP-Ext/3ed3db1221a8a054', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-RF/9f0affc174cb93ba', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-Portal-JB800-Ext/c85b901c2f8e2c8e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-WS-242/d76c849dbefdaef1'], 'i-08db7328c1263ecc9': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-SWP-Ext/3ed3db1221a8a054', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT/8c9c2c5521632c2c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-RF/9f0affc174cb93ba', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-Voic/02606e9506cf3ec3', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Config/53fa5fd24a67e519', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-Portal-JB800-Ext/c85b901c2f8e2c8e', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-WS-242/d76c849dbefdaef1']}
+2026-07-01 02:08:59,628 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-SWP-Ext/3ed3db1221a8a054
+2026-07-01 02:08:59,696 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT/8c9c2c5521632c2c
+2026-07-01 02:08:59,742 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-RF/9f0affc174cb93ba
+2026-07-01 02:08:59,783 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-Voic/02606e9506cf3ec3
+2026-07-01 02:08:59,841 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Config/53fa5fd24a67e519
+2026-07-01 02:08:59,881 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-Portal-JB800-Ext/c85b901c2f8e2c8e
+2026-07-01 02:08:59,925 - 3559391 - INFO - Deregistering i-08db7328c1263ecc9 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-WS-242/d76c849dbefdaef1
+2026-07-01 02:08:59,973 - 3559391 - INFO - Stopping EC2 instance: i-08db7328c1263ecc9 at 2026-07-01 02:08:59
+2026-07-01 02:11:46,639 - 3559391 - INFO - Instance i-08db7328c1263ecc9 stopped successfully.
+2026-07-01 02:11:47,015 - 3559391 - INFO - Stopped i-08db7328c1263ecc9 in 0:02:47.042054
+2026-07-01 02:11:47,016 - 3559391 - INFO - Starting EC2 instance: i-08db7328c1263ecc9
+2026-07-01 02:12:03,071 - 3559391 - INFO - Instance i-08db7328c1263ecc9 started successfully.
+2026-07-01 02:12:03,072 - 3559391 - INFO - Waiting 100 seconds for SSM agent to be ready on i-08db7328c1263ecc9...
+2026-07-01 02:13:43,121 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-SWP-Ext/3ed3db1221a8a054
+2026-07-01 02:13:43,286 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT/8c9c2c5521632c2c
+2026-07-01 02:13:43,422 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-RF/9f0affc174cb93ba
+2026-07-01 02:13:43,568 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-Voic/02606e9506cf3ec3
+2026-07-01 02:13:43,734 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Config/53fa5fd24a67e519
+2026-07-01 02:13:43,860 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Dist-UAT-Portal-JB800-Ext/c85b901c2f8e2c8e
+2026-07-01 02:13:44,002 - 3559391 - INFO - Registering i-08db7328c1263ecc9 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-UAT-WS-242/d76c849dbefdaef1
+2026-07-01 02:20:15,149 - 3559391 - WARNING - i-08db7328c1263ecc9 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-24-2-UAT-Voic/02606e9506cf3ec3 after timeout.
+2026-07-01 02:20:15,379 - 3559391 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-01 02:20:15,379 - 3559391 - ERROR - Aborting workflow: i-08db7328c1263ecc9 is not healthy after restart.
+2026-07-01 02:20:15,382 - 3559391 - INFO - Restart Total time: 0:11:36.354032
+2026-07-01 02:20:15,382 - 3559391 - INFO - Auto-confirmed services are restarted
+2026-07-01 02:20:15,382 - 3559391 - INFO - Confirmed - services are started
+2026-07-01 02:20:15,519 - 3559391 - INFO - The following instances have failed the patch: []
+2026-07-01 02:20:15,519 - 3559391 - INFO - No instances have failed the patch.
+2026-07-01 02:20:15,519 - 3559391 - INFO - Total Patch Process time: 0:20:12.016150
+2026-07-01 02:21:16,183 - 3559391 - INFO - Log file ./logs/patching_2026-07-01_Allen-UAT1.log uploaded to s3://q3-2026-aws-security-patching/Allen-UAT1_Patch/2026-07-01/patching_2026-07-01_Allen-UAT1.log

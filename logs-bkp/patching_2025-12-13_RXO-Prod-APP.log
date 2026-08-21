@@ -1,0 +1,536 @@
+2025-12-13 00:00:04,124 - 24831 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-13 00:09:56,067 - 24831 - INFO - Email sent successfully to ['MahimaM@softeon.com']
+2025-12-13 00:09:56,176 - 24831 - INFO - Log file ./logs/backup_2025-12-13.log uploaded to s3://q3-2025-aws-security-patching/RXO-Prod-APP_Patch_Backup/2025-12-13/backup_2025-12-13.log
+2025-12-13 04:00:03,023 - 5493 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-12-13 04:00:03,023 - 5493 - INFO - Script Start Time: 2025-12-13 04:00:03
+2025-12-13 04:00:03,281 - 5493 - INFO - Instance(s) selected for Patching: {'i-0eb59eaae0fa7e5fd': '172.22.24.14', 'i-0fc70fd37bca36521': '172.22.24.51'}
+2025-12-13 04:00:03,435 - 5493 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-13 04:00:03,435 - 5493 - INFO - Now patching instances at: 2025-12-13 04:00:03
+2025-12-13 04:00:03,606 - 5493 - INFO - Sending patch command to instance i-0fc70fd37bca36521
+2025-12-13 04:00:04,021 - 5493 - INFO - Command sent successfully to instance i-0fc70fd37bca36521. Command ID: 336506fc-dc32-4fe3-9ae7-98dec47850d8
+2025-12-13 04:00:04,376 - 5493 - INFO - Sending patch command to instance i-0eb59eaae0fa7e5fd
+2025-12-13 04:00:04,559 - 5493 - INFO - Command sent successfully to instance i-0eb59eaae0fa7e5fd. Command ID: fa90a400-f3b9-46c1-bf8d-4b086a2f1bd7
+2025-12-13 04:04:06,777 - 5493 - INFO - All patches applied successfully.
+2025-12-13 04:04:06,777 - 5493 - INFO - Patching end time: 2025-12-13 04:04:06
+2025-12-13 04:04:06,777 - 5493 - INFO - Patch Elapsed time: 0:04:03.341860
+2025-12-13 04:04:06,847 - 5493 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-13 04:04:06,847 - 5493 - INFO - Confirmed - services are stopped
+2025-12-13 04:04:11,739 - 5493 - INFO - Discovered TG map: {'i-0eb59eaae0fa7e5fd': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d'], 'i-0fc70fd37bca36521': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d']}
+2025-12-13 04:04:12,216 - 5493 - INFO - Sent app_validation.sh to i-0fc70fd37bca36521 (command_id: 9b2f410b-a43e-4043-85ff-b1a95b72224b)
+2025-12-13 04:04:42,366 - 5493 - INFO - app_validation.sh output for i-0fc70fd37bca36521:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 13 09:04:12 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.22.24.51
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-22-24-51.eu-west-1.compute.internal
+Uptime: up 3 weeks, 1 hour, 51 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.22.24.51:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.22.24.51
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 31379 MB
+Used Physical Memory  = 15752 MB
+Free Physical Memory  = 15627 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 0.62 0.75 0.34 11/870 931106
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.9G   15G  30% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   19G  222G   8% /data
+fs-085a5698fcf41dc35.efs.eu-west-1.amazonaws.com:/  8.0E  8.0G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                                16G     0   16G   0% /dev/shm
+tmpfs                                               6.2G  8.7M  6.2G   1% /run
+tmpfs                                                16G  128K   16G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.22.24.51 started on Sat Dec 13 09:04:12 UTC 2025
+
+Server IP: 172.22.24.51 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.22.24.51
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.22.24.51
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 10
+Printer Details:
+printer GBDWS_LBL_OB02 is idle.  enabled since Wed May  7 12:39:19 2025
+printer GBDWS_LSR_OB02 is idle.  enabled since Wed May  7 12:37:04 2025
+printer SHCR_LBL_IB03 is idle.  enabled since Sat May 10 16:47:03 2025
+printer SHCR_LBL_NEW04 is idle.  enabled since Sat May 10 16:46:23 2025
+printer SHCR_LBL_NEW05 is idle.  enabled since Sat May 10 16:48:52 2025
+printer SHCR_LBL_OB02 is idle.  enabled since Sat May 10 16:45:44 2025
+printer SHCR_LBL_OB03 is idle.  enabled since Sat May 10 16:48:04 2025
+printer SHCR_LSR_IB02 is idle.  enabled since Sat May 10 16:42:18 2025
+printer SHCR_LSR_NEW03 is idle.  enabled since Sat May 10 16:43:41 2025
+printer SHCR_LSR_OB02 is idle.  enabled since Sat May 10 16:43:02 2025
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.22.24.51
+-------------------------------------
+
+Total number of Java process running on this host 172.22.24.51 is 4
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.22.24.51
+Total number of App java process available is 4
+-------------------------------------
+App Process details:
+Process ID: 3909, Process Name: 89:48
+Process ID: 17152, Process Name: 124:48
+Process ID: 69599, Process Name: 120:17
+Process ID: 392873, Process Name: 103:08
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.22.24.51
+Port 8080:	rxoprod_jb730	Running
+Port 8081:	rxorfprod_jb7	Running
+Port 8082:	rxcngprd_jb730	Running
+Port 8083:	rxoymsprd_jb	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 13 09:04:13 UTC 2025
+==============================================================================
+
+
+2025-12-13 04:04:42,366 - 5493 - ERROR - app_validation.sh errors for i-0fc70fd37bca36521:
+
+2025-12-13 04:04:42,368 - 5493 - INFO - Before patching validation saved to: output/validation-2025-12-13/172.22.24.51-BeforePatching-2025-12-13-04-04-42-368.log
+2025-12-13 04:04:42,368 - 5493 - INFO - Deregistering i-0fc70fd37bca36521 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b
+2025-12-13 04:04:42,705 - 5493 - INFO - Deregistering i-0fc70fd37bca36521 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19
+2025-12-13 04:04:42,819 - 5493 - INFO - Deregistering i-0fc70fd37bca36521 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082
+2025-12-13 04:04:42,929 - 5493 - INFO - Deregistering i-0fc70fd37bca36521 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d
+2025-12-13 04:04:43,044 - 5493 - INFO - Stopping EC2 instance: i-0fc70fd37bca36521 at 2025-12-13 04:04:43
+2025-12-13 04:06:45,305 - 5493 - INFO - Instance i-0fc70fd37bca36521 stopped successfully.
+2025-12-13 04:06:45,527 - 5493 - INFO - Stopped i-0fc70fd37bca36521 in 0:02:02.483001
+2025-12-13 04:06:45,527 - 5493 - INFO - Starting EC2 instance: i-0fc70fd37bca36521
+2025-12-13 04:07:01,522 - 5493 - INFO - Instance i-0fc70fd37bca36521 started successfully.
+2025-12-13 04:07:01,523 - 5493 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0fc70fd37bca36521...
+2025-12-13 04:07:31,553 - 5493 - INFO - Registering i-0fc70fd37bca36521 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b
+2025-12-13 04:07:31,990 - 5493 - INFO - Registering i-0fc70fd37bca36521 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19
+2025-12-13 04:07:32,189 - 5493 - INFO - Registering i-0fc70fd37bca36521 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082
+2025-12-13 04:07:32,380 - 5493 - INFO - Registering i-0fc70fd37bca36521 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d
+2025-12-13 04:10:04,088 - 5493 - INFO - Sent app_validation.sh to i-0fc70fd37bca36521 (command_id: 8be4bdf8-cfc7-4d5c-a2c3-c1a393dd1d42)
+2025-12-13 04:10:34,256 - 5493 - INFO - app_validation.sh output for i-0fc70fd37bca36521:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 13 09:10:04 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.22.24.51
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-22-24-51.eu-west-1.compute.internal
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.22.24.51:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.22.24.51
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 31379 MB
+Used Physical Memory  = 10112 MB
+Free Physical Memory  = 21267 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.87 1.62 0.63 3/998 6419
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.8G   15G  29% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   19G  222G   8% /data
+fs-085a5698fcf41dc35.efs.eu-west-1.amazonaws.com:/  8.0E  8.0G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                                16G     0   16G   0% /dev/shm
+tmpfs                                               6.2G  8.7M  6.2G   1% /run
+tmpfs                                                16G  128K   16G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.22.24.51 started on Sat Dec 13 09:10:04 UTC 2025
+
+Server IP: 172.22.24.51 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.22.24.51
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.22.24.51
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 10
+Printer Details:
+printer GBDWS_LBL_OB02 is idle.  enabled since Wed May  7 12:39:19 2025
+printer GBDWS_LSR_OB02 is idle.  enabled since Wed May  7 12:37:04 2025
+printer SHCR_LBL_IB03 is idle.  enabled since Sat May 10 16:47:03 2025
+printer SHCR_LBL_NEW04 is idle.  enabled since Sat May 10 16:46:23 2025
+printer SHCR_LBL_NEW05 is idle.  enabled since Sat May 10 16:48:52 2025
+printer SHCR_LBL_OB02 is idle.  enabled since Sat May 10 16:45:44 2025
+printer SHCR_LBL_OB03 is idle.  enabled since Sat May 10 16:48:04 2025
+printer SHCR_LSR_IB02 is idle.  enabled since Sat May 10 16:42:18 2025
+printer SHCR_LSR_NEW03 is idle.  enabled since Sat May 10 16:43:41 2025
+printer SHCR_LSR_OB02 is idle.  enabled since Sat May 10 16:43:02 2025
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.22.24.51
+-------------------------------------
+
+Total number of Java process running on this host 172.22.24.51 is 4
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.22.24.51
+Total number of App java process available is 4
+-------------------------------------
+App Process details:
+Process ID: 3897, Process Name: 0:39
+Process ID: 4462, Process Name: 0:55
+Process ID: 4481, Process Name: 0:55
+Process ID: 4870, Process Name: 1:07
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.22.24.51
+Port 8080:	rxoprod_jb730	Running
+Port 8081:	rxorfprod_jb73	Running
+Port 8082:	rxcngprd_jb730	Running
+Port 8083:	rxoymsprd_jb80	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 13 09:10:06 UTC 2025
+==============================================================================
+
+
+2025-12-13 04:10:34,257 - 5493 - ERROR - app_validation.sh errors for i-0fc70fd37bca36521:
+
+2025-12-13 04:10:34,258 - 5493 - INFO - After patching validation saved to: output/validation-2025-12-13/172.22.24.51-AfterPatching-2025-12-13-04-10-34-258.log
+2025-12-13 04:10:34,298 - 5493 - INFO - Validation comparison report generated: output/validation-2025-12-13/172.22.24.51-Validation-details-2025-12-13-04-10-34-258.log
+2025-12-13 04:10:34,376 - 5493 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-13 04:10:34,377 - 5493 - INFO - HTML validation report email sent for i-0fc70fd37bca36521
+2025-12-13 04:10:34,617 - 5493 - INFO - Started i-0fc70fd37bca36521 in 0:03:49.089976
+2025-12-13 04:10:34,618 - 5493 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-12-13 04:12:35,046 - 5493 - INFO - Sent app_validation.sh to i-0eb59eaae0fa7e5fd (command_id: 6e230a30-eba1-4ba9-8cc6-d64aeae40bf6)
+2025-12-13 04:13:05,201 - 5493 - INFO - app_validation.sh output for i-0eb59eaae0fa7e5fd:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 13 09:12:35 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.22.24.14
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-22-24-14.eu-west-1.compute.internal
+Uptime: up 3 weeks, 2 hours, 9 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.22.24.14:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.22.24.14
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 31379 MB
+Used Physical Memory  = 15774 MB
+Free Physical Memory  = 15605 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 0.03 0.13 0.17 5/974 907299
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.9G   15G  30% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   19G  222G   8% /data
+fs-085a5698fcf41dc35.efs.eu-west-1.amazonaws.com:/  8.0E  8.0G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                                16G     0   16G   0% /dev/shm
+tmpfs                                               6.2G  8.7M  6.2G   1% /run
+tmpfs                                                16G  128K   16G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.22.24.14 started on Sat Dec 13 09:12:35 UTC 2025
+
+Server IP: 172.22.24.14 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.22.24.14
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.22.24.14
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 10
+Printer Details:
+printer GBDWS_LBL_OB02 is idle.  enabled since Wed May  7 12:39:17 2025
+printer GBDWS_LSR_OB02 is idle.  enabled since Wed May  7 12:37:01 2025
+printer SHCR_LBL_IB03 is idle.  enabled since Sat May 10 16:47:01 2025
+printer SHCR_LBL_NEW04 is idle.  enabled since Sat May 10 16:46:21 2025
+printer SHCR_LBL_NEW05 is idle.  enabled since Sat May 10 16:48:49 2025
+printer SHCR_LBL_OB02 is idle.  enabled since Sat May 10 16:45:41 2025
+printer SHCR_LBL_OB03 is idle.  enabled since Sat May 10 16:48:01 2025
+printer SHCR_LSR_IB02 is idle.  enabled since Sat May 10 16:42:15 2025
+printer SHCR_LSR_NEW03 is idle.  enabled since Sat May 10 16:43:39 2025
+printer SHCR_LSR_OB02 is idle.  enabled since Sat May 10 16:43:00 2025
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.22.24.14
+-------------------------------------
+
+Total number of Java process running on this host 172.22.24.14 is 4
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.22.24.14
+Total number of App java process available is 4
+-------------------------------------
+App Process details:
+Process ID: 3892, Process Name: 92:26
+Process ID: 18700, Process Name: 130:36
+Process ID: 74705, Process Name: 116:19
+Process ID: 188397, Process Name: 113:05
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.22.24.14
+Port 8080:	rxoprod_jb730	Running
+Port 8081:	rxorfprod_jb7	Running
+Port 8082:	rxcngprd_jb730	Running
+Port 8083:	rxoymsprd_jb	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 13 09:12:36 UTC 2025
+==============================================================================
+
+
+2025-12-13 04:13:05,201 - 5493 - ERROR - app_validation.sh errors for i-0eb59eaae0fa7e5fd:
+
+2025-12-13 04:13:05,204 - 5493 - INFO - Before patching validation saved to: output/validation-2025-12-13/172.22.24.14-BeforePatching-2025-12-13-04-13-05-202.log
+2025-12-13 04:13:05,204 - 5493 - INFO - Deregistering i-0eb59eaae0fa7e5fd from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b
+2025-12-13 04:13:05,547 - 5493 - INFO - Deregistering i-0eb59eaae0fa7e5fd from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19
+2025-12-13 04:13:05,656 - 5493 - INFO - Deregistering i-0eb59eaae0fa7e5fd from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082
+2025-12-13 04:13:05,774 - 5493 - INFO - Deregistering i-0eb59eaae0fa7e5fd from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d
+2025-12-13 04:13:05,891 - 5493 - INFO - Stopping EC2 instance: i-0eb59eaae0fa7e5fd at 2025-12-13 04:13:05
+2025-12-13 04:14:52,882 - 5493 - INFO - Instance i-0eb59eaae0fa7e5fd stopped successfully.
+2025-12-13 04:14:53,129 - 5493 - INFO - Stopped i-0eb59eaae0fa7e5fd in 0:01:47.237491
+2025-12-13 04:14:53,129 - 5493 - INFO - Starting EC2 instance: i-0eb59eaae0fa7e5fd
+2025-12-13 04:15:09,236 - 5493 - INFO - Instance i-0eb59eaae0fa7e5fd started successfully.
+2025-12-13 04:15:09,236 - 5493 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0eb59eaae0fa7e5fd...
+2025-12-13 04:15:39,263 - 5493 - INFO - Registering i-0eb59eaae0fa7e5fd to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Config/8296f21fbebd912b
+2025-12-13 04:15:39,693 - 5493 - INFO - Registering i-0eb59eaae0fa7e5fd to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-Dekstop/4915f58c447caf19
+2025-12-13 04:15:39,892 - 5493 - INFO - Registering i-0eb59eaae0fa7e5fd to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-RF/689c51daa9f40082
+2025-12-13 04:15:40,081 - 5493 - INFO - Registering i-0eb59eaae0fa7e5fd to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-Production-YMS/63993ebeec097c4d
+2025-12-13 04:18:11,761 - 5493 - INFO - Sent app_validation.sh to i-0eb59eaae0fa7e5fd (command_id: e5c47e63-8e42-4562-9c8f-14ba8938eedc)
+2025-12-13 04:18:41,900 - 5493 - INFO - app_validation.sh output for i-0eb59eaae0fa7e5fd:
+
+==============================================================================
+Server Availability Check Started at Sat Dec 13 09:18:11 UTC 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 172.22.24.14
+-------------------------------------
+System Information
+------------------
+Hostname: ip-172-22-24-14.eu-west-1.compute.internal
+Uptime: up 3 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://172.22.24.14:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 172.22.24.14
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 31379 MB
+Used Physical Memory  = 11365 MB
+Free Physical Memory  = 20014 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 10239 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 10239 MB
+-------------------------------------
+Load Average: 2.50 1.57 0.63 2/993 6415
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                          Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                       20G  5.8G   15G  29% /
+/dev/nvme0n1p128                                     10M  1.3M  8.7M  13% /boot/efi
+/dev/mapper/vg01-lv02                               240G   19G  222G   8% /data
+fs-085a5698fcf41dc35.efs.eu-west-1.amazonaws.com:/  8.0E  8.0G  8.0E   1% /data2
+devtmpfs                                            4.0M     0  4.0M   0% /dev
+tmpfs                                                16G     0   16G   0% /dev/shm
+tmpfs                                               6.2G  8.7M  6.2G   1% /run
+tmpfs                                                16G  128K   16G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 172.22.24.14 started on Sat Dec 13 09:18:12 UTC 2025
+
+Server IP: 172.22.24.14 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 172.22.24.14
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 172.22.24.14
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 10
+Printer Details:
+printer GBDWS_LBL_OB02 is idle.  enabled since Wed May  7 12:39:17 2025
+printer GBDWS_LSR_OB02 is idle.  enabled since Wed May  7 12:37:01 2025
+printer SHCR_LBL_IB03 is idle.  enabled since Sat May 10 16:47:01 2025
+printer SHCR_LBL_NEW04 is idle.  enabled since Sat May 10 16:46:21 2025
+printer SHCR_LBL_NEW05 is idle.  enabled since Sat May 10 16:48:49 2025
+printer SHCR_LBL_OB02 is idle.  enabled since Sat May 10 16:45:41 2025
+printer SHCR_LBL_OB03 is idle.  enabled since Sat May 10 16:48:01 2025
+printer SHCR_LSR_IB02 is idle.  enabled since Sat May 10 16:42:15 2025
+printer SHCR_LSR_NEW03 is idle.  enabled since Sat May 10 16:43:39 2025
+printer SHCR_LSR_OB02 is idle.  enabled since Sat May 10 16:43:00 2025
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 172.22.24.14
+-------------------------------------
+
+Total number of Java process running on this host 172.22.24.14 is 4
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 172.22.24.14
+Total number of App java process available is 4
+-------------------------------------
+App Process details:
+Process ID: 3971, Process Name: 0:41
+Process ID: 4339, Process Name: 0:56
+Process ID: 4496, Process Name: 0:55
+Process ID: 4837, Process Name: 1:08
+-------------------------------------
+
+Web Application Port Validation for Server IP: 172.22.24.14
+Port 8080:	rxoprod_jb730	Running
+Port 8081:	rxorfprod_jb73	Running
+Port 8082:	rxcngprd_jb730	Running
+Port 8083:	rxoymsprd_jb80	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Sat Dec 13 09:18:14 UTC 2025
+==============================================================================
+
+
+2025-12-13 04:18:41,900 - 5493 - ERROR - app_validation.sh errors for i-0eb59eaae0fa7e5fd:
+
+2025-12-13 04:18:41,902 - 5493 - INFO - After patching validation saved to: output/validation-2025-12-13/172.22.24.14-AfterPatching-2025-12-13-04-18-41-901.log
+2025-12-13 04:18:41,938 - 5493 - INFO - Validation comparison report generated: output/validation-2025-12-13/172.22.24.14-Validation-details-2025-12-13-04-18-41-901.log
+2025-12-13 04:18:42,024 - 5493 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-12-13 04:18:42,024 - 5493 - INFO - HTML validation report email sent for i-0eb59eaae0fa7e5fd
+2025-12-13 04:18:42,257 - 5493 - INFO - Started i-0eb59eaae0fa7e5fd in 0:03:49.128367
+2025-12-13 04:18:42,258 - 5493 - INFO - All instances processed.
+2025-12-13 04:18:42,261 - 5493 - INFO - Restart Total time: 0:14:35.293280
+2025-12-13 04:18:42,261 - 5493 - INFO - Auto-confirmed services are restarted
+2025-12-13 04:18:42,261 - 5493 - INFO - Confirmed - services are started
+2025-12-13 04:18:42,375 - 5493 - INFO - The following instances have failed the patch: []
+2025-12-13 04:18:42,375 - 5493 - INFO - No instances have failed the patch.
+2025-12-13 04:18:42,375 - 5493 - INFO - Total Patch Process time: 0:18:39.351733
+2025-12-13 04:18:42,664 - 5493 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-12-13 04:19:42,889 - 5493 - INFO - Log file ./logs/patching_2025-12-13_RXO-Prod-APP.log uploaded to s3://q4-2025-aws-security-patching/RXO-Prod-APP_Patch/2025-12-13/patching_2025-12-13_RXO-Prod-APP.log

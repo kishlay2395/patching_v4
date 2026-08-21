@@ -1,0 +1,1011 @@
+2026-07-09 02:10:02,924 - 3999575 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-09 02:10:02,924 - 3999575 - INFO - Script Start Time: 2026-07-09 02:10:02
+2026-07-09 02:10:03,320 - 3999575 - INFO - Instance(s) selected for Patching: {'i-0eb1f8fc232a4d473': '10.0.9.157', 'i-0bac7c222173cf2a1': '10.0.9.178'}
+2026-07-09 02:10:03,397 - 3999575 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 02:10:03,397 - 3999575 - INFO - Now patching instances at: 2026-07-09 02:10:03
+2026-07-09 02:10:08,663 - 3999575 - INFO - i-0eb1f8fc232a4d473: Cron was active = True
+2026-07-09 02:10:13,966 - 3999575 - INFO - i-0bac7c222173cf2a1: Cron was active = True
+2026-07-09 02:10:14,208 - 3999575 - INFO - Health monitor crontab disabled on all instances
+2026-07-09 02:10:14,210 - 3999575 - INFO - Disabled cron for: ['i-0eb1f8fc232a4d473', 'i-0bac7c222173cf2a1']
+2026-07-09 02:10:14,389 - 3999575 - INFO - Sent app_validation.py to i-0eb1f8fc232a4d473 (command_id: 74910618-67bd-471d-adcf-5fcafd5a7e02)
+2026-07-09 02:10:44,476 - 3999575 - INFO - app_validation.py output for i-0eb1f8fc232a4d473:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 02:10:14.849496
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.157
+Hostname | ip-10-0-9-157
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb3 | 100.0G | 1.4G | 98.5G | 1% | /data4
+/dev/xvdb2 | 179.9G | 128.2G | 51.7G | 71% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/interfaces/       10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/interfaces/       10.0.10.210(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.10.210(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.157:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1088
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.157 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 120
+Batch/Daemon Java Processes | 116
+Non-Standalone Java Processes | rrsuat_downloaddaemon, rrsuat_eventdaemon, rrsuat_ftpdaemon, rrsuat_labeldaemon, rrsuat_replenishmentdaemon, rrsuat_uploaddaemon, rrsuat_wavelaunchdaemon, rrsuat_hardallocationdaemon, alhuat_downloaddaemon, alhuat_eventdaemon, alhuat_ftpdaemon, alhuat_labeldaemon, alhuat_replenishmentdaemon, alhuat_reportdaemon, alhuat_schedulerdaemon, alhuat_uploaddaemon, alhuat_wavelaunchdaemon, alhuat_replenishmentcanceldaemon, alhuat_picktooldaemon, alhuat_sclc_fw3_picktooldaemon, alhuat_sclc_fws_picktooldaemon, alhuat_sclc_fwn_picktooldaemon, alhuat_interfaceallocationdaemon, alhuat_sclc_jl2_picktooldaemon, alhuat_sclc_ro1_picktooldaemon, alhuat_hardallocdaemon, alhuat_wsqdaemon, alhuat_locusdaemon, alhuat_prilabel, alhuat_sclc_intfuploaddaemon1, alhuat_sclc_voicemobiledaemon, alhuat_2puttowalldaemon, alhuat_sclc_JQGridReportAgent, alhuat_wsrmi, alhuat_putlmulticartpackingdaemon, alhuat_sclc_spsltldaemon, alhut_sclc_cbcd, alhuat_sclw_downloaddaemon, alhuat_sclw_eventdaemon, alhuat_sclw_JQGridReportAgent, alhuat_sclw_ftpdaemon, alhuat_sclw_labeldaemon, alhuat_sclw_replenishmentcanceldaemon, alhuat_sclw_replenishmentdaemon, alhuat_sclw_reportdaemon, alhuat_sclw_generic_uploaddaemon, alhuat_sclw_intfuploaddaemon1, alhuat_sclw_intfuploaddaemon2, alhuat_sclw_wavelaunchdaemon, alhuat_sclw_picktooldaemon_sd2, alhuat_sclw_opvorderprocessdaemon, alhuat_picktooldaemon_ON1, sclw_alhuat_intrfcealctdaemon, alhuat_picktooldaemon_bp1, alhuat_sclw_picktooldaemon_lv1, alhuat_sclw_lv2_picktooldaemon, alhuat_sclw_voicemobiledaemon, alhuat_sclw_harp, alhuat_sclw_wsqdaemon, alhuat_sclw_lv2dropconf, alhuat_sclw_masterbatch, alhuat_sclw_spsltldaemon, alhut_sclw_cbcd, sclut_sclw_locs, alhuat_scle_ccd, alhuat_scle_downloaddaemon, alhuat_scle_eventdaemon, alhuat_scle_excelexportdaemon, alhuat_scle_ftpdaemon, alhuat_scle_picktooldaemon, alhuat_scle_replenishmentcanceldaemon, alhuat_scle_replenishmentdaemon, alhuat_scle_reportdaemon, alhuat_scle_schedulerdaemon, alhuat_scle_wavelaunchdaemon, alhuat_scle_lx1_picktooldaemon, alhuat_scle_nc2_picktooldaemon, alhuat_scle_at1_picktooldaemon, alhuat_scle_at2_picktooldaemon, alhuat_scle_wl2_picktooldaemon, alhuat_scleprintpackputlpcndaemon, alhuat_scle_opvorderprocessdaemon, alhuatscle_Puttowalldaemon, alhuat_scleputlmulticartpackingdaemon, alhuat_scle_inallodaemon, alhuat_scle_infupdaemon1, alhuat_scle_infupdaemon2, alhuat_scle_generic_uploaddaemon, scle_tstpcktld, alhuat_scle_lx2_picktooldaemon, alhuat_scle_lx1_puttowalldaemon, alhuat_scle_voicemobiledaemon, scle_vomobadm, alhuat_scle_mt1_picktooldaemon, alhuat_scle_harp, alhuat_scle_wsq, alhuat_scle_locus, alhuat_scle_wl1_picktooldaemon, alhuat_scle_masterbatch, alhuat_scle_wl1_puttowalldaemon, alhuat_scle_wl1_printpackputlpcndaemon, alhuat_scle_spsltldaemon, alhuat_scle_wl1_putlmulticartpackingdaemon, alhut_scle_cbcd, rrsuat_schedulerdaemon, sclbilluat_uploaddaemon, sclbilluat_billinginvoice, sclbilluat_jqgridreportdaemon, sclbilluat_reportdaemon, sclbilluat_ftp, sclbilluat_downloaddaemon, alhuat_sclw_schedulerdaemon, sclbilluat_schedulerdaemon, sclw_wllpk_1bp, sclw_lpick, alhuat_scle_labeldaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 116
+Java-Name | Java-Path
+rrsuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_downloaddaemon
+rrsuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_eventdaemon
+rrsuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_ftpdaemon
+rrsuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_labeldaemon
+rrsuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_replenishmentdaemon
+rrsuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_uploaddaemon
+rrsuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_wavelaunchdaemon
+rrsuat_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_hardallocationdaemon
+alhuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_downloaddaemon
+alhuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_eventdaemon
+alhuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_ftpdaemon
+alhuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_labeldaemon
+alhuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentdaemon
+alhuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_reportdaemon
+alhuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_schedulerdaemon
+alhuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_uploaddaemon
+alhuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_wavelaunchdaemon
+alhuat_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentcanceldaemon
+alhuat_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon
+alhuat_sclc_fw3_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fw3_picktooldaemon
+alhuat_sclc_fws_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fws_picktooldaemon
+alhuat_sclc_fwn_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fwn_picktooldaemon
+alhuat_interfaceallocationdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_interfaceallocationdaemon
+alhuat_sclc_jl2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_jl2_picktooldaemon
+alhuat_sclc_ro1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_ro1_picktooldaemon
+alhuat_hardallocdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_hardallocdaemon
+alhuat_wsqdaemon | /data/softeon/batchapp/alhuat/wsqdaemon
+alhuat_locusdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_locusdaemon
+alhuat_prilabel | /data/app/java/jdk1.7.0_80/bin/alhuat_prilabel
+alhuat_sclc_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_intfuploaddaemon1
+alhuat_sclc_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_voicemobiledaemon
+alhuat_2puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_2puttowalldaemon
+alhuat_sclc_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_JQGridReportAgent
+alhuat_wsrmi | /data/softeon/batchapp/alhuat/sclc_wsrmidaemon
+alhuat_putlmulticartpackingdaemon | /data/softeon/batchapp/alhuat/putlmulticartpackingdaemon
+alhuat_sclc_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_spsltldaemon
+alhut_sclc_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclc_cbcd
+alhuat_sclw_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_downloaddaemon
+alhuat_sclw_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_eventdaemon
+alhuat_sclw_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_JQGridReportAgent
+alhuat_sclw_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_ftpdaemon
+alhuat_sclw_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_labeldaemon
+alhuat_sclw_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentcanceldaemon
+alhuat_sclw_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentdaemon
+alhuat_sclw_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_reportdaemon
+alhuat_sclw_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_generic_uploaddaemon
+alhuat_sclw_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon1
+alhuat_sclw_intfuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon2
+alhuat_sclw_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_wavelaunchdaemon
+alhuat_sclw_picktooldaemon_sd2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_sd2
+alhuat_sclw_opvorderprocessdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_opvorderprocessdaemon
+alhuat_picktooldaemon_ON1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_ON1
+sclw_alhuat_intrfcealctdaemon | /data/app/java/jdk1.7.0_80/bin/sclw_alhuat_intrfcealctdaemon
+alhuat_picktooldaemon_bp1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_bp1
+alhuat_sclw_picktooldaemon_lv1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_lv1
+alhuat_sclw_lv2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2_picktooldaemon
+alhuat_sclw_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_voicemobiledaemon
+alhuat_sclw_harp | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_harp
+alhuat_sclw_wsqdaemon | /data/softeon/batchapp/alhuat/sclw_wsqdaemon
+alhuat_sclw_lv2dropconf | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2dropconf
+alhuat_sclw_masterbatch | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_masterbatch
+alhuat_sclw_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_spsltldaemon
+alhut_sclw_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclw_cbcd
+sclut_sclw_locs | /data/app/java/jdk1.7.0_80/bin/sclut_sclw_locs
+alhuat_scle_ccd | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_ccd
+alhuat_scle_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_downloaddaemon
+alhuat_scle_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_eventdaemon
+alhuat_scle_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_excelexportdaemon
+alhuat_scle_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_ftpdaemon
+alhuat_scle_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_picktooldaemon
+alhuat_scle_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_replenishmentcanceldaemon
+alhuat_scle_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_replenishmentdaemon
+alhuat_scle_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_reportdaemon
+alhuat_scle_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_schedulerdaemon
+alhuat_scle_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wavelaunchdaemon
+alhuat_scle_lx1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx1_picktooldaemon
+alhuat_scle_nc2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_nc2_picktooldaemon
+alhuat_scle_at1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_at1_picktooldaemon
+alhuat_scle_at2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_at2_picktooldaemon
+alhuat_scle_wl2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl2_picktooldaemon
+alhuat_scleprintpackputlpcndaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scleprintpackputlpcndaemon
+alhuat_scle_opvorderprocessdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_opvorderprocessdaemon
+alhuatscle_Puttowalldaemon | /data/softeon/batchapp/alhuat/scle_puttowalldaemon
+alhuat_scleputlmulticartpackingdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scleputlmulticartpackingdaemon
+alhuat_scle_inallodaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_inallodaemon
+alhuat_scle_infupdaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_infupdaemon1
+alhuat_scle_infupdaemon2 | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_infupdaemon2
+alhuat_scle_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_generic_uploaddaemon
+scle_tstpcktld | /data/app/java/jdk1.7.0_80/bin/scle_tstpcktld
+alhuat_scle_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx2_picktooldaemon
+alhuat_scle_lx1_puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx1_puttowalldaemon
+alhuat_scle_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_voicemobiledaemon
+scle_vomobadm | /data/softeon/batchapp/alhuat/scle_voiceadminserver
+alhuat_scle_mt1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_mt1_picktooldaemon
+alhuat_scle_harp | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_harp
+alhuat_scle_wsq | /data/softeon/batchapp/alhuat/scle_wsqdaemon
+alhuat_scle_locus | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_locus
+alhuat_scle_wl1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_picktooldaemon
+alhuat_scle_masterbatch | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_masterbatch
+alhuat_scle_wl1_puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_puttowalldaemon
+alhuat_scle_wl1_printpackputlpcndaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_printpackputlpcndaemon
+alhuat_scle_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_spsltldaemon
+alhuat_scle_wl1_putlmulticartpackingdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_putlmulticartpackingdaemon
+alhut_scle_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_scle_cbcd
+rrsuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_schedulerdaemon
+sclbilluat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_uploaddaemon
+sclbilluat_billinginvoice | /data/app/java/jdk1.7.0_80/bin/sclbilluat_billinginvoice
+sclbilluat_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_jqgridreportdaemon
+sclbilluat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_reportdaemon
+sclbilluat_ftp | /data/app/java/jdk1.7.0_80/bin/sclbilluat_ftp
+sclbilluat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_downloaddaemon
+alhuat_sclw_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_schedulerdaemon
+sclbilluat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_schedulerdaemon
+sclw_wllpk_1bp | /data/softeon/batchapp/alhuat/sclw_bp1_printpackputlpcndaemon
+sclw_lpick | /data/softeon/batchapp/alhuat/sclw_bp1_puttowalldaemon
+alhuat_scle_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_labeldaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1780026 | sclbilluat | app | sclbilluat_jboss | 8086 | 10.0.9.157:8086 | UP | 200 | Disabled | /data/app/jboss62eap/sclbilluat/standalone
+1782410 | sclbilluat | jboss730eap | sclbill_jb730ea | 8087 | 10.0.9.157:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclbilluat/standalone
+201983 | softeonuat | jboss62eap | rrsuat_jboss | 8082 | 10.0.9.157:8082 | UP | 200 | Disabled | /data/app/jboss62eap/rrsuat/softeonuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 02:10:22.421956
+==============================================================================
+
+2026-07-09 02:10:44,477 - 3999575 - ERROR - app_validation.py errors for i-0eb1f8fc232a4d473:
+
+2026-07-09 02:10:44,479 - 3999575 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-BeforePatching-2026-07-09-02-10-44-478.log
+2026-07-09 02:10:44,658 - 3999575 - INFO - Sent app_validation.py to i-0bac7c222173cf2a1 (command_id: 346896d8-9f0c-4682-aaa0-2889465a3696)
+2026-07-09 02:11:14,775 - 3999575 - INFO - app_validation.py output for i-0bac7c222173cf2a1:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 02:10:45.024375
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.178
+Hostname | ip-10-0-9-178
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 216.6G | 73.2G | 74% | /data
+10.0.9.157:/data/softeon/interfaces | 179.9G | 128.2G | 51.7G | 71% | /data/softeon/interfaces
+10.0.9.157:/data/softeon/shared | 179.9G | 128.2G | 51.7G | 71% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data2/shared/  10.0.10.210(rw,sync)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 10.0.9.157:/data/softeon/interfaces | /data/softeon/interfaces | nfs4
+NFS_MOUNT | 10.0.9.157:/data/softeon/shared | /data/softeon/shared | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.178:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1108
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.178 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 43
+Batch/Daemon Java Processes | 34
+Non-Standalone Java Processes | sclwesuat_bre, sclwesuat_sch, sclcwesuat_bre, sclcwesuat_sch, sclwwesuat_bre, sclgold_repl, sclgold_replcan, rrsfs1_DWA, rrsfs1_EVENT, rrsfs1_FTP, rrsfs1_LBL, rrfs1_REPL, rrsfs1_RPT, rrsfs1_SCH, rrsfs1_INBQ, rrsfs1_WLD, rrsfs1_ICT, rrsfs1_EPTI, rrsfs1_EPTO, rrsfs1_HRDAL, rrsfs1_EPTSO, rrsfs1_CLSPN, rrsfs1_jqgrid, sclgold_dwa, sclgold_ginbq, sclgold_harp, sclgold_ialc, sclgold_inbq1, sclgold_sch, sclgold_wld, sclgold_rpt, sclgold_ftpd, scle_mcpt9_pick, sclwwesuat_sch
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 34
+Java-Name | Java-Path
+sclwesuat_bre | /data/batchapp/softeon/sclwesuat/breruledaemon
+sclwesuat_sch | /data/batchapp/softeon/sclwesuat/schedulerdaemon
+sclcwesuat_bre | /data/batchapp/softeon/sclwesuat/sclc_breruledaemon
+sclcwesuat_sch | /data/batchapp/softeon/sclwesuat/sclc_schedulerdaemon
+sclwwesuat_bre | /data/batchapp/softeon/sclwesuat/sclw_breruledaemon
+sclgold_repl | /data/batchapp/softeon/sclgolduat/scle_replenishmentdaemon
+sclgold_replcan | /data/batchapp/softeon/sclgolduat/scle_replenishmentcanceldaemon
+rrsfs1_DWA | /data/batchapp/softeon/rrsfs1uat/downloaddaemon
+rrsfs1_EVENT | /data/batchapp/softeon/rrsfs1uat/eventdaemon
+rrsfs1_FTP | /data/batchapp/softeon/rrsfs1uat/ftpdaemon
+rrsfs1_LBL | /data/batchapp/softeon/rrsfs1uat/labeldaemon
+rrfs1_REPL | /data/batchapp/softeon/rrsfs1uat/replenishmentdaemon
+rrsfs1_RPT | /data/batchapp/softeon/rrsfs1uat/reportdaemon
+rrsfs1_SCH | /data/batchapp/softeon/rrsfs1uat/schedulerdaemon
+rrsfs1_INBQ | /data/batchapp/softeon/rrsfs1uat/uploaddaemon
+rrsfs1_WLD | /data/batchapp/softeon/rrsfs1uat/wavelaunchdaemon
+rrsfs1_ICT | /data/batchapp/softeon/rrsfs1uat/invcomputationbytask
+rrsfs1_EPTI | /data/batchapp/softeon/rrsfs1uat/eptinbounddaemon
+rrsfs1_EPTO | /data/batchapp/softeon/rrsfs1uat/eptoutbounddaemon
+rrsfs1_HRDAL | /data/batchapp/softeon/rrsfs1uat/hardallocationdaemon
+rrsfs1_EPTSO | /data/batchapp/softeon/rrsfs1uat/eptsimulationoutbounddaemon
+rrsfs1_CLSPN | /data/batchapp/softeon/rrsfs1uat/autospnclosedaemon
+rrsfs1_jqgrid | /data/batchapp/softeon/rrsfs1uat/reportjqgridexportdaemon
+sclgold_dwa | /data/batchapp/softeon/sclgolduat/scle_downloaddaemon
+sclgold_ginbq | /data/batchapp/softeon/sclgolduat/scle_generic_uploaddaemon
+sclgold_harp | /data/batchapp/softeon/sclgolduat/scle_hardallocationdaemon
+sclgold_ialc | /data/batchapp/softeon/sclgolduat/scle_intfallocationdaemon
+sclgold_inbq1 | /data/batchapp/softeon/sclgolduat/scle_intfuploaddaemon1
+sclgold_sch | /data/batchapp/softeon/sclgolduat/scle_schedulerdaemon
+sclgold_wld | /data/batchapp/softeon/sclgolduat/scle_wavelaunchdaemon
+sclgold_rpt | /data/app/java/jdk1.6.0_45/bin/sclgold_rpt
+sclgold_ftpd | /data/batchapp/softeon/sclgolduat/scle_ftpdaemon
+scle_mcpt9_pick | /data/batchapp/softeon/scle/picktooldaemon_ll1
+sclwwesuat_sch | /data/batchapp/softeon/sclwesuat/sclw_schedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 7
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+404010 | rrsfs1uat | jboss730eap | rrsfs1_jb730eap | 8082 | 10.0.9.178:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1uat/standalone
+994175 | sclgolduat | jboss730eap | sclgolduat_jb73 | 8087 | 10.0.9.178:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclgolduat/standalone
+993730 | sclrfuat | jboss730eap | sclrfuat_730eap | 8081 | 10.0.9.178:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclrfuat/standalone
+993524 | scluat | jboss730eap | scluat_jb730eap | 8080 | 10.0.9.178:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/scluat/standalone
+12563 | sclwesinforuat | jboss730eap | sclwesinfo_jb73 | 8083 | 10.0.9.178:8083 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesinforuat/standalone
+11316 | sclwesuat | jboss730eap | wesuat_jb730eap | 8088 | 10.0.9.178:8088 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclwesuat/standalone
+993952 | sclwsuat | jboss730eap | sclws_jb730eap | 8084 | 10.0.9.178:8084 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/sclwsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 02:10:48.509294
+==============================================================================
+
+2026-07-09 02:11:14,775 - 3999575 - ERROR - app_validation.py errors for i-0bac7c222173cf2a1:
+
+2026-07-09 02:11:14,777 - 3999575 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.178/10.0.9.178-BeforePatching-2026-07-09-02-11-14-776.log
+2026-07-09 02:11:14,951 - 3999575 - INFO - Sending patch command to instance i-0eb1f8fc232a4d473
+2026-07-09 02:11:15,070 - 3999575 - INFO - Command sent successfully to instance i-0eb1f8fc232a4d473. Command ID: 3c4f687f-9954-46b1-b755-e4e72fae8e28
+2026-07-09 02:11:15,204 - 3999575 - INFO - Sending patch command to instance i-0bac7c222173cf2a1
+2026-07-09 02:11:15,298 - 3999575 - INFO - Command sent successfully to instance i-0bac7c222173cf2a1. Command ID: 8dea904c-464f-477b-bd1a-66ab0afc32e2
+2026-07-09 02:26:19,166 - 3999575 - INFO - All patches applied successfully.
+2026-07-09 02:26:19,166 - 3999575 - INFO - Patching end time: 2026-07-09 02:26:19
+2026-07-09 02:26:19,166 - 3999575 - INFO - Patch Elapsed time: 0:16:15.769420
+2026-07-09 02:26:19,236 - 3999575 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 02:26:19,236 - 3999575 - INFO - Confirmed - services are stopped
+2026-07-09 02:26:40,199 - 3999575 - INFO - Discovered TG map: {'i-0eb1f8fc232a4d473': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/RRS-UAT/456ca9f1e0d286a8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Bill-8087/94b5fa31fbad7278'], 'i-0bac7c222173cf2a1': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Gold/9df63b945233f878', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-RF/2fb38fd9256d8ead', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Webservices/7634e29692f3d133', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-WES-Infor-UAT/1fcdcc6c2653e946', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRS-FS1-UAT/9169036931d9fc60', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Desktop/e8d1792d9c91c006', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop/be693880e349d6d4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF/b5e5200dc9f40112', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-WES/dcd3d3050593eb0f']}
+2026-07-09 02:26:40,437 - 3999575 - INFO - Deregistering i-0eb1f8fc232a4d473 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/RRS-UAT/456ca9f1e0d286a8
+2026-07-09 02:26:40,515 - 3999575 - INFO - Deregistering i-0eb1f8fc232a4d473 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Bill-8087/94b5fa31fbad7278
+2026-07-09 02:26:40,576 - 3999575 - INFO - Stopping EC2 instance: i-0eb1f8fc232a4d473 at 2026-07-09 02:26:40
+2026-07-09 02:28:57,289 - 3999575 - INFO - Instance i-0eb1f8fc232a4d473 stopped successfully.
+2026-07-09 02:28:57,547 - 3999575 - INFO - Stopped i-0eb1f8fc232a4d473 in 0:02:16.971282
+2026-07-09 02:28:57,547 - 3999575 - INFO - Starting EC2 instance: i-0eb1f8fc232a4d473
+2026-07-09 02:29:13,581 - 3999575 - INFO - Instance i-0eb1f8fc232a4d473 started successfully.
+2026-07-09 02:29:13,581 - 3999575 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0eb1f8fc232a4d473...
+2026-07-09 02:30:53,676 - 3999575 - INFO - Registering i-0eb1f8fc232a4d473 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/RRS-UAT/456ca9f1e0d286a8
+2026-07-09 02:30:53,850 - 3999575 - INFO - Registering i-0eb1f8fc232a4d473 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Bill-8087/94b5fa31fbad7278
+2026-07-09 02:32:54,514 - 3999575 - INFO - Sent app_validation.py to i-0eb1f8fc232a4d473 (command_id: ffc4a803-daa7-44e7-a779-9f795089aa19)
+2026-07-09 02:33:24,607 - 3999575 - INFO - app_validation.py output for i-0eb1f8fc232a4d473:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 02:32:54.907730
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.157
+Hostname | ip-10-0-9-157
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb3 | 100.0G | 1.4G | 98.5G | 1% | /data4
+/dev/xvdb2 | 179.9G | 115.0G | 64.9G | 63% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/interfaces/       10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/interfaces/       10.0.10.210(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.10.210(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.157:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1088
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.157 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3581 | sclbilluat | app | sclbilluat_jboss | 8086 | 10.0.9.157:8086 | UP | 200 | Disabled | /data/app/jboss62eap/sclbilluat/standalone
+4120 | sclbilluat | jboss730eap | sclbill_jb730ea | 8087 | 10.0.9.157:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclbilluat/standalone
+3604 | softeonuat | jboss62eap | rrsuat_jboss | 8082 | 10.0.9.157:8082 | UP | 200 | Disabled | /data/app/jboss62eap/rrsuat/softeonuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 02:32:59.251062
+==============================================================================
+
+2026-07-09 02:33:24,607 - 3999575 - ERROR - app_validation.py errors for i-0eb1f8fc232a4d473:
+
+2026-07-09 02:33:24,608 - 3999575 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-AfterPatching-2026-07-09-02-33-24-608.log
+2026-07-09 02:33:24,664 - 3999575 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-Validation-details-2026-07-09-02-33-24-608.html
+2026-07-09 02:33:24,920 - 3999575 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-09 02:33:24,920 - 3999575 - INFO - HTML validation report email sent for i-0eb1f8fc232a4d473
+2026-07-09 02:33:24,920 - 3999575 - INFO - [Retry-1] Waiting 600s for i-0eb1f8fc232a4d473...
+2026-07-09 02:33:24,920 - 3999575 - INFO - RED - Background retry thread started for i-0eb1f8fc232a4d473
+2026-07-09 02:33:25,172 - 3999575 - INFO - Started i-0eb1f8fc232a4d473 in 0:04:27.624657
+2026-07-09 02:33:25,173 - 3999575 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-09 02:35:25,232 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Gold/9df63b945233f878
+2026-07-09 02:35:25,316 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-RF/2fb38fd9256d8ead
+2026-07-09 02:35:25,356 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Webservices/7634e29692f3d133
+2026-07-09 02:35:25,398 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-WES-Infor-UAT/1fcdcc6c2653e946
+2026-07-09 02:35:25,448 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRS-FS1-UAT/9169036931d9fc60
+2026-07-09 02:35:25,494 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Desktop/e8d1792d9c91c006
+2026-07-09 02:35:25,540 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop/be693880e349d6d4
+2026-07-09 02:35:25,588 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF/b5e5200dc9f40112
+2026-07-09 02:35:25,627 - 3999575 - INFO - Deregistering i-0bac7c222173cf2a1 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-WES/dcd3d3050593eb0f
+2026-07-09 02:35:25,668 - 3999575 - INFO - Stopping EC2 instance: i-0bac7c222173cf2a1 at 2026-07-09 02:35:25
+2026-07-09 02:38:27,613 - 3999575 - INFO - Instance i-0bac7c222173cf2a1 stopped successfully.
+2026-07-09 02:38:27,869 - 3999575 - INFO - Stopped i-0bac7c222173cf2a1 in 0:03:02.200276
+2026-07-09 02:38:27,869 - 3999575 - INFO - Starting EC2 instance: i-0bac7c222173cf2a1
+2026-07-09 02:38:43,851 - 3999575 - INFO - Instance i-0bac7c222173cf2a1 started successfully.
+2026-07-09 02:38:43,851 - 3999575 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0bac7c222173cf2a1...
+2026-07-09 02:40:23,895 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Gold/9df63b945233f878
+2026-07-09 02:40:24,070 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-RF/2fb38fd9256d8ead
+2026-07-09 02:40:24,209 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Webservices/7634e29692f3d133
+2026-07-09 02:40:24,338 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-WES-Infor-UAT/1fcdcc6c2653e946
+2026-07-09 02:40:24,466 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRS-FS1-UAT/9169036931d9fc60
+2026-07-09 02:40:24,592 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCL-UAT-Desktop/e8d1792d9c91c006
+2026-07-09 02:40:24,722 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop/be693880e349d6d4
+2026-07-09 02:40:24,863 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF/b5e5200dc9f40112
+2026-07-09 02:40:24,979 - 3999575 - INFO - Registering i-0bac7c222173cf2a1 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-WES/dcd3d3050593eb0f
+2026-07-09 02:43:25,216 - 3999575 - INFO - Sent app_validation.py to i-0eb1f8fc232a4d473 (command_id: 4051a476-1814-47b7-b7b8-186739fb3ff8)
+2026-07-09 02:43:55,304 - 3999575 - INFO - app_validation.py output for i-0eb1f8fc232a4d473:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 02:43:25.875283
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.157
+Hostname | ip-10-0-9-157
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb3 | 100.0G | 1.4G | 98.5G | 1% | /data4
+/dev/xvdb2 | 179.9G | 115.0G | 64.9G | 63% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/interfaces/       10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/interfaces/       10.0.10.210(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.10.210(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.157:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1088
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.157 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 78
+Batch/Daemon Java Processes | 75
+Non-Standalone Java Processes | rrsuat_downloaddaemon, rrsuat_eventdaemon, rrsuat_ftpdaemon, rrsuat_labeldaemon, rrsuat_replenishmentdaemon, rrsuat_reportdaemon, rrsuat_schedulerdaemon, rrsuat_uploaddaemon, rrsuat_wavelaunchdaemon, rrsuat_hardallocationdaemon, sclbilluat_schedulerdaemon, sclbilluat_uploaddaemon, sclbilluat_jqgridreportdaemon, sclbilluat_reportdaemon, sclbilluat_ftp, alhuat_downloaddaemon, alhuat_eventdaemon, alhuat_ftpdaemon, alhuat_labeldaemon, alhuat_replenishmentdaemon, alhuat_reportdaemon, alhuat_schedulerdaemon, alhuat_uploaddaemon, alhuat_wavelaunchdaemon, alhuat_replenishmentcanceldaemon, alhuat_picktooldaemon, alhuat_sclc_fw3_picktooldaemon, alhuat_sclc_fws_picktooldaemon, alhuat_sclc_fwn_picktooldaemon, alhuat_interfaceallocationdaemon, alhuat_sclc_jl2_picktooldaemon, alhuat_sclc_ro1_picktooldaemon, alhuat_hardallocdaemon, alhuat_wsqdaemon, alhuat_locusdaemon, alhuat_prilabel, alhuat_sclc_intfuploaddaemon1, alhuat_sclc_voicemobiledaemon, alhuat_2puttowalldaemon, alhuat_sclc_JQGridReportAgent, alhuat_wsrmi, alhuat_putlmulticartpackingdaemon, alhuat_sclw_downloaddaemon, alhuat_sclw_eventdaemon, alhuat_sclw_JQGridReportAgent, alhuat_sclw_ftpdaemon, alhuat_sclw_labeldaemon, alhuat_sclc_spsltldaemon, alhuat_sclw_replenishmentcanceldaemon, alhuat_sclw_replenishmentdaemon, alhuat_sclw_reportdaemon, alhuat_sclw_schedulerdaemon, alhut_sclc_cbcd, alhuat_sclw_generic_uploaddaemon, alhuat_sclw_intfuploaddaemon1, alhuat_sclw_intfuploaddaemon2, alhuat_sclw_wavelaunchdaemon, alhuat_sclw_picktooldaemon_sd2, alhuat_sclw_opvorderprocessdaemon, alhuat_picktooldaemon_ON1, sclw_alhuat_intrfcealctdaemon, alhuat_picktooldaemon_bp1, alhuat_sclw_picktooldaemon_lv1, alhuat_sclw_lv2_picktooldaemon, alhuat_sclw_voicemobiledaemon, sclw_lpick, alhuat_sclw_harp, alhuat_sclw_lv2dropconf, alhuat_sclw_masterbatch, alhuat_sclw_wsqdaemon, alhuat_sclw_spsltldaemon, alhut_sclw_cbcd, sclut_sclw_locs, alhuat_scle_inallodaemon, sclw_wllpk_1bp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 75
+Java-Name | Java-Path
+rrsuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_downloaddaemon
+rrsuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_eventdaemon
+rrsuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_ftpdaemon
+rrsuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_labeldaemon
+rrsuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_replenishmentdaemon
+rrsuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_reportdaemon
+rrsuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_schedulerdaemon
+rrsuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_uploaddaemon
+rrsuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_wavelaunchdaemon
+rrsuat_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_hardallocationdaemon
+sclbilluat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_schedulerdaemon
+sclbilluat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_uploaddaemon
+sclbilluat_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_jqgridreportdaemon
+sclbilluat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_reportdaemon
+sclbilluat_ftp | /data/app/java/jdk1.7.0_80/bin/sclbilluat_ftp
+alhuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_downloaddaemon
+alhuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_eventdaemon
+alhuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_ftpdaemon
+alhuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_labeldaemon
+alhuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentdaemon
+alhuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_reportdaemon
+alhuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_schedulerdaemon
+alhuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_uploaddaemon
+alhuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_wavelaunchdaemon
+alhuat_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentcanceldaemon
+alhuat_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon
+alhuat_sclc_fw3_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fw3_picktooldaemon
+alhuat_sclc_fws_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fws_picktooldaemon
+alhuat_sclc_fwn_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fwn_picktooldaemon
+alhuat_interfaceallocationdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_interfaceallocationdaemon
+alhuat_sclc_jl2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_jl2_picktooldaemon
+alhuat_sclc_ro1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_ro1_picktooldaemon
+alhuat_hardallocdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_hardallocdaemon
+alhuat_wsqdaemon | /data/softeon/batchapp/alhuat/wsqdaemon
+alhuat_locusdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_locusdaemon
+alhuat_prilabel | /data/app/java/jdk1.7.0_80/bin/alhuat_prilabel
+alhuat_sclc_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_intfuploaddaemon1
+alhuat_sclc_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_voicemobiledaemon
+alhuat_2puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_2puttowalldaemon
+alhuat_sclc_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_JQGridReportAgent
+alhuat_wsrmi | /data/softeon/batchapp/alhuat/sclc_wsrmidaemon
+alhuat_putlmulticartpackingdaemon | /data/softeon/batchapp/alhuat/putlmulticartpackingdaemon
+alhuat_sclw_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_downloaddaemon
+alhuat_sclw_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_eventdaemon
+alhuat_sclw_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_JQGridReportAgent
+alhuat_sclw_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_ftpdaemon
+alhuat_sclw_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_labeldaemon
+alhuat_sclc_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_spsltldaemon
+alhuat_sclw_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentcanceldaemon
+alhuat_sclw_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentdaemon
+alhuat_sclw_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_reportdaemon
+alhuat_sclw_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_schedulerdaemon
+alhut_sclc_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclc_cbcd
+alhuat_sclw_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_generic_uploaddaemon
+alhuat_sclw_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon1
+alhuat_sclw_intfuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon2
+alhuat_sclw_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_wavelaunchdaemon
+alhuat_sclw_picktooldaemon_sd2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_sd2
+alhuat_sclw_opvorderprocessdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_opvorderprocessdaemon
+alhuat_picktooldaemon_ON1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_ON1
+sclw_alhuat_intrfcealctdaemon | /data/app/java/jdk1.7.0_80/bin/sclw_alhuat_intrfcealctdaemon
+alhuat_picktooldaemon_bp1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_bp1
+alhuat_sclw_picktooldaemon_lv1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_lv1
+alhuat_sclw_lv2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2_picktooldaemon
+alhuat_sclw_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_voicemobiledaemon
+sclw_lpick | /data/softeon/batchapp/alhuat/sclw_bp1_puttowalldaemon
+alhuat_sclw_harp | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_harp
+alhuat_sclw_lv2dropconf | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2dropconf
+alhuat_sclw_masterbatch | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_masterbatch
+alhuat_sclw_wsqdaemon | /data/softeon/batchapp/alhuat/sclw_wsqdaemon
+alhuat_sclw_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_spsltldaemon
+alhut_sclw_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclw_cbcd
+sclut_sclw_locs | /data/app/java/jdk1.7.0_80/bin/sclut_sclw_locs
+alhuat_scle_inallodaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_inallodaemon
+sclw_wllpk_1bp | /data/softeon/batchapp/alhuat/sclw_bp1_printpackputlpcndaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3581 | sclbilluat | app | sclbilluat_jboss | 8086 | 10.0.9.157:8086 | UP | 200 | Disabled | /data/app/jboss62eap/sclbilluat/standalone
+4120 | sclbilluat | jboss730eap | sclbill_jb730ea | 8087 | 10.0.9.157:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclbilluat/standalone
+3604 | softeonuat | jboss62eap | rrsuat_jboss | 8082 | 10.0.9.157:8082 | UP | 200 | Disabled | /data/app/jboss62eap/rrsuat/softeonuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 02:43:29.114153
+==============================================================================
+
+2026-07-09 02:43:55,304 - 3999575 - ERROR - app_validation.py errors for i-0eb1f8fc232a4d473:
+
+2026-07-09 02:43:55,306 - 3999575 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-AfterPatching-Retry1-2026-07-09-02-43-55-305.log
+2026-07-09 02:43:55,361 - 3999575 - INFO - [Retry-1] RED detected for SaddleCreek UAT Application and Batch Server -1 (10.0.9.157), retrying... (Total waited: 600s)
+2026-07-09 02:43:55,362 - 3999575 - INFO - [Retry-2] Waiting 600s for i-0eb1f8fc232a4d473...
+2026-07-09 02:50:56,641 - 3999575 - WARNING - i-0bac7c222173cf2a1 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop/be693880e349d6d4 after timeout.
+2026-07-09 02:53:55,623 - 3999575 - INFO - Sent app_validation.py to i-0eb1f8fc232a4d473 (command_id: 2c24f7c0-ec11-420f-8691-c8e1116e6ae5)
+2026-07-09 02:54:25,790 - 3999575 - INFO - app_validation.py output for i-0eb1f8fc232a4d473:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 02:53:56.231966
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.157
+Hostname | ip-10-0-9-157
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb3 | 100.0G | 1.4G | 98.5G | 1% | /data4
+/dev/xvdb2 | 179.9G | 115.1G | 64.8G | 63% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/interfaces/       10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/interfaces/       10.0.10.210(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.10.210(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.157:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1088
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.157 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 39
+Batch/Daemon Java Processes | 36
+Non-Standalone Java Processes | rrsuat_downloaddaemon, rrsuat_eventdaemon, rrsuat_ftpdaemon, rrsuat_labeldaemon, rrsuat_replenishmentdaemon, rrsuat_reportdaemon, rrsuat_schedulerdaemon, rrsuat_uploaddaemon, rrsuat_wavelaunchdaemon, rrsuat_hardallocationdaemon, sclbilluat_schedulerdaemon, sclbilluat_uploaddaemon, sclbilluat_jqgridreportdaemon, sclbilluat_reportdaemon, sclbilluat_ftp, alhuat_scle_inallodaemon, alhuat_sclw_downloaddaemon, alhuat_sclw_eventdaemon, alhuat_sclw_JQGridReportAgent, alhuat_sclw_ftpdaemon, alhuat_sclw_labeldaemon, alhuat_sclw_replenishmentcanceldaemon, alhuat_sclw_replenishmentdaemon, alhuat_sclw_schedulerdaemon, alhuat_sclw_generic_uploaddaemon, alhuat_sclw_intfuploaddaemon1, alhuat_sclw_intfuploaddaemon2, alhuat_sclw_wavelaunchdaemon, alhuat_sclw_picktooldaemon_sd2, alhuat_picktooldaemon_ON1, alhuat_picktooldaemon_bp1, alhuat_sclw_picktooldaemon_lv1, alhuat_sclw_lv2_picktooldaemon, alhuat_sclw_voicemobiledaemon, jar, alhuat_sclw_reportdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 36
+Java-Name | Java-Path
+rrsuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_downloaddaemon
+rrsuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_eventdaemon
+rrsuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_ftpdaemon
+rrsuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_labeldaemon
+rrsuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_replenishmentdaemon
+rrsuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_reportdaemon
+rrsuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_schedulerdaemon
+rrsuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_uploaddaemon
+rrsuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_wavelaunchdaemon
+rrsuat_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_hardallocationdaemon
+sclbilluat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_schedulerdaemon
+sclbilluat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_uploaddaemon
+sclbilluat_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_jqgridreportdaemon
+sclbilluat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_reportdaemon
+sclbilluat_ftp | /data/app/java/jdk1.7.0_80/bin/sclbilluat_ftp
+alhuat_scle_inallodaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_inallodaemon
+alhuat_sclw_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_downloaddaemon
+alhuat_sclw_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_eventdaemon
+alhuat_sclw_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_JQGridReportAgent
+alhuat_sclw_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_ftpdaemon
+alhuat_sclw_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_labeldaemon
+alhuat_sclw_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentcanceldaemon
+alhuat_sclw_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_replenishmentdaemon
+alhuat_sclw_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_schedulerdaemon
+alhuat_sclw_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_generic_uploaddaemon
+alhuat_sclw_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon1
+alhuat_sclw_intfuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_intfuploaddaemon2
+alhuat_sclw_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_wavelaunchdaemon
+alhuat_sclw_picktooldaemon_sd2 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_sd2
+alhuat_picktooldaemon_ON1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_ON1
+alhuat_picktooldaemon_bp1 | /data/app/java/jdk1.7.0_80/bin/alhuat_picktooldaemon_bp1
+alhuat_sclw_picktooldaemon_lv1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_picktooldaemon_lv1
+alhuat_sclw_lv2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2_picktooldaemon
+alhuat_sclw_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_voicemobiledaemon
+jar | /data/app/java/jdk1.6.0_45/bin/jar
+alhuat_sclw_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_reportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3581 | sclbilluat | app | sclbilluat_jboss | 8086 | 10.0.9.157:8086 | UP | 200 | Disabled | /data/app/jboss62eap/sclbilluat/standalone
+4120 | sclbilluat | jboss730eap | sclbill_jb730ea | 8087 | 10.0.9.157:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclbilluat/standalone
+3604 | softeonuat | jboss62eap | rrsuat_jboss | 8082 | 10.0.9.157:8082 | UP | 200 | Disabled | /data/app/jboss62eap/rrsuat/softeonuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 02:54:01.065441
+==============================================================================
+
+2026-07-09 02:54:25,790 - 3999575 - ERROR - app_validation.py errors for i-0eb1f8fc232a4d473:
+
+2026-07-09 02:54:25,791 - 3999575 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-AfterPatching-Retry2-2026-07-09-02-54-25-791.log
+2026-07-09 02:54:25,846 - 3999575 - INFO - [Retry-2] RED detected for SaddleCreek UAT Application and Batch Server -1 (10.0.9.157), retrying... (Total waited: 1200s)
+2026-07-09 02:54:25,846 - 3999575 - INFO - [Retry-3] Waiting 600s for i-0eb1f8fc232a4d473...
+2026-07-09 02:58:57,631 - 3999575 - WARNING - i-0bac7c222173cf2a1 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF/b5e5200dc9f40112 after timeout.
+2026-07-09 02:58:57,846 - 3999575 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-09 02:58:57,847 - 3999575 - ERROR - Aborting workflow: i-0bac7c222173cf2a1 is not healthy after restart.
+2026-07-09 02:58:57,852 - 3999575 - INFO - Restart Total time: 0:32:38.488324
+2026-07-09 02:58:57,853 - 3999575 - INFO - Auto-confirmed services are restarted
+2026-07-09 02:58:57,853 - 3999575 - INFO - Confirmed - services are started
+2026-07-09 02:58:57,983 - 3999575 - INFO - The following instances have failed the patch: []
+2026-07-09 02:58:57,983 - 3999575 - INFO - No instances have failed the patch.
+2026-07-09 02:58:57,983 - 3999575 - INFO - Total Patch Process time: 0:48:55.058114
+2026-07-09 02:59:58,625 - 3999575 - INFO - Log file ./logs/patching_2026-07-09_SaddleCreek-UAT-1.log uploaded to s3://q3-2026-aws-security-patching/SaddleCreek-UAT-1_Patch/2026-07-09/patching_2026-07-09_SaddleCreek-UAT-1.log
+2026-07-09 03:04:26,043 - 3999575 - INFO - Sent app_validation.py to i-0eb1f8fc232a4d473 (command_id: eca4c56b-7742-4fdc-a772-c45e8264350b)
+2026-07-09 03:04:56,137 - 3999575 - INFO - app_validation.py output for i-0eb1f8fc232a4d473:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 03:04:26.398448
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.9.157
+Hostname | ip-10-0-9-157
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb3 | 100.0G | 1.4G | 98.5G | 1% | /data4
+/dev/xvdb2 | 179.9G | 115.3G | 64.7G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/softeon/interfaces/       10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.9.178(rw,sync,no_root_squash,no_all_squash) | /data/softeon/interfaces/       10.0.10.210(rw,sync,no_root_squash,no_all_squash) | /data/softeon/shared/           10.0.10.210(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.9.157:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1088
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.9.157 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 99
+Batch/Daemon Java Processes | 96
+Non-Standalone Java Processes | rrsuat_downloaddaemon, rrsuat_eventdaemon, rrsuat_ftpdaemon, rrsuat_labeldaemon, rrsuat_replenishmentdaemon, rrsuat_reportdaemon, rrsuat_schedulerdaemon, rrsuat_uploaddaemon, rrsuat_wavelaunchdaemon, rrsuat_hardallocationdaemon, sclbilluat_schedulerdaemon, sclbilluat_uploaddaemon, sclbilluat_jqgridreportdaemon, sclbilluat_reportdaemon, sclbilluat_ftp, alhuat_sclw_JQGridReportAgent, alhuat_sclw_lv2dropconf, alhuat_sclw_masterbatch, alhuat_sclw_wsqdaemon, alhuat_sclw_spsltldaemon, alhut_sclw_cbcd, sclut_sclw_locs, sclw_wllpk_1bp, alhuat_scle_ccd, alhuat_scle_downloaddaemon, alhuat_scle_eventdaemon, alhuat_scle_excelexportdaemon, alhuat_scle_ftpdaemon, alhuat_scle_labeldaemon, alhuat_scle_picktooldaemon, alhuat_scle_replenishmentcanceldaemon, alhuat_scle_replenishmentdaemon, alhuat_scle_reportdaemon, alhuat_scle_schedulerdaemon, alhuat_sclw_reportdaemon, alhuat_scle_wavelaunchdaemon, alhuat_scle_lx1_picktooldaemon, alhuat_scle_nc2_picktooldaemon, alhuat_sclw_opvorderprocessdaemon, sclw_alhuat_intrfcealctdaemon, alhuat_scle_at1_picktooldaemon, sclw_lpick, alhuat_scle_at2_picktooldaemon, alhuat_sclw_harp, alhuat_scle_wl2_picktooldaemon, alhuat_scleprintpackputlpcndaemon, alhuat_scle_opvorderprocessdaemon, alhuatscle_Puttowalldaemon, alhuat_scleputlmulticartpackingdaemon, alhuat_scle_infupdaemon1, alhuat_scle_infupdaemon2, alhuat_scle_generic_uploaddaemon, scle_tstpcktld, alhuat_scle_lx2_picktooldaemon, alhuat_scle_lx1_puttowalldaemon, alhuat_scle_voicemobiledaemon, scle_vomobadm, alhuat_scle_mt1_picktooldaemon, alhuat_scle_harp, alhuat_scle_wsq, alhuat_scle_locus, alhuat_scle_wl1_picktooldaemon, alhuat_scle_masterbatch, alhuat_scle_wl1_puttowalldaemon, alhuat_scle_wl1_printpackputlpcndaemon, alhuat_scle_spsltldaemon, alhuat_downloaddaemon, alhuat_eventdaemon, alhuat_ftpdaemon, alhuat_scle_wl1_putlmulticartpackingdaemon, alhut_scle_cbcd, alhuat_labeldaemon, alhuat_replenishmentdaemon, alhuat_reportdaemon, alhuat_schedulerdaemon, alhuat_uploaddaemon, alhuat_wavelaunchdaemon, alhuat_replenishmentcanceldaemon, alhuat_sclc_fw3_picktooldaemon, alhuat_sclc_fws_picktooldaemon, alhuat_sclc_fwn_picktooldaemon, alhuat_interfaceallocationdaemon, alhuat_sclc_jl2_picktooldaemon, alhuat_sclc_ro1_picktooldaemon, alhuat_hardallocdaemon, alhuat_wsqdaemon, alhuat_locusdaemon, alhuat_prilabel, alhuat_sclc_intfuploaddaemon1, alhuat_sclc_voicemobiledaemon, alhuat_2puttowalldaemon, alhuat_sclc_JQGridReportAgent, alhuat_wsrmi, alhuat_putlmulticartpackingdaemon, alhuat_sclc_spsltldaemon, alhut_sclc_cbcd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 96
+Java-Name | Java-Path
+rrsuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_downloaddaemon
+rrsuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_eventdaemon
+rrsuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_ftpdaemon
+rrsuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_labeldaemon
+rrsuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_replenishmentdaemon
+rrsuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_reportdaemon
+rrsuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_schedulerdaemon
+rrsuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_uploaddaemon
+rrsuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_wavelaunchdaemon
+rrsuat_hardallocationdaemon | /data/app/java/jdk1.7.0_80/bin/rrsuat_hardallocationdaemon
+sclbilluat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_schedulerdaemon
+sclbilluat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_uploaddaemon
+sclbilluat_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_jqgridreportdaemon
+sclbilluat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclbilluat_reportdaemon
+sclbilluat_ftp | /data/app/java/jdk1.7.0_80/bin/sclbilluat_ftp
+alhuat_sclw_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_JQGridReportAgent
+alhuat_sclw_lv2dropconf | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_lv2dropconf
+alhuat_sclw_masterbatch | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_masterbatch
+alhuat_sclw_wsqdaemon | /data/softeon/batchapp/alhuat/sclw_wsqdaemon
+alhuat_sclw_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_spsltldaemon
+alhut_sclw_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclw_cbcd
+sclut_sclw_locs | /data/app/java/jdk1.7.0_80/bin/sclut_sclw_locs
+sclw_wllpk_1bp | /data/softeon/batchapp/alhuat/sclw_bp1_printpackputlpcndaemon
+alhuat_scle_ccd | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_ccd
+alhuat_scle_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_downloaddaemon
+alhuat_scle_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_eventdaemon
+alhuat_scle_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_excelexportdaemon
+alhuat_scle_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_ftpdaemon
+alhuat_scle_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_labeldaemon
+alhuat_scle_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_picktooldaemon
+alhuat_scle_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_replenishmentcanceldaemon
+alhuat_scle_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_replenishmentdaemon
+alhuat_scle_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_reportdaemon
+alhuat_scle_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_schedulerdaemon
+alhuat_sclw_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_reportdaemon
+alhuat_scle_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wavelaunchdaemon
+alhuat_scle_lx1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx1_picktooldaemon
+alhuat_scle_nc2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_nc2_picktooldaemon
+alhuat_sclw_opvorderprocessdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_opvorderprocessdaemon
+sclw_alhuat_intrfcealctdaemon | /data/app/java/jdk1.7.0_80/bin/sclw_alhuat_intrfcealctdaemon
+alhuat_scle_at1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_at1_picktooldaemon
+sclw_lpick | /data/softeon/batchapp/alhuat/sclw_bp1_puttowalldaemon
+alhuat_scle_at2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_at2_picktooldaemon
+alhuat_sclw_harp | /data/app/java/jdk1.7.0_80/bin/alhuat_sclw_harp
+alhuat_scle_wl2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl2_picktooldaemon
+alhuat_scleprintpackputlpcndaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scleprintpackputlpcndaemon
+alhuat_scle_opvorderprocessdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_opvorderprocessdaemon
+alhuatscle_Puttowalldaemon | /data/softeon/batchapp/alhuat/scle_puttowalldaemon
+alhuat_scleputlmulticartpackingdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scleputlmulticartpackingdaemon
+alhuat_scle_infupdaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_infupdaemon1
+alhuat_scle_infupdaemon2 | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_infupdaemon2
+alhuat_scle_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_generic_uploaddaemon
+scle_tstpcktld | /data/app/java/jdk1.7.0_80/bin/scle_tstpcktld
+alhuat_scle_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx2_picktooldaemon
+alhuat_scle_lx1_puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_lx1_puttowalldaemon
+alhuat_scle_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_voicemobiledaemon
+scle_vomobadm | /data/softeon/batchapp/alhuat/scle_voiceadminserver
+alhuat_scle_mt1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_mt1_picktooldaemon
+alhuat_scle_harp | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_harp
+alhuat_scle_wsq | /data/softeon/batchapp/alhuat/scle_wsqdaemon
+alhuat_scle_locus | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_locus
+alhuat_scle_wl1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_picktooldaemon
+alhuat_scle_masterbatch | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_masterbatch
+alhuat_scle_wl1_puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_puttowalldaemon
+alhuat_scle_wl1_printpackputlpcndaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_printpackputlpcndaemon
+alhuat_scle_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_spsltldaemon
+alhuat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_downloaddaemon
+alhuat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_eventdaemon
+alhuat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_ftpdaemon
+alhuat_scle_wl1_putlmulticartpackingdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_scle_wl1_putlmulticartpackingdaemon
+alhut_scle_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_scle_cbcd
+alhuat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_labeldaemon
+alhuat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentdaemon
+alhuat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_reportdaemon
+alhuat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_schedulerdaemon
+alhuat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_uploaddaemon
+alhuat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_wavelaunchdaemon
+alhuat_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_replenishmentcanceldaemon
+alhuat_sclc_fw3_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fw3_picktooldaemon
+alhuat_sclc_fws_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fws_picktooldaemon
+alhuat_sclc_fwn_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_fwn_picktooldaemon
+alhuat_interfaceallocationdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_interfaceallocationdaemon
+alhuat_sclc_jl2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_jl2_picktooldaemon
+alhuat_sclc_ro1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_ro1_picktooldaemon
+alhuat_hardallocdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_hardallocdaemon
+alhuat_wsqdaemon | /data/softeon/batchapp/alhuat/wsqdaemon
+alhuat_locusdaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_locusdaemon
+alhuat_prilabel | /data/app/java/jdk1.7.0_80/bin/alhuat_prilabel
+alhuat_sclc_intfuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_intfuploaddaemon1
+alhuat_sclc_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_voicemobiledaemon
+alhuat_2puttowalldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_2puttowalldaemon
+alhuat_sclc_JQGridReportAgent | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_JQGridReportAgent
+alhuat_wsrmi | /data/softeon/batchapp/alhuat/sclc_wsrmidaemon
+alhuat_putlmulticartpackingdaemon | /data/softeon/batchapp/alhuat/putlmulticartpackingdaemon
+alhuat_sclc_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/alhuat_sclc_spsltldaemon
+alhut_sclc_cbcd | /data/app/java/jdk1.7.0_80/bin/alhut_sclc_cbcd
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3581 | sclbilluat | app | sclbilluat_jboss | 8086 | 10.0.9.157:8086 | UP | 200 | Disabled | /data/app/jboss62eap/sclbilluat/standalone
+4120 | sclbilluat | jboss730eap | sclbill_jb730ea | 8087 | 10.0.9.157:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sclbilluat/standalone
+3604 | softeonuat | jboss62eap | rrsuat_jboss | 8082 | 10.0.9.157:8082 | UP | 200 | Disabled | /data/app/jboss62eap/rrsuat/softeonuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 03:04:30.058603
+==============================================================================
+
+2026-07-09 03:04:56,137 - 3999575 - ERROR - app_validation.py errors for i-0eb1f8fc232a4d473:
+
+2026-07-09 03:04:56,139 - 3999575 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-09/SaddleCreek-UAT-1/10.0.9.157/10.0.9.157-AfterPatching-Retry3-2026-07-09-03-04-56-138.log
+2026-07-09 03:04:56,479 - 3999575 - INFO - Health monitor crontab enabled on all instances
+2026-07-09 03:04:56,482 - 3999575 - WARNING - [Retry] Timeout - auto cron enabled for i-0eb1f8fc232a4d473

@@ -1,0 +1,234 @@
+2026-04-11 02:00:04,052 - 461344 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-11 02:00:04,053 - 461344 - INFO - Script Start Time: 2026-04-11 02:00:04
+2026-04-11 02:00:04,428 - 461344 - INFO - Instance(s) selected for Patching: {'i-0cbb0583822427ca8': '172.22.130.46'}
+2026-04-11 02:00:04,504 - 461344 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-11 02:00:04,504 - 461344 - INFO - Now patching instances at: 2026-04-11 02:00:04
+2026-04-11 02:00:04,622 - 461344 - INFO - Sending patch command to instance i-0cbb0583822427ca8
+2026-04-11 02:00:05,034 - 461344 - INFO - Command sent successfully to instance i-0cbb0583822427ca8. Command ID: f28dc504-b355-4438-9264-9eadb8db6031
+2026-04-11 02:02:36,528 - 461344 - INFO - All patches applied successfully.
+2026-04-11 02:02:36,529 - 461344 - INFO - Patching end time: 2026-04-11 02:02:36
+2026-04-11 02:02:36,529 - 461344 - INFO - Patch Elapsed time: 0:02:32.024591
+2026-04-11 02:02:36,602 - 461344 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-11 02:02:36,602 - 461344 - INFO - Confirmed - services are stopped
+2026-04-11 02:02:42,246 - 461344 - INFO - Discovered TG map: {'i-0cbb0583822427ca8': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop/6c4f8d5436bbb685', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF/baa3bcacfd6e0bba', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS/e8d592bf75798ab6']}
+2026-04-11 02:02:43,053 - 461344 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 8281d68d-9561-4e36-baec-baf38080eaf2)
+2026-04-11 02:03:13,205 - 461344 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-04-11 06:02:43.187413
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 53.1G | 186.8G | 22% | /data
+/dev/nvme1n1p2 | 239.9G | 53.1G | 186.8G | 22% | /data2
+/dev/nvme1n1p2 | 239.9G | 53.1G | 186.8G | 22% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | bfgconfig_bdd, bfguat_sch, bfguat_abchdis, bfguat_apick, bfguat_dwa, bfguat_event, bfguat_ftp, bfguat_harp, bfguat_lbl, bfguat_lpick, bfguat_rccl, bfguat_rplpu, bfguat_rpt, bfguat_jqgrid, bfguat_inbq, bfguat_wld, bfguat_repl, bfguat_invbt, bfguat_billcb
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+bfgconfig_bdd | /data/batchapp/softeon/bfgconfiguat/bulkdatadaemon
+bfguat_sch | /data/batchapp/softeon/bfguat/schedulardaemon
+bfguat_abchdis | /data/batchapp/softeon/bfguat/autobatchdistributiondaemon
+bfguat_apick | /data/batchapp/softeon/bfguat/autopicktooldaemon
+bfguat_dwa | /data/batchapp/softeon/bfguat/downloaddaemon
+bfguat_event | /data/batchapp/softeon/bfguat/eventdaemon
+bfguat_ftp | /data/batchapp/softeon/bfguat/ftpdaemon
+bfguat_harp | /data/batchapp/softeon/bfguat/hardallocationdaemon
+bfguat_lbl | /data/batchapp/softeon/bfguat/labeldaemon
+bfguat_lpick | /data/batchapp/softeon/bfguat/ptcdaemon
+bfguat_rccl | /data/batchapp/softeon/bfguat/replenishmentpickloccanceldaemon
+bfguat_rplpu | /data/batchapp/softeon/bfguat/replenishmentpriorityupdatedaemon
+bfguat_rpt | /data/batchapp/softeon/bfguat/reportdaemon
+bfguat_jqgrid | /data/batchapp/softeon/bfguat/reportjqgridexportdaemon
+bfguat_inbq | /data/batchapp/softeon/bfguat/uploaddeamon
+bfguat_wld | /data/batchapp/softeon/bfguat/wavelaunchdaemon
+bfguat_repl | /data/batchapp/softeon/bfguat/replenishmentdaemon
+bfguat_invbt | /data/batchapp/softeon/bfguat/billinginvoicebatchdaemon
+bfguat_billcb | /data/batchapp/softeon/bfguat/billingchargesbatchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+495659 | bfgconfiguat | jboss740eap | bfgconfuat_jb74 | 8082 | 172.22.130.46:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/bfgconfiguat/standalone
+2251220 | bfgrfuat | jboss800eap | bfgrfuat_jb800e | 8081 | 172.22.130.46:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfgrfuat/standalone
+2691549 | bfguat | jboss800eap | bfguat_jb800eap | 8080 | 172.22.130.46:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/bfguat/standalone
+2744921 | bfguat | jboss810eap | bfguat_jb810eap | 8083 | 172.22.130.46:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-11 06:02:44.094956
+==============================================================================
+
+2026-04-11 02:03:13,205 - 461344 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+
+2026-04-11 02:03:13,207 - 461344 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-11/BF-Global-Logistics-UAT-q2-26/172.22.130.46/172.22.130.46-BeforePatching-2026-04-11-02-03-13-206.log
+2026-04-11 02:03:13,207 - 461344 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630
+2026-04-11 02:03:13,550 - 461344 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop/6c4f8d5436bbb685
+2026-04-11 02:03:13,668 - 461344 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF/baa3bcacfd6e0bba
+2026-04-11 02:03:13,782 - 461344 - INFO - Deregistering i-0cbb0583822427ca8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS/e8d592bf75798ab6
+2026-04-11 02:03:13,902 - 461344 - INFO - Stopping EC2 instance: i-0cbb0583822427ca8 at 2026-04-11 02:03:13
+2026-04-11 02:05:00,863 - 461344 - INFO - Instance i-0cbb0583822427ca8 stopped successfully.
+2026-04-11 02:05:01,002 - 461344 - INFO - Stopped i-0cbb0583822427ca8 in 0:01:47.100380
+2026-04-11 02:05:01,003 - 461344 - INFO - Starting EC2 instance: i-0cbb0583822427ca8
+2026-04-11 02:05:17,045 - 461344 - INFO - Instance i-0cbb0583822427ca8 started successfully.
+2026-04-11 02:05:17,045 - 461344 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0cbb0583822427ca8...
+2026-04-11 02:06:07,095 - 461344 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Config/da9f2599c2023630
+2026-04-11 02:06:07,519 - 461344 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-Desktop/6c4f8d5436bbb685
+2026-04-11 02:06:07,711 - 461344 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-RF/baa3bcacfd6e0bba
+2026-04-11 02:06:07,911 - 461344 - INFO - Registering i-0cbb0583822427ca8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-UAT-WS/e8d592bf75798ab6
+2026-04-11 02:08:39,700 - 461344 - INFO - Sent app_validation.py to i-0cbb0583822427ca8 (command_id: 05efeb88-a4bc-483c-9617-af3b32240c8f)
+2026-04-11 02:09:09,976 - 461344 - INFO - app_validation.py output for i-0cbb0583822427ca8:
+
+==============================================================================
+Server Availability Check Started | 2026-04-11 06:08:39.982430
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.46
+Hostname | ip-172-22-130-46.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 53.0G | 186.8G | 22% | /data
+/dev/nvme1n1p2 | 239.9G | 53.0G | 186.8G | 22% | /data2
+/dev/nvme1n1p2 | 239.9G | 53.0G | 186.8G | 22% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.22.130.46:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.46 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+
+2026-04-11 02:09:09,977 - 461344 - ERROR - app_validation.py errors for i-0cbb0583822427ca8:
+Traceback (most recent call last):
+  File "<stdin>", line 842, in <module>
+  File "<stdin>", line 781, in main
+  File "<stdin>", line 493, in java_proc_path
+  File "/usr/lib64/python3.9/pathlib.py", line 1352, in exists
+    self.stat()
+  File "/usr/lib64/python3.9/pathlib.py", line 1160, in stat
+    return self._accessor.stat(self)
+OSError: [Errno 36] File name too long: '/data/batchapp/softeon/bfguat/common/lib/bfguat.jar:/data/batchapp/softeon/bfguat/common/lib/googleauth-1.4.0.jar:/data/batchapp/softeon/bfguat/common/lib/CNTL.jar:/data/batchapp/softeon/bfguat/common/lib/fmconfig.jar:/data/batchapp/softeon/bfguat/common/lib/DynamicPDF.jar:/data/batchapp/softeon/bfguat/common/lib/groovy-4.0.26.jar:/data/batchapp/softeon/bfguat/common/lib/Endicia.jar:/data/batchapp/softeon/bfguat/common/lib/foldermonitor.jar:/data/batchapp/softeon/bfguat/common/lib/gson-2.10.1.jar:/data/batchapp/softeon/bfguat/common/lib/FedExAPI.jar:/data/batchapp/softeon/bfguat/common/lib/fontbox-2.0.26.jar:/data/batchapp/softeon/bfguat/common/lib/HikariCP-7.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/commons-lang3-3.18.0.jar:/data/batchapp/softeon/bfguat/common/lib/JBarcodeBean-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/connecteiontracker.jar:/data/batchapp/softeon/bfguat/common/lib/JWebEngine-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/commons-collections4-4.4.jar:/data/batchapp/softeon/bfguat/common/lib/JnlpDesigner-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/Oranxo-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/conveyor-util.jar:/data/batchapp/softeon/bfguat/common/lib/SigPlus2_29.jar:/data/batchapp/softeon/bfguat/common/lib/gson-fire-1.8.5.jar:/data/batchapp/softeon/bfguat/common/lib/ZSDK_API.jar:/data/batchapp/softeon/bfguat/common/lib/gmbal-4.0.3.jar:/data/batchapp/softeon/bfguat/common/lib/designer-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/commons-compress-1.27.1.jar:/data/batchapp/softeon/bfguat/common/lib/edtftpj-pro.jar:/data/batchapp/softeon/bfguat/common/lib/accessors-smart-2.5.0.jar:/data/batchapp/softeon/bfguat/common/lib/commons-fileupload-1.6.0.jar:/data/batchapp/softeon/bfguat/common/lib/activemq-client-6.1.7.jar:/data/batchapp/softeon/bfguat/common/lib/commons-io-2.17.0.jar:/data/batchapp/softeon/bfguat/common/lib/aws-java-sdk-core-1.11.906.jar:/data/batchapp/softeon/bfguat/common/lib/commons-codec-1.16.0.jar:/data/batchapp/softeon/bfguat/common/lib/gsp.jar:/data/batchapp/softeon/bfguat/common/lib/batik-all-1.16.jar:/data/batchapp/softeon/bfguat/common/lib/ehcache-3.10.8.jar:/data/batchapp/softeon/bfguat/common/lib/bcpg-jdk18on-1.81.jar:/data/batchapp/softeon/bfguat/common/lib/commons-jxpath-1.3.jar:/data/batchapp/softeon/bfguat/common/lib/elite-taglibs.jar:/data/batchapp/softeon/bfguat/common/lib/bcprov-jdk18on-1.81.jar:/data/batchapp/softeon/bfguat/common/lib/bcutil-jdk18on-1.81.jar:/data/batchapp/softeon/bfguat/common/lib/commons-logging-1.2.jar:/data/batchapp/softeon/bfguat/common/lib/config-1.3.3.jar:/data/batchapp/softeon/bfguat/common/lib/hmconfig.jar:/data/batchapp/softeon/bfguat/common/lib/filemover.jar:/data/batchapp/softeon/bfguat/common/lib/commons-net-3.9.0.jar:/data/batchapp/softeon/bfguat/common/lib/commons-text-1.10.0.jar:/data/batchapp/softeon/bfguat/common/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/data/batchapp/softeon/bfguat/common/lib/jaxb-impl-4.0.4.jar:/data/batchapp/softeon/bfguat/common/lib/monitor.jar:/data/batchapp/softeon/bfguat/common/lib/geronimo-jms_1.1_spec-1.1.jar:/data/batchapp/softeon/bfguat/common/lib/javassist-3.28.0-GA.jar:/data/batchapp/softeon/bfguat/common/lib/ojdbc11.jar:/data/batchapp/softeon/bfguat/common/lib/jjwt-jackson-0.12.6.jar:/data/batchapp/softeon/bfguat/common/lib/joda-time-2.10.8.jar:/data/batchapp/softeon/bfguat/common/lib/json-utils-0.1.8.jar:/data/batchapp/softeon/bfguat/common/lib/guava-32.0.1-jre.jar:/data/batchapp/softeon/bfguat/common/lib/jsonrpc.jar:/data/batchapp/softeon/bfguat/common/lib/hawtbuf-1.11.jar:/data/batchapp/softeon/bfguat/common/lib/jolt-cli-0.1.8.jar:/data/batchapp/softeon/bfguat/common/lib/hawtdispatch-1.22.jar:/data/batchapp/softeon/bfguat/common/lib/jaxws-rt-4.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/opttags.jar:/data/batchapp/softeon/bfguat/common/lib/hawtdispatch-transport-1.22.jar:/data/batchapp/softeon/bfguat/common/lib/rmi.jar:/data/batchapp/softeon/bfguat/common/lib/jolt-complete-0.1.8.jar:/data/batchapp/softeon/bfguat/common/lib/httpclient-4.5.13.jar:/data/batchapp/softeon/bfguat/common/lib/httpclient-cache-4.5.13.jar:/data/batchapp/softeon/bfguat/common/lib/jcaptcha-core-1.0-rc2.0.1.jar:/data/batchapp/softeon/bfguat/common/lib/jsqlparser-4.8.jar:/data/batchapp/softeon/bfguat/common/lib/httpcore-4.4.14.jar:/data/batchapp/softeon/bfguat/common/lib/jolt-core-0.1.8.jar:/data/batchapp/softeon/bfguat/common/lib/httpmime-4.5.13.jar:/data/batchapp/softeon/bfguat/common/lib/jsch-0.2.16.jar:/data/batchapp/softeon/bfguat/common/lib/inetcore-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.activation-2.0.1.jar:/data/batchapp/softeon/bfguat/common/lib/jcschartwl.jar:/data/batchapp/softeon/bfguat/common/lib/sft-json.jar:/data/batchapp/softeon/bfguat/common/lib/json-path-2.9.0.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.jms-api-3.1.0.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.mail-2.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/jjwt-api-0.12.6.jar:/data/batchapp/softeon/bfguat/common/lib/toolkit.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.servlet.jsp.jstl-2.0.0.jar:/data/batchapp/softeon/bfguat/common/lib/license.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar:/data/batchapp/softeon/bfguat/common/lib/batchlib.jar:/data/batchapp/softeon/bfguat/common/lib/jjwt-impl-0.12.6.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.xml.bind-api-4.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/jaxb-core-4.0.4.jar:/data/batchapp/softeon/bfguat/common/lib/jt400-9.4.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.xml.soap-api-3.0.1.jar:/data/batchapp/softeon/bfguat/common/lib/json-smart-2.5.2.jar:/data/batchapp/softeon/bfguat/common/lib/jakarta.xml.ws-api-4.0.1.jar:/data/batchapp/softeon/bfguat/common/lib/jsr305-3.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/jasypt-1.9.3.jar:/data/batchapp/softeon/bfguat/common/lib/kotlin-stdlib-2.1.10.jar:/data/batchapp/softeon/bfguat/common/lib/labelresponse.jar:/data/batchapp/softeon/bfguat/common/lib/scflex-trtsso.jar:/data/batchapp/softeon/bfguat/common/lib/log4j-api-2.24.3.jar:/data/batchapp/softeon/bfguat/common/lib/quartz-2.3.2.jar:/data/batchapp/softeon/bfguat/common/lib/log4j-core-2.24.3.jar:/data/batchapp/softeon/bfguat/common/lib/poi-scratchpad-5.4.1.jar:/data/batchapp/softeon/bfguat/common/lib/reflections-0.10.2.jar:/data/batchapp/softeon/bfguat/common/lib/logback-classic-1.5.16.jar:/data/batchapp/softeon/bfguat/common/lib/logback-core-1.5.16.jar:/data/batchapp/softeon/bfguat/common/lib/postgresql-42.7.2.jar:/data/batchapp/softeon/bfguat/common/lib/logbackup.jar:/data/batchapp/softeon/bfguat/common/lib/reporting-25.4.227.jar:/data/batchapp/softeon/bfguat/common/lib/logging-interceptor-2.7.5.jar:/data/batchapp/softeon/bfguat/common/lib/sft-UpsAddressValidation.jar:/data/batchapp/softeon/bfguat/common/lib/logmonitor.jar:/data/batchapp/softeon/bfguat/common/lib/sft-amazon-ws.jar:/data/batchapp/softeon/bfguat/common/lib/lombok-1.18.22.jar:/data/batchapp/softeon/bfguat/common/lib/lucene-1.4.3.jar:/data/batchapp/softeon/bfguat/common/lib/saaj-impl-3.0.3.jar:/data/batchapp/softeon/bfguat/common/lib/sft-apc-ws.jar:/data/batchapp/softeon/bfguat/common/lib/menuconfig.jar:/data/batchapp/softeon/bfguat/common/lib/saml-onelogin.jar:/data/batchapp/softeon/bfguat/common/lib/mssql-jdbc-12.4.2.jre11.jar:/data/batchapp/softeon/bfguat/common/lib/propertyencryption.jar:/data/batchapp/softeon/bfguat/common/lib/sft-aws-sp-api.jar:/data/batchapp/softeon/bfguat/common/lib/okhttp-2.7.5.jar:/data/batchapp/softeon/bfguat/common/lib/sft-axway-ws.jar:/data/batchapp/softeon/bfguat/common/lib/okio-2.9.0.jar:/data/batchapp/softeon/bfguat/common/lib/scala-library-2.13.14.jar:/data/batchapp/softeon/bfguat/common/lib/org.apache.oltu.oauth2.authzserver-1.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/sft-dhl-ecomm-ws.jar:/data/batchapp/softeon/bfguat/common/lib/poi-ooxml-full-5.4.1.jar:/data/batchapp/softeon/bfguat/common/lib/org.apache.oltu.oauth2.client-1.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/poi-excelant-5.4.1.jar:/data/batchapp/softeon/bfguat/common/lib/sft-dhl-ws.jar:/data/batchapp/softeon/bfguat/common/lib/org.apache.oltu.oauth2.common-1.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/sft-base-ws-1.0.jar:/data/batchapp/softeon/bfguat/common/lib/pdfbox-2.0.26.jar:/data/batchapp/softeon/bfguat/common/lib/scala3-library_3-3.4.2.jar:/data/batchapp/softeon/bfguat/common/lib/pekko-actor_3-1.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/poi-5.4.1.jar:/data/batchapp/softeon/bfguat/common/lib/sft-billingagent.jar:/data/batchapp/softeon/bfguat/common/lib/poi-ooxml-5.4.1.jar:/data/batchapp/softeon/bfguat/common/lib/sft-bottlelabel-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-connectship-jsonship-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-connectsip-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-easypost-objects.jar:/data/batchapp/softeon/bfguat/common/lib/sft-easypost-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-ehub-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-fed-registration-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-fedex-addrvalidation-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-fedex-rate-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-fedex-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-fedexintlconnect-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-flex-objects.jar:/data/batchapp/softeon/bfguat/common/lib/sft-kronos-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-kuehne_nagel-demo-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-locus-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-lp-rmi-stub.jar:/data/batchapp/softeon/bfguat/common/lib/sft-netsuite-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-passport-shipping-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-pcmiler-src.jar:/data/batchapp/softeon/bfguat/common/lib/sft-printservice-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-proship-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-rmi-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-robot-automation-rmi.jar:/data/batchapp/softeon/bfguat/common/lib/sft-robot-comm-api.jar:/data/batchapp/softeon/bfguat/common/lib/sft-rtls-comm.jar:/data/batchapp/softeon/bfguat/common/lib/sft-schema-validator.jar:/data/batchapp/softeon/bfguat/common/lib/sft-scl-landmark-mercury-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-shopify-gql-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-smartcourier-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-solidcommerceclient.jar:/data/batchapp/softeon/bfguat/common/lib/sft-taglibs.jar:/data/batchapp/softeon/bfguat/common/lib/sft-ups-rate-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-ups-rest-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-ups-transittime-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-upssurepost.jar:/data/batchapp/softeon/bfguat/common/lib/sft-usps-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft-wms-ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_asn_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_cust_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_item_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_ord_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_po_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_rma_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_edi_prd_supp_upl.jar:/data/batchapp/softeon/bfguat/common/lib/sft_sitelinez_ws.jar:/data/batchapp/softeon/bfguat/common/lib/sft_umlaut_replacer.jar:/data/batchapp/softeon/bfguat/common/lib/sftcups4j.jar:/data/batchapp/softeon/bfguat/common/lib/sftitext-2.1.7.jar:/data/batchapp/softeon/bfguat/common/lib/sftshopifyfulfillment.jar:/data/batchapp/softeon/bfguat/common/lib/sftweighscale.jar:/data/batchapp/softeon/bfguat/common/lib/simple-xml-2.7.1.jar:/data/batchapp/softeon/bfguat/common/lib/slf4j-api-2.0.7.jar:/data/batchapp/softeon/bfguat/common/lib/slf4j-ext-2.0.7.jar:/data/batchapp/softeon/bfguat/common/lib/slice-api-1.1.14.jar:/data/batchapp/softeon/bfguat/common/lib/slice-core-1.1.14.jar:/data/batchapp/softeon/bfguat/common/lib/smc3carrwarexl.jar:/data/batchapp/softeon/bfguat/common/lib/smc3ratewarexl.jar:/data/batchapp/softeon/bfguat/common/lib/stax-ex-2.1.0.jar:/data/batchapp/softeon/bfguat/common/lib/streambuffer-2.1.0.jar:/data/batchapp/softeon/bfguat/common/lib/swagger-annotations-1.6.13.jar:/data/batchapp/softeon/bfguat/common/lib/syslog-common.jar:/data/batchapp/softeon/bfguat/common/lib/threetenbp-1.5.0.jar:/data/batchapp/softeon/bfguat/common/lib/twist-1.10.1.jar:/data/batchapp/softeon/bfguat/common/lib/velocity-engine-core-2.3.jar:/data/batchapp/softeon/bfguat/common/lib/vocollect-admin.jar:/data/batchapp/softeon/bfguat/common/lib/xercesImpl-2.12.2.jar:/data/batchapp/softeon/bfguat/common/lib/xmlbeans-5.2.0.jar:/data/batchapp/softeon/bfguat/common/lib/xmlsec-4.0.2.jar:/data/batchapp/softeon/bfguat/common/lib/zxing-barcodes-3.2.1.jar:/data/batchapp/softeon/bfguat/common/lib/zxing-core-3.2.1.jar:/data/batchapp/softeon/bfguat/common/lib/zxing-javase-3.2.1.jar:/data/batchapp/softeon/bfguat/common/properties:/data/batchapp/softeon/bfguat/common/bin/bfguat_invbt'
+failed to run commands: exit status 1
+2026-04-11 02:09:09,978 - 461344 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-11/BF-Global-Logistics-UAT-q2-26/172.22.130.46/172.22.130.46-AfterPatching-2026-04-11-02-09-09-978.log
+2026-04-11 02:09:10,032 - 461344 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-11/BF-Global-Logistics-UAT-q2-26/172.22.130.46/172.22.130.46-Validation-details-2026-04-11-02-09-09-978.html
+2026-04-11 02:09:10,131 - 461344 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-11 02:09:10,132 - 461344 - INFO - HTML validation report email sent for i-0cbb0583822427ca8
+2026-04-11 02:09:10,275 - 461344 - INFO - Started i-0cbb0583822427ca8 in 0:04:09.272721
+2026-04-11 02:09:10,276 - 461344 - INFO - All instances processed.
+2026-04-11 02:09:10,279 - 461344 - INFO - Restart Total time: 0:06:33.539938
+2026-04-11 02:09:10,280 - 461344 - INFO - Auto-confirmed services are restarted
+2026-04-11 02:09:10,280 - 461344 - INFO - Confirmed - services are started
+2026-04-11 02:09:10,400 - 461344 - INFO - The following instances have failed the patch: []
+2026-04-11 02:09:10,401 - 461344 - INFO - No instances have failed the patch.
+2026-04-11 02:09:10,401 - 461344 - INFO - Total Patch Process time: 0:09:06.347589
+2026-04-11 02:10:10,906 - 461344 - INFO - Log file ./logs/patching_2026-04-11_BF-Global-Logistics-UAT-q2-26.log uploaded to s3://q2-2026-aws-security-patching/BF-Global-Logistics-UAT-q2-26_Patch/2026-04-11/patching_2026-04-11_BF-Global-Logistics-UAT-q2-26.log

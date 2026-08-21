@@ -1,0 +1,184 @@
+2026-05-02 02:15:02,674 - 156538 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-02 02:15:02,674 - 156538 - INFO - Script Start Time: 2026-05-02 02:15:02
+2026-05-02 02:15:02,890 - 156538 - INFO - Instance(s) selected for Patching: {'i-05a5f0ff3e5796950': '10.154.0.29'}
+2026-05-02 02:15:02,966 - 156538 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-02 02:15:02,966 - 156538 - INFO - Now patching instances at: 2026-05-02 02:15:02
+2026-05-02 02:15:03,101 - 156538 - INFO - Sending patch command to instance i-05a5f0ff3e5796950
+2026-05-02 02:15:03,255 - 156538 - INFO - Command sent successfully to instance i-05a5f0ff3e5796950. Command ID: 254d7b41-59a7-440b-83e8-acb00c4f4593
+2026-05-02 02:20:04,670 - 156538 - INFO - All patches applied successfully.
+2026-05-02 02:20:04,671 - 156538 - INFO - Patching end time: 2026-05-02 02:20:04
+2026-05-02 02:20:04,671 - 156538 - INFO - Patch Elapsed time: 0:05:01.704533
+2026-05-02 02:20:04,746 - 156538 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-02 02:20:04,746 - 156538 - INFO - Confirmed - services are stopped
+2026-05-02 02:20:24,151 - 156538 - INFO - Discovered TG map: {'i-05a5f0ff3e5796950': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8060/25deea42309ca466', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8061/3306e08041441b03', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-Webservices/796e06c7f624a4db']}
+2026-05-02 02:20:24,548 - 156538 - INFO - Sent app_validation.py to i-05a5f0ff3e5796950 (command_id: b335805b-5021-415a-a365-2ebfcc6be607)
+2026-05-02 02:20:54,609 - 156538 - INFO - app_validation.py output for i-05a5f0ff3e5796950:
+
+==============================================================================
+Server Availability Check Started | 2026-05-02 06:20:24.830628
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.29
+Hostname | ip-10-154-0-29
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 179.4G | 60.5G | 74% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 98.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 303
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 56
+Batch/Daemon Java Processes | 53
+Non-Standalone Java Processes | techniuat_abchd, techniuat_dwa, techniuat_event, techniuat_ftp, techniuat_harp, techniuat_lbl, techniuat_repl, techniuat_repcd, techni_1repcd, techniuat_rpt, techniuat_exrpt, techniuat_sch, techniuat_inbq, techniuat_1inbq, techniuat_2inbq, techniuat_wld, techniuat_nsh, techniuat_wsq, techniuat_invbt, techniuat_apick, tech_as_inv, techuat_1apack, techuat_2apack, techuat_3apack, techuat_1apick, techuat_2apick, techuat_3apick, techuat_4apick, techuat_5apick, techniuat_1wld, techniuat_2wld, techniuat_ict, techniuat_lmr, techniuat_2_spd, techni_spdabchd, techniuat_apki, techniuat_2apki, techniuat_robo, techniuat_sch1, techniuat_2sch, techuat_1apackl, techuat_2apackl, techuat_3apackl, techuat_1apickl, techuat_2apickl, techuat_3apickl, techuat_1fxpick, techuat_2fxpick, techuat_3fxpick, techuat_4fxpick, techuat_5fxpick, techniuat_rfpld, technuat_putwal
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 53
+Java-Name | Java-Path
+techniuat_abchd | /data/app/java/java-se-8u40-ri/bin/techniuat_abchd
+techniuat_dwa | /data/app/java/java-se-8u40-ri/bin/techniuat_dwa
+techniuat_event | /data/app/java/java-se-8u40-ri/bin/techniuat_event
+techniuat_ftp | /data/app/java/java-se-8u40-ri/bin/techniuat_ftp
+techniuat_harp | /data/app/java/java-se-8u40-ri/bin/techniuat_harp
+techniuat_lbl | /data/app/java/java-se-8u40-ri/bin/techniuat_lbl
+techniuat_repl | /data/app/java/java-se-8u40-ri/bin/techniuat_repl
+techniuat_repcd | /data/app/java/java-se-8u40-ri/bin/techniuat_repcd
+techni_1repcd | /data/app/java/java-se-8u40-ri/bin/techni_1repcd
+techniuat_rpt | /data/batchapp/softeon/technicoloruat/reportdaemon
+techniuat_exrpt | /data/batchapp/softeon/technicoloruat/reportjqgridexportdaemon
+techniuat_sch | /data/batchapp/softeon/technicoloruat/schedulardaemon
+techniuat_inbq | /data/batchapp/softeon/technicoloruat/uploaddeamon
+techniuat_1inbq | /data/batchapp/softeon/technicoloruat/uploaddeamon1
+techniuat_2inbq | /data/batchapp/softeon/technicoloruat/uploaddeamon2
+techniuat_wld | /data/app/java/java-se-8u40-ri/bin/techniuat_wld
+techniuat_nsh | /data/batchapp/softeon/technicoloruat/picktooldaemon
+techniuat_wsq | /data/batchapp/softeon/technicoloruat/wsqdaemon
+techniuat_invbt | /data/app/java/java-se-8u40-ri/bin/techniuat_invbt
+techniuat_apick | /data/app/java/java-se-8u40-ri/bin/techniuat_apick
+tech_as_inv | /data/app/java/java-se-8u40-ri/bin/tech_as_inv
+techuat_1apack | /data/batchapp/softeon/technicoloruat/autopackdaemon1
+techuat_2apack | /data/batchapp/softeon/technicoloruat/autopackdaemon2
+techuat_3apack | /data/batchapp/softeon/technicoloruat/autopackdaemon3
+techuat_1apick | /data/app/java/java-se-8u40-ri/bin/techuat_1apick
+techuat_2apick | /data/app/java/java-se-8u40-ri/bin/techuat_2apick
+techuat_3apick | /data/app/java/java-se-8u40-ri/bin/techuat_3apick
+techuat_4apick | /data/app/java/java-se-8u40-ri/bin/techuat_4apick
+techuat_5apick | /data/app/java/java-se-8u40-ri/bin/techuat_5apick
+techniuat_1wld | /data/app/java/java-se-8u40-ri/bin/techniuat_1wld
+techniuat_2wld | /data/app/java/java-se-8u40-ri/bin/techniuat_2wld
+techniuat_ict | /data/batchapp/softeon/technicoloruat/ictdaemon
+techniuat_lmr | /data/batchapp/softeon/technicoloruat/picktooldaemon_LMR
+techniuat_2_spd | /data/batchapp/softeon/technicoloruat/picktooldaemon_SPD
+techni_spdabchd | /data/app/java/java-se-8u40-ri/bin/techni_spdabchd
+techniuat_apki | /data/app/java/java-se-8u40-ri/bin/techniuat_apki
+techniuat_2apki | /data/app/java/java-se-8u40-ri/bin/techniuat_2apki
+techniuat_robo | /data/app/java/java-se-8u40-ri/bin/techniuat_robo
+techniuat_sch1 | /data/batchapp/softeon/technicoloruat/schedulardaemon1
+techniuat_2sch | /data/batchapp/softeon/technicoloruat/schedulardaemon2
+techuat_1apackl | /data/batchapp/softeon/technicoloruat/autopackdaemon1_lmr
+techuat_2apackl | /data/batchapp/softeon/technicoloruat/autopackdaemon2_lmr
+techuat_3apackl | /data/batchapp/softeon/technicoloruat/autopackdaemon3_lmr
+techuat_1apickl | /data/app/java/java-se-8u40-ri/bin/techuat_1apickl
+techuat_2apickl | /data/app/java/java-se-8u40-ri/bin/techuat_2apickl
+techuat_3apickl | /data/app/java/java-se-8u40-ri/bin/techuat_3apickl
+techuat_1fxpick | /data/app/java/java-se-8u40-ri/bin/techuat_1fxpick
+techuat_2fxpick | /data/app/java/java-se-8u40-ri/bin/techuat_2fxpick
+techuat_3fxpick | /data/app/java/java-se-8u40-ri/bin/techuat_3fxpick
+techuat_4fxpick | /data/app/java/java-se-8u40-ri/bin/techuat_4fxpick
+techuat_5fxpick | /data/app/java/java-se-8u40-ri/bin/techuat_5fxpick
+techniuat_rfpld | /data/batchapp/softeon/technicoloruat/reportflexpicklistdaemon
+technuat_putwal | /data/app/java/java-se-8u40-ri/bin/technuat_putwal
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1556457 | technicolorrfuat | jboss720eap | tclrrf_jb720eap | 8080 | 10.154.0.29:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/technicolorrfuat/standalone
+1556231 | technicoloruat | jboss720eap | tcolor_jb720eap | 80 | 10.154.0.29:80 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/technicoloruat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-02 06:20:26.282014
+==============================================================================
+
+2026-05-02 02:20:54,610 - 156538 - ERROR - app_validation.py errors for i-05a5f0ff3e5796950:
+
+2026-05-02 02:20:54,615 - 156538 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-02/TechniColor-UAT/10.154.0.29/10.154.0.29-BeforePatching-2026-05-02-02-20-54-611.log
+2026-05-02 02:20:54,615 - 156538 - INFO - Deregistering i-05a5f0ff3e5796950 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8060/25deea42309ca466
+2026-05-02 02:20:54,694 - 156538 - INFO - Deregistering i-05a5f0ff3e5796950 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8061/3306e08041441b03
+2026-05-02 02:20:54,743 - 156538 - INFO - Deregistering i-05a5f0ff3e5796950 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-Webservices/796e06c7f624a4db
+2026-05-02 02:20:54,787 - 156538 - INFO - Stopping EC2 instance: i-05a5f0ff3e5796950 at 2026-05-02 02:20:54
+2026-05-02 02:23:11,280 - 156538 - INFO - Instance i-05a5f0ff3e5796950 stopped successfully.
+2026-05-02 02:23:11,429 - 156538 - INFO - Stopped i-05a5f0ff3e5796950 in 0:02:16.641970
+2026-05-02 02:23:11,430 - 156538 - INFO - Starting EC2 instance: i-05a5f0ff3e5796950
+2026-05-02 02:23:27,350 - 156538 - INFO - Instance i-05a5f0ff3e5796950 started successfully.
+2026-05-02 02:23:27,350 - 156538 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05a5f0ff3e5796950...
+2026-05-02 02:25:07,421 - 156538 - INFO - Registering i-05a5f0ff3e5796950 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8060/25deea42309ca466
+2026-05-02 02:25:07,607 - 156538 - INFO - Registering i-05a5f0ff3e5796950 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8061/3306e08041441b03
+2026-05-02 02:25:07,740 - 156538 - INFO - Registering i-05a5f0ff3e5796950 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-Webservices/796e06c7f624a4db
+2026-05-02 02:30:08,529 - 156538 - WARNING - i-05a5f0ff3e5796950 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8060/25deea42309ca466 after timeout.
+2026-05-02 02:35:09,164 - 156538 - WARNING - i-05a5f0ff3e5796950 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Tech-UAT-WebSocket-8061/3306e08041441b03 after timeout.
+2026-05-02 02:35:09,379 - 156538 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-05-02 02:35:09,379 - 156538 - ERROR - Aborting workflow: i-05a5f0ff3e5796950 is not healthy after restart.
+2026-05-02 02:35:09,381 - 156538 - INFO - Restart Total time: 0:15:04.492196
+2026-05-02 02:35:09,382 - 156538 - INFO - Auto-confirmed services are restarted
+2026-05-02 02:35:09,382 - 156538 - INFO - Confirmed - services are started
+2026-05-02 02:35:09,518 - 156538 - INFO - The following instances have failed the patch: []
+2026-05-02 02:35:09,518 - 156538 - INFO - No instances have failed the patch.
+2026-05-02 02:35:09,518 - 156538 - INFO - Total Patch Process time: 0:20:06.843792
+2026-05-02 02:36:09,947 - 156538 - INFO - Log file ./logs/patching_2026-05-02_TechniColor-UAT.log uploaded to s3://q2-2026-aws-security-patching/TechniColor-UAT_Patch/2026-05-02/patching_2026-05-02_TechniColor-UAT.log

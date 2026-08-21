@@ -1,0 +1,717 @@
+2026-07-08 00:00:04,306 - 3938759 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 00:32:21,427 - 3938759 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 00:32:21,610 - 3938759 - INFO - Log file ./logs/backup_2026-07-08.log uploaded to s3://q3-2025-aws-security-patching/q3-oia-uat_Patch_Backup/2026-07-08/backup_2026-07-08.log
+2026-07-08 04:00:03,600 - 3948413 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-08 04:00:03,601 - 3948413 - INFO - Script Start Time: 2026-07-08 04:00:03
+2026-07-08 04:00:04,148 - 3948413 - INFO - Instance(s) selected for Patching: {'i-023356e6422175fdc': '172.25.10.17', 'i-095c362a71778d137': '172.25.10.6'}
+2026-07-08 04:00:04,279 - 3948413 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 04:00:04,280 - 3948413 - INFO - Now patching instances at: 2026-07-08 04:00:04
+2026-07-08 04:00:10,076 - 3948413 - INFO - i-023356e6422175fdc: Cron was active = True
+2026-07-08 04:00:15,637 - 3948413 - INFO - i-095c362a71778d137: Cron was active = True
+2026-07-08 04:00:16,142 - 3948413 - INFO - Health monitor crontab disabled on all instances
+2026-07-08 04:00:16,143 - 3948413 - INFO - Disabled cron for: ['i-023356e6422175fdc', 'i-095c362a71778d137']
+2026-07-08 04:00:16,715 - 3948413 - INFO - Sent app_validation.py to i-023356e6422175fdc (command_id: e91ba3a0-5355-4261-bcd2-2ec5e8e99a37)
+2026-07-08 04:00:46,871 - 3948413 - INFO - app_validation.py output for i-023356e6422175fdc:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:00:16.943351
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.17
+Hostname | ip-172-25-10-17.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 45.8G | 244.1G | 15% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.10.17:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 6
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_lbl, oiauat_repl, oiauat_rccl, oiauat_rpt, oiauat_jqgrid, oiauat_sch, oiauat_wld, oiauat_wcsin, oiauat_wcsout, oiauat_wcs03in, drivemonitor, oiauat_inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jqgrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulardaemon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_wcsin | /data/batchapp/softeon/oiauat/wcsinbounddaemon
+oiauat_wcsout | /data/batchapp/softeon/oiauat/wcsoutbounddaemon
+oiauat_wcs03in | /data/batchapp/softeon/oiauat/wcs03inbounddaemon
+drivemonitor | /data/batchapp/softeon/oiauat/drivespacemonitor
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddeamon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3392 | oiarfuat | jboss720eap | oiarf_jb720eap | 8081 | 172.25.10.17:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiarfuat/standalone
+3393 | oiauat | jboss720eap | s72oia_jb720eap | 8080 | 172.25.10.17:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:00:21.581251
+==============================================================================
+
+2026-07-08 04:00:46,871 - 3948413 - ERROR - app_validation.py errors for i-023356e6422175fdc:
+
+2026-07-08 04:00:46,873 - 3948413 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-BeforePatching-2026-07-08-04-00-46-872.log
+2026-07-08 04:00:47,431 - 3948413 - INFO - Sent app_validation.py to i-095c362a71778d137 (command_id: fcf5e91e-d603-44f1-a274-9d813078f208)
+2026-07-08 04:01:17,611 - 3948413 - INFO - app_validation.py output for i-095c362a71778d137:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:00:47.655080
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.6
+Hostname | ip-172-25-10-6.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 79.1G | 160.8G | 32% | /data
+/dev/nvme1n1p2 | 239.9G | 79.1G | 160.8G | 32% | /data2
+/dev/nvme1n1p2 | 239.9G | 79.1G | 160.8G | 32% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.25.10.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | oiaconfguat_bdd, oiauat_apick, oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_harp, oiauat_lbl, oiauat_lpick, oiauat_rccl, oiauat_rplpu, oiauat_rpt, oiauat_jgqrid, oiauat_sch, oiauat_inbq, oiauat_wld, oiauat_1rpt, oiauat_repl
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+oiaconfguat_bdd | /data/batchapp/softeon/oiaconfiguat/bulkdatadaemon
+oiauat_apick | /data/batchapp/softeon/oiauat/autopicktooldaemon
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_harp | /data/batchapp/softeon/oiauat/hardallocationdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_lpick | /data/batchapp/softeon/oiauat/ptcdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rplpu | /data/batchapp/softeon/oiauat/replenishmentpriorityupdatedaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jgqrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulerdaemon
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddaemon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_1rpt | /data/batchapp/softeon/oiauat/reportdaemon1
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5323 | oiaconfiguat | jboss740eap | oiaconfuat_jb74 | 8082 | 172.25.10.6:8082 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/oiaconfiguat/standalone
+279650 | oiaportaluat | jboss800eap | oiaportal_jb800 | 8083 | 172.25.10.6:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/oiaportaluat/standalone
+2252093 | oiarfuat | jboss800eap | oiarfuat_jb800 | 8081 | 172.25.10.6:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/oiarfuat/standalone
+2252595 | oiauat | jboss800eap | oiauat_jb800 | 8080 | 172.25.10.6:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:00:52.307248
+==============================================================================
+
+2026-07-08 04:01:17,611 - 3948413 - ERROR - app_validation.py errors for i-095c362a71778d137:
+
+2026-07-08 04:01:17,613 - 3948413 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.6/172.25.10.6-BeforePatching-2026-07-08-04-01-17-613.log
+2026-07-08 04:01:17,789 - 3948413 - INFO - Sending patch command to instance i-023356e6422175fdc
+2026-07-08 04:01:18,163 - 3948413 - INFO - Command sent successfully to instance i-023356e6422175fdc. Command ID: 63f9d178-60cf-43bb-b974-6b1e17fe2902
+2026-07-08 04:01:18,316 - 3948413 - INFO - Sending patch command to instance i-095c362a71778d137
+2026-07-08 04:01:18,468 - 3948413 - INFO - Command sent successfully to instance i-095c362a71778d137. Command ID: f20405df-e2a6-4337-96de-549e2d9673cb
+2026-07-08 04:09:52,093 - 3948413 - INFO - All patches applied successfully.
+2026-07-08 04:09:52,094 - 3948413 - INFO - Patching end time: 2026-07-08 04:09:52
+2026-07-08 04:09:52,094 - 3948413 - INFO - Patch Elapsed time: 0:09:47.813924
+2026-07-08 04:09:52,189 - 3948413 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-08 04:09:52,189 - 3948413 - INFO - Confirmed - services are stopped
+2026-07-08 04:09:57,625 - 3948413 - INFO - Discovered TG map: {'i-095c362a71778d137': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Config-New/b87c98e27a9aff20', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop-New/90ccae5bed2fb9b4', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Portal/85e8b6e3cce5ae82', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF-New/1afbf39c8a8a7270'], 'i-023356e6422175fdc': ['arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop/83002c7c4272f43f', 'arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF/3257a861c898fedb']}
+2026-07-08 04:09:57,801 - 3948413 - INFO - Deregistering i-023356e6422175fdc from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop/83002c7c4272f43f
+2026-07-08 04:09:58,125 - 3948413 - INFO - Deregistering i-023356e6422175fdc from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF/3257a861c898fedb
+2026-07-08 04:09:58,230 - 3948413 - INFO - Stopping EC2 instance: i-023356e6422175fdc at 2026-07-08 04:09:58
+2026-07-08 04:11:15,115 - 3948413 - INFO - Instance i-023356e6422175fdc stopped successfully.
+2026-07-08 04:11:15,393 - 3948413 - INFO - Stopped i-023356e6422175fdc in 0:01:17.162742
+2026-07-08 04:11:15,394 - 3948413 - INFO - Starting EC2 instance: i-023356e6422175fdc
+2026-07-08 04:11:31,609 - 3948413 - INFO - Instance i-023356e6422175fdc started successfully.
+2026-07-08 04:11:31,609 - 3948413 - INFO - Waiting 100 seconds for SSM agent to be ready on i-023356e6422175fdc...
+2026-07-08 04:13:11,681 - 3948413 - INFO - Registering i-023356e6422175fdc to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop/83002c7c4272f43f
+2026-07-08 04:13:12,099 - 3948413 - INFO - Registering i-023356e6422175fdc to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF/3257a861c898fedb
+2026-07-08 04:13:43,273 - 3948413 - INFO - Sent app_validation.py to i-023356e6422175fdc (command_id: c4cab47c-a8c5-43cf-95ed-183461f50fda)
+2026-07-08 04:14:13,418 - 3948413 - INFO - app_validation.py output for i-023356e6422175fdc:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:13:43.531791
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.17
+Hostname | ip-172-25-10-17.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 45.8G | 244.1G | 15% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_lbl, oiauat_repl, oiauat_rccl, oiauat_rpt, oiauat_jqgrid, oiauat_sch, oiauat_inbq, oiauat_wld, oiauat_wcsin, oiauat_wcsout, oiauat_wcs03in
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jqgrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulardaemon
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddeamon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_wcsin | /data/batchapp/softeon/oiauat/wcsinbounddaemon
+oiauat_wcsout | /data/batchapp/softeon/oiauat/wcsoutbounddaemon
+oiauat_wcs03in | /data/batchapp/softeon/oiauat/wcs03inbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3407 | oiarfuat | jboss720eap | oiarf_jb720eap | 8081 | 172.25.10.17:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiarfuat/standalone
+2900 | oiauat | jboss720eap | s72oia_jb720eap | 8080 | 172.25.10.17:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:13:44.955805
+==============================================================================
+
+2026-07-08 04:14:13,418 - 3948413 - ERROR - app_validation.py errors for i-023356e6422175fdc:
+
+2026-07-08 04:14:13,420 - 3948413 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-AfterPatching-2026-07-08-04-14-13-420.log
+2026-07-08 04:14:13,472 - 3948413 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-Validation-details-2026-07-08-04-14-13-420.html
+2026-07-08 04:14:13,968 - 3948413 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-08 04:14:13,968 - 3948413 - INFO - HTML validation report email sent for i-023356e6422175fdc
+2026-07-08 04:14:13,968 - 3948413 - INFO - [Retry-1] Waiting 600s for i-023356e6422175fdc...
+2026-07-08 04:14:13,968 - 3948413 - INFO - RED - Background retry thread started for i-023356e6422175fdc
+2026-07-08 04:14:14,223 - 3948413 - INFO - Started i-023356e6422175fdc in 0:02:58.829406
+2026-07-08 04:14:14,224 - 3948413 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-08 04:16:14,252 - 3948413 - INFO - Deregistering i-095c362a71778d137 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Config-New/b87c98e27a9aff20
+2026-07-08 04:16:14,593 - 3948413 - INFO - Deregistering i-095c362a71778d137 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop-New/90ccae5bed2fb9b4
+2026-07-08 04:16:14,699 - 3948413 - INFO - Deregistering i-095c362a71778d137 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Portal/85e8b6e3cce5ae82
+2026-07-08 04:16:14,813 - 3948413 - INFO - Deregistering i-095c362a71778d137 from TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF-New/1afbf39c8a8a7270
+2026-07-08 04:16:14,927 - 3948413 - INFO - Stopping EC2 instance: i-095c362a71778d137 at 2026-07-08 04:16:14
+2026-07-08 04:17:46,944 - 3948413 - INFO - Instance i-095c362a71778d137 stopped successfully.
+2026-07-08 04:17:47,198 - 3948413 - INFO - Stopped i-095c362a71778d137 in 0:01:32.271474
+2026-07-08 04:17:47,199 - 3948413 - INFO - Starting EC2 instance: i-095c362a71778d137
+2026-07-08 04:18:03,329 - 3948413 - INFO - Instance i-095c362a71778d137 started successfully.
+2026-07-08 04:18:03,329 - 3948413 - INFO - Waiting 100 seconds for SSM agent to be ready on i-095c362a71778d137...
+2026-07-08 04:19:43,331 - 3948413 - INFO - Registering i-095c362a71778d137 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Config-New/b87c98e27a9aff20
+2026-07-08 04:19:43,763 - 3948413 - INFO - Registering i-095c362a71778d137 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop-New/90ccae5bed2fb9b4
+2026-07-08 04:19:43,958 - 3948413 - INFO - Registering i-095c362a71778d137 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Portal/85e8b6e3cce5ae82
+2026-07-08 04:19:44,159 - 3948413 - INFO - Registering i-095c362a71778d137 to TG arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-RF-New/1afbf39c8a8a7270
+2026-07-08 04:24:14,651 - 3948413 - INFO - Sent app_validation.py to i-023356e6422175fdc (command_id: 17ee7d63-925e-4314-a9c0-85bffd7c6275)
+2026-07-08 04:24:44,822 - 3948413 - INFO - app_validation.py output for i-023356e6422175fdc:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:24:14.811075
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.17
+Hostname | ip-172-25-10-17.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 45.8G | 244.1G | 15% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_lbl, oiauat_repl, oiauat_rccl, oiauat_rpt, oiauat_jqgrid, oiauat_sch, oiauat_inbq, oiauat_wld, oiauat_wcsin, oiauat_wcsout, oiauat_wcs03in
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jqgrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulardaemon
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddeamon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_wcsin | /data/batchapp/softeon/oiauat/wcsinbounddaemon
+oiauat_wcsout | /data/batchapp/softeon/oiauat/wcsoutbounddaemon
+oiauat_wcs03in | /data/batchapp/softeon/oiauat/wcs03inbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3407 | oiarfuat | jboss720eap | oiarf_jb720eap | 8081 | 172.25.10.17:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiarfuat/standalone
+2900 | oiauat | jboss720eap | s72oia_jb720eap | 8080 | 172.25.10.17:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:24:15.400059
+==============================================================================
+
+2026-07-08 04:24:44,822 - 3948413 - ERROR - app_validation.py errors for i-023356e6422175fdc:
+
+2026-07-08 04:24:44,823 - 3948413 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-AfterPatching-Retry1-2026-07-08-04-24-44-823.log
+2026-07-08 04:24:44,877 - 3948413 - INFO - [Retry-1] RED detected for OIA UAT Application and Batch Server (172.25.10.17), retrying... (Total waited: 600s)
+2026-07-08 04:24:44,877 - 3948413 - INFO - [Retry-2] Waiting 600s for i-023356e6422175fdc...
+2026-07-08 04:26:46,481 - 3948413 - WARNING - i-095c362a71778d137 not healthy in arn:aws:elasticloadbalancing:us-west-2:835314132208:targetgroup/OIA-UAT-Desktop-New/90ccae5bed2fb9b4 after timeout.
+2026-07-08 04:26:46,946 - 3948413 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-08 04:26:46,946 - 3948413 - ERROR - Aborting workflow: i-095c362a71778d137 is not healthy after restart.
+2026-07-08 04:26:46,952 - 3948413 - INFO - Restart Total time: 0:16:54.621325
+2026-07-08 04:26:46,953 - 3948413 - INFO - Auto-confirmed services are restarted
+2026-07-08 04:26:46,953 - 3948413 - INFO - Confirmed - services are started
+2026-07-08 04:26:47,092 - 3948413 - INFO - The following instances have failed the patch: []
+2026-07-08 04:26:47,092 - 3948413 - INFO - No instances have failed the patch.
+2026-07-08 04:26:47,092 - 3948413 - INFO - Total Patch Process time: 0:26:43.491372
+2026-07-08 04:27:47,635 - 3948413 - INFO - Log file ./logs/patching_2026-07-08_q3-oia-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-oia-uat_Patch/2026-07-08/patching_2026-07-08_q3-oia-uat.log
+2026-07-08 04:34:45,513 - 3948413 - INFO - Sent app_validation.py to i-023356e6422175fdc (command_id: f46744e7-0055-4b0c-a3d5-4f41e0d8fdcd)
+2026-07-08 04:35:15,668 - 3948413 - INFO - app_validation.py output for i-023356e6422175fdc:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:34:45.643222
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.17
+Hostname | ip-172-25-10-17.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 45.8G | 244.0G | 15% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_lbl, oiauat_repl, oiauat_rccl, oiauat_rpt, oiauat_jqgrid, oiauat_sch, oiauat_inbq, oiauat_wld, oiauat_wcsin, oiauat_wcsout, oiauat_wcs03in
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jqgrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulardaemon
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddeamon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_wcsin | /data/batchapp/softeon/oiauat/wcsinbounddaemon
+oiauat_wcsout | /data/batchapp/softeon/oiauat/wcsoutbounddaemon
+oiauat_wcs03in | /data/batchapp/softeon/oiauat/wcs03inbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3407 | oiarfuat | jboss720eap | oiarf_jb720eap | 8081 | 172.25.10.17:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiarfuat/standalone
+2900 | oiauat | jboss720eap | s72oia_jb720eap | 8080 | 172.25.10.17:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:34:46.143194
+==============================================================================
+
+2026-07-08 04:35:15,668 - 3948413 - ERROR - app_validation.py errors for i-023356e6422175fdc:
+
+2026-07-08 04:35:15,670 - 3948413 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-AfterPatching-Retry2-2026-07-08-04-35-15-670.log
+2026-07-08 04:35:15,725 - 3948413 - INFO - [Retry-2] RED detected for OIA UAT Application and Batch Server (172.25.10.17), retrying... (Total waited: 1200s)
+2026-07-08 04:35:15,725 - 3948413 - INFO - [Retry-3] Waiting 600s for i-023356e6422175fdc...
+2026-07-08 04:45:16,515 - 3948413 - INFO - Sent app_validation.py to i-023356e6422175fdc (command_id: e664f289-6e46-4f54-bcc2-c63e20c61b0d)
+2026-07-08 04:45:46,665 - 3948413 - INFO - app_validation.py output for i-023356e6422175fdc:
+
+==============================================================================
+Server Availability Check Started | 2026-07-08 08:45:16.657936
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.10.17
+Hostname | ip-172-25-10-17.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 45.8G | 244.0G | 15% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.10.17:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 6
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.10.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 16
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | oiauat_dwa, oiauat_event, oiauat_ftp, oiauat_lbl, oiauat_repl, oiauat_rccl, oiauat_rpt, oiauat_jqgrid, oiauat_sch, oiauat_inbq, oiauat_wld, oiauat_wcsin, oiauat_wcsout, oiauat_wcs03in
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+oiauat_dwa | /data/batchapp/softeon/oiauat/downloaddaemon
+oiauat_event | /data/batchapp/softeon/oiauat/eventdaemon
+oiauat_ftp | /data/batchapp/softeon/oiauat/ftpdaemon
+oiauat_lbl | /data/batchapp/softeon/oiauat/labeldaemon
+oiauat_repl | /data/batchapp/softeon/oiauat/replenishmentdaemon
+oiauat_rccl | /data/batchapp/softeon/oiauat/replenishmentpickloccanceldaemon
+oiauat_rpt | /data/batchapp/softeon/oiauat/reportdaemon
+oiauat_jqgrid | /data/batchapp/softeon/oiauat/reportjqgridexportdaemon
+oiauat_sch | /data/batchapp/softeon/oiauat/schedulardaemon
+oiauat_inbq | /data/batchapp/softeon/oiauat/uploaddeamon
+oiauat_wld | /data/batchapp/softeon/oiauat/wavelaunchdaemon
+oiauat_wcsin | /data/batchapp/softeon/oiauat/wcsinbounddaemon
+oiauat_wcsout | /data/batchapp/softeon/oiauat/wcsoutbounddaemon
+oiauat_wcs03in | /data/batchapp/softeon/oiauat/wcs03inbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3407 | oiarfuat | jboss720eap | oiarf_jb720eap | 8081 | 172.25.10.17:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiarfuat/standalone
+2900 | oiauat | jboss720eap | s72oia_jb720eap | 8080 | 172.25.10.17:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/oiauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-08 08:45:17.280605
+==============================================================================
+
+2026-07-08 04:45:46,665 - 3948413 - ERROR - app_validation.py errors for i-023356e6422175fdc:
+
+2026-07-08 04:45:46,667 - 3948413 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-08/q3-oia-uat/172.25.10.17/172.25.10.17-AfterPatching-Retry3-2026-07-08-04-45-46-666.log
+2026-07-08 04:45:47,154 - 3948413 - INFO - Health monitor crontab enabled on all instances
+2026-07-08 04:45:47,155 - 3948413 - WARNING - [Retry] Timeout - auto cron enabled for i-023356e6422175fdc

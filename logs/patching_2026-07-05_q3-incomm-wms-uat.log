@@ -1,0 +1,152 @@
+2026-07-05 00:15:03,099 - 3773969 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-05 00:15:03,099 - 3773969 - INFO - Script Start Time: 2026-07-05 00:15:03
+2026-07-05 00:15:03,410 - 3773969 - INFO - Instance(s) selected for Patching: {'i-0a74b65d459b12c6c': '10.50.24.23'}
+2026-07-05 00:15:03,499 - 3773969 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:15:03,500 - 3773969 - INFO - Now patching instances at: 2026-07-05 00:15:03
+2026-07-05 00:15:08,763 - 3773969 - INFO - i-0a74b65d459b12c6c: Cron was active = True
+2026-07-05 00:15:08,928 - 3773969 - INFO - Health monitor crontab disabled on all instances
+2026-07-05 00:15:08,929 - 3773969 - INFO - Disabled cron for: ['i-0a74b65d459b12c6c']
+2026-07-05 00:15:09,198 - 3773969 - INFO - Sent app_validation.py to i-0a74b65d459b12c6c (command_id: bf355b1d-8839-4ee9-920d-a6810841df0c)
+2026-07-05 00:15:39,303 - 3773969 - INFO - app_validation.py output for i-0a74b65d459b12c6c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-05 04:15:09.701927
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.50.24.23
+Hostname | ip-10-50-24-23
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 101.0G | 138.9G | 42% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.50.24.23:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 7
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.50.24.23 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | incomlms_jqgrid, incomlms_sch, incomlms_rpt, incomwms_dwa, incomwms_event, incomwms_ftp, incomwms_lbl, incomwms_repl, incomwms_rccl, incomwms_rpt, incomwms_jqgrid, incomwms_sch, incomwms_inbq, incomwms_wld, incomwms_apick, incomwms_ict, incomwms_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+incomlms_jqgrid | /data/batchapp/softeon/incommlmsuat/reportjqgridexportdaemon
+incomlms_sch | /data/batchapp/softeon/incommlmsuat/schedulardaemon
+incomlms_rpt | /data/batchapp/softeon/incommlmsuat/reportdaemon
+incomwms_dwa | /data/batchapp/softeon/incommwmsuat/downloaddaemon
+incomwms_event | /data/batchapp/softeon/incommwmsuat/eventdaemon
+incomwms_ftp | /data/batchapp/softeon/incommwmsuat/ftpdaemon
+incomwms_lbl | /data/batchapp/softeon/incommwmsuat/labeldaemon
+incomwms_repl | /data/batchapp/softeon/incommwmsuat/replenishmentdaemon
+incomwms_rccl | /data/batchapp/softeon/incommwmsuat/replenishmentpickloccanceldaemon
+incomwms_rpt | /data/batchapp/softeon/incommwmsuat/reportdaemon
+incomwms_jqgrid | /data/batchapp/softeon/incommwmsuat/reportjqgridexportdaemon
+incomwms_sch | /data/batchapp/softeon/incommwmsuat/schedulerdaemon
+incomwms_inbq | /data/batchapp/softeon/incommwmsuat/uploaddaemon
+incomwms_wld | /data/batchapp/softeon/incommwmsuat/wavelaunchdaemon
+incomwms_apick | /data/batchapp/softeon/incommwmsuat/autopicktooldaemon
+incomwms_ict | /data/batchapp/softeon/incommwmsuat/ictdaemon
+incomwms_wsq | /data/batchapp/softeon/incommwmsuat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+244892 | incommlmsuat | jboss810eap | incommlms_jb81 | 8083 | 10.50.24.23:8083 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/incommlmsuat/standalone
+3901165 | incommwmsrfuat | jboss730eap | incwmsrfut_jb73 | 8081 | 10.50.24.23:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/incommwmsrfuat/standalone
+238071 | incommwmsuat | jboss730eap | incmwmsut_jb730 | 8080 | 10.50.24.23:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/incommwmsuat/standalone
+3901371 | incommwmswsuat | jboss730eap | incwsuat_jb730 | 8082 | 10.50.24.23:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/incommwmswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-05 04:15:12.225717
+==============================================================================
+
+2026-07-05 00:15:39,303 - 3773969 - ERROR - app_validation.py errors for i-0a74b65d459b12c6c:
+
+2026-07-05 00:15:39,305 - 3773969 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-05/q3-incomm-wms-uat/10.50.24.23/10.50.24.23-BeforePatching-2026-07-05-00-15-39-304.log
+2026-07-05 00:15:39,390 - 3773969 - INFO - Sending patch command to instance i-0a74b65d459b12c6c
+2026-07-05 00:15:39,505 - 3773969 - INFO - Command sent successfully to instance i-0a74b65d459b12c6c. Command ID: b17556d3-b302-43f9-a70d-9602fe04c0e3
+2026-07-05 00:26:11,955 - 3773969 - INFO - All patches applied successfully.
+2026-07-05 00:26:11,956 - 3773969 - INFO - Patching end time: 2026-07-05 00:26:11
+2026-07-05 00:26:11,956 - 3773969 - INFO - Patch Elapsed time: 0:11:08.456488
+2026-07-05 00:26:12,037 - 3773969 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-05 00:26:12,037 - 3773969 - INFO - Confirmed - services are stopped
+2026-07-05 00:26:32,238 - 3773969 - INFO - Discovered TG map: {'i-0a74b65d459b12c6c': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-Desktop/4abe8c30ac37be06', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-RF/4e18b810951a67de', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-WS/94fd41ee87385b8b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-LMS-UAT/e254146a023635f5']}
+2026-07-05 00:26:32,471 - 3773969 - INFO - Deregistering i-0a74b65d459b12c6c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-Desktop/4abe8c30ac37be06
+2026-07-05 00:26:32,545 - 3773969 - INFO - Deregistering i-0a74b65d459b12c6c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-RF/4e18b810951a67de
+2026-07-05 00:26:32,592 - 3773969 - INFO - Deregistering i-0a74b65d459b12c6c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-WS/94fd41ee87385b8b
+2026-07-05 00:26:32,639 - 3773969 - INFO - Deregistering i-0a74b65d459b12c6c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-LMS-UAT/e254146a023635f5
+2026-07-05 00:26:32,687 - 3773969 - INFO - Stopping EC2 instance: i-0a74b65d459b12c6c at 2026-07-05 00:26:32
+2026-07-05 00:28:49,406 - 3773969 - INFO - Instance i-0a74b65d459b12c6c stopped successfully.
+2026-07-05 00:28:49,549 - 3773969 - INFO - Stopped i-0a74b65d459b12c6c in 0:02:16.862286
+2026-07-05 00:28:49,550 - 3773969 - INFO - Starting EC2 instance: i-0a74b65d459b12c6c
+2026-07-05 00:29:05,481 - 3773969 - INFO - Instance i-0a74b65d459b12c6c started successfully.
+2026-07-05 00:29:05,481 - 3773969 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a74b65d459b12c6c...
+2026-07-05 00:30:45,501 - 3773969 - INFO - Registering i-0a74b65d459b12c6c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-Desktop/4abe8c30ac37be06
+2026-07-05 00:30:45,668 - 3773969 - INFO - Registering i-0a74b65d459b12c6c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-RF/4e18b810951a67de
+2026-07-05 00:30:45,797 - 3773969 - INFO - Registering i-0a74b65d459b12c6c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-WMSUAT-WS/94fd41ee87385b8b
+2026-07-05 00:30:45,926 - 3773969 - INFO - Registering i-0a74b65d459b12c6c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-LMS-UAT/e254146a023635f5
+2026-07-05 00:38:47,131 - 3773969 - WARNING - i-0a74b65d459b12c6c not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/INCOMM-LMS-UAT/e254146a023635f5 after timeout.
+2026-07-05 00:38:47,259 - 3773969 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-05 00:38:47,259 - 3773969 - ERROR - Aborting workflow: i-0a74b65d459b12c6c is not healthy after restart.
+2026-07-05 00:38:47,262 - 3773969 - INFO - Restart Total time: 0:12:35.078872
+2026-07-05 00:38:47,262 - 3773969 - INFO - Auto-confirmed services are restarted
+2026-07-05 00:38:47,262 - 3773969 - INFO - Confirmed - services are started
+2026-07-05 00:38:47,396 - 3773969 - INFO - The following instances have failed the patch: []
+2026-07-05 00:38:47,396 - 3773969 - INFO - No instances have failed the patch.
+2026-07-05 00:38:47,396 - 3773969 - INFO - Total Patch Process time: 0:23:44.296187
+2026-07-05 00:39:47,841 - 3773969 - INFO - Log file ./logs/patching_2026-07-05_q3-incomm-wms-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-incomm-wms-uat_Patch/2026-07-05/patching_2026-07-05_q3-incomm-wms-uat.log

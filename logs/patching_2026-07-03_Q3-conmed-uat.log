@@ -1,0 +1,824 @@
+2026-07-03 00:05:03,238 - 3666303 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-03 00:05:03,238 - 3666303 - INFO - Script Start Time: 2026-07-03 00:05:03
+2026-07-03 00:05:03,440 - 3666303 - INFO - Instance(s) selected for Patching: {'i-00654c8eecdfcccf0': '10.0.24.8', 'i-01afa5fce47f8ae1c': '10.0.24.188', 'i-0583a1e0f5ed2e5f8': '10.0.24.20'}
+2026-07-03 00:05:03,517 - 3666303 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-03 00:05:03,517 - 3666303 - INFO - Now patching instances at: 2026-07-03 00:05:03
+2026-07-03 00:05:08,770 - 3666303 - INFO - i-00654c8eecdfcccf0: Cron was active = True
+2026-07-03 00:05:14,006 - 3666303 - INFO - i-0583a1e0f5ed2e5f8: Cron was active = True
+2026-07-03 00:05:19,317 - 3666303 - INFO - i-01afa5fce47f8ae1c: Cron was active = True
+2026-07-03 00:05:19,493 - 3666303 - INFO - Health monitor crontab disabled on all instances
+2026-07-03 00:05:19,494 - 3666303 - INFO - Disabled cron for: ['i-00654c8eecdfcccf0', 'i-0583a1e0f5ed2e5f8', 'i-01afa5fce47f8ae1c']
+2026-07-03 00:05:19,678 - 3666303 - INFO - Sent app_validation.py to i-00654c8eecdfcccf0 (command_id: 6dfc651e-0bfa-4307-bf0a-dd5bf55123f8)
+2026-07-03 00:05:49,808 - 3666303 - INFO - app_validation.py output for i-00654c8eecdfcccf0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:05:20.004947
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.8
+Hostname | ip-10-0-24-8
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 87.4G | 202.5G | 30% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.8:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 25
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.8 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmstrain_dwa, wmstrain_event, wmstrain_ftp, wmstrain_lbl, wmstrain_repl, wmstrain_rccl, wmstrain_rplpri, wmstrain_rpt, wmstrain_jqgrid, wmstrain_sch, wmstrain_inbq, wmstrain_wld, wmstrain_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmstrain_dwa | /data/batchapp/softeon/wmstrain/downloaddaemon
+wmstrain_event | /data/batchapp/softeon/wmstrain/eventdaemon
+wmstrain_ftp | /data/batchapp/softeon/wmstrain/ftpdaemon
+wmstrain_lbl | /data/batchapp/softeon/wmstrain/labeldaemon
+wmstrain_repl | /data/batchapp/softeon/wmstrain/replenishmentdaemon
+wmstrain_rccl | /data/batchapp/softeon/wmstrain/replenishmentpickloccanceldaemon
+wmstrain_rplpri | /data/batchapp/softeon/wmstrain/replenishmentpriorityupdatedaemon
+wmstrain_rpt | /data/batchapp/softeon/wmstrain/reportdaemon
+wmstrain_jqgrid | /data/batchapp/softeon/wmstrain/reportjqgridexportdaemon
+wmstrain_sch | /data/batchapp/softeon/wmstrain/schedulardaemon
+wmstrain_inbq | /data/batchapp/softeon/wmstrain/uploaddeamon
+wmstrain_wld | /data/batchapp/softeon/wmstrain/wavelaunchdaemon
+wmstrain_ict | /data/batchapp/softeon/wmstrain/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2798604 | wmsrftrain | jboss730eap | wmsrftrn_jb730 | 8081 | 10.0.24.8:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsrftrain/standalone
+2798382 | wmstrain | jboss730eap | wmstrn_jb730eap | 8080 | 10.0.24.8:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmstrain/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:05:20.723136
+==============================================================================
+
+2026-07-03 00:05:49,808 - 3666303 - ERROR - app_validation.py errors for i-00654c8eecdfcccf0:
+
+2026-07-03 00:05:49,810 - 3666303 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.8/10.0.24.8-BeforePatching-2026-07-03-00-05-49-809.log
+2026-07-03 00:05:50,083 - 3666303 - INFO - Sent app_validation.py to i-0583a1e0f5ed2e5f8 (command_id: 0b666d3a-3489-45a1-96eb-6afb60fc5275)
+2026-07-03 00:06:20,156 - 3666303 - INFO - app_validation.py output for i-0583a1e0f5ed2e5f8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:05:51.143171
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.20
+Hostname | ip-10-0-24-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 191.4G | 98.4G | 66% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 49
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsuat_dwa, wmsuat_event, wmsuat_ftp, wmsuat_lbl, wmsuat_repl, wmsuat_rccl, wmsuat_rplpri, wmsuat_rpt, wmsuat_jqgrid, wmsuat_sch, wmsuat_inbq, wmsuat_wld, wmsuat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsuat_dwa | /data/batchapp/softeon/conmeduat2/downloaddaemon
+wmsuat_event | /data/batchapp/softeon/conmeduat2/eventdaemon
+wmsuat_ftp | /data/batchapp/softeon/conmeduat2/ftpdaemon
+wmsuat_lbl | /data/batchapp/softeon/conmeduat2/labeldaemon
+wmsuat_repl | /data/batchapp/softeon/conmeduat2/replenishmentdaemon
+wmsuat_rccl | /data/batchapp/softeon/conmeduat2/replenishmentpickloccanceldaemon
+wmsuat_rplpri | /data/batchapp/softeon/conmeduat2/replenishmentpriorityupdatedaemon
+wmsuat_rpt | /data/batchapp/softeon/conmeduat2/reportdaemon
+wmsuat_jqgrid | /data/batchapp/softeon/conmeduat2/reportjqgridexportdaemon
+wmsuat_sch | /data/batchapp/softeon/conmeduat2/schedulardaemon
+wmsuat_inbq | /data/batchapp/softeon/conmeduat2/uploaddeamon
+wmsuat_wld | /data/batchapp/softeon/conmeduat2/wavelaunchdaemon
+wmsuat_ict | /data/batchapp/softeon/conmeduat2/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4112571 | conmedrfuat2 | jboss730eap | conrfuat2_jb73 | 8081 | 10.0.24.20:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmedrfuat2/standalone
+4112368 | conmeduat2 | jboss730eap | conmeduat2_jb73 | 8080 | 10.0.24.20:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmeduat2/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:05:51.751470
+==============================================================================
+
+2026-07-03 00:06:20,156 - 3666303 - ERROR - app_validation.py errors for i-0583a1e0f5ed2e5f8:
+
+2026-07-03 00:06:20,158 - 3666303 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.20/10.0.24.20-BeforePatching-2026-07-03-00-06-20-157.log
+2026-07-03 00:06:20,347 - 3666303 - INFO - Sent app_validation.py to i-01afa5fce47f8ae1c (command_id: a04d7c42-f432-4107-8044-d468675709b6)
+2026-07-03 00:06:50,488 - 3666303 - INFO - app_validation.py output for i-01afa5fce47f8ae1c:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:06:20.722448
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.188
+Hostname | ip-10-0-24-188
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 100.8G | 189.0G | 34% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.188:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 50
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.188 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | wmsuat_dwa, wmsuat_event, wmsuat_ftp, wmsuat_lbl, wmsuat_repl, wmsuat_rccl, wmsuat_rplpri, wmsuat_rpt, wmsuat_jqgrid, wmsuat_sch, wmsuat_inbq, wmsuat_wld, wmsuat_ict, lmsuat_rpt, lmsuat_sch, lmsuat_jqgrid
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+wmsuat_dwa | /data/batchapp/softeon/wmsuat/downloaddaemon
+wmsuat_event | /data/batchapp/softeon/wmsuat/eventdaemon
+wmsuat_ftp | /data/batchapp/softeon/wmsuat/ftpdaemon
+wmsuat_lbl | /data/batchapp/softeon/wmsuat/labeldaemon
+wmsuat_repl | /data/batchapp/softeon/wmsuat/replenishmentdaemon
+wmsuat_rccl | /data/batchapp/softeon/wmsuat/replenishmentpickloccanceldaemon
+wmsuat_rplpri | /data/batchapp/softeon/wmsuat/replenishmentpriorityupdatedaemon
+wmsuat_rpt | /data/batchapp/softeon/wmsuat/reportdaemon
+wmsuat_jqgrid | /data/batchapp/softeon/wmsuat/reportjqgridexportdaemon
+wmsuat_sch | /data/batchapp/softeon/wmsuat/schedulardaemon
+wmsuat_inbq | /data/batchapp/softeon/wmsuat/uploaddeamon
+wmsuat_wld | /data/batchapp/softeon/wmsuat/wavelaunchdaemon
+wmsuat_ict | /data/batchapp/softeon/wmsuat/ictdaemon
+lmsuat_rpt | /data/batchapp/softeon/lmsconmeduat/reportdaemon
+lmsuat_sch | /data/batchapp/softeon/lmsconmeduat/schedulardaemon
+lmsuat_jqgrid | /data/batchapp/softeon/lmsconmeduat/reportjqgridexportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1813823 | lmsconmeduat | jboss800eap | lmsconmed_jb800 | 8082 | 10.0.24.188:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/lmsconmeduat/standalone
+2823543 | wmsrfuat | jboss730eap | wmsrf_jb73eap | 8081 | 10.0.24.188:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsrfuat/standalone
+2823340 | wmsuat | jboss730eap | wmsuat_jb730eap | 8080 | 10.0.24.188:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:06:21.573621
+==============================================================================
+
+2026-07-03 00:06:50,488 - 3666303 - ERROR - app_validation.py errors for i-01afa5fce47f8ae1c:
+
+2026-07-03 00:06:50,490 - 3666303 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.188/10.0.24.188-BeforePatching-2026-07-03-00-06-50-489.log
+2026-07-03 00:06:50,654 - 3666303 - INFO - Sending patch command to instance i-00654c8eecdfcccf0
+2026-07-03 00:06:50,776 - 3666303 - INFO - Command sent successfully to instance i-00654c8eecdfcccf0. Command ID: c708b6e4-dc3d-4f04-b9bd-6ff8fb006531
+2026-07-03 00:06:50,914 - 3666303 - INFO - Sending patch command to instance i-0583a1e0f5ed2e5f8
+2026-07-03 00:06:51,005 - 3666303 - INFO - Command sent successfully to instance i-0583a1e0f5ed2e5f8. Command ID: f73dd718-9649-4b0d-820e-52854f4625ee
+2026-07-03 00:06:51,128 - 3666303 - INFO - Sending patch command to instance i-01afa5fce47f8ae1c
+2026-07-03 00:06:51,214 - 3666303 - INFO - Command sent successfully to instance i-01afa5fce47f8ae1c. Command ID: b79a53e6-9be1-4f34-a488-0f81125be77e
+2026-07-03 00:16:54,362 - 3666303 - INFO - All patches applied successfully.
+2026-07-03 00:16:54,363 - 3666303 - INFO - Patching end time: 2026-07-03 00:16:54
+2026-07-03 00:16:54,363 - 3666303 - INFO - Patch Elapsed time: 0:11:50.845347
+2026-07-03 00:16:54,429 - 3666303 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-03 00:16:54,429 - 3666303 - INFO - Confirmed - services are stopped
+2026-07-03 00:17:15,198 - 3666303 - INFO - Discovered TG map: {'i-00654c8eecdfcccf0': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-RF/71fb681d9a8cd1aa', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-Desktop/ef74079dabb78b1e'], 'i-01afa5fce47f8ae1c': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c'], 'i-0583a1e0f5ed2e5f8': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-Desktop/c4c96f8f0698d0a7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-RF/ddf65ab59eebb86a']}
+2026-07-03 00:17:15,372 - 3666303 - INFO - Deregistering i-00654c8eecdfcccf0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-RF/71fb681d9a8cd1aa
+2026-07-03 00:17:15,438 - 3666303 - INFO - Deregistering i-00654c8eecdfcccf0 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-Desktop/ef74079dabb78b1e
+2026-07-03 00:17:15,487 - 3666303 - INFO - Stopping EC2 instance: i-00654c8eecdfcccf0 at 2026-07-03 00:17:15
+2026-07-03 00:18:16,699 - 3666303 - INFO - Instance i-00654c8eecdfcccf0 stopped successfully.
+2026-07-03 00:18:17,088 - 3666303 - INFO - Stopped i-00654c8eecdfcccf0 in 0:01:01.600747
+2026-07-03 00:18:17,089 - 3666303 - INFO - Starting EC2 instance: i-00654c8eecdfcccf0
+2026-07-03 00:18:33,231 - 3666303 - INFO - Instance i-00654c8eecdfcccf0 started successfully.
+2026-07-03 00:18:33,231 - 3666303 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00654c8eecdfcccf0...
+2026-07-03 00:20:13,331 - 3666303 - INFO - Registering i-00654c8eecdfcccf0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-RF/71fb681d9a8cd1aa
+2026-07-03 00:20:13,502 - 3666303 - INFO - Registering i-00654c8eecdfcccf0 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-Training-WMS-Desktop/ef74079dabb78b1e
+2026-07-03 00:20:43,926 - 3666303 - INFO - Sent app_validation.py to i-00654c8eecdfcccf0 (command_id: c01a604e-b0ee-40f5-bf75-c1ed2a0c3e3e)
+2026-07-03 00:21:14,010 - 3666303 - INFO - app_validation.py output for i-00654c8eecdfcccf0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:20:44.267793
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.8
+Hostname | ip-10-0-24-8
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 87.4G | 202.4G | 30% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.8 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmstrain_dwa, wmstrain_event, wmstrain_ftp, wmstrain_lbl, wmstrain_repl, wmstrain_rccl, wmstrain_rplpri, wmstrain_rpt, wmstrain_jqgrid, wmstrain_sch, wmstrain_inbq, wmstrain_wld, wmstrain_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmstrain_dwa | /data/batchapp/softeon/wmstrain/downloaddaemon
+wmstrain_event | /data/batchapp/softeon/wmstrain/eventdaemon
+wmstrain_ftp | /data/batchapp/softeon/wmstrain/ftpdaemon
+wmstrain_lbl | /data/batchapp/softeon/wmstrain/labeldaemon
+wmstrain_repl | /data/batchapp/softeon/wmstrain/replenishmentdaemon
+wmstrain_rccl | /data/batchapp/softeon/wmstrain/replenishmentpickloccanceldaemon
+wmstrain_rplpri | /data/batchapp/softeon/wmstrain/replenishmentpriorityupdatedaemon
+wmstrain_rpt | /data/batchapp/softeon/wmstrain/reportdaemon
+wmstrain_jqgrid | /data/batchapp/softeon/wmstrain/reportjqgridexportdaemon
+wmstrain_sch | /data/batchapp/softeon/wmstrain/schedulardaemon
+wmstrain_inbq | /data/batchapp/softeon/wmstrain/uploaddeamon
+wmstrain_wld | /data/batchapp/softeon/wmstrain/wavelaunchdaemon
+wmstrain_ict | /data/batchapp/softeon/wmstrain/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4244 | wmsrftrain | jboss730eap | wmsrftrn_jb730 | 8081 | 10.0.24.8:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsrftrain/standalone
+4035 | wmstrain | jboss730eap | wmstrn_jb730eap | 8080 | 10.0.24.8:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmstrain/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:20:45.382444
+==============================================================================
+
+2026-07-03 00:21:14,010 - 3666303 - ERROR - app_validation.py errors for i-00654c8eecdfcccf0:
+
+2026-07-03 00:21:14,012 - 3666303 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.8/10.0.24.8-AfterPatching-2026-07-03-00-21-14-012.log
+2026-07-03 00:21:14,075 - 3666303 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.8/10.0.24.8-Validation-details-2026-07-03-00-21-14-012.html
+2026-07-03 00:21:14,327 - 3666303 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'clouOps@softeon.com']
+2026-07-03 00:21:14,327 - 3666303 - INFO - HTML validation report email sent for i-00654c8eecdfcccf0
+2026-07-03 00:21:14,327 - 3666303 - INFO - [Retry-1] Waiting 600s for i-00654c8eecdfcccf0...
+2026-07-03 00:21:14,327 - 3666303 - INFO - RED - Background retry thread started for i-00654c8eecdfcccf0
+2026-07-03 00:21:14,723 - 3666303 - INFO - Started i-00654c8eecdfcccf0 in 0:02:57.634566
+2026-07-03 00:21:14,724 - 3666303 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-03 00:23:14,803 - 3666303 - INFO - Deregistering i-0583a1e0f5ed2e5f8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-Desktop/c4c96f8f0698d0a7
+2026-07-03 00:23:14,876 - 3666303 - INFO - Deregistering i-0583a1e0f5ed2e5f8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-RF/ddf65ab59eebb86a
+2026-07-03 00:23:14,920 - 3666303 - INFO - Stopping EC2 instance: i-0583a1e0f5ed2e5f8 at 2026-07-03 00:23:14
+2026-07-03 00:25:31,560 - 3666303 - INFO - Instance i-0583a1e0f5ed2e5f8 stopped successfully.
+2026-07-03 00:25:31,950 - 3666303 - INFO - Stopped i-0583a1e0f5ed2e5f8 in 0:02:17.029911
+2026-07-03 00:25:31,950 - 3666303 - INFO - Starting EC2 instance: i-0583a1e0f5ed2e5f8
+2026-07-03 00:25:48,016 - 3666303 - INFO - Instance i-0583a1e0f5ed2e5f8 started successfully.
+2026-07-03 00:25:48,016 - 3666303 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0583a1e0f5ed2e5f8...
+2026-07-03 00:27:28,031 - 3666303 - INFO - Registering i-0583a1e0f5ed2e5f8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-Desktop/c4c96f8f0698d0a7
+2026-07-03 00:27:28,198 - 3666303 - INFO - Registering i-0583a1e0f5ed2e5f8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-2-WMS-RF/ddf65ab59eebb86a
+2026-07-03 00:27:58,739 - 3666303 - INFO - Sent app_validation.py to i-0583a1e0f5ed2e5f8 (command_id: ef2d0b09-3055-4016-bb51-7ec216c8f277)
+2026-07-03 00:28:28,841 - 3666303 - INFO - app_validation.py output for i-0583a1e0f5ed2e5f8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:27:59.061856
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.20
+Hostname | ip-10-0-24-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 191.5G | 98.4G | 66% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsuat_dwa, wmsuat_event, wmsuat_ftp, wmsuat_lbl, wmsuat_repl, wmsuat_rccl, wmsuat_rplpri, wmsuat_rpt, wmsuat_jqgrid, wmsuat_sch, wmsuat_inbq, wmsuat_wld, wmsuat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsuat_dwa | /data/batchapp/softeon/conmeduat2/downloaddaemon
+wmsuat_event | /data/batchapp/softeon/conmeduat2/eventdaemon
+wmsuat_ftp | /data/batchapp/softeon/conmeduat2/ftpdaemon
+wmsuat_lbl | /data/batchapp/softeon/conmeduat2/labeldaemon
+wmsuat_repl | /data/batchapp/softeon/conmeduat2/replenishmentdaemon
+wmsuat_rccl | /data/batchapp/softeon/conmeduat2/replenishmentpickloccanceldaemon
+wmsuat_rplpri | /data/batchapp/softeon/conmeduat2/replenishmentpriorityupdatedaemon
+wmsuat_rpt | /data/batchapp/softeon/conmeduat2/reportdaemon
+wmsuat_jqgrid | /data/batchapp/softeon/conmeduat2/reportjqgridexportdaemon
+wmsuat_sch | /data/batchapp/softeon/conmeduat2/schedulardaemon
+wmsuat_inbq | /data/batchapp/softeon/conmeduat2/uploaddeamon
+wmsuat_wld | /data/batchapp/softeon/conmeduat2/wavelaunchdaemon
+wmsuat_ict | /data/batchapp/softeon/conmeduat2/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3334 | conmedrfuat2 | jboss730eap | conrfuat2_jb73 | 8081 | 10.0.24.20:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmedrfuat2/standalone
+2976 | conmeduat2 | jboss730eap | conmeduat2_jb73 | 8080 | 10.0.24.20:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmeduat2/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:27:59.964552
+==============================================================================
+
+2026-07-03 00:28:28,841 - 3666303 - ERROR - app_validation.py errors for i-0583a1e0f5ed2e5f8:
+
+2026-07-03 00:28:28,843 - 3666303 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.20/10.0.24.20-AfterPatching-2026-07-03-00-28-28-842.log
+2026-07-03 00:28:28,895 - 3666303 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.20/10.0.24.20-Validation-details-2026-07-03-00-28-28-842.html
+2026-07-03 00:28:29,169 - 3666303 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'clouOps@softeon.com']
+2026-07-03 00:28:29,169 - 3666303 - INFO - HTML validation report email sent for i-0583a1e0f5ed2e5f8
+2026-07-03 00:28:29,170 - 3666303 - INFO - [Retry-1] Waiting 600s for i-0583a1e0f5ed2e5f8...
+2026-07-03 00:28:29,170 - 3666303 - INFO - RED - Background retry thread started for i-0583a1e0f5ed2e5f8
+2026-07-03 00:28:29,541 - 3666303 - INFO - Started i-0583a1e0f5ed2e5f8 in 0:02:57.590677
+2026-07-03 00:28:29,542 - 3666303 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-03 00:30:29,603 - 3666303 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c
+2026-07-03 00:30:29,682 - 3666303 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9
+2026-07-03 00:30:29,728 - 3666303 - INFO - Deregistering i-01afa5fce47f8ae1c from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c
+2026-07-03 00:30:29,781 - 3666303 - INFO - Stopping EC2 instance: i-01afa5fce47f8ae1c at 2026-07-03 00:30:29
+2026-07-03 00:31:14,509 - 3666303 - INFO - Sent app_validation.py to i-00654c8eecdfcccf0 (command_id: 0a791610-e881-4133-aa8e-1145b8d838e0)
+2026-07-03 00:31:30,871 - 3666303 - INFO - Instance i-01afa5fce47f8ae1c stopped successfully.
+2026-07-03 00:31:31,236 - 3666303 - INFO - Stopped i-01afa5fce47f8ae1c in 0:01:01.454783
+2026-07-03 00:31:31,237 - 3666303 - INFO - Starting EC2 instance: i-01afa5fce47f8ae1c
+2026-07-03 00:31:44,654 - 3666303 - INFO - app_validation.py output for i-00654c8eecdfcccf0:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:31:14.789346
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.8
+Hostname | ip-10-0-24-8
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 87.4G | 202.4G | 30% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.8:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 25
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.8 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmstrain_dwa, wmstrain_event, wmstrain_ftp, wmstrain_lbl, wmstrain_repl, wmstrain_rccl, wmstrain_rplpri, wmstrain_rpt, wmstrain_jqgrid, wmstrain_sch, wmstrain_inbq, wmstrain_wld, wmstrain_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmstrain_dwa | /data/batchapp/softeon/wmstrain/downloaddaemon
+wmstrain_event | /data/batchapp/softeon/wmstrain/eventdaemon
+wmstrain_ftp | /data/batchapp/softeon/wmstrain/ftpdaemon
+wmstrain_lbl | /data/batchapp/softeon/wmstrain/labeldaemon
+wmstrain_repl | /data/batchapp/softeon/wmstrain/replenishmentdaemon
+wmstrain_rccl | /data/batchapp/softeon/wmstrain/replenishmentpickloccanceldaemon
+wmstrain_rplpri | /data/batchapp/softeon/wmstrain/replenishmentpriorityupdatedaemon
+wmstrain_rpt | /data/batchapp/softeon/wmstrain/reportdaemon
+wmstrain_jqgrid | /data/batchapp/softeon/wmstrain/reportjqgridexportdaemon
+wmstrain_sch | /data/batchapp/softeon/wmstrain/schedulardaemon
+wmstrain_inbq | /data/batchapp/softeon/wmstrain/uploaddeamon
+wmstrain_wld | /data/batchapp/softeon/wmstrain/wavelaunchdaemon
+wmstrain_ict | /data/batchapp/softeon/wmstrain/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4244 | wmsrftrain | jboss730eap | wmsrftrn_jb730 | 8081 | 10.0.24.8:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmsrftrain/standalone
+4035 | wmstrain | jboss730eap | wmstrn_jb730eap | 8080 | 10.0.24.8:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/wmstrain/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:31:15.318603
+==============================================================================
+
+2026-07-03 00:31:44,654 - 3666303 - ERROR - app_validation.py errors for i-00654c8eecdfcccf0:
+
+2026-07-03 00:31:44,656 - 3666303 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.8/10.0.24.8-AfterPatching-Retry1-2026-07-03-00-31-44-655.log
+2026-07-03 00:31:44,787 - 3666303 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'clouOps@softeon.com']
+2026-07-03 00:31:45,092 - 3666303 - INFO - Health monitor crontab enabled on all instances
+2026-07-03 00:31:45,093 - 3666303 - INFO - [Retry] Green - cron enabled for i-00654c8eecdfcccf0
+2026-07-03 00:31:47,427 - 3666303 - INFO - Instance i-01afa5fce47f8ae1c started successfully.
+2026-07-03 00:31:47,427 - 3666303 - INFO - Waiting 100 seconds for SSM agent to be ready on i-01afa5fce47f8ae1c...
+2026-07-03 00:33:27,436 - 3666303 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c
+2026-07-03 00:33:27,596 - 3666303 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-RF/69fe7d74f1a940a9
+2026-07-03 00:33:27,724 - 3666303 - INFO - Registering i-01afa5fce47f8ae1c to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-WMS-Desktop/d549b80b3a1a994c
+2026-07-03 00:38:28,431 - 3666303 - WARNING - i-01afa5fce47f8ae1c not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/ConMed-UAT-LMS/7a3d5e0f26adaa4c after timeout.
+2026-07-03 00:38:28,636 - 3666303 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-03 00:38:28,637 - 3666303 - ERROR - Aborting workflow: i-01afa5fce47f8ae1c is not healthy after restart.
+2026-07-03 00:38:28,642 - 3666303 - INFO - Restart Total time: 0:21:34.073165
+2026-07-03 00:38:28,642 - 3666303 - INFO - Auto-confirmed services are restarted
+2026-07-03 00:38:28,642 - 3666303 - INFO - Confirmed - services are started
+2026-07-03 00:38:28,772 - 3666303 - INFO - The following instances have failed the patch: []
+2026-07-03 00:38:28,772 - 3666303 - INFO - No instances have failed the patch.
+2026-07-03 00:38:28,772 - 3666303 - INFO - Total Patch Process time: 0:33:25.533590
+2026-07-03 00:38:29,427 - 3666303 - INFO - Sent app_validation.py to i-0583a1e0f5ed2e5f8 (command_id: 6885a661-82e0-45a4-9302-5e3a30129c7b)
+2026-07-03 00:38:59,579 - 3666303 - INFO - app_validation.py output for i-0583a1e0f5ed2e5f8:
+
+==============================================================================
+Server Availability Check Started | 2026-07-03 04:38:29.692102
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.24.20
+Hostname | ip-10-0-24-20
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 191.5G | 98.4G | 66% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.24.20:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 49
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.24.20 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 17
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | wmsuat_dwa, wmsuat_event, wmsuat_ftp, wmsuat_lbl, wmsuat_repl, wmsuat_rccl, wmsuat_rplpri, wmsuat_rpt, wmsuat_jqgrid, wmsuat_sch, wmsuat_inbq, wmsuat_wld, wmsuat_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+wmsuat_dwa | /data/batchapp/softeon/conmeduat2/downloaddaemon
+wmsuat_event | /data/batchapp/softeon/conmeduat2/eventdaemon
+wmsuat_ftp | /data/batchapp/softeon/conmeduat2/ftpdaemon
+wmsuat_lbl | /data/batchapp/softeon/conmeduat2/labeldaemon
+wmsuat_repl | /data/batchapp/softeon/conmeduat2/replenishmentdaemon
+wmsuat_rccl | /data/batchapp/softeon/conmeduat2/replenishmentpickloccanceldaemon
+wmsuat_rplpri | /data/batchapp/softeon/conmeduat2/replenishmentpriorityupdatedaemon
+wmsuat_rpt | /data/batchapp/softeon/conmeduat2/reportdaemon
+wmsuat_jqgrid | /data/batchapp/softeon/conmeduat2/reportjqgridexportdaemon
+wmsuat_sch | /data/batchapp/softeon/conmeduat2/schedulardaemon
+wmsuat_inbq | /data/batchapp/softeon/conmeduat2/uploaddeamon
+wmsuat_wld | /data/batchapp/softeon/conmeduat2/wavelaunchdaemon
+wmsuat_ict | /data/batchapp/softeon/conmeduat2/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3334 | conmedrfuat2 | jboss730eap | conrfuat2_jb73 | 8081 | 10.0.24.20:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmedrfuat2/standalone
+2976 | conmeduat2 | jboss730eap | conmeduat2_jb73 | 8080 | 10.0.24.20:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/conmeduat2/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-03 04:38:30.239317
+==============================================================================
+
+2026-07-03 00:38:59,579 - 3666303 - ERROR - app_validation.py errors for i-0583a1e0f5ed2e5f8:
+
+2026-07-03 00:38:59,581 - 3666303 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-03/Q3-conmed-uat/10.0.24.20/10.0.24.20-AfterPatching-Retry1-2026-07-03-00-38-59-580.log
+2026-07-03 00:38:59,707 - 3666303 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'clouOps@softeon.com']
+2026-07-03 00:38:59,995 - 3666303 - INFO - Health monitor crontab enabled on all instances
+2026-07-03 00:38:59,997 - 3666303 - INFO - [Retry] Green - cron enabled for i-0583a1e0f5ed2e5f8
+2026-07-03 00:39:29,363 - 3666303 - INFO - Log file ./logs/patching_2026-07-03_Q3-conmed-uat.log uploaded to s3://q3-2026-aws-security-patching/Q3-conmed-uat_Patch/2026-07-03/patching_2026-07-03_Q3-conmed-uat.log

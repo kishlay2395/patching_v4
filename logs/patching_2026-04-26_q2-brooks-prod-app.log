@@ -1,0 +1,424 @@
+2026-04-26 00:05:02,236 - 1262725 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-26 00:05:02,236 - 1262725 - INFO - Script Start Time: 2026-04-26 00:05:02
+2026-04-26 00:05:02,532 - 1262725 - INFO - Instance(s) selected for Patching: {'i-0194d9189e08ca623': '172.29.70.10', 'i-044a8d3d9923b5698': '172.29.70.36'}
+2026-04-26 00:05:02,622 - 1262725 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 00:05:02,622 - 1262725 - INFO - Now patching instances at: 2026-04-26 00:05:02
+2026-04-26 00:05:02,709 - 1262725 - INFO - Sending patch command to instance i-044a8d3d9923b5698
+2026-04-26 00:05:02,890 - 1262725 - INFO - Command sent successfully to instance i-044a8d3d9923b5698. Command ID: 9005982b-82e9-4a73-8f60-f369510d7c02
+2026-04-26 00:05:03,088 - 1262725 - INFO - Sending patch command to instance i-0194d9189e08ca623
+2026-04-26 00:05:03,222 - 1262725 - INFO - Command sent successfully to instance i-0194d9189e08ca623. Command ID: 1e22c170-5bc8-4c5a-b51a-c91d69b8ab82
+2026-04-26 00:13:35,467 - 1262725 - INFO - All patches applied successfully.
+2026-04-26 00:13:35,468 - 1262725 - INFO - Patching end time: 2026-04-26 00:13:35
+2026-04-26 00:13:35,468 - 1262725 - INFO - Patch Elapsed time: 0:08:32.845826
+2026-04-26 00:13:35,542 - 1262725 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 00:13:35,543 - 1262725 - INFO - Confirmed - services are stopped
+2026-04-26 00:13:54,757 - 1262725 - INFO - Discovered TG map: {'i-044a8d3d9923b5698': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84'], 'i-0194d9189e08ca623': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84']}
+2026-04-26 00:13:55,156 - 1262725 - INFO - Sent app_validation.py to i-044a8d3d9923b5698 (command_id: 284f917a-cc41-4771-9153-4c43a36f1f31)
+2026-04-26 00:14:25,242 - 1262725 - INFO - app_validation.py output for i-044a8d3d9923b5698:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 04:13:55.442572
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.70.36
+Hostname | ip-172-29-70-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 61.5G | 228.4G | 21% | /data
+fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | 0B | 1.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.70.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 115
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.70.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2221194 | brooksprod | jboss62eap | brooksprd_jboss | 8080 | 172.29.70.36:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksprod/standalone
+2221167 | brooksrfprod | jboss62eap | brooksrfpd_jbos | 8081 | 172.29.70.36:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 04:13:55.781684
+==============================================================================
+
+2026-04-26 00:14:25,242 - 1262725 - ERROR - app_validation.py errors for i-044a8d3d9923b5698:
+
+2026-04-26 00:14:25,244 - 1262725 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.36/172.29.70.36-BeforePatching-2026-04-26-00-14-25-244.log
+2026-04-26 00:14:25,244 - 1262725 - INFO - Deregistering i-044a8d3d9923b5698 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f
+2026-04-26 00:14:25,312 - 1262725 - INFO - Deregistering i-044a8d3d9923b5698 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84
+2026-04-26 00:14:25,355 - 1262725 - INFO - Stopping EC2 instance: i-044a8d3d9923b5698 at 2026-04-26 00:14:25
+2026-04-26 00:16:11,839 - 1262725 - INFO - Instance i-044a8d3d9923b5698 stopped successfully.
+2026-04-26 00:16:12,097 - 1262725 - INFO - Stopped i-044a8d3d9923b5698 in 0:01:46.741918
+2026-04-26 00:16:12,098 - 1262725 - INFO - Starting EC2 instance: i-044a8d3d9923b5698
+2026-04-26 00:16:28,122 - 1262725 - INFO - Instance i-044a8d3d9923b5698 started successfully.
+2026-04-26 00:16:28,122 - 1262725 - INFO - Waiting 50 seconds for SSM agent to be ready on i-044a8d3d9923b5698...
+2026-04-26 00:17:18,156 - 1262725 - INFO - Registering i-044a8d3d9923b5698 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f
+2026-04-26 00:17:18,325 - 1262725 - INFO - Registering i-044a8d3d9923b5698 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84
+2026-04-26 00:18:48,943 - 1262725 - INFO - Sent app_validation.py to i-044a8d3d9923b5698 (command_id: 5e6a57d3-f972-426d-9985-dbdcf3cca046)
+2026-04-26 00:19:19,045 - 1262725 - INFO - app_validation.py output for i-044a8d3d9923b5698:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 04:18:49.309909
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.70.36
+Hostname | ip-172-29-70-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 61.3G | 228.6G | 21% | /data
+fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | 0B | 1.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.70.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 115
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.70.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3075 | brooksprod | jboss62eap | brooksprd_jboss | 8080 | 172.29.70.36:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksprod/standalone
+3089 | brooksrfprod | jboss62eap | brooksrfpd_jbos | 8081 | 172.29.70.36:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 04:18:50.834808
+==============================================================================
+
+2026-04-26 00:19:19,046 - 1262725 - ERROR - app_validation.py errors for i-044a8d3d9923b5698:
+
+2026-04-26 00:19:19,047 - 1262725 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.36/172.29.70.36-AfterPatching-2026-04-26-00-19-19-047.log
+2026-04-26 00:19:19,099 - 1262725 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.36/172.29.70.36-Validation-details-2026-04-26-00-19-19-047.html
+2026-04-26 00:19:19,171 - 1262725 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-26 00:19:19,171 - 1262725 - INFO - HTML validation report email sent for i-044a8d3d9923b5698
+2026-04-26 00:19:19,440 - 1262725 - INFO - Started i-044a8d3d9923b5698 in 0:03:07.341889
+2026-04-26 00:19:19,440 - 1262725 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-26 00:21:19,642 - 1262725 - INFO - Sent app_validation.py to i-0194d9189e08ca623 (command_id: e8459680-0019-4f0f-8ca9-6949d7063695)
+2026-04-26 00:21:49,710 - 1262725 - INFO - app_validation.py output for i-0194d9189e08ca623:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 04:21:19.974563
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.70.10
+Hostname | ip-172-29-70-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 289.9G | 59.8G | 230.0G | 20% | /data
+fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | 0B | 1.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.70.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 115
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.70.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2160980 | brooksprod | jboss62eap | brooksprd_jboss | 8080 | 172.29.70.10:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksprod/standalone
+2160975 | brooksrfprod | jboss62eap | brooksrfpd_jbos | 8081 | 172.29.70.10:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 04:21:20.585211
+==============================================================================
+
+2026-04-26 00:21:49,710 - 1262725 - ERROR - app_validation.py errors for i-0194d9189e08ca623:
+
+2026-04-26 00:21:49,712 - 1262725 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.10/172.29.70.10-BeforePatching-2026-04-26-00-21-49-712.log
+2026-04-26 00:21:49,712 - 1262725 - INFO - Deregistering i-0194d9189e08ca623 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f
+2026-04-26 00:21:49,788 - 1262725 - INFO - Deregistering i-0194d9189e08ca623 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84
+2026-04-26 00:21:49,857 - 1262725 - INFO - Stopping EC2 instance: i-0194d9189e08ca623 at 2026-04-26 00:21:49
+2026-04-26 00:23:21,293 - 1262725 - INFO - Instance i-0194d9189e08ca623 stopped successfully.
+2026-04-26 00:23:21,548 - 1262725 - INFO - Stopped i-0194d9189e08ca623 in 0:01:31.691349
+2026-04-26 00:23:21,549 - 1262725 - INFO - Starting EC2 instance: i-0194d9189e08ca623
+2026-04-26 00:23:37,632 - 1262725 - INFO - Instance i-0194d9189e08ca623 started successfully.
+2026-04-26 00:23:37,632 - 1262725 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0194d9189e08ca623...
+2026-04-26 00:24:27,645 - 1262725 - INFO - Registering i-0194d9189e08ca623 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-Desktop/8126c8750a57d49f
+2026-04-26 00:24:27,853 - 1262725 - INFO - Registering i-0194d9189e08ca623 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Brooks-Prod-RF/7319250056ed6c84
+2026-04-26 00:27:58,788 - 1262725 - INFO - Sent app_validation.py to i-0194d9189e08ca623 (command_id: 05078111-d7ff-4f32-9ad5-4e2bf6523b01)
+2026-04-26 00:28:28,850 - 1262725 - INFO - app_validation.py output for i-0194d9189e08ca623:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 04:27:59.290778
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.70.10
+Hostname | ip-172-29-70-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 289.9G | 59.6G | 230.3G | 20% | /data
+fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | 0B | 1.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-8ff4346e.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.70.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 115
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.70.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2981 | brooksprod | jboss62eap | brooksprd_jboss | 8080 | 172.29.70.10:8080 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksprod/standalone
+3056 | brooksrfprod | jboss62eap | brooksrfpd_jbos | 8081 | 172.29.70.10:8081 | UP | 200 | Disabled | /data/app/jboss62eap/softeon/brooksrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 04:27:59.972032
+==============================================================================
+
+2026-04-26 00:28:28,850 - 1262725 - ERROR - app_validation.py errors for i-0194d9189e08ca623:
+
+2026-04-26 00:28:28,852 - 1262725 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.10/172.29.70.10-AfterPatching-2026-04-26-00-28-28-851.log
+2026-04-26 00:28:28,902 - 1262725 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-26/q2-brooks-prod-app/172.29.70.10/172.29.70.10-Validation-details-2026-04-26-00-28-28-851.html
+2026-04-26 00:28:28,991 - 1262725 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-26 00:28:28,991 - 1262725 - INFO - HTML validation report email sent for i-0194d9189e08ca623
+2026-04-26 00:28:29,269 - 1262725 - INFO - Started i-0194d9189e08ca623 in 0:05:07.720446
+2026-04-26 00:28:29,269 - 1262725 - INFO - All instances processed.
+2026-04-26 00:28:29,273 - 1262725 - INFO - Restart Total time: 0:14:53.535744
+2026-04-26 00:28:29,274 - 1262725 - INFO - Auto-confirmed services are restarted
+2026-04-26 00:28:29,274 - 1262725 - INFO - Confirmed - services are started
+2026-04-26 00:28:29,384 - 1262725 - INFO - The following instances have failed the patch: []
+2026-04-26 00:28:29,385 - 1262725 - INFO - No instances have failed the patch.
+2026-04-26 00:28:29,385 - 1262725 - INFO - Total Patch Process time: 0:23:27.147858
+2026-04-26 00:29:29,946 - 1262725 - INFO - Log file ./logs/patching_2026-04-26_q2-brooks-prod-app.log uploaded to s3://q2-2026-aws-security-patching/q2-brooks-prod-app_Patch/2026-04-26/patching_2026-04-26_q2-brooks-prod-app.log

@@ -1,0 +1,126 @@
+2026-04-04 00:05:02,682 - 62434 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-04 00:05:02,682 - 62434 - INFO - Script Start Time: 2026-04-04 00:05:02
+2026-04-04 00:05:02,977 - 62434 - INFO - Instance(s) selected for Patching: {'i-081ef8257f22efb47': '172.31.32.22'}
+2026-04-04 00:05:03,063 - 62434 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-04 00:05:03,063 - 62434 - INFO - Now patching instances at: 2026-04-04 00:05:03
+2026-04-04 00:05:03,149 - 62434 - INFO - Sending patch command to instance i-081ef8257f22efb47
+2026-04-04 00:05:03,316 - 62434 - INFO - Command sent successfully to instance i-081ef8257f22efb47. Command ID: 02eaf0bb-9af4-40d9-86ea-318ed8118332
+2026-04-04 00:09:04,789 - 62434 - INFO - All patches applied successfully.
+2026-04-04 00:09:04,790 - 62434 - INFO - Patching end time: 2026-04-04 00:09:04
+2026-04-04 00:09:04,790 - 62434 - INFO - Patch Elapsed time: 0:04:01.726614
+2026-04-04 00:09:04,863 - 62434 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-04 00:09:04,863 - 62434 - INFO - Confirmed - services are stopped
+2026-04-04 00:09:25,926 - 62434 - INFO - Discovered TG map: {'i-081ef8257f22efb47': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-Desktop/4b7cb29f3981259d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-RF/200bbaf6d908de53', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-WS/78bcb56159b86ace']}
+2026-04-04 00:09:26,349 - 62434 - INFO - Sent app_validation.py to i-081ef8257f22efb47 (command_id: 94e00558-5b2c-4a56-94f6-4de95ebdb264)
+2026-04-04 00:09:56,504 - 62434 - INFO - app_validation.py output for i-081ef8257f22efb47:
+
+==============================================================================
+Server Availability Check Started | 2026-04-04 04:09:26.703203
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.32.22
+Hostname | ip-172-31-32-22
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 33.2G | 206.7G | 13% | /data
+/dev/nvme1n1p2 | 239.9G | 33.2G | 206.7G | 13% | /data2
+/dev/nvme1n1p2 | 239.9G | 33.2G | 206.7G | 13% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.32.22:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 21
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.32.22 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-04-04 04:09:26.947831
+==============================================================================
+
+2026-04-04 00:09:56,504 - 62434 - ERROR - app_validation.py errors for i-081ef8257f22efb47:
+
+2026-04-04 00:09:56,506 - 62434 - INFO - Before patching validation saved to: output/validation-2026-04-04/172.31.32.22-BeforePatching-2026-04-04-00-09-56-506.log
+2026-04-04 00:09:56,506 - 62434 - INFO - Deregistering i-081ef8257f22efb47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-Desktop/4b7cb29f3981259d
+2026-04-04 00:09:56,579 - 62434 - INFO - Deregistering i-081ef8257f22efb47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-RF/200bbaf6d908de53
+2026-04-04 00:09:56,632 - 62434 - INFO - Deregistering i-081ef8257f22efb47 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-WS/78bcb56159b86ace
+2026-04-04 00:09:56,686 - 62434 - INFO - Stopping EC2 instance: i-081ef8257f22efb47 at 2026-04-04 00:09:56
+2026-04-04 00:10:42,541 - 62434 - INFO - Instance i-081ef8257f22efb47 stopped successfully.
+2026-04-04 00:10:42,675 - 62434 - INFO - Stopped i-081ef8257f22efb47 in 0:00:45.988244
+2026-04-04 00:10:42,675 - 62434 - INFO - Starting EC2 instance: i-081ef8257f22efb47
+2026-04-04 00:10:58,597 - 62434 - INFO - Instance i-081ef8257f22efb47 started successfully.
+2026-04-04 00:10:58,597 - 62434 - INFO - Waiting 100 seconds for SSM agent to be ready on i-081ef8257f22efb47...
+2026-04-04 00:12:38,656 - 62434 - INFO - Registering i-081ef8257f22efb47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-Desktop/4b7cb29f3981259d
+2026-04-04 00:12:38,828 - 62434 - INFO - Registering i-081ef8257f22efb47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-RF/200bbaf6d908de53
+2026-04-04 00:12:38,979 - 62434 - INFO - Registering i-081ef8257f22efb47 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-WS/78bcb56159b86ace
+2026-04-04 00:17:39,748 - 62434 - WARNING - i-081ef8257f22efb47 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/DuroDyne-UAT-Desktop/4b7cb29f3981259d after timeout.
+2026-04-04 00:22:10,533 - 62434 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-04 00:22:10,533 - 62434 - ERROR - Aborting workflow: i-081ef8257f22efb47 is not healthy after restart.
+2026-04-04 00:22:10,536 - 62434 - INFO - Restart Total time: 0:13:05.536956
+2026-04-04 00:22:10,536 - 62434 - INFO - Auto-confirmed services are restarted
+2026-04-04 00:22:10,536 - 62434 - INFO - Confirmed - services are started
+2026-04-04 00:22:10,672 - 62434 - INFO - The following instances have failed the patch: []
+2026-04-04 00:22:10,673 - 62434 - INFO - No instances have failed the patch.
+2026-04-04 00:22:10,673 - 62434 - INFO - Total Patch Process time: 0:17:07.990506
+2026-04-04 00:23:11,065 - 62434 - INFO - Log file ./logs/patching_2026-04-04_durodyne-UAT.log uploaded to s3://q2-2026-aws-security-patching/durodyne-UAT_Patch/2026-04-04/patching_2026-04-04_durodyne-UAT.log

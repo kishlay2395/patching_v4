@@ -1,0 +1,242 @@
+2026-04-04 02:05:02,907 - 66758 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-04 02:05:02,908 - 66758 - INFO - Script Start Time: 2026-04-04 02:05:02
+2026-04-04 02:05:03,194 - 66758 - INFO - Instance(s) selected for Patching: {'i-0d081e4c548f00038': '172.31.14.30'}
+2026-04-04 02:05:03,272 - 66758 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-04 02:05:03,272 - 66758 - INFO - Now patching instances at: 2026-04-04 02:05:03
+2026-04-04 02:05:03,414 - 66758 - INFO - Sending patch command to instance i-0d081e4c548f00038
+2026-04-04 02:05:03,642 - 66758 - INFO - Command sent successfully to instance i-0d081e4c548f00038. Command ID: 902c2235-e6ea-44f2-9de6-3345f9c083b7
+2026-04-04 02:09:04,915 - 66758 - INFO - All patches applied successfully.
+2026-04-04 02:09:04,915 - 66758 - INFO - Patching end time: 2026-04-04 02:09:04
+2026-04-04 02:09:04,915 - 66758 - INFO - Patch Elapsed time: 0:04:01.643282
+2026-04-04 02:09:04,993 - 66758 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-04 02:09:04,993 - 66758 - INFO - Confirmed - services are stopped
+2026-04-04 02:09:26,112 - 66758 - INFO - Discovered TG map: {'i-0d081e4c548f00038': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FL-UAT-Ext/9bc96e524b366a2f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FLUAT73/7bad6952c9fe2878']}
+2026-04-04 02:09:26,509 - 66758 - INFO - Sent app_validation.py to i-0d081e4c548f00038 (command_id: cae5d627-2e63-4c4f-8f04-f71aa08759a1)
+2026-04-04 02:09:56,598 - 66758 - INFO - app_validation.py output for i-0d081e4c548f00038:
+
+==============================================================================
+Server Availability Check Started | 2026-04-04 06:09:26.813404
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.14.30
+Hostname | ip-172-31-14-30
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 226.2G | 71.9G | 142.8G | 31% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.14.30:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 22
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.14.30 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+260424 | fluatnew | jboss730eap | fluatnew_jb730e | 8081 | 172.31.14.30:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/fluatnew/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-04 06:09:27.116540
+==============================================================================
+
+2026-04-04 02:09:56,599 - 66758 - ERROR - app_validation.py errors for i-0d081e4c548f00038:
+
+2026-04-04 02:09:56,600 - 66758 - INFO - Before patching validation saved to: output/validation-2026-04-04/172.31.14.30-BeforePatching-2026-04-04-02-09-56-600.log
+2026-04-04 02:09:56,600 - 66758 - INFO - Deregistering i-0d081e4c548f00038 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FL-UAT-Ext/9bc96e524b366a2f
+2026-04-04 02:09:56,677 - 66758 - INFO - Deregistering i-0d081e4c548f00038 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FLUAT73/7bad6952c9fe2878
+2026-04-04 02:09:56,723 - 66758 - INFO - Stopping EC2 instance: i-0d081e4c548f00038 at 2026-04-04 02:09:56
+2026-04-04 02:10:57,751 - 66758 - INFO - Instance i-0d081e4c548f00038 stopped successfully.
+2026-04-04 02:10:57,883 - 66758 - INFO - Stopped i-0d081e4c548f00038 in 0:01:01.159606
+2026-04-04 02:10:57,883 - 66758 - INFO - Starting EC2 instance: i-0d081e4c548f00038
+2026-04-04 02:11:13,810 - 66758 - INFO - Instance i-0d081e4c548f00038 started successfully.
+2026-04-04 02:11:13,810 - 66758 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0d081e4c548f00038...
+2026-04-04 02:12:53,898 - 66758 - INFO - Registering i-0d081e4c548f00038 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FL-UAT-Ext/9bc96e524b366a2f
+2026-04-04 02:12:54,072 - 66758 - INFO - Registering i-0d081e4c548f00038 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/FLUAT73/7bad6952c9fe2878
+2026-04-04 02:13:24,625 - 66758 - INFO - Sent app_validation.py to i-0d081e4c548f00038 (command_id: 89914ac8-47ca-4a9d-ad04-59f5cdeabf20)
+2026-04-04 02:13:54,702 - 66758 - INFO - app_validation.py output for i-0d081e4c548f00038:
+
+==============================================================================
+Server Availability Check Started | 2026-04-04 06:13:25.016860
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.14.30
+Hostname | ip-172-31-14-30
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 226.2G | 72.0G | 142.6G | 31% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.14.30:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 22
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.14.30 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 28
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | fluatnew_dwa, fluatnew_event, fluatnew_ftp, fluatnew_lbl, fluatnew_repl, fluatnew_rpt, fluatnew_jqgrid, fluatnew_sch, fluatnew_inbq, fluatnew_wld, fluatn_vomobadm, fluat_1vomob, fluat_ftpdaemon, fluat_downloaddaemon, fluat_reportdaemon, fluat_replenishmentdaemon, fluat_labeldaemon, fluat_schedulerdaemon, fluat_uploaddaemon, fluat_eventdaemon, fluat_wavelaunchdaemon, fluat_billingcharges, fluat_picktooldaemon, fluat_billtransprocess
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+fluatnew_dwa | /data/batchapp/softeon/fluatnew/downloaddaemon
+fluatnew_event | /data/batchapp/softeon/fluatnew/eventdaemon
+fluatnew_ftp | /data/batchapp/softeon/fluatnew/ftpdaemon
+fluatnew_lbl | /data/batchapp/softeon/fluatnew/labeldaemon
+fluatnew_repl | /data/batchapp/softeon/fluatnew/replenishmentdaemon
+fluatnew_rpt | /data/batchapp/softeon/fluatnew/reportdaemon
+fluatnew_jqgrid | /data/batchapp/softeon/fluatnew/reportjqgridexportdaemon
+fluatnew_sch | /data/batchapp/softeon/fluatnew/schedulardaemon
+fluatnew_inbq | /data/batchapp/softeon/fluatnew/uploaddeamon
+fluatnew_wld | /data/batchapp/softeon/fluatnew/wavelaunchdaemon
+fluatn_vomobadm | /data/batchapp/softeon/fluatnew/voiceadminserver
+fluat_1vomob | /data/batchapp/softeon/fluatnew/voicemobiledaemon1
+fluat_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_ftpdaemon
+fluat_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/fluat_downloaddaemon
+fluat_reportdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_reportdaemon
+fluat_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_replenishmentdaemon
+fluat_labeldaemon | /data/app/java/jdk1.7.0_80/bin/fluat_labeldaemon
+fluat_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_schedulerdaemon
+fluat_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/fluat_uploaddaemon
+fluat_eventdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_eventdaemon
+fluat_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/fluat_wavelaunchdaemon
+fluat_billingcharges | /data/app/java/jdk1.7.0_80/bin/fluat_billingcharges
+fluat_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/fluat_picktooldaemon
+fluat_billtransprocess | /data/app/java/jdk1.7.0_80/bin/fluat_billtransprocess
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2551 | fluat | app | fluat_jboss | 80 | 172.31.14.30:80 | UP | 200 | Disabled | /data/app/jboss72/fluat/standalone
+3600 | fluatnew | jboss730eap | fluatnew_jb730e | 8081 | 172.31.14.30:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/fluatnew/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-04 06:13:26.636227
+==============================================================================
+
+2026-04-04 02:13:54,702 - 66758 - ERROR - app_validation.py errors for i-0d081e4c548f00038:
+
+2026-04-04 02:13:54,704 - 66758 - INFO - After patching validation saved to: output/validation-2026-04-04/172.31.14.30-AfterPatching-2026-04-04-02-13-54-703.log
+2026-04-04 02:13:54,754 - 66758 - INFO - Validation comparison report generated: output/validation-2026-04-04/172.31.14.30-Validation-details-2026-04-04-02-13-54-703.html
+2026-04-04 02:13:54,821 - 66758 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-04 02:13:54,821 - 66758 - INFO - HTML validation report email sent for i-0d081e4c548f00038
+2026-04-04 02:13:54,951 - 66758 - INFO - Started i-0d081e4c548f00038 in 0:02:57.067641
+2026-04-04 02:13:54,951 - 66758 - INFO - All instances processed.
+2026-04-04 02:13:54,955 - 66758 - INFO - Restart Total time: 0:04:49.757185
+2026-04-04 02:13:54,955 - 66758 - INFO - Auto-confirmed services are restarted
+2026-04-04 02:13:54,955 - 66758 - INFO - Confirmed - services are started
+2026-04-04 02:13:55,075 - 66758 - INFO - The following instances have failed the patch: []
+2026-04-04 02:13:55,076 - 66758 - INFO - No instances have failed the patch.
+2026-04-04 02:13:55,076 - 66758 - INFO - Total Patch Process time: 0:08:52.167602
+2026-04-04 02:14:55,453 - 66758 - INFO - Log file ./logs/patching_2026-04-04_FL-UAT.log uploaded to s3://q2-2026-aws-security-patching/FL-UAT_Patch/2026-04-04/patching_2026-04-04_FL-UAT.log

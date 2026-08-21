@@ -1,0 +1,262 @@
+2026-04-02 00:10:02,938 - 4148966 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-02 00:10:02,938 - 4148966 - INFO - Script Start Time: 2026-04-02 00:10:02
+2026-04-02 00:10:03,307 - 4148966 - INFO - Instance(s) selected for Patching: {'i-070855064a67a90ec': '172.30.64.15'}
+2026-04-02 00:10:03,392 - 4148966 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 00:10:03,393 - 4148966 - INFO - Now patching instances at: 2026-04-02 00:10:03
+2026-04-02 00:10:03,533 - 4148966 - INFO - Sending patch command to instance i-070855064a67a90ec
+2026-04-02 00:10:03,743 - 4148966 - INFO - Command sent successfully to instance i-070855064a67a90ec. Command ID: 5c5a8d46-3a81-4309-8bc0-8916ca4b3702
+2026-04-02 00:16:35,596 - 4148966 - INFO - All patches applied successfully.
+2026-04-02 00:16:35,597 - 4148966 - INFO - Patching end time: 2026-04-02 00:16:35
+2026-04-02 00:16:35,597 - 4148966 - INFO - Patch Elapsed time: 0:06:32.203932
+2026-04-02 00:16:35,671 - 4148966 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 00:16:35,671 - 4148966 - INFO - Confirmed - services are stopped
+2026-04-02 00:16:43,668 - 4148966 - INFO - Discovered TG map: {'i-070855064a67a90ec': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2']}
+2026-04-02 00:16:44,134 - 4148966 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: d2e44472-8aef-45b7-95a7-669aef49bbff)
+2026-04-02 00:17:14,245 - 4148966 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 04:16:44.509436
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 68.9G | 221.0G | 23% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 3.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 23
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict, caseys_vomobadm
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+caseys_vomobadm | /data/batchapp/softeon/caseysuat/voiceadminserver
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1925362 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+2921 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3157 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 04:16:49.827437
+==============================================================================
+
+2026-04-02 00:17:14,245 - 4148966 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-04-02 00:17:14,246 - 4148966 - INFO - Before patching validation saved to: output/validation-2026-04-02/172.30.64.15-BeforePatching-2026-04-02-00-17-14-246.log
+2026-04-02 00:17:14,247 - 4148966 - INFO - Deregistering i-070855064a67a90ec from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2
+2026-04-02 00:17:14,366 - 4148966 - INFO - Stopping EC2 instance: i-070855064a67a90ec at 2026-04-02 00:17:14
+2026-04-02 00:19:46,189 - 4148966 - INFO - Instance i-070855064a67a90ec stopped successfully.
+2026-04-02 00:19:46,334 - 4148966 - INFO - Stopped i-070855064a67a90ec in 0:02:31.968273
+2026-04-02 00:19:46,335 - 4148966 - INFO - Starting EC2 instance: i-070855064a67a90ec
+2026-04-02 00:20:02,291 - 4148966 - INFO - Instance i-070855064a67a90ec started successfully.
+2026-04-02 00:20:02,291 - 4148966 - INFO - Waiting 100 seconds for SSM agent to be ready on i-070855064a67a90ec...
+2026-04-02 00:21:42,392 - 4148966 - INFO - Registering i-070855064a67a90ec to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/CASEYS-UAT-WMS/81845ba61e6f86c2
+2026-04-02 00:25:43,528 - 4148966 - INFO - Sent app_validation.py to i-070855064a67a90ec (command_id: 31ce3fca-578a-4a0b-a390-9e02bc92bda6)
+2026-04-02 00:26:13,628 - 4148966 - INFO - app_validation.py output for i-070855064a67a90ec:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 04:25:43.799851
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.64.15
+Hostname | ip-172-30-64-15.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 68.7G | 221.1G | 23% | /data
+fs-1463866f.efs.us-east-2.amazonaws.com:/ | 0B | 3.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1463866f.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.64.15 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | caseys_dwa, caseys_event, caseys_lbl, caseys_repl, caseys_rccl, caseys_rplpri, caseys_rpt, caseys_jqgrid, caseys_sch, caseys_inbq, caseys_wld, caseys_otp, caseys_lpick, caseys_vomob1, caseys_vomob2, caseys_apick, caseys_divm, caseys_divla, caseys_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+caseys_dwa | /data/batchapp/softeon/caseysuat/downloaddaemon
+caseys_event | /data/batchapp/softeon/caseysuat/eventdaemon
+caseys_lbl | /data/batchapp/softeon/caseysuat/labeldaemon
+caseys_repl | /data/batchapp/softeon/caseysuat/replenishmentdaemon
+caseys_rccl | /data/batchapp/softeon/caseysuat/replenishmentpickloccanceldaemon
+caseys_rplpri | /data/batchapp/softeon/caseysuat/replenishmentpriorityupdatedaemon
+caseys_rpt | /data/batchapp/softeon/caseysuat/reportdaemon
+caseys_jqgrid | /data/batchapp/softeon/caseysuat/reportjqgridexportdaemon
+caseys_sch | /data/batchapp/softeon/caseysuat/schedulardaemon
+caseys_inbq | /data/batchapp/softeon/caseysuat/uploaddeamon
+caseys_wld | /data/batchapp/softeon/caseysuat/wavelaunchdaemon
+caseys_otp | /data/batchapp/softeon/caseysuat/ordertruckplanning
+caseys_lpick | /data/batchapp/softeon/caseysuat/ptcdaemon
+caseys_vomob1 | /data/batchapp/softeon/caseysuat/voicemobiledaemon1
+caseys_vomob2 | /data/batchapp/softeon/caseysuat/voicemobiledaemon2
+caseys_apick | /data/batchapp/softeon/caseysuat/putwallpickconfirmationdaemon
+caseys_divm | /data/batchapp/softeon/caseysuat/divertmessagedaemon
+caseys_divla | /data/batchapp/softeon/caseysuat/divertlaneassignmentdaemon
+caseys_ict | /data/batchapp/softeon/caseysuat/ictdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2600 | caseysuat | jboss730eap | caseysuat_jb730 | 8081 | 172.30.64.15:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseysuat/standalone
+3046 | caseyswesuat | jboss730eap | caseyswes_jb730 | 8080 | 172.30.64.15:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/caseyswesuat/standalone
+3254 | putwallsimulation | jboss730eap | simul_jb730 | 8082 | 172.30.64.15:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/putwallsimulation/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 04:25:48.829592
+==============================================================================
+
+2026-04-02 00:26:13,628 - 4148966 - ERROR - app_validation.py errors for i-070855064a67a90ec:
+
+2026-04-02 00:26:13,629 - 4148966 - INFO - After patching validation saved to: output/validation-2026-04-02/172.30.64.15-AfterPatching-2026-04-02-00-26-13-629.log
+2026-04-02 00:26:13,681 - 4148966 - INFO - Validation comparison report generated: output/validation-2026-04-02/172.30.64.15-Validation-details-2026-04-02-00-26-13-629.html
+2026-04-02 00:26:13,752 - 4148966 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-02 00:26:13,752 - 4148966 - INFO - HTML validation report email sent for i-070855064a67a90ec
+2026-04-02 00:26:13,912 - 4148966 - INFO - Started i-070855064a67a90ec in 0:06:27.577203
+2026-04-02 00:26:13,913 - 4148966 - INFO - All instances processed.
+2026-04-02 00:26:13,918 - 4148966 - INFO - Restart Total time: 0:09:38.115159
+2026-04-02 00:26:13,918 - 4148966 - INFO - Auto-confirmed services are restarted
+2026-04-02 00:26:13,918 - 4148966 - INFO - Confirmed - services are started
+2026-04-02 00:26:14,066 - 4148966 - INFO - The following instances have failed the patch: []
+2026-04-02 00:26:14,067 - 4148966 - INFO - No instances have failed the patch.
+2026-04-02 00:26:14,067 - 4148966 - INFO - Total Patch Process time: 0:16:11.127966
+2026-04-02 00:27:14,533 - 4148966 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-02_Caseys-uat-2.log to q2-2026-aws-security-patching/Caseys-uat-2_Patch/2026-04-02/patching_2026-04-02_Caseys-uat-2.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

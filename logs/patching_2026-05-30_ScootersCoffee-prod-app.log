@@ -1,0 +1,439 @@
+2026-05-30 03:00:03,972 - 1842259 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 03:13:45,877 - 1842259 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 03:13:46,050 - 1842259 - INFO - Log file ./logs/backup_2026-05-30.log uploaded to s3://q3-2025-aws-security-patching/ScootersCoffee-prod-app_Patch_Backup/2026-05-30/backup_2026-05-30.log
+2026-05-30 07:00:03,345 - 1852582 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-30 07:00:03,345 - 1852582 - INFO - Script Start Time: 2026-05-30 07:00:03
+2026-05-30 07:00:03,969 - 1852582 - INFO - Instance(s) selected for Patching: {'i-0fd39683ed57ee303': '172.30.162.4', 'i-011a8e6a57dfc60e7': '172.30.162.40'}
+2026-05-30 07:00:04,079 - 1852582 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 07:00:04,080 - 1852582 - INFO - Now patching instances at: 2026-05-30 07:00:04
+2026-05-30 07:00:04,198 - 1852582 - INFO - Sending patch command to instance i-011a8e6a57dfc60e7
+2026-05-30 07:00:04,361 - 1852582 - INFO - Command sent successfully to instance i-011a8e6a57dfc60e7. Command ID: 9d03c274-f177-4fef-9d51-9f7c9325a52a
+2026-05-30 07:00:04,702 - 1852582 - INFO - Sending patch command to instance i-0fd39683ed57ee303
+2026-05-30 07:00:04,799 - 1852582 - INFO - Command sent successfully to instance i-0fd39683ed57ee303. Command ID: 3c8dc283-2297-4698-940c-b9ddf27e2d6a
+2026-05-30 07:08:07,275 - 1852582 - INFO - All patches applied successfully.
+2026-05-30 07:08:07,275 - 1852582 - INFO - Patching end time: 2026-05-30 07:08:07
+2026-05-30 07:08:07,275 - 1852582 - INFO - Patch Elapsed time: 0:08:03.195629
+2026-05-30 07:08:07,345 - 1852582 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-30 07:08:07,345 - 1852582 - INFO - Confirmed - services are stopped
+2026-05-30 07:08:15,199 - 1852582 - INFO - Discovered TG map: {'i-0fd39683ed57ee303': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62'], 'i-011a8e6a57dfc60e7': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62']}
+2026-05-30 07:08:15,669 - 1852582 - INFO - Sent app_validation.py to i-011a8e6a57dfc60e7 (command_id: 268f9886-e237-49fd-969b-be6f2f8c4025)
+2026-05-30 07:08:45,734 - 1852582 - INFO - app_validation.py output for i-011a8e6a57dfc60e7:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 11:08:15.922637
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.40
+Hostname | ip-172-30-162-40.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 27.8G | 212.1G | 11% | /data
+fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | 0B | 52.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.40:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 12
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.40 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4426 | scootersprod | jboss740eap | scootersp_jb74 | 8080 | 172.30.162.40:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersprod/standalone
+4385 | scootersrfprod | jboss740eap | scootersprf_jb7 | 8081 | 172.30.162.40:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersrfprod/standalone
+4412 | scooterswsprod | jboss740eap | scooterspw_jb74 | 8082 | 172.30.162.40:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scooterswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 11:08:16.553197
+==============================================================================
+
+2026-05-30 07:08:45,734 - 1852582 - ERROR - app_validation.py errors for i-011a8e6a57dfc60e7:
+
+2026-05-30 07:08:45,736 - 1852582 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.40/172.30.162.40-BeforePatching-2026-05-30-07-08-45-735.log
+2026-05-30 07:08:45,736 - 1852582 - INFO - Deregistering i-011a8e6a57dfc60e7 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56
+2026-05-30 07:08:45,850 - 1852582 - INFO - Deregistering i-011a8e6a57dfc60e7 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c
+2026-05-30 07:08:45,900 - 1852582 - INFO - Deregistering i-011a8e6a57dfc60e7 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62
+2026-05-30 07:08:45,950 - 1852582 - INFO - Stopping EC2 instance: i-011a8e6a57dfc60e7 at 2026-05-30 07:08:45
+2026-05-30 07:10:47,579 - 1852582 - INFO - Instance i-011a8e6a57dfc60e7 stopped successfully.
+2026-05-30 07:10:47,840 - 1852582 - INFO - Stopped i-011a8e6a57dfc60e7 in 0:02:01.889034
+2026-05-30 07:10:47,840 - 1852582 - INFO - Starting EC2 instance: i-011a8e6a57dfc60e7
+2026-05-30 07:11:03,624 - 1852582 - INFO - Instance i-011a8e6a57dfc60e7 started successfully.
+2026-05-30 07:11:03,624 - 1852582 - INFO - Waiting 100 seconds for SSM agent to be ready on i-011a8e6a57dfc60e7...
+2026-05-30 07:12:43,724 - 1852582 - INFO - Registering i-011a8e6a57dfc60e7 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56
+2026-05-30 07:12:43,931 - 1852582 - INFO - Registering i-011a8e6a57dfc60e7 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c
+2026-05-30 07:12:44,059 - 1852582 - INFO - Registering i-011a8e6a57dfc60e7 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62
+2026-05-30 07:14:44,868 - 1852582 - INFO - Sent app_validation.py to i-011a8e6a57dfc60e7 (command_id: 1c34d371-ef0f-4b41-a081-91815516f40a)
+2026-05-30 07:15:14,947 - 1852582 - INFO - app_validation.py output for i-011a8e6a57dfc60e7:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 11:14:45.190599
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.40
+Hostname | ip-172-30-162-40.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 26.7G | 213.2G | 11% | /data
+fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | 0B | 52.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.40:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 12
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.40 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4303 | scootersprod | jboss740eap | scootersp_jb74 | 8080 | 172.30.162.40:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersprod/standalone
+4326 | scootersrfprod | jboss740eap | scootersprf_jb7 | 8081 | 172.30.162.40:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersrfprod/standalone
+4428 | scooterswsprod | jboss740eap | scooterspw_jb74 | 8082 | 172.30.162.40:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scooterswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 11:14:46.665142
+==============================================================================
+
+2026-05-30 07:15:14,948 - 1852582 - ERROR - app_validation.py errors for i-011a8e6a57dfc60e7:
+
+2026-05-30 07:15:14,949 - 1852582 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.40/172.30.162.40-AfterPatching-2026-05-30-07-15-14-949.log
+2026-05-30 07:15:15,002 - 1852582 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.40/172.30.162.40-Validation-details-2026-05-30-07-15-14-949.html
+2026-05-30 07:15:15,417 - 1852582 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-30 07:15:15,417 - 1852582 - INFO - HTML validation report email sent for i-011a8e6a57dfc60e7
+2026-05-30 07:15:15,668 - 1852582 - INFO - Started i-011a8e6a57dfc60e7 in 0:04:27.827763
+2026-05-30 07:15:15,668 - 1852582 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-30 07:17:15,918 - 1852582 - INFO - Sent app_validation.py to i-0fd39683ed57ee303 (command_id: dade1dea-4e9c-4399-a0d6-a45bd989098b)
+2026-05-30 07:17:46,000 - 1852582 - INFO - app_validation.py output for i-0fd39683ed57ee303:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 11:17:16.137393
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.4
+Hostname | ip-172-30-162-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 27.5G | 212.3G | 11% | /data
+fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | 0B | 52.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 12
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4346 | scootersprod | jboss740eap | scootersp_jb74 | 8080 | 172.30.162.4:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersprod/standalone
+4393 | scootersrfprod | jboss740eap | scootersprf_jb7 | 8081 | 172.30.162.4:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersrfprod/standalone
+4444 | scooterswsprod | jboss740eap | scooterspw_jb74 | 8082 | 172.30.162.4:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scooterswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 11:17:16.667264
+==============================================================================
+
+2026-05-30 07:17:46,001 - 1852582 - ERROR - app_validation.py errors for i-0fd39683ed57ee303:
+
+2026-05-30 07:17:46,002 - 1852582 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.4/172.30.162.4-BeforePatching-2026-05-30-07-17-46-002.log
+2026-05-30 07:17:46,002 - 1852582 - INFO - Deregistering i-0fd39683ed57ee303 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56
+2026-05-30 07:17:46,120 - 1852582 - INFO - Deregistering i-0fd39683ed57ee303 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c
+2026-05-30 07:17:46,172 - 1852582 - INFO - Deregistering i-0fd39683ed57ee303 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62
+2026-05-30 07:17:46,221 - 1852582 - INFO - Stopping EC2 instance: i-0fd39683ed57ee303 at 2026-05-30 07:17:46
+2026-05-30 07:19:32,655 - 1852582 - INFO - Instance i-0fd39683ed57ee303 stopped successfully.
+2026-05-30 07:19:32,902 - 1852582 - INFO - Stopped i-0fd39683ed57ee303 in 0:01:46.680177
+2026-05-30 07:19:32,902 - 1852582 - INFO - Starting EC2 instance: i-0fd39683ed57ee303
+2026-05-30 07:19:48,745 - 1852582 - INFO - Instance i-0fd39683ed57ee303 started successfully.
+2026-05-30 07:19:48,745 - 1852582 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0fd39683ed57ee303...
+2026-05-30 07:21:28,811 - 1852582 - INFO - Registering i-0fd39683ed57ee303 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-Desktop/abdfdbc43e543c56
+2026-05-30 07:21:29,007 - 1852582 - INFO - Registering i-0fd39683ed57ee303 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-RF/9ed090ac8e89d91c
+2026-05-30 07:21:29,151 - 1852582 - INFO - Registering i-0fd39683ed57ee303 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-Prod-WS/c87a26c21c20dc62
+2026-05-30 07:23:30,051 - 1852582 - INFO - Sent app_validation.py to i-0fd39683ed57ee303 (command_id: 8ba75eaf-1cb1-4893-8aa9-680c33c208d2)
+2026-05-30 07:24:00,178 - 1852582 - INFO - app_validation.py output for i-0fd39683ed57ee303:
+
+==============================================================================
+Server Availability Check Started | 2026-05-30 11:23:30.297369
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.4
+Hostname | ip-172-30-162-4.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 26.2G | 213.7G | 10% | /data
+fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | 0B | 52.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-057fe56de46fc0b97.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 12
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4441 | scootersprod | jboss740eap | scootersp_jb74 | 8080 | 172.30.162.4:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersprod/standalone
+4376 | scootersrfprod | jboss740eap | scootersprf_jb7 | 8081 | 172.30.162.4:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersrfprod/standalone
+4369 | scooterswsprod | jboss740eap | scooterspw_jb74 | 8082 | 172.30.162.4:8082 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scooterswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-30 11:23:31.563952
+==============================================================================
+
+2026-05-30 07:24:00,178 - 1852582 - ERROR - app_validation.py errors for i-0fd39683ed57ee303:
+
+2026-05-30 07:24:00,186 - 1852582 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.4/172.30.162.4-AfterPatching-2026-05-30-07-24-00-185.log
+2026-05-30 07:24:00,239 - 1852582 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-30/ScootersCoffee-prod-app/172.30.162.4/172.30.162.4-Validation-details-2026-05-30-07-24-00-185.html
+2026-05-30 07:24:00,549 - 1852582 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-30 07:24:00,549 - 1852582 - INFO - HTML validation report email sent for i-0fd39683ed57ee303
+2026-05-30 07:24:00,890 - 1852582 - INFO - Started i-0fd39683ed57ee303 in 0:04:27.988280
+2026-05-30 07:24:00,891 - 1852582 - INFO - All instances processed.
+2026-05-30 07:24:00,895 - 1852582 - INFO - Restart Total time: 0:15:53.350942
+2026-05-30 07:24:00,895 - 1852582 - INFO - Auto-confirmed services are restarted
+2026-05-30 07:24:00,895 - 1852582 - INFO - Confirmed - services are started
+2026-05-30 07:24:01,009 - 1852582 - INFO - The following instances have failed the patch: []
+2026-05-30 07:24:01,010 - 1852582 - INFO - No instances have failed the patch.
+2026-05-30 07:24:01,010 - 1852582 - INFO - Total Patch Process time: 0:23:57.664053
+2026-05-30 07:25:02,174 - 1852582 - INFO - Log file ./logs/patching_2026-05-30_ScootersCoffee-prod-app.log uploaded to s3://q2-2026-aws-security-patching/ScootersCoffee-prod-app_Patch/2026-05-30/patching_2026-05-30_ScootersCoffee-prod-app.log

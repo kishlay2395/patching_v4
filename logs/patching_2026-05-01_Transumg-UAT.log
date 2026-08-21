@@ -1,0 +1,241 @@
+2026-05-01 00:05:02,005 - 99669 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-01 00:05:02,005 - 99669 - INFO - Script Start Time: 2026-05-01 00:05:02
+2026-05-01 00:05:02,277 - 99669 - INFO - Instance(s) selected for Patching: {'i-0087ba00c0adf1f4a': '172.29.10.202'}
+2026-05-01 00:05:02,370 - 99669 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-01 00:05:02,370 - 99669 - INFO - Now patching instances at: 2026-05-01 00:05:02
+2026-05-01 00:05:02,508 - 99669 - INFO - Sending patch command to instance i-0087ba00c0adf1f4a
+2026-05-01 00:05:02,685 - 99669 - INFO - Command sent successfully to instance i-0087ba00c0adf1f4a. Command ID: 03fb3f97-2999-458d-8d6b-ccfc91df960d
+2026-05-01 00:10:34,422 - 99669 - INFO - All patches applied successfully.
+2026-05-01 00:10:34,423 - 99669 - INFO - Patching end time: 2026-05-01 00:10:34
+2026-05-01 00:10:34,423 - 99669 - INFO - Patch Elapsed time: 0:05:32.052843
+2026-05-01 00:10:34,498 - 99669 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-01 00:10:34,499 - 99669 - INFO - Confirmed - services are stopped
+2026-05-01 00:10:54,236 - 99669 - INFO - Discovered TG map: {'i-0087ba00c0adf1f4a': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-UAT-Desktop/193ff1558697cf18']}
+2026-05-01 00:10:54,649 - 99669 - INFO - Sent app_validation.py to i-0087ba00c0adf1f4a (command_id: dbcf78f2-304f-4f61-af17-41b6a77d50ab)
+2026-05-01 00:11:24,778 - 99669 - INFO - app_validation.py output for i-0087ba00c0adf1f4a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-01 04:10:54.962637
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.202
+Hostname | ip-172-29-10-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 159.2G | 130.7G | 54% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | transumg_alloc, transumg_audit, transumg_carrch, transumg_carr, transumg_remtch, transumg_dws, transumg_ftp, trasumg_maudit, transumg_omas, transumg_rpt, transumg_sch, transumg_inbq, transumg_jqrpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+transumg_alloc | /data/batchapp/softeon/transumguat/allocationdaemon
+transumg_audit | /data/batchapp/softeon/transumguat/auditdaemon
+transumg_carrch | /data/batchapp/softeon/transumguat/carrierchangeprocessdaemon
+transumg_carr | /data/batchapp/softeon/transumguat/carrierinvoicematchdaemon
+transumg_remtch | /data/batchapp/softeon/transumguat/carrierinvoicerematchdaemon
+transumg_dws | /data/batchapp/softeon/transumguat/downloaddaemon
+transumg_ftp | /data/batchapp/softeon/transumguat/ftpdaemon
+trasumg_maudit | /data/batchapp/softeon/transumguat/marginauditdaemon
+transumg_omas | /data/batchapp/softeon/transumguat/massuupdatecontinuousdaemon
+transumg_rpt | /data/batchapp/softeon/transumguat/reportdaemon
+transumg_sch | /data/batchapp/softeon/transumguat/schedulardaemon
+transumg_inbq | /data/batchapp/softeon/transumguat/uploaddeamon
+transumg_jqrpt | /data/batchapp/softeon/transumguat/jqgridreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+224297 | transumguat | jboss730eap | transumg_jb730 | 8080 | 172.29.10.202:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-01 04:10:55.552190
+==============================================================================
+
+2026-05-01 00:11:24,779 - 99669 - ERROR - app_validation.py errors for i-0087ba00c0adf1f4a:
+
+2026-05-01 00:11:24,784 - 99669 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-01/Transumg-UAT/172.29.10.202/172.29.10.202-BeforePatching-2026-05-01-00-11-24-780.log
+2026-05-01 00:11:24,784 - 99669 - INFO - Deregistering i-0087ba00c0adf1f4a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-UAT-Desktop/193ff1558697cf18
+2026-05-01 00:11:24,855 - 99669 - INFO - Stopping EC2 instance: i-0087ba00c0adf1f4a at 2026-05-01 00:11:24
+2026-05-01 00:13:41,362 - 99669 - INFO - Instance i-0087ba00c0adf1f4a stopped successfully.
+2026-05-01 00:13:41,492 - 99669 - INFO - Stopped i-0087ba00c0adf1f4a in 0:02:16.637413
+2026-05-01 00:13:41,493 - 99669 - INFO - Starting EC2 instance: i-0087ba00c0adf1f4a
+2026-05-01 00:13:57,483 - 99669 - INFO - Instance i-0087ba00c0adf1f4a started successfully.
+2026-05-01 00:13:57,483 - 99669 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0087ba00c0adf1f4a...
+2026-05-01 00:15:37,511 - 99669 - INFO - Registering i-0087ba00c0adf1f4a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/TransUMG-UAT-Desktop/193ff1558697cf18
+2026-05-01 00:16:08,017 - 99669 - INFO - Sent app_validation.py to i-0087ba00c0adf1f4a (command_id: 5a08c4f7-7751-4525-a1ad-505ad23ec004)
+2026-05-01 00:16:38,095 - 99669 - INFO - app_validation.py output for i-0087ba00c0adf1f4a:
+
+==============================================================================
+Server Availability Check Started | 2026-05-01 04:16:08.419229
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.202
+Hostname | ip-172-29-10-202
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 159.4G | 130.4G | 55% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.202 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 14
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | transumg_alloc, transumg_audit, transumg_carrch, transumg_carr, transumg_remtch, transumg_dws, transumg_ftp, trasumg_maudit, transumg_omas, transumg_rpt, transumg_sch, transumg_inbq, transumg_jqrpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+transumg_alloc | /data/batchapp/softeon/transumguat/allocationdaemon
+transumg_audit | /data/batchapp/softeon/transumguat/auditdaemon
+transumg_carrch | /data/batchapp/softeon/transumguat/carrierchangeprocessdaemon
+transumg_carr | /data/batchapp/softeon/transumguat/carrierinvoicematchdaemon
+transumg_remtch | /data/batchapp/softeon/transumguat/carrierinvoicerematchdaemon
+transumg_dws | /data/batchapp/softeon/transumguat/downloaddaemon
+transumg_ftp | /data/batchapp/softeon/transumguat/ftpdaemon
+trasumg_maudit | /data/batchapp/softeon/transumguat/marginauditdaemon
+transumg_omas | /data/batchapp/softeon/transumguat/massuupdatecontinuousdaemon
+transumg_rpt | /data/batchapp/softeon/transumguat/reportdaemon
+transumg_sch | /data/batchapp/softeon/transumguat/schedulardaemon
+transumg_inbq | /data/batchapp/softeon/transumguat/uploaddeamon
+transumg_jqrpt | /data/batchapp/softeon/transumguat/jqgridreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3962 | transumguat | jboss730eap | transumg_jb730 | 8080 | 172.29.10.202:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/transumguat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-01 04:16:09.319734
+==============================================================================
+
+2026-05-01 00:16:38,095 - 99669 - ERROR - app_validation.py errors for i-0087ba00c0adf1f4a:
+
+2026-05-01 00:16:38,097 - 99669 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-01/Transumg-UAT/172.29.10.202/172.29.10.202-AfterPatching-2026-05-01-00-16-38-096.log
+2026-05-01 00:16:38,158 - 99669 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-01/Transumg-UAT/172.29.10.202/172.29.10.202-Validation-details-2026-05-01-00-16-38-096.html
+2026-05-01 00:16:38,359 - 99669 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-01 00:16:38,359 - 99669 - INFO - HTML validation report email sent for i-0087ba00c0adf1f4a
+2026-05-01 00:16:38,500 - 99669 - INFO - Started i-0087ba00c0adf1f4a in 0:02:57.006843
+2026-05-01 00:16:38,500 - 99669 - INFO - All instances processed.
+2026-05-01 00:16:38,505 - 99669 - INFO - Restart Total time: 0:06:03.872478
+2026-05-01 00:16:38,505 - 99669 - INFO - Auto-confirmed services are restarted
+2026-05-01 00:16:38,505 - 99669 - INFO - Confirmed - services are started
+2026-05-01 00:16:38,626 - 99669 - INFO - The following instances have failed the patch: []
+2026-05-01 00:16:38,626 - 99669 - INFO - No instances have failed the patch.
+2026-05-01 00:16:38,626 - 99669 - INFO - Total Patch Process time: 0:11:36.620963
+2026-05-01 00:17:38,992 - 99669 - INFO - Log file ./logs/patching_2026-05-01_Transumg-UAT.log uploaded to s3://q2-2026-aws-security-patching/Transumg-UAT_Patch/2026-05-01/patching_2026-05-01_Transumg-UAT.log

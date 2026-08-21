@@ -1,0 +1,453 @@
+2026-03-29 03:20:02,681 - 3942883 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-03-29 03:20:02,681 - 3942883 - INFO - Script Start Time: 2026-03-29 03:20:02
+2026-03-29 03:20:02,927 - 3942883 - INFO - Instance(s) selected for Patching: {'i-0a5d04b085c0f3351': '10.154.0.25', 'i-031501c72b09d5600': '10.154.0.60'}
+2026-03-29 03:20:02,992 - 3942883 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-29 03:20:02,992 - 3942883 - INFO - Now patching instances at: 2026-03-29 03:20:02
+2026-03-29 03:20:03,078 - 3942883 - INFO - Sending patch command to instance i-031501c72b09d5600
+2026-03-29 03:20:03,276 - 3942883 - INFO - Command sent successfully to instance i-031501c72b09d5600. Command ID: 8ae05e0e-7246-477e-8aa4-e9e54b00b41a
+2026-03-29 03:20:03,452 - 3942883 - INFO - Sending patch command to instance i-0a5d04b085c0f3351
+2026-03-29 03:20:03,585 - 3942883 - INFO - Command sent successfully to instance i-0a5d04b085c0f3351. Command ID: b0a37ac5-3c25-432a-9c97-5907a18e8015
+2026-03-29 03:25:35,370 - 3942883 - INFO - All patches applied successfully.
+2026-03-29 03:25:35,370 - 3942883 - INFO - Patching end time: 2026-03-29 03:25:35
+2026-03-29 03:25:35,370 - 3942883 - INFO - Patch Elapsed time: 0:05:32.378252
+2026-03-29 03:25:35,441 - 3942883 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-29 03:25:35,441 - 3942883 - INFO - Confirmed - services are stopped
+2026-03-29 03:25:56,239 - 3942883 - INFO - Discovered TG map: {'i-031501c72b09d5600': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c'], 'i-0a5d04b085c0f3351': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c']}
+2026-03-29 03:25:56,635 - 3942883 - INFO - Sent app_validation.py to i-031501c72b09d5600 (command_id: 1f36e05f-3df4-426f-87fa-0b618b1c8f47)
+2026-03-29 03:26:26,728 - 3942883 - INFO - app_validation.py output for i-031501c72b09d5600:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 02:25:57.073911
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.60
+Hostname | ip-10-154-0-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 88.3G | 151.6G | 36% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 178.3G | 0B | 0% | /data4
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 2.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 494
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+679904 | techportal | jboss720eap | portal_jb720eap | 8082 | 10.154.0.60:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techportal/standalone
+997684 | techwmsprod | jboss720eap | tcolor_jb720eap | 8080 | 10.154.0.60:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsprod/standalone
+680685 | techwmsrfprod | jboss720eap | tclrrf_jb720eap | 8081 | 10.154.0.60:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsrfprod/standalone
+682790 | techwmswsprod | jboss720eap | techwmsws_jb72 | 8083 | 10.154.0.60:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 02:25:57.836203
+==============================================================================
+
+2026-03-29 03:26:26,728 - 3942883 - ERROR - app_validation.py errors for i-031501c72b09d5600:
+
+2026-03-29 03:26:26,730 - 3942883 - INFO - Before patching validation saved to: output/validation-2026-03-29/10.154.0.60-BeforePatching-2026-03-29-03-26-26-729.log
+2026-03-29 03:26:26,730 - 3942883 - INFO - Deregistering i-031501c72b09d5600 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9
+2026-03-29 03:26:26,805 - 3942883 - INFO - Deregistering i-031501c72b09d5600 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76
+2026-03-29 03:26:26,860 - 3942883 - INFO - Deregistering i-031501c72b09d5600 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee
+2026-03-29 03:26:26,917 - 3942883 - INFO - Deregistering i-031501c72b09d5600 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae
+2026-03-29 03:26:26,967 - 3942883 - INFO - Deregistering i-031501c72b09d5600 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c
+2026-03-29 03:26:27,012 - 3942883 - INFO - Stopping EC2 instance: i-031501c72b09d5600 at 2026-03-29 03:26:27
+2026-03-29 03:27:28,140 - 3942883 - INFO - Instance i-031501c72b09d5600 stopped successfully.
+2026-03-29 03:27:28,384 - 3942883 - INFO - Stopped i-031501c72b09d5600 in 0:01:01.371781
+2026-03-29 03:27:28,385 - 3942883 - INFO - Starting EC2 instance: i-031501c72b09d5600
+2026-03-29 03:27:44,355 - 3942883 - INFO - Instance i-031501c72b09d5600 started successfully.
+2026-03-29 03:27:44,355 - 3942883 - INFO - Waiting 100 seconds for SSM agent to be ready on i-031501c72b09d5600...
+2026-03-29 03:29:24,416 - 3942883 - INFO - Registering i-031501c72b09d5600 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9
+2026-03-29 03:29:24,582 - 3942883 - INFO - Registering i-031501c72b09d5600 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76
+2026-03-29 03:29:24,719 - 3942883 - INFO - Registering i-031501c72b09d5600 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee
+2026-03-29 03:29:24,869 - 3942883 - INFO - Registering i-031501c72b09d5600 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae
+2026-03-29 03:29:25,004 - 3942883 - INFO - Registering i-031501c72b09d5600 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c
+2026-03-29 03:33:26,651 - 3942883 - INFO - Sent app_validation.py to i-031501c72b09d5600 (command_id: b2f1178f-00a7-4559-98ca-837009bbc265)
+2026-03-29 03:33:56,729 - 3942883 - INFO - app_validation.py output for i-031501c72b09d5600:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 02:33:26.975147
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.60
+Hostname | ip-10-154-0-60
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 88.3G | 151.6G | 36% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 178.3G | 0B | 0% | /data4
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 2.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 494
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3523 | techportal | jboss720eap | portal_jb720eap | 8082 | 10.154.0.60:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techportal/standalone
+3516 | techwmsprod | jboss720eap | tcolor_jb720eap | 8080 | 10.154.0.60:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsprod/standalone
+3524 | techwmsrfprod | jboss720eap | tclrrf_jb720eap | 8081 | 10.154.0.60:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsrfprod/standalone
+3548 | techwmswsprod | jboss720eap | techwmsws_jb72 | 8083 | 10.154.0.60:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 02:33:27.894040
+==============================================================================
+
+2026-03-29 03:33:56,729 - 3942883 - ERROR - app_validation.py errors for i-031501c72b09d5600:
+
+2026-03-29 03:33:56,731 - 3942883 - INFO - After patching validation saved to: output/validation-2026-03-29/10.154.0.60-AfterPatching-2026-03-29-03-33-56-730.log
+2026-03-29 03:33:56,780 - 3942883 - INFO - Validation comparison report generated: output/validation-2026-03-29/10.154.0.60-Validation-details-2026-03-29-03-33-56-730.html
+2026-03-29 03:33:56,852 - 3942883 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-03-29 03:33:56,853 - 3942883 - INFO - HTML validation report email sent for i-031501c72b09d5600
+2026-03-29 03:33:57,110 - 3942883 - INFO - Started i-031501c72b09d5600 in 0:06:28.725339
+2026-03-29 03:33:57,111 - 3942883 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-03-29 03:35:57,346 - 3942883 - INFO - Sent app_validation.py to i-0a5d04b085c0f3351 (command_id: 698d7ca6-de92-4b32-b04a-39f9cd22789c)
+2026-03-29 03:36:27,453 - 3942883 - INFO - app_validation.py output for i-0a5d04b085c0f3351:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 02:35:57.658711
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.25
+Hostname | ip-10-154-0-25
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 85.6G | 154.3G | 35% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 178.3G | 0B | 0% | /data4
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 2.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.25:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 502
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.25 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2779355 | techportal | jboss720eap | portal_jb720eap | 8082 | 10.154.0.25:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techportal/standalone
+2779887 | techwmsprod | jboss720eap | tcolor_jb720eap | 8080 | 10.154.0.25:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsprod/standalone
+2780578 | techwmsrfprod | jboss720eap | tclrrf_jb720eap | 8081 | 10.154.0.25:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsrfprod/standalone
+2781631 | techwmswsprod | jboss720eap | techwmsws_jb72 | 8083 | 10.154.0.25:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 02:35:58.294541
+==============================================================================
+
+2026-03-29 03:36:27,453 - 3942883 - ERROR - app_validation.py errors for i-0a5d04b085c0f3351:
+
+2026-03-29 03:36:27,455 - 3942883 - INFO - Before patching validation saved to: output/validation-2026-03-29/10.154.0.25-BeforePatching-2026-03-29-03-36-27-455.log
+2026-03-29 03:36:27,455 - 3942883 - INFO - Deregistering i-0a5d04b085c0f3351 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9
+2026-03-29 03:36:27,541 - 3942883 - INFO - Deregistering i-0a5d04b085c0f3351 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76
+2026-03-29 03:36:27,590 - 3942883 - INFO - Deregistering i-0a5d04b085c0f3351 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee
+2026-03-29 03:36:27,637 - 3942883 - INFO - Deregistering i-0a5d04b085c0f3351 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae
+2026-03-29 03:36:27,682 - 3942883 - INFO - Deregistering i-0a5d04b085c0f3351 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c
+2026-03-29 03:36:27,734 - 3942883 - INFO - Stopping EC2 instance: i-0a5d04b085c0f3351 at 2026-03-29 03:36:27
+2026-03-29 03:37:43,776 - 3942883 - INFO - Instance i-0a5d04b085c0f3351 stopped successfully.
+2026-03-29 03:37:44,012 - 3942883 - INFO - Stopped i-0a5d04b085c0f3351 in 0:01:16.277434
+2026-03-29 03:37:44,012 - 3942883 - INFO - Starting EC2 instance: i-0a5d04b085c0f3351
+2026-03-29 03:37:59,906 - 3942883 - INFO - Instance i-0a5d04b085c0f3351 started successfully.
+2026-03-29 03:37:59,906 - 3942883 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a5d04b085c0f3351...
+2026-03-29 03:39:39,946 - 3942883 - INFO - Registering i-0a5d04b085c0f3351 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Desktop/2dc11389f9e620a9
+2026-03-29 03:39:40,124 - 3942883 - INFO - Registering i-0a5d04b085c0f3351 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-RF/20e22eabf1dd3f76
+2026-03-29 03:39:40,388 - 3942883 - INFO - Registering i-0a5d04b085c0f3351 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService/79378419720e10ee
+2026-03-29 03:39:40,537 - 3942883 - INFO - Registering i-0a5d04b085c0f3351 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-Portal-Ext/d37f739216b5eeae
+2026-03-29 03:39:40,669 - 3942883 - INFO - Registering i-0a5d04b085c0f3351 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Technicolor-Prod-WebService-Ext/ef3aab2e20b4746c
+2026-03-29 03:43:41,804 - 3942883 - INFO - Sent app_validation.py to i-0a5d04b085c0f3351 (command_id: b4a015dc-3d6f-4c3d-aad9-844483f73b6d)
+2026-03-29 03:44:11,885 - 3942883 - INFO - app_validation.py output for i-0a5d04b085c0f3351:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 02:43:42.142452
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.25
+Hostname | ip-10-154-0-25
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 85.6G | 154.3G | 35% | /data
+fs-892ad33d.efs.us-east-1.amazonaws.com:/ | 0B | 178.3G | 0B | 0% | /data4
+fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | 0B | 2.1T | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-892ad33d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+NFS_MOUNT | fs-9c78b61d.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.25:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 502
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.25 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3505 | techportal | jboss720eap | portal_jb720eap | 8082 | 10.154.0.25:8082 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techportal/standalone
+3349 | techwmsprod | jboss720eap | tcolor_jb720eap | 8080 | 10.154.0.25:8080 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsprod/standalone
+3513 | techwmsrfprod | jboss720eap | tclrrf_jb720eap | 8081 | 10.154.0.25:8081 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmsrfprod/standalone
+3370 | techwmswsprod | jboss720eap | techwmsws_jb72 | 8083 | 10.154.0.25:8083 | UP | 200 | Disabled | /data/app/jboss720eap/softeon/techwmswsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 02:43:43.088684
+==============================================================================
+
+2026-03-29 03:44:11,885 - 3942883 - ERROR - app_validation.py errors for i-0a5d04b085c0f3351:
+
+2026-03-29 03:44:11,887 - 3942883 - INFO - After patching validation saved to: output/validation-2026-03-29/10.154.0.25-AfterPatching-2026-03-29-03-44-11-887.log
+2026-03-29 03:44:11,945 - 3942883 - INFO - Validation comparison report generated: output/validation-2026-03-29/10.154.0.25-Validation-details-2026-03-29-03-44-11-887.html
+2026-03-29 03:44:12,011 - 3942883 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-03-29 03:44:12,011 - 3942883 - INFO - HTML validation report email sent for i-0a5d04b085c0f3351
+2026-03-29 03:44:12,258 - 3942883 - INFO - Started i-0a5d04b085c0f3351 in 0:06:28.245327
+2026-03-29 03:44:12,258 - 3942883 - INFO - All instances processed.
+2026-03-29 03:44:12,261 - 3942883 - INFO - Restart Total time: 0:18:36.631176
+2026-03-29 03:44:12,262 - 3942883 - INFO - Auto-confirmed services are restarted
+2026-03-29 03:44:12,262 - 3942883 - INFO - Confirmed - services are started
+2026-03-29 03:44:12,377 - 3942883 - INFO - The following instances have failed the patch: []
+2026-03-29 03:44:12,377 - 3942883 - INFO - No instances have failed the patch.
+2026-03-29 03:44:12,377 - 3942883 - INFO - Total Patch Process time: 0:24:09.695422
+2026-03-29 03:44:12,672 - 3942883 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-29 03:45:12,885 - 3942883 - INFO - Log file ./logs/patching_2026-03-29_Technicolor-Prod-App.log uploaded to s3://q1-2026-aws-security-patching/Technicolor-Prod-App_Patch/2026-03-29/patching_2026-03-29_Technicolor-Prod-App.log

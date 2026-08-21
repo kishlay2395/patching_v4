@@ -1,0 +1,231 @@
+2026-06-28 00:10:03,104 - 3389002 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-28 00:10:03,104 - 3389002 - INFO - Script Start Time: 2026-06-28 00:10:03
+2026-06-28 00:10:03,531 - 3389002 - INFO - Instance(s) selected for Patching: {'i-03fb63aa41fa3e2f8': '172.25.32.29'}
+2026-06-28 00:10:03,609 - 3389002 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-28 00:10:03,609 - 3389002 - INFO - Now patching instances at: 2026-06-28 00:10:03
+2026-06-28 00:10:04,172 - 3389002 - INFO - Sent app_validation.py to i-03fb63aa41fa3e2f8 (command_id: 8cd19f21-208d-4288-b362-81bffbe47b3a)
+2026-06-28 00:10:34,394 - 3389002 - INFO - app_validation.py output for i-03fb63aa41fa3e2f8:
+
+==============================================================================
+Server Availability Check Started | 2026-06-28 04:10:04.572016
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.29
+Hostname | ip-172-25-32-29.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.7G | 174.2G | 27% | /data
+fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | 0B | 113.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | sfbprod_dwa, sfbprod_event, sfbprod_ftp, sfbprod_lbl, sfbprod_rpt, sfbprod_jqgrid, sfbprod_sch, sfbprod_inbq, sfbprod_wsq, sfbprod_repl, sfbprod_1dwa, sfbprod_mpcpt, sfbprod_rccl, sfbprod_17wld, sfbprod_57wld, sfbprod_88wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+sfbprod_dwa | /data/batchapp/softeon/standardfiberprod/downloaddaemon
+sfbprod_event | /data/batchapp/softeon/standardfiberprod/eventdaemon
+sfbprod_ftp | /data/batchapp/softeon/standardfiberprod/ftpdaemon
+sfbprod_lbl | /data/batchapp/softeon/standardfiberprod/labeldaemon
+sfbprod_rpt | /data/batchapp/softeon/standardfiberprod/reportdaemon
+sfbprod_jqgrid | /data/batchapp/softeon/standardfiberprod/reportjqgridexportdaemon
+sfbprod_sch | /data/batchapp/softeon/standardfiberprod/schedulerdaemon
+sfbprod_inbq | /data/batchapp/softeon/standardfiberprod/uploaddaemon
+sfbprod_wsq | /data/batchapp/softeon/standardfiberprod/wsqdaemon
+sfbprod_repl | /data/batchapp/softeon/standardfiberprod/replenishmentdaemon
+sfbprod_1dwa | /data/batchapp/softeon/standardfiberprod/downloaddaemon1
+sfbprod_mpcpt | /data/batchapp/softeon/standardfiberprod/picktooldaemon
+sfbprod_rccl | /data/batchapp/softeon/standardfiberprod/replenishmentpickloccanceldaemon
+sfbprod_17wld | /data/batchapp/softeon/standardfiberprod_17/wavelaunchdaemon
+sfbprod_57wld | /data/batchapp/softeon/standardfiberprod_57/wavelaunchdaemon
+sfbprod_88wld | /data/batchapp/softeon/standardfiberprod_88/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-28 04:10:05.181488
+==============================================================================
+
+2026-06-28 00:10:34,394 - 3389002 - ERROR - app_validation.py errors for i-03fb63aa41fa3e2f8:
+
+2026-06-28 00:10:34,396 - 3389002 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-28/StandardFiber-prod-batchapp/172.25.32.29/172.25.32.29-BeforePatching-2026-06-28-00-10-34-395.log
+2026-06-28 00:10:34,479 - 3389002 - INFO - Sending patch command to instance i-03fb63aa41fa3e2f8
+2026-06-28 00:10:34,793 - 3389002 - INFO - Command sent successfully to instance i-03fb63aa41fa3e2f8. Command ID: e3a9a380-1330-4919-8ead-5f06dd7f06bd
+2026-06-28 00:16:37,423 - 3389002 - INFO - All patches applied successfully.
+2026-06-28 00:16:37,423 - 3389002 - INFO - Patching end time: 2026-06-28 00:16:37
+2026-06-28 00:16:37,423 - 3389002 - INFO - Patch Elapsed time: 0:06:33.813701
+2026-06-28 00:16:37,496 - 3389002 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-28 00:16:37,497 - 3389002 - INFO - Confirmed - services are stopped
+2026-06-28 00:16:42,756 - 3389002 - INFO - Discovered TG map: {}
+2026-06-28 00:16:43,005 - 3389002 - INFO - Stopping EC2 instance: i-03fb63aa41fa3e2f8 at 2026-06-28 00:16:43
+2026-06-28 00:17:44,496 - 3389002 - INFO - Instance i-03fb63aa41fa3e2f8 stopped successfully.
+2026-06-28 00:17:44,630 - 3389002 - INFO - Stopped i-03fb63aa41fa3e2f8 in 0:01:01.625143
+2026-06-28 00:17:44,630 - 3389002 - INFO - Starting EC2 instance: i-03fb63aa41fa3e2f8
+2026-06-28 00:18:00,579 - 3389002 - INFO - Instance i-03fb63aa41fa3e2f8 started successfully.
+2026-06-28 00:18:00,579 - 3389002 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03fb63aa41fa3e2f8...
+2026-06-28 00:19:41,182 - 3389002 - INFO - Sent app_validation.py to i-03fb63aa41fa3e2f8 (command_id: b437edbd-e165-41ed-92c5-1f93ddac8ec0)
+2026-06-28 00:20:11,332 - 3389002 - INFO - app_validation.py output for i-03fb63aa41fa3e2f8:
+
+==============================================================================
+Server Availability Check Started | 2026-06-28 04:19:41.450992
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.25.32.29
+Hostname | ip-172-25-32-29.us-west-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 65.7G | 174.2G | 27% | /data
+fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | 0B | 113.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-02b82f564cea7d7c9.efs.us-west-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.25.32.29:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 73
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.25.32.29 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-28 04:19:41.748339
+==============================================================================
+
+2026-06-28 00:20:11,332 - 3389002 - ERROR - app_validation.py errors for i-03fb63aa41fa3e2f8:
+
+2026-06-28 00:20:11,335 - 3389002 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-28/StandardFiber-prod-batchapp/172.25.32.29/172.25.32.29-AfterPatching-2026-06-28-00-20-11-334.log
+2026-06-28 00:20:11,398 - 3389002 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-28/StandardFiber-prod-batchapp/172.25.32.29/172.25.32.29-Validation-details-2026-06-28-00-20-11-334.html
+2026-06-28 00:20:11,887 - 3389002 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-28 00:20:11,887 - 3389002 - INFO - HTML validation report email sent for i-03fb63aa41fa3e2f8
+2026-06-28 00:20:12,028 - 3389002 - INFO - Started i-03fb63aa41fa3e2f8 in 0:02:27.397040
+2026-06-28 00:20:12,028 - 3389002 - INFO - All instances processed.
+2026-06-28 00:20:12,031 - 3389002 - INFO - Restart Total time: 0:03:34.408865
+2026-06-28 00:20:12,031 - 3389002 - INFO - Auto-confirmed services are restarted
+2026-06-28 00:20:12,031 - 3389002 - INFO - Confirmed - services are started
+2026-06-28 00:20:12,250 - 3389002 - INFO - The following instances have failed the patch: []
+2026-06-28 00:20:12,250 - 3389002 - INFO - No instances have failed the patch.
+2026-06-28 00:20:12,250 - 3389002 - INFO - Total Patch Process time: 0:10:09.145776
+2026-06-28 00:21:12,589 - 3389002 - INFO - Log file ./logs/patching_2026-06-28_StandardFiber-prod-batchapp.log uploaded to s3://q2-2026-aws-security-patching/StandardFiber-prod-batchapp_Patch/2026-06-28/patching_2026-06-28_StandardFiber-prod-batchapp.log

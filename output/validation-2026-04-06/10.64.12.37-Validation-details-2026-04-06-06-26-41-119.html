@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validation Comparison Report</title>
+<style>
+body {
+  font-family: Arial, sans-serif; margin: 0; padding: 20px;
+  background: #f5f7fb; color: #222;
+}
+.container {
+  max-width: 1250px; margin: 0 auto; background: #fff;
+  border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;
+}
+.header { background: #1976D2; color: #fff; padding: 20px 24px; }
+.header h1 { margin: 0; font-size: 24px; }
+.submeta { margin-top: 8px; font-size: 13px; opacity: 0.95; }
+.content { padding: 24px; }
+.status-box {
+  margin: 0 0 18px 0; padding: 12px 14px; border-radius: 8px;
+  border-left: 5px solid #FF9800;
+  background: #FFF3E0;
+}
+.summary {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px;
+}
+.card {
+  border: 1px solid #e6eaf0; border-left: 4px solid #1976D2;
+  border-radius: 8px; padding: 12px; background: #fafcff;
+}
+.card .label { font-size: 12px; color: #666; margin-bottom: 4px; }
+.card .value { font-size: 24px; font-weight: 700; }
+h2 { margin-top: 28px; border-bottom: 2px solid #1976D2; padding-bottom: 6px; font-size: 18px; }
+table {
+  width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 20px;
+  table-layout: fixed; word-wrap: break-word;
+}
+th, td {
+  border: 1px solid #e0e0e0; padding: 10px; text-align: left; vertical-align: top; font-size: 13px;
+}
+th { background: #1976D2; color: #fff; }
+tr:nth-child(even) td { background: #fafafa; }
+.ok { color: #2E7D32; font-weight: 700; }
+.warn { color: #D84315; font-weight: 700; }
+.attention-title { color: #C62828; }
+.attention-details { color: #C62828; font-weight: 600; }
+.footer {
+  border-top: 1px solid #e0e0e0; background: #fafafa; padding: 14px 24px; font-size: 12px; color: #666;
+}
+@media (max-width: 900px) { .summary { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .summary { grid-template-columns: 1fr; }
+  th, td { font-size: 12px; padding: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Validation Comparison Report</h1>
+    <div class="submeta">
+      Before log: <b>output/validation-2026-04-06/10.64.12.37-BeforePatching-2026-04-06-06-21-42-560.log</b> &nbsp; | &nbsp;
+      After log: <b>output/validation-2026-04-06/10.64.12.37-AfterPatching-2026-04-06-06-26-41-119.log</b>
+    </div>
+  </div>
+  <div class="content">
+    <div class="status-box"><strong>3 Check(s) Need Attention</strong></div>
+
+    <div class="summary">
+      <div class="card"><div class="label">Total Checks</div><div class="value">73</div></div>
+      <div class="card"><div class="label">Validated</div><div class="value">70</div></div>
+      <div class="card"><div class="label">Need Attention</div><div class="value">3</div></div>
+      <div class="card"><div class="label">Success Rate</div><div class="value">95%</div></div>
+    </div>
+
+    
+    <h2 class="attention-title">Need Attention Summary</h2>
+    <table>
+        <thead>
+            <tr>
+            <th>Section</th>
+            <th>Name</th>
+            <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr><td>Summary Comparison</td><td>Total Number of Java Processes Running</td><td class='attention-details'>Before: 52 | After: 51</td></tr><tr><td>Summary Comparison</td><td>Daemon / Batch App Processes</td><td class='attention-details'>Before: 52 | After: 51</td></tr><tr><td>Batch Processes Missing After Patching</td><td>dibssoph_2vomob</td><td class='attention-details'>Path: /data/batchapp/softeon/dibssoph2uat/voiceadminserver | Before Java: dibssoph_2vomob | After Java: Missing After Patch</td></tr>
+        </tbody>
+    </table>
+    
+
+    
+        <h2>Summary Comparison</h2>
+        <table>
+          <thead>
+            <tr><th>Section</th><th>Before Patching</th><th>Post Patching</th><th>Status</th></tr>
+          </thead>
+          <tbody><tr><td>Server IP</td><td>10.64.12.37</td><td>10.64.12.37</td><td class='ok'>Validated</td></tr><tr><td>Time Zone Information</td><td>UTC</td><td>UTC</td><td class='ok'>Validated</td></tr><tr><td>Mounted on (data*)</td><td>/data, /data2</td><td>/data, /data2</td><td class='ok'>Validated</td></tr><tr><td>Shared Mount point</td><td>Not Found</td><td>Not Found</td><td class='ok'>Validated</td></tr><tr><td>NFS Server Package Availability</td><td>Service Available</td><td>Service Available</td><td class='ok'>Validated</td></tr><tr><td>NFS Server Status</td><td>not running</td><td>not running</td><td class='ok'>Validated</td></tr><tr><td>NFS Client Target Package Availability</td><td>Service Available</td><td>Service Available</td><td class='ok'>Validated</td></tr><tr><td>NFS Client Target Status</td><td>running</td><td>running</td><td class='ok'>Validated</td></tr><tr><td>Cups Service Status</td><td>running</td><td>running</td><td class='ok'>Validated</td></tr><tr><td>CUPS Service Version</td><td>1.7.5</td><td>1.7.5</td><td class='ok'>Validated</td></tr><tr><td>CUPS IP URL Validation</td><td>HTTP 200</td><td>HTTP 200</td><td class='ok'>Validated</td></tr><tr><td>JBOSS Application URL Validation</td><td>Not Found/Not Running</td><td>Not Found/Not Running</td><td class='ok'>Validated</td></tr><tr><td>FTP Service Status</td><td>not running</td><td>not running</td><td class='ok'>Validated</td></tr><tr><td>Number of Printers</td><td>71</td><td>71</td><td class='ok'>Validated</td></tr><tr><td>Total Number of Java Processes Running</td><td>52</td><td>51</td><td class='warn'>Need Attention</td></tr><tr><td>Daemon / Batch App Processes</td><td>52</td><td>51</td><td class='warn'>Need Attention</td></tr><tr><td>App Processes Running</td><td>0</td><td>0</td><td class='ok'>Validated</td></tr><tr><td>Total App URL Running </td><td>0</td><td>0</td><td class='ok'>Validated</td></tr></tbody>
+        </table>
+        
+
+    
+        <h2>Batch Processes Missing After Patching</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Agent Path</th>
+              <th>Before Patching Java Name</th>
+              <th>After Patching Java Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/downloaddaemon</td><td>wmsph2uat_dwa</td><td>wmsph2uat_dwa</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/eventdaemon</td><td>wmsph2uat_event</td><td>wmsph2uat_event</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/labeldaemon</td><td>wmsph2uat_lbl</td><td>wmsph2uat_lbl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/replenishmentdaemon</td><td>wmsph2uat_repl</td><td>wmsph2uat_repl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/reportdaemon</td><td>wmsph2uat_rpt</td><td>wmsph2uat_rpt</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/reportdaemon1</td><td>wmsph2uat_1_rpt</td><td>wmsph2uat_1_rpt</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/reportjqgridexportdaemon</td><td>wmsph2uat_jqgrd</td><td>wmsph2uat_jqgrd</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/schedulardaemon</td><td>wmsph2uat_sch</td><td>wmsph2uat_sch</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/uploaddaemon</td><td>wmsph2uat_inbq</td><td>wmsph2uat_inbq</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/voicemobiledaemon</td><td>wmsph2uat_vomob</td><td>wmsph2uat_vomob</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/clustercreationdaemon</td><td>wmsph2uat_ccd</td><td>wmsph2uat_ccd</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/wavelaunchdaemon</td><td>wmsph2uat_wld</td><td>wmsph2uat_wld</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/replenishmentpriorityupdatedaemon</td><td>wmsph2uat_rplp</td><td>wmsph2uat_rplp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/autobatchdistributiondaemon</td><td>wmsph2uat_abd</td><td>wmsph2uat_abd</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/replpickloccanceldaemon</td><td>wmsph2uat_rccl</td><td>wmsph2uat_rccl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/ftpdaemon</td><td>wmsph2uat_ftp</td><td>wmsph2uat_ftp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/zebraprintdaemon</td><td>wmsph2uat_zplp</td><td>wmsph2uat_zplp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmsph2uat/hardallocationdaemon</td><td>wmsph2uat_harp</td><td>wmsph2uat_harp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibssoph2uat/downloaddaemon</td><td>dibssoph2_dwa</td><td>dibssoph2_dwa</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibssoph2uat/schedulardaemon</td><td>dibssoph2_sch</td><td>dibssoph2_sch</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibssoph2uat/voiceadminserver</td><td>dibssoph_2vomob</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/autobatchdistributiondaemon</td><td>wmssik_abchdis</td><td>wmssik_abchdis</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/clustercreationdaemon</td><td>wmssik_ccd</td><td>wmssik_ccd</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/downloaddaemon</td><td>wmssik_dwa</td><td>wmssik_dwa</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/eventdaemon</td><td>wmssik_event</td><td>wmssik_event</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/ftpdaemon</td><td>wmssik_ftp</td><td>wmssik_ftp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/hardallocationdaemon</td><td>wmssik_harp</td><td>wmssik_harp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/labeldaemon</td><td>wmssik_lbl</td><td>wmssik_lbl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/replenishmentdaemon</td><td>wmssik_repl</td><td>wmssik_repl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/replenishmentpickloccanceldaemon</td><td>wmssik_rccl</td><td>wmssik_rccl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/reportdaemon</td><td>wmssik_rpt</td><td>wmssik_rpt</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/reportdaemon1</td><td>wmssik_1rpt</td><td>wmssik_1rpt</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/reportjqgridexportdaemon</td><td>wmssik_jqgrid</td><td>wmssik_jqgrid</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/schedulardaemon</td><td>wmssik_sch</td><td>wmssik_sch</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/uploaddeamon</td><td>wmssik_inbq</td><td>wmssik_inbq</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/voicemobiledaemon3</td><td>wmssik_3vomob</td><td>wmssik_3vomob</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibwmssikuat/wavelaunchdaemon</td><td>wmssik_wld</td><td>wmssik_wld</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/downloaddaemon</td><td>domph2uat_dwa</td><td>domph2uat_dwa</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/eventdaemon</td><td>domph2uat_event</td><td>domph2uat_event</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/ftpdaemon</td><td>domph2uat_ftp</td><td>domph2uat_ftp</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/uploaddaemon</td><td>domph2uat_inbq</td><td>domph2uat_inbq</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/holddaemon</td><td>domph2uat_hld</td><td>domph2uat_hld</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/massupdatedaemon</td><td>domph2uat_omas</td><td>domph2uat_omas</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/ordersplitdaemon</td><td>domph2uat_prls</td><td>domph2uat_prls</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/schedulardaemon</td><td>domph2uat_sch</td><td>domph2uat_sch</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/shipconfirmfillkilldaemon</td><td>domph2uat_scfk</td><td>domph2uat_scfk</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/wmsreleasedaemon</td><td>domph2uat_wmsrl</td><td>domph2uat_wmsrl</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/reportdaemon</td><td>domph2uat_rpt</td><td>domph2uat_rpt</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/reportjqgridexportdaemon</td><td>domph2uat_jqgrd</td><td>domph2uat_jqgrd</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/ordercreationdaemon</td><td>domph2uat_ord</td><td>domph2uat_ord</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/genericdaemon</td><td>domph2uat_gener</td><td>domph2uat_gener</td><td class='ok'>Validated</td></tr><tr><td>Batch Process Detail</td><td>/data/batchapp/softeon/dibdomsph2uat/sourcingthreaddaemon</td><td>domph2uat_thsrc</td><td>domph2uat_thsrc</td><td class='ok'>Validated</td></tr></tbody>
+        </table>
+        
+
+    
+        <h2>Application Process Details</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Section / URL</th>
+              <th>Application Path</th>
+              <th>Before Patching Java Name</th>
+              <th>After Patching Java Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody><tr><td>Total App Processes Running</td><td>-</td><td>0</td><td>0</td><td class='ok'>Validated</td></tr></tbody>
+        </table>
+        
+
+    <h2>Application URL Status Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>URL Address</th>
+          <th>Pre-Status</th>
+          <th>Post-Status</th>
+          <th>Status</th>
+          <th>Pre_HttpCode</th>
+          <th>Post_HttpCode</th>
+          <th>HTTP Compare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cups server Http Status</td><td>200</td><td>200</td><td class='ok'>Validated</td><td>-</td><td>-</td><td class='warn'>-</td></tr><tr><td>Cups printers Http Status</td><td>200</td><td>200</td><td class='ok'>Validated</td><td>-</td><td>-</td><td class='warn'>-</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer">
+    Generated at 2026-04-06 06:26:41
+  </div>
+</div>
+</body>
+</html>

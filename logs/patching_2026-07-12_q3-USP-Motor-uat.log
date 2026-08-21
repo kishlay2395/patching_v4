@@ -1,0 +1,563 @@
+2026-07-12 00:05:02,493 - 4161077 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-12 00:05:02,493 - 4161077 - INFO - Script Start Time: 2026-07-12 00:05:02
+2026-07-12 00:05:02,761 - 4161077 - INFO - Instance(s) selected for Patching: {'i-075f7294d9df0d053': '172.30.130.12'}
+2026-07-12 00:05:02,839 - 4161077 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-12 00:05:02,839 - 4161077 - INFO - Now patching instances at: 2026-07-12 00:05:02
+2026-07-12 00:05:08,160 - 4161077 - INFO - i-075f7294d9df0d053: Cron was active = True
+2026-07-12 00:05:08,376 - 4161077 - INFO - Health monitor crontab disabled on all instances
+2026-07-12 00:05:08,378 - 4161077 - INFO - Disabled cron for: ['i-075f7294d9df0d053']
+2026-07-12 00:05:08,694 - 4161077 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: e1161d33-b107-40ce-9315-010c7d0faa62)
+2026-07-12 00:05:38,781 - 4161077 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-07-12 04:05:08.989809
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 200.6G | 89.2G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.130.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 11
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 12
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3173 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+3157 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-12 04:05:13.712135
+==============================================================================
+
+2026-07-12 00:05:38,782 - 4161077 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-07-12 00:05:38,783 - 4161077 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-BeforePatching-2026-07-12-00-05-38-783.log
+2026-07-12 00:05:38,867 - 4161077 - INFO - Sending patch command to instance i-075f7294d9df0d053
+2026-07-12 00:05:39,020 - 4161077 - INFO - Command sent successfully to instance i-075f7294d9df0d053. Command ID: e1a181d6-c420-4501-a50c-29fdfca38b87
+2026-07-12 00:15:11,201 - 4161077 - INFO - All patches applied successfully.
+2026-07-12 00:15:11,201 - 4161077 - INFO - Patching end time: 2026-07-12 00:15:11
+2026-07-12 00:15:11,201 - 4161077 - INFO - Patch Elapsed time: 0:10:08.361987
+2026-07-12 00:15:11,286 - 4161077 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-12 00:15:11,287 - 4161077 - INFO - Confirmed - services are stopped
+2026-07-12 00:15:18,264 - 4161077 - INFO - Discovered TG map: {'i-075f7294d9df0d053': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d']}
+2026-07-12 00:15:18,506 - 4161077 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274
+2026-07-12 00:15:18,601 - 4161077 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a
+2026-07-12 00:15:18,650 - 4161077 - INFO - Deregistering i-075f7294d9df0d053 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d
+2026-07-12 00:15:18,703 - 4161077 - INFO - Stopping EC2 instance: i-075f7294d9df0d053 at 2026-07-12 00:15:18
+2026-07-12 00:16:50,183 - 4161077 - INFO - Instance i-075f7294d9df0d053 stopped successfully.
+2026-07-12 00:16:50,318 - 4161077 - INFO - Stopped i-075f7294d9df0d053 in 0:01:31.615378
+2026-07-12 00:16:50,319 - 4161077 - INFO - Starting EC2 instance: i-075f7294d9df0d053
+2026-07-12 00:17:06,324 - 4161077 - INFO - Instance i-075f7294d9df0d053 started successfully.
+2026-07-12 00:17:06,325 - 4161077 - INFO - Waiting 100 seconds for SSM agent to be ready on i-075f7294d9df0d053...
+2026-07-12 00:18:46,341 - 4161077 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-Desktop/c9a200987cb37274
+2026-07-12 00:18:46,540 - 4161077 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-RF/b249f4e961151e4a
+2026-07-12 00:18:46,683 - 4161077 - INFO - Registering i-075f7294d9df0d053 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/USP-Sports-UAT-WS-Ext/4e71a08afcc99c6d
+2026-07-12 00:19:17,276 - 4161077 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: b838a868-a04c-4a56-92ba-a052c80baba0)
+2026-07-12 00:19:47,333 - 4161077 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-07-12 04:19:17.595384
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 200.7G | 89.2G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 12
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3345 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2947 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-12 04:19:19.143545
+==============================================================================
+
+2026-07-12 00:19:47,333 - 4161077 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-07-12 00:19:47,335 - 4161077 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-AfterPatching-2026-07-12-00-19-47-335.log
+2026-07-12 00:19:47,387 - 4161077 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-Validation-details-2026-07-12-00-19-47-335.html
+2026-07-12 00:19:47,677 - 4161077 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-12 00:19:47,677 - 4161077 - INFO - HTML validation report email sent for i-075f7294d9df0d053
+2026-07-12 00:19:47,677 - 4161077 - INFO - [Retry-1] Waiting 600s for i-075f7294d9df0d053...
+2026-07-12 00:19:47,677 - 4161077 - INFO - RED - Background retry thread started for i-075f7294d9df0d053
+2026-07-12 00:19:47,813 - 4161077 - INFO - Started i-075f7294d9df0d053 in 0:02:57.494261
+2026-07-12 00:19:47,814 - 4161077 - INFO - All instances processed.
+2026-07-12 00:19:47,818 - 4161077 - INFO - Restart Total time: 0:04:36.410462
+2026-07-12 00:19:47,818 - 4161077 - INFO - Auto-confirmed services are restarted
+2026-07-12 00:19:47,818 - 4161077 - INFO - Confirmed - services are started
+2026-07-12 00:19:47,938 - 4161077 - INFO - The following instances have failed the patch: []
+2026-07-12 00:19:47,938 - 4161077 - INFO - No instances have failed the patch.
+2026-07-12 00:19:47,938 - 4161077 - INFO - Total Patch Process time: 0:14:45.445278
+2026-07-12 00:20:48,422 - 4161077 - INFO - Log file ./logs/patching_2026-07-12_q3-USP-Motor-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-USP-Motor-uat_Patch/2026-07-12/patching_2026-07-12_q3-USP-Motor-uat.log
+2026-07-12 00:29:47,930 - 4161077 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: d3db0ff2-c119-4bae-9e10-0188d817f24f)
+2026-07-12 00:30:18,000 - 4161077 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-07-12 04:29:48.154294
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 200.8G | 89.0G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.130.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 11
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3345 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2947 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-12 04:29:48.662247
+==============================================================================
+
+2026-07-12 00:30:18,000 - 4161077 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-07-12 00:30:18,002 - 4161077 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-AfterPatching-Retry1-2026-07-12-00-30-18-001.log
+2026-07-12 00:30:18,056 - 4161077 - INFO - [Retry-1] RED detected for USP Motor Sports UAT Application and Batch Server (172.30.130.12), retrying... (Total waited: 600s)
+2026-07-12 00:30:18,056 - 4161077 - INFO - [Retry-2] Waiting 600s for i-075f7294d9df0d053...
+2026-07-12 00:40:18,497 - 4161077 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: 322bb697-f615-46b8-b8f6-1e5878e1f26a)
+2026-07-12 00:40:48,589 - 4161077 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-07-12 04:40:18.742360
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 200.9G | 89.0G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.130.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 11
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3345 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2947 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-12 04:40:19.315619
+==============================================================================
+
+2026-07-12 00:40:48,590 - 4161077 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-07-12 00:40:48,591 - 4161077 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-AfterPatching-Retry2-2026-07-12-00-40-48-591.log
+2026-07-12 00:40:48,645 - 4161077 - INFO - [Retry-2] RED detected for USP Motor Sports UAT Application and Batch Server (172.30.130.12), retrying... (Total waited: 1200s)
+2026-07-12 00:40:48,645 - 4161077 - INFO - [Retry-3] Waiting 600s for i-075f7294d9df0d053...
+2026-07-12 00:50:48,935 - 4161077 - INFO - Sent app_validation.py to i-075f7294d9df0d053 (command_id: 979e9356-898b-4212-a966-bde5ee3decc7)
+2026-07-12 00:51:19,021 - 4161077 - INFO - app_validation.py output for i-075f7294d9df0d053:
+
+==============================================================================
+Server Availability Check Started | 2026-07-12 04:50:49.193459
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.130.12
+Hostname | ip-172-30-130-12.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 200.9G | 88.9G | 69% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.130.12:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 11
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.130.12 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 13
+Batch/Daemon Java Processes | 10
+Non-Standalone Java Processes | uspuat_dwa, uspuat_event, uspuat_harp, uspuat_rpt, uspuat_jqgrid, uspuat_sch, uspuat_inbq, uspuat_wld, uspuat_lbl, uspuat_ftp
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 10
+Java-Name | Java-Path
+uspuat_dwa | /data/batchapp/softeon/uspsportsuat/downloaddaemon
+uspuat_event | /data/batchapp/softeon/uspsportsuat/eventdaemon
+uspuat_harp | /data/batchapp/softeon/uspsportsuat/hardallocationdaemon
+uspuat_rpt | /data/batchapp/softeon/uspsportsuat/reportdaemon
+uspuat_jqgrid | /data/batchapp/softeon/uspsportsuat/reportjqgridexportdaemon
+uspuat_sch | /data/batchapp/softeon/uspsportsuat/schedulardaemon
+uspuat_inbq | /data/batchapp/softeon/uspsportsuat/uploaddeamon
+uspuat_wld | /data/batchapp/softeon/uspsportsuat/wavelaunchdaemon
+uspuat_lbl | /data/batchapp/softeon/uspsportsuat/labeldaemon
+uspuat_ftp | /data/batchapp/softeon/uspsportsuat/ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3345 | uspsportsrfuat | jboss730eap | uspsportrf_jb73 | 8081 | 172.30.130.12:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsrfuat/standalone
+2947 | uspsportsuat | jboss730eap | uspsports_jb730 | 8080 | 172.30.130.12:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/uspsportsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-12 04:50:49.724825
+==============================================================================
+
+2026-07-12 00:51:19,021 - 4161077 - ERROR - app_validation.py errors for i-075f7294d9df0d053:
+
+2026-07-12 00:51:19,022 - 4161077 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-12/q3-USP-Motor-uat/172.30.130.12/172.30.130.12-AfterPatching-Retry3-2026-07-12-00-51-19-022.log
+2026-07-12 00:51:19,298 - 4161077 - INFO - Health monitor crontab enabled on all instances
+2026-07-12 00:51:19,299 - 4161077 - WARNING - [Retry] Timeout - auto cron enabled for i-075f7294d9df0d053

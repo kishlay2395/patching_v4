@@ -1,0 +1,1912 @@
+2026-07-21 00:02:02,297 - 491364 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-21 00:02:02,297 - 491364 - INFO - Script Start Time: 2026-07-21 00:02:02
+2026-07-21 00:02:02,589 - 491364 - INFO - Tag: UPSHC-NA-App, IPs: ['172.28.25.8', '172.28.25.36'], Environment: uat
+2026-07-21 00:02:02,589 - 491364 - INFO - Instance(s) selected for Patching: {'i-08c3d022cc8a6f875': '172.28.25.8', 'i-0e75968f961a6c24e': '172.28.25.36'}
+2026-07-21 00:02:02,659 - 491364 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:02:02,659 - 491364 - INFO - Now patching instances at: 2026-07-21 00:02:02
+2026-07-21 00:02:02,866 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: e856b101-fe8e-4b18-957c-487be0e99c6f)
+2026-07-21 00:02:32,943 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:02:03.371797
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 188.3G | 101.6G | 64% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 87
+Batch/Daemon Java Processes | 82
+Non-Standalone Java Processes | hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_jqgrid, hcna_sch, hcna_inbq, hcna_wld, hcna_2wld, hcna_ialloc, hcna_inbq2, hcna_1_inbq, hcna_tiad, hcna_ict, hcna_mqconsumer, hcna_mqproducer, hcna_sd2ccd, hcna_bre, hcna_sd1ccd, hcna_pac_sch, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_at2mpcpt, hcna_ptbrb, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 82
+Java-Name | Java-Path
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3658454 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+3658272 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+3191436 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:02:10.923492
+==============================================================================
+
+2026-07-21 00:02:32,943 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:02:32,945 - 491364 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-BeforePatching-2026-07-21-00-02-32-944.log
+2026-07-21 00:02:33,131 - 491364 - INFO - Sent app_validation.py to i-08c3d022cc8a6f875 (command_id: 6881a1a2-5626-4eed-b663-05ea2f978a25)
+2026-07-21 00:03:03,278 - 491364 - INFO - app_validation.py output for i-08c3d022cc8a6f875:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:02:33.482093
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.8
+Hostname | ip-172-28-25-8
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 34.2G | 205.7G | 14% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.8:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.8 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+896987 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.8:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+896811 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.8:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+343411 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.8:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:02:35.829420
+==============================================================================
+
+2026-07-21 00:03:03,278 - 491364 - ERROR - app_validation.py errors for i-08c3d022cc8a6f875:
+
+2026-07-21 00:03:03,280 - 491364 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.8/172.28.25.8-BeforePatching-2026-07-21-00-03-03-279.log
+2026-07-21 00:03:08,596 - 491364 - INFO - i-0e75968f961a6c24e: Cron was active = True
+2026-07-21 00:03:13,803 - 491364 - INFO - i-08c3d022cc8a6f875: Cron was active = False
+2026-07-21 00:03:13,977 - 491364 - INFO - Health monitor crontab disabled on all instances
+2026-07-21 00:03:13,979 - 491364 - INFO - Disabled cron for: ['i-0e75968f961a6c24e']
+2026-07-21 00:03:14,145 - 491364 - INFO - Sending patch command to instance i-0e75968f961a6c24e
+2026-07-21 00:03:14,263 - 491364 - INFO - Command sent successfully to instance i-0e75968f961a6c24e. Command ID: 00532690-a46a-4bb1-9899-b436a4390867
+2026-07-21 00:03:14,399 - 491364 - INFO - Sending patch command to instance i-08c3d022cc8a6f875
+2026-07-21 00:03:14,501 - 491364 - INFO - Command sent successfully to instance i-08c3d022cc8a6f875. Command ID: 6acfd10c-8de6-42f5-ba64-2fca51e497c8
+2026-07-21 00:13:16,962 - 491364 - INFO - All patches applied successfully.
+2026-07-21 00:13:16,963 - 491364 - INFO - Patching end time: 2026-07-21 00:13:16
+2026-07-21 00:13:16,963 - 491364 - INFO - Patch Elapsed time: 0:11:14.303419
+2026-07-21 00:13:17,029 - 491364 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-21 00:13:17,029 - 491364 - INFO - Confirmed - services are stopped
+2026-07-21 00:13:37,978 - 491364 - INFO - Discovered TG map: {'i-0e75968f961a6c24e': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-1-InBound/24776b3cb301f9ac', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-2-InBound/9a3f59e703e8ed5f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-3-InBound/3095f51fc52f7a6a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-4-InBound/7c683cb3b84d57b1', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-6-InBound/1d40de325bf04b4b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-5-InBound/ef91f9d152830ca0', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WebSocket/cb5f58fe709552e7'], 'i-08c3d022cc8a6f875': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be']}
+2026-07-21 00:13:39,213 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-1-InBound/24776b3cb301f9ac
+2026-07-21 00:13:39,285 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-2-InBound/9a3f59e703e8ed5f
+2026-07-21 00:13:39,353 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-3-InBound/3095f51fc52f7a6a
+2026-07-21 00:13:39,434 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-4-InBound/7c683cb3b84d57b1
+2026-07-21 00:13:39,513 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-6-InBound/1d40de325bf04b4b
+2026-07-21 00:13:39,578 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a
+2026-07-21 00:13:39,639 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d
+2026-07-21 00:13:39,692 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac
+2026-07-21 00:13:39,744 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4
+2026-07-21 00:13:39,788 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be
+2026-07-21 00:13:39,826 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-5-InBound/ef91f9d152830ca0
+2026-07-21 00:13:39,883 - 491364 - INFO - Deregistering i-0e75968f961a6c24e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WebSocket/cb5f58fe709552e7
+2026-07-21 00:13:39,928 - 491364 - INFO - Stopping EC2 instance: i-0e75968f961a6c24e at 2026-07-21 00:13:39
+2026-07-21 00:17:12,138 - 491364 - INFO - Instance i-0e75968f961a6c24e stopped successfully.
+2026-07-21 00:17:12,382 - 491364 - INFO - Stopped i-0e75968f961a6c24e in 0:03:32.454046
+2026-07-21 00:17:12,383 - 491364 - INFO - Starting EC2 instance: i-0e75968f961a6c24e
+2026-07-21 00:17:28,286 - 491364 - INFO - Instance i-0e75968f961a6c24e started successfully.
+2026-07-21 00:17:28,286 - 491364 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0e75968f961a6c24e...
+2026-07-21 00:19:08,321 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-1-InBound/24776b3cb301f9ac
+2026-07-21 00:19:08,514 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-2-InBound/9a3f59e703e8ed5f
+2026-07-21 00:19:08,674 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-3-InBound/3095f51fc52f7a6a
+2026-07-21 00:19:08,821 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-4-InBound/7c683cb3b84d57b1
+2026-07-21 00:19:08,969 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-6-InBound/1d40de325bf04b4b
+2026-07-21 00:19:09,107 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a
+2026-07-21 00:19:09,244 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d
+2026-07-21 00:19:09,398 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac
+2026-07-21 00:19:09,547 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4
+2026-07-21 00:19:09,691 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be
+2026-07-21 00:19:09,835 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-5-InBound/ef91f9d152830ca0
+2026-07-21 00:19:09,983 - 491364 - INFO - Registering i-0e75968f961a6c24e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WebSocket/cb5f58fe709552e7
+2026-07-21 00:21:10,446 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be after timeout.
+2026-07-21 00:21:10,474 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-2-InBound/9a3f59e703e8ed5f after timeout.
+2026-07-21 00:21:10,501 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a after timeout.
+2026-07-21 00:21:10,501 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac after timeout.
+2026-07-21 00:21:10,518 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d after timeout.
+2026-07-21 00:21:10,518 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-DEXCOMWCS-4-InBound/7c683cb3b84d57b1 after timeout.
+2026-07-21 00:21:10,518 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WebSocket/cb5f58fe709552e7 after timeout.
+2026-07-21 00:21:10,524 - 491364 - WARNING - i-0e75968f961a6c24e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4 after timeout.
+2026-07-21 00:21:10,525 - 491364 - WARNING - i-0e75968f961a6c24e: Unhealthy in one or more Target Groups, but environment is UAT, continuing process without abort.
+2026-07-21 00:21:11,725 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 710be821-021f-4f02-a72e-0017e6158d9c)
+2026-07-21 00:21:41,837 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:21:12.274731
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 187.7G | 102.2G | 64% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 59
+Batch/Daemon Java Processes | 55
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, hcna_abchdisnc2, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_repl, hcap_rccl, hcap_jqgrid, hcap_sch, hcap_inbq, hcap_sin_sch, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso, wcssim_3out
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 55
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcna_abchdisnc2 | Unknown
+hcap_abchdis | Unknown
+hcap_dwa | Unknown
+hcap_event | Unknown
+hcap_ftp | Unknown
+hcap_repl | Unknown
+hcap_rccl | Unknown
+hcap_jqgrid | Unknown
+hcap_sch | Unknown
+hcap_inbq | Unknown
+hcap_sin_sch | Unknown
+hcap_wld | Unknown
+hcap_2wld | Unknown
+hcap_1inbq | Unknown
+hcap_2inbq | Unknown
+hcap_ialloc | Unknown
+hcap_tiad | Unknown
+hcap_ict | Unknown
+hcap_mqconsumer | Unknown
+hcap_mqproducer | Unknown
+hcap_bre | Unknown
+hcap_sd1ccd | Unknown
+hcap_sd2ccd | Unknown
+hcap_pac_sch | Unknown
+hcap_rptsd | Unknown
+hcap_wsq | Unknown
+hcap_per_sch | Unknown
+hcna_1wcsi | Unknown
+hcna_3wcsi | Unknown
+hcna_5wcsi | Unknown
+hcna_6wcsi | Unknown
+hcna_1wcso | Unknown
+hcna_2wcso | Unknown
+hcna_3wcso | Unknown
+hcna_4wcso | Unknown
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | Down | 000 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:21:26.058026
+==============================================================================
+
+2026-07-21 00:21:41,837 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:21:41,839 - 491364 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-2026-07-21-00-21-41-839.log
+2026-07-21 00:21:41,897 - 491364 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-Validation-details-2026-07-21-00-21-41-839.html
+2026-07-21 00:21:42,075 - 491364 - INFO - Daemon count - Pre: 82, Post: 55
+2026-07-21 00:21:42,075 - 491364 - INFO - CUPS: before=running after=running version=cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-07-21 00:21:42,075 - 491364 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-21 00:21:42,076 - 491364 - INFO - Background: restarting daemons on i-0e75968f961a6c24e
+2026-07-21 00:21:42,076 - 491364 - INFO - Background thread started for i-0e75968f961a6c24e - daemon:True cups:False
+2026-07-21 00:21:42,524 - 491364 - INFO - Started i-0e75968f961a6c24e in 0:04:30.141222
+2026-07-21 00:21:42,524 - 491364 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-21 00:22:12,465 - 491364 - INFO - Daemon restart output: /data/batchapp/softeon/upshcwesuat/startall-upshcwesuat-daemon.sh
+
+/data/batchapp/softeon/wcssimulation/startall-wcssimulation-Daemon.sh
+
+Current Batch  Application process already running with Process id: 14733
+
+2026-07-21 00:22:12,466 - 491364 - INFO - Waiting 100 sec for daemons to start on i-0e75968f961a6c24e
+2026-07-21 00:23:42,994 - 491364 - INFO - Deregistering i-08c3d022cc8a6f875 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a
+2026-07-21 00:23:43,039 - 491364 - INFO - Deregistering i-08c3d022cc8a6f875 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d
+2026-07-21 00:23:43,090 - 491364 - INFO - Deregistering i-08c3d022cc8a6f875 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac
+2026-07-21 00:23:43,135 - 491364 - INFO - Deregistering i-08c3d022cc8a6f875 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4
+2026-07-21 00:23:43,183 - 491364 - INFO - Deregistering i-08c3d022cc8a6f875 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be
+2026-07-21 00:23:43,231 - 491364 - INFO - Stopping EC2 instance: i-08c3d022cc8a6f875 at 2026-07-21 00:23:43
+2026-07-21 00:23:52,561 - 491364 - INFO - CUPS no action needed for i-0e75968f961a6c24e - before:running after:running version:cups-2.4.19-1.amzn2023.0.1.x86_64
+2026-07-21 00:23:52,756 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 48418113-5d68-4087-8d10-dc00521adf3c)
+2026-07-21 00:24:22,880 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:23:53.151516
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 188.3G | 101.5G | 64% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 76
+Batch/Daemon Java Processes | 72
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, wcssim_3out, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 72
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:23:59.385008
+==============================================================================
+
+2026-07-21 00:24:22,881 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:24:23,027 - 491364 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:24:23,027 - 491364 - INFO - RED re-validation mail sent for i-0e75968f961a6c24e
+2026-07-21 00:24:23,027 - 491364 - INFO - Still Red after restart - starting retry for i-0e75968f961a6c24e
+2026-07-21 00:24:23,027 - 491364 - INFO - [Retry-1] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:25:29,656 - 491364 - INFO - Instance i-08c3d022cc8a6f875 stopped successfully.
+2026-07-21 00:25:29,901 - 491364 - INFO - Stopped i-08c3d022cc8a6f875 in 0:01:46.669862
+2026-07-21 00:25:29,902 - 491364 - INFO - Starting EC2 instance: i-08c3d022cc8a6f875
+2026-07-21 00:25:46,169 - 491364 - INFO - Instance i-08c3d022cc8a6f875 started successfully.
+2026-07-21 00:25:46,169 - 491364 - INFO - Waiting 100 seconds for SSM agent to be ready on i-08c3d022cc8a6f875...
+2026-07-21 00:27:26,221 - 491364 - INFO - Registering i-08c3d022cc8a6f875 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Desktop/8c303cabc2ba157a
+2026-07-21 00:27:26,455 - 491364 - INFO - Registering i-08c3d022cc8a6f875 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-RF/27f579cfa3e1ca7d
+2026-07-21 00:27:26,594 - 491364 - INFO - Registering i-08c3d022cc8a6f875 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-WES/600862cfcf1c65ac
+2026-07-21 00:27:26,731 - 491364 - INFO - Registering i-08c3d022cc8a6f875 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices/8ff0330be6b55cf4
+2026-07-21 00:27:26,880 - 491364 - INFO - Registering i-08c3d022cc8a6f875 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-UAT-Webservices-Internal/5d84177d6f9d57be
+2026-07-21 00:28:27,935 - 491364 - INFO - Sent app_validation.py to i-08c3d022cc8a6f875 (command_id: 0aac2269-bfa5-48ac-8c68-fb4a4077d899)
+2026-07-21 00:28:58,005 - 491364 - INFO - app_validation.py output for i-08c3d022cc8a6f875:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:28:28.265861
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.8
+Hostname | ip-172-28-25-8
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 34.2G | 205.6G | 14% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.8:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.8 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3195 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.8:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+2998 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.8:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+3704 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.8:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:28:35.216623
+==============================================================================
+
+2026-07-21 00:28:58,005 - 491364 - ERROR - app_validation.py errors for i-08c3d022cc8a6f875:
+
+2026-07-21 00:28:58,007 - 491364 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.8/172.28.25.8-AfterPatching-2026-07-21-00-28-58-007.log
+2026-07-21 00:28:58,062 - 491364 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.8/172.28.25.8-Validation-details-2026-07-21-00-28-58-007.html
+2026-07-21 00:28:58,248 - 491364 - INFO - i-08c3d022cc8a6f875: Cron was not active - skipping enable
+2026-07-21 00:28:58,328 - 491364 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-21 00:28:58,328 - 491364 - INFO - GREEN mail sent for i-08c3d022cc8a6f875
+2026-07-21 00:28:58,592 - 491364 - INFO - Started i-08c3d022cc8a6f875 in 0:03:28.690086
+2026-07-21 00:28:58,593 - 491364 - INFO - All instances processed.
+2026-07-21 00:28:58,599 - 491364 - INFO - Restart Total time: 0:15:41.441702
+2026-07-21 00:28:58,600 - 491364 - INFO - Auto-confirmed services are restarted
+2026-07-21 00:28:58,600 - 491364 - INFO - Confirmed - services are started
+2026-07-21 00:28:58,713 - 491364 - INFO - The following instances have failed the patch: []
+2026-07-21 00:28:58,714 - 491364 - INFO - No instances have failed the patch.
+2026-07-21 00:28:58,714 - 491364 - INFO - Total Patch Process time: 0:26:56.416106
+2026-07-21 00:29:23,305 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 8a8f2649-0bc8-4c26-a163-e2d364f4d78c)
+2026-07-21 00:29:53,394 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:29:23.586418
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 188.4G | 101.4G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 87
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, wcssim_3out, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:29:27.145277
+==============================================================================
+
+2026-07-21 00:29:53,394 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:29:53,395 - 491364 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry1-2026-07-21-00-29-53-395.log
+2026-07-21 00:29:53,454 - 491364 - INFO - [Retry-1] RED for UPSHC UAT Batch 1 and Application Server 2 (172.28.25.36), retrying... (Total waited: 300s)
+2026-07-21 00:29:53,454 - 491364 - INFO - [Retry-2] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:29:59,326 - 491364 - INFO - Log file ./logs/patching_2026-07-21_UPSHC-NA-App.log uploaded to s3://q3-2026-aws-security-patching/UPSHC-NA-App_Patch/2026-07-21/patching_2026-07-21_UPSHC-NA-App.log
+2026-07-21 00:34:53,718 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 0cf0cd1a-fc4e-4d94-999d-ab5cc7838e16)
+2026-07-21 00:35:23,823 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:34:54.012373
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 189.1G | 100.7G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 88
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, wcssim_3out, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+31394 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:34:57.660319
+==============================================================================
+
+2026-07-21 00:35:23,823 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:35:23,825 - 491364 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry2-2026-07-21-00-35-23-824.log
+2026-07-21 00:35:23,883 - 491364 - INFO - [Retry-2] RED for UPSHC UAT Batch 1 and Application Server 2 (172.28.25.36), retrying... (Total waited: 600s)
+2026-07-21 00:35:23,883 - 491364 - INFO - [Retry-3] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:40:24,220 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: e56b4d6b-af9d-4162-b0b8-6686b7ed2802)
+2026-07-21 00:40:54,313 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:40:24.502651
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 189.6G | 100.2G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 88
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso, wcssim_3out
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+31394 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:40:28.431393
+==============================================================================
+
+2026-07-21 00:40:54,313 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:40:54,315 - 491364 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry3-2026-07-21-00-40-54-314.log
+2026-07-21 00:40:54,372 - 491364 - INFO - [Retry-3] RED for UPSHC UAT Batch 1 and Application Server 2 (172.28.25.36), retrying... (Total waited: 900s)
+2026-07-21 00:40:54,373 - 491364 - INFO - [Retry-4] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:45:54,552 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: bdbf7e67-944d-474b-9c9e-061483be3314)
+2026-07-21 00:46:24,649 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:45:54.855072
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 190.0G | 99.9G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 88
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso, wcssim_3out
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+31394 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:45:58.668413
+==============================================================================
+
+2026-07-21 00:46:24,649 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:46:24,651 - 491364 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry4-2026-07-21-00-46-24-650.log
+2026-07-21 00:46:24,707 - 491364 - INFO - [Retry-4] RED for UPSHC UAT Batch 1 and Application Server 2 (172.28.25.36), retrying... (Total waited: 1200s)
+2026-07-21 00:46:24,708 - 491364 - INFO - [Retry-5] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:51:24,908 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 817e0ae2-1b52-4323-8ff7-5eaa7eff3f3a)
+2026-07-21 00:51:55,021 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:51:25.234380
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 190.2G | 99.6G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 88
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso, wcssim_3out
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+31394 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:51:30.090389
+==============================================================================
+
+2026-07-21 00:51:55,021 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:51:55,023 - 491364 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry5-2026-07-21-00-51-55-022.log
+2026-07-21 00:51:55,081 - 491364 - INFO - [Retry-5] RED for UPSHC UAT Batch 1 and Application Server 2 (172.28.25.36), retrying... (Total waited: 1500s)
+2026-07-21 00:51:55,081 - 491364 - INFO - [Retry-6] Waiting 300s for i-0e75968f961a6c24e...
+2026-07-21 00:56:55,424 - 491364 - INFO - Sent app_validation.py to i-0e75968f961a6c24e (command_id: 37c5704f-7971-48ff-9df2-8a4cf2c5c16d)
+2026-07-21 00:57:25,515 - 491364 - INFO - app_validation.py output for i-0e75968f961a6c24e:
+
+==============================================================================
+Server Availability Check Started | 2026-07-21 04:56:55.697412
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.25.36
+Hostname | ip-172-28-25-36
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 190.3G | 99.5G | 65% | /data
+fs-03400eb7.efs.us-east-1.amazonaws.com:/ | 0B | 123.1G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-03400eb7.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.x86_64
+CUPS IP URL (http://172.28.25.36:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 2117
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.25.36 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 88
+Batch/Daemon Java Processes | 83
+Non-Standalone Java Processes | hcna_jqgrid, hcna_sch, hcna_2wld, hcna_ialloc, hcna_tiad, hcna_mqproducer, hcna_pac_sch, hcna_sd1ccd, hcna_bre, hcna_rptsd, hcna_cen_sch, hcna_eas_sch, hcna_locus, hcna_lmqcsumer, hcna_wsq, hcna_lrcd, hcna_2mqproduce, hcna_3mqproduce, hcna_ptbrb, hcap_abchdis, hcap_dwa, hcap_event, hcap_ftp, hcap_harp, hcap_lbl, hcap_repl, hcap_rccl, hcap_rpt, hcap_jqgrid, hcap_sch, hcap_sin_sch, hcap_inbq, hcap_wld, hcap_2wld, hcap_1inbq, hcap_2inbq, hcap_ialloc, hcap_tiad, hcap_ict, hcap_mqconsumer, hcap_mqproducer, hcap_bre, hcap_sd1ccd, hcap_sd2ccd, hcap_pac_sch, hcap_rptsd, hcap_wsq, hcap_per_sch, hcna_abchdis, hcna_abchdissuw, hcna_rn6abchdis, hcna_abchdisal3, hcna_dwa, hcna_event, hcna_ftp, hcna_harp, hcna_lbl, hcna_repl, hcna_rccl, hcna_rpt, hcna_inbq, hcna_wld, hcna_inbq2, hcna_1_inbq, hcna_ict, hcna_mqconsumer, hcna_sd2ccd, hcna_at2mpcpt, hcna_lbl_kpv, hcna_lbl_on2, hcna_abchdisnc2, hcsa_lbl, hcsa_rpt, hcsa_jqgrid, hcna_1wcsi, hcna_3wcsi, hcna_5wcsi, hcna_6wcsi, hcna_1wcso, hcna_2wcso, hcna_3wcso, hcna_4wcso, wcssim_3out
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 83
+Java-Name | Java-Path
+hcna_jqgrid | /data/batchapp/softeon/upshcuat/reportjqgridexportdaemon
+hcna_sch | /data/batchapp/softeon/upshcuat/schedulardaemon
+hcna_2wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon2
+hcna_ialloc | /data/batchapp/softeon/upshcuat/uploadallocationdaemon
+hcna_tiad | /data/batchapp/softeon/upshcuat/taskinvallocationdaemon
+hcna_mqproducer | /data/batchapp/softeon/upshcuat/mqproducerdaemon
+hcna_pac_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_pacific
+hcna_sd1ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd1
+hcna_bre | /data/batchapp/softeon/upshcuat/breruleenginedaemon
+hcna_rptsd | /data/batchapp/softeon/upshcuat/shippingdocsreportdaemon
+hcna_cen_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_central
+hcna_eas_sch | /data/batchapp/softeon/upshcuat/schedulardaemon_eastern
+hcna_locus | /data/batchapp/softeon/upshcuat/locusdaemon
+hcna_lmqcsumer | /data/batchapp/softeon/upshcuat/lucamqconsumerdaemon
+hcna_wsq | /data/batchapp/softeon/upshcuat/wsqdaemon
+hcna_lrcd | /data/batchapp/softeon/upshcuat/locusrouteconversiondaemon
+hcna_2mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP2
+hcna_3mqproduce | /data/batchapp/softeon/upshcuat/mqproducerdaemonP3
+hcna_ptbrb | /data/batchapp/softeon/upshcuat/picktooldaemon_brb
+hcap_abchdis | /data/batchapp/softeon/upshcuat_hcap/autobatchdistributiondaemon
+hcap_dwa | /data/batchapp/softeon/upshcuat_hcap/downloaddaemon
+hcap_event | /data/batchapp/softeon/upshcuat_hcap/eventdaemon
+hcap_ftp | /data/batchapp/softeon/upshcuat_hcap/ftpdaemon
+hcap_harp | /data/batchapp/softeon/upshcuat_hcap/hardallocationdaemon
+hcap_lbl | /data/batchapp/softeon/upshcuat_hcap/labeldaemon
+hcap_repl | /data/batchapp/softeon/upshcuat_hcap/replenishmentdaemon
+hcap_rccl | /data/batchapp/softeon/upshcuat_hcap/replenishmentpickloccanceldaemon
+hcap_rpt | /data/batchapp/softeon/upshcuat_hcap/reportdaemon
+hcap_jqgrid | /data/batchapp/softeon/upshcuat_hcap/reportjqgridexportdaemon
+hcap_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon
+hcap_sin_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_singapore
+hcap_inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon
+hcap_wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon
+hcap_2wld | /data/batchapp/softeon/upshcuat_hcap/wavelaunchdaemon2
+hcap_1inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon1
+hcap_2inbq | /data/batchapp/softeon/upshcuat_hcap/uploaddaemon2
+hcap_ialloc | /data/batchapp/softeon/upshcuat_hcap/uploadallocationdaemon
+hcap_tiad | /data/batchapp/softeon/upshcuat_hcap/taskinvallocationdaemon
+hcap_ict | /data/batchapp/softeon/upshcuat_hcap/invcomputationbytask
+hcap_mqconsumer | /data/batchapp/softeon/upshcuat_hcap/mqconsumerdaemon
+hcap_mqproducer | /data/batchapp/softeon/upshcuat_hcap/mqproducerdaemon
+hcap_bre | /data/batchapp/softeon/upshcuat_hcap/breruleenginedaemon
+hcap_sd1ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd1
+hcap_sd2ccd | /data/batchapp/softeon/upshcuat_hcap/clustercreationdaemon_sd2
+hcap_pac_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_pacific
+hcap_rptsd | /data/batchapp/softeon/upshcuat_hcap/shippingdocsreportdaemon
+hcap_wsq | /data/batchapp/softeon/upshcuat_hcap/wsqdaemon
+hcap_per_sch | /data/batchapp/softeon/upshcuat_hcap/schedulardaemon_perth
+hcna_abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon
+hcna_abchdissuw | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_suw
+hcna_rn6abchdis | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_rn6
+hcna_abchdisal3 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_al3
+hcna_dwa | /data/batchapp/softeon/upshcuat/downloaddaemon
+hcna_event | /data/batchapp/softeon/upshcuat/eventdaemon
+hcna_ftp | /data/batchapp/softeon/upshcuat/ftpdaemon
+hcna_harp | /data/batchapp/softeon/upshcuat/hardallocationdaemon
+hcna_lbl | /data/batchapp/softeon/upshcuat/labeldaemon
+hcna_repl | /data/batchapp/softeon/upshcuat/replenishmentdaemon
+hcna_rccl | /data/batchapp/softeon/upshcuat/replenishmentpickloccanceldaemon
+hcna_rpt | /data/batchapp/softeon/upshcuat/reportdaemon
+hcna_inbq | /data/batchapp/softeon/upshcuat/uploaddeamon
+hcna_wld | /data/batchapp/softeon/upshcuat/wavelaunchdaemon
+hcna_inbq2 | /data/batchapp/softeon/upshcuat/uploaddaemon2
+hcna_1_inbq | /data/batchapp/softeon/upshcuat/uploaddaemon1
+hcna_ict | /data/batchapp/softeon/upshcuat/invcomputationbytask
+hcna_mqconsumer | /data/batchapp/softeon/upshcuat/mqconsumerdaemon
+hcna_sd2ccd | /data/batchapp/softeon/upshcuat/clustercreationdaemon_sd2
+hcna_at2mpcpt | /data/batchapp/softeon/upshcuat/picktooldaemon_at2
+hcna_lbl_kpv | /data/batchapp/softeon/upshcuat/labeldaemon_kpv
+hcna_lbl_on2 | /data/batchapp/softeon/upshcuat/labeldaemon_on2
+hcna_abchdisnc2 | /data/batchapp/softeon/upshcuat/autobatchdistributiondaemon_nc2
+hcsa_lbl | /data/batchapp/softeon/upshcuat_hcsa/labeldaemon
+hcsa_rpt | /data/batchapp/softeon/upshcuat_hcsa/reportdaemon
+hcsa_jqgrid | /data/batchapp/softeon/upshcuat_hcsa/reportjqgridexportdaemon
+hcna_1wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs1inbounddaemon
+hcna_3wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs3inbounddaemon
+hcna_5wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs5inbounddaemon
+hcna_6wcsi | /data/batchapp/softeon/upshcuat/dexcomwcs6inbounddaemon
+hcna_1wcso | /data/batchapp/softeon/upshcuat/dexcomwcs1outbounddaemon
+hcna_2wcso | /data/batchapp/softeon/upshcuat/dexcomwcs2outbounddaemon
+hcna_3wcso | /data/batchapp/softeon/upshcuat/dexcomwcs3outbounddaemon
+hcna_4wcso | /data/batchapp/softeon/upshcuat/dexcomwcs4outbounddaemon
+wcssim_3out | /data/batchapp/softeon/wcssimulation/wcs03simulationoutbounddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5117 | upshcrfuat | jboss730eap | upshcrfuat_73ep | 8081 | 172.28.25.36:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcrfuat/standalone
+4758 | upshcuat | jboss730eap | upshcuat_730ep | 8080 | 172.28.25.36:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcuat/standalone
+31394 | upshcwesuat | jboss730eap | wesuat_jb730eap | 8082 | 172.28.25.36:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshcwesuat/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-21 04:57:00.410324
+==============================================================================
+
+2026-07-21 00:57:25,515 - 491364 - ERROR - app_validation.py errors for i-0e75968f961a6c24e:
+
+2026-07-21 00:57:25,517 - 491364 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-21/UPSHC-NA-App/172.28.25.36/172.28.25.36-AfterPatching-Retry6-2026-07-21-00-57-25-516.log
+2026-07-21 00:57:25,744 - 491364 - INFO - Health monitor crontab enabled on all instances
+2026-07-21 00:57:25,745 - 491364 - WARNING - [Retry] Timeout - auto cron enabled for i-0e75968f961a6c24e

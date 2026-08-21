@@ -1,0 +1,261 @@
+2026-07-06 00:05:02,584 - 3825335 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-06 00:05:02,584 - 3825335 - INFO - Script Start Time: 2026-07-06 00:05:02
+2026-07-06 00:05:02,944 - 3825335 - INFO - Instance(s) selected for Patching: {'i-081b24d2550e0400b': '172.30.144.13'}
+2026-07-06 00:05:03,027 - 3825335 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-06 00:05:03,027 - 3825335 - INFO - Now patching instances at: 2026-07-06 00:05:03
+2026-07-06 00:05:08,311 - 3825335 - INFO - i-081b24d2550e0400b: Cron was active = True
+2026-07-06 00:05:08,551 - 3825335 - INFO - Health monitor crontab disabled on all instances
+2026-07-06 00:05:08,552 - 3825335 - INFO - Disabled cron for: ['i-081b24d2550e0400b']
+2026-07-06 00:05:08,850 - 3825335 - INFO - Sent app_validation.py to i-081b24d2550e0400b (command_id: 4fd4ca76-b548-4e78-a5bc-c51572c9d2ed)
+2026-07-06 00:05:38,943 - 3825335 - INFO - app_validation.py output for i-081b24d2550e0400b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 04:05:09.132983
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.13
+Hostname | ip-172-30-144-13.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 83.7G | 206.2G | 28% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.13:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.13 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | gabesdev_apick, gabesdev_dwa, gabesdev_event, gabesdev_ftp, gabesdev_harp, gabesdev_lbl, gabesdev_repl, gabesdev_rccl, gabesdev_rpt, gabesdev_jqgrid, gabesdev_sch, gabesdev_inbq, gabesdev_wld, gabesdev_wcsi, gabesdev_wcso, gabesdev_bpcd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+gabesdev_apick | /data/batchapp/softeon/gabesdev/autopicktooldaemon
+gabesdev_dwa | /data/batchapp/softeon/gabesdev/downloaddaemon
+gabesdev_event | /data/batchapp/softeon/gabesdev/eventdaemon
+gabesdev_ftp | /data/batchapp/softeon/gabesdev/ftpdaemon
+gabesdev_harp | /data/batchapp/softeon/gabesdev/hardallocationdaemon
+gabesdev_lbl | /data/batchapp/softeon/gabesdev/labeldaemon
+gabesdev_repl | /data/batchapp/softeon/gabesdev/replenishmentdaemon
+gabesdev_rccl | /data/batchapp/softeon/gabesdev/replenishmentpickloccanceldaemon
+gabesdev_rpt | /data/batchapp/softeon/gabesdev/reportdaemon
+gabesdev_jqgrid | /data/batchapp/softeon/gabesdev/reportjqgridexportdaemon
+gabesdev_sch | /data/batchapp/softeon/gabesdev/schedulerdaemon
+gabesdev_inbq | /data/batchapp/softeon/gabesdev/uploaddaemon
+gabesdev_wld | /data/batchapp/softeon/gabesdev/wavelaunchdaemon
+gabesdev_wcsi | /data/batchapp/softeon/gabesdev/wcsinbounddaemon
+gabesdev_wcso | /data/batchapp/softeon/gabesdev/wcsoutbounddaemon
+gabesdev_bpcd | /data/batchapp/softeon/gabesdev/batchpalletcreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+818251 | gabesdev | jboss730eap | gabesdev_jb73 | 8080 | 172.30.144.13:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesdev/standalone
+818430 | gabesdevrf | jboss730eap | gabesdevrf_jb73 | 8081 | 172.30.144.13:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesdevrf/standalone
+4902 | gabesuat | jboss730eap | gabesuat_730eap | 8082 | 172.30.144.13:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 04:05:10.284328
+==============================================================================
+
+2026-07-06 00:05:38,943 - 3825335 - ERROR - app_validation.py errors for i-081b24d2550e0400b:
+
+2026-07-06 00:05:38,945 - 3825335 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-06/q3-Gabes-uat/172.30.144.13/172.30.144.13-BeforePatching-2026-07-06-00-05-38-945.log
+2026-07-06 00:05:39,031 - 3825335 - INFO - Sending patch command to instance i-081b24d2550e0400b
+2026-07-06 00:05:39,186 - 3825335 - INFO - Command sent successfully to instance i-081b24d2550e0400b. Command ID: a6e5049e-842f-484d-9f37-dd29d2c734e6
+2026-07-06 00:11:10,875 - 3825335 - INFO - All patches applied successfully.
+2026-07-06 00:11:10,876 - 3825335 - INFO - Patching end time: 2026-07-06 00:11:10
+2026-07-06 00:11:10,876 - 3825335 - INFO - Patch Elapsed time: 0:06:07.848687
+2026-07-06 00:11:10,949 - 3825335 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-06 00:11:10,949 - 3825335 - INFO - Confirmed - services are stopped
+2026-07-06 00:11:18,039 - 3825335 - INFO - Discovered TG map: {'i-081b24d2550e0400b': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-Desktop/bd7377f0cd639287', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-RF/9ab88dfd69c86235']}
+2026-07-06 00:11:18,328 - 3825335 - INFO - Deregistering i-081b24d2550e0400b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-Desktop/bd7377f0cd639287
+2026-07-06 00:11:18,440 - 3825335 - INFO - Deregistering i-081b24d2550e0400b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-RF/9ab88dfd69c86235
+2026-07-06 00:11:18,491 - 3825335 - INFO - Stopping EC2 instance: i-081b24d2550e0400b at 2026-07-06 00:11:18
+2026-07-06 00:12:49,963 - 3825335 - INFO - Instance i-081b24d2550e0400b stopped successfully.
+2026-07-06 00:12:50,101 - 3825335 - INFO - Stopped i-081b24d2550e0400b in 0:01:31.609943
+2026-07-06 00:12:50,101 - 3825335 - INFO - Starting EC2 instance: i-081b24d2550e0400b
+2026-07-06 00:13:06,006 - 3825335 - INFO - Instance i-081b24d2550e0400b started successfully.
+2026-07-06 00:13:06,006 - 3825335 - INFO - Waiting 100 seconds for SSM agent to be ready on i-081b24d2550e0400b...
+2026-07-06 00:14:46,106 - 3825335 - INFO - Registering i-081b24d2550e0400b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-Desktop/bd7377f0cd639287
+2026-07-06 00:14:46,318 - 3825335 - INFO - Registering i-081b24d2550e0400b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/Gabes-Dev-RF/9ab88dfd69c86235
+2026-07-06 00:16:17,020 - 3825335 - INFO - Sent app_validation.py to i-081b24d2550e0400b (command_id: b65a36ec-0a21-4884-a059-490fce5f635c)
+2026-07-06 00:16:47,103 - 3825335 - INFO - app_validation.py output for i-081b24d2550e0400b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-06 04:16:17.331232
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.144.13
+Hostname | ip-172-30-144-13.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 83.7G | 206.2G | 28% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.144.13:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 8
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.144.13 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | gabesdev_apick, gabesdev_dwa, gabesdev_event, gabesdev_ftp, gabesdev_harp, gabesdev_lbl, gabesdev_repl, gabesdev_rccl, gabesdev_rpt, gabesdev_jqgrid, gabesdev_sch, gabesdev_inbq, gabesdev_wld, gabesdev_wcsi, gabesdev_wcso, gabesdev_bpcd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+gabesdev_apick | /data/batchapp/softeon/gabesdev/autopicktooldaemon
+gabesdev_dwa | /data/batchapp/softeon/gabesdev/downloaddaemon
+gabesdev_event | /data/batchapp/softeon/gabesdev/eventdaemon
+gabesdev_ftp | /data/batchapp/softeon/gabesdev/ftpdaemon
+gabesdev_harp | /data/batchapp/softeon/gabesdev/hardallocationdaemon
+gabesdev_lbl | /data/batchapp/softeon/gabesdev/labeldaemon
+gabesdev_repl | /data/batchapp/softeon/gabesdev/replenishmentdaemon
+gabesdev_rccl | /data/batchapp/softeon/gabesdev/replenishmentpickloccanceldaemon
+gabesdev_rpt | /data/batchapp/softeon/gabesdev/reportdaemon
+gabesdev_jqgrid | /data/batchapp/softeon/gabesdev/reportjqgridexportdaemon
+gabesdev_sch | /data/batchapp/softeon/gabesdev/schedulerdaemon
+gabesdev_inbq | /data/batchapp/softeon/gabesdev/uploaddaemon
+gabesdev_wld | /data/batchapp/softeon/gabesdev/wavelaunchdaemon
+gabesdev_wcsi | /data/batchapp/softeon/gabesdev/wcsinbounddaemon
+gabesdev_wcso | /data/batchapp/softeon/gabesdev/wcsoutbounddaemon
+gabesdev_bpcd | /data/batchapp/softeon/gabesdev/batchpalletcreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4490 | gabesdev | jboss730eap | gabesdev_jb73 | 8080 | 172.30.144.13:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesdev/standalone
+4717 | gabesdevrf | jboss730eap | gabesdevrf_jb73 | 8081 | 172.30.144.13:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesdevrf/standalone
+4921 | gabesuat | jboss730eap | gabesuat_730eap | 8082 | 172.30.144.13:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/gabesuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-06 04:16:20.424626
+==============================================================================
+
+2026-07-06 00:16:47,103 - 3825335 - ERROR - app_validation.py errors for i-081b24d2550e0400b:
+
+2026-07-06 00:16:47,104 - 3825335 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-06/q3-Gabes-uat/172.30.144.13/172.30.144.13-AfterPatching-2026-07-06-00-16-47-104.log
+2026-07-06 00:16:47,157 - 3825335 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-06/q3-Gabes-uat/172.30.144.13/172.30.144.13-Validation-details-2026-07-06-00-16-47-104.html
+2026-07-06 00:16:47,521 - 3825335 - INFO - Waiting for health monitor cron to be enabled on i-081b24d2550e0400b...
+2026-07-06 00:16:47,819 - 3825335 - INFO - Health monitor crontab enabled on all instances
+2026-07-06 00:16:47,820 - 3825335 - INFO - Health monitor cron enabled on i-081b24d2550e0400b.
+2026-07-06 00:16:47,889 - 3825335 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-06 00:16:47,889 - 3825335 - INFO - HTML validation report email sent for i-081b24d2550e0400b
+2026-07-06 00:16:48,032 - 3825335 - INFO - Started i-081b24d2550e0400b in 0:03:57.930843
+2026-07-06 00:16:48,033 - 3825335 - INFO - All instances processed.
+2026-07-06 00:16:48,037 - 3825335 - INFO - Restart Total time: 0:05:36.959137
+2026-07-06 00:16:48,038 - 3825335 - INFO - Auto-confirmed services are restarted
+2026-07-06 00:16:48,038 - 3825335 - INFO - Confirmed - services are started
+2026-07-06 00:16:48,150 - 3825335 - INFO - The following instances have failed the patch: []
+2026-07-06 00:16:48,150 - 3825335 - INFO - No instances have failed the patch.
+2026-07-06 00:16:48,150 - 3825335 - INFO - Total Patch Process time: 0:11:45.565190
+2026-07-06 00:17:48,555 - 3825335 - INFO - Log file ./logs/patching_2026-07-06_q3-Gabes-uat.log uploaded to s3://q3-2026-aws-security-patching/q3-Gabes-uat_Patch/2026-07-06/patching_2026-07-06_q3-Gabes-uat.log

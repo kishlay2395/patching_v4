@@ -1,0 +1,432 @@
+2026-05-24 02:00:02,655 - 1504210 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-24 02:00:02,656 - 1504210 - INFO - Script Start Time: 2026-05-24 02:00:02
+2026-05-24 02:00:03,447 - 1504210 - INFO - Instance(s) selected for Patching: {'i-003ebff5968014d56': '172.29.100.5', 'i-0accf8d2df73bbdc2': '172.29.100.104'}
+2026-05-24 02:00:03,519 - 1504210 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-24 02:00:03,519 - 1504210 - INFO - Now patching instances at: 2026-05-24 02:00:03
+2026-05-24 02:00:03,712 - 1504210 - INFO - Sending patch command to instance i-003ebff5968014d56
+2026-05-24 02:00:03,852 - 1504210 - INFO - Command sent successfully to instance i-003ebff5968014d56. Command ID: 200f6a39-6503-4327-83d1-365b826db161
+2026-05-24 02:00:04,666 - 1504210 - INFO - Sending patch command to instance i-0accf8d2df73bbdc2
+2026-05-24 02:00:04,818 - 1504210 - INFO - Command sent successfully to instance i-0accf8d2df73bbdc2. Command ID: 1d703954-1c64-41f1-9cde-c55ba1112007
+2026-05-24 02:07:37,365 - 1504210 - INFO - All patches applied successfully.
+2026-05-24 02:07:37,365 - 1504210 - INFO - Patching end time: 2026-05-24 02:07:37
+2026-05-24 02:07:37,365 - 1504210 - INFO - Patch Elapsed time: 0:07:33.846469
+2026-05-24 02:07:37,429 - 1504210 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-24 02:07:37,430 - 1504210 - INFO - Confirmed - services are stopped
+2026-05-24 02:07:57,119 - 1504210 - INFO - Discovered TG map: {'i-003ebff5968014d56': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de'], 'i-0accf8d2df73bbdc2': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de']}
+2026-05-24 02:07:57,538 - 1504210 - INFO - Sent app_validation.py to i-003ebff5968014d56 (command_id: 5d3738b8-0f23-4fd0-b7bd-e7cfb50947f5)
+2026-05-24 02:08:27,636 - 1504210 - INFO - app_validation.py output for i-003ebff5968014d56:
+
+==============================================================================
+Server Availability Check Started | 2026-05-24 06:07:57.853682
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.5
+Hostname | ip-172-29-100-5
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 30.0G | 209.9G | 12% | /data
+fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | 0B | 43.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 91
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2717464 | nsiprod | jboss730eap | nsiprd_jb730eap | 8080 | 172.29.100.5:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiprod/standalone
+2717677 | nsirfprod | jboss730eap | nsirf_jb730eap | 8081 | 172.29.100.5:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfprod/standalone
+2717849 | nsiwsprod | jboss730eap | nsiws_jb730eap | 8082 | 172.29.100.5:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-24 06:07:58.254739
+==============================================================================
+
+2026-05-24 02:08:27,637 - 1504210 - ERROR - app_validation.py errors for i-003ebff5968014d56:
+
+2026-05-24 02:08:27,638 - 1504210 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.5/172.29.100.5-BeforePatching-2026-05-24-02-08-27-638.log
+2026-05-24 02:08:27,639 - 1504210 - INFO - Deregistering i-003ebff5968014d56 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166
+2026-05-24 02:08:27,717 - 1504210 - INFO - Deregistering i-003ebff5968014d56 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a
+2026-05-24 02:08:27,761 - 1504210 - INFO - Deregistering i-003ebff5968014d56 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de
+2026-05-24 02:08:27,810 - 1504210 - INFO - Stopping EC2 instance: i-003ebff5968014d56 at 2026-05-24 02:08:27
+2026-05-24 02:09:58,963 - 1504210 - INFO - Instance i-003ebff5968014d56 stopped successfully.
+2026-05-24 02:09:59,209 - 1504210 - INFO - Stopped i-003ebff5968014d56 in 0:01:31.399695
+2026-05-24 02:09:59,210 - 1504210 - INFO - Starting EC2 instance: i-003ebff5968014d56
+2026-05-24 02:10:15,352 - 1504210 - INFO - Instance i-003ebff5968014d56 started successfully.
+2026-05-24 02:10:15,352 - 1504210 - INFO - Waiting 100 seconds for SSM agent to be ready on i-003ebff5968014d56...
+2026-05-24 02:11:55,361 - 1504210 - INFO - Registering i-003ebff5968014d56 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166
+2026-05-24 02:11:55,513 - 1504210 - INFO - Registering i-003ebff5968014d56 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a
+2026-05-24 02:11:55,639 - 1504210 - INFO - Registering i-003ebff5968014d56 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de
+2026-05-24 02:13:56,372 - 1504210 - INFO - Sent app_validation.py to i-003ebff5968014d56 (command_id: e58d4705-2764-4ed7-ae91-6e11884089ff)
+2026-05-24 02:14:26,422 - 1504210 - INFO - app_validation.py output for i-003ebff5968014d56:
+
+==============================================================================
+Server Availability Check Started | 2026-05-24 06:13:56.722544
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.5
+Hostname | ip-172-29-100-5
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 29.9G | 210.0G | 12% | /data
+fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | 0B | 43.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.5:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 91
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.5 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3660 | nsiprod | jboss730eap | nsiprd_jb730eap | 8080 | 172.29.100.5:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiprod/standalone
+3687 | nsirfprod | jboss730eap | nsirf_jb730eap | 8081 | 172.29.100.5:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfprod/standalone
+3658 | nsiwsprod | jboss730eap | nsiws_jb730eap | 8082 | 172.29.100.5:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-24 06:13:57.213125
+==============================================================================
+
+2026-05-24 02:14:26,422 - 1504210 - ERROR - app_validation.py errors for i-003ebff5968014d56:
+
+2026-05-24 02:14:26,424 - 1504210 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.5/172.29.100.5-AfterPatching-2026-05-24-02-14-26-424.log
+2026-05-24 02:14:26,477 - 1504210 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.5/172.29.100.5-Validation-details-2026-05-24-02-14-26-424.html
+2026-05-24 02:14:26,729 - 1504210 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-24 02:14:26,729 - 1504210 - INFO - HTML validation report email sent for i-003ebff5968014d56
+2026-05-24 02:14:26,971 - 1504210 - INFO - Started i-003ebff5968014d56 in 0:04:27.760547
+2026-05-24 02:14:26,971 - 1504210 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-05-24 02:16:27,238 - 1504210 - INFO - Sent app_validation.py to i-0accf8d2df73bbdc2 (command_id: 4b459533-e030-425c-9b94-3c0b8e39b4ed)
+2026-05-24 02:16:57,350 - 1504210 - INFO - app_validation.py output for i-0accf8d2df73bbdc2:
+
+==============================================================================
+Server Availability Check Started | 2026-05-24 06:16:27.525062
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.104
+Hostname | ip-172-29-100-104
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 30.0G | 209.9G | 12% | /data
+fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | 0B | 43.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.104:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 89
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.104 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2743732 | nsiprod | jboss730eap | nsiprd_jb730eap | 8080 | 172.29.100.104:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiprod/standalone
+2744018 | nsirfprod | jboss730eap | nsirf_jb730eap | 8081 | 172.29.100.104:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfprod/standalone
+2744216 | nsiwsprod | jboss730eap | nsiws_jb730eap | 8082 | 172.29.100.104:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-24 06:16:27.908816
+==============================================================================
+
+2026-05-24 02:16:57,351 - 1504210 - ERROR - app_validation.py errors for i-0accf8d2df73bbdc2:
+
+2026-05-24 02:16:57,352 - 1504210 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.104/172.29.100.104-BeforePatching-2026-05-24-02-16-57-352.log
+2026-05-24 02:16:57,352 - 1504210 - INFO - Deregistering i-0accf8d2df73bbdc2 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166
+2026-05-24 02:16:57,432 - 1504210 - INFO - Deregistering i-0accf8d2df73bbdc2 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a
+2026-05-24 02:16:57,479 - 1504210 - INFO - Deregistering i-0accf8d2df73bbdc2 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de
+2026-05-24 02:16:57,525 - 1504210 - INFO - Stopping EC2 instance: i-0accf8d2df73bbdc2 at 2026-05-24 02:16:57
+2026-05-24 02:17:58,601 - 1504210 - INFO - Instance i-0accf8d2df73bbdc2 stopped successfully.
+2026-05-24 02:17:58,944 - 1504210 - INFO - Stopped i-0accf8d2df73bbdc2 in 0:01:01.419260
+2026-05-24 02:17:58,945 - 1504210 - INFO - Starting EC2 instance: i-0accf8d2df73bbdc2
+2026-05-24 02:18:14,925 - 1504210 - INFO - Instance i-0accf8d2df73bbdc2 started successfully.
+2026-05-24 02:18:14,925 - 1504210 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0accf8d2df73bbdc2...
+2026-05-24 02:19:55,025 - 1504210 - INFO - Registering i-0accf8d2df73bbdc2 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-RF/8e202c42af509166
+2026-05-24 02:19:55,193 - 1504210 - INFO - Registering i-0accf8d2df73bbdc2 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Webservices-Ext/2a4bf13e9724406a
+2026-05-24 02:19:55,317 - 1504210 - INFO - Registering i-0accf8d2df73bbdc2 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-Prod-Desktop/f94eaa5e9400c1de
+2026-05-24 02:21:56,196 - 1504210 - INFO - Sent app_validation.py to i-0accf8d2df73bbdc2 (command_id: 746e08eb-20b3-4ff6-8ead-ad466dee5a1a)
+2026-05-24 02:22:26,269 - 1504210 - INFO - app_validation.py output for i-0accf8d2df73bbdc2:
+
+==============================================================================
+Server Availability Check Started | 2026-05-24 06:21:56.570045
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.104
+Hostname | ip-172-29-100-104
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 29.8G | 210.1G | 12% | /data
+fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | 0B | 43.2G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0eaee4a308cc6ff42.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.104:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 89
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.104 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 3
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3252 | nsiprod | jboss730eap | nsiprd_jb730eap | 8080 | 172.29.100.104:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiprod/standalone
+3690 | nsirfprod | jboss730eap | nsirf_jb730eap | 8081 | 172.29.100.104:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfprod/standalone
+3660 | nsiwsprod | jboss730eap | nsiws_jb730eap | 8082 | 172.29.100.104:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-24 06:21:57.443198
+==============================================================================
+
+2026-05-24 02:22:26,269 - 1504210 - ERROR - app_validation.py errors for i-0accf8d2df73bbdc2:
+
+2026-05-24 02:22:26,271 - 1504210 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.104/172.29.100.104-AfterPatching-2026-05-24-02-22-26-270.log
+2026-05-24 02:22:26,324 - 1504210 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-24/NSI-PRod-App/172.29.100.104/172.29.100.104-Validation-details-2026-05-24-02-22-26-270.html
+2026-05-24 02:22:26,576 - 1504210 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-24 02:22:26,576 - 1504210 - INFO - HTML validation report email sent for i-0accf8d2df73bbdc2
+2026-05-24 02:22:26,826 - 1504210 - INFO - Started i-0accf8d2df73bbdc2 in 0:04:27.881910
+2026-05-24 02:22:26,827 - 1504210 - INFO - All instances processed.
+2026-05-24 02:22:26,832 - 1504210 - INFO - Restart Total time: 0:14:49.196510
+2026-05-24 02:22:26,832 - 1504210 - INFO - Auto-confirmed services are restarted
+2026-05-24 02:22:26,832 - 1504210 - INFO - Confirmed - services are started
+2026-05-24 02:22:26,947 - 1504210 - INFO - The following instances have failed the patch: []
+2026-05-24 02:22:26,948 - 1504210 - INFO - No instances have failed the patch.
+2026-05-24 02:22:26,948 - 1504210 - INFO - Total Patch Process time: 0:22:24.291345
+2026-05-24 02:23:27,589 - 1504210 - INFO - Log file ./logs/patching_2026-05-24_NSI-PRod-App.log uploaded to s3://q2-2026-aws-security-patching/NSI-PRod-App_Patch/2026-05-24/patching_2026-05-24_NSI-PRod-App.log

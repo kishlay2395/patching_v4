@@ -1,0 +1,243 @@
+2026-08-16 02:10:03,378 - 962373 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-16 02:10:03,378 - 962373 - INFO - Script Start Time: 2026-08-16 02:10:03
+2026-08-16 02:10:04,103 - 962373 - INFO - Tag: BF-Global-Prod-app, IPs: ['172.22.130.4', '172.22.130.60'], Environment: prod
+2026-08-16 02:10:04,103 - 962373 - INFO - Starting log monitor
+2026-08-16 02:10:11,113 - 962373 - INFO - Log monitor started for: /data/patching_v4/logs/patching_2026-08-16_BF-Global-Prod-app.log
+2026-08-16 02:10:11,114 - 962373 - INFO - Instance(s) selected for Patching: {'i-00d463e765fa15433': '172.22.130.4', 'i-07c1a3bc1897deef8': '172.22.130.60'}
+2026-08-16 02:10:11,187 - 962373 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-16 02:10:11,187 - 962373 - INFO - Now patching instances at: 2026-08-16 02:10:11
+2026-08-16 02:10:11,795 - 962373 - INFO - Sent app_validation.py to i-07c1a3bc1897deef8 (command_id: 37c25077-b490-44aa-ae26-4f294386ec0e)
+2026-08-16 02:10:41,961 - 962373 - INFO - SSM Command Status: Success
+2026-08-16 02:10:41,962 - 962373 - INFO - app_validation.py output for i-07c1a3bc1897deef8:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:10:12.033158
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.60
+Hostname | ip-172-22-130-60.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 24.3G | 215.6G | 10% | /data
+fs-040b52c8f67dcd0b6.efs.eu-west-1.amazonaws.com:/ | 0B | 3.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-040b52c8f67dcd0b6.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.22.130.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1171271 | bfgprod | jboss810eap | bfgprd_jb8desk | 8080 | 172.22.130.60:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgprod/standalone
+1171511 | bfgrfprod | jboss810eap | bfgprd_jb8rf | 8081 | 172.22.130.60:8081 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfprod/standalone
+1172262 | bfgwmsportalprod | jboss810eap | bfgprd_jb8port | 8084 | 172.22.130.60:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgwmsportalprod/standalone
+1171908 | bfgwsprod | jboss810eap | bfgprd_jb8ws | 8082 | 172.22.130.60:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:10:12.913622
+==============================================================================
+
+2026-08-16 02:10:41,963 - 962373 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-16/BF-Global-Prod-app/172.22.130.60/172.22.130.60-BeforePatching-2026-08-16-02-10-41-963.log
+2026-08-16 02:10:42,545 - 962373 - INFO - Sent app_validation.py to i-00d463e765fa15433 (command_id: f01f72aa-da25-47c9-afb1-39df30bd7fb4)
+2026-08-16 02:11:12,711 - 962373 - INFO - SSM Command Status: Success
+2026-08-16 02:11:12,711 - 962373 - INFO - app_validation.py output for i-00d463e765fa15433:
+
+==============================================================================
+Server Availability Check Started | 2026-08-16 06:10:42.754717
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.130.4
+Hostname | ip-172-22-130-4.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 23.5G | 216.3G | 9% | /data
+fs-040b52c8f67dcd0b6.efs.eu-west-1.amazonaws.com:/ | 0B | 3.4G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-040b52c8f67dcd0b6.efs.eu-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP URL (http://172.22.130.4:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 3
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.130.4 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2142747 | bfgprod | jboss810eap | bfgprd_jb8desk | 8080 | 172.22.130.4:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgprod/standalone
+2143303 | bfgrfprod | jboss810eap | bfgprd_jb8rf | 8081 | 172.22.130.4:8081 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgrfprod/standalone
+2143796 | bfgwmsportalprod | jboss810eap | bfgprd_jb8port | 8084 | 172.22.130.4:8084 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgwmsportalprod/standalone
+2143614 | bfgwsprod | jboss810eap | bfgprd_jb8ws | 8082 | 172.22.130.4:8082 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/bfgwsprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Not Found
+
+==============================================================================
+Server Availability Check Completed | 2026-08-16 06:10:43.535966
+==============================================================================
+
+2026-08-16 02:11:12,713 - 962373 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-16/BF-Global-Prod-app/172.22.130.4/172.22.130.4-BeforePatching-2026-08-16-02-11-12-712.log
+2026-08-16 02:11:18,312 - 962373 - INFO - i-07c1a3bc1897deef8: Cron was active = False
+2026-08-16 02:11:23,876 - 962373 - INFO - i-00d463e765fa15433: Cron was active = False
+2026-08-16 02:11:23,877 - 962373 - INFO - No active cron is found on any instance, skipping disable step.
+2026-08-16 02:11:23,965 - 962373 - INFO - Sending patch command to instance i-07c1a3bc1897deef8
+2026-08-16 02:11:24,342 - 962373 - INFO - Command sent successfully to instance i-07c1a3bc1897deef8. Command ID: ee911cb8-4a2f-46fe-b14f-ac57b35d81b2
+2026-08-16 02:11:24,471 - 962373 - INFO - Sending patch command to instance i-00d463e765fa15433
+2026-08-16 02:11:24,633 - 962373 - INFO - Command sent successfully to instance i-00d463e765fa15433. Command ID: c473143b-d440-4cc9-931e-f6beab1e16a7
+2026-08-16 02:14:56,601 - 962373 - INFO - All patches applied successfully.
+2026-08-16 02:14:56,602 - 962373 - INFO - Patching end time: 2026-08-16 02:14:56
+2026-08-16 02:14:56,602 - 962373 - INFO - Patch Elapsed time: 0:04:45.414325
+2026-08-16 02:14:56,675 - 962373 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-16 02:14:56,675 - 962373 - INFO - Confirmed - services are stopped
+2026-08-16 02:15:02,490 - 962373 - INFO - Discovered TG map: {'i-07c1a3bc1897deef8': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Desktop/39f52a1cdeafadbe', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Portal/aaf9715c0b4bc45e', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-RF/f5d06f9e26c23e79', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-WS/acf02ca62bc96cd4'], 'i-00d463e765fa15433': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Desktop/39f52a1cdeafadbe', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Portal/aaf9715c0b4bc45e', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-RF/f5d06f9e26c23e79', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-WS/acf02ca62bc96cd4']}
+2026-08-16 02:15:03,048 - 962373 - INFO - Deregistering i-07c1a3bc1897deef8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Desktop/39f52a1cdeafadbe
+2026-08-16 02:15:03,391 - 962373 - INFO - Deregistering i-07c1a3bc1897deef8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Portal/aaf9715c0b4bc45e
+2026-08-16 02:15:03,501 - 962373 - INFO - Deregistering i-07c1a3bc1897deef8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-RF/f5d06f9e26c23e79
+2026-08-16 02:15:03,611 - 962373 - INFO - Deregistering i-07c1a3bc1897deef8 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-WS/acf02ca62bc96cd4
+2026-08-16 02:15:03,715 - 962373 - INFO - Stopping EC2 instance: i-07c1a3bc1897deef8 at 2026-08-16 02:15:03
+2026-08-16 02:16:50,863 - 962373 - INFO - Instance i-07c1a3bc1897deef8 stopped successfully.
+2026-08-16 02:16:51,130 - 962373 - INFO - Stopped i-07c1a3bc1897deef8 in 0:01:47.415158
+2026-08-16 02:16:51,130 - 962373 - INFO - Starting EC2 instance: i-07c1a3bc1897deef8
+2026-08-16 02:17:07,050 - 962373 - INFO - Instance i-07c1a3bc1897deef8 started successfully.
+2026-08-16 02:17:07,050 - 962373 - INFO - Waiting 100 seconds for SSM agent to be ready on i-07c1a3bc1897deef8...
+2026-08-16 02:18:47,149 - 962373 - INFO - Registering i-07c1a3bc1897deef8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Desktop/39f52a1cdeafadbe
+2026-08-16 02:18:47,581 - 962373 - INFO - Registering i-07c1a3bc1897deef8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Portal/aaf9715c0b4bc45e
+2026-08-16 02:18:47,764 - 962373 - INFO - Registering i-07c1a3bc1897deef8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-RF/f5d06f9e26c23e79
+2026-08-16 02:18:47,950 - 962373 - INFO - Registering i-07c1a3bc1897deef8 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-WS/acf02ca62bc96cd4
+2026-08-16 02:26:50,641 - 962373 - WARNING - i-07c1a3bc1897deef8 not healthy in arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/BF-Global-Prod-Portal/aaf9715c0b4bc45e after timeout.
+2026-08-16 02:26:50,904 - 962373 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-16 02:26:50,904 - 962373 - ERROR - Aborting workflow: i-07c1a3bc1897deef8 is not healthy after restart.
+2026-08-16 02:26:50,907 - 962373 - INFO - Restart Total time: 0:11:54.092550
+2026-08-16 02:26:50,908 - 962373 - INFO - Auto-confirmed services are restarted
+2026-08-16 02:26:50,908 - 962373 - INFO - Confirmed - services are started
+2026-08-16 02:26:51,044 - 962373 - INFO - The following instances have failed the patch: []
+2026-08-16 02:26:51,044 - 962373 - INFO - No instances have failed the patch.
+2026-08-16 02:26:51,044 - 962373 - INFO - Total Patch Process time: 0:16:47.665742
+2026-08-16 02:27:51,635 - 962373 - INFO - Log file ./logs/patching_2026-08-16_BF-Global-Prod-app.log uploaded to s3://q3-2026-aws-security-patching/BF-Global-Prod-app_Patch/2026-08-16/patching_2026-08-16_BF-Global-Prod-app.log

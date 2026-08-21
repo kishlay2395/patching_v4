@@ -1,0 +1,149 @@
+2026-04-26 01:00:03,483 - 1267590 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-26 01:00:03,484 - 1267590 - INFO - Script Start Time: 2026-04-26 01:00:03
+2026-04-26 01:00:04,230 - 1267590 - INFO - Instance(s) selected for Patching: {'i-0aeb3ea9cda18af15': '172.28.24.214', 'i-0d5f126a127048f16': '172.28.24.208'}
+2026-04-26 01:00:04,322 - 1267590 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 01:00:04,322 - 1267590 - INFO - Now patching instances at: 2026-04-26 01:00:04
+2026-04-26 01:00:04,463 - 1267590 - INFO - Sending patch command to instance i-0aeb3ea9cda18af15
+2026-04-26 01:00:04,615 - 1267590 - INFO - Command sent successfully to instance i-0aeb3ea9cda18af15. Command ID: 53abde93-9191-4a2c-8ff1-981560b4a4ce
+2026-04-26 01:00:04,890 - 1267590 - INFO - Sending patch command to instance i-0d5f126a127048f16
+2026-04-26 01:00:05,018 - 1267590 - INFO - Command sent successfully to instance i-0d5f126a127048f16. Command ID: 14de1877-764d-4def-93fd-524a5a14d7b4
+2026-04-26 01:10:38,107 - 1267590 - INFO - All patches applied successfully.
+2026-04-26 01:10:38,108 - 1267590 - INFO - Patching end time: 2026-04-26 01:10:38
+2026-04-26 01:10:38,108 - 1267590 - INFO - Patch Elapsed time: 0:10:33.785760
+2026-04-26 01:10:38,181 - 1267590 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-26 01:10:38,181 - 1267590 - INFO - Confirmed - services are stopped
+2026-04-26 01:10:57,243 - 1267590 - INFO - Discovered TG map: {'i-0aeb3ea9cda18af15': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-Desktop/a34be1e1938804b4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-RF/31b5945f8936dc0d'], 'i-0d5f126a127048f16': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-VALID-RF/6e92ee0d655b02d4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-VAC-VALID-DESKTOP/fa2ab541d35d7aad']}
+2026-04-26 01:10:57,659 - 1267590 - INFO - Sent app_validation.py to i-0aeb3ea9cda18af15 (command_id: 6095f896-3c2f-43c4-b61f-ba9c0cf3d232)
+2026-04-26 01:11:27,739 - 1267590 - INFO - app_validation.py output for i-0aeb3ea9cda18af15:
+
+==============================================================================
+Server Availability Check Started | 2026-04-26 05:10:57.899395
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.28.24.214
+Hostname | ip-172-28-24-214
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 126.4G | 113.5G | 52% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.28.24.214:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.28.24.214 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | upshabval_bre, upshab_1ccd, upshab_event, upshab_ftp, upshab_harp, upshab_ict, upshab_lbl, upshab_conmq, upshab_pronmq, upshab_repl, upshab_rccl, upshab_rpt, upshab_jqgrid, upshab_sch, upshab_inbq, upshab_1inbq, upshab_2inbq, upshab_1wld, upshab_2wld, upshab_wsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+upshabval_bre | /data/batchapp/softeon/upshchabvaliduat/breruleenginedaemon
+upshab_1ccd | /data/batchapp/softeon/upshchabvaliduat/clustercreationdaemon1
+upshab_event | /data/batchapp/softeon/upshchabvaliduat/eventdaemon
+upshab_ftp | /data/batchapp/softeon/upshchabvaliduat/ftpdaemon
+upshab_harp | /data/batchapp/softeon/upshchabvaliduat/hardallocationdaemon
+upshab_ict | /data/batchapp/softeon/upshchabvaliduat/invcomputationbytask
+upshab_lbl | /data/batchapp/softeon/upshchabvaliduat/labeldaemon
+upshab_conmq | /data/batchapp/softeon/upshchabvaliduat/mqconsumerdaemon
+upshab_pronmq | /data/batchapp/softeon/upshchabvaliduat/mqproducerdaemon
+upshab_repl | /data/batchapp/softeon/upshchabvaliduat/replenishmentdaemon
+upshab_rccl | /data/batchapp/softeon/upshchabvaliduat/replenishmentpickloccanceldaemon
+upshab_rpt | /data/batchapp/softeon/upshchabvaliduat/reportdaemon
+upshab_jqgrid | /data/batchapp/softeon/upshchabvaliduat/reportjqgridexportdaemon
+upshab_sch | /data/batchapp/softeon/upshchabvaliduat/schedulardaemon
+upshab_inbq | /data/batchapp/softeon/upshchabvaliduat/uploaddaemon
+upshab_1inbq | /data/batchapp/softeon/upshchabvaliduat/uploaddaemon1
+upshab_2inbq | /data/batchapp/softeon/upshchabvaliduat/uploaddaemon2
+upshab_1wld | /data/batchapp/softeon/upshchabvaliduat/wavelaunchdaemon1
+upshab_2wld | /data/batchapp/softeon/upshchabvaliduat/wavelaunchdaemon2
+upshab_wsq | /data/batchapp/softeon/upshchabvaliduat/wsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1049661 | upshchabvalidrfuat | jboss730eap | upshcrfvld_73ep | 8081 | 172.28.24.214:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabvalidrfuat/standalone
+1049472 | upshchabvaliduat | jboss730eap | upshcvald_730ep | 8080 | 172.28.24.214:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/upshchabvaliduat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-26 05:11:03.100998
+==============================================================================
+
+2026-04-26 01:11:27,739 - 1267590 - ERROR - app_validation.py errors for i-0aeb3ea9cda18af15:
+
+2026-04-26 01:11:27,741 - 1267590 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-26/q2-upshc-hab-vac-valid/172.28.24.214/172.28.24.214-BeforePatching-2026-04-26-01-11-27-741.log
+2026-04-26 01:11:27,741 - 1267590 - INFO - Deregistering i-0aeb3ea9cda18af15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-Desktop/a34be1e1938804b4
+2026-04-26 01:11:27,808 - 1267590 - INFO - Deregistering i-0aeb3ea9cda18af15 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-RF/31b5945f8936dc0d
+2026-04-26 01:11:27,857 - 1267590 - INFO - Stopping EC2 instance: i-0aeb3ea9cda18af15 at 2026-04-26 01:11:27
+2026-04-26 01:12:44,036 - 1267590 - INFO - Instance i-0aeb3ea9cda18af15 stopped successfully.
+2026-04-26 01:12:44,278 - 1267590 - INFO - Stopped i-0aeb3ea9cda18af15 in 0:01:16.421256
+2026-04-26 01:12:44,279 - 1267590 - INFO - Starting EC2 instance: i-0aeb3ea9cda18af15
+2026-04-26 01:13:00,193 - 1267590 - INFO - Instance i-0aeb3ea9cda18af15 started successfully.
+2026-04-26 01:13:00,193 - 1267590 - INFO - Waiting 50 seconds for SSM agent to be ready on i-0aeb3ea9cda18af15...
+2026-04-26 01:13:50,216 - 1267590 - INFO - Registering i-0aeb3ea9cda18af15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-Desktop/a34be1e1938804b4
+2026-04-26 01:13:50,438 - 1267590 - INFO - Registering i-0aeb3ea9cda18af15 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-RF/31b5945f8936dc0d
+2026-04-26 01:18:51,269 - 1267590 - WARNING - i-0aeb3ea9cda18af15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-Desktop/a34be1e1938804b4 after timeout.
+2026-04-26 01:23:51,884 - 1267590 - WARNING - i-0aeb3ea9cda18af15 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/UPSHC-HAB-Valid-RF/31b5945f8936dc0d after timeout.
+2026-04-26 01:23:51,963 - 1267590 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-04-26 01:23:51,963 - 1267590 - ERROR - Aborting workflow: i-0aeb3ea9cda18af15 is not healthy after restart.
+2026-04-26 01:23:51,965 - 1267590 - INFO - Restart Total time: 0:13:13.587039
+2026-04-26 01:23:51,966 - 1267590 - INFO - Auto-confirmed services are restarted
+2026-04-26 01:23:51,966 - 1267590 - INFO - Confirmed - services are started
+2026-04-26 01:23:52,098 - 1267590 - INFO - The following instances have failed the patch: []
+2026-04-26 01:23:52,099 - 1267590 - INFO - No instances have failed the patch.
+2026-04-26 01:23:52,099 - 1267590 - INFO - Total Patch Process time: 0:23:48.614861
+2026-04-26 01:24:52,710 - 1267590 - INFO - Log file ./logs/patching_2026-04-26_q2-upshc-hab-vac-valid.log uploaded to s3://q2-2026-aws-security-patching/q2-upshc-hab-vac-valid_Patch/2026-04-26/patching_2026-04-26_q2-upshc-hab-vac-valid.log

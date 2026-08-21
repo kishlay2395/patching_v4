@@ -1,0 +1,1449 @@
+2026-07-19 02:20:02,268 - 371696 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-19 02:20:02,268 - 371696 - INFO - Script Start Time: 2026-07-19 02:20:02
+2026-07-19 02:20:02,693 - 371696 - INFO - Tag: SaddleCreek-Prod-3, IPs: ['10.0.10.43', '10.0.10.10'], Environment: prod
+2026-07-19 02:20:02,693 - 371696 - INFO - Instance(s) selected for Patching: {'i-066ff8c1e58496722': '10.0.10.43', 'i-0657fbac1f70ab6ae': '10.0.10.10'}
+2026-07-19 02:20:02,768 - 371696 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 02:20:02,768 - 371696 - INFO - Now patching instances at: 2026-07-19 02:20:02
+2026-07-19 02:20:02,951 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: dff5d386-8ab3-45a5-9ae0-c6c3f366a0e6)
+2026-07-19 02:20:33,025 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:20:03.302742
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.5G | 105.3G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 302.1G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 302.1G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 53
+Batch/Daemon Java Processes | 53
+Non-Standalone Java Processes | scle3plprod_excelexportdaemon, scleprod_outwes, scle3plprod_generic_uploaddaemon, scle3plprod_lpick_wl1, scle3plprod_schedulerdaemon, scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, sh, java, scleprod_cbcdc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 53
+Java-Name | Java-Path
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+sh | /bin/sh
+java | /data/softeon/batchapp/scle3plprod/dbalerts/java_gather_stats
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:20:04.610351
+==============================================================================
+
+2026-07-19 02:20:33,025 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:20:33,027 - 371696 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-BeforePatching-2026-07-19-02-20-33-027.log
+2026-07-19 02:20:33,209 - 371696 - INFO - Sent app_validation.py to i-066ff8c1e58496722 (command_id: 15192575-8b55-4039-a4fc-14824d520590)
+2026-07-19 02:21:03,283 - 371696 - INFO - app_validation.py output for i-066ff8c1e58496722:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:20:33.570568
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.43
+Hostname | ip-10-0-10-43
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 218.0G | 61.8G | 77% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 302.1G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 302.1G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 448
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 40
+Batch/Daemon Java Processes | 39
+Non-Standalone Java Processes | sclw3bp1_pwpt, sclw3plprod_ftpdaemon, sclw3plprod_generic_uploaddaemon, sclw3plprod_orderuploaddaemon1, sclw3plprod_orderuploaddaemon2, sclw3plprod_orderuploaddaemon3, sclw_wllpk, sclw_2wllpk, sclw3plprod_downloaddaemon, sclw3plprod_eventdaemon, sclw3plprod_excelexportdaemon, sclw3plprod_labeldaemon, sclw3plprod_replenishmentdaemon, sclw3plprod_reportdaemon, sclw3plprod_schedulerdaemon, sclw3plprod_wavelaunchdaemon, sclw3plprod_ftppollerdaemon, sclw3plprod_replenishmentcanceldaemon, sclw3plprod_sd2_picktooldaemon, sclw3plprod_shipdocrptd, sclw3plprod_labelprintdaemon, sclw3plprod_intfallocationdaemon, sclw3plprod_on1_picktooldaemon, sclw3plprod_bp1_picktooldaemon, sclw3plprod_md1_picktooldaemon, sclw_lv1_picktooldaemon, sclw_lv2_picktooldaemon, sclw3plprod_billingschedulerdaemon, sclw_lpick, sclw3plprd_harp, sclw3bp1_lpick, sclw_ptlpk, sclw_lv2_wllpk, sclw_lv2_lpick, sclw3plprod_dropconfirmdaemon, sclw3plprod_wsqdaemon, sclw_wsrmi, sclw_spsltl, sclw3plprod_clusterbatchcreationdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 39
+Java-Name | Java-Path
+sclw3bp1_pwpt | /data/app/java/jdk1.7.0_80/bin/sclw3bp1_pwpt
+sclw3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_ftpdaemon
+sclw3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_generic_uploaddaemon
+sclw3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_orderuploaddaemon1
+sclw3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_orderuploaddaemon2
+sclw3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_orderuploaddaemon3
+sclw_wllpk | /data/app/java/jdk1.7.0_80/bin/sclw_wllpk
+sclw_2wllpk | /data/app/java/jdk1.7.0_80/bin/sclw_2wllpk
+sclw3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_downloaddaemon
+sclw3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_eventdaemon
+sclw3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_excelexportdaemon
+sclw3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_labeldaemon
+sclw3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_replenishmentdaemon
+sclw3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_reportdaemon
+sclw3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_schedulerdaemon
+sclw3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_wavelaunchdaemon
+sclw3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_ftppollerdaemon
+sclw3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_replenishmentcanceldaemon
+sclw3plprod_sd2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_sd2_picktooldaemon
+sclw3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_shipdocrptd
+sclw3plprod_labelprintdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_labelprintdaemon
+sclw3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_intfallocationdaemon
+sclw3plprod_on1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_on1_picktooldaemon
+sclw3plprod_bp1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_bp1_picktooldaemon
+sclw3plprod_md1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_md1_picktooldaemon
+sclw_lv1_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw_lv1_picktooldaemon
+sclw_lv2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/sclw_lv2_picktooldaemon
+sclw3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_billingschedulerdaemon
+sclw_lpick | /data/app/java/jdk1.7.0_80/bin/sclw_lpick
+sclw3plprd_harp | /data/app/java/jdk1.7.0_80/bin/sclw3plprd_harp
+sclw3bp1_lpick | /data/app/java/jdk1.7.0_80/bin/sclw3bp1_lpick
+sclw_ptlpk | /data/app/java/jdk1.7.0_80/bin/sclw_ptlpk
+sclw_lv2_wllpk | /data/app/java/jdk1.7.0_80/bin/sclw_lv2_wllpk
+sclw_lv2_lpick | /data/app/java/jdk1.7.0_80/bin/sclw_lv2_lpick
+sclw3plprod_dropconfirmdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_dropconfirmdaemon
+sclw3plprod_wsqdaemon | /data/app/java/jdk1.8.0_45/bin/sclw3plprod_wsqdaemon
+sclw_wsrmi | /data/app/java/jdk1.8.0_45/bin/sclw_wsrmi
+sclw_spsltl | /data/app/java/jdk1.7.0_80/bin/sclw_spsltl
+sclw3plprod_clusterbatchcreationdaemon | /data/app/java/jdk1.7.0_80/bin/sclw3plprod_clusterbatchcreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:20:34.625588
+==============================================================================
+
+2026-07-19 02:21:03,284 - 371696 - ERROR - app_validation.py errors for i-066ff8c1e58496722:
+
+2026-07-19 02:21:03,285 - 371696 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.43/10.0.10.43-BeforePatching-2026-07-19-02-21-03-285.log
+2026-07-19 02:21:08,567 - 371696 - INFO - i-0657fbac1f70ab6ae: Cron was active = True
+2026-07-19 02:21:13,774 - 371696 - INFO - i-066ff8c1e58496722: Cron was active = True
+2026-07-19 02:21:13,909 - 371696 - INFO - Health monitor crontab disabled on all instances
+2026-07-19 02:21:13,910 - 371696 - INFO - Disabled cron for: ['i-0657fbac1f70ab6ae', 'i-066ff8c1e58496722']
+2026-07-19 02:21:14,057 - 371696 - INFO - Sending patch command to instance i-0657fbac1f70ab6ae
+2026-07-19 02:21:14,170 - 371696 - INFO - Command sent successfully to instance i-0657fbac1f70ab6ae. Command ID: d8ef0ec5-e1c1-4991-9926-55996dc9226f
+2026-07-19 02:21:14,304 - 371696 - INFO - Sending patch command to instance i-066ff8c1e58496722
+2026-07-19 02:21:14,384 - 371696 - INFO - Command sent successfully to instance i-066ff8c1e58496722. Command ID: 780706db-bf20-4d04-88a0-9cda27f60647
+2026-07-19 02:29:46,482 - 371696 - INFO - All patches applied successfully.
+2026-07-19 02:29:46,483 - 371696 - INFO - Patching end time: 2026-07-19 02:29:46
+2026-07-19 02:29:46,483 - 371696 - INFO - Patch Elapsed time: 0:09:43.714806
+2026-07-19 02:29:46,546 - 371696 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 02:29:46,546 - 371696 - INFO - Confirmed - services are stopped
+2026-07-19 02:30:07,312 - 371696 - INFO - Discovered TG map: {}
+2026-07-19 02:30:07,534 - 371696 - INFO - Stopping EC2 instance: i-0657fbac1f70ab6ae at 2026-07-19 02:30:07
+2026-07-19 02:33:24,751 - 371696 - INFO - Instance i-0657fbac1f70ab6ae stopped successfully.
+2026-07-19 02:33:25,040 - 371696 - INFO - Stopped i-0657fbac1f70ab6ae in 0:03:17.505163
+2026-07-19 02:33:25,040 - 371696 - INFO - Starting EC2 instance: i-0657fbac1f70ab6ae
+2026-07-19 02:33:41,041 - 371696 - INFO - Instance i-0657fbac1f70ab6ae started successfully.
+2026-07-19 02:33:41,042 - 371696 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0657fbac1f70ab6ae...
+2026-07-19 02:35:21,321 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: 50e0ed6a-30d5-4008-af17-e0d7b22407f6)
+2026-07-19 02:35:51,397 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:35:21.662013
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.2G | 105.6G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 302.1G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 302.1G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:35:22.246094
+==============================================================================
+
+2026-07-19 02:35:51,397 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:35:51,399 - 371696 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-2026-07-19-02-35-51-398.log
+2026-07-19 02:35:51,452 - 371696 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-Validation-details-2026-07-19-02-35-51-398.html
+2026-07-19 02:35:51,614 - 371696 - INFO - Daemon count - Pre: 53, Post: 0
+2026-07-19 02:35:51,614 - 371696 - INFO - CUPS: before=running after=running version=1.7.5
+2026-07-19 02:35:51,614 - 371696 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-07-19 02:35:51,615 - 371696 - INFO - Background: restarting daemons on i-0657fbac1f70ab6ae
+2026-07-19 02:35:51,615 - 371696 - INFO - Background thread started for i-0657fbac1f70ab6ae - daemon:True cups:False
+2026-07-19 02:35:51,980 - 371696 - INFO - Started i-0657fbac1f70ab6ae in 0:02:26.939543
+2026-07-19 02:35:51,980 - 371696 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-19 02:36:21,941 - 371696 - INFO - Daemon restart output: 
+2026-07-19 02:36:21,942 - 371696 - INFO - Waiting 100 sec for daemons to start on i-0657fbac1f70ab6ae
+2026-07-19 02:37:51,998 - 371696 - INFO - Stopping EC2 instance: i-066ff8c1e58496722 at 2026-07-19 02:37:51
+2026-07-19 02:37:52,539 - 371696 - INFO - Instance i-066ff8c1e58496722 stopped successfully.
+2026-07-19 02:37:52,788 - 371696 - INFO - Stopped i-066ff8c1e58496722 in 0:00:00.790352
+2026-07-19 02:37:52,789 - 371696 - INFO - Starting EC2 instance: i-066ff8c1e58496722
+2026-07-19 02:37:53,458 - 371696 - ERROR - Error starting instance i-066ff8c1e58496722: An error occurred (InvalidParameterValue) when calling the StartInstances operation: Invalid value 'i-066ff8c1e58496722' for instanceId. Instance does not have a volume attached at root (/dev/xvda)
+2026-07-19 02:37:53,459 - 371696 - INFO - All instances processed.
+2026-07-19 02:37:53,462 - 371696 - INFO - Restart Total time: 0:08:06.724274
+2026-07-19 02:37:53,462 - 371696 - INFO - Auto-confirmed services are restarted
+2026-07-19 02:37:53,462 - 371696 - INFO - Confirmed - services are started
+2026-07-19 02:37:53,571 - 371696 - INFO - The following instances have failed the patch: []
+2026-07-19 02:37:53,571 - 371696 - INFO - No instances have failed the patch.
+2026-07-19 02:37:53,571 - 371696 - INFO - Total Patch Process time: 0:17:51.302267
+2026-07-19 02:38:02,041 - 371696 - INFO - CUPS no action needed for i-0657fbac1f70ab6ae - before:running after:running version:1.7.5
+2026-07-19 02:38:02,225 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: c6b9396a-f3fd-4dc9-85e3-c353d3e0c7b1)
+2026-07-19 02:38:32,332 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:38:02.494880
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.2G | 105.6G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 302.1G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 302.1G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:38:03.012653
+==============================================================================
+
+2026-07-19 02:38:32,332 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:38:32,477 - 371696 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-19 02:38:32,477 - 371696 - INFO - RED re-validation mail sent for i-0657fbac1f70ab6ae
+2026-07-19 02:38:32,477 - 371696 - INFO - Still Red after restart - starting retry for i-0657fbac1f70ab6ae
+2026-07-19 02:38:32,477 - 371696 - INFO - [Retry-1] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 02:38:54,150 - 371696 - INFO - Log file ./logs/patching_2026-07-19_SaddleCreek-Prod-3.log uploaded to s3://q3-2026-aws-security-patching/SaddleCreek-Prod-3_Patch/2026-07-19/patching_2026-07-19_SaddleCreek-Prod-3.log
+2026-07-19 02:43:32,638 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: 68fa44c7-3b85-43ce-9902-3e1d3901e23c)
+2026-07-19 02:44:02,739 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:43:32.898393
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.4G | 105.5G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 51
+Batch/Daemon Java Processes | 51
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 51
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:43:34.306558
+==============================================================================
+
+2026-07-19 02:44:02,739 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:44:02,741 - 371696 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry1-2026-07-19-02-44-02-740.log
+2026-07-19 02:44:02,794 - 371696 - INFO - [Retry-1] RED for SaddleCreek East Prod Batch (10.0.10.10), retrying... (Total waited: 300s)
+2026-07-19 02:44:02,794 - 371696 - INFO - [Retry-2] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 02:49:03,086 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: aac94258-7d34-4238-b195-f08478e9133a)
+2026-07-19 02:49:33,275 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:49:03.333684
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.5G | 105.3G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 52
+Batch/Daemon Java Processes | 51
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 51
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:49:04.686309
+==============================================================================
+
+2026-07-19 02:49:33,276 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:49:33,277 - 371696 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry2-2026-07-19-02-49-33-277.log
+2026-07-19 02:49:33,331 - 371696 - INFO - [Retry-2] RED for SaddleCreek East Prod Batch (10.0.10.10), retrying... (Total waited: 600s)
+2026-07-19 02:49:33,331 - 371696 - INFO - [Retry-3] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 02:54:33,551 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: d94a55e8-542e-4247-a46d-b97bb4488ef6)
+2026-07-19 02:55:03,639 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:54:33.819679
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.6G | 105.2G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 52
+Batch/Daemon Java Processes | 51
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 51
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 02:54:35.059020
+==============================================================================
+
+2026-07-19 02:55:03,639 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 02:55:03,640 - 371696 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry3-2026-07-19-02-55-03-640.log
+2026-07-19 02:55:03,693 - 371696 - INFO - [Retry-3] RED for SaddleCreek East Prod Batch (10.0.10.10), retrying... (Total waited: 900s)
+2026-07-19 02:55:03,694 - 371696 - INFO - [Retry-4] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 03:00:04,030 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: 37bbdd88-87aa-4352-93f3-334f84f5bc24)
+2026-07-19 03:00:34,089 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:00:04.322240
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.6G | 105.2G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 55
+Batch/Daemon Java Processes | 53
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 53
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+sh | /bin/sh
+java | /data/softeon/batchapp/scle3plprod/dbalerts/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:00:05.608302
+==============================================================================
+
+2026-07-19 03:00:34,090 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 03:00:34,091 - 371696 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry4-2026-07-19-03-00-34-091.log
+2026-07-19 03:00:34,144 - 371696 - INFO - [Retry-4] RED for SaddleCreek East Prod Batch (10.0.10.10), retrying... (Total waited: 1200s)
+2026-07-19 03:00:34,144 - 371696 - INFO - [Retry-5] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 03:05:34,478 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: 90e0eb64-0010-41ac-b171-39b884eeaffa)
+2026-07-19 03:06:04,601 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:05:34.738561
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.6G | 105.2G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 54
+Batch/Daemon Java Processes | 53
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 53
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+sh | /bin/sh
+java | /data/softeon/batchapp/scle3plprod/dbalerts/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:05:35.981055
+==============================================================================
+
+2026-07-19 03:06:04,601 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 03:06:04,603 - 371696 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry5-2026-07-19-03-06-04-602.log
+2026-07-19 03:06:04,657 - 371696 - INFO - [Retry-5] RED for SaddleCreek East Prod Batch (10.0.10.10), retrying... (Total waited: 1500s)
+2026-07-19 03:06:04,657 - 371696 - INFO - [Retry-6] Waiting 300s for i-0657fbac1f70ab6ae...
+2026-07-19 03:11:04,928 - 371696 - INFO - Sent app_validation.py to i-0657fbac1f70ab6ae (command_id: b88a6b3c-a48f-4923-b20c-fe2f39bba13d)
+2026-07-19 03:11:35,006 - 371696 - INFO - app_validation.py output for i-0657fbac1f70ab6ae:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 03:11:05.185873
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.10
+Hostname | ip-10-0-10-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 279.9G | 174.8G | 105.1G | 62% | /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | 0B | 301.9G | 0B | 0% | /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | 0B | 301.9G | 0B | 0% | /data/softeon/shared1
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1 | /data/softeon/shared1 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 1205
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 54
+Batch/Daemon Java Processes | 53
+Non-Standalone Java Processes | scle3plprod_downloaddaemon, scle3plprod_eventdaemon, scle3plprod_excelexportdaemon, scle3plprod_ftpdaemon, scle3plprod_ftppollerdaemon, scle3plprod_labeldaemon, scle3plprod_linepickdaemonlane13, scle3plprod_MPCPT, scle3plprod_picktool_1at, scle3plprod_replenishmentcanceldaemon, scle3plprod_replenishmentdaemon, scle3plprod_reportdaemon, scle3plprod_schedulerdaemon, scle3plprod_wavelaunchdaemon, scle3plprod_spsltldaemon, scle3plprod_picktooldaemon_nc2, scle3plprod_picktooldaemon_mc2, scle3plprod_shipdocrptd, scle3plprod_picktooldaemon_lx1, scle3plprod_wavelaunchdlx1, scle3plprod_lx2_picktooldaemon, scle3plprod_orderuploaddaemon1, scle3plprod_orderuploaddaemon2, scle3plprod_orderuploaddaemon3, scle3plprod_orderuploaddaemon4, scle3plprod_intfallocationdaemon, scle3plprod_generic_uploaddaemon, scle3plprod_wavelaunchdlx2, scle3plprod_picktool_mt1, scle3plprod_billingschedulerdaemon, scle3plprod_wl1mp, 3plprd_hard, 3plprd_wsqdamon, 3plprd_locsdmon, scle3plprod_wl1_3wld, scle3plprod_voicemobiledaemon, scle_voadm, scleprod_wesi, scleprod_outwes, scleprod_ccd, scleprod_wl2ccd, scleprod_wl1ccd, scleprod_lx1ccd, scle3plprod_lpick_wl1, scle3plprod_wllpk_lx1, scle3plprod_lpick_lx1, 3plprd_scaninb, scle3plprod_LL1MP, scle3plprod_wsrmi, scle3plprod_ptlpk_wl1, scleprod_cbcdc, sh, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 53
+Java-Name | Java-Path
+scle3plprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_downloaddaemon
+scle3plprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_eventdaemon
+scle3plprod_excelexportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_excelexportdaemon
+scle3plprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftpdaemon
+scle3plprod_ftppollerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ftppollerdaemon
+scle3plprod_labeldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_labeldaemon
+scle3plprod_linepickdaemonlane13 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_linepickdaemonlane13
+scle3plprod_MPCPT | /data/app/java/jdk1.7.0_80/bin/scle3plprod_MPCPT
+scle3plprod_picktool_1at | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_1at
+scle3plprod_replenishmentcanceldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentcanceldaemon
+scle3plprod_replenishmentdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_replenishmentdaemon
+scle3plprod_reportdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_reportdaemon
+scle3plprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_schedulerdaemon
+scle3plprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdaemon
+scle3plprod_spsltldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_spsltldaemon
+scle3plprod_picktooldaemon_nc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_nc2
+scle3plprod_picktooldaemon_mc2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_mc2
+scle3plprod_shipdocrptd | /data/app/java/jdk1.7.0_80/bin/scle3plprod_shipdocrptd
+scle3plprod_picktooldaemon_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktooldaemon_lx1
+scle3plprod_wavelaunchdlx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx1
+scle3plprod_lx2_picktooldaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lx2_picktooldaemon
+scle3plprod_orderuploaddaemon1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon1
+scle3plprod_orderuploaddaemon2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon2
+scle3plprod_orderuploaddaemon3 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon3
+scle3plprod_orderuploaddaemon4 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_orderuploaddaemon4
+scle3plprod_intfallocationdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_intfallocationdaemon
+scle3plprod_generic_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_generic_uploaddaemon
+scle3plprod_wavelaunchdlx2 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wavelaunchdlx2
+scle3plprod_picktool_mt1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_picktool_mt1
+scle3plprod_billingschedulerdaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_billingschedulerdaemon
+scle3plprod_wl1mp | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1mp
+3plprd_hard | /data/app/java/jdk1.7.0_80/bin/3plprd_hard
+3plprd_wsqdamon | /data/app/java/jdk1.7.0_80/bin/3plprd_wsqdamon
+3plprd_locsdmon | /data/app/java/jdk1.7.0_80/bin/3plprd_locsdmon
+scle3plprod_wl1_3wld | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wl1_3wld
+scle3plprod_voicemobiledaemon | /data/app/java/jdk1.7.0_80/bin/scle3plprod_voicemobiledaemon
+scle_voadm | /data/softeon/batchapp/scle3plprod/scle_voiceadminserver
+scleprod_wesi | /data/app/java/jdk1.7.0_80/bin/scleprod_wesi
+scleprod_outwes | /data/app/java/jdk1.7.0_80/bin/scleprod_outwes
+scleprod_ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_ccd
+scleprod_wl2ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl2ccd
+scleprod_wl1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_wl1ccd
+scleprod_lx1ccd | /data/app/java/jdk1.7.0_80/bin/scleprod_lx1ccd
+scle3plprod_lpick_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_wl1
+scle3plprod_wllpk_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_wllpk_lx1
+scle3plprod_lpick_lx1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_lpick_lx1
+3plprd_scaninb | /data/app/java/jdk1.7.0_80/bin/3plprd_scaninb
+scle3plprod_LL1MP | /data/app/java/jdk1.7.0_80/bin/scle3plprod_LL1MP
+scle3plprod_wsrmi | /data/softeon/batchapp/scle3plprod/scle_wsrmidaemon
+scle3plprod_ptlpk_wl1 | /data/app/java/jdk1.7.0_80/bin/scle3plprod_ptlpk_wl1
+scleprod_cbcdc | /data/app/java/jdk1.7.0_80/bin/scleprod_cbcdc
+sh | /bin/sh
+java | /data/softeon/batchapp/scle3plprod/dbalerts/java_gather_stats
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-07-19 03:11:06.472469
+==============================================================================
+
+2026-07-19 03:11:35,006 - 371696 - ERROR - app_validation.py errors for i-0657fbac1f70ab6ae:
+
+2026-07-19 03:11:35,007 - 371696 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-07-19/SaddleCreek-Prod-3/10.0.10.10/10.0.10.10-AfterPatching-Retry6-2026-07-19-03-11-35-007.log
+2026-07-19 03:11:35,241 - 371696 - INFO - Health monitor crontab enabled on all instances
+2026-07-19 03:11:35,242 - 371696 - WARNING - [Retry] Timeout - auto cron enabled for i-0657fbac1f70ab6ae

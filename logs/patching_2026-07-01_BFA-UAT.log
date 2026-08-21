@@ -1,0 +1,235 @@
+2026-07-01 03:00:03,198 - 3561981 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-01 03:00:03,198 - 3561981 - INFO - Script Start Time: 2026-07-01 03:00:03
+2026-07-01 03:00:03,649 - 3561981 - INFO - Instance(s) selected for Patching: {'i-0325eb05c396d9242': '172.30.140.60'}
+2026-07-01 03:00:03,719 - 3561981 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-01 03:00:03,719 - 3561981 - INFO - Now patching instances at: 2026-07-01 03:00:03
+2026-07-01 03:00:04,044 - 3561981 - INFO - Sent app_validation.py to i-0325eb05c396d9242 (command_id: 1dbc6679-c084-470d-b4ad-d5a9395b417e)
+2026-07-01 03:00:34,183 - 3561981 - INFO - app_validation.py output for i-0325eb05c396d9242:
+
+==============================================================================
+Server Availability Check Started | 2026-07-01 02:00:04.436348
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.60
+Hostname | ip-172-30-140-60.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 63.5G | 226.4G | 21% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 32
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 16
+Non-Standalone Java Processes | bfauat_dwa, bfauat_event, bfauat_ftp, bfauat_lbl, bfauat_repl, bfauat_rpt, bfauat_jqgrid, bfauat_sch, bfauat_inbq, bfauat_wld, bfauat_mpcpt, bfauat_lnp, bfauat_harp, bfauat_rccl, bfauat_ffpick, java
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 16
+Java-Name | Java-Path
+bfauat_dwa | /data/batchapp/softeon/bfauat/downloaddaemon
+bfauat_event | /data/batchapp/softeon/bfauat/eventdaemon
+bfauat_ftp | /data/batchapp/softeon/bfauat/ftpdaemon
+bfauat_lbl | /data/batchapp/softeon/bfauat/labeldaemon
+bfauat_repl | /data/batchapp/softeon/bfauat/replenishmentdaemon
+bfauat_rpt | /data/batchapp/softeon/bfauat/reportdaemon
+bfauat_jqgrid | /data/batchapp/softeon/bfauat/reportjqgridexportdaemon
+bfauat_sch | /data/batchapp/softeon/bfauat/schedulardaemon
+bfauat_inbq | /data/batchapp/softeon/bfauat/uploaddeamon
+bfauat_wld | /data/batchapp/softeon/bfauat/wavelaunchdaemon
+bfauat_mpcpt | /data/batchapp/softeon/bfauat/picktooldaemon
+bfauat_lnp | /data/batchapp/softeon/bfauat/linepickdaemon
+bfauat_harp | /data/batchapp/softeon/bfauat/hardallocationdaemon
+bfauat_rccl | /data/batchapp/softeon/bfauat/replenishmentcanceldaemon
+bfauat_ffpick | /data/batchapp/softeon/bfauat/fastfetchpickprocessor
+java | Unknown
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2933226 | bfarfuat | jboss730eap | bfarfuat_jb730 | 8081 | 172.30.140.60:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfuat/standalone
+2933023 | bfauat | jboss730eap | bfauat_jb730eap | 8080 | 172.30.140.60:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-01 02:00:06.682640
+==============================================================================
+
+2026-07-01 03:00:34,183 - 3561981 - ERROR - app_validation.py errors for i-0325eb05c396d9242:
+
+2026-07-01 03:00:34,185 - 3561981 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-01/BFA-UAT/172.30.140.60/172.30.140.60-BeforePatching-2026-07-01-03-00-34-184.log
+2026-07-01 03:00:34,269 - 3561981 - INFO - Sending patch command to instance i-0325eb05c396d9242
+2026-07-01 03:00:34,421 - 3561981 - INFO - Command sent successfully to instance i-0325eb05c396d9242. Command ID: 0af52849-6d9c-42b2-a6d8-774e2f63ae03
+2026-07-01 03:09:36,683 - 3561981 - INFO - All patches applied successfully.
+2026-07-01 03:09:36,683 - 3561981 - INFO - Patching end time: 2026-07-01 03:09:36
+2026-07-01 03:09:36,683 - 3561981 - INFO - Patch Elapsed time: 0:09:32.963986
+2026-07-01 03:09:36,756 - 3561981 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-01 03:09:36,756 - 3561981 - INFO - Confirmed - services are stopped
+2026-07-01 03:09:43,699 - 3561981 - INFO - Discovered TG map: {'i-0325eb05c396d9242': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-Desktop/67e646208922e709', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-RF/60891a1dfaa4cb4f']}
+2026-07-01 03:09:43,947 - 3561981 - INFO - Deregistering i-0325eb05c396d9242 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-Desktop/67e646208922e709
+2026-07-01 03:09:44,062 - 3561981 - INFO - Deregistering i-0325eb05c396d9242 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-RF/60891a1dfaa4cb4f
+2026-07-01 03:09:44,114 - 3561981 - INFO - Stopping EC2 instance: i-0325eb05c396d9242 at 2026-07-01 03:09:44
+2026-07-01 03:11:45,798 - 3561981 - INFO - Instance i-0325eb05c396d9242 stopped successfully.
+2026-07-01 03:11:45,940 - 3561981 - INFO - Stopped i-0325eb05c396d9242 in 0:02:01.825983
+2026-07-01 03:11:45,940 - 3561981 - INFO - Starting EC2 instance: i-0325eb05c396d9242
+2026-07-01 03:12:01,974 - 3561981 - INFO - Instance i-0325eb05c396d9242 started successfully.
+2026-07-01 03:12:01,974 - 3561981 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0325eb05c396d9242...
+2026-07-01 03:13:42,051 - 3561981 - INFO - Registering i-0325eb05c396d9242 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-Desktop/67e646208922e709
+2026-07-01 03:13:42,238 - 3561981 - INFO - Registering i-0325eb05c396d9242 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-UAT-RF/60891a1dfaa4cb4f
+2026-07-01 03:14:12,760 - 3561981 - INFO - Sent app_validation.py to i-0325eb05c396d9242 (command_id: 2fb017ce-98e7-407a-bd03-7cff840be92b)
+2026-07-01 03:14:42,865 - 3561981 - INFO - app_validation.py output for i-0325eb05c396d9242:
+
+==============================================================================
+Server Availability Check Started | 2026-07-01 02:14:13.002945
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.60
+Hostname | ip-172-30-140-60.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 63.4G | 226.4G | 21% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.60:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 32
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.60 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3436 | bfarfuat | jboss730eap | bfarfuat_jb730 | 8081 | 172.30.140.60:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfuat/standalone
+3444 | bfauat | jboss730eap | bfauat_jb730eap | 8080 | 172.30.140.60:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfauat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-01 02:14:14.199259
+==============================================================================
+
+2026-07-01 03:14:42,865 - 3561981 - ERROR - app_validation.py errors for i-0325eb05c396d9242:
+
+2026-07-01 03:14:42,867 - 3561981 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-01/BFA-UAT/172.30.140.60/172.30.140.60-AfterPatching-2026-07-01-03-14-42-866.log
+2026-07-01 03:14:42,918 - 3561981 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-01/BFA-UAT/172.30.140.60/172.30.140.60-Validation-details-2026-07-01-03-14-42-866.html
+2026-07-01 03:14:43,209 - 3561981 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-01 03:14:43,209 - 3561981 - INFO - HTML validation report email sent for i-0325eb05c396d9242
+2026-07-01 03:14:43,420 - 3561981 - INFO - Started i-0325eb05c396d9242 in 0:02:57.479769
+2026-07-01 03:14:43,421 - 3561981 - INFO - All instances processed.
+2026-07-01 03:14:43,425 - 3561981 - INFO - Restart Total time: 0:05:06.542408
+2026-07-01 03:14:43,425 - 3561981 - INFO - Auto-confirmed services are restarted
+2026-07-01 03:14:43,425 - 3561981 - INFO - Confirmed - services are started
+2026-07-01 03:14:43,539 - 3561981 - INFO - The following instances have failed the patch: []
+2026-07-01 03:14:43,540 - 3561981 - INFO - No instances have failed the patch.
+2026-07-01 03:14:43,540 - 3561981 - INFO - Total Patch Process time: 0:14:40.341297
+2026-07-01 03:15:43,913 - 3561981 - INFO - Log file ./logs/patching_2026-07-01_BFA-UAT.log uploaded to s3://q3-2026-aws-security-patching/BFA-UAT_Patch/2026-07-01/patching_2026-07-01_BFA-UAT.log

@@ -1,0 +1,278 @@
+2026-05-02 02:05:03,071 - 156213 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-02 02:05:03,071 - 156213 - INFO - Script Start Time: 2026-05-02 02:05:03
+2026-05-02 02:05:03,286 - 156213 - INFO - Instance(s) selected for Patching: {'i-0485c4be2af60c982': '10.154.0.19'}
+2026-05-02 02:05:03,359 - 156213 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-02 02:05:03,359 - 156213 - INFO - Now patching instances at: 2026-05-02 02:05:03
+2026-05-02 02:05:03,450 - 156213 - INFO - Sending patch command to instance i-0485c4be2af60c982
+2026-05-02 02:05:03,643 - 156213 - INFO - Command sent successfully to instance i-0485c4be2af60c982. Command ID: ed3c0aeb-479a-4400-a640-3c1640210d96
+2026-05-02 02:10:05,138 - 156213 - INFO - All patches applied successfully.
+2026-05-02 02:10:05,139 - 156213 - INFO - Patching end time: 2026-05-02 02:10:05
+2026-05-02 02:10:05,139 - 156213 - INFO - Patch Elapsed time: 0:05:01.779445
+2026-05-02 02:10:05,216 - 156213 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-05-02 02:10:05,216 - 156213 - INFO - Confirmed - services are stopped
+2026-05-02 02:10:24,625 - 156213 - INFO - Discovered TG map: {'i-0485c4be2af60c982': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-Desktop/4f295a674a9a10e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-RF/25d5580a514e0681', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-CONFIG/0a89c9ba9241b67a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-RF/08411bb8e7699c33', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Webservices/0c323147d9d4be77', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Desktop/d6b0e605af4b433a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Portal/bd89cc7ee4601a56']}
+2026-05-02 02:10:25,031 - 156213 - INFO - Sent app_validation.py to i-0485c4be2af60c982 (command_id: f2b6b245-a7f4-47f4-921e-e431f522d1c9)
+2026-05-02 02:10:55,128 - 156213 - INFO - app_validation.py output for i-0485c4be2af60c982:
+
+==============================================================================
+Server Availability Check Started | 2026-05-02 06:10:25.334110
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.19
+Hostname | ip-10-154-0-19
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 126.3G | 113.6G | 52% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 98.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 109
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 43
+Batch/Daemon Java Processes | 35
+Non-Standalone Java Processes | vantivalms_bre, vantivalms_rpt, vantilms_jqgrid, vantivalms_sch, vantiva_bcopy, vantiva_apick, vantiva_dwa, vantiva_event, vantiva_ftp, vantiva_harp, vantiva_lbl, vantiva_repl, vantiva_rccl, vantiva_rplpri, vantiva_rpt, vantiva_jqgrid, vantiva_sch, vantiva_inbq, vantiva_wld, vantiva_wcsi, vantiva_wcso, vantiva_pkv, vantiva_pks, vantiva_sdrpt, vantiva_wsq, vantiva_rrd, vantiva_lmr2_wl, vantiva_lm2_wld, vantiva_las_apa, vantiva_las_wld, vantiva_lasc_wl, vantiva_las_1ap, vantiva_2lmr, vantiva_2pilmr, vantiva_bilsc
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 35
+Java-Name | Java-Path
+vantivalms_bre | /data/batchapp/softeon/vantivalmsuat/breruleenginedaemon
+vantivalms_rpt | /data/batchapp/softeon/vantivalmsuat/reportdaemon
+vantilms_jqgrid | /data/batchapp/softeon/vantivalmsuat/reportjqgridexportdaemon
+vantivalms_sch | /data/batchapp/softeon/vantivalmsuat/schedulardaemon
+vantiva_bcopy | /data/batchapp/softeon/vantivaconfig/bulkdatacopydaemon
+vantiva_apick | /data/batchapp/softeon/vantivawmsuat/autopicktooldaemon
+vantiva_dwa | /data/batchapp/softeon/vantivawmsuat/downloaddaemon
+vantiva_event | /data/batchapp/softeon/vantivawmsuat/eventdaemon
+vantiva_ftp | /data/batchapp/softeon/vantivawmsuat/ftpdaemon
+vantiva_harp | /data/batchapp/softeon/vantivawmsuat/hardallocationdaemon
+vantiva_lbl | /data/batchapp/softeon/vantivawmsuat/labeldaemon
+vantiva_repl | /data/batchapp/softeon/vantivawmsuat/replenishmentdaemon
+vantiva_rccl | /data/batchapp/softeon/vantivawmsuat/replenishmentpickloccanceldaemon
+vantiva_rplpri | /data/batchapp/softeon/vantivawmsuat/replenishmentpriorityupdatedaemon
+vantiva_rpt | /data/batchapp/softeon/vantivawmsuat/reportdaemon
+vantiva_jqgrid | /data/batchapp/softeon/vantivawmsuat/reportjqgridexportdaemon
+vantiva_sch | /data/batchapp/softeon/vantivawmsuat/schedulerdaemon
+vantiva_inbq | /data/batchapp/softeon/vantivawmsuat/uploaddaemon
+vantiva_wld | /data/batchapp/softeon/vantivawmsuat/wavelaunchdaemon
+vantiva_wcsi | /data/batchapp/softeon/vantivawmsuat/wcsinbounddaemon
+vantiva_wcso | /data/batchapp/softeon/vantivawmsuat/wcsoutbounddaemon
+vantiva_pkv | /data/batchapp/softeon/vantivawmsuat/picktooldaemon_ven
+vantiva_pks | /data/batchapp/softeon/vantivawmsuat/picktooldaemon_las
+vantiva_sdrpt | /data/batchapp/softeon/vantivawmsuat/reportshippingdaemon
+vantiva_wsq | /data/batchapp/softeon/vantivawmsuat/wsqdaemon
+vantiva_rrd | /data/batchapp/softeon/vantivawmsuat/robotrequestdaemon
+vantiva_lmr2_wl | /data/batchapp/softeon/vantivawmsuat/wavecreationdaemon_lmr2
+vantiva_lm2_wld | /data/batchapp/softeon/vantivawmsuat/wavelaunchdaemon_lmr2
+vantiva_las_apa | /data/batchapp/softeon/vantivawmsuat/autopackdaemon1_las
+vantiva_las_wld | /data/batchapp/softeon/vantivawmsuat/wavelaunchdaemon_las
+vantiva_lasc_wl | /data/batchapp/softeon/vantivawmsuat/wavecreationdaemon_las
+vantiva_las_1ap | /data/batchapp/softeon/vantivawmsuat/autopickdaemon1_las
+vantiva_2lmr | /data/batchapp/softeon/vantivawmsuat/autopackdaemon1_lmr2
+vantiva_2pilmr | /data/batchapp/softeon/vantivawmsuat/autopickdaemon1_lmr2
+vantiva_bilsc | /data/batchapp/softeon/vantivawmsuat/billingschedulerdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1798449 | vantivaconfig | jboss740eap | vaconfig_jb740p | 8083 | 10.154.0.19:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/vantivaconfig/standalone
+4426 | vantivalmsrfuat | jboss800eap | vantivalmsrf_jb | 8085 | 10.154.0.19:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivalmsrfuat/standalone
+5473 | vantivalmsuat | jboss800eap | vantivalms_jb80 | 8084 | 10.154.0.19:8084 | Down | 000 | Disabled | /data/app/jboss800eap/softeon/vantivalmsuat/standalone
+2876268 | vantivawmsportaluat | jboss800eap | vantiptl_jb800 | 8082 | 10.154.0.19:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsportaluat/standalone
+2876010 | vantivawmsrfuat | jboss800eap | vantirf_jb800 | 8081 | 10.154.0.19:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsrfuat/standalone
+2875758 | vantivawmsuat | jboss800eap | vanti_jb800eap | 8080 | 10.154.0.19:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-02 06:10:35.003154
+==============================================================================
+
+2026-05-02 02:10:55,128 - 156213 - ERROR - app_validation.py errors for i-0485c4be2af60c982:
+
+2026-05-02 02:10:55,135 - 156213 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-02/Vantiva-UAT/10.154.0.19/10.154.0.19-BeforePatching-2026-05-02-02-10-55-129.log
+2026-05-02 02:10:55,135 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-Desktop/4f295a674a9a10e7
+2026-05-02 02:10:55,207 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-RF/25d5580a514e0681
+2026-05-02 02:10:55,259 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-CONFIG/0a89c9ba9241b67a
+2026-05-02 02:10:55,309 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-RF/08411bb8e7699c33
+2026-05-02 02:10:55,355 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Webservices/0c323147d9d4be77
+2026-05-02 02:10:55,403 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Desktop/d6b0e605af4b433a
+2026-05-02 02:10:55,449 - 156213 - INFO - Deregistering i-0485c4be2af60c982 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Portal/bd89cc7ee4601a56
+2026-05-02 02:10:55,498 - 156213 - INFO - Stopping EC2 instance: i-0485c4be2af60c982 at 2026-05-02 02:10:55
+2026-05-02 02:13:27,206 - 156213 - INFO - Instance i-0485c4be2af60c982 stopped successfully.
+2026-05-02 02:13:27,338 - 156213 - INFO - Stopped i-0485c4be2af60c982 in 0:02:31.839729
+2026-05-02 02:13:27,338 - 156213 - INFO - Starting EC2 instance: i-0485c4be2af60c982
+2026-05-02 02:13:43,507 - 156213 - INFO - Instance i-0485c4be2af60c982 started successfully.
+2026-05-02 02:13:43,507 - 156213 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0485c4be2af60c982...
+2026-05-02 02:15:23,608 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-Desktop/4f295a674a9a10e7
+2026-05-02 02:15:23,826 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-LMS-UAT-RF/25d5580a514e0681
+2026-05-02 02:15:23,961 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-CONFIG/0a89c9ba9241b67a
+2026-05-02 02:15:24,094 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-RF/08411bb8e7699c33
+2026-05-02 02:15:24,226 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Webservices/0c323147d9d4be77
+2026-05-02 02:15:24,354 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Desktop/d6b0e605af4b433a
+2026-05-02 02:15:24,491 - 156213 - INFO - Registering i-0485c4be2af60c982 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Vantiva-WMS-UAT-Portal/bd89cc7ee4601a56
+2026-05-02 02:16:55,239 - 156213 - INFO - Sent app_validation.py to i-0485c4be2af60c982 (command_id: ee58ef7b-346b-4d7b-8640-79f2d0061579)
+2026-05-02 02:17:25,312 - 156213 - INFO - app_validation.py output for i-0485c4be2af60c982:
+
+==============================================================================
+Server Availability Check Started | 2026-05-02 06:16:55.558431
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.154.0.19
+Hostname | ip-10-154-0-19
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 125.6G | 114.3G | 52% | /data
+fs-282d309d.efs.us-east-1.amazonaws.com:/ | 0B | 98.5G | 0B | 0% | /data4
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-282d309d.efs.us-east-1.amazonaws.com:/ | /data4 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.154.0.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 109
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.154.0.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 8
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6804 | vantivaconfig | jboss740eap | vaconfig_jb740p | 8083 | 10.154.0.19:8083 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/vantivaconfig/standalone
+5463 | vantivalmsrfuat | jboss800eap | vantivalmsrf_jb | 8085 | 10.154.0.19:8085 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivalmsrfuat/standalone
+4625 | vantivalmsuat | jboss800eap | vantivalms_jb80 | 8084 | 10.154.0.19:8084 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivalmsuat/standalone
+5028 | vantivawmsportaluat | jboss800eap | vantiptl_jb800 | 8082 | 10.154.0.19:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsportaluat/standalone
+5358 | vantivawmsrfuat | jboss800eap | vantirf_jb800 | 8081 | 10.154.0.19:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsrfuat/standalone
+5489 | vantivawmsuat | jboss800eap | vanti_jb800eap | 8080 | 10.154.0.19:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/vantivawmsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-02 06:16:57.569723
+==============================================================================
+
+2026-05-02 02:17:25,312 - 156213 - ERROR - app_validation.py errors for i-0485c4be2af60c982:
+
+2026-05-02 02:17:25,313 - 156213 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-02/Vantiva-UAT/10.154.0.19/10.154.0.19-AfterPatching-2026-05-02-02-17-25-313.log
+2026-05-02 02:17:25,374 - 156213 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-02/Vantiva-UAT/10.154.0.19/10.154.0.19-Validation-details-2026-05-02-02-17-25-313.html
+2026-05-02 02:17:25,587 - 156213 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-02 02:17:25,587 - 156213 - INFO - HTML validation report email sent for i-0485c4be2af60c982
+2026-05-02 02:17:25,715 - 156213 - INFO - Started i-0485c4be2af60c982 in 0:03:58.376621
+2026-05-02 02:17:25,716 - 156213 - INFO - All instances processed.
+2026-05-02 02:17:25,720 - 156213 - INFO - Restart Total time: 0:07:20.375365
+2026-05-02 02:17:25,721 - 156213 - INFO - Auto-confirmed services are restarted
+2026-05-02 02:17:25,721 - 156213 - INFO - Confirmed - services are started
+2026-05-02 02:17:25,831 - 156213 - INFO - The following instances have failed the patch: []
+2026-05-02 02:17:25,831 - 156213 - INFO - No instances have failed the patch.
+2026-05-02 02:17:25,832 - 156213 - INFO - Total Patch Process time: 0:12:22.760227
+2026-05-02 02:18:26,156 - 156213 - INFO - Log file ./logs/patching_2026-05-02_Vantiva-UAT.log uploaded to s3://q2-2026-aws-security-patching/Vantiva-UAT_Patch/2026-05-02/patching_2026-05-02_Vantiva-UAT.log

@@ -1,0 +1,230 @@
+2026-05-08 03:45:02,431 - 486415 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-05-08 03:45:02,431 - 486415 - INFO - Script Start Time: 2026-05-08 03:45:02
+2026-05-08 03:45:02,770 - 486415 - INFO - Instance(s) selected for Patching: {'i-00833b2ea2a154563': '10.0.10.158', 'i-0b60b259b8901d0fd': '10.0.10.48'}
+2026-05-08 03:45:02,846 - 486415 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-08 03:45:02,846 - 486415 - INFO - Now patching instances at: 2026-05-08 03:45:02
+2026-05-08 03:45:02,933 - 486415 - INFO - Sending patch command to instance i-0b60b259b8901d0fd
+2026-05-08 03:45:03,088 - 486415 - INFO - Command sent successfully to instance i-0b60b259b8901d0fd. Command ID: 5a643a53-e7c4-438d-8702-de1f7a557c56
+2026-05-08 03:45:03,307 - 486415 - INFO - Sending patch command to instance i-00833b2ea2a154563
+2026-05-08 03:45:03,432 - 486415 - INFO - Command sent successfully to instance i-00833b2ea2a154563. Command ID: 82e62cb8-f318-47ce-97df-1b323719dc1b
+2026-05-08 03:53:05,701 - 486415 - INFO - All patches applied successfully.
+2026-05-08 03:53:05,702 - 486415 - INFO - Patching end time: 2026-05-08 03:53:05
+2026-05-08 03:53:05,702 - 486415 - INFO - Patch Elapsed time: 0:08:02.855092
+2026-05-08 03:53:05,776 - 486415 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-05-08 03:53:05,776 - 486415 - INFO - Confirmed - services are stopped
+2026-05-08 03:53:25,923 - 486415 - INFO - Discovered TG map: {'i-0b60b259b8901d0fd': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRSFS1-Prod-Portal/858275f35a248815', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1prod/17466b6b8cfda4b4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1rfprod/af825452a027bba5'], 'i-00833b2ea2a154563': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRSFS1-Prod-Portal/858275f35a248815', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1prod/17466b6b8cfda4b4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1rfprod/af825452a027bba5']}
+2026-05-08 03:53:26,340 - 486415 - INFO - Sent app_validation.py to i-0b60b259b8901d0fd (command_id: ee7a41e2-098f-400c-9451-a139a2e4cae2)
+2026-05-08 03:53:56,469 - 486415 - INFO - app_validation.py output for i-0b60b259b8901d0fd:
+
+==============================================================================
+Server Availability Check Started | 2026-05-08 03:53:26.708429
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.48
+Hostname | ip-10-0-10-48
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 77.2G | 152.6G | 33% | /data
+fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | 0B | 3.0G | 0B | 0% | /data2
+10.0.10.133:/data/softeon/shared | 229.9G | 178.2G | 51.7G | 77% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | 10.0.10.133:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.48:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+159792 | rrsfs1portal | jboss730eap | rrsfs1port_jb73 | 8087 | 10.0.10.48:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1portal/standalone
+159536 | rrsfs1prod | jboss730eap | rrsfs1_jb730eap | 8085 | 10.0.10.48:8085 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1prod/standalone
+159548 | rrsfs1rfprod | jboss730eap | rrsfs1rf_jb730e | 8086 | 10.0.10.48:8086 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1rfprod/standalone
+155862 | scle3plportal | jboss62eap | scle3plportal_jboss | 8084 | 10.0.10.48:8084 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/scle3plportal/standalone
+158714 | softeonprod | jboss62eap | sclprod_jboss | 80 | 10.0.10.48:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/softeonprod/standalone
+155737 | softeonrfprod | jboss62eap | sclrfprod_jboss | 8080 | 10.0.10.48:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-08 03:53:27.558626
+==============================================================================
+
+2026-05-08 03:53:56,469 - 486415 - ERROR - app_validation.py errors for i-0b60b259b8901d0fd:
+
+2026-05-08 03:53:56,471 - 486415 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-App/10.0.10.48/10.0.10.48-BeforePatching-2026-05-08-03-53-56-470.log
+2026-05-08 03:53:56,471 - 486415 - INFO - Deregistering i-0b60b259b8901d0fd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRSFS1-Prod-Portal/858275f35a248815
+2026-05-08 03:53:56,545 - 486415 - INFO - Deregistering i-0b60b259b8901d0fd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1prod/17466b6b8cfda4b4
+2026-05-08 03:53:56,591 - 486415 - INFO - Deregistering i-0b60b259b8901d0fd from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1rfprod/af825452a027bba5
+2026-05-08 03:53:56,662 - 486415 - INFO - Stopping EC2 instance: i-0b60b259b8901d0fd at 2026-05-08 03:53:56
+2026-05-08 03:55:12,802 - 486415 - INFO - Instance i-0b60b259b8901d0fd stopped successfully.
+2026-05-08 03:55:13,059 - 486415 - INFO - Stopped i-0b60b259b8901d0fd in 0:01:16.396889
+2026-05-08 03:55:13,060 - 486415 - INFO - Starting EC2 instance: i-0b60b259b8901d0fd
+2026-05-08 03:55:29,349 - 486415 - INFO - Instance i-0b60b259b8901d0fd started successfully.
+2026-05-08 03:55:29,349 - 486415 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0b60b259b8901d0fd...
+2026-05-08 03:57:09,381 - 486415 - INFO - Registering i-0b60b259b8901d0fd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-RRSFS1-Prod-Portal/858275f35a248815
+2026-05-08 03:57:09,548 - 486415 - INFO - Registering i-0b60b259b8901d0fd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1prod/17466b6b8cfda4b4
+2026-05-08 03:57:09,686 - 486415 - INFO - Registering i-0b60b259b8901d0fd to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-rrsfs1rfprod/af825452a027bba5
+2026-05-08 03:59:10,432 - 486415 - INFO - Sent app_validation.py to i-0b60b259b8901d0fd (command_id: 43a6d6a3-6931-4a67-b685-c79ac72fbe35)
+2026-05-08 03:59:40,557 - 486415 - INFO - app_validation.py output for i-0b60b259b8901d0fd:
+
+==============================================================================
+Server Availability Check Started | 2026-05-08 03:59:10.849290
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.48
+Hostname | ip-10-0-10-48
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 229.9G | 77.2G | 152.7G | 33% | /data
+fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | 0B | 3.0G | 0B | 0% | /data2
+10.0.10.133:/data/softeon/shared | 229.9G | 178.2G | 51.7G | 77% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0cc6a7b6cc49329f3.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+NFS_MOUNT | 10.0.10.133:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 6
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4289 | rrsfs1portal | jboss730eap | rrsfs1port_jb73 | 8087 | 10.0.10.48:8087 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1portal/standalone
+4206 | rrsfs1prod | jboss730eap | rrsfs1_jb730eap | 8085 | 10.0.10.48:8085 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1prod/standalone
+4256 | rrsfs1rfprod | jboss730eap | rrsfs1rf_jb730e | 8086 | 10.0.10.48:8086 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rrsfs1rfprod/standalone
+3287 | scle3plportal | jboss62eap | scle3plportal_jboss | 8084 | 10.0.10.48:8084 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/scle3plportal/standalone
+3288 | softeonprod | jboss62eap | sclprod_jboss | 80 | 10.0.10.48:80 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/softeonprod/standalone
+3304 | softeonrfprod | jboss62eap | sclrfprod_jboss | 8080 | 10.0.10.48:8080 | UP | 200 | Disabled | /data/app/jboss62eap/sclprod/softeonrfprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-05-08 03:59:14.587231
+==============================================================================
+
+2026-05-08 03:59:40,557 - 486415 - ERROR - app_validation.py errors for i-0b60b259b8901d0fd:
+
+2026-05-08 03:59:40,558 - 486415 - INFO - After patching validation saved to: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-App/10.0.10.48/10.0.10.48-AfterPatching-2026-05-08-03-59-40-558.log
+2026-05-08 03:59:40,610 - 486415 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-05-08/SaddleCreek-RRS-App/10.0.10.48/10.0.10.48-Validation-details-2026-05-08-03-59-40-558.html
+2026-05-08 03:59:40,867 - 486415 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-05-08 03:59:40,867 - 486415 - INFO - HTML validation report email sent for i-0b60b259b8901d0fd
+2026-05-08 03:59:41,119 - 486415 - INFO - Started i-0b60b259b8901d0fd in 0:04:28.059174
+2026-05-08 03:59:41,120 - 486415 - INFO - Waiting 120 seconds before proceeding to the next instance...

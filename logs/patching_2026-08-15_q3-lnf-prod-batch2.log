@@ -1,0 +1,948 @@
+2026-08-15 02:10:03,257 - 500142 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-15 02:10:03,258 - 500142 - INFO - Script Start Time: 2026-08-15 02:10:03
+2026-08-15 02:10:03,570 - 500142 - INFO - Tag: q3-lnf-prod-batch2, IPs: ['10.0.30.43'], Environment: prod
+2026-08-15 02:10:03,570 - 500142 - INFO - Starting log monitor
+2026-08-15 02:10:10,579 - 500142 - INFO - Log monitor started for: /data/patching_v4/logs/patching_2026-08-15_q3-lnf-prod-batch2.log
+2026-08-15 02:10:10,579 - 500142 - INFO - Instance(s) selected for Patching: {'i-095f4172827e679b3': '10.0.30.43'}
+2026-08-15 02:10:10,644 - 500142 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-15 02:10:10,645 - 500142 - INFO - Now patching instances at: 2026-08-15 02:10:10
+2026-08-15 02:10:11,175 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: 8b30840c-88a1-4acc-bd75-a80da357e20f)
+2026-08-15 02:10:41,316 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:10:41,316 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:10:11.370672
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 342.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 1
+Batch/Daemon Java Processes | 1
+Non-Standalone Java Processes | wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 1
+Java-Name | Java-Path
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:10:11.704296
+==============================================================================
+
+2026-08-15 02:10:41,318 - 500142 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-BeforePatching-2026-08-15-02-10-41-317.log
+2026-08-15 02:10:46,821 - 500142 - INFO - i-095f4172827e679b3: Cron was active = True
+2026-08-15 02:10:47,257 - 500142 - INFO - Health monitor crontab disabled on all instances
+2026-08-15 02:10:47,258 - 500142 - INFO - Disabled cron for: ['i-095f4172827e679b3']
+2026-08-15 02:10:47,345 - 500142 - INFO - Sending patch command to instance i-095f4172827e679b3
+2026-08-15 02:10:47,664 - 500142 - INFO - Command sent successfully to instance i-095f4172827e679b3. Command ID: b74c3a83-61d5-4d68-b79d-1846f8491506
+2026-08-15 02:14:49,384 - 500142 - INFO - All patches applied successfully.
+2026-08-15 02:14:49,384 - 500142 - INFO - Patching end time: 2026-08-15 02:14:49
+2026-08-15 02:14:49,384 - 500142 - INFO - Patch Elapsed time: 0:04:38.739683
+2026-08-15 02:14:49,454 - 500142 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-15 02:14:49,454 - 500142 - INFO - Confirmed - services are stopped
+2026-08-15 02:14:51,326 - 500142 - INFO - Discovered TG map: {}
+2026-08-15 02:14:51,574 - 500142 - INFO - Stopping EC2 instance: i-095f4172827e679b3 at 2026-08-15 02:14:51
+2026-08-15 02:16:08,196 - 500142 - INFO - Instance i-095f4172827e679b3 stopped successfully.
+2026-08-15 02:16:08,320 - 500142 - INFO - Stopped i-095f4172827e679b3 in 0:01:16.745554
+2026-08-15 02:16:08,320 - 500142 - INFO - Starting EC2 instance: i-095f4172827e679b3
+2026-08-15 02:16:24,332 - 500142 - INFO - Instance i-095f4172827e679b3 started successfully.
+2026-08-15 02:16:24,332 - 500142 - INFO - Waiting 100 seconds for SSM agent to be ready on i-095f4172827e679b3...
+2026-08-15 02:18:04,941 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: e6ba2eab-3776-41de-b6ce-64e7936d30a6)
+2026-08-15 02:18:35,085 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:18:35,085 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:18:05.241263
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:18:05.688743
+==============================================================================
+
+2026-08-15 02:18:35,086 - 500142 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-2026-08-15-02-18-35-086.log
+2026-08-15 02:18:35,141 - 500142 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-Validation-details-2026-08-15-02-18-35-086.html
+2026-08-15 02:18:35,499 - 500142 - INFO - Daemon count - Pre: 1, Post: 0
+2026-08-15 02:18:35,499 - 500142 - INFO - CUPS: before=running after=running version=cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-15 02:18:35,499 - 500142 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-15 02:18:35,499 - 500142 - INFO - Background: restarting daemons on i-095f4172827e679b3
+2026-08-15 02:18:35,499 - 500142 - INFO - Background thread started for i-095f4172827e679b3 - daemon:True cups:False
+2026-08-15 02:18:35,765 - 500142 - INFO - Started i-095f4172827e679b3 in 0:02:27.444086
+2026-08-15 02:18:35,765 - 500142 - INFO - All instances processed.
+2026-08-15 02:18:35,769 - 500142 - INFO - Restart Total time: 0:03:46.184328
+2026-08-15 02:18:35,770 - 500142 - INFO - Auto-confirmed services are restarted
+2026-08-15 02:18:35,770 - 500142 - INFO - Confirmed - services are started
+2026-08-15 02:18:35,898 - 500142 - INFO - The following instances have failed the patch: []
+2026-08-15 02:18:35,898 - 500142 - INFO - No instances have failed the patch.
+2026-08-15 02:18:35,899 - 500142 - INFO - Total Patch Process time: 0:08:32.640513
+2026-08-15 02:19:06,161 - 500142 - INFO - Daemon restart output: Found base path: /data/batchapp/softeon
+Checking folder: db_alerts
+Checking folder: lnf
+Checking folder: lnfd365
+
+2026-08-15 02:19:06,162 - 500142 - INFO - Waiting 100 sec for daemons to start on i-095f4172827e679b3
+2026-08-15 02:19:36,260 - 500142 - INFO - Log file ./logs/patching_2026-08-15_q3-lnf-prod-batch2.log uploaded to s3://q3-2026-aws-security-patching/q3-lnf-prod-batch2_Patch/2026-08-15/patching_2026-08-15_q3-lnf-prod-batch2.log
+2026-08-15 02:20:46,244 - 500142 - INFO - CUPS no action needed for i-095f4172827e679b3 - before:running after:running version:cups-2.4.16-1.amzn2023.0.3.x86_64
+2026-08-15 02:20:46,745 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: c6c7e5cf-35df-48fe-9fce-4dd990d2b6bd)
+2026-08-15 02:21:16,881 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:21:16,881 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:20:46.933716
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:20:47.236245
+==============================================================================
+
+2026-08-15 02:21:17,015 - 500142 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-15 02:21:17,015 - 500142 - INFO - RED re-validation mail sent for i-095f4172827e679b3
+2026-08-15 02:21:17,015 - 500142 - INFO - Still Red after restart - starting retry for i-095f4172827e679b3
+2026-08-15 02:21:17,015 - 500142 - INFO - [Retry-1] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:26:17,830 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: 592ff17b-0c43-4c53-bc1b-9c78f733f330)
+2026-08-15 02:26:47,978 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:26:47,978 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:26:18.013995
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:26:18.468278
+==============================================================================
+
+2026-08-15 02:26:47,980 - 500142 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry1-2026-08-15-02-26-47-979.log
+2026-08-15 02:26:48,039 - 500142 - INFO - [Retry-1] RED for LNF Production Batch and Vocllect Server (10.0.30.43), retrying... (Total waited: 300s)
+2026-08-15 02:26:48,039 - 500142 - INFO - [Retry-2] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:31:48,644 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: 69c86101-8d79-4f62-b83a-11954bbfe4ba)
+2026-08-15 02:32:18,773 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:32:18,773 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:31:48.834686
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:31:49.455170
+==============================================================================
+
+2026-08-15 02:32:18,775 - 500142 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry2-2026-08-15-02-32-18-774.log
+2026-08-15 02:32:18,833 - 500142 - INFO - [Retry-2] RED for LNF Production Batch and Vocllect Server (10.0.30.43), retrying... (Total waited: 600s)
+2026-08-15 02:32:18,833 - 500142 - INFO - [Retry-3] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:37:19,578 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: 1ff6725e-eea2-4ca0-a4d8-fd54dd8d0a05)
+2026-08-15 02:37:49,703 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:37:49,703 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:37:19.764672
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 6
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:37:20.248032
+==============================================================================
+
+2026-08-15 02:37:49,705 - 500142 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry3-2026-08-15-02-37-49-705.log
+2026-08-15 02:37:49,761 - 500142 - INFO - [Retry-3] RED for LNF Production Batch and Vocllect Server (10.0.30.43), retrying... (Total waited: 900s)
+2026-08-15 02:37:49,761 - 500142 - INFO - [Retry-4] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:42:50,381 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: 678233dc-1632-4757-a6b4-31301a5e4540)
+2026-08-15 02:43:20,508 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:43:20,508 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:42:50.576413
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:42:51.020573
+==============================================================================
+
+2026-08-15 02:43:20,510 - 500142 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry4-2026-08-15-02-43-20-510.log
+2026-08-15 02:43:20,568 - 500142 - INFO - [Retry-4] RED for LNF Production Batch and Vocllect Server (10.0.30.43), retrying... (Total waited: 1200s)
+2026-08-15 02:43:20,568 - 500142 - INFO - [Retry-5] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:48:21,192 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: c1f0d1f9-2a61-4bca-9aa5-4e7abff92390)
+2026-08-15 02:48:51,322 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:48:51,323 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:48:21.382241
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:48:21.881647
+==============================================================================
+
+2026-08-15 02:48:51,325 - 500142 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry5-2026-08-15-02-48-51-324.log
+2026-08-15 02:48:51,385 - 500142 - INFO - [Retry-5] RED for LNF Production Batch and Vocllect Server (10.0.30.43), retrying... (Total waited: 1500s)
+2026-08-15 02:48:51,385 - 500142 - INFO - [Retry-6] Waiting 300s for i-095f4172827e679b3...
+2026-08-15 02:53:52,095 - 500142 - INFO - Sent app_validation.py to i-095f4172827e679b3 (command_id: fb876a83-9af8-4ad8-9239-89043190c1c8)
+2026-08-15 02:54:22,231 - 500142 - INFO - SSM Command Status: Success
+2026-08-15 02:54:22,231 - 500142 - INFO - app_validation.py output for i-095f4172827e679b3:
+
+==============================================================================
+Server Availability Check Started | 2026-08-15 01:53:52.278262
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.30.43
+Hostname | ip-10-0-30-43.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 12.0G | 277.9G | 4% | /data
+fs-e20744fb.efs.us-west-1.amazonaws.com:/ | 0B | 343.0G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-e20744fb.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.16-1.amzn2023.0.3.x86_64
+CUPS IP URL (http://10.0.30.43:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 41
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.30.43 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 5
+Batch/Daemon Java Processes | 5
+Non-Standalone Java Processes | wmsflex_voice, wmsflex_lbl, wmsflex_ftp, wmsflex_sch, wmsflex_advoice
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 5
+Java-Name | Java-Path
+wmsflex_voice | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_voice
+wmsflex_lbl | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_lbl
+wmsflex_ftp | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_ftp
+wmsflex_sch | /data/app/java/oracle_jdk/jdk1.7.0_80/bin/wmsflex_sch
+wmsflex_advoice | /data/batchapp/softeon/lnf/wmsflex/voiceadmindaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-15 01:53:52.895147
+==============================================================================
+
+2026-08-15 02:54:22,233 - 500142 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-08-15/q3-lnf-prod-batch2/10.0.30.43/10.0.30.43-AfterPatching-Retry6-2026-08-15-02-54-22-232.log
+2026-08-15 02:54:22,696 - 500142 - INFO - Health monitor crontab enabled on all instances
+2026-08-15 02:54:22,698 - 500142 - WARNING - [Retry] Timeout - auto cron enabled for i-095f4172827e679b3

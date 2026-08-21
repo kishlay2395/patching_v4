@@ -1,0 +1,244 @@
+2025-11-06 02:15:02,365 - 18052 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-11-06 02:15:02,366 - 18052 - INFO - Script Start Time: 2025-11-06 02:15:02
+2025-11-06 02:15:02,556 - 18052 - INFO - Instance(s) selected for Patching: {'i-099b9cf27e7ead015': '10.0.10.8'}
+2025-11-06 02:15:02,636 - 18052 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-06 02:15:02,637 - 18052 - INFO - Now patching instances at: 2025-11-06 02:15:02
+2025-11-06 02:15:02,694 - 18052 - INFO - Sending patch command to instance i-099b9cf27e7ead015
+2025-11-06 02:15:02,861 - 18052 - INFO - Command sent successfully to instance i-099b9cf27e7ead015. Command ID: b28036e4-1e81-429a-a2d9-2404f31f7787
+2025-11-06 02:20:04,168 - 18052 - INFO - All patches applied successfully.
+2025-11-06 02:20:04,169 - 18052 - INFO - Patching end time: 2025-11-06 02:20:04
+2025-11-06 02:20:04,169 - 18052 - INFO - Patch Elapsed time: 0:05:01.532203
+2025-11-06 02:20:04,246 - 18052 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-06 02:20:04,246 - 18052 - INFO - Confirmed - services are stopped
+2025-11-06 02:20:24,422 - 18052 - INFO - Discovered TG map: {'i-099b9cf27e7ead015': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Billing-Prod/e070e54952080a00']}
+2025-11-06 02:20:24,675 - 18052 - INFO - Sent app_validation.sh to i-099b9cf27e7ead015 (command_id: 401423ab-9287-48c5-abaf-887c0e6d672e)
+2025-11-06 02:20:54,733 - 18052 - INFO - app_validation.sh output for i-099b9cf27e7ead015:
+
+==============================================================================
+Server Availability Check Started at Thu Nov  6 02:20:24 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 10.0.10.8
+-------------------------------------
+System Information
+------------------
+Hostname: ip-10-0-10-8
+Uptime: up 10 weeks, 3 days, 23 hours, 10 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://10.0.10.8:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 10.0.10.8
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 11003 MB
+Free Physical Memory  = 4608 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 588 MB
+Free Swap Memory  = 19891 MB
+-------------------------------------
+Load Average: 0.76 0.91 0.49 9/600 4172232
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.6G   15G  28% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    230G  169G   62G  74% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  756K  3.1G   1% /run
+tmpfs             1.6G     0  1.6G   0% /run/user/2001
+tmpfs             1.6G     0  1.6G   0% /run/user/2002
+tmpfs             7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 10.0.10.8 started on Thu Nov  6 02:20:25 EST 2025
+
+Server IP: 10.0.10.8 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 10.0.10.8
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 10.0.10.8
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 10.0.10.8
+-------------------------------------
+
+Total number of Java process running on this host 10.0.10.8 is 10
+Total number of Daemon / Batch (java) application process available is 8
+
+Daemon Process id and name details are given below
+Process ID: 4100379, Process Name: 1:30
+Process ID: 2507276, Process Name: 7:15
+Process ID: 2507301, Process Name: 15:07
+Process ID: 2507371, Process Name: 15:31
+Process ID: 2507351, Process Name: 9:11
+Process ID: 2507226, Process Name: 28:36
+Process ID: 4054641, Process Name: 0:51
+Process ID: 3554689, Process Name: 3:21
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 10.0.10.8
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 2508325, Process Name: 1751:56
+-------------------------------------
+
+Web Application Port Validation for Server IP: 10.0.10.8
+Port 8080:	sclbilprd_j	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Thu Nov  6 02:20:26 EST 2025
+==============================================================================
+
+
+2025-11-06 02:20:54,733 - 18052 - ERROR - app_validation.sh errors for i-099b9cf27e7ead015:
+
+2025-11-06 02:20:54,736 - 18052 - INFO - Before patching validation saved to: output/validation-2025-11-06/10.0.10.8-BeforePatching-2025-11-06-02-20-54-735.log
+2025-11-06 02:20:54,736 - 18052 - INFO - Deregistering i-099b9cf27e7ead015 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Billing-Prod/e070e54952080a00
+2025-11-06 02:20:54,814 - 18052 - INFO - Stopping EC2 instance: i-099b9cf27e7ead015 at 2025-11-06 02:20:54
+2025-11-06 02:22:41,252 - 18052 - INFO - Instance i-099b9cf27e7ead015 stopped successfully.
+2025-11-06 02:22:41,384 - 18052 - INFO - Stopped i-099b9cf27e7ead015 in 0:01:46.570447
+2025-11-06 02:22:41,384 - 18052 - INFO - Starting EC2 instance: i-099b9cf27e7ead015
+2025-11-06 02:22:57,107 - 18052 - INFO - Instance i-099b9cf27e7ead015 started successfully.
+2025-11-06 02:22:57,107 - 18052 - INFO - Waiting 30 seconds for SSM agent to be ready on i-099b9cf27e7ead015...
+2025-11-06 02:23:27,111 - 18052 - INFO - Registering i-099b9cf27e7ead015 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-Billing-Prod/e070e54952080a00
+2025-11-06 02:25:27,705 - 18052 - INFO - Sent app_validation.sh to i-099b9cf27e7ead015 (command_id: 104de966-6270-425c-baa9-587dc758825e)
+2025-11-06 02:25:57,849 - 18052 - INFO - app_validation.sh output for i-099b9cf27e7ead015:
+
+==============================================================================
+Server Availability Check Started at Thu Nov  6 02:25:28 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 10.0.10.8
+-------------------------------------
+System Information
+------------------
+Hostname: ip-10-0-10-8
+Uptime: up 2 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://10.0.10.8:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 10.0.10.8
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 4060 MB
+Free Physical Memory  = 11551 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 0.66 0.51 0.21 5/303 3163
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1     20G  5.3G   15G  27% /
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2    230G  169G   62G  74% /data
+devtmpfs          4.0M     0  4.0M   0% /dev
+tmpfs             7.7G     0  7.7G   0% /dev/shm
+tmpfs             3.1G  648K  3.1G   1% /run
+tmpfs             7.7G   11M  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 10.0.10.8 started on Thu Nov  6 02:25:28 EST 2025
+
+Server IP: 10.0.10.8 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 10.0.10.8
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 10.0.10.8
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 10.0.10.8
+-------------------------------------
+
+Total number of Java process running on this host 10.0.10.8 is 1
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 10.0.10.8
+Total number of App java process available is 1
+-------------------------------------
+App Process details:
+Process ID: 2904, Process Name: 0:44
+-------------------------------------
+
+Web Application Port Validation for Server IP: 10.0.10.8
+Port 8080:	sclbilprd_jbos	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Thu Nov  6 02:25:29 EST 2025
+==============================================================================
+
+
+2025-11-06 02:25:57,849 - 18052 - ERROR - app_validation.sh errors for i-099b9cf27e7ead015:
+
+2025-11-06 02:25:57,851 - 18052 - INFO - After patching validation saved to: output/validation-2025-11-06/10.0.10.8-AfterPatching-2025-11-06-02-25-57-850.log
+2025-11-06 02:25:57,889 - 18052 - INFO - Validation comparison report generated: output/validation-2025-11-06/10.0.10.8-Validation-details-2025-11-06-02-25-57-850.log
+2025-11-06 02:25:57,976 - 18052 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-06 02:25:57,976 - 18052 - INFO - HTML validation report email sent for i-099b9cf27e7ead015
+2025-11-06 02:25:58,106 - 18052 - INFO - Started i-099b9cf27e7ead015 in 0:03:16.722054
+2025-11-06 02:25:58,107 - 18052 - INFO - All instances processed.
+2025-11-06 02:25:58,110 - 18052 - INFO - Restart Total time: 0:05:53.740323
+2025-11-06 02:25:58,111 - 18052 - INFO - Auto-confirmed services are restarted
+2025-11-06 02:25:58,111 - 18052 - INFO - Confirmed - services are started
+2025-11-06 02:25:58,215 - 18052 - INFO - The following instances have failed the patch: []
+2025-11-06 02:25:58,216 - 18052 - INFO - No instances have failed the patch.
+2025-11-06 02:25:58,216 - 18052 - INFO - Total Patch Process time: 0:10:55.849796
+2025-11-06 02:25:58,447 - 18052 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-06 02:26:58,657 - 18052 - INFO - Log file ./logs/patching_2025-11-06_SaddleCreek-Billing.log uploaded to s3://q4-2025-aws-security-patching/SaddleCreek-Billing_Patch/2025-11-06/patching_2025-11-06_SaddleCreek-Billing.log

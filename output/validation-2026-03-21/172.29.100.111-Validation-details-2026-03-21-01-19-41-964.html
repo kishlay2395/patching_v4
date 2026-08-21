@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validation Comparison Report</title>
+<style>
+body {
+  font-family: Arial, sans-serif; margin: 0; padding: 20px;
+  background: #f5f7fb; color: #222;
+}
+.container {
+  max-width: 1250px; margin: 0 auto; background: #fff;
+  border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;
+}
+.header { background: #1976D2; color: #fff; padding: 20px 24px; }
+.header h1 { margin: 0; font-size: 24px; }
+.submeta { margin-top: 8px; font-size: 13px; opacity: 0.95; }
+.content { padding: 24px; }
+.status-box {
+  margin: 0 0 18px 0; padding: 12px 14px; border-radius: 8px;
+  border-left: 5px solid #FF9800;
+  background: #FFF3E0;
+}
+.summary {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px;
+}
+.card {
+  border: 1px solid #e6eaf0; border-left: 4px solid #1976D2;
+  border-radius: 8px; padding: 12px; background: #fafcff;
+}
+.card .label { font-size: 12px; color: #666; margin-bottom: 4px; }
+.card .value { font-size: 24px; font-weight: 700; }
+h2 { margin-top: 28px; border-bottom: 2px solid #1976D2; padding-bottom: 6px; font-size: 18px; }
+table {
+  width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 20px;
+  table-layout: fixed; word-wrap: break-word;
+}
+th, td {
+  border: 1px solid #e0e0e0; padding: 10px; text-align: left; vertical-align: top; font-size: 13px;
+}
+th { background: #1976D2; color: #fff; }
+tr:nth-child(even) td { background: #fafafa; }
+.ok { color: #2E7D32; font-weight: 700; }
+.warn { color: #D84315; font-weight: 700; }
+.attention-title { color: #C62828; }
+.attention-details { color: #C62828; font-weight: 600; }
+.footer {
+  border-top: 1px solid #e0e0e0; background: #fafafa; padding: 14px 24px; font-size: 12px; color: #666;
+}
+@media (max-width: 900px) { .summary { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .summary { grid-template-columns: 1fr; }
+  th, td { font-size: 12px; padding: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Validation Comparison Report</h1>
+    <div class="submeta">
+      Before log: <b>output/validation-2026-03-21/172.29.100.111-BeforePatching-2026-03-21-01-15-28-512.log</b> &nbsp; | &nbsp;
+      After log: <b>output/validation-2026-03-21/172.29.100.111-AfterPatching-2026-03-21-01-19-41-964.log</b>
+    </div>
+  </div>
+  <div class="content">
+    <div class="status-box"><strong>23 Check(s) Need Attention</strong></div>
+
+    <div class="summary">
+      <div class="card"><div class="label">Total Checks</div><div class="value">37</div></div>
+      <div class="card"><div class="label">Validated</div><div class="value">14</div></div>
+      <div class="card"><div class="label">Need Attention</div><div class="value">23</div></div>
+      <div class="card"><div class="label">Success Rate</div><div class="value">37%</div></div>
+    </div>
+
+    
+    <h2 class="attention-title">Need Attention Summary</h2>
+    <table>
+        <thead>
+            <tr>
+            <th>Section</th>
+            <th>Name</th>
+            <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr><td>Summary Comparison</td><td>Cups Service Status</td><td class='attention-details'>Before: running | After: not running</td></tr><tr><td>Summary Comparison</td><td>CUPS IP URL Validation</td><td class='attention-details'>Before: HTTP 200 | After: Not Found/Not Running</td></tr><tr><td>Summary Comparison</td><td>JBOSS Application URL Validation</td><td class='attention-details'>Before: Not Found/Not Running | After: Not Found/Not Running</td></tr><tr><td>Summary Comparison</td><td>Total Number of Java Processes Running</td><td class='attention-details'>Before: 18 | After: 2</td></tr><tr><td>Summary Comparison</td><td>Daemon / Batch App Processes</td><td class='attention-details'>Before: 16 | After: 0</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_dwa</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_event</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_ftp</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_harp</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_lbl</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_repl</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_rccl</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_rplpu</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_rpt</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_jqgrid</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_sch</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_inbq</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_wld</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsi_wsq</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_1dwa</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Batch Processes Missing After Patching</td><td>nsiprod_ict</td><td class='attention-details'>After: Missing After Patch</td></tr><tr><td>Application URL Status Comparison</td><td>Cups server Http Status</td><td class='attention-details'>Pre-Status: 200 | Post-Status: Not Found | Pre_HttpCode: - | Post_HttpCode: -</td></tr><tr><td>Application URL Status Comparison</td><td>Cups printers Http Status</td><td class='attention-details'>Pre-Status: 500 | Post-Status: Not Found | Pre_HttpCode: - | Post_HttpCode: -</td></tr>
+        </tbody>
+    </table>
+    
+
+    
+        <h2>Summary Comparison</h2>
+        <table>
+          <thead>
+            <tr><th>Section</th><th>Before Patching</th><th>Post Patching</th><th>Status</th></tr>
+          </thead>
+          <tbody><tr><td>Server IP</td><td>172.29.100.111</td><td>172.29.100.111</td><td class='ok'>Validated</td></tr><tr><td>Time Zone Information</td><td>UTC</td><td>UTC</td><td class='ok'>Validated</td></tr><tr><td>Mounted on (data*)</td><td>/data</td><td>/data</td><td class='ok'>Validated</td></tr><tr><td>Shared Mount point</td><td>Not Found</td><td>Not Found</td><td class='ok'>Validated</td></tr><tr><td>NFS Server Package Availability</td><td>Service Available</td><td>Service Available</td><td class='ok'>Validated</td></tr><tr><td>NFS Server Status</td><td>not running</td><td>not running</td><td class='ok'>Validated</td></tr><tr><td>NFS Client Target Package Availability</td><td>Service Available</td><td>Service Available</td><td class='ok'>Validated</td></tr><tr><td>NFS Client Target Status</td><td>running</td><td>running</td><td class='ok'>Validated</td></tr><tr><td>Cups Service Status</td><td>running</td><td>not running</td><td class='warn'>Need Attention</td></tr><tr><td>CUPS Service Version</td><td>1.7.5</td><td>1.7.5</td><td class='ok'>Validated</td></tr><tr><td>CUPS IP URL Validation</td><td>HTTP 200</td><td>Not Found/Not Running</td><td class='warn'>Need Attention</td></tr><tr><td>JBOSS Application URL Validation</td><td>Not Found/Not Running</td><td>Not Found/Not Running</td><td class='warn'>Need Attention</td></tr><tr><td>FTP Service Status</td><td>not running</td><td>not running</td><td class='ok'>Validated</td></tr><tr><td>Number of Printers</td><td>0</td><td>0</td><td class='ok'>Validated</td></tr><tr><td>Total Number of Java Processes Running</td><td>18</td><td>2</td><td class='warn'>Need Attention</td></tr><tr><td>Daemon / Batch App Processes</td><td>16</td><td>0</td><td class='warn'>Need Attention</td></tr><tr><td>App Processes Running</td><td>0</td><td>0</td><td class='ok'>Validated</td></tr><tr><td>Total App URL Running </td><td>0</td><td>0</td><td class='ok'>Validated</td></tr></tbody>
+        </table>
+        
+    
+        <h2>Batch Processes Missing After Patching</h2>
+        <table>
+          <thead>
+            <tr><th>Section</th><th>Before Patching</th><th>After Patching</th><th>Status</th></tr>
+          </thead>
+          <tbody><tr><td>Batch Process Detail</td><td>nsiprod_dwa</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_event</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_ftp</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_harp</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_lbl</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_repl</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_rccl</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_rplpu</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_rpt</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_jqgrid</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_sch</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_inbq</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_wld</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsi_wsq</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_1dwa</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr><tr><td>Batch Process Detail</td><td>nsiprod_ict</td><td>Missing After Patch</td><td class='warn'>Need Attention</td></tr></tbody>
+        </table>
+        
+    
+        <h2>Application Process Details</h2>
+        <table>
+          <thead>
+            <tr><th>Section / URL</th><th>Before Patching</th><th>After Patching</th><th>Status</th></tr>
+          </thead>
+          <tbody><tr><td>Total App Processes Running</td><td>0</td><td>0</td><td class='ok'>Validated</td></tr></tbody>
+        </table>
+        
+
+    <h2>Application URL Status Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>URL Address</th>
+          <th>Pre-Status</th>
+          <th>Post-Status</th>
+          <th>Status</th>
+          <th>Pre_HttpCode</th>
+          <th>Post_HttpCode</th>
+          <th>HTTP Compare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cups server Http Status</td><td>200</td><td>Not Found</td><td class='warn'>Need Attention</td><td>-</td><td>-</td><td class='warn'>-</td></tr><tr><td>Cups printers Http Status</td><td>500</td><td>Not Found</td><td class='warn'>Need Attention</td><td>-</td><td>-</td><td class='warn'>-</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer">
+    Generated at 2026-03-21 01:19:42
+  </div>
+</div>
+</body>
+</html>

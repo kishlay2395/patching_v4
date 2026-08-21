@@ -1,0 +1,158 @@
+2026-04-02 01:05:02,009 - 4151013 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-02 01:05:02,010 - 4151013 - INFO - Script Start Time: 2026-04-02 01:05:02
+2026-04-02 01:05:02,328 - 4151013 - INFO - Instance(s) selected for Patching: {'i-0daab8044cf29ce6e': '172.16.250.165'}
+2026-04-02 01:05:02,433 - 4151013 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 01:05:02,433 - 4151013 - INFO - Now patching instances at: 2026-04-02 01:05:02
+2026-04-02 01:05:02,541 - 4151013 - INFO - Sending patch command to instance i-0daab8044cf29ce6e
+2026-04-02 01:05:02,700 - 4151013 - INFO - Command sent successfully to instance i-0daab8044cf29ce6e. Command ID: f6d1095a-e943-4b94-b73d-fd2f868e23ca
+2026-04-02 01:09:04,013 - 4151013 - INFO - All patches applied successfully.
+2026-04-02 01:09:04,014 - 4151013 - INFO - Patching end time: 2026-04-02 01:09:04
+2026-04-02 01:09:04,014 - 4151013 - INFO - Patch Elapsed time: 0:04:01.580920
+2026-04-02 01:09:04,081 - 4151013 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-02 01:09:04,081 - 4151013 - INFO - Confirmed - services are stopped
+2026-04-02 01:09:25,298 - 4151013 - INFO - Discovered TG map: {'i-0daab8044cf29ce6e': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Config/1a0bfc378f638b1a', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Desktop/5485e320f7ea20d4', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-RF/751561d20d1b3fb5', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-SWP/22ffa0ffaf83c183', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-API/dc814f41e83e8e29', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-WS/ebac5fcc1c5a983c']}
+2026-04-02 01:09:25,712 - 4151013 - INFO - Sent app_validation.py to i-0daab8044cf29ce6e (command_id: 1da82f30-315d-42f0-8462-9248e9175925)
+2026-04-02 01:09:55,792 - 4151013 - INFO - app_validation.py output for i-0daab8044cf29ce6e:
+
+==============================================================================
+Server Availability Check Started | 2026-04-02 01:09:26.147883
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.16.250.165
+Hostname | ip-172-16-250-165
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 77.3G | 162.5G | 32% | /data
+/dev/nvme1n1p2 | 239.9G | 77.3G | 162.5G | 32% | /data2
+/dev/nvme1n1p2 | 239.9G | 77.3G | 162.5G | 32% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.14-1.amzn2023.0.2.aarch64
+CUPS IP URL (http://172.16.250.165:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.16.250.165 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 24
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | cdsuatconf_bdd, cdsuat_adhoapi, cdsuat_dwa, cdsuat_invbt, cdsuat_billcb, cdsuat_ftp, cdsuat_tiap, cdsuat_repl, cdsuat_event, cdsuat_wld, cdsuat_ict, cdsuat_apick, cdsuat_rpt, cdsuat_rccl, cdsuat_jqgrid, cdsuat_inbq, cdsuat_lbl, cdsuat_sch, cdsuat_rplpu
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+cdsuatconf_bdd | /data/batchapp/softeon/cdsconfiguat/bulkdatadaemon
+cdsuat_adhoapi | /data/app/adhocapi/softeon/cdsuatapi
+cdsuat_dwa | /data/batchapp/softeon/cdsuat/downloaddaemon
+cdsuat_invbt | /data/batchapp/softeon/cdsuat/invoicebatchdaemon
+cdsuat_billcb | /data/batchapp/softeon/cdsuat/chargesbatchdaemon
+cdsuat_ftp | /data/batchapp/softeon/cdsuat/ftpdaemon
+cdsuat_tiap | /data/batchapp/softeon/cdsuat/taskinventoryallocationatpalletleveldaemon
+cdsuat_repl | /data/batchapp/softeon/cdsuat/replenishmentdaemon
+cdsuat_event | /data/batchapp/softeon/cdsuat/eventdaemon
+cdsuat_wld | /data/batchapp/softeon/cdsuat/wavelaunchdaemon
+cdsuat_ict | /data/batchapp/softeon/cdsuat/inventorycomputationbytaskdaemon
+cdsuat_apick | /data/batchapp/softeon/cdsuat/autopicktooldaemon
+cdsuat_rpt | /data/batchapp/softeon/cdsuat/reportdaemon
+cdsuat_rccl | /data/batchapp/softeon/cdsuat/replenishmentpickloccanceldaemon
+cdsuat_jqgrid | /data/batchapp/softeon/cdsuat/reportjqgridexportdaemon
+cdsuat_inbq | /data/batchapp/softeon/cdsuat/uploaddaemon
+cdsuat_lbl | /data/batchapp/softeon/cdsuat/labeldaemon
+cdsuat_sch | /data/batchapp/softeon/cdsuat/schedulardaemon
+cdsuat_rplpu | /data/batchapp/softeon/cdsuat/replenishmentpriorityupdatedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+69372 | cdsconfiguat | jboss740eap | cdsconfig_jb740 | 8084 | 172.16.250.165:8084 | Down | 302 | Disabled | /data/app/jboss740eap/softeon/cdsconfiguat/standalone
+1623854 | cdsrfuat | jboss800eap | cdsrfuat_jb800 | 8081 | 172.16.250.165:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cdsrfuat/standalone
+800204 | cdsswpuat | jboss800eap | cdsswpuat_jb800 | 8083 | 172.16.250.165:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cdsswpuat/standalone
+1623525 | cdsuat | jboss800eap | cdsuat_jb800 | 8080 | 172.16.250.165:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cdsuat/standalone
+1624109 | cdswsuat | jboss800eap | cdswsuat_jb800 | 8082 | 172.16.250.165:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/cdswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-02 01:09:27.307723
+==============================================================================
+
+2026-04-02 01:09:55,792 - 4151013 - ERROR - app_validation.py errors for i-0daab8044cf29ce6e:
+
+2026-04-02 01:09:55,794 - 4151013 - INFO - Before patching validation saved to: output/validation-2026-04-02/172.16.250.165-BeforePatching-2026-04-02-01-09-55-794.log
+2026-04-02 01:09:55,794 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Config/1a0bfc378f638b1a
+2026-04-02 01:09:55,869 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Desktop/5485e320f7ea20d4
+2026-04-02 01:09:55,924 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-RF/751561d20d1b3fb5
+2026-04-02 01:09:55,975 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-SWP/22ffa0ffaf83c183
+2026-04-02 01:09:56,022 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-API/dc814f41e83e8e29
+2026-04-02 01:09:56,064 - 4151013 - INFO - Deregistering i-0daab8044cf29ce6e from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-WS/ebac5fcc1c5a983c
+2026-04-02 01:09:56,116 - 4151013 - INFO - Stopping EC2 instance: i-0daab8044cf29ce6e at 2026-04-02 01:09:56
+2026-04-02 01:12:42,976 - 4151013 - INFO - Instance i-0daab8044cf29ce6e stopped successfully.
+2026-04-02 01:12:43,119 - 4151013 - INFO - Stopped i-0daab8044cf29ce6e in 0:02:47.003694
+2026-04-02 01:12:43,120 - 4151013 - INFO - Starting EC2 instance: i-0daab8044cf29ce6e
+2026-04-02 01:12:59,038 - 4151013 - INFO - Instance i-0daab8044cf29ce6e started successfully.
+2026-04-02 01:12:59,038 - 4151013 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0daab8044cf29ce6e...
+2026-04-02 01:14:39,126 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Config/1a0bfc378f638b1a
+2026-04-02 01:14:39,282 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Desktop/5485e320f7ea20d4
+2026-04-02 01:14:39,433 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-RF/751561d20d1b3fb5
+2026-04-02 01:14:39,602 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-SWP/22ffa0ffaf83c183
+2026-04-02 01:14:39,733 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-API/dc814f41e83e8e29
+2026-04-02 01:14:39,865 - 4151013 - INFO - Registering i-0daab8044cf29ce6e to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-WS/ebac5fcc1c5a983c
+2026-04-02 01:19:40,646 - 4151013 - WARNING - i-0daab8044cf29ce6e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-Config/1a0bfc378f638b1a after timeout.
+2026-04-02 01:24:41,371 - 4151013 - WARNING - i-0daab8044cf29ce6e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-SWP/22ffa0ffaf83c183 after timeout.
+2026-04-02 01:29:42,055 - 4151013 - WARNING - i-0daab8044cf29ce6e not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/CDS-UAT-API/dc814f41e83e8e29 after timeout.
+2026-04-02 01:29:42,183 - 4151013 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-02 01:29:42,183 - 4151013 - ERROR - Aborting workflow: i-0daab8044cf29ce6e is not healthy after restart.
+2026-04-02 01:29:42,186 - 4151013 - INFO - Restart Total time: 0:20:37.971577
+2026-04-02 01:29:42,186 - 4151013 - INFO - Auto-confirmed services are restarted
+2026-04-02 01:29:42,187 - 4151013 - INFO - Confirmed - services are started
+2026-04-02 01:29:42,315 - 4151013 - INFO - The following instances have failed the patch: []
+2026-04-02 01:29:42,316 - 4151013 - INFO - No instances have failed the patch.
+2026-04-02 01:29:42,316 - 4151013 - INFO - Total Patch Process time: 0:24:40.305589
+2026-04-02 01:30:42,710 - 4151013 - ERROR - Failed to upload log file to S3: Failed to upload ./logs/patching_2026-04-02_CDS-UAT.log to q2-2026-aws-security-patching/CDS-UAT_Patch/2026-04-02/patching_2026-04-02_CDS-UAT.log: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist

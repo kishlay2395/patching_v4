@@ -1,0 +1,583 @@
+2026-07-09 03:00:03,368 - 4001584 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-09 03:00:03,368 - 4001584 - INFO - Script Start Time: 2026-07-09 03:00:03
+2026-07-09 03:00:04,070 - 4001584 - INFO - Instance(s) selected for Patching: {'i-0495a320189fd64e9': '172.30.162.19'}
+2026-07-09 03:00:04,152 - 4001584 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 03:00:04,152 - 4001584 - INFO - Now patching instances at: 2026-07-09 03:00:04
+2026-07-09 03:00:09,602 - 4001584 - INFO - i-0495a320189fd64e9: Cron was active = True
+2026-07-09 03:00:09,884 - 4001584 - INFO - Health monitor crontab disabled on all instances
+2026-07-09 03:00:09,887 - 4001584 - INFO - Disabled cron for: ['i-0495a320189fd64e9']
+2026-07-09 03:00:10,255 - 4001584 - INFO - Sent app_validation.py to i-0495a320189fd64e9 (command_id: 636ebb1b-4957-4a41-8df8-28df0cd18d9b)
+2026-07-09 03:00:40,341 - 4001584 - INFO - app_validation.py output for i-0495a320189fd64e9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 07:00:10.674813
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.19
+Hostname | ip-172-30-162-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 86.3G | 153.6G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | scooters_apick, scooters_dwa, scooters_event, scooters_ftp, scooters_lbl, scooters_repl, scooters_rccl, scooters_rplpu, scooters_rpt, scooters_jqgrid, scooters_sch, scooters_inbq, scooters_wld, scooters_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+scooters_apick | /data/batchapp/softeon/scootersuat/autopicktooldaemon
+scooters_dwa | /data/batchapp/softeon/scootersuat/downloaddaemon
+scooters_event | /data/batchapp/softeon/scootersuat/eventdaemon
+scooters_ftp | /data/batchapp/softeon/scootersuat/ftpdaemon
+scooters_lbl | /data/batchapp/softeon/scootersuat/labeldaemon
+scooters_repl | /data/batchapp/softeon/scootersuat/replenishmentdaemon
+scooters_rccl | /data/batchapp/softeon/scootersuat/replenishmentpickloccanceldaemon
+scooters_rplpu | /data/batchapp/softeon/scootersuat/replenishmentpriorityupdatedaemon
+scooters_rpt | /data/batchapp/softeon/scootersuat/reportdaemon
+scooters_jqgrid | /data/batchapp/softeon/scootersuat/reportjqgridexportdaemon
+scooters_sch | /data/batchapp/softeon/scootersuat/schedulerdaemon
+scooters_inbq | /data/batchapp/softeon/scootersuat/uploaddaemon
+scooters_wld | /data/batchapp/softeon/scootersuat/wavelaunchdaemon
+scooters_ccd | /data/batchapp/softeon/scootersuat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2289745 | scootersuat | jboss740eap | scooterc_jb740 | 8080 | 172.30.162.19:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuat/standalone
+2289968 | scootersuatrf | jboss740eap | scooterrf_jb74 | 8081 | 172.30.162.19:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuatrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 07:00:11.885367
+==============================================================================
+
+2026-07-09 03:00:40,341 - 4001584 - ERROR - app_validation.py errors for i-0495a320189fd64e9:
+
+2026-07-09 03:00:40,343 - 4001584 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-BeforePatching-2026-07-09-03-00-40-342.log
+2026-07-09 03:00:40,428 - 4001584 - INFO - Sending patch command to instance i-0495a320189fd64e9
+2026-07-09 03:00:40,596 - 4001584 - INFO - Command sent successfully to instance i-0495a320189fd64e9. Command ID: 895d9bc8-974c-4d42-8f31-6179242dea09
+2026-07-09 03:11:13,066 - 4001584 - INFO - All patches applied successfully.
+2026-07-09 03:11:13,067 - 4001584 - INFO - Patching end time: 2026-07-09 03:11:13
+2026-07-09 03:11:13,067 - 4001584 - INFO - Patch Elapsed time: 0:11:08.914405
+2026-07-09 03:11:13,139 - 4001584 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-09 03:11:13,139 - 4001584 - INFO - Confirmed - services are stopped
+2026-07-09 03:11:20,286 - 4001584 - INFO - Discovered TG map: {'i-0495a320189fd64e9': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-Desktop/3b90fc93e0d2e359', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-RF/53857146845cb6be', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-WS/4446a27bf317d8b9']}
+2026-07-09 03:11:20,533 - 4001584 - INFO - Deregistering i-0495a320189fd64e9 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-Desktop/3b90fc93e0d2e359
+2026-07-09 03:11:20,640 - 4001584 - INFO - Deregistering i-0495a320189fd64e9 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-RF/53857146845cb6be
+2026-07-09 03:11:20,689 - 4001584 - INFO - Deregistering i-0495a320189fd64e9 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-WS/4446a27bf317d8b9
+2026-07-09 03:11:20,744 - 4001584 - INFO - Stopping EC2 instance: i-0495a320189fd64e9 at 2026-07-09 03:11:20
+2026-07-09 03:13:37,417 - 4001584 - INFO - Instance i-0495a320189fd64e9 stopped successfully.
+2026-07-09 03:13:37,547 - 4001584 - INFO - Stopped i-0495a320189fd64e9 in 0:02:16.802916
+2026-07-09 03:13:37,547 - 4001584 - INFO - Starting EC2 instance: i-0495a320189fd64e9
+2026-07-09 03:13:53,389 - 4001584 - INFO - Instance i-0495a320189fd64e9 started successfully.
+2026-07-09 03:13:53,390 - 4001584 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0495a320189fd64e9...
+2026-07-09 03:15:33,403 - 4001584 - INFO - Registering i-0495a320189fd64e9 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-Desktop/3b90fc93e0d2e359
+2026-07-09 03:15:33,599 - 4001584 - INFO - Registering i-0495a320189fd64e9 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-RF/53857146845cb6be
+2026-07-09 03:15:33,735 - 4001584 - INFO - Registering i-0495a320189fd64e9 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/ScootersCoffee-UAT-WS/4446a27bf317d8b9
+2026-07-09 03:18:04,564 - 4001584 - INFO - Sent app_validation.py to i-0495a320189fd64e9 (command_id: 1f8e1bb1-ded2-47b0-946b-a181b45db3ae)
+2026-07-09 03:18:34,650 - 4001584 - INFO - app_validation.py output for i-0495a320189fd64e9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 07:18:04.952913
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.19
+Hostname | ip-172-30-162-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 86.0G | 153.9G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | scooters_apick, scooters_dwa, scooters_event, scooters_ftp, scooters_lbl, scooters_repl, scooters_rccl, scooters_rplpu, scooters_rpt, scooters_jqgrid, scooters_sch, scooters_inbq, scooters_wld, scooters_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+scooters_apick | /data/batchapp/softeon/scootersuat/autopicktooldaemon
+scooters_dwa | /data/batchapp/softeon/scootersuat/downloaddaemon
+scooters_event | /data/batchapp/softeon/scootersuat/eventdaemon
+scooters_ftp | /data/batchapp/softeon/scootersuat/ftpdaemon
+scooters_lbl | /data/batchapp/softeon/scootersuat/labeldaemon
+scooters_repl | /data/batchapp/softeon/scootersuat/replenishmentdaemon
+scooters_rccl | /data/batchapp/softeon/scootersuat/replenishmentpickloccanceldaemon
+scooters_rplpu | /data/batchapp/softeon/scootersuat/replenishmentpriorityupdatedaemon
+scooters_rpt | /data/batchapp/softeon/scootersuat/reportdaemon
+scooters_jqgrid | /data/batchapp/softeon/scootersuat/reportjqgridexportdaemon
+scooters_sch | /data/batchapp/softeon/scootersuat/schedulerdaemon
+scooters_inbq | /data/batchapp/softeon/scootersuat/uploaddaemon
+scooters_wld | /data/batchapp/softeon/scootersuat/wavelaunchdaemon
+scooters_ccd | /data/batchapp/softeon/scootersuat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4010 | scootersuat | jboss740eap | scooterc_jb740 | 8080 | 172.30.162.19:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuat/standalone
+4090 | scootersuatrf | jboss740eap | scooterrf_jb74 | 8081 | 172.30.162.19:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuatrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 07:18:07.184898
+==============================================================================
+
+2026-07-09 03:18:34,650 - 4001584 - ERROR - app_validation.py errors for i-0495a320189fd64e9:
+
+2026-07-09 03:18:34,651 - 4001584 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-AfterPatching-2026-07-09-03-18-34-651.log
+2026-07-09 03:18:34,703 - 4001584 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-Validation-details-2026-07-09-03-18-34-651.html
+2026-07-09 03:18:34,999 - 4001584 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-09 03:18:34,999 - 4001584 - INFO - HTML validation report email sent for i-0495a320189fd64e9
+2026-07-09 03:18:34,999 - 4001584 - INFO - [Retry-1] Waiting 600s for i-0495a320189fd64e9...
+2026-07-09 03:18:34,999 - 4001584 - INFO - RED - Background retry thread started for i-0495a320189fd64e9
+2026-07-09 03:18:35,218 - 4001584 - INFO - Started i-0495a320189fd64e9 in 0:04:57.670440
+2026-07-09 03:18:35,218 - 4001584 - INFO - All instances processed.
+2026-07-09 03:18:35,223 - 4001584 - INFO - Restart Total time: 0:07:21.956142
+2026-07-09 03:18:35,223 - 4001584 - INFO - Auto-confirmed services are restarted
+2026-07-09 03:18:35,223 - 4001584 - INFO - Confirmed - services are started
+2026-07-09 03:18:35,338 - 4001584 - INFO - The following instances have failed the patch: []
+2026-07-09 03:18:35,338 - 4001584 - INFO - No instances have failed the patch.
+2026-07-09 03:18:35,338 - 4001584 - INFO - Total Patch Process time: 0:18:31.969886
+2026-07-09 03:19:35,760 - 4001584 - INFO - Log file ./logs/patching_2026-07-09_ScootersCoffee-UAT.log uploaded to s3://q3-2026-aws-security-patching/ScootersCoffee-UAT_Patch/2026-07-09/patching_2026-07-09_ScootersCoffee-UAT.log
+2026-07-09 03:28:35,235 - 4001584 - INFO - Sent app_validation.py to i-0495a320189fd64e9 (command_id: c8619cb4-452c-44cd-8755-1000d98922d0)
+2026-07-09 03:29:05,304 - 4001584 - INFO - app_validation.py output for i-0495a320189fd64e9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 07:28:35.508486
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.19
+Hostname | ip-172-30-162-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 86.3G | 153.6G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | scooters_apick, scooters_dwa, scooters_event, scooters_ftp, scooters_lbl, scooters_repl, scooters_rccl, scooters_rplpu, scooters_rpt, scooters_jqgrid, scooters_sch, scooters_inbq, scooters_wld, scooters_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+scooters_apick | /data/batchapp/softeon/scootersuat/autopicktooldaemon
+scooters_dwa | /data/batchapp/softeon/scootersuat/downloaddaemon
+scooters_event | /data/batchapp/softeon/scootersuat/eventdaemon
+scooters_ftp | /data/batchapp/softeon/scootersuat/ftpdaemon
+scooters_lbl | /data/batchapp/softeon/scootersuat/labeldaemon
+scooters_repl | /data/batchapp/softeon/scootersuat/replenishmentdaemon
+scooters_rccl | /data/batchapp/softeon/scootersuat/replenishmentpickloccanceldaemon
+scooters_rplpu | /data/batchapp/softeon/scootersuat/replenishmentpriorityupdatedaemon
+scooters_rpt | /data/batchapp/softeon/scootersuat/reportdaemon
+scooters_jqgrid | /data/batchapp/softeon/scootersuat/reportjqgridexportdaemon
+scooters_sch | /data/batchapp/softeon/scootersuat/schedulerdaemon
+scooters_inbq | /data/batchapp/softeon/scootersuat/uploaddaemon
+scooters_wld | /data/batchapp/softeon/scootersuat/wavelaunchdaemon
+scooters_ccd | /data/batchapp/softeon/scootersuat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4010 | scootersuat | jboss740eap | scooterc_jb740 | 8080 | 172.30.162.19:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuat/standalone
+4090 | scootersuatrf | jboss740eap | scooterrf_jb74 | 8081 | 172.30.162.19:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuatrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 07:28:36.146542
+==============================================================================
+
+2026-07-09 03:29:05,304 - 4001584 - ERROR - app_validation.py errors for i-0495a320189fd64e9:
+
+2026-07-09 03:29:05,306 - 4001584 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-AfterPatching-Retry1-2026-07-09-03-29-05-306.log
+2026-07-09 03:29:05,360 - 4001584 - INFO - [Retry-1] RED detected for ScootersCoffee UAT Application and Batch Server - 1 (172.30.162.19), retrying... (Total waited: 600s)
+2026-07-09 03:29:05,360 - 4001584 - INFO - [Retry-2] Waiting 600s for i-0495a320189fd64e9...
+2026-07-09 03:39:05,819 - 4001584 - INFO - Sent app_validation.py to i-0495a320189fd64e9 (command_id: 58c2f25f-b699-4976-897f-f4b266afb743)
+2026-07-09 03:39:35,889 - 4001584 - INFO - app_validation.py output for i-0495a320189fd64e9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 07:39:06.088934
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.19
+Hostname | ip-172-30-162-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 86.1G | 153.7G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | scooters_apick, scooters_dwa, scooters_event, scooters_ftp, scooters_lbl, scooters_repl, scooters_rccl, scooters_rplpu, scooters_rpt, scooters_jqgrid, scooters_sch, scooters_inbq, scooters_wld, scooters_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+scooters_apick | /data/batchapp/softeon/scootersuat/autopicktooldaemon
+scooters_dwa | /data/batchapp/softeon/scootersuat/downloaddaemon
+scooters_event | /data/batchapp/softeon/scootersuat/eventdaemon
+scooters_ftp | /data/batchapp/softeon/scootersuat/ftpdaemon
+scooters_lbl | /data/batchapp/softeon/scootersuat/labeldaemon
+scooters_repl | /data/batchapp/softeon/scootersuat/replenishmentdaemon
+scooters_rccl | /data/batchapp/softeon/scootersuat/replenishmentpickloccanceldaemon
+scooters_rplpu | /data/batchapp/softeon/scootersuat/replenishmentpriorityupdatedaemon
+scooters_rpt | /data/batchapp/softeon/scootersuat/reportdaemon
+scooters_jqgrid | /data/batchapp/softeon/scootersuat/reportjqgridexportdaemon
+scooters_sch | /data/batchapp/softeon/scootersuat/schedulerdaemon
+scooters_inbq | /data/batchapp/softeon/scootersuat/uploaddaemon
+scooters_wld | /data/batchapp/softeon/scootersuat/wavelaunchdaemon
+scooters_ccd | /data/batchapp/softeon/scootersuat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4010 | scootersuat | jboss740eap | scooterc_jb740 | 8080 | 172.30.162.19:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuat/standalone
+4090 | scootersuatrf | jboss740eap | scooterrf_jb74 | 8081 | 172.30.162.19:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuatrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 07:39:06.817717
+==============================================================================
+
+2026-07-09 03:39:35,889 - 4001584 - ERROR - app_validation.py errors for i-0495a320189fd64e9:
+
+2026-07-09 03:39:35,891 - 4001584 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-AfterPatching-Retry2-2026-07-09-03-39-35-890.log
+2026-07-09 03:39:35,945 - 4001584 - INFO - [Retry-2] RED detected for ScootersCoffee UAT Application and Batch Server - 1 (172.30.162.19), retrying... (Total waited: 1200s)
+2026-07-09 03:39:35,945 - 4001584 - INFO - [Retry-3] Waiting 600s for i-0495a320189fd64e9...
+2026-07-09 03:49:36,215 - 4001584 - INFO - Sent app_validation.py to i-0495a320189fd64e9 (command_id: 9d26739e-3c26-4254-a615-dd8242af0100)
+2026-07-09 03:50:06,302 - 4001584 - INFO - app_validation.py output for i-0495a320189fd64e9:
+
+==============================================================================
+Server Availability Check Started | 2026-07-09 07:49:36.473146
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.162.19
+Hostname | ip-172-30-162-19.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 86.2G | 153.7G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.162.19:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 13
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.162.19 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 14
+Non-Standalone Java Processes | scooters_apick, scooters_dwa, scooters_event, scooters_ftp, scooters_lbl, scooters_repl, scooters_rccl, scooters_rplpu, scooters_rpt, scooters_jqgrid, scooters_sch, scooters_inbq, scooters_wld, scooters_ccd
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 14
+Java-Name | Java-Path
+scooters_apick | /data/batchapp/softeon/scootersuat/autopicktooldaemon
+scooters_dwa | /data/batchapp/softeon/scootersuat/downloaddaemon
+scooters_event | /data/batchapp/softeon/scootersuat/eventdaemon
+scooters_ftp | /data/batchapp/softeon/scootersuat/ftpdaemon
+scooters_lbl | /data/batchapp/softeon/scootersuat/labeldaemon
+scooters_repl | /data/batchapp/softeon/scootersuat/replenishmentdaemon
+scooters_rccl | /data/batchapp/softeon/scootersuat/replenishmentpickloccanceldaemon
+scooters_rplpu | /data/batchapp/softeon/scootersuat/replenishmentpriorityupdatedaemon
+scooters_rpt | /data/batchapp/softeon/scootersuat/reportdaemon
+scooters_jqgrid | /data/batchapp/softeon/scootersuat/reportjqgridexportdaemon
+scooters_sch | /data/batchapp/softeon/scootersuat/schedulerdaemon
+scooters_inbq | /data/batchapp/softeon/scootersuat/uploaddaemon
+scooters_wld | /data/batchapp/softeon/scootersuat/wavelaunchdaemon
+scooters_ccd | /data/batchapp/softeon/scootersuat/clustercreationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4010 | scootersuat | jboss740eap | scooterc_jb740 | 8080 | 172.30.162.19:8080 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuat/standalone
+4090 | scootersuatrf | jboss740eap | scooterrf_jb74 | 8081 | 172.30.162.19:8081 | UP | 200 | Disabled | /data/app/jboss740eap/softeon/scootersuatrf/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-09 07:49:37.094469
+==============================================================================
+
+2026-07-09 03:50:06,302 - 4001584 - ERROR - app_validation.py errors for i-0495a320189fd64e9:
+
+2026-07-09 03:50:06,304 - 4001584 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-09/ScootersCoffee-UAT/172.30.162.19/172.30.162.19-AfterPatching-Retry3-2026-07-09-03-50-06-304.log
+2026-07-09 03:50:06,585 - 4001584 - INFO - Health monitor crontab enabled on all instances
+2026-07-09 03:50:06,587 - 4001584 - WARNING - [Retry] Timeout - auto cron enabled for i-0495a320189fd64e9

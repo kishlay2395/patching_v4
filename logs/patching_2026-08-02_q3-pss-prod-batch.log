@@ -1,0 +1,1133 @@
+2026-08-02 02:05:03,499 - 2725853 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 02:31:29,457 - 2725853 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 02:31:29,646 - 2725853 - INFO - Log file ./logs/backup_2026-08-02.log uploaded to s3://q3-2025-aws-security-patching/q3-pss-prod-batch_Patch_Backup/2026-08-02/backup_2026-08-02.log
+2026-08-02 06:05:03,161 - 2802492 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-08-02 06:05:03,161 - 2802492 - INFO - Script Start Time: 2026-08-02 06:05:03
+2026-08-02 06:05:03,404 - 2802492 - INFO - Tag: q3-pss-prod-batch, IPs: ['172.31.18.6'], Environment: prod
+2026-08-02 06:05:03,404 - 2802492 - INFO - Instance(s) selected for Patching: {'i-05d6610781df2e55f': '172.31.18.6'}
+2026-08-02 06:05:03,476 - 2802492 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 06:05:03,477 - 2802492 - INFO - Now patching instances at: 2026-08-02 06:05:03
+2026-08-02 06:05:03,723 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: 89498455-fdb8-40cc-9e74-613e908256bf)
+2026-08-02 06:05:33,843 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:05:33,844 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:05:04.177419
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdb2 | 179.9G | 136.6G | 43.3G | 75% | /data
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+172.31.18.24:/data/softeon/shared | 179.9G | 105.3G | 74.6G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 127372 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 22
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | pssprod_reportsdaemon, java, pssprod_label_lb7daemon, pssprod_label_lb11daemon, pssprod_label_lb1105daemon, pssprod_label_lb6daemon, pssprod_label_lb121daemon, pssprod_lb141daemon, pssprod_integritydaemon, pssprod_billtransprocessdaemon, pssprod_jqgridreportdaemon, pssprod_wavelaunchdaemon, pssprod_schedulerdaemon, pssprod_eventdaemon, pssprd_bld7atopkdamn, pssprod_df_uploaddaemon, pssprod_billingchargesdaemon, pssprod_autopickdaemon, pssprod_ftpdaemon, pssprod_downloaddaemon, pssprod_uploaddaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+java | /data2/PSSPROD_HKP_PROCESS
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Active
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:05:05.194952
+==============================================================================
+
+2026-08-02 06:05:33,846 - 2802492 - INFO - Before patching log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-BeforePatching-2026-08-02-06-05-33-845.log
+2026-08-02 06:05:39,083 - 2802492 - INFO - i-05d6610781df2e55f: Cron was active = True
+2026-08-02 06:05:39,325 - 2802492 - INFO - Health monitor crontab disabled on all instances
+2026-08-02 06:05:39,327 - 2802492 - INFO - Disabled cron for: ['i-05d6610781df2e55f']
+2026-08-02 06:05:39,425 - 2802492 - INFO - Sending patch command to instance i-05d6610781df2e55f
+2026-08-02 06:05:39,543 - 2802492 - INFO - Command sent successfully to instance i-05d6610781df2e55f. Command ID: e5e02202-e3de-4b84-bb23-539934acdb62
+2026-08-02 06:22:28,719 - 2802492 - INFO - All patches applied successfully.
+2026-08-02 06:22:28,719 - 2802492 - INFO - Patching end time: 2026-08-02 06:22:28
+2026-08-02 06:22:28,719 - 2802492 - INFO - Patch Elapsed time: 0:17:25.242544
+2026-08-02 06:22:28,796 - 2802492 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-08-02 06:22:28,796 - 2802492 - INFO - Confirmed - services are stopped
+2026-08-02 06:22:53,073 - 2802492 - INFO - Discovered TG map: {}
+2026-08-02 06:22:53,328 - 2802492 - INFO - Stopping EC2 instance: i-05d6610781df2e55f at 2026-08-02 06:22:53
+2026-08-02 06:25:10,005 - 2802492 - INFO - Instance i-05d6610781df2e55f stopped successfully.
+2026-08-02 06:25:10,134 - 2802492 - INFO - Stopped i-05d6610781df2e55f in 0:02:16.806101
+2026-08-02 06:25:10,134 - 2802492 - INFO - Starting EC2 instance: i-05d6610781df2e55f
+2026-08-02 06:25:26,192 - 2802492 - INFO - Instance i-05d6610781df2e55f started successfully.
+2026-08-02 06:25:26,192 - 2802492 - INFO - Waiting 100 seconds for SSM agent to be ready on i-05d6610781df2e55f...
+2026-08-02 06:27:06,462 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: bc1cfd43-aa85-497f-a32e-6e36d958067d)
+2026-08-02 06:27:36,546 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:27:36,546 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:27:07.084474
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.5G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:27:08.762659
+==============================================================================
+
+2026-08-02 06:27:36,548 - 2802492 - INFO - After patching validation saved to: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-2026-08-02-06-27-36-547.log
+2026-08-02 06:27:36,604 - 2802492 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-Validation-details-2026-08-02-06-27-36-547.html
+2026-08-02 06:27:36,782 - 2802492 - INFO - Daemon count - Pre: 21, Post: 20
+2026-08-02 06:27:36,782 - 2802492 - INFO - CUPS: before=running after=running version=1.7.5
+2026-08-02 06:27:36,782 - 2802492 - INFO - Manage_cron: True, daemon_action: True, cups_action: False
+2026-08-02 06:27:36,783 - 2802492 - INFO - Background: restarting daemons on i-05d6610781df2e55f
+2026-08-02 06:27:36,783 - 2802492 - INFO - Background thread started for i-05d6610781df2e55f - daemon:True cups:False
+2026-08-02 06:27:37,061 - 2802492 - INFO - Started i-05d6610781df2e55f in 0:02:26.926887
+2026-08-02 06:27:37,062 - 2802492 - INFO - All instances processed.
+2026-08-02 06:27:37,065 - 2802492 - INFO - Restart Total time: 0:05:08.066444
+2026-08-02 06:27:37,066 - 2802492 - INFO - Auto-confirmed services are restarted
+2026-08-02 06:27:37,066 - 2802492 - INFO - Confirmed - services are started
+2026-08-02 06:27:37,170 - 2802492 - INFO - The following instances have failed the patch: []
+2026-08-02 06:27:37,170 - 2802492 - INFO - No instances have failed the patch.
+2026-08-02 06:27:37,170 - 2802492 - INFO - Total Patch Process time: 0:22:34.009166
+2026-08-02 06:28:07,175 - 2802492 - INFO - Daemon restart output: WARNING: No valid base path found - neither /data/batchapp/softeon nor /data/softeon/batchapp exists!
+
+2026-08-02 06:28:07,175 - 2802492 - WARNING - No daemon path found on i-05d6610781df2e55f - check server paths!
+2026-08-02 06:28:07,176 - 2802492 - INFO - Waiting 100 sec for daemons to start on i-05d6610781df2e55f
+2026-08-02 06:28:37,517 - 2802492 - INFO - Log file ./logs/patching_2026-08-02_q3-pss-prod-batch.log uploaded to s3://q3-2026-aws-security-patching/q3-pss-prod-batch_Patch/2026-08-02/patching_2026-08-02_q3-pss-prod-batch.log
+2026-08-02 06:29:47,275 - 2802492 - INFO - CUPS no action needed for i-05d6610781df2e55f - before:running after:running version:1.7.5
+2026-08-02 06:29:47,591 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: 62ad8d61-24f9-4c0a-8ea6-0f2e345eeecf)
+2026-08-02 06:30:17,682 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:30:17,682 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:29:47.961770
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:29:48.866543
+==============================================================================
+
+2026-08-02 06:30:17,819 - 2802492 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-08-02 06:30:17,819 - 2802492 - INFO - RED re-validation mail sent for i-05d6610781df2e55f
+2026-08-02 06:30:17,819 - 2802492 - INFO - Still Red after restart - starting retry for i-05d6610781df2e55f
+2026-08-02 06:30:17,819 - 2802492 - INFO - [Retry-1] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 06:35:18,031 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: 6b0b894e-d419-4679-a04f-72b521e0f269)
+2026-08-02 06:35:48,140 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:35:48,140 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:35:18.374905
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.5G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:35:19.276369
+==============================================================================
+
+2026-08-02 06:35:48,142 - 2802492 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry1-2026-08-02-06-35-48-141.log
+2026-08-02 06:35:48,200 - 2802492 - INFO - [Retry-1] RED for PSS Production Batch Server (172.31.18.6), retrying... (Total waited: 300s)
+2026-08-02 06:35:48,201 - 2802492 - INFO - [Retry-2] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 06:40:48,516 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: dc4418d0-068e-4c74-8d90-6a3b1a4cba11)
+2026-08-02 06:41:18,591 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:41:18,591 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:40:48.995508
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:40:50.429697
+==============================================================================
+
+2026-08-02 06:41:18,593 - 2802492 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry2-2026-08-02-06-41-18-593.log
+2026-08-02 06:41:18,653 - 2802492 - INFO - [Retry-2] RED for PSS Production Batch Server (172.31.18.6), retrying... (Total waited: 600s)
+2026-08-02 06:41:18,653 - 2802492 - INFO - [Retry-3] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 06:46:18,941 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: 66bf3f73-327d-470d-a5eb-70c8eccb1e61)
+2026-08-02 06:46:49,025 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:46:49,026 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:46:19.372098
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:46:20.869539
+==============================================================================
+
+2026-08-02 06:46:49,027 - 2802492 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry3-2026-08-02-06-46-49-027.log
+2026-08-02 06:46:49,089 - 2802492 - INFO - [Retry-3] RED for PSS Production Batch Server (172.31.18.6), retrying... (Total waited: 900s)
+2026-08-02 06:46:49,089 - 2802492 - INFO - [Retry-4] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 06:51:49,382 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: b682b6fb-3bd2-4fd7-bc66-1dea21fc3fd9)
+2026-08-02 06:52:19,459 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:52:19,459 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:51:49.749926
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:51:50.629684
+==============================================================================
+
+2026-08-02 06:52:19,461 - 2802492 - INFO - [Retry-4] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry4-2026-08-02-06-52-19-461.log
+2026-08-02 06:52:19,525 - 2802492 - INFO - [Retry-4] RED for PSS Production Batch Server (172.31.18.6), retrying... (Total waited: 1200s)
+2026-08-02 06:52:19,525 - 2802492 - INFO - [Retry-5] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 06:57:19,958 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: 8d12c9c6-2d7d-4128-b7e2-a96fe02e81f2)
+2026-08-02 06:57:50,030 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 06:57:50,030 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 06:57:20.341575
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 06:57:21.426913
+==============================================================================
+
+2026-08-02 06:57:50,032 - 2802492 - INFO - [Retry-5] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry5-2026-08-02-06-57-50-032.log
+2026-08-02 06:57:50,090 - 2802492 - INFO - [Retry-5] RED for PSS Production Batch Server (172.31.18.6), retrying... (Total waited: 1500s)
+2026-08-02 06:57:50,091 - 2802492 - INFO - [Retry-6] Waiting 300s for i-05d6610781df2e55f...
+2026-08-02 07:02:50,356 - 2802492 - INFO - Sent app_validation.py to i-05d6610781df2e55f (command_id: a364c2ad-d43e-4541-b72e-c1b864c260c9)
+2026-08-02 07:03:20,434 - 2802492 - INFO - SSM Command Status: Success
+2026-08-02 07:03:20,434 - 2802492 - INFO - app_validation.py output for i-05d6610781df2e55f:
+
+==============================================================================
+Server Availability Check Started | 2026-08-02 07:02:50.762023
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.18.6
+Hostname | ip-172-31-18-6
+Current User | root
+Working Directory | /usr/bin
+Time Zone | EDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/xvdc1 | 249.9G | 209.0G | 40.9G | 83% | /data3
+/dev/xvdb2 | 179.9G | 137.5G | 42.4G | 76% | /data
+172.31.18.24:/data/softeon/shared | 179.9G | 104.8G | 75.1G | 58% | /data/softeon/shared
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | Yes
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | /data/ftpuser/sftpss    172.31.18.24(rw,sync,no_root_squash,no_all_squash) | /data/ftpuser/sftpss    172.31.18.39(rw,sync,no_root_squash,no_all_squash)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | nfsd | /proc/fs/nfsd | nfsd
+NFS_MOUNT | 172.31.18.24:/data/softeon/shared | /data/softeon/shared | nfs
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.18.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 72
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | Yes
+FTP Running (Port 21 localhost) | Yes
+FTP Port 21 Reachable on 172.31.18.6 | Yes
+FTP_PROCESS | PID | User | Proc
+FTP_PROCESS | 3059 | root | /usr/sbin/vsftpd
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 20
+Non-Standalone Java Processes | pssprod_label_lb6daemon, pssprod_lb141daemon, pssprod_label_lb11daemon, pssprod_label_lb121daemon, pssprod_jqgridreportdaemon, pssprod_eventdaemon, pssprod_billtransprocessdaemon, pssprod_wavelaunchdaemon, pssprd_bld7atopkdamn, pssprod_reportsdaemon, pssprod_autopickdaemon, pssprod_schedulerdaemon, pssprod_uploaddaemon, pssprod_label_lb1105daemon, pssprod_label_lb7daemon, pssprod_downloaddaemon, pssprod_integritydaemon, pssprod_billingchargesdaemon, pssprod_df_uploaddaemon, pssprod_ftpdaemon
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 20
+Java-Name | Java-Path
+pssprod_label_lb6daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb6daemon
+pssprod_lb141daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_lb141daemon
+pssprod_label_lb11daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb11daemon
+pssprod_label_lb121daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb121daemon
+pssprod_jqgridreportdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_jqgridreportdaemon
+pssprod_eventdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_eventdaemon
+pssprod_billtransprocessdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billtransprocessdaemon
+pssprod_wavelaunchdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_wavelaunchdaemon
+pssprd_bld7atopkdamn | /data/app/java/jdk1.7.0_80/bin/pssprd_bld7atopkdamn
+pssprod_reportsdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_reportsdaemon
+pssprod_autopickdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_autopickdaemon
+pssprod_schedulerdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_schedulerdaemon
+pssprod_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_uploaddaemon
+pssprod_label_lb1105daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb1105daemon
+pssprod_label_lb7daemon | /data/app/java/jdk1.7.0_80/bin/pssprod_label_lb7daemon
+pssprod_downloaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_downloaddaemon
+pssprod_integritydaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_integritydaemon
+pssprod_billingchargesdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_billingchargesdaemon
+pssprod_df_uploaddaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_df_uploaddaemon
+pssprod_ftpdaemon | /data/app/java/jdk1.7.0_80/bin/pssprod_ftpdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+Health Monitor Crontab | Disabled
+
+==============================================================================
+Server Availability Check Completed | 2026-08-02 07:02:51.745744
+==============================================================================
+
+2026-08-02 07:03:20,436 - 2802492 - INFO - [Retry-6] After log saved: /data/patching_report/validation-2026-08-02/q3-pss-prod-batch/172.31.18.6/172.31.18.6-AfterPatching-Retry6-2026-08-02-07-03-20-436.log
+2026-08-02 07:03:20,672 - 2802492 - INFO - Health monitor crontab enabled on all instances
+2026-08-02 07:03:20,673 - 2802492 - WARNING - [Retry] Timeout - auto cron enabled for i-05d6610781df2e55f

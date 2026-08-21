@@ -1,0 +1,350 @@
+2026-06-13 01:30:04,446 - 2594139 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-13 02:02:16,317 - 2594139 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-13 02:02:16,507 - 2594139 - INFO - Log file ./logs/backup_2026-06-13.log uploaded to s3://q3-2025-aws-security-patching/Allen-Production-new-app_Patch_Backup/2026-06-13/backup_2026-06-13.log
+2026-06-13 05:30:03,400 - 2602768 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-13 05:30:03,401 - 2602768 - INFO - Script Start Time: 2026-06-13 05:30:03
+2026-06-13 05:30:03,811 - 2602768 - INFO - Instance(s) selected for Patching: {'i-01e92af40fbec2353': '172.18.40.30', 'i-03a0bd8e0a240fdff': '172.18.40.102'}
+2026-06-13 05:30:03,919 - 2602768 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:30:03,920 - 2602768 - INFO - Now patching instances at: 2026-06-13 05:30:03
+2026-06-13 05:30:04,125 - 2602768 - INFO - Sent app_validation.py to i-03a0bd8e0a240fdff (command_id: 5f8ac43e-01e9-4618-841c-6d910f6b035f)
+2026-06-13 05:30:34,186 - 2602768 - INFO - app_validation.py output for i-03a0bd8e0a240fdff:
+
+==============================================================================
+Server Availability Check Started | 2026-06-13 09:30:04.479636
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.102
+Hostname | ip-172-18-40-102
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 171.1G | 68.8G | 71% | /data
+fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | 0B | 662.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.102:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 294
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.102 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+2506287 | adportalprod | jboss800eap | adprdportal_jb8 | 8082 | 172.18.40.102:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adportalprod/standalone
+2493665 | adprod | jboss800eap | adprod_jb800eap | 8080 | 172.18.40.102:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adprod/standalone
+2499842 | adrfprod | jboss800eap | adrfprod_jb800e | 8081 | 172.18.40.102:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adrfprod/standalone
+2522940 | adwsprod | jboss800eap | adwsprod_jb800e | 8083 | 172.18.40.102:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-13 09:30:06.149162
+==============================================================================
+
+2026-06-13 05:30:34,186 - 2602768 - ERROR - app_validation.py errors for i-03a0bd8e0a240fdff:
+
+2026-06-13 05:30:34,187 - 2602768 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-13/Allen-Production-new-app/172.18.40.102/172.18.40.102-BeforePatching-2026-06-13-05-30-34-187.log
+2026-06-13 05:30:34,414 - 2602768 - INFO - Sent app_validation.py to i-01e92af40fbec2353 (command_id: d7158b5e-d1b6-4eef-a91b-1f4d87238fa6)
+2026-06-13 05:31:04,492 - 2602768 - INFO - app_validation.py output for i-01e92af40fbec2353:
+
+==============================================================================
+Server Availability Check Started | 2026-06-13 09:30:34.751071
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.30
+Hostname | ip-172-18-40-30
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 173.4G | 66.5G | 72% | /data
+fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | 0B | 662.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.30:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 294
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.30 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+649275 | adportalprod | jboss800eap | adprdportal_jb8 | 8082 | 172.18.40.30:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adportalprod/standalone
+644199 | adprod | jboss800eap | adprod_jb800eap | 8080 | 172.18.40.30:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adprod/standalone
+646634 | adrfprod | jboss800eap | adrfprod_jb800e | 8081 | 172.18.40.30:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adrfprod/standalone
+660136 | adwsprod | jboss800eap | adwsprod_jb800e | 8083 | 172.18.40.30:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-13 09:30:35.478624
+==============================================================================
+
+2026-06-13 05:31:04,493 - 2602768 - ERROR - app_validation.py errors for i-01e92af40fbec2353:
+
+2026-06-13 05:31:04,494 - 2602768 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-13/Allen-Production-new-app/172.18.40.30/172.18.40.30-BeforePatching-2026-06-13-05-31-04-494.log
+2026-06-13 05:31:04,651 - 2602768 - INFO - Sending patch command to instance i-03a0bd8e0a240fdff
+2026-06-13 05:31:04,772 - 2602768 - INFO - Command sent successfully to instance i-03a0bd8e0a240fdff. Command ID: 3a344bbd-3739-4240-952d-e68d255030ac
+2026-06-13 05:31:04,915 - 2602768 - INFO - Sending patch command to instance i-01e92af40fbec2353
+2026-06-13 05:31:05,004 - 2602768 - INFO - Command sent successfully to instance i-01e92af40fbec2353. Command ID: 0d156c1b-6755-4020-ad09-c69291cdb313
+2026-06-13 05:41:07,501 - 2602768 - INFO - All patches applied successfully.
+2026-06-13 05:41:07,501 - 2602768 - INFO - Patching end time: 2026-06-13 05:41:07
+2026-06-13 05:41:07,502 - 2602768 - INFO - Patch Elapsed time: 0:11:03.581825
+2026-06-13 05:41:07,576 - 2602768 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:41:07,576 - 2602768 - INFO - Confirmed - services are stopped
+2026-06-13 05:41:27,999 - 2602768 - INFO - Discovered TG map: {'i-01e92af40fbec2353': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba'], 'i-03a0bd8e0a240fdff': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba']}
+2026-06-13 05:41:28,243 - 2602768 - INFO - Deregistering i-03a0bd8e0a240fdff from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59
+2026-06-13 05:41:28,308 - 2602768 - INFO - Deregistering i-03a0bd8e0a240fdff from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924
+2026-06-13 05:41:28,361 - 2602768 - INFO - Deregistering i-03a0bd8e0a240fdff from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94
+2026-06-13 05:41:28,402 - 2602768 - INFO - Deregistering i-03a0bd8e0a240fdff from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba
+2026-06-13 05:41:28,447 - 2602768 - INFO - Stopping EC2 instance: i-03a0bd8e0a240fdff at 2026-06-13 05:41:28
+2026-06-13 05:43:29,858 - 2602768 - INFO - Instance i-03a0bd8e0a240fdff stopped successfully.
+2026-06-13 05:43:30,119 - 2602768 - INFO - Stopped i-03a0bd8e0a240fdff in 0:02:01.671855
+2026-06-13 05:43:30,119 - 2602768 - INFO - Starting EC2 instance: i-03a0bd8e0a240fdff
+2026-06-13 05:43:46,055 - 2602768 - INFO - Instance i-03a0bd8e0a240fdff started successfully.
+2026-06-13 05:43:46,055 - 2602768 - INFO - Waiting 100 seconds for SSM agent to be ready on i-03a0bd8e0a240fdff...
+2026-06-13 05:45:26,098 - 2602768 - INFO - Registering i-03a0bd8e0a240fdff to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59
+2026-06-13 05:45:26,262 - 2602768 - INFO - Registering i-03a0bd8e0a240fdff to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924
+2026-06-13 05:45:26,441 - 2602768 - INFO - Registering i-03a0bd8e0a240fdff to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94
+2026-06-13 05:45:26,631 - 2602768 - INFO - Registering i-03a0bd8e0a240fdff to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba
+2026-06-13 05:47:57,428 - 2602768 - INFO - Sent app_validation.py to i-03a0bd8e0a240fdff (command_id: 630feb71-322a-4703-bfa6-75b8e48f2ce4)
+2026-06-13 05:48:27,547 - 2602768 - INFO - app_validation.py output for i-03a0bd8e0a240fdff:
+
+==============================================================================
+Server Availability Check Started | 2026-06-13 09:47:57.780460
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.18.40.102
+Hostname | ip-172-18-40-102
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 154.6G | 85.2G | 64% | /data
+fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | 0B | 662.9G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-0645ab19e0cc6b4d9.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.18.40.102:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 294
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.18.40.102 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 4
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4590 | adportalprod | jboss800eap | adprdportal_jb8 | 8082 | 172.18.40.102:8082 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adportalprod/standalone
+4559 | adprod | jboss800eap | adprod_jb800eap | 8080 | 172.18.40.102:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adprod/standalone
+4583 | adrfprod | jboss800eap | adrfprod_jb800e | 8081 | 172.18.40.102:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adrfprod/standalone
+4584 | adwsprod | jboss800eap | adwsprod_jb800e | 8083 | 172.18.40.102:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/adwsprod/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-06-13 09:48:00.166839
+==============================================================================
+
+2026-06-13 05:48:27,547 - 2602768 - ERROR - app_validation.py errors for i-03a0bd8e0a240fdff:
+
+2026-06-13 05:48:27,549 - 2602768 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-13/Allen-Production-new-app/172.18.40.102/172.18.40.102-AfterPatching-2026-06-13-05-48-27-548.log
+2026-06-13 05:48:27,601 - 2602768 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-13/Allen-Production-new-app/172.18.40.102/172.18.40.102-Validation-details-2026-06-13-05-48-27-548.html
+2026-06-13 05:48:27,876 - 2602768 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 05:48:27,877 - 2602768 - INFO - HTML validation report email sent for i-03a0bd8e0a240fdff
+2026-06-13 05:48:28,193 - 2602768 - INFO - Started i-03a0bd8e0a240fdff in 0:04:58.073442
+2026-06-13 05:48:28,193 - 2602768 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-06-13 05:50:28,287 - 2602768 - INFO - Deregistering i-01e92af40fbec2353 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59
+2026-06-13 05:50:28,370 - 2602768 - INFO - Deregistering i-01e92af40fbec2353 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924
+2026-06-13 05:50:28,419 - 2602768 - INFO - Deregistering i-01e92af40fbec2353 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94
+2026-06-13 05:50:28,466 - 2602768 - INFO - Deregistering i-01e92af40fbec2353 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba
+2026-06-13 05:50:28,512 - 2602768 - INFO - Stopping EC2 instance: i-01e92af40fbec2353 at 2026-06-13 05:50:28
+2026-06-13 05:52:15,038 - 2602768 - INFO - Instance i-01e92af40fbec2353 stopped successfully.
+2026-06-13 05:52:15,288 - 2602768 - INFO - Stopped i-01e92af40fbec2353 in 0:01:46.776416
+2026-06-13 05:52:15,289 - 2602768 - INFO - Starting EC2 instance: i-01e92af40fbec2353
+2026-06-13 05:52:31,240 - 2602768 - INFO - Instance i-01e92af40fbec2353 started successfully.
+2026-06-13 05:52:31,240 - 2602768 - INFO - Waiting 100 seconds for SSM agent to be ready on i-01e92af40fbec2353...
+2026-06-13 05:54:11,241 - 2602768 - INFO - Registering i-01e92af40fbec2353 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59
+2026-06-13 05:54:11,413 - 2602768 - INFO - Registering i-01e92af40fbec2353 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924
+2026-06-13 05:54:11,548 - 2602768 - INFO - Registering i-01e92af40fbec2353 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-WS-242/933d135821fe3e94
+2026-06-13 05:54:11,679 - 2602768 - INFO - Registering i-01e92af40fbec2353 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribution-Prod-RF-242/d2f3e969c470abba
+2026-06-13 05:59:12,455 - 2602768 - WARNING - i-01e92af40fbec2353 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-Desktop-242/910a58d793b6ca59 after timeout.
+2026-06-13 06:04:13,103 - 2602768 - WARNING - i-01e92af40fbec2353 not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/Allen-Distribut-Prod-portal-242/0bf7a52a34f5c924 after timeout.
+2026-06-13 06:04:13,349 - 2602768 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-13 06:04:13,349 - 2602768 - ERROR - Aborting workflow: i-01e92af40fbec2353 is not healthy after restart.
+2026-06-13 06:04:13,354 - 2602768 - INFO - Restart Total time: 0:23:05.642921
+2026-06-13 06:04:13,354 - 2602768 - INFO - Auto-confirmed services are restarted
+2026-06-13 06:04:13,354 - 2602768 - INFO - Confirmed - services are started
+2026-06-13 06:04:13,487 - 2602768 - INFO - The following instances have failed the patch: []
+2026-06-13 06:04:13,488 - 2602768 - INFO - No instances have failed the patch.
+2026-06-13 06:04:13,488 - 2602768 - INFO - Total Patch Process time: 0:34:10.086637
+2026-06-13 06:05:14,230 - 2602768 - INFO - Log file ./logs/patching_2026-06-13_Allen-Production-new-app.log uploaded to s3://q2-2026-aws-security-patching/Allen-Production-new-app_Patch/2026-06-13/patching_2026-06-13_Allen-Production-new-app.log

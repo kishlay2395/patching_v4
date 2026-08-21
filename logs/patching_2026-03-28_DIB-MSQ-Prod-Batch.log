@@ -1,0 +1,238 @@
+2026-03-28 19:10:03,412 - 3925356 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-03-28 19:18:22,072 - 3925356 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-03-28 19:18:22,248 - 3925356 - INFO - Log file ./logs/backup_2026-03-28.log uploaded to s3://q3-2025-aws-security-patching/DIB-MSQ-Prod-Batch_Patch_Backup/2026-03-28/backup_2026-03-28.log
+2026-03-28 23:10:02,747 - 3933890 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-03-28 23:10:02,748 - 3933890 - INFO - Script Start Time: 2026-03-28 23:10:02
+2026-03-28 23:10:03,077 - 3933890 - INFO - Instance(s) selected for Patching: {'i-0dc96de80a5851705': '10.64.20.6'}
+2026-03-28 23:10:03,175 - 3933890 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-28 23:10:03,175 - 3933890 - INFO - Now patching instances at: 2026-03-28 23:10:03
+2026-03-28 23:10:03,321 - 3933890 - INFO - Sending patch command to instance i-0dc96de80a5851705
+2026-03-28 23:10:03,707 - 3933890 - INFO - Command sent successfully to instance i-0dc96de80a5851705. Command ID: d22c6f28-0f16-4396-8df3-26dca5750f8d
+2026-03-28 23:15:05,990 - 3933890 - INFO - All patches applied successfully.
+2026-03-28 23:15:05,991 - 3933890 - INFO - Patching end time: 2026-03-28 23:15:05
+2026-03-28 23:15:05,991 - 3933890 - INFO - Patch Elapsed time: 0:05:02.815666
+2026-03-28 23:15:06,073 - 3933890 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-28 23:15:06,073 - 3933890 - INFO - Confirmed - services are stopped
+2026-03-28 23:15:08,825 - 3933890 - INFO - Discovered TG map: {}
+2026-03-28 23:15:09,594 - 3933890 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: 36921c1f-8128-4c40-912e-a014e250df7a)
+2026-03-28 23:15:39,721 - 3933890 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 03:15:09.884997
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 102.8G | 137.1G | 42% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 233.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 20
+Batch/Daemon Java Processes | 19
+Non-Standalone Java Processes | wmsmsq_abchdis, wmsmsq_ccd, wmsmsq_dwa, wmsmsq_event, wmsmsq_ftp, wmsmsq_harp, wmsmsq_lbl, wmsmsq_repl, wmsmsq_rccl, wmsmsq_rpt, wmsmsq_1rpt, wmsmsq_jqgrid, wmsmsq_sch, wmsmsq_inbq, wmsmsq_wld, wmsmsq_zplp, dibsso_3vomobad, wmsmsq_2vmmsq, wmsmsq_vmmsq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 19
+Java-Name | Java-Path
+wmsmsq_abchdis | /data/batchapp/softeon/dibwmsmsqprod/autobatchdistributiondaemon
+wmsmsq_ccd | /data/batchapp/softeon/dibwmsmsqprod/clustercreationdaemon
+wmsmsq_dwa | /data/batchapp/softeon/dibwmsmsqprod/downloaddaemon
+wmsmsq_event | /data/batchapp/softeon/dibwmsmsqprod/eventdaemon
+wmsmsq_ftp | /data/batchapp/softeon/dibwmsmsqprod/ftpdaemon
+wmsmsq_harp | /data/batchapp/softeon/dibwmsmsqprod/hardallocationdaemon
+wmsmsq_lbl | /data/batchapp/softeon/dibwmsmsqprod/labeldaemon
+wmsmsq_repl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentdaemon
+wmsmsq_rccl | /data/batchapp/softeon/dibwmsmsqprod/replenishmentpickloccanceldaemon
+wmsmsq_rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon
+wmsmsq_1rpt | /data/batchapp/softeon/dibwmsmsqprod/reportdaemon1
+wmsmsq_jqgrid | /data/batchapp/softeon/dibwmsmsqprod/reportjqgridexportdaemon
+wmsmsq_sch | /data/batchapp/softeon/dibwmsmsqprod/schedulerdaemon
+wmsmsq_inbq | /data/batchapp/softeon/dibwmsmsqprod/uploaddaemon
+wmsmsq_wld | /data/batchapp/softeon/dibwmsmsqprod/wavelaunchdaemon
+wmsmsq_zplp | /data/batchapp/softeon/dibwmsmsqprod/zebraprintdaemon
+dibsso_3vomobad | /data/batchapp/softeon/dibssoprod/voiceadminserver
+wmsmsq_2vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsq2daemon
+wmsmsq_vmmsq | /data/batchapp/softeon/dibwmsmsqprod/voicemobilemsqdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 03:15:10.645669
+==============================================================================
+
+2026-03-28 23:15:39,722 - 3933890 - ERROR - app_validation.py errors for i-0dc96de80a5851705:
+
+2026-03-28 23:15:39,723 - 3933890 - INFO - Before patching validation saved to: output/validation-2026-03-28/10.64.20.6-BeforePatching-2026-03-28-23-15-39-723.log
+2026-03-28 23:15:39,724 - 3933890 - INFO - Stopping EC2 instance: i-0dc96de80a5851705 at 2026-03-28 23:15:39
+2026-03-28 23:17:57,048 - 3933890 - INFO - Instance i-0dc96de80a5851705 stopped successfully.
+2026-03-28 23:17:57,176 - 3933890 - INFO - Stopped i-0dc96de80a5851705 in 0:02:17.452353
+2026-03-28 23:17:57,176 - 3933890 - INFO - Starting EC2 instance: i-0dc96de80a5851705
+2026-03-28 23:18:13,219 - 3933890 - INFO - Instance i-0dc96de80a5851705 started successfully.
+2026-03-28 23:18:13,219 - 3933890 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0dc96de80a5851705...
+2026-03-28 23:19:53,788 - 3933890 - INFO - Sent app_validation.py to i-0dc96de80a5851705 (command_id: d0a352f4-0010-4245-82c3-9d4ec75a2be3)
+2026-03-28 23:20:23,977 - 3933890 - INFO - app_validation.py output for i-0dc96de80a5851705:
+
+==============================================================================
+Server Availability Check Started | 2026-03-29 03:19:54.055713
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.64.20.6
+Hostname | ip-10-64-20-6.us-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 102.5G | 137.4G | 42% | /data
+fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | 0B | 233.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 5
+Symlinks Valid | 5
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-019a4d2a5ba19634d.efs.us-west-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.64.20.6:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.64.20.6 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-03-29 03:19:54.390229
+==============================================================================
+
+2026-03-28 23:20:23,978 - 3933890 - ERROR - app_validation.py errors for i-0dc96de80a5851705:
+
+2026-03-28 23:20:23,979 - 3933890 - INFO - After patching validation saved to: output/validation-2026-03-28/10.64.20.6-AfterPatching-2026-03-28-23-20-23-979.log
+2026-03-28 23:20:24,031 - 3933890 - INFO - Validation comparison report generated: output/validation-2026-03-28/10.64.20.6-Validation-details-2026-03-28-23-20-23-979.html
+2026-03-28 23:20:24,102 - 3933890 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-03-28 23:20:24,103 - 3933890 - INFO - HTML validation report email sent for i-0dc96de80a5851705
+2026-03-28 23:20:24,225 - 3933890 - INFO - Started i-0dc96de80a5851705 in 0:02:27.048696
+2026-03-28 23:20:24,226 - 3933890 - INFO - All instances processed.
+2026-03-28 23:20:24,228 - 3933890 - INFO - Restart Total time: 0:05:18.007409
+2026-03-28 23:20:24,228 - 3933890 - INFO - Auto-confirmed services are restarted
+2026-03-28 23:20:24,228 - 3933890 - INFO - Confirmed - services are started
+2026-03-28 23:20:24,343 - 3933890 - INFO - The following instances have failed the patch: []
+2026-03-28 23:20:24,344 - 3933890 - INFO - No instances have failed the patch.
+2026-03-28 23:20:24,344 - 3933890 - INFO - Total Patch Process time: 0:10:21.594764
+2026-03-28 23:20:24,520 - 3933890 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-03-28 23:21:24,855 - 3933890 - INFO - Log file ./logs/patching_2026-03-28_DIB-MSQ-Prod-Batch.log uploaded to s3://q1-2026-aws-security-patching/DIB-MSQ-Prod-Batch_Patch/2026-03-28/patching_2026-03-28_DIB-MSQ-Prod-Batch.log

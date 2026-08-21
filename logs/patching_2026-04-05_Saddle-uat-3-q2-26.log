@@ -1,0 +1,523 @@
+2026-04-05 01:45:02,589 - 117295 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-05 02:01:33,872 - 117295 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-05 02:01:34,046 - 117295 - INFO - Log file ./logs/backup_2026-04-05.log uploaded to s3://q3-2025-aws-security-patching/Saddle-uat-3-q2-26_Patch_Backup/2026-04-05/backup_2026-04-05.log
+2026-04-05 05:45:02,318 - 125880 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-05 05:45:02,318 - 125880 - INFO - Script Start Time: 2026-04-05 05:45:02
+2026-04-05 05:45:02,523 - 125880 - INFO - Instance(s) selected for Patching: {'i-033b05e6675183ea2': '10.0.10.210', 'i-02d3cbde08a945070': '10.0.10.236'}
+2026-04-05 05:45:02,603 - 125880 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-05 05:45:02,603 - 125880 - INFO - Now patching instances at: 2026-04-05 05:45:02
+2026-04-05 05:45:02,690 - 125880 - INFO - Sending patch command to instance i-02d3cbde08a945070
+2026-04-05 05:45:02,785 - 125880 - INFO - Command sent successfully to instance i-02d3cbde08a945070. Command ID: 4a6f87c3-09db-4e44-8ab8-4b23479f95aa
+2026-04-05 05:45:02,927 - 125880 - INFO - Sending patch command to instance i-033b05e6675183ea2
+2026-04-05 05:45:03,062 - 125880 - INFO - Command sent successfully to instance i-033b05e6675183ea2. Command ID: 6a07ce53-53bf-4d52-a459-0b419d917aa5
+2026-04-05 05:51:34,993 - 125880 - INFO - All patches applied successfully.
+2026-04-05 05:51:34,993 - 125880 - INFO - Patching end time: 2026-04-05 05:51:34
+2026-04-05 05:51:34,993 - 125880 - INFO - Patch Elapsed time: 0:06:32.390127
+2026-04-05 05:51:35,072 - 125880 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-05 05:51:35,072 - 125880 - INFO - Confirmed - services are stopped
+2026-04-05 05:51:56,004 - 125880 - INFO - Discovered TG map: {'i-02d3cbde08a945070': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop-New/a1b3bc663e682695', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-WS/6565202988f7aabc', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF-New/d38c37b6e1062887'], 'i-033b05e6675183ea2': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-DEMO/50d348c26f0a802f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SWP251-DEMO-Desktop/dcc6f9442c484633']}
+2026-04-05 05:51:56,401 - 125880 - INFO - Sent app_validation.py to i-02d3cbde08a945070 (command_id: 2c3b24f7-76ca-4475-b2e7-aa929d535e3b)
+2026-04-05 05:52:26,485 - 125880 - INFO - app_validation.py output for i-02d3cbde08a945070:
+
+==============================================================================
+Server Availability Check Started | 2026-04-05 09:51:56.714808
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.236
+Hostname | ip-10-0-10-236
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 85.3G | 154.6G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.236:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.236 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | dswuat_dwa, dswuat_ftp, dswuat_lbl, dswuat_repl, dswuat_rpt, dswuat_jqgrid, dswuat_sch, dswuat_inbq, dswuat_lwld, dswuat_cwld, dswuat_abchdis, dswuat_rccl, dswuat_iweszp, dswuat_iwes, dswuat_weso, dswuat_apick, dsw_bre
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+dswuat_dwa | /data/batchapp/softeon/dswuat/downloaddaemon
+dswuat_ftp | /data/batchapp/softeon/dswuat/ftpdaemon
+dswuat_lbl | /data/batchapp/softeon/dswuat/labeldaemon
+dswuat_repl | /data/batchapp/softeon/dswuat/replenishmentdaemon
+dswuat_rpt | /data/batchapp/softeon/dswuat/reportdaemon
+dswuat_jqgrid | /data/batchapp/softeon/dswuat/reportjqgridexportdaemon
+dswuat_sch | /data/batchapp/softeon/dswuat/schedulerdaemon
+dswuat_inbq | /data/batchapp/softeon/dswuat/uploaddaemon
+dswuat_lwld | /data/batchapp/softeon/dswuat/wavelaunchdaemon
+dswuat_cwld | /data/batchapp/softeon/dswuat/wavecreationdaemon
+dswuat_abchdis | /data/batchapp/softeon/dswuat/autobatchdistribution
+dswuat_rccl | /data/batchapp/softeon/dswuat/replenishmentpickloccanceldaemon
+dswuat_iweszp | /data/batchapp/softeon/dswuat/weszplinbounddaemon
+dswuat_iwes | /data/batchapp/softeon/dswuat/wesinbounddaemon
+dswuat_weso | /data/batchapp/softeon/dswuat/wesoutbounddaemon
+dswuat_apick | /data/batchapp/softeon/dswuat/picktooldaemon
+dsw_bre | /data/batchapp/softeon/dswuat/breruleenginedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3205980 | dswrfuat | jboss800eap | dswrfuat_jbeap | 8081 | 10.0.10.236:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/dswrfuat/standalone
+3205720 | dswuat | jboss800eap | dwsuat_jb800eap | 8080 | 10.0.10.236:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/dswuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-05 09:51:57.314080
+==============================================================================
+
+2026-04-05 05:52:26,485 - 125880 - ERROR - app_validation.py errors for i-02d3cbde08a945070:
+
+2026-04-05 05:52:26,487 - 125880 - INFO - Before patching validation saved to: output/validation-2026-04-05/10.0.10.236-BeforePatching-2026-04-05-05-52-26-487.log
+2026-04-05 05:52:26,487 - 125880 - INFO - Deregistering i-02d3cbde08a945070 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop-New/a1b3bc663e682695
+2026-04-05 05:52:26,562 - 125880 - INFO - Deregistering i-02d3cbde08a945070 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-WS/6565202988f7aabc
+2026-04-05 05:52:26,609 - 125880 - INFO - Deregistering i-02d3cbde08a945070 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF-New/d38c37b6e1062887
+2026-04-05 05:52:26,662 - 125880 - INFO - Stopping EC2 instance: i-02d3cbde08a945070 at 2026-04-05 05:52:26
+2026-04-05 05:54:13,107 - 125880 - INFO - Instance i-02d3cbde08a945070 stopped successfully.
+2026-04-05 05:54:13,355 - 125880 - INFO - Stopped i-02d3cbde08a945070 in 0:01:46.693475
+2026-04-05 05:54:13,355 - 125880 - INFO - Starting EC2 instance: i-02d3cbde08a945070
+2026-04-05 05:54:29,196 - 125880 - INFO - Instance i-02d3cbde08a945070 started successfully.
+2026-04-05 05:54:29,196 - 125880 - INFO - Waiting 100 seconds for SSM agent to be ready on i-02d3cbde08a945070...
+2026-04-05 05:56:09,256 - 125880 - INFO - Registering i-02d3cbde08a945070 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-Desktop-New/a1b3bc663e682695
+2026-04-05 05:56:09,438 - 125880 - INFO - Registering i-02d3cbde08a945070 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-WS/6565202988f7aabc
+2026-04-05 05:56:09,620 - 125880 - INFO - Registering i-02d3cbde08a945070 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-DSW-UAT-RF-New/d38c37b6e1062887
+2026-04-05 05:57:40,315 - 125880 - INFO - Sent app_validation.py to i-02d3cbde08a945070 (command_id: cf77290e-639a-4290-81cb-60707ed1121f)
+2026-04-05 05:58:10,426 - 125880 - INFO - app_validation.py output for i-02d3cbde08a945070:
+
+==============================================================================
+Server Availability Check Started | 2026-04-05 09:57:40.734347
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.236
+Hostname | ip-10-0-10-236
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 85.2G | 154.7G | 35% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | 1.7.5
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.236 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 21
+Batch/Daemon Java Processes | 17
+Non-Standalone Java Processes | dswuat_dwa, dswuat_ftp, dswuat_lbl, dswuat_repl, dswuat_rpt, dswuat_jqgrid, dswuat_sch, dswuat_inbq, dswuat_lwld, dswuat_cwld, dswuat_abchdis, dswuat_rccl, dswuat_iweszp, dswuat_iwes, dswuat_weso, dswuat_apick, dsw_bre
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 17
+Java-Name | Java-Path
+dswuat_dwa | /data/batchapp/softeon/dswuat/downloaddaemon
+dswuat_ftp | /data/batchapp/softeon/dswuat/ftpdaemon
+dswuat_lbl | /data/batchapp/softeon/dswuat/labeldaemon
+dswuat_repl | /data/batchapp/softeon/dswuat/replenishmentdaemon
+dswuat_rpt | /data/batchapp/softeon/dswuat/reportdaemon
+dswuat_jqgrid | /data/batchapp/softeon/dswuat/reportjqgridexportdaemon
+dswuat_sch | /data/batchapp/softeon/dswuat/schedulerdaemon
+dswuat_inbq | /data/batchapp/softeon/dswuat/uploaddaemon
+dswuat_lwld | /data/batchapp/softeon/dswuat/wavelaunchdaemon
+dswuat_cwld | /data/batchapp/softeon/dswuat/wavecreationdaemon
+dswuat_abchdis | /data/batchapp/softeon/dswuat/autobatchdistribution
+dswuat_rccl | /data/batchapp/softeon/dswuat/replenishmentpickloccanceldaemon
+dswuat_iweszp | /data/batchapp/softeon/dswuat/weszplinbounddaemon
+dswuat_iwes | /data/batchapp/softeon/dswuat/wesinbounddaemon
+dswuat_weso | /data/batchapp/softeon/dswuat/wesoutbounddaemon
+dswuat_apick | /data/batchapp/softeon/dswuat/picktooldaemon
+dsw_bre | /data/batchapp/softeon/dswuat/breruleenginedaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5297 | dswrfuat | jboss800eap | dswrfuat_jbeap | 8081 | 10.0.10.236:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/dswrfuat/standalone
+5039 | dswuat | jboss800eap | dwsuat_jb800eap | 8080 | 10.0.10.236:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/dswuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-05 09:57:42.110655
+==============================================================================
+
+2026-04-05 05:58:10,426 - 125880 - ERROR - app_validation.py errors for i-02d3cbde08a945070:
+
+2026-04-05 05:58:10,428 - 125880 - INFO - After patching validation saved to: output/validation-2026-04-05/10.0.10.236-AfterPatching-2026-04-05-05-58-10-428.log
+2026-04-05 05:58:10,481 - 125880 - INFO - Validation comparison report generated: output/validation-2026-04-05/10.0.10.236-Validation-details-2026-04-05-05-58-10-428.html
+2026-04-05 05:58:10,582 - 125880 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-05 05:58:10,582 - 125880 - INFO - HTML validation report email sent for i-02d3cbde08a945070
+2026-04-05 05:58:10,839 - 125880 - INFO - Started i-02d3cbde08a945070 in 0:03:57.483411
+2026-04-05 05:58:10,839 - 125880 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-04-05 06:00:11,153 - 125880 - INFO - Sent app_validation.py to i-033b05e6675183ea2 (command_id: 594061c3-7114-4f06-9209-ff60f1086789)
+2026-04-05 06:01:11,294 - 125880 - INFO - app_validation.py output for i-033b05e6675183ea2:
+
+==============================================================================
+Server Availability Check Started | 2026-04-05 10:00:11.419109
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.210
+Hostname | ip-10-0-10-210
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 79.6G | 160.3G | 33% | /data
+10.0.9.157:/data/softeon/shared | 179.9G | 115.9G | 64.0G | 64% | /data/softeon/shared
+10.0.9.157:/data/softeon/interfaces | 179.9G | 115.9G | 64.0G | 64% | /data/softeon/interfaces
+10.0.9.178:/data/data2/shared/softeon/sclwesinfor | 289.9G | 179.6G | 110.3G | 61% | /data/data2/shared/softeon/sclwesinfor
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | 10.0.9.157:/data/softeon/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | 10.0.9.157:/data/softeon/interfaces | /data/softeon/interfaces | nfs4
+NFS_MOUNT | 10.0.9.178:/data/data2/shared/softeon/sclwesinfor | /data/data2/shared/softeon/sclwesinfor | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.210:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.210 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | sclwesinf_bre, scleinf_bre, sclcinf_bre, scleinf_sch, sclcinf_sch, sclwesinf_sch, sclcinf_dwa, sclwesinf_dwa, scleinf_dwa, sclwesinf_ftp, sclcinf_ftp, sclwesinf_inbq, sclcinf_inbq, scleinf_inbq, sclwesinf_jqgrd, sclcinf_jqgrd, scleinf_jqgrd, sclwesinf_wld, scleinf_wld, scleinf_growld, scleinf_newnwld, sclcinf_newcwld, sclcinf_edwwld, sclcinf_beswld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+sclwesinf_bre | /data/batchapp/softeon/sclwesinforuat/breruledaemon
+scleinf_bre | /data/batchapp/softeon/sclwesinforuat_scle/breruledaemon
+sclcinf_bre | /data/batchapp/softeon/sclwesinforuat_sclc/breruledaemon
+scleinf_sch | /data/batchapp/softeon/sclwesinforuat_scle/schedulerdaemon
+sclcinf_sch | /data/batchapp/softeon/sclwesinforuat_sclc/schedulerdaemon
+sclwesinf_sch | /data/batchapp/softeon/sclwesinforuat/schedulerdaemon
+sclcinf_dwa | /data/batchapp/softeon/sclwesinforuat_sclc/downloaddaemon
+sclwesinf_dwa | /data/batchapp/softeon/sclwesinforuat/downloaddaemon
+scleinf_dwa | /data/batchapp/softeon/sclwesinforuat_scle/downloaddaemon
+sclwesinf_ftp | /data/batchapp/softeon/sclwesinforuat/ftpdaemon
+sclcinf_ftp | /data/batchapp/softeon/sclwesinforuat_sclc/ftpdaemon
+sclwesinf_inbq | /data/batchapp/softeon/sclwesinforuat/uploaddaemon
+sclcinf_inbq | /data/batchapp/softeon/sclwesinforuat_sclc/uploaddaemon
+scleinf_inbq | /data/batchapp/softeon/sclwesinforuat_scle/uploaddaemon
+sclwesinf_jqgrd | /data/batchapp/softeon/sclwesinforuat/reportjqgriddaemon
+sclcinf_jqgrd | /data/batchapp/softeon/sclwesinforuat_sclc/reportjqgriddaemon
+scleinf_jqgrd | /data/batchapp/softeon/sclwesinforuat_scle/reportjqgriddaemon
+sclwesinf_wld | /data/batchapp/softeon/sclwesinforuat/wavelaunchdaemon
+scleinf_wld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon
+scleinf_growld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon_gro
+scleinf_newnwld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon_newn
+sclcinf_newcwld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_newc
+sclcinf_edwwld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_edw
+sclcinf_beswld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_bes
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6598 | scldemo | jboss800eap | scldemo_jb800e | 8080 | 10.0.10.210:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scldemo/standalone
+6224 | swp251scldemo | jboss800eap | swp251scl_jbeap | 8081 | 10.0.10.210:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swp251scldemo/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-05 10:00:43.216100
+==============================================================================
+
+2026-04-05 06:01:11,295 - 125880 - ERROR - app_validation.py errors for i-033b05e6675183ea2:
+
+2026-04-05 06:01:11,296 - 125880 - INFO - Before patching validation saved to: output/validation-2026-04-05/10.0.10.210-BeforePatching-2026-04-05-06-01-11-296.log
+2026-04-05 06:01:11,297 - 125880 - INFO - Deregistering i-033b05e6675183ea2 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-DEMO/50d348c26f0a802f
+2026-04-05 06:01:11,372 - 125880 - INFO - Deregistering i-033b05e6675183ea2 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SWP251-DEMO-Desktop/dcc6f9442c484633
+2026-04-05 06:01:11,421 - 125880 - INFO - Stopping EC2 instance: i-033b05e6675183ea2 at 2026-04-05 06:01:11
+2026-04-05 06:02:57,826 - 125880 - INFO - Instance i-033b05e6675183ea2 stopped successfully.
+2026-04-05 06:02:58,086 - 125880 - INFO - Stopped i-033b05e6675183ea2 in 0:01:46.664255
+2026-04-05 06:02:58,086 - 125880 - INFO - Starting EC2 instance: i-033b05e6675183ea2
+2026-04-05 06:03:14,075 - 125880 - INFO - Instance i-033b05e6675183ea2 started successfully.
+2026-04-05 06:03:14,076 - 125880 - INFO - Waiting 100 seconds for SSM agent to be ready on i-033b05e6675183ea2...
+2026-04-05 06:04:54,136 - 125880 - INFO - Registering i-033b05e6675183ea2 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-UAT-DEMO/50d348c26f0a802f
+2026-04-05 06:04:54,331 - 125880 - INFO - Registering i-033b05e6675183ea2 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SaddleCreek-SWP251-DEMO-Desktop/dcc6f9442c484633
+2026-04-05 06:05:24,896 - 125880 - INFO - Sent app_validation.py to i-033b05e6675183ea2 (command_id: 8adb273b-870c-4399-868e-0954d4e877c9)
+2026-04-05 06:05:54,987 - 125880 - INFO - app_validation.py output for i-033b05e6675183ea2:
+
+==============================================================================
+Server Availability Check Started | 2026-04-05 10:05:25.246424
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 10.0.10.210
+Hostname | ip-10-0-10-210
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 79.5G | 160.3G | 33% | /data
+10.0.9.178:/data/data2/shared/softeon/sclwesinfor | 289.9G | 181.1G | 108.7G | 62% | /data/data2/shared/softeon/sclwesinfor
+10.0.9.157:/data/softeon/shared | 179.9G | 116.2G | 63.7G | 64% | /data/softeon/shared
+10.0.9.157:/data/softeon/interfaces | 179.9G | 116.2G | 63.7G | 64% | /data/softeon/interfaces
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | 10.0.9.178:/data/data2/shared/softeon/sclwesinfor | /data/data2/shared/softeon/sclwesinfor | nfs4
+NFS_MOUNT | 10.0.9.157:/data/softeon/shared | /data/softeon/shared | nfs4
+NFS_MOUNT | 10.0.9.157:/data/softeon/interfaces | /data/softeon/interfaces | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://10.0.10.210:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 10.0.10.210 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 24
+Non-Standalone Java Processes | scleinf_bre, sclcinf_bre, sclwesinf_bre, scleinf_sch, sclwesinf_sch, sclcinf_sch, scleinf_dwa, sclwesinf_dwa, sclcinf_dwa, sclwesinf_ftp, sclcinf_ftp, scleinf_inbq, sclwesinf_inbq, scleinf_jqgrd, sclcinf_inbq, sclwesinf_jqgrd, scleinf_wld, sclcinf_jqgrd, sclwesinf_wld, scleinf_growld, scleinf_newnwld, sclcinf_newcwld, sclcinf_edwwld, sclcinf_beswld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 24
+Java-Name | Java-Path
+scleinf_bre | /data/batchapp/softeon/sclwesinforuat_scle/breruledaemon
+sclcinf_bre | /data/batchapp/softeon/sclwesinforuat_sclc/breruledaemon
+sclwesinf_bre | /data/batchapp/softeon/sclwesinforuat/breruledaemon
+scleinf_sch | /data/batchapp/softeon/sclwesinforuat_scle/schedulerdaemon
+sclwesinf_sch | /data/batchapp/softeon/sclwesinforuat/schedulerdaemon
+sclcinf_sch | /data/batchapp/softeon/sclwesinforuat_sclc/schedulerdaemon
+scleinf_dwa | /data/batchapp/softeon/sclwesinforuat_scle/downloaddaemon
+sclwesinf_dwa | /data/batchapp/softeon/sclwesinforuat/downloaddaemon
+sclcinf_dwa | /data/batchapp/softeon/sclwesinforuat_sclc/downloaddaemon
+sclwesinf_ftp | /data/batchapp/softeon/sclwesinforuat_scle/ftpdaemon
+sclcinf_ftp | /data/batchapp/softeon/sclwesinforuat_sclc/ftpdaemon
+scleinf_inbq | /data/batchapp/softeon/sclwesinforuat_scle/uploaddaemon
+sclwesinf_inbq | /data/batchapp/softeon/sclwesinforuat/uploaddaemon
+scleinf_jqgrd | /data/batchapp/softeon/sclwesinforuat_scle/reportjqgriddaemon
+sclcinf_inbq | /data/batchapp/softeon/sclwesinforuat_sclc/uploaddaemon
+sclwesinf_jqgrd | /data/batchapp/softeon/sclwesinforuat/reportjqgriddaemon
+scleinf_wld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon
+sclcinf_jqgrd | /data/batchapp/softeon/sclwesinforuat_sclc/reportjqgriddaemon
+sclwesinf_wld | /data/batchapp/softeon/sclwesinforuat/wavelaunchdaemon
+scleinf_growld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon_gro
+scleinf_newnwld | /data/batchapp/softeon/sclwesinforuat_scle/wavelaunchdaemon_newn
+sclcinf_newcwld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_newc
+sclcinf_edwwld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_edw
+sclcinf_beswld | /data/batchapp/softeon/sclwesinforuat_sclc/wavelaunchdaemon_bes
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+6546 | scldemo | jboss800eap | scldemo_jb800e | 8080 | 10.0.10.210:8080 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/scldemo/standalone
+6064 | swp251scldemo | jboss800eap | swp251scl_jbeap | 8081 | 10.0.10.210:8081 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/swp251scldemo/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-05 10:05:27.119084
+==============================================================================
+
+2026-04-05 06:05:54,987 - 125880 - ERROR - app_validation.py errors for i-033b05e6675183ea2:
+
+2026-04-05 06:05:54,989 - 125880 - INFO - After patching validation saved to: output/validation-2026-04-05/10.0.10.210-AfterPatching-2026-04-05-06-05-54-989.log
+2026-04-05 06:05:55,040 - 125880 - INFO - Validation comparison report generated: output/validation-2026-04-05/10.0.10.210-Validation-details-2026-04-05-06-05-54-989.html
+2026-04-05 06:05:55,123 - 125880 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-05 06:05:55,123 - 125880 - INFO - HTML validation report email sent for i-033b05e6675183ea2
+2026-04-05 06:05:55,378 - 125880 - INFO - Started i-033b05e6675183ea2 in 0:02:57.291369
+2026-04-05 06:05:55,378 - 125880 - INFO - All instances processed.
+2026-04-05 06:05:55,382 - 125880 - INFO - Restart Total time: 0:14:20.124328
+2026-04-05 06:05:55,382 - 125880 - INFO - Auto-confirmed services are restarted
+2026-04-05 06:05:55,382 - 125880 - INFO - Confirmed - services are started
+2026-04-05 06:05:55,489 - 125880 - INFO - The following instances have failed the patch: []
+2026-04-05 06:05:55,489 - 125880 - INFO - No instances have failed the patch.
+2026-04-05 06:05:55,489 - 125880 - INFO - Total Patch Process time: 0:20:53.170313
+2026-04-05 06:06:56,015 - 125880 - INFO - Log file ./logs/patching_2026-04-05_Saddle-uat-3-q2-26.log uploaded to s3://q2-2026-aws-security-patching/Saddle-uat-3-q2-26_Patch/2026-04-05/patching_2026-04-05_Saddle-uat-3-q2-26.log

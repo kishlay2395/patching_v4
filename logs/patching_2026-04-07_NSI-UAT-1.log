@@ -1,0 +1,251 @@
+2026-04-07 01:05:02,110 - 225769 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-07 01:05:02,110 - 225769 - INFO - Script Start Time: 2026-04-07 01:05:02
+2026-04-07 01:05:02,450 - 225769 - INFO - Instance(s) selected for Patching: {'i-022a3a6aff9d2dca3': '172.29.100.10'}
+2026-04-07 01:05:02,531 - 225769 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 01:05:02,531 - 225769 - INFO - Now patching instances at: 2026-04-07 01:05:02
+2026-04-07 01:05:02,625 - 225769 - INFO - Sending patch command to instance i-022a3a6aff9d2dca3
+2026-04-07 01:05:02,792 - 225769 - INFO - Command sent successfully to instance i-022a3a6aff9d2dca3. Command ID: 4d29aaca-8f20-4e80-b755-963f138a58a3
+2026-04-07 01:09:34,146 - 225769 - INFO - All patches applied successfully.
+2026-04-07 01:09:34,147 - 225769 - INFO - Patching end time: 2026-04-07 01:09:34
+2026-04-07 01:09:34,148 - 225769 - INFO - Patch Elapsed time: 0:04:31.616449
+2026-04-07 01:09:34,221 - 225769 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 01:09:34,221 - 225769 - INFO - Confirmed - services are stopped
+2026-04-07 01:09:55,696 - 225769 - INFO - Discovered TG map: {'i-022a3a6aff9d2dca3': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-WS/6b540bd4366a4898', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-Desktop/c27977e08d4844f8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-RF/bfd43fccbef9ebb9']}
+2026-04-07 01:09:56,103 - 225769 - INFO - Sent app_validation.py to i-022a3a6aff9d2dca3 (command_id: 8750f239-eb59-4693-9d89-b311020bf2ca)
+2026-04-07 01:10:26,173 - 225769 - INFO - app_validation.py output for i-022a3a6aff9d2dca3:
+
+==============================================================================
+Server Availability Check Started | 2026-04-07 05:09:56.370374
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.10
+Hostname | ip-172-29-100-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 79.7G | 210.2G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 18
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | nsi_dwa, nsi_event, nsi_lbl, nsi_repl, nsi_rccl, nsi_rpt, nsi_jqgrid, nsi_sch, nsi_inbq, nsi_wld, nsi_wsq, nsi_harp, nsi_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+nsi_dwa | /data/batchapp/softeon/nsiuat/downloaddaemon
+nsi_event | /data/batchapp/softeon/nsiuat/eventdaemon
+nsi_lbl | /data/batchapp/softeon/nsiuat/labeldaemon
+nsi_repl | /data/batchapp/softeon/nsiuat/replenishmentdaemon
+nsi_rccl | /data/batchapp/softeon/nsiuat/replenishmentpickloccanceldaemon
+nsi_rpt | /data/batchapp/softeon/nsiuat/reportdaemon
+nsi_jqgrid | /data/batchapp/softeon/nsiuat/reportjqgridexportdaemon
+nsi_sch | /data/batchapp/softeon/nsiuat/schedulardaemon
+nsi_inbq | /data/batchapp/softeon/nsiuat/uploaddeamon
+nsi_wld | /data/batchapp/softeon/nsiuat/wavelaunchdaemon
+nsi_wsq | /data/batchapp/softeon/nsiuat/webservicedaemon
+nsi_harp | /data/batchapp/softeon/nsiuat/harpdaemon
+nsi_ict | /data/batchapp/softeon/nsiuat/inventorycomputationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4025085 | nsirfuat | jboss730eap | nsirfuat_jb730e | 8081 | 172.29.100.10:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfuat/standalone
+4024835 | nsiuat | jboss730eap | nsiuat_jb730eap | 8080 | 172.29.100.10:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiuat/standalone
+4025288 | nsiwsuat | jboss730eap | nsiwsuat_jb730e | 8082 | 172.29.100.10:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-07 05:09:57.274839
+==============================================================================
+
+2026-04-07 01:10:26,173 - 225769 - ERROR - app_validation.py errors for i-022a3a6aff9d2dca3:
+
+2026-04-07 01:10:26,175 - 225769 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-07/NSI-UAT-1/172.29.100.10/172.29.100.10-BeforePatching-2026-04-07-01-10-26-175.log
+2026-04-07 01:10:26,175 - 225769 - INFO - Deregistering i-022a3a6aff9d2dca3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-WS/6b540bd4366a4898
+2026-04-07 01:10:26,256 - 225769 - INFO - Deregistering i-022a3a6aff9d2dca3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-Desktop/c27977e08d4844f8
+2026-04-07 01:10:26,306 - 225769 - INFO - Deregistering i-022a3a6aff9d2dca3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-RF/bfd43fccbef9ebb9
+2026-04-07 01:10:26,353 - 225769 - INFO - Stopping EC2 instance: i-022a3a6aff9d2dca3 at 2026-04-07 01:10:26
+2026-04-07 01:11:42,635 - 225769 - INFO - Instance i-022a3a6aff9d2dca3 stopped successfully.
+2026-04-07 01:11:42,770 - 225769 - INFO - Stopped i-022a3a6aff9d2dca3 in 0:01:16.417509
+2026-04-07 01:11:42,771 - 225769 - INFO - Starting EC2 instance: i-022a3a6aff9d2dca3
+2026-04-07 01:11:58,939 - 225769 - INFO - Instance i-022a3a6aff9d2dca3 started successfully.
+2026-04-07 01:11:58,939 - 225769 - INFO - Waiting 100 seconds for SSM agent to be ready on i-022a3a6aff9d2dca3...
+2026-04-07 01:13:38,956 - 225769 - INFO - Registering i-022a3a6aff9d2dca3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-WS/6b540bd4366a4898
+2026-04-07 01:13:39,133 - 225769 - INFO - Registering i-022a3a6aff9d2dca3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-Desktop/c27977e08d4844f8
+2026-04-07 01:13:39,294 - 225769 - INFO - Registering i-022a3a6aff9d2dca3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/NSI-UAT-RF/bfd43fccbef9ebb9
+2026-04-07 01:15:09,958 - 225769 - INFO - Sent app_validation.py to i-022a3a6aff9d2dca3 (command_id: cab55526-e36e-4cf8-9446-e9a21b0b797d)
+2026-04-07 01:15:40,057 - 225769 - INFO - app_validation.py output for i-022a3a6aff9d2dca3:
+
+==============================================================================
+Server Availability Check Started | 2026-04-07 05:15:10.254511
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.100.10
+Hostname | ip-172-29-100-10
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 79.7G | 210.2G | 27% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.100.10:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 79
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.100.10 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 13
+Non-Standalone Java Processes | nsi_dwa, nsi_event, nsi_lbl, nsi_repl, nsi_rccl, nsi_rpt, nsi_jqgrid, nsi_sch, nsi_inbq, nsi_wld, nsi_wsq, nsi_harp, nsi_ict
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 13
+Java-Name | Java-Path
+nsi_dwa | /data/batchapp/softeon/nsiuat/downloaddaemon
+nsi_event | /data/batchapp/softeon/nsiuat/eventdaemon
+nsi_lbl | /data/batchapp/softeon/nsiuat/labeldaemon
+nsi_repl | /data/batchapp/softeon/nsiuat/replenishmentdaemon
+nsi_rccl | /data/batchapp/softeon/nsiuat/replenishmentpickloccanceldaemon
+nsi_rpt | /data/batchapp/softeon/nsiuat/reportdaemon
+nsi_jqgrid | /data/batchapp/softeon/nsiuat/reportjqgridexportdaemon
+nsi_sch | /data/batchapp/softeon/nsiuat/schedulardaemon
+nsi_inbq | /data/batchapp/softeon/nsiuat/uploaddeamon
+nsi_wld | /data/batchapp/softeon/nsiuat/wavelaunchdaemon
+nsi_wsq | /data/batchapp/softeon/nsiuat/webservicedaemon
+nsi_harp | /data/batchapp/softeon/nsiuat/harpdaemon
+nsi_ict | /data/batchapp/softeon/nsiuat/inventorycomputationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 3
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4443 | nsirfuat | jboss730eap | nsirfuat_jb730e | 8081 | 172.29.100.10:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsirfuat/standalone
+4139 | nsiuat | jboss730eap | nsiuat_jb730eap | 8080 | 172.29.100.10:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/nsiuat/standalone
+4615 | nsiwsuat | jboss730eap | nsiwsuat_jb730e | 8082 | 172.29.100.10:8082 | Down | 403 | Disabled | /data/app/jboss730eap/softeon/nsiwsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-07 05:15:11.204895
+==============================================================================
+
+2026-04-07 01:15:40,057 - 225769 - ERROR - app_validation.py errors for i-022a3a6aff9d2dca3:
+
+2026-04-07 01:15:40,059 - 225769 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-07/NSI-UAT-1/172.29.100.10/172.29.100.10-AfterPatching-2026-04-07-01-15-40-058.log
+2026-04-07 01:15:40,121 - 225769 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-07/NSI-UAT-1/172.29.100.10/172.29.100.10-Validation-details-2026-04-07-01-15-40-058.html
+2026-04-07 01:15:40,192 - 225769 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-07 01:15:40,193 - 225769 - INFO - HTML validation report email sent for i-022a3a6aff9d2dca3
+2026-04-07 01:15:40,325 - 225769 - INFO - Started i-022a3a6aff9d2dca3 in 0:03:57.554498
+2026-04-07 01:15:40,326 - 225769 - INFO - All instances processed.
+2026-04-07 01:15:40,330 - 225769 - INFO - Restart Total time: 0:06:05.981245
+2026-04-07 01:15:40,330 - 225769 - INFO - Auto-confirmed services are restarted
+2026-04-07 01:15:40,330 - 225769 - INFO - Confirmed - services are started
+2026-04-07 01:15:40,450 - 225769 - INFO - The following instances have failed the patch: []
+2026-04-07 01:15:40,451 - 225769 - INFO - No instances have failed the patch.
+2026-04-07 01:15:40,451 - 225769 - INFO - Total Patch Process time: 0:10:38.339929
+2026-04-07 01:16:40,792 - 225769 - INFO - Log file ./logs/patching_2026-04-07_NSI-UAT-1.log uploaded to s3://q2-2026-aws-security-patching/NSI-UAT-1_Patch/2026-04-07/patching_2026-04-07_NSI-UAT-1.log

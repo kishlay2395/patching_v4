@@ -1,0 +1,402 @@
+2025-11-05 02:30:02,736 - 3357 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2025-11-05 02:30:02,737 - 3357 - INFO - Script Start Time: 2025-11-05 02:30:02
+2025-11-05 02:30:02,944 - 3357 - INFO - Instance(s) selected for Patching: {'i-0cbabb49a625088ec': '10.0.10.6', 'i-0bfcee6a60bd9f0c8': '10.0.10.36'}
+2025-11-05 02:30:03,035 - 3357 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-05 02:30:03,035 - 3357 - INFO - Now patching instances at: 2025-11-05 02:30:03
+2025-11-05 02:30:03,118 - 3357 - INFO - Sending patch command to instance i-0bfcee6a60bd9f0c8
+2025-11-05 02:30:03,260 - 3357 - INFO - Command sent successfully to instance i-0bfcee6a60bd9f0c8. Command ID: 44b3c307-b540-404a-a407-0af853b55611
+2025-11-05 02:30:03,415 - 3357 - INFO - Sending patch command to instance i-0cbabb49a625088ec
+2025-11-05 02:30:03,569 - 3357 - INFO - Command sent successfully to instance i-0cbabb49a625088ec. Command ID: a7670f78-e676-4a9b-ac16-ac4424418d27
+2025-11-05 02:35:35,351 - 3357 - INFO - All patches applied successfully.
+2025-11-05 02:35:35,351 - 3357 - INFO - Patching end time: 2025-11-05 02:35:35
+2025-11-05 02:35:35,351 - 3357 - INFO - Patch Elapsed time: 0:05:32.316273
+2025-11-05 02:35:35,427 - 3357 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-05 02:35:35,427 - 3357 - INFO - Confirmed - services are stopped
+2025-11-05 02:35:55,313 - 3357 - INFO - Discovered TG map: {'i-0cbabb49a625088ec': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d'], 'i-0bfcee6a60bd9f0c8': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d']}
+2025-11-05 02:35:55,612 - 3357 - INFO - Sent app_validation.sh to i-0bfcee6a60bd9f0c8 (command_id: 9b946103-4f53-4669-9453-6d35d9a99291)
+2025-11-05 02:36:25,694 - 3357 - INFO - app_validation.sh output for i-0bfcee6a60bd9f0c8:
+
+==============================================================================
+Server Availability Check Started at Wed Nov  5 02:35:55 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 10.0.10.36
+-------------------------------------
+System Information
+------------------
+Hostname: ip-10-0-10-36
+Uptime: up 10 weeks, 3 days, 18 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://10.0.10.36:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 10.0.10.36
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 13438 MB
+Free Physical Memory  = 2173 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 6104 MB
+Free Swap Memory  = 14375 MB
+-------------------------------------
+Load Average: 0.35 0.97 0.56 1/919 1990327
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                     20G  7.5G   13G  38% /
+/dev/nvme0n1p128                                   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                    280G  210G   71G  75% /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared   8.0E  309G  8.0E   1% /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1  8.0E  309G  8.0E   1% /data/softeon/shared1
+devtmpfs                                          4.0M     0  4.0M   0% /dev
+tmpfs                                             7.7G     0  7.7G   0% /dev/shm
+tmpfs                                             3.1G  764K  3.1G   1% /run
+tmpfs                                             1.6G     0  1.6G   0% /run/user/1000
+tmpfs                                             1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                             7.7G  160K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 10.0.10.36 started on Wed Nov  5 02:35:56 EST 2025
+
+Server IP: 10.0.10.36 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 10.0.10.36
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 10.0.10.36
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 10.0.10.36
+-------------------------------------
+
+Total number of Java process running on this host 10.0.10.36 is 5
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 10.0.10.36
+Total number of App java process available is 5
+-------------------------------------
+App Process details:
+Process ID: 2107365, Process Name: 169:26
+Process ID: 2107496, Process Name: 193:26
+Process ID: 2107627, Process Name: 53:34
+Process ID: 2109681, Process Name: 449:02
+Process ID: 2109814, Process Name: 304:56
+-------------------------------------
+
+Web Application Port Validation for Server IP: 10.0.10.36
+Port 80:	sclw3plprod	Running
+Port 8080:	sclw3plrfpr	Running
+Port 8081:	scleprod_jb	Running
+Port 8082:	sclerfprod_	Running
+Port 8083:	sclw3plport	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Wed Nov  5 02:35:57 EST 2025
+==============================================================================
+
+
+2025-11-05 02:36:25,694 - 3357 - ERROR - app_validation.sh errors for i-0bfcee6a60bd9f0c8:
+
+2025-11-05 02:36:25,696 - 3357 - INFO - Before patching validation saved to: output/validation-2025-11-05/10.0.10.36-BeforePatching-2025-11-05-02-36-25-695.log
+2025-11-05 02:36:25,696 - 3357 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2025-11-05 02:36:25,765 - 3357 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8
+2025-11-05 02:36:25,804 - 3357 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2025-11-05 02:36:25,875 - 3357 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2025-11-05 02:36:25,930 - 3357 - INFO - Deregistering i-0bfcee6a60bd9f0c8 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2025-11-05 02:36:25,980 - 3357 - INFO - Stopping EC2 instance: i-0bfcee6a60bd9f0c8 at 2025-11-05 02:36:25
+2025-11-05 02:38:57,592 - 3357 - INFO - Instance i-0bfcee6a60bd9f0c8 stopped successfully.
+2025-11-05 02:38:57,829 - 3357 - INFO - Stopped i-0bfcee6a60bd9f0c8 in 0:02:31.848284
+2025-11-05 02:38:57,829 - 3357 - INFO - Starting EC2 instance: i-0bfcee6a60bd9f0c8
+2025-11-05 02:39:13,518 - 3357 - INFO - Instance i-0bfcee6a60bd9f0c8 started successfully.
+2025-11-05 02:39:13,518 - 3357 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0bfcee6a60bd9f0c8...
+2025-11-05 02:39:43,548 - 3357 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2025-11-05 02:39:43,755 - 3357 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Portal/64a63078c14b2ae8
+2025-11-05 02:39:43,895 - 3357 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2025-11-05 02:39:44,032 - 3357 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2025-11-05 02:39:44,177 - 3357 - INFO - Registering i-0bfcee6a60bd9f0c8 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2025-11-05 02:43:45,161 - 3357 - INFO - Sent app_validation.sh to i-0bfcee6a60bd9f0c8 (command_id: b4fe5c13-b875-41d1-992b-d158a8a66850)
+2025-11-05 02:44:15,239 - 3357 - INFO - app_validation.sh output for i-0bfcee6a60bd9f0c8:
+
+==============================================================================
+Server Availability Check Started at Wed Nov  5 02:43:45 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 10.0.10.36
+-------------------------------------
+System Information
+------------------
+Hostname: ip-10-0-10-36
+Uptime: up 4 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://10.0.10.36:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 10.0.10.36
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 10816 MB
+Free Physical Memory  = 4795 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 0 MB
+Free Swap Memory  = 20479 MB
+-------------------------------------
+Load Average: 3.78 3.77 1.67 6/523 4462
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                     20G  7.2G   13G  37% /
+/dev/nvme0n1p128                                   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                    280G  210G   71G  75% /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared   8.0E  309G  8.0E   1% /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1  8.0E  309G  8.0E   1% /data/softeon/shared1
+devtmpfs                                          4.0M     0  4.0M   0% /dev
+tmpfs                                             7.7G     0  7.7G   0% /dev/shm
+tmpfs                                             3.1G  688K  3.1G   1% /run
+tmpfs                                             1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                             7.7G  160K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 10.0.10.36 started on Wed Nov  5 02:43:45 EST 2025
+
+Server IP: 10.0.10.36 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 10.0.10.36
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 10.0.10.36
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 10.0.10.36
+-------------------------------------
+
+Total number of Java process running on this host 10.0.10.36 is 5
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 10.0.10.36
+Total number of App java process available is 5
+-------------------------------------
+App Process details:
+Process ID: 3441, Process Name: 0:53
+Process ID: 3442, Process Name: 0:53
+Process ID: 3461, Process Name: 0:53
+Process ID: 3475, Process Name: 0:54
+Process ID: 3501, Process Name: 1:01
+-------------------------------------
+
+Web Application Port Validation for Server IP: 10.0.10.36
+Port 80:	sclw3plprod_jb	Running
+Port 8080:	sclw3plrfprod_	Running
+Port 8081:	scleprod_jboss	Running
+Port 8082:	sclerfprod_jbo	Running
+Port 8083:	sclw3plportal_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Wed Nov  5 02:43:47 EST 2025
+==============================================================================
+
+
+2025-11-05 02:44:15,239 - 3357 - ERROR - app_validation.sh errors for i-0bfcee6a60bd9f0c8:
+
+2025-11-05 02:44:15,241 - 3357 - INFO - After patching validation saved to: output/validation-2025-11-05/10.0.10.36-AfterPatching-2025-11-05-02-44-15-241.log
+2025-11-05 02:44:15,275 - 3357 - INFO - Validation comparison report generated: output/validation-2025-11-05/10.0.10.36-Validation-details-2025-11-05-02-44-15-241.log
+2025-11-05 02:44:15,343 - 3357 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-05 02:44:15,343 - 3357 - INFO - HTML validation report email sent for i-0bfcee6a60bd9f0c8
+2025-11-05 02:44:15,579 - 3357 - INFO - Started i-0bfcee6a60bd9f0c8 in 0:05:17.750244
+2025-11-05 02:44:15,579 - 3357 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2025-11-05 02:46:15,749 - 3357 - INFO - Sent app_validation.sh to i-0cbabb49a625088ec (command_id: 192de7da-1616-4c08-ba11-1f48363f6980)
+2025-11-05 02:46:45,824 - 3357 - INFO - app_validation.sh output for i-0cbabb49a625088ec:
+
+==============================================================================
+Server Availability Check Started at Wed Nov  5 02:46:15 EST 2025
+==============================================================================
+
+-------------------------------------
+Server IP : 10.0.10.6
+-------------------------------------
+System Information
+------------------
+Hostname: ip-10-0-10-6
+Uptime: up 10 weeks, 3 days, 32 minutes
+Current User: root
+Working Directory: /usr/bin
+-------------------------------------
+Voice Console URL: http://10.0.10.6:9090/VoiceConsole
+-------------------------------------
+
+-------------------------------------
+Server IP : 10.0.10.6
+-------------------------------------
+Physical Memory Information
+---------------------------
+Total Physical Memory = 15611 MB
+Used Physical Memory  = 13219 MB
+Free Physical Memory  = 2392 MB
+-------------------------------------
+Swap Memory Information
+-----------------------
+Total Swap Memory = 20479 MB
+Used Swap Memory  = 5634 MB
+Free Swap Memory  = 14845 MB
+-------------------------------------
+Load Average: 0.00 0.11 0.23 1/899 2309850
+-------------------------------------
+
+Disk Usage Information
+----------------------
+Filesystem                                        Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1                                     20G  6.1G   14G  31% /
+/dev/nvme0n1p128                                   10M  1.3M  8.7M  13% /boot/efi
+/dev/nvme1n1p2                                    280G  185G   96G  66% /data
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared   8.0E  309G  8.0E   1% /data/softeon/shared
+fs-1f3cc0fd.efs.us-east-1.amazonaws.com:/shared1  8.0E  309G  8.0E   1% /data/softeon/shared1
+devtmpfs                                          4.0M     0  4.0M   0% /dev
+tmpfs                                             7.7G     0  7.7G   0% /dev/shm
+tmpfs                                             3.1G  760K  3.1G   1% /run
+tmpfs                                             1.6G     0  1.6G   0% /run/user/1000
+tmpfs                                             1.6G     0  1.6G   0% /run/user/2001
+tmpfs                                             7.7G  160K  7.7G   1% /tmp
+-------------------------------------
+
+Application Port Validation for Server IP: 10.0.10.6 started on Wed Nov  5 02:46:16 EST 2025
+
+Server IP: 10.0.10.6 is reachable.
+
+SSH Service (Port 22) Status:
+SSH Service (Port 22): NOT REACHABLE
+-------------------------------------
+
+FTP Service Validation for Server IP: 10.0.10.6
+
+FTP Service (Port 21): NOT REACHABLE
+No FTP processes detected
+-------------------------------------
+
+CUPS Service Validation for Server IP: 10.0.10.6
+
+CUPS Service (Port 631): NOT REACHABLE
+
+Printer Configuration:
+Total Printers Configured: 0
+-------------------------------------
+CUPS Service (Port 631): NOT REACHABLE on 10.0.10.6
+-------------------------------------
+
+Total number of Java process running on this host 10.0.10.6 is 5
+Total number of Daemon / Batch (java) application process available is 0
+
+No Java daemon processes running
+-------------------------------------
+
+-------------------------------------
+Total number of App process running on this host 10.0.10.6
+Total number of App java process available is 5
+-------------------------------------
+App Process details:
+Process ID: 2359119, Process Name: 165:44
+Process ID: 2359250, Process Name: 189:47
+Process ID: 2360787, Process Name: 414:01
+Process ID: 2360924, Process Name: 320:20
+Process ID: 2361056, Process Name: 57:23
+-------------------------------------
+
+Web Application Port Validation for Server IP: 10.0.10.6
+Port 80:	sclw3plprod	Running
+Port 8080:	sclw3plrfpr	Running
+Port 8081:	scleprod_jb	Running
+Port 8082:	sclerfprod_	Running
+Port 8083:	scleportal_	Running
+-------------------------------------
+
+==============================================================================
+Server Availability Check Completed at Wed Nov  5 02:46:17 EST 2025
+==============================================================================
+
+
+2025-11-05 02:46:45,824 - 3357 - ERROR - app_validation.sh errors for i-0cbabb49a625088ec:
+
+2025-11-05 02:46:45,826 - 3357 - INFO - Before patching validation saved to: output/validation-2025-11-05/10.0.10.6-BeforePatching-2025-11-05-02-46-45-825.log
+2025-11-05 02:46:45,826 - 3357 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b
+2025-11-05 02:46:45,901 - 3357 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2025-11-05 02:46:45,948 - 3357 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2025-11-05 02:46:45,997 - 3357 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2025-11-05 02:46:46,050 - 3357 - INFO - Deregistering i-0cbabb49a625088ec from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2025-11-05 02:46:46,104 - 3357 - INFO - Stopping EC2 instance: i-0cbabb49a625088ec at 2025-11-05 02:46:46
+2025-11-05 02:48:17,452 - 3357 - INFO - Instance i-0cbabb49a625088ec stopped successfully.
+2025-11-05 02:48:17,681 - 3357 - INFO - Stopped i-0cbabb49a625088ec in 0:01:31.577637
+2025-11-05 02:48:17,682 - 3357 - INFO - Starting EC2 instance: i-0cbabb49a625088ec
+2025-11-05 02:48:33,438 - 3357 - INFO - Instance i-0cbabb49a625088ec started successfully.
+2025-11-05 02:48:33,438 - 3357 - INFO - Waiting 30 seconds for SSM agent to be ready on i-0cbabb49a625088ec...
+2025-11-05 02:49:03,463 - 3357 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b
+2025-11-05 02:49:03,643 - 3357 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f
+2025-11-05 02:49:03,776 - 3357 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7
+2025-11-05 02:49:03,911 - 3357 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08
+2025-11-05 02:49:04,044 - 3357 - INFO - Registering i-0cbabb49a625088ec to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d
+2025-11-05 02:54:04,887 - 3357 - WARNING - i-0cbabb49a625088ec not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Portal/54e0741bc014f47b after timeout.
+2025-11-05 02:59:05,578 - 3357 - WARNING - i-0cbabb49a625088ec not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-Desktop/acb47633b60f0e7f after timeout.
+2025-11-05 03:04:06,273 - 3357 - WARNING - i-0cbabb49a625088ec not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-Desktop/97787e1bbd3263e7 after timeout.
+2025-11-05 03:09:06,923 - 3357 - WARNING - i-0cbabb49a625088ec not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLW-Production-RF/4c282bf71c652d08 after timeout.
+2025-11-05 03:14:07,627 - 3357 - WARNING - i-0cbabb49a625088ec not healthy in arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SCLE-Production-RF/fb404395d018eb5d after timeout.
+2025-11-05 03:14:07,706 - 3357 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2025-11-05 03:14:07,707 - 3357 - ERROR - Aborting workflow: i-0cbabb49a625088ec is not healthy after restart.
+2025-11-05 03:14:07,710 - 3357 - INFO - Restart Total time: 0:38:32.164152
+2025-11-05 03:14:07,710 - 3357 - INFO - Auto-confirmed services are restarted
+2025-11-05 03:14:07,710 - 3357 - INFO - Confirmed - services are started
+2025-11-05 03:14:07,830 - 3357 - INFO - The following instances have failed the patch: []
+2025-11-05 03:14:07,831 - 3357 - INFO - No instances have failed the patch.
+2025-11-05 03:14:07,831 - 3357 - INFO - Total Patch Process time: 0:44:05.093734
+2025-11-05 03:14:08,177 - 3357 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2025-11-05 03:15:08,338 - 3357 - INFO - Log file ./logs/patching_2025-11-05_SaddleCreek-East-WestApp1-2.log uploaded to s3://q4-2025-aws-security-patching/SaddleCreek-East-WestApp1-2_Patch/2025-11-05/patching_2025-11-05_SaddleCreek-East-WestApp1-2.log

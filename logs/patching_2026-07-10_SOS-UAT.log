@@ -1,0 +1,857 @@
+2026-07-10 00:00:05,912 - 4052897 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-10 00:00:05,912 - 4052897 - INFO - Script Start Time: 2026-07-10 00:00:05
+2026-07-10 00:00:06,637 - 4052897 - INFO - Instance(s) selected for Patching: {'i-0830d42133d80012a': '172.31.28.76', 'i-00af13907190366c3': '172.31.28.138'}
+2026-07-10 00:00:06,747 - 4052897 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 00:00:06,747 - 4052897 - INFO - Now patching instances at: 2026-07-10 00:00:06
+2026-07-10 00:00:12,060 - 4052897 - INFO - i-00af13907190366c3: Cron was active = False
+2026-07-10 00:00:17,318 - 4052897 - INFO - i-0830d42133d80012a: Cron was active = True
+2026-07-10 00:00:17,564 - 4052897 - INFO - Health monitor crontab disabled on all instances
+2026-07-10 00:00:17,565 - 4052897 - INFO - Disabled cron for: ['i-0830d42133d80012a']
+2026-07-10 00:00:17,746 - 4052897 - INFO - Sent app_validation.py to i-00af13907190366c3 (command_id: 3c6aa22f-0697-48a9-b86e-435fe4b1f284)
+2026-07-10 00:00:47,899 - 4052897 - INFO - app_validation.py output for i-00af13907190366c3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:00:18.001899
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.138
+Hostname | ip-172-31-28-138
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 23.4G | 216.5G | 9% | /data
+/dev/nvme1n1p2 | 239.9G | 23.4G | 216.5G | 9% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | No
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 9
+Batch/Daemon Java Processes | 8
+Non-Standalone Java Processes | sosbill_ftp, sosbill_jqgrid, sosbill_inbq, sosbill_rpt, sosbill_sch, sosbill_dwa, sosbill_invbt, sosbill_bill
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 8
+Java-Name | Java-Path
+sosbill_ftp | /data/batchapp/softeon/sosbilluat/ftpdaemon
+sosbill_jqgrid | /data/batchapp/softeon/sosbilluat/reportjqgridexportdaemon
+sosbill_inbq | /data/batchapp/softeon/sosbilluat/uploaddaemon
+sosbill_rpt | /data/batchapp/softeon/sosbilluat/reportdaemon
+sosbill_sch | /data/batchapp/softeon/sosbilluat/schedulardaemon
+sosbill_dwa | /data/batchapp/softeon/sosbilluat/downloaddaemon
+sosbill_invbt | /data/batchapp/softeon/sosbilluat/billinginvoicebatchdaemon
+sosbill_bill | /data/batchapp/softeon/sosbilluat/billingchargesbatchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+339704 | sosbilluat | jboss810eap | sosbill_jb810 | 8080 | 172.31.28.138:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/sosbilluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:00:18.528614
+==============================================================================
+
+2026-07-10 00:00:47,899 - 4052897 - ERROR - app_validation.py errors for i-00af13907190366c3:
+
+2026-07-10 00:00:47,900 - 4052897 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.138/172.31.28.138-BeforePatching-2026-07-10-00-00-47-900.log
+2026-07-10 00:00:48,055 - 4052897 - INFO - Sent app_validation.py to i-0830d42133d80012a (command_id: 972138f5-d7f4-42c7-8452-8ee8d19cea3f)
+2026-07-10 00:01:18,135 - 4052897 - INFO - app_validation.py output for i-0830d42133d80012a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:00:48.440046
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.76
+Hostname | ip-172-31-28-76
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 155.5G | 84.3G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.28.76:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 45
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.76 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | sosuat_dwa, sosuat_event, sosuat_ftp, sosuat_harp, sosuat_lbl, sosuat_repl, sosuat_rccl, sos_rplpu, sosuat_rpt, sosuat_jqgrid, sosuat_sch, sosuat_cen_sch, sosuat_eas_sch, sosuat_inbq, sosuat_wld, sosuat_tiad, sosuat_mpcpt, sosuat_dm, sosuat_abchdis, sosuat_prtrpt, sosuat_adhocquery
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+sosuat_dwa | /data/batchapp/softeon/sosuat/downloaddaemon
+sosuat_event | /data/batchapp/softeon/sosuat/eventdaemon
+sosuat_ftp | /data/batchapp/softeon/sosuat/ftpdaemon
+sosuat_harp | /data/batchapp/softeon/sosuat/hardallocationdaemon
+sosuat_lbl | /data/batchapp/softeon/sosuat/labeldaemon
+sosuat_repl | /data/batchapp/softeon/sosuat/replenishmentdaemon
+sosuat_rccl | /data/batchapp/softeon/sosuat/replenishmentpickloccanceldaemon
+sos_rplpu | /data/batchapp/softeon/sosuat/replenishmentpriorityupdatedaemon
+sosuat_rpt | /data/batchapp/softeon/sosuat/reportdaemon
+sosuat_jqgrid | /data/batchapp/softeon/sosuat/reportjqgridexportdaemon
+sosuat_sch | /data/batchapp/softeon/sosuat/schedulerdaemon
+sosuat_cen_sch | /data/batchapp/softeon/sosuat/schedulardaemon_central
+sosuat_eas_sch | /data/batchapp/softeon/sosuat/schedulardaemon_eastern
+sosuat_inbq | /data/batchapp/softeon/sosuat/uploaddaemon
+sosuat_wld | /data/batchapp/softeon/sosuat/wavelaunchdaemon
+sosuat_tiad | /data/batchapp/softeon/sosuat/tasklevelinventoryallocationdaemon
+sosuat_mpcpt | /data/batchapp/softeon/sosuat/picktooldaemon
+sosuat_dm | /data/batchapp/softeon/sosuat/labelcreationdaemon
+sosuat_abchdis | /data/batchapp/softeon/sosuat/autobatchdistribution
+sosuat_prtrpt | /data/batchapp/softeon/sosuat/portalreportdaemon
+sosuat_adhocquery | /data/app/adhocquery/sosuatadhocquery
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5306 | sosconfiguat | jboss730eap | sosconfig_jb73 | 8083 | 172.31.28.76:8083 | Down | 302 | Disabled | /data/app/jboss730eap/softeon/sosconfiguat/standalone
+3895380 | sosportaluat | jboss730eap | sosportuat_jb73 | 8082 | 172.31.28.76:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosportaluat/standalone
+1164384 | sosrfuat | jboss730eap | sosrfuat_jb730e | 8081 | 172.31.28.76:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosrfuat/standalone
+1164215 | sosuat | jboss730eap | sosuat_jb730eap | 8080 | 172.31.28.76:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosuat/standalone
+1164572 | soswsuat | jboss730eap | soswsuat_jb730 | 8084 | 172.31.28.76:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/soswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:00:50.180074
+==============================================================================
+
+2026-07-10 00:01:18,135 - 4052897 - ERROR - app_validation.py errors for i-0830d42133d80012a:
+
+2026-07-10 00:01:18,137 - 4052897 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-BeforePatching-2026-07-10-00-01-18-136.log
+2026-07-10 00:01:18,313 - 4052897 - INFO - Sending patch command to instance i-00af13907190366c3
+2026-07-10 00:01:18,424 - 4052897 - INFO - Command sent successfully to instance i-00af13907190366c3. Command ID: 54b24976-0712-4f5f-98e4-e919715cdf90
+2026-07-10 00:01:18,559 - 4052897 - INFO - Sending patch command to instance i-0830d42133d80012a
+2026-07-10 00:01:18,664 - 4052897 - INFO - Command sent successfully to instance i-0830d42133d80012a. Command ID: 39e2ccef-2486-48b6-b5d5-e099890cfdfd
+2026-07-10 00:09:51,452 - 4052897 - INFO - All patches applied successfully.
+2026-07-10 00:09:51,453 - 4052897 - INFO - Patching end time: 2026-07-10 00:09:51
+2026-07-10 00:09:51,453 - 4052897 - INFO - Patch Elapsed time: 0:09:44.705675
+2026-07-10 00:09:51,537 - 4052897 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-10 00:09:51,537 - 4052897 - INFO - Confirmed - services are stopped
+2026-07-10 00:10:12,505 - 4052897 - INFO - Discovered TG map: {'i-0830d42133d80012a': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-AdhocAPI/1723f73454485bbe', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Config/acc2bb377d25f594', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Portal/8a6872752f50aeba', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-WS/4593936358fc85c3', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Desktop/bbd6b02833869729', 'arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-RF/c47befd50a0dc8c2'], 'i-00af13907190366c3': ['arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOSBill-UAT-Desktop/521d5089d8b600e3']}
+2026-07-10 00:10:12,740 - 4052897 - INFO - Deregistering i-00af13907190366c3 from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOSBill-UAT-Desktop/521d5089d8b600e3
+2026-07-10 00:10:12,813 - 4052897 - INFO - Stopping EC2 instance: i-00af13907190366c3 at 2026-07-10 00:10:12
+2026-07-10 00:12:14,279 - 4052897 - INFO - Instance i-00af13907190366c3 stopped successfully.
+2026-07-10 00:12:14,535 - 4052897 - INFO - Stopped i-00af13907190366c3 in 0:02:01.722613
+2026-07-10 00:12:14,536 - 4052897 - INFO - Starting EC2 instance: i-00af13907190366c3
+2026-07-10 00:12:30,550 - 4052897 - INFO - Instance i-00af13907190366c3 started successfully.
+2026-07-10 00:12:30,550 - 4052897 - INFO - Waiting 100 seconds for SSM agent to be ready on i-00af13907190366c3...
+2026-07-10 00:14:10,561 - 4052897 - INFO - Registering i-00af13907190366c3 to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOSBill-UAT-Desktop/521d5089d8b600e3
+2026-07-10 00:21:41,865 - 4052897 - INFO - Sent app_validation.py to i-00af13907190366c3 (command_id: 682925da-900c-44df-8da3-8de24bf1964b)
+2026-07-10 00:22:12,035 - 4052897 - INFO - app_validation.py output for i-00af13907190366c3:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:21:42.124782
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.138
+Hostname | ip-172-31-28-138
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 23.4G | 216.5G | 9% | /data
+/dev/nvme1n1p2 | 239.9G | 23.4G | 216.5G | 9% | /data3
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | cups-2.4.19-1.amzn2023.0.1.aarch64
+CUPS IP Port 631 Reachable | No
+Cups server Http Status | Not Found
+Cups printers Http Status | Not Found
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.138 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 9
+Batch/Daemon Java Processes | 8
+Non-Standalone Java Processes | sosbill_sch, sosbill_inbq, sosbill_jqgrid, sosbill_invbt, sosbill_rpt, sosbill_dwa, sosbill_ftp, sosbill_bill
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 8
+Java-Name | Java-Path
+sosbill_sch | /data/batchapp/softeon/sosbilluat/schedulardaemon
+sosbill_inbq | /data/batchapp/softeon/sosbilluat/uploaddaemon
+sosbill_jqgrid | /data/batchapp/softeon/sosbilluat/reportjqgridexportdaemon
+sosbill_invbt | /data/batchapp/softeon/sosbilluat/billinginvoicebatchdaemon
+sosbill_rpt | /data/batchapp/softeon/sosbilluat/reportdaemon
+sosbill_dwa | /data/batchapp/softeon/sosbilluat/downloaddaemon
+sosbill_ftp | /data/batchapp/softeon/sosbilluat/ftpdaemon
+sosbill_bill | /data/batchapp/softeon/sosbilluat/billingchargesbatchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 1
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4514 | sosbilluat | jboss810eap | sosbill_jb810 | 8080 | 172.31.28.138:8080 | UP | 200 | Disabled | /data/app/jboss810eap/softeon/sosbilluat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:21:42.558362
+==============================================================================
+
+2026-07-10 00:22:12,035 - 4052897 - ERROR - app_validation.py errors for i-00af13907190366c3:
+
+2026-07-10 00:22:12,037 - 4052897 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.138/172.31.28.138-AfterPatching-2026-07-10-00-22-12-036.log
+2026-07-10 00:22:12,099 - 4052897 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.138/172.31.28.138-Validation-details-2026-07-10-00-22-12-036.html
+2026-07-10 00:22:12,356 - 4052897 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 00:22:12,356 - 4052897 - INFO - HTML validation report email sent for i-00af13907190366c3
+2026-07-10 00:22:12,356 - 4052897 - INFO - i-00af13907190366c3: Cron was not active before patching - skipping retry thread.
+2026-07-10 00:22:12,678 - 4052897 - INFO - Started i-00af13907190366c3 in 0:09:58.141904
+2026-07-10 00:22:12,678 - 4052897 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-10 00:24:12,780 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-AdhocAPI/1723f73454485bbe
+2026-07-10 00:24:12,854 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Config/acc2bb377d25f594
+2026-07-10 00:24:12,894 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Portal/8a6872752f50aeba
+2026-07-10 00:24:12,950 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-WS/4593936358fc85c3
+2026-07-10 00:24:12,991 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Desktop/bbd6b02833869729
+2026-07-10 00:24:13,038 - 4052897 - INFO - Deregistering i-0830d42133d80012a from TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-RF/c47befd50a0dc8c2
+2026-07-10 00:24:13,078 - 4052897 - INFO - Stopping EC2 instance: i-0830d42133d80012a at 2026-07-10 00:24:13
+2026-07-10 00:27:14,972 - 4052897 - INFO - Instance i-0830d42133d80012a stopped successfully.
+2026-07-10 00:27:15,233 - 4052897 - INFO - Stopped i-0830d42133d80012a in 0:03:02.154382
+2026-07-10 00:27:15,233 - 4052897 - INFO - Starting EC2 instance: i-0830d42133d80012a
+2026-07-10 00:27:31,542 - 4052897 - INFO - Instance i-0830d42133d80012a started successfully.
+2026-07-10 00:27:31,542 - 4052897 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0830d42133d80012a...
+2026-07-10 00:29:11,601 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-AdhocAPI/1723f73454485bbe
+2026-07-10 00:29:11,883 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Config/acc2bb377d25f594
+2026-07-10 00:29:12,016 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Portal/8a6872752f50aeba
+2026-07-10 00:29:12,175 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-WS/4593936358fc85c3
+2026-07-10 00:29:12,309 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-Desktop/bbd6b02833869729
+2026-07-10 00:29:12,450 - 4052897 - INFO - Registering i-0830d42133d80012a to TG arn:aws:elasticloadbalancing:us-east-1:835314132208:targetgroup/SOS-UAT-RF/c47befd50a0dc8c2
+2026-07-10 00:31:13,321 - 4052897 - INFO - Sent app_validation.py to i-0830d42133d80012a (command_id: ae2b5e50-144a-4e99-ad47-0d9a831310f6)
+2026-07-10 00:31:43,517 - 4052897 - INFO - app_validation.py output for i-0830d42133d80012a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:31:13.603758
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.76
+Hostname | ip-172-31-28-76
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 155.6G | 84.3G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.28.76:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 45
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.76 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 26
+Batch/Daemon Java Processes | 21
+Non-Standalone Java Processes | sosuat_dwa, sosconfi_bcopy, sosuat_event, sosuat_ftp, sosuat_harp, sosuat_lbl, sosuat_repl, sosuat_rccl, sos_rplpu, sosuat_rpt, sosuat_jqgrid, sosuat_sch, sosuat_adhocquery, sosuat_cen_sch, sosuat_eas_sch, sosuat_inbq, sosuat_wld, sosuat_mpcpt, sosuat_dm, sosuat_abchdis, sosuat_prtrpt
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 21
+Java-Name | Java-Path
+sosuat_dwa | /data/batchapp/softeon/sosuat/downloaddaemon
+sosconfi_bcopy | /data/batchapp/softeon/sosconfiguat/bulkdatacopydaemon
+sosuat_event | /data/batchapp/softeon/sosuat/eventdaemon
+sosuat_ftp | /data/batchapp/softeon/sosuat/ftpdaemon
+sosuat_harp | /data/batchapp/softeon/sosuat/hardallocationdaemon
+sosuat_lbl | /data/batchapp/softeon/sosuat/labeldaemon
+sosuat_repl | /data/batchapp/softeon/sosuat/replenishmentdaemon
+sosuat_rccl | /data/batchapp/softeon/sosuat/replenishmentpickloccanceldaemon
+sos_rplpu | /data/batchapp/softeon/sosuat/replenishmentpriorityupdatedaemon
+sosuat_rpt | /data/batchapp/softeon/sosuat/reportdaemon
+sosuat_jqgrid | /data/batchapp/softeon/sosuat/reportjqgridexportdaemon
+sosuat_sch | /data/batchapp/softeon/sosuat/schedulerdaemon
+sosuat_adhocquery | /data/app/adhocquery/sosuatadhocquery
+sosuat_cen_sch | /data/batchapp/softeon/sosuat/schedulardaemon_central
+sosuat_eas_sch | /data/batchapp/softeon/sosuat/schedulardaemon_eastern
+sosuat_inbq | /data/batchapp/softeon/sosuat/uploaddaemon
+sosuat_wld | /data/batchapp/softeon/sosuat/wavelaunchdaemon
+sosuat_mpcpt | /data/batchapp/softeon/sosuat/picktooldaemon
+sosuat_dm | /data/batchapp/softeon/sosuat/labelcreationdaemon
+sosuat_abchdis | /data/batchapp/softeon/sosuat/autobatchdistribution
+sosuat_prtrpt | /data/batchapp/softeon/sosuat/portalreportdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5765 | sosconfiguat | jboss730eap | sosconfig_jb73 | 8083 | 172.31.28.76:8083 | Down | 302 | Disabled | /data/app/jboss730eap/softeon/sosconfiguat/standalone
+5237 | sosportaluat | jboss730eap | sosportuat_jb73 | 8082 | 172.31.28.76:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosportaluat/standalone
+5999 | sosrfuat | jboss730eap | sosrfuat_jb730e | 8081 | 172.31.28.76:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosrfuat/standalone
+5605 | sosuat | jboss730eap | sosuat_jb730eap | 8080 | 172.31.28.76:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosuat/standalone
+6204 | soswsuat | jboss730eap | soswsuat_jb730 | 8084 | 172.31.28.76:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/soswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:31:16.092426
+==============================================================================
+
+2026-07-10 00:31:43,518 - 4052897 - ERROR - app_validation.py errors for i-0830d42133d80012a:
+
+2026-07-10 00:31:43,519 - 4052897 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-AfterPatching-2026-07-10-00-31-43-519.log
+2026-07-10 00:31:43,572 - 4052897 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-Validation-details-2026-07-10-00-31-43-519.html
+2026-07-10 00:31:43,768 - 4052897 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-10 00:31:43,768 - 4052897 - INFO - HTML validation report email sent for i-0830d42133d80012a
+2026-07-10 00:31:43,768 - 4052897 - INFO - [Retry-1] Waiting 600s for i-0830d42133d80012a...
+2026-07-10 00:31:43,769 - 4052897 - INFO - RED - Background retry thread started for i-0830d42133d80012a
+2026-07-10 00:31:44,084 - 4052897 - INFO - Started i-0830d42133d80012a in 0:04:28.850565
+2026-07-10 00:31:44,084 - 4052897 - INFO - All instances processed.
+2026-07-10 00:31:44,089 - 4052897 - INFO - Restart Total time: 0:21:52.401576
+2026-07-10 00:31:44,090 - 4052897 - INFO - Auto-confirmed services are restarted
+2026-07-10 00:31:44,090 - 4052897 - INFO - Confirmed - services are started
+2026-07-10 00:31:44,198 - 4052897 - INFO - The following instances have failed the patch: []
+2026-07-10 00:31:44,198 - 4052897 - INFO - No instances have failed the patch.
+2026-07-10 00:31:44,198 - 4052897 - INFO - Total Patch Process time: 0:31:38.285902
+2026-07-10 00:32:44,784 - 4052897 - INFO - Log file ./logs/patching_2026-07-10_SOS-UAT.log uploaded to s3://q3-2026-aws-security-patching/SOS-UAT_Patch/2026-07-10/patching_2026-07-10_SOS-UAT.log
+2026-07-10 00:41:43,960 - 4052897 - INFO - Sent app_validation.py to i-0830d42133d80012a (command_id: 2e476ee9-4ebf-4dd2-a2bc-7771fb8bd0f3)
+2026-07-10 00:42:14,048 - 4052897 - INFO - app_validation.py output for i-0830d42133d80012a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:41:44.292213
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.76
+Hostname | ip-172-31-28-76
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 155.6G | 84.2G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.28.76:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 45
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.76 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | sosuat_dwa, sosconfi_bcopy, sosuat_event, sosuat_ftp, sosuat_harp, sosuat_lbl, sosuat_repl, sosuat_rccl, sos_rplpu, sosuat_rpt, sosuat_jqgrid, sosuat_sch, sosuat_adhocquery, sosuat_cen_sch, sosuat_eas_sch, sosuat_inbq, sosuat_wld, sosuat_mpcpt, sosuat_dm, sosuat_abchdis, sosuat_prtrpt, sosuat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+sosuat_dwa | /data/batchapp/softeon/sosuat/downloaddaemon
+sosconfi_bcopy | /data/batchapp/softeon/sosconfiguat/bulkdatacopydaemon
+sosuat_event | /data/batchapp/softeon/sosuat/eventdaemon
+sosuat_ftp | /data/batchapp/softeon/sosuat/ftpdaemon
+sosuat_harp | /data/batchapp/softeon/sosuat/hardallocationdaemon
+sosuat_lbl | /data/batchapp/softeon/sosuat/labeldaemon
+sosuat_repl | /data/batchapp/softeon/sosuat/replenishmentdaemon
+sosuat_rccl | /data/batchapp/softeon/sosuat/replenishmentpickloccanceldaemon
+sos_rplpu | /data/batchapp/softeon/sosuat/replenishmentpriorityupdatedaemon
+sosuat_rpt | /data/batchapp/softeon/sosuat/reportdaemon
+sosuat_jqgrid | /data/batchapp/softeon/sosuat/reportjqgridexportdaemon
+sosuat_sch | /data/batchapp/softeon/sosuat/schedulerdaemon
+sosuat_adhocquery | /data/app/adhocquery/sosuatadhocquery
+sosuat_cen_sch | /data/batchapp/softeon/sosuat/schedulardaemon_central
+sosuat_eas_sch | /data/batchapp/softeon/sosuat/schedulardaemon_eastern
+sosuat_inbq | /data/batchapp/softeon/sosuat/uploaddaemon
+sosuat_wld | /data/batchapp/softeon/sosuat/wavelaunchdaemon
+sosuat_mpcpt | /data/batchapp/softeon/sosuat/picktooldaemon
+sosuat_dm | /data/batchapp/softeon/sosuat/labelcreationdaemon
+sosuat_abchdis | /data/batchapp/softeon/sosuat/autobatchdistribution
+sosuat_prtrpt | /data/batchapp/softeon/sosuat/portalreportdaemon
+sosuat_tiad | /data/batchapp/softeon/sosuat/tasklevelinventoryallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5765 | sosconfiguat | jboss730eap | sosconfig_jb73 | 8083 | 172.31.28.76:8083 | Down | 302 | Disabled | /data/app/jboss730eap/softeon/sosconfiguat/standalone
+5237 | sosportaluat | jboss730eap | sosportuat_jb73 | 8082 | 172.31.28.76:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosportaluat/standalone
+5999 | sosrfuat | jboss730eap | sosrfuat_jb730e | 8081 | 172.31.28.76:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosrfuat/standalone
+5605 | sosuat | jboss730eap | sosuat_jb730eap | 8080 | 172.31.28.76:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosuat/standalone
+6204 | soswsuat | jboss730eap | soswsuat_jb730 | 8084 | 172.31.28.76:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/soswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:41:45.284442
+==============================================================================
+
+2026-07-10 00:42:14,048 - 4052897 - ERROR - app_validation.py errors for i-0830d42133d80012a:
+
+2026-07-10 00:42:14,050 - 4052897 - INFO - [Retry-1] After log saved: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-AfterPatching-Retry1-2026-07-10-00-42-14-049.log
+2026-07-10 00:42:14,105 - 4052897 - INFO - [Retry-1] RED detected for SOS UAT Application and Batch Server (172.31.28.76), retrying... (Total waited: 600s)
+2026-07-10 00:42:14,105 - 4052897 - INFO - [Retry-2] Waiting 600s for i-0830d42133d80012a...
+2026-07-10 00:52:14,379 - 4052897 - INFO - Sent app_validation.py to i-0830d42133d80012a (command_id: ac4f5eca-324e-4581-9eaf-57542ec5f523)
+2026-07-10 00:52:44,492 - 4052897 - INFO - app_validation.py output for i-0830d42133d80012a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 04:52:14.660798
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.76
+Hostname | ip-172-31-28-76
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 155.8G | 84.1G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.28.76:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 45
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.76 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | sosuat_dwa, sosconfi_bcopy, sosuat_event, sosuat_ftp, sosuat_harp, sosuat_lbl, sosuat_repl, sosuat_rccl, sos_rplpu, sosuat_rpt, sosuat_jqgrid, sosuat_sch, sosuat_adhocquery, sosuat_cen_sch, sosuat_eas_sch, sosuat_inbq, sosuat_wld, sosuat_mpcpt, sosuat_dm, sosuat_abchdis, sosuat_prtrpt, sosuat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+sosuat_dwa | /data/batchapp/softeon/sosuat/downloaddaemon
+sosconfi_bcopy | /data/batchapp/softeon/sosconfiguat/bulkdatacopydaemon
+sosuat_event | /data/batchapp/softeon/sosuat/eventdaemon
+sosuat_ftp | /data/batchapp/softeon/sosuat/ftpdaemon
+sosuat_harp | /data/batchapp/softeon/sosuat/hardallocationdaemon
+sosuat_lbl | /data/batchapp/softeon/sosuat/labeldaemon
+sosuat_repl | /data/batchapp/softeon/sosuat/replenishmentdaemon
+sosuat_rccl | /data/batchapp/softeon/sosuat/replenishmentpickloccanceldaemon
+sos_rplpu | /data/batchapp/softeon/sosuat/replenishmentpriorityupdatedaemon
+sosuat_rpt | /data/batchapp/softeon/sosuat/reportdaemon
+sosuat_jqgrid | /data/batchapp/softeon/sosuat/reportjqgridexportdaemon
+sosuat_sch | /data/batchapp/softeon/sosuat/schedulerdaemon
+sosuat_adhocquery | /data/app/adhocquery/sosuatadhocquery
+sosuat_cen_sch | /data/batchapp/softeon/sosuat/schedulardaemon_central
+sosuat_eas_sch | /data/batchapp/softeon/sosuat/schedulardaemon_eastern
+sosuat_inbq | /data/batchapp/softeon/sosuat/uploaddaemon
+sosuat_wld | /data/batchapp/softeon/sosuat/wavelaunchdaemon
+sosuat_mpcpt | /data/batchapp/softeon/sosuat/picktooldaemon
+sosuat_dm | /data/batchapp/softeon/sosuat/labelcreationdaemon
+sosuat_abchdis | /data/batchapp/softeon/sosuat/autobatchdistribution
+sosuat_prtrpt | /data/batchapp/softeon/sosuat/portalreportdaemon
+sosuat_tiad | /data/batchapp/softeon/sosuat/tasklevelinventoryallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5765 | sosconfiguat | jboss730eap | sosconfig_jb73 | 8083 | 172.31.28.76:8083 | Down | 302 | Disabled | /data/app/jboss730eap/softeon/sosconfiguat/standalone
+5237 | sosportaluat | jboss730eap | sosportuat_jb73 | 8082 | 172.31.28.76:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosportaluat/standalone
+5999 | sosrfuat | jboss730eap | sosrfuat_jb730e | 8081 | 172.31.28.76:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosrfuat/standalone
+5605 | sosuat | jboss730eap | sosuat_jb730eap | 8080 | 172.31.28.76:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosuat/standalone
+6204 | soswsuat | jboss730eap | soswsuat_jb730 | 8084 | 172.31.28.76:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/soswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 04:52:15.717300
+==============================================================================
+
+2026-07-10 00:52:44,492 - 4052897 - ERROR - app_validation.py errors for i-0830d42133d80012a:
+
+2026-07-10 00:52:44,494 - 4052897 - INFO - [Retry-2] After log saved: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-AfterPatching-Retry2-2026-07-10-00-52-44-494.log
+2026-07-10 00:52:44,549 - 4052897 - INFO - [Retry-2] RED detected for SOS UAT Application and Batch Server (172.31.28.76), retrying... (Total waited: 1200s)
+2026-07-10 00:52:44,549 - 4052897 - INFO - [Retry-3] Waiting 600s for i-0830d42133d80012a...
+2026-07-10 01:02:44,875 - 4052897 - INFO - Sent app_validation.py to i-0830d42133d80012a (command_id: cb3019a8-9333-46ac-b36c-dc65291c6be5)
+2026-07-10 01:03:14,987 - 4052897 - INFO - app_validation.py output for i-0830d42133d80012a:
+
+==============================================================================
+Server Availability Check Started | 2026-07-10 05:02:45.169674
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.31.28.76
+Hostname | ip-172-31-28-76
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 155.9G | 84.0G | 64% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.31.28.76:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 45
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.31.28.76 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 27
+Batch/Daemon Java Processes | 22
+Non-Standalone Java Processes | sosuat_dwa, sosconfi_bcopy, sosuat_event, sosuat_ftp, sosuat_harp, sosuat_lbl, sosuat_repl, sosuat_rccl, sos_rplpu, sosuat_rpt, sosuat_jqgrid, sosuat_sch, sosuat_adhocquery, sosuat_cen_sch, sosuat_eas_sch, sosuat_inbq, sosuat_wld, sosuat_mpcpt, sosuat_dm, sosuat_abchdis, sosuat_prtrpt, sosuat_tiad
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 22
+Java-Name | Java-Path
+sosuat_dwa | /data/batchapp/softeon/sosuat/downloaddaemon
+sosconfi_bcopy | /data/batchapp/softeon/sosconfiguat/bulkdatacopydaemon
+sosuat_event | /data/batchapp/softeon/sosuat/eventdaemon
+sosuat_ftp | /data/batchapp/softeon/sosuat/ftpdaemon
+sosuat_harp | /data/batchapp/softeon/sosuat/hardallocationdaemon
+sosuat_lbl | /data/batchapp/softeon/sosuat/labeldaemon
+sosuat_repl | /data/batchapp/softeon/sosuat/replenishmentdaemon
+sosuat_rccl | /data/batchapp/softeon/sosuat/replenishmentpickloccanceldaemon
+sos_rplpu | /data/batchapp/softeon/sosuat/replenishmentpriorityupdatedaemon
+sosuat_rpt | /data/batchapp/softeon/sosuat/reportdaemon
+sosuat_jqgrid | /data/batchapp/softeon/sosuat/reportjqgridexportdaemon
+sosuat_sch | /data/batchapp/softeon/sosuat/schedulerdaemon
+sosuat_adhocquery | /data/app/adhocquery/sosuatadhocquery
+sosuat_cen_sch | /data/batchapp/softeon/sosuat/schedulardaemon_central
+sosuat_eas_sch | /data/batchapp/softeon/sosuat/schedulardaemon_eastern
+sosuat_inbq | /data/batchapp/softeon/sosuat/uploaddaemon
+sosuat_wld | /data/batchapp/softeon/sosuat/wavelaunchdaemon
+sosuat_mpcpt | /data/batchapp/softeon/sosuat/picktooldaemon
+sosuat_dm | /data/batchapp/softeon/sosuat/labelcreationdaemon
+sosuat_abchdis | /data/batchapp/softeon/sosuat/autobatchdistribution
+sosuat_prtrpt | /data/batchapp/softeon/sosuat/portalreportdaemon
+sosuat_tiad | /data/batchapp/softeon/sosuat/tasklevelinventoryallocationdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 5
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+5765 | sosconfiguat | jboss730eap | sosconfig_jb73 | 8083 | 172.31.28.76:8083 | Down | 302 | Disabled | /data/app/jboss730eap/softeon/sosconfiguat/standalone
+5237 | sosportaluat | jboss730eap | sosportuat_jb73 | 8082 | 172.31.28.76:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosportaluat/standalone
+5999 | sosrfuat | jboss730eap | sosrfuat_jb730e | 8081 | 172.31.28.76:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosrfuat/standalone
+5605 | sosuat | jboss730eap | sosuat_jb730eap | 8080 | 172.31.28.76:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/sosuat/standalone
+6204 | soswsuat | jboss730eap | soswsuat_jb730 | 8084 | 172.31.28.76:8084 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/soswsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-07-10 05:02:46.171278
+==============================================================================
+
+2026-07-10 01:03:14,987 - 4052897 - ERROR - app_validation.py errors for i-0830d42133d80012a:
+
+2026-07-10 01:03:14,989 - 4052897 - INFO - [Retry-3] After log saved: /data/patching_report/validation-2026-07-10/SOS-UAT/172.31.28.76/172.31.28.76-AfterPatching-Retry3-2026-07-10-01-03-14-988.log
+2026-07-10 01:03:15,229 - 4052897 - INFO - Health monitor crontab enabled on all instances
+2026-07-10 01:03:15,230 - 4052897 - WARNING - [Retry] Timeout - auto cron enabled for i-0830d42133d80012a

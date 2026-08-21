@@ -1,0 +1,60 @@
+2026-01-04 00:00:02,834 - INFO - Running backup for tag: Hilco-UAT
+2026-01-04 00:00:03,448 - INFO - Creating backup for: i-058c2be141004227d
+2026-01-04 00:00:03,661 - INFO - Backup Job ID: 61ba15e0-d786-487b-aab5-cc568785d99f started at 2026-01-04 00:00:03
+2026-01-04 00:21:53,599 - INFO - Backup completed: 61ba15e0-d786-487b-aab5-cc568785d99f
+2026-01-04 00:21:58,755 - INFO - Backup total time: 0:21:54.345692
+2026-01-04 00:21:58,835 - INFO - Completed backups: ['i-058c2be141004227d']
+2026-01-04 01:00:02,155 - INFO - Running backup for tag: Honest-UAT
+2026-01-04 01:00:03,037 - INFO - Creating backup for: i-0f5983f58c7d7706f
+2026-01-04 01:00:03,236 - INFO - Backup Job ID: 47fc470f-0063-4bd8-9567-0ed82391c665 started at 2026-01-04 01:00:03
+2026-01-04 01:13:29,069 - INFO - Backup completed: 47fc470f-0063-4bd8-9567-0ed82391c665
+2026-01-04 01:13:34,228 - INFO - Backup total time: 0:13:30.075224
+2026-01-04 01:13:34,314 - INFO - Completed backups: ['i-0f5983f58c7d7706f']
+2026-01-04 04:50:02,109 - INFO - Running backup for tag: Incomm-uat
+2026-01-04 04:50:02,613 - INFO - Creating backup for: i-0a74b65d459b12c6c
+2026-01-04 04:50:02,783 - INFO - Backup Job ID: 2d989002-aeca-4ad6-88e1-f3335c7f4a64 started at 2026-01-04 04:50:02
+2026-01-04 04:52:09,124 - INFO - Backup completed: 2d989002-aeca-4ad6-88e1-f3335c7f4a64
+2026-01-04 04:52:14,249 - INFO - Backup total time: 0:02:11.002721
+2026-01-04 04:52:14,319 - INFO - Completed backups: ['i-0a74b65d459b12c6c']
+2026-01-04 21:00:03,103 - INFO - Running backup for tag: ITS-Logistics-uat
+2026-01-04 21:00:03,706 - INFO - Creating backup for: i-007f3279cd85abd77
+2026-01-04 21:00:04,151 - INFO - Backup Job ID: a5af934a-822b-4e6c-a713-1cf148ed2fd7 started at 2026-01-04 21:00:04
+2026-01-04 22:01:50,353 - INFO - Backup completed: a5af934a-822b-4e6c-a713-1cf148ed2fd7
+2026-01-04 22:01:55,495 - INFO - Backup total time: 1:01:50.726549
+2026-01-04 22:01:55,599 - INFO - Completed backups: ['i-007f3279cd85abd77']
+2026-01-04 22:30:02,590 - INFO - Running backup for tag: Kendra-uat
+2026-01-04 22:30:03,280 - INFO - Creating backup for: i-045587ea8e67eeeac
+2026-01-04 22:30:03,505 - INFO - Backup Job ID: 7cc913c7-e8c9-444a-bad5-f42586ba5de3 started at 2026-01-04 22:30:03
+2026-01-04 22:46:24,505 - INFO - Backup completed: 7cc913c7-e8c9-444a-bad5-f42586ba5de3
+2026-01-04 22:46:29,652 - INFO - Backup total time: 0:16:25.715548
+2026-01-04 22:46:29,748 - INFO - Completed backups: ['i-045587ea8e67eeeac']
+2026-01-04 23:30:03,628 - INFO - Running backup for tag: incomm-wms-uat
+2026-01-04 23:30:04,067 - INFO - Creating backup for: i-0a74b65d459b12c6c
+2026-01-04 23:30:04,243 - INFO - Backup Job ID: 05442ba2-37e1-4880-ab3d-344165b94f55 started at 2026-01-04 23:30:04
+2026-01-04 23:30:04,441 - ERROR - Backup update failed: Object of type UniqueViolation is not JSON serializable
+Traceback (most recent call last):
+  File "/data/patching_v4/common/utils.py", line 90, in bulk_insert
+    result = cursor.executemany(insert_statement, records)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "patching_log_pkey"
+DETAIL:  Key (instance_id, command_id)=(i-0a74b65d459b12c6c, Pending) already exists.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/patching_v4/patching_backup.py", line 111, in backup_instances
+    utils.bulk_insert(db_details, update_stmt, update_sql)
+  File "/data/patching_v4/common/utils.py", line 100, in bulk_insert
+    write_cw_logs(pid, log_level, message)
+  File "/data/patching_v4/common/utils.py", line 158, in write_cw_logs
+    json_message = json.dumps(cw_message)
+  File "/usr/lib64/python3.8/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib64/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UniqueViolation is not JSON serializable
+

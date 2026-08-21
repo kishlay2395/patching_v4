@@ -1,0 +1,225 @@
+2026-06-14 01:40:03,496 - 2647374 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-14 02:16:32,627 - 2647374 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-06-14 02:16:32,809 - 2647374 - INFO - Log file ./logs/backup_2026-06-14.log uploaded to s3://q3-2025-aws-security-patching/Transumg-Prod-Batch_Patch_Backup/2026-06-14/backup_2026-06-14.log
+2026-06-14 05:40:02,551 - 2655940 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-06-14 05:40:02,551 - 2655940 - INFO - Script Start Time: 2026-06-14 05:40:02
+2026-06-14 05:40:03,151 - 2655940 - INFO - Instance(s) selected for Patching: {'i-0a8bad1ddf0bd63f3': '172.29.10.178'}
+2026-06-14 05:40:03,239 - 2655940 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 05:40:03,239 - 2655940 - INFO - Now patching instances at: 2026-06-14 05:40:03
+2026-06-14 05:40:03,454 - 2655940 - INFO - Sent app_validation.py to i-0a8bad1ddf0bd63f3 (command_id: c37803c7-1014-4ad7-9a28-870a17d5dce3)
+2026-06-14 05:40:33,572 - 2655940 - INFO - app_validation.py output for i-0a8bad1ddf0bd63f3:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 09:40:03.736910
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.178
+Hostname | ip-172-29-10-178
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 171.3G | 118.6G | 59% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 43.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.178:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.178 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 9
+Batch/Daemon Java Processes | 9
+Non-Standalone Java Processes | transumg_inbq2, transumg_alloc, transumg_carrch, transumg_dws, transumg_ftp, transumg_omas, transumg_rpt, transumg_sch, transumg_inbq
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 9
+Java-Name | Java-Path
+transumg_inbq2 | /data/batchapp/softeon/transumgprod/uploaddeamon2
+transumg_alloc | /data/batchapp/softeon/transumgprod/allocationdaemon
+transumg_carrch | /data/batchapp/softeon/transumgprod/carrierchangeprocessdaemon
+transumg_dws | /data/batchapp/softeon/transumgprod/downloaddaemon
+transumg_ftp | /data/batchapp/softeon/transumgprod/ftpdaemon
+transumg_omas | /data/batchapp/softeon/transumgprod/massuupdatecontinuousdaemon
+transumg_rpt | /data/batchapp/softeon/transumgprod/reportdaemon
+transumg_sch | /data/batchapp/softeon/transumgprod/schedulardaemon
+transumg_inbq | /data/batchapp/softeon/transumgprod/uploaddeamon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 09:40:04.081144
+==============================================================================
+
+2026-06-14 05:40:33,572 - 2655940 - ERROR - app_validation.py errors for i-0a8bad1ddf0bd63f3:
+
+2026-06-14 05:40:33,574 - 2655940 - INFO - Before patching log saved: /data/patching_report/validation-2026-06-14/Transumg-Prod-Batch/172.29.10.178/172.29.10.178-BeforePatching-2026-06-14-05-40-33-573.log
+2026-06-14 05:40:33,658 - 2655940 - INFO - Sending patch command to instance i-0a8bad1ddf0bd63f3
+2026-06-14 05:40:33,772 - 2655940 - INFO - Command sent successfully to instance i-0a8bad1ddf0bd63f3. Command ID: 03360692-56d5-4244-8bb0-3b96aa2b0863
+2026-06-14 05:50:06,107 - 2655940 - INFO - All patches applied successfully.
+2026-06-14 05:50:06,107 - 2655940 - INFO - Patching end time: 2026-06-14 05:50:06
+2026-06-14 05:50:06,107 - 2655940 - INFO - Patch Elapsed time: 0:10:02.868051
+2026-06-14 05:50:06,187 - 2655940 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 05:50:06,187 - 2655940 - INFO - Confirmed - services are stopped
+2026-06-14 05:50:26,407 - 2655940 - INFO - Discovered TG map: {}
+2026-06-14 05:50:26,648 - 2655940 - INFO - Stopping EC2 instance: i-0a8bad1ddf0bd63f3 at 2026-06-14 05:50:26
+2026-06-14 05:51:27,698 - 2655940 - INFO - Instance i-0a8bad1ddf0bd63f3 stopped successfully.
+2026-06-14 05:51:27,829 - 2655940 - INFO - Stopped i-0a8bad1ddf0bd63f3 in 0:01:01.180975
+2026-06-14 05:51:27,830 - 2655940 - INFO - Starting EC2 instance: i-0a8bad1ddf0bd63f3
+2026-06-14 05:51:43,816 - 2655940 - INFO - Instance i-0a8bad1ddf0bd63f3 started successfully.
+2026-06-14 05:51:43,816 - 2655940 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0a8bad1ddf0bd63f3...
+2026-06-14 05:53:24,083 - 2655940 - INFO - Sent app_validation.py to i-0a8bad1ddf0bd63f3 (command_id: 77caa858-c0f8-4c6e-a838-02d34bc959bc)
+2026-06-14 05:53:54,174 - 2655940 - INFO - app_validation.py output for i-0a8bad1ddf0bd63f3:
+
+==============================================================================
+Server Availability Check Started | 2026-06-14 09:53:24.403418
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.29.10.178
+Hostname | ip-172-29-10-178
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 289.9G | 170.1G | 119.8G | 58% | /data
+fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | 0B | 43.8G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-08acb5e8fe7d069c5.efs.us-east-1.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.29.10.178:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 500
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.29.10.178 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 0
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 0
+JBoss Apps | None
+
+==============================================================================
+Server Availability Check Completed | 2026-06-14 09:53:24.715969
+==============================================================================
+
+2026-06-14 05:53:54,174 - 2655940 - ERROR - app_validation.py errors for i-0a8bad1ddf0bd63f3:
+
+2026-06-14 05:53:54,176 - 2655940 - INFO - After patching validation saved to: /data/patching_report/validation-2026-06-14/Transumg-Prod-Batch/172.29.10.178/172.29.10.178-AfterPatching-2026-06-14-05-53-54-176.log
+2026-06-14 05:53:54,229 - 2655940 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-06-14/Transumg-Prod-Batch/172.29.10.178/172.29.10.178-Validation-details-2026-06-14-05-53-54-176.html
+2026-06-14 05:53:54,477 - 2655940 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-06-14 05:53:54,477 - 2655940 - INFO - HTML validation report email sent for i-0a8bad1ddf0bd63f3
+2026-06-14 05:53:54,622 - 2655940 - INFO - Started i-0a8bad1ddf0bd63f3 in 0:02:26.792373
+2026-06-14 05:53:54,623 - 2655940 - INFO - All instances processed.
+2026-06-14 05:53:54,626 - 2655940 - INFO - Restart Total time: 0:03:48.314150
+2026-06-14 05:53:54,626 - 2655940 - INFO - Auto-confirmed services are restarted
+2026-06-14 05:53:54,626 - 2655940 - INFO - Confirmed - services are started
+2026-06-14 05:53:54,746 - 2655940 - INFO - The following instances have failed the patch: []
+2026-06-14 05:53:54,746 - 2655940 - INFO - No instances have failed the patch.
+2026-06-14 05:53:54,746 - 2655940 - INFO - Total Patch Process time: 0:13:52.194804
+2026-06-14 05:54:55,120 - 2655940 - INFO - Log file ./logs/patching_2026-06-14_Transumg-Prod-Batch.log uploaded to s3://q2-2026-aws-security-patching/Transumg-Prod-Batch_Patch/2026-06-14/patching_2026-06-14_Transumg-Prod-Batch.log

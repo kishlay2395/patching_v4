@@ -1,0 +1,262 @@
+2026-04-07 00:05:03,373 - 223163 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-07 00:51:30,771 - 223163 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-04-07 00:51:30,940 - 223163 - INFO - Log file ./logs/backup_2026-04-07.log uploaded to s3://q3-2025-aws-security-patching/RXO-UAT_Patch_Backup/2026-04-07/backup_2026-04-07.log
+2026-04-07 04:05:02,522 - 233643 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-04-07 04:05:02,522 - 233643 - INFO - Script Start Time: 2026-04-07 04:05:02
+2026-04-07 04:05:02,743 - 233643 - INFO - Instance(s) selected for Patching: {'i-0c105f68f4ac76e91': '172.22.24.17'}
+2026-04-07 04:05:02,822 - 233643 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 04:05:02,822 - 233643 - INFO - Now patching instances at: 2026-04-07 04:05:02
+2026-04-07 04:05:02,909 - 233643 - INFO - Sending patch command to instance i-0c105f68f4ac76e91
+2026-04-07 04:05:03,314 - 233643 - INFO - Command sent successfully to instance i-0c105f68f4ac76e91. Command ID: c0c0801a-e7d5-4ea7-b42a-b36363644107
+2026-04-07 04:08:04,931 - 233643 - INFO - All patches applied successfully.
+2026-04-07 04:08:04,932 - 233643 - INFO - Patching end time: 2026-04-07 04:08:04
+2026-04-07 04:08:04,932 - 233643 - INFO - Patch Elapsed time: 0:03:02.110035
+2026-04-07 04:08:05,012 - 233643 - INFO - Email sent successfully to ['a80af5b5.softeon.com@in.teams.ms', 'CloudOps@softeon.com']
+2026-04-07 04:08:05,012 - 233643 - INFO - Confirmed - services are stopped
+2026-04-07 04:08:10,703 - 233643 - INFO - Discovered TG map: {'i-0c105f68f4ac76e91': ['arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Config/d5296744b802d06c', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Desktop/72e3abfd8079c8c2', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-RF/9b41321347ef0b1b', 'arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-YMS/b7dd5b94d47013e8']}
+2026-04-07 04:08:11,518 - 233643 - INFO - Sent app_validation.py to i-0c105f68f4ac76e91 (command_id: 2deff7a5-9215-4df6-8e53-b67199effea2)
+2026-04-07 04:08:41,666 - 233643 - INFO - app_validation.py output for i-0c105f68f4ac76e91:
+
+==============================================================================
+Server Availability Check Started | 2026-04-07 08:08:11.678173
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.24.17
+Hostname | ip-172-22-24-17.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 147.0G | 92.9G | 61% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.24.17:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.24.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | rxoconfig_bcopy, rxoymsuat_rpt, rxoymsuat_jqgri, rxouat_abchdis, rxouat_dwa, rxouat_event, rxouat_ftp, rxouat_lbl, rxouat_repl, rxouat_rccl, rxouat_rpt, rxouat_jqgrid, rxouat_sch, rxouat_inbq, rxouat_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+rxoconfig_bcopy | /data/batchapp/softeon/rxoconfiguat/bulkdatacopydaemon
+rxoymsuat_rpt | /data/batchapp/softeon/rxoymsuat/reportdaemon
+rxoymsuat_jqgri | /data/batchapp/softeon/rxoymsuat/reportjqgridexportdaemon
+rxouat_abchdis | /data/batchapp/softeon/rxouat/autobatchdistributiondaemon
+rxouat_dwa | /data/batchapp/softeon/rxouat/downloaddaemon
+rxouat_event | /data/batchapp/softeon/rxouat/eventdaemon
+rxouat_ftp | /data/batchapp/softeon/rxouat/ftpdaemon
+rxouat_lbl | /data/batchapp/softeon/rxouat/labeldaemon
+rxouat_repl | /data/batchapp/softeon/rxouat/replenishmentdaemon
+rxouat_rccl | /data/batchapp/softeon/rxouat/replenishmentpickloccanceldaemon
+rxouat_rpt | /data/batchapp/softeon/rxouat/reportdaemon
+rxouat_jqgrid | /data/batchapp/softeon/rxouat/reportjqgridexportdaemon
+rxouat_sch | /data/batchapp/softeon/rxouat/schedulerdaemon
+rxouat_inbq | /data/batchapp/softeon/rxouat/uploaddaemon
+rxouat_wld | /data/batchapp/softeon/rxouat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4936 | rxoconfiguat | jboss730eap | rxoconfig_jb730 | 8082 | 172.22.24.17:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxoconfiguat/standalone
+308728 | rxorfuat | jboss730eap | rxorfuat_jb730e | 8081 | 172.22.24.17:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxorfuat/standalone
+308554 | rxouat | jboss730eap | rxouat_jb730eap | 8080 | 172.22.24.17:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxouat/standalone
+5441 | rxoymsuat | jboss800eap | rxoymsuat_jb800 | 8083 | 172.22.24.17:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/rxoymsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-07 08:08:15.482639
+==============================================================================
+
+2026-04-07 04:08:41,666 - 233643 - ERROR - app_validation.py errors for i-0c105f68f4ac76e91:
+
+2026-04-07 04:08:41,668 - 233643 - INFO - Before patching validation saved to: /data/patching_report/validation-2026-04-07/RXO-UAT/172.22.24.17/172.22.24.17-BeforePatching-2026-04-07-04-08-41-668.log
+2026-04-07 04:08:41,668 - 233643 - INFO - Deregistering i-0c105f68f4ac76e91 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Config/d5296744b802d06c
+2026-04-07 04:08:42,007 - 233643 - INFO - Deregistering i-0c105f68f4ac76e91 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Desktop/72e3abfd8079c8c2
+2026-04-07 04:08:42,127 - 233643 - INFO - Deregistering i-0c105f68f4ac76e91 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-RF/9b41321347ef0b1b
+2026-04-07 04:08:42,251 - 233643 - INFO - Deregistering i-0c105f68f4ac76e91 from TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-YMS/b7dd5b94d47013e8
+2026-04-07 04:08:42,361 - 233643 - INFO - Stopping EC2 instance: i-0c105f68f4ac76e91 at 2026-04-07 04:08:42
+2026-04-07 04:09:59,062 - 233643 - INFO - Instance i-0c105f68f4ac76e91 stopped successfully.
+2026-04-07 04:09:59,197 - 233643 - INFO - Stopped i-0c105f68f4ac76e91 in 0:01:16.836542
+2026-04-07 04:09:59,198 - 233643 - INFO - Starting EC2 instance: i-0c105f68f4ac76e91
+2026-04-07 04:10:15,231 - 233643 - INFO - Instance i-0c105f68f4ac76e91 started successfully.
+2026-04-07 04:10:15,231 - 233643 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0c105f68f4ac76e91...
+2026-04-07 04:11:55,256 - 233643 - INFO - Registering i-0c105f68f4ac76e91 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Config/d5296744b802d06c
+2026-04-07 04:11:55,700 - 233643 - INFO - Registering i-0c105f68f4ac76e91 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-Desktop/72e3abfd8079c8c2
+2026-04-07 04:11:55,899 - 233643 - INFO - Registering i-0c105f68f4ac76e91 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-RF/9b41321347ef0b1b
+2026-04-07 04:11:56,087 - 233643 - INFO - Registering i-0c105f68f4ac76e91 to TG arn:aws:elasticloadbalancing:eu-west-1:835314132208:targetgroup/RXO-UAT-YMS/b7dd5b94d47013e8
+2026-04-07 04:15:28,161 - 233643 - INFO - Sent app_validation.py to i-0c105f68f4ac76e91 (command_id: 7be13e0f-e333-4b17-a952-0770e468e460)
+2026-04-07 04:15:58,299 - 233643 - INFO - app_validation.py output for i-0c105f68f4ac76e91:
+
+==============================================================================
+Server Availability Check Started | 2026-04-07 08:15:28.446206
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.22.24.17
+Hostname | ip-172-22-24-17.eu-west-1.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | UTC
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/mapper/vg01-lv02 | 239.9G | 146.8G | 93.0G | 61% | /data
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 6
+Symlinks Valid | 6
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/data2 | /data/data2
+/data3 | /data/data3
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS Mounted Shares | None
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.22.24.17:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 0
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.22.24.17 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 19
+Batch/Daemon Java Processes | 15
+Non-Standalone Java Processes | rxoconfig_bcopy, rxoymsuat_rpt, rxouat_abchdis, rxoymsuat_jqgri, rxouat_dwa, rxouat_event, rxouat_ftp, rxouat_lbl, rxouat_repl, rxouat_rccl, rxouat_rpt, rxouat_jqgrid, rxouat_sch, rxouat_inbq, rxouat_wld
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 15
+Java-Name | Java-Path
+rxoconfig_bcopy | /data/batchapp/softeon/rxoconfiguat/bulkdatacopydaemon
+rxoymsuat_rpt | /data/batchapp/softeon/rxoymsuat/reportdaemon
+rxouat_abchdis | /data/batchapp/softeon/rxouat/autobatchdistributiondaemon
+rxoymsuat_jqgri | /data/batchapp/softeon/rxoymsuat/reportjqgridexportdaemon
+rxouat_dwa | /data/batchapp/softeon/rxouat/downloaddaemon
+rxouat_event | /data/batchapp/softeon/rxouat/eventdaemon
+rxouat_ftp | /data/batchapp/softeon/rxouat/ftpdaemon
+rxouat_lbl | /data/batchapp/softeon/rxouat/labeldaemon
+rxouat_repl | /data/batchapp/softeon/rxouat/replenishmentdaemon
+rxouat_rccl | /data/batchapp/softeon/rxouat/replenishmentpickloccanceldaemon
+rxouat_rpt | /data/batchapp/softeon/rxouat/reportdaemon
+rxouat_jqgrid | /data/batchapp/softeon/rxouat/reportjqgridexportdaemon
+rxouat_sch | /data/batchapp/softeon/rxouat/schedulerdaemon
+rxouat_inbq | /data/batchapp/softeon/rxouat/uploaddaemon
+rxouat_wld | /data/batchapp/softeon/rxouat/wavelaunchdaemon
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 4
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+4751 | rxoconfiguat | jboss730eap | rxoconfig_jb730 | 8082 | 172.22.24.17:8082 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxoconfiguat/standalone
+5213 | rxorfuat | jboss730eap | rxorfuat_jb730e | 8081 | 172.22.24.17:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxorfuat/standalone
+5003 | rxouat | jboss730eap | rxouat_jb730eap | 8080 | 172.22.24.17:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/rxouat/standalone
+5470 | rxoymsuat | jboss800eap | rxoymsuat_jb800 | 8083 | 172.22.24.17:8083 | UP | 200 | Disabled | /data/app/jboss800eap/softeon/rxoymsuat/standalone
+
+==============================================================================
+Server Availability Check Completed | 2026-04-07 08:15:32.569602
+==============================================================================
+
+2026-04-07 04:15:58,299 - 233643 - ERROR - app_validation.py errors for i-0c105f68f4ac76e91:
+
+2026-04-07 04:15:58,300 - 233643 - INFO - After patching validation saved to: /data/patching_report/validation-2026-04-07/RXO-UAT/172.22.24.17/172.22.24.17-AfterPatching-2026-04-07-04-15-58-300.log
+2026-04-07 04:15:58,352 - 233643 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-04-07/RXO-UAT/172.22.24.17/172.22.24.17-Validation-details-2026-04-07-04-15-58-300.html
+2026-04-07 04:15:58,432 - 233643 - INFO - Email sent successfully to ['CloudOps@softeon.com', 'kishlayk@softeon.com']
+2026-04-07 04:15:58,433 - 233643 - INFO - HTML validation report email sent for i-0c105f68f4ac76e91
+2026-04-07 04:15:58,575 - 233643 - INFO - Started i-0c105f68f4ac76e91 in 0:05:59.376699
+2026-04-07 04:15:58,575 - 233643 - INFO - All instances processed.
+2026-04-07 04:15:58,579 - 233643 - INFO - Restart Total time: 0:07:53.429434
+2026-04-07 04:15:58,579 - 233643 - INFO - Auto-confirmed services are restarted
+2026-04-07 04:15:58,579 - 233643 - INFO - Confirmed - services are started
+2026-04-07 04:15:58,697 - 233643 - INFO - The following instances have failed the patch: []
+2026-04-07 04:15:58,697 - 233643 - INFO - No instances have failed the patch.
+2026-04-07 04:15:58,697 - 233643 - INFO - Total Patch Process time: 0:10:56.174765
+2026-04-07 04:16:59,161 - 233643 - INFO - Log file ./logs/patching_2026-04-07_RXO-UAT.log uploaded to s3://q2-2026-aws-security-patching/RXO-UAT_Patch/2026-04-07/patching_2026-04-07_RXO-UAT.log

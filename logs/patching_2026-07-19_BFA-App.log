@@ -1,0 +1,446 @@
+2026-07-19 03:40:02,426 - 375293 - INFO - Logger setup has been removed, using shared logger from common.logs.logger.
+2026-07-19 03:40:02,426 - 375293 - INFO - Script Start Time: 2026-07-19 03:40:02
+2026-07-19 03:40:02,718 - 375293 - INFO - Tag: BFA-App, IPs: ['172.30.140.48', '172.30.140.148'], Environment: prod
+2026-07-19 03:40:02,718 - 375293 - INFO - Instance(s) selected for Patching: {'i-0e4fdb5174e4b7263': '172.30.140.48', 'i-050f7f976456fad9b': '172.30.140.148'}
+2026-07-19 03:40:02,827 - 375293 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 03:40:02,827 - 375293 - INFO - Now patching instances at: 2026-07-19 03:40:02
+2026-07-19 03:40:03,076 - 375293 - INFO - Sent app_validation.py to i-050f7f976456fad9b (command_id: b69a3c68-4553-4a54-a4d5-92d295272e6a)
+2026-07-19 03:40:33,177 - 375293 - INFO - app_validation.py output for i-050f7f976456fad9b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:40:03.342614
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.148
+Hostname | ip-172-30-140-148.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 19.7G | 220.2G | 8% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.148:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.148 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1606776 | bfaprod | jboss730eap | bfaprod_jb730ea | 8080 | 172.30.140.148:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfaprod/standalone
+1606959 | bfarfprod | jboss730eap | bfarfprod_jb730 | 8081 | 172.30.140.148:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-19 03:40:33,178 - 375293 - ERROR - app_validation.py errors for i-050f7f976456fad9b:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-19 03:40:33,179 - 375293 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.148/172.30.140.148-BeforePatching-2026-07-19-03-40-33-179.log
+2026-07-19 03:40:33,417 - 375293 - INFO - Sent app_validation.py to i-0e4fdb5174e4b7263 (command_id: 4b7e51b5-c960-4306-b364-cca6eb4eb21d)
+2026-07-19 03:41:03,527 - 375293 - INFO - app_validation.py output for i-0e4fdb5174e4b7263:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:40:33.718681
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.48
+Hostname | ip-172-30-140-48.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 34.4G | 205.5G | 14% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.48:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+1561754 | bfaprod | jboss730eap | bfaprod_jb730ea | 8080 | 172.30.140.48:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfaprod/standalone
+1561848 | bfarfprod | jboss730eap | bfarfprod_jb730 | 8081 | 172.30.140.48:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-19 03:41:03,527 - 375293 - ERROR - app_validation.py errors for i-0e4fdb5174e4b7263:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-19 03:41:03,528 - 375293 - INFO - Before patching log saved: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.48/172.30.140.48-BeforePatching-2026-07-19-03-41-03-528.log
+2026-07-19 03:41:08,817 - 375293 - INFO - i-050f7f976456fad9b: Cron was active = False
+2026-07-19 03:41:14,058 - 375293 - INFO - i-0e4fdb5174e4b7263: Cron was active = False
+2026-07-19 03:41:14,059 - 375293 - INFO - No active cron is found on any instance, skipping disable step.
+2026-07-19 03:41:14,139 - 375293 - INFO - Sending patch command to instance i-050f7f976456fad9b
+2026-07-19 03:41:14,289 - 375293 - INFO - Command sent successfully to instance i-050f7f976456fad9b. Command ID: d0e71e2e-fe71-4b05-898a-4a771adbdb8f
+2026-07-19 03:41:14,415 - 375293 - INFO - Sending patch command to instance i-0e4fdb5174e4b7263
+2026-07-19 03:41:14,508 - 375293 - INFO - Command sent successfully to instance i-0e4fdb5174e4b7263. Command ID: 8454d13a-fe84-413e-93a2-3f8523db377e
+2026-07-19 03:49:46,742 - 375293 - INFO - All patches applied successfully.
+2026-07-19 03:49:46,743 - 375293 - INFO - Patching end time: 2026-07-19 03:49:46
+2026-07-19 03:49:46,743 - 375293 - INFO - Patch Elapsed time: 0:09:43.916113
+2026-07-19 03:49:46,818 - 375293 - INFO - Email sent successfully to ['CloudOps@softeon.com']
+2026-07-19 03:49:46,819 - 375293 - INFO - Confirmed - services are stopped
+2026-07-19 03:49:53,486 - 375293 - INFO - Discovered TG map: {'i-050f7f976456fad9b': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3'], 'i-0e4fdb5174e4b7263': ['arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88', 'arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3']}
+2026-07-19 03:49:53,715 - 375293 - INFO - Deregistering i-050f7f976456fad9b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88
+2026-07-19 03:49:53,818 - 375293 - INFO - Deregistering i-050f7f976456fad9b from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3
+2026-07-19 03:49:53,867 - 375293 - INFO - Stopping EC2 instance: i-050f7f976456fad9b at 2026-07-19 03:49:53
+2026-07-19 03:51:25,192 - 375293 - INFO - Instance i-050f7f976456fad9b stopped successfully.
+2026-07-19 03:51:25,423 - 375293 - INFO - Stopped i-050f7f976456fad9b in 0:01:31.556431
+2026-07-19 03:51:25,424 - 375293 - INFO - Starting EC2 instance: i-050f7f976456fad9b
+2026-07-19 03:51:41,433 - 375293 - INFO - Instance i-050f7f976456fad9b started successfully.
+2026-07-19 03:51:41,433 - 375293 - INFO - Waiting 100 seconds for SSM agent to be ready on i-050f7f976456fad9b...
+2026-07-19 03:53:21,521 - 375293 - INFO - Registering i-050f7f976456fad9b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88
+2026-07-19 03:53:21,765 - 375293 - INFO - Registering i-050f7f976456fad9b to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3
+2026-07-19 03:53:52,392 - 375293 - INFO - Sent app_validation.py to i-050f7f976456fad9b (command_id: f8cc8741-4056-4797-8ee8-83e75d353ce1)
+2026-07-19 03:54:22,510 - 375293 - INFO - app_validation.py output for i-050f7f976456fad9b:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:53:52.726023
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.148
+Hostname | ip-172-30-140-148.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 19.6G | 220.2G | 8% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.148:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.148 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3330 | bfaprod | jboss730eap | bfaprod_jb730ea | 8080 | 172.30.140.148:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfaprod/standalone
+3637 | bfarfprod | jboss730eap | bfarfprod_jb730 | 8081 | 172.30.140.148:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-19 03:54:22,511 - 375293 - ERROR - app_validation.py errors for i-050f7f976456fad9b:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-19 03:54:22,512 - 375293 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.148/172.30.140.148-AfterPatching-2026-07-19-03-54-22-512.log
+2026-07-19 03:54:22,563 - 375293 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.148/172.30.140.148-Validation-details-2026-07-19-03-54-22-512.html
+2026-07-19 03:54:22,734 - 375293 - INFO - i-050f7f976456fad9b: Cron was not active - skipping enable
+2026-07-19 03:54:22,798 - 375293 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-19 03:54:22,799 - 375293 - INFO - GREEN mail sent for i-050f7f976456fad9b
+2026-07-19 03:54:23,046 - 375293 - INFO - Started i-050f7f976456fad9b in 0:02:57.622837
+2026-07-19 03:54:23,047 - 375293 - INFO - Waiting 120 seconds before proceeding to the next instance...
+2026-07-19 03:56:23,112 - 375293 - INFO - Deregistering i-0e4fdb5174e4b7263 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88
+2026-07-19 03:56:23,220 - 375293 - INFO - Deregistering i-0e4fdb5174e4b7263 from TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3
+2026-07-19 03:56:23,272 - 375293 - INFO - Stopping EC2 instance: i-0e4fdb5174e4b7263 at 2026-07-19 03:56:23
+2026-07-19 03:57:24,313 - 375293 - INFO - Instance i-0e4fdb5174e4b7263 stopped successfully.
+2026-07-19 03:57:24,574 - 375293 - INFO - Stopped i-0e4fdb5174e4b7263 in 0:01:01.302712
+2026-07-19 03:57:24,575 - 375293 - INFO - Starting EC2 instance: i-0e4fdb5174e4b7263
+2026-07-19 03:57:40,442 - 375293 - INFO - Instance i-0e4fdb5174e4b7263 started successfully.
+2026-07-19 03:57:40,442 - 375293 - INFO - Waiting 100 seconds for SSM agent to be ready on i-0e4fdb5174e4b7263...
+2026-07-19 03:59:20,471 - 375293 - INFO - Registering i-0e4fdb5174e4b7263 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-Desktop/dd99dbc41c3ebb88
+2026-07-19 03:59:20,660 - 375293 - INFO - Registering i-0e4fdb5174e4b7263 to TG arn:aws:elasticloadbalancing:us-east-2:835314132208:targetgroup/BFA-Prod-RF/b406e048eba6d8a3
+2026-07-19 03:59:51,185 - 375293 - INFO - Sent app_validation.py to i-0e4fdb5174e4b7263 (command_id: 976747f8-679d-4d74-8590-0c2a902326d8)
+2026-07-19 04:00:21,281 - 375293 - INFO - app_validation.py output for i-0e4fdb5174e4b7263:
+
+==============================================================================
+Server Availability Check Started | 2026-07-19 02:59:51.530157
+==============================================================================
+
+==============================================================================
+SYSTEM INFORMATION
+==============================================================================
+Server IP | 172.30.140.48
+Hostname | ip-172-30-140-48.us-east-2.compute.internal
+Current User | root
+Working Directory | /usr/bin
+Time Zone | CDT
+
+==============================================================================
+STORAGE CHECK | /data mounts
+==============================================================================
+Filesystem | Size | Used | Avail | Use% | Mounted on
+/dev/nvme1n1p2 | 239.9G | 34.3G | 205.6G | 14% | /data
+fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | 0B | 92.6G | 0B | 0% | /data2
+
+==============================================================================
+SYMLINK CHECK | root (/)
+==============================================================================
+Symlinks Total | 4
+Symlinks Valid | 4
+Symlinks Invalid | 0
+Symlink | ResolvedTarget
+/bin | /usr/bin
+/lib | /usr/lib
+/lib64 | /usr/lib64
+/sbin | /usr/sbin
+
+==============================================================================
+NFS CHECK
+==============================================================================
+NFS Package Installed | Yes
+nfs-server.service Active | No
+nfs-client.target Active | Yes
+/etc/exports Present | Yes
+EXPORTS_LINE | (empty)
+NFS_MOUNT | Device | MountPoint | FSType
+NFS_MOUNT | fs-00d470da13df61f38.efs.us-east-2.amazonaws.com:/ | /data2 | nfs4
+
+==============================================================================
+CUPS CHECK
+==============================================================================
+CUPS Installed | Yes
+CUPS Running | Yes
+CUPS Version | 1.7.5
+CUPS IP URL (http://172.30.140.48:631) | 200
+Cups server Http Status | 200
+Cups printers Http Status | 200
+Printers Configured | 66
+
+==============================================================================
+FTP CHECK
+==============================================================================
+FTP Installed | No
+FTP Running (Port 21 localhost) | No
+FTP Port 21 Reachable on 172.30.140.48 | No
+FTP Processes | None
+
+==============================================================================
+JAVA CHECK
+==============================================================================
+Total Java Processes | 2
+Batch/Daemon Java Processes | 0
+Non-Standalone Java Processes | Not Found
+
+==============================================================================
+BATCH/DAEMON JAVA DETAILS
+==============================================================================
+Batch/Daemon Java Processes | 0
+Batch/Daemon Java Details | None
+
+==============================================================================
+JBOSS/WILDFLY APPS (simple table)
+==============================================================================
+JBoss App Processes | 2
+PID | AppName | JbossVersion | Java-Name | Port | URL | Status | Code | SSL-Status | App-Path
+3338 | bfaprod | jboss730eap | bfaprod_jb730ea | 8080 | 172.30.140.48:8080 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfaprod/standalone
+3646 | bfarfprod | jboss730eap | bfarfprod_jb730 | 8081 | 172.30.140.48:8081 | UP | 200 | Disabled | /data/app/jboss730eap/softeon/bfarfprod/standalone
+
+==============================================================================
+HEALTH MONITOR CRONTAB STATUS
+==============================================================================
+
+2026-07-19 04:00:21,281 - 375293 - ERROR - app_validation.py errors for i-0e4fdb5174e4b7263:
+Traceback (most recent call last):
+  File "<stdin>", line 873, in <module>
+  File "<stdin>", line 864, in main
+UnboundLocalError: local variable 'found' referenced before assignment
+failed to run commands: exit status 1
+2026-07-19 04:00:21,283 - 375293 - INFO - After patching validation saved to: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.48/172.30.140.48-AfterPatching-2026-07-19-04-00-21-283.log
+2026-07-19 04:00:21,335 - 375293 - INFO - Validation comparison report generated: /data/patching_report/validation-2026-07-19/BFA-App/172.30.140.48/172.30.140.48-Validation-details-2026-07-19-04-00-21-283.html
+2026-07-19 04:00:21,561 - 375293 - INFO - i-0e4fdb5174e4b7263: Cron was not active - skipping enable
+2026-07-19 04:00:21,637 - 375293 - INFO - Email sent successfully to ['kishlayk@softeon.com', 'CloudOps@softeon.com']
+2026-07-19 04:00:21,637 - 375293 - INFO - GREEN mail sent for i-0e4fdb5174e4b7263
+2026-07-19 04:00:21,931 - 375293 - INFO - Started i-0e4fdb5174e4b7263 in 0:02:57.356152
+2026-07-19 04:00:21,931 - 375293 - INFO - All instances processed.
+2026-07-19 04:00:21,936 - 375293 - INFO - Restart Total time: 0:10:34.985140
+2026-07-19 04:00:21,936 - 375293 - INFO - Auto-confirmed services are restarted
+2026-07-19 04:00:21,936 - 375293 - INFO - Confirmed - services are started
+2026-07-19 04:00:22,047 - 375293 - INFO - The following instances have failed the patch: []
+2026-07-19 04:00:22,047 - 375293 - INFO - No instances have failed the patch.
+2026-07-19 04:00:22,047 - 375293 - INFO - Total Patch Process time: 0:20:19.621003
+2026-07-19 04:01:22,620 - 375293 - INFO - Log file ./logs/patching_2026-07-19_BFA-App.log uploaded to s3://q3-2026-aws-security-patching/BFA-App_Patch/2026-07-19/patching_2026-07-19_BFA-App.log
